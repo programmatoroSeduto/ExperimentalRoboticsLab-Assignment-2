@@ -32,6 +32,8 @@
 <codeline></codeline>
 <codeline><highlight class="normal">link<sp/>alla<sp/>vecchia<sp/>versione<sp/>del<sp/>progetto:<sp/>[ExperimentalRoboticsLab-Assignment-2-OLD](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">prima<sp/>del<sp/>primo<sp/>commit,</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>creazione<sp/>di<sp/>una<sp/>nuova<sp/>repository<sp/>per<sp/>il<sp/>progetto,<sp/>link<sp/>[qui](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git)</highlight></codeline>
@@ -41,9 +43,11 @@
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>creazione<sp/>di<sp/>un<sp/>branch<sp/>vuoto<sp/>per<sp/>la<sp/>copia<sp/>degli<sp/>altri<sp/>eventuali<sp/>pacchetti<sp/>da<sp/>scaricare</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>con<sp/>tutto<sp/>il<sp/>materiale<sp/>iniziale<sp/>funzionante</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">*ora<sp/>siamo<sp/>pronti<sp/>per<sp/>iniziare<sp/>a<sp/>lavorare<sp/>con<sp/>ROS*.<sp/>Prima<sp/>di<sp/>tutto,<sp/>il<sp/>package<sp/>per<sp/>il<sp/>module<sp/>testing:</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>creazione<sp/>package<sp/>per<sp/>il<sp/>module<sp/>testing:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**<sp/>creazione<sp/>package<sp/>per<sp/>il<sp/>module<sp/>testing:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_module_testing<sp/>roscpp<sp/>rospy<sp/>std_msgs<sp/>geometry_msgs<sp/>nav_msgs<sp/>std_srvs</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```<sp/></highlight></codeline>
@@ -52,7 +56,28 @@
 <codeline><highlight class="normal">-<sp/>qualche<sp/>check<sp/>prima<sp/>del<sp/>commit:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>a<sp/>compilare<sp/>..<sp/>.OK</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>make<sp/>documentazione<sp/>..<sp/>OK</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;module<sp/>testing<sp/>package&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nuova<sp/>todolist<sp/>(stavolta<sp/>su<sp/>carta)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">lavoro<sp/>su<sp/>aRMOR,<sp/>estrazione<sp/>del<sp/>codice<sp/>dal<sp/>vecchio<sp/>assignment,<sp/>vedi<sp/>[erl1](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git):</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>download<sp/>codice<sp/>sul<sp/>desktop</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**<sp/>armor<sp/>msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_armor_msgs<sp/>std_msgs<sp/>armor_msgs<sp/>std_srvs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>senza<sp/>perdere<sp/>tempo,<sp/>prima<sp/>documentazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**<sp/>armor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_armor<sp/>roscpp<sp/>rospy<sp/>armor_msgs<sp/>robocluedo_armor_msgs<sp/>srd_msgs<sp/>std_srvs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>prima<sp/>documentazione<sp/>anche<sp/>qui<sp/>senza<sp/>perdere<sp/>tempo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>giusto<sp/>per,<sp/>proviamo<sp/>a<sp/>compilare,<sp/>non<sp/>si<sp/>sa<sp/>mai</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;armor<sp/>packages<sp/>setup&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

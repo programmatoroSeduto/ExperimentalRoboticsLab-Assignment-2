@@ -23,6 +23,8 @@ la versione precedente del progetto ha parecchi difetti:
 
 link alla vecchia versione del progetto: [ExperimentalRoboticsLab-Assignment-2-OLD](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)
 
+---
+
 prima del primo commit,
 
 - creazione di una nuova repository per il progetto, link [qui](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git)
@@ -32,9 +34,11 @@ prima del primo commit,
 - **COMMIT** creazione di un branch vuoto per la copia degli altri eventuali pacchetti da scaricare
 - **COMMIT** con tutto il materiale iniziale funzionante
 
+---
+
 *ora siamo pronti per iniziare a lavorare con ROS*. Prima di tutto, il package per il module testing:
 
-- creazione package per il module testing:
+- **NUOVO PACKAGE** creazione package per il module testing:
 	```
 	catkin_create_pkg robocluedo_module_testing roscpp rospy std_msgs geometry_msgs nav_msgs std_srvs
 	``` 
@@ -43,7 +47,28 @@ prima del primo commit,
 - qualche check prima del commit:
 	- prova a compilare .. .OK
 	- make documentazione .. OK
-- **COMMIT** : 
+- **COMMIT** : "module testing package"
+- nuova todolist (stavolta su carta)
+
+---
+
+lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git):
+
+- download codice sul desktop
+- **NUOVO PACKAGE** armor msgs
+	```
+	catkin_create_pkg robocluedo_armor_msgs std_msgs armor_msgs std_srvs
+	```
+- senza perdere tempo, prima documentazione
+- **NUOVO PACKAGE** armor
+	```
+	catkin_create_pkg robocluedo_armor roscpp rospy armor_msgs robocluedo_armor_msgs srd_msgs std_srvs
+	```
+- e prima documentazione anche qui senza perdere tempo
+- giusto per, proviamo a compilare, non si sa mai
+- **COMMIT** : "armor packages setup"
+
+
 
 
 

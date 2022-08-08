@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
-  <compounddef id="_c_make_lists_8txt" kind="file" language="C++">
+  <compounddef id="robocluedo__armor_2_c_make_lists_8txt" kind="file" language="C++">
     <compoundname>CMakeLists.txt</compoundname>
     <briefdescription>
     </briefdescription>
@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.0.2)</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><ref refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kindref="member">project</ref>(robocluedo_module_testing)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><ref refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kindref="member">project</ref>(robocluedo_armor)</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Compile<sp/>as<sp/>C++11,<sp/>supported<sp/>in<sp/>ROS<sp/>Kinetic<sp/>and<sp/>newer</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add_compile_options(-std=c++11)</highlight><highlight class="normal"></highlight></codeline>
@@ -17,8 +17,8 @@
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>if<sp/>COMPONENTS<sp/>list<sp/>like<sp/>find_package(catkin<sp/>REQUIRED<sp/>COMPONENTS<sp/>xyz)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>is<sp/>used,<sp/>also<sp/>find<sp/>other<sp/>catkin<sp/>packages</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal">find_package(catkin<sp/>REQUIRED<sp/>COMPONENTS</highlight></codeline>
-<codeline lineno="11"><highlight class="normal"><sp/><sp/>geometry_msgs</highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><sp/><sp/>nav_msgs</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/>armor_msgs</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/>robocluedo_armor_msgs</highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/>roscpp</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/>rospy</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/>std_msgs</highlight></codeline>
@@ -82,7 +82,7 @@
 <codeline lineno="73"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Generate<sp/>added<sp/>messages<sp/>and<sp/>services<sp/>with<sp/>any<sp/>dependencies<sp/>listed<sp/>here</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>generate_messages(</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>DEPENDENCIES</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>geometry_msgs#<sp/><sp/><sp/>nav_msgs#<sp/><sp/><sp/>std_msgs</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>armor_msgs#<sp/><sp/><sp/>robocluedo_armor_msgs#<sp/><sp/><sp/>srd_msgs</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="77"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="preprocessor">################################################</highlight><highlight class="normal"></highlight></codeline>
@@ -116,8 +116,8 @@
 <codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>DEPENDS:<sp/>system<sp/>dependencies<sp/>of<sp/>this<sp/>project<sp/>that<sp/>dependent<sp/>projects<sp/>also<sp/>need</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal">catkin_package(</highlight></codeline>
 <codeline lineno="109"><highlight class="normal">#<sp/><sp/>INCLUDE_DIRS<sp/>include</highlight></codeline>
-<codeline lineno="110"><highlight class="normal">#<sp/><sp/>LIBRARIES<sp/>robocluedo_module_testing</highlight></codeline>
-<codeline lineno="111"><highlight class="normal">#<sp/><sp/>CATKIN_DEPENDS<sp/>geometry_msgs<sp/>nav_msgs<sp/>roscpp<sp/>rospy<sp/>std_msgs<sp/>std_srvs</highlight></codeline>
+<codeline lineno="110"><highlight class="normal">#<sp/><sp/>LIBRARIES<sp/>robocluedo_armor</highlight></codeline>
+<codeline lineno="111"><highlight class="normal">#<sp/><sp/>CATKIN_DEPENDS<sp/>armor_msgs<sp/>robocluedo_armor_msgs<sp/>roscpp<sp/>rospy<sp/>srd_msgs<sp/>std_srvs</highlight></codeline>
 <codeline lineno="112"><highlight class="normal">#<sp/><sp/>DEPENDS<sp/>system_lib</highlight></codeline>
 <codeline lineno="113"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
@@ -134,7 +134,7 @@
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal">##<sp/>Declare<sp/>a<sp/>C++<sp/>library</highlight></codeline>
 <codeline lineno="127"><highlight class="normal">#<sp/>add_library(${PROJECT_NAME}</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>src/${PROJECT_NAME}/robocluedo_module_testing.cpp</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>src/${PROJECT_NAME}/robocluedo_armor.cpp</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="131"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Add<sp/>cmake<sp/>target<sp/>dependencies<sp/>of<sp/>the<sp/>library</highlight><highlight class="normal"></highlight></codeline>
@@ -145,7 +145,7 @@
 <codeline lineno="136"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Declare<sp/>a<sp/>C++<sp/>executable</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>With<sp/>catkin_make<sp/>all<sp/>packages<sp/>are<sp/>built<sp/>within<sp/>a<sp/>single<sp/>CMake<sp/>context</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="138"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>The<sp/>recommended<sp/>prefix<sp/>ensures<sp/>that<sp/>target<sp/>names<sp/>across<sp/>packages<sp/>don&apos;t<sp/>collide</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add_executable(${PROJECT_NAME}_node<sp/>src/robocluedo_module_testing_node.cpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add_executable(${PROJECT_NAME}_node<sp/>src/robocluedo_armor_node.cpp)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="140"><highlight class="normal"></highlight></codeline>
 <codeline lineno="141"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Rename<sp/>C++<sp/>executable<sp/>without<sp/>prefix</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>The<sp/>above<sp/>recommended<sp/>prefix<sp/>causes<sp/>long<sp/>target<sp/>names,<sp/>the<sp/>following<sp/>renames<sp/>the</highlight><highlight class="normal"></highlight></codeline>
@@ -209,7 +209,7 @@
 <codeline lineno="200"><highlight class="normal"></highlight><highlight class="preprocessor">#############</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="201"><highlight class="normal"></highlight></codeline>
 <codeline lineno="202"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Add<sp/>gtest<sp/>based<sp/>cpp<sp/>test<sp/>target<sp/>and<sp/>link<sp/>libraries</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>catkin_add_gtest(${PROJECT_NAME}-test<sp/>test/test_robocluedo_module_testing.cpp)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>catkin_add_gtest(${PROJECT_NAME}-test<sp/>test/test_robocluedo_armor.cpp)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="204"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>if(TARGET<sp/>${PROJECT_NAME}-test)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="205"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>target_link_libraries(${PROJECT_NAME}-test<sp/>${PROJECT_NAME})</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>endif()</highlight><highlight class="normal"></highlight></codeline>
@@ -217,6 +217,6 @@
 <codeline lineno="208"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Add<sp/>folders<sp/>to<sp/>be<sp/>run<sp/>by<sp/>python<sp/>nosetests</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="209"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>catkin_add_nosetests(test)</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_module_testing/CMakeLists.txt"/>
+    <location file="robocluedo_armor/CMakeLists.txt"/>
   </compounddef>
 </doxygen>

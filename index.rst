@@ -19,7 +19,8 @@ RCL -- RoboCLuedo - v1.0.0
    :caption: Packages Documentation
    :glob:
    
-   .. links here
+   ./robocluedo_armor_msgs/index.rst
+   ./robocluedo_armor/index.rst
 
 
 .. toctree::

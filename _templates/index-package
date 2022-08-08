@@ -14,6 +14,13 @@ PKG DOCS -- ...pkgname...
 
 
 .. toctree::
+	:caption: Code Examples
+	:glob:
+	
+	./_examples/*
+
+
+.. toctree::
 	:caption: Other User Documentation
 	:glob:
 	
@@ -24,4 +31,4 @@ PKG DOCS -- ...pkgname...
 	:caption: UML diagrams
 	:glob:
 	
-	./_docs/*
+	./_uml/*

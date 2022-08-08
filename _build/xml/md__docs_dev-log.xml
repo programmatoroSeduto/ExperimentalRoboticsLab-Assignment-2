@@ -24,6 +24,8 @@
 </listitem></itemizedlist>
 </para>
 <para>link alla vecchia versione del progetto: <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git">ExperimentalRoboticsLab-Assignment-2-OLD</ulink></para>
+<para><hruler/>
+</para>
 <para>prima del primo commit,</para>
 <para><itemizedlist>
 <listitem><para>creazione di una nuova repository per il progetto, link <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git">qui</ulink></para>
@@ -34,9 +36,11 @@
 </listitem><listitem><para><bold>COMMIT</bold> con tutto il materiale iniziale funzionante</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
 <para><emphasis>ora siamo pronti per iniziare a lavorare con ROS</emphasis>. Prima di tutto, il package per il module testing:</para>
 <para><itemizedlist>
-<listitem><para>creazione package per il module testing: ``` catkin_create_pkg robocluedo_module_testing roscpp rospy std_msgs geometry_msgs nav_msgs std_srvs ```</para>
+<listitem><para><bold>NUOVO PACKAGE</bold> creazione package per il module testing: ``` catkin_create_pkg robocluedo_module_testing roscpp rospy std_msgs geometry_msgs nav_msgs std_srvs ```</para>
 </listitem><listitem><para>documentazione interna al module testing con index e tutto il resto</para>
 </listitem><listitem><para>creazione template per la pagina index di un package</para>
 </listitem><listitem><para>qualche check prima del commit:<itemizedlist>
@@ -44,7 +48,21 @@
 </listitem><listitem><para>make documentazione .. OK</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para><bold>COMMIT</bold> :</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;module testing package&quot;</para>
+</listitem><listitem><para>nuova todolist (stavolta su carta)</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">erl1</ulink>:</para>
+<para><itemizedlist>
+<listitem><para>download codice sul desktop</para>
+</listitem><listitem><para><bold>NUOVO PACKAGE</bold> armor msgs ``` catkin_create_pkg robocluedo_armor_msgs std_msgs armor_msgs std_srvs ```</para>
+</listitem><listitem><para>senza perdere tempo, prima documentazione</para>
+</listitem><listitem><para><bold>NUOVO PACKAGE</bold> armor ``` catkin_create_pkg robocluedo_armor roscpp rospy armor_msgs robocluedo_armor_msgs srd_msgs std_srvs ```</para>
+</listitem><listitem><para>e prima documentazione anche qui senza perdere tempo</para>
+</listitem><listitem><para>giusto per, proviamo a compilare, non si sa mai</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;armor packages setup&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

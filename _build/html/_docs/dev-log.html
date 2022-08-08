@@ -53,6 +53,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../README.html">the project main README</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
@@ -116,6 +121,7 @@
 <li><p>usare ROSPlan come KB è una pessima idea: complica il PDDL e potrebbe dare strani errori</p></li>
 </ul>
 <p>link alla vecchia versione del progetto: <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git">ExperimentalRoboticsLab-Assignment-2-OLD</a></p>
+<hr class="docutils" />
 <p>prima del primo commit,</p>
 <ul class="simple">
 <li><p>creazione di una nuova repository per il progetto, link <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git">qui</a></p></li>
@@ -125,9 +131,10 @@
 <li><p><strong>COMMIT</strong> creazione di un branch vuoto per la copia degli altri eventuali pacchetti da scaricare</p></li>
 <li><p><strong>COMMIT</strong> con tutto il materiale iniziale funzionante</p></li>
 </ul>
+<hr class="docutils" />
 <p><em>ora siamo pronti per iniziare a lavorare con ROS</em>. Prima di tutto, il package per il module testing:</p>
 <ul>
-<li><p>creazione package per il module testing:</p>
+<li><p><strong>NUOVO PACKAGE</strong> creazione package per il module testing:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_module_testing roscpp rospy std_msgs geometry_msgs nav_msgs std_srvs
 </pre></div>
 </div>
@@ -140,7 +147,27 @@
 <li><p>make documentazione .. OK</p></li>
 </ul>
 </li>
-<li><p><strong>COMMIT</strong> :</p></li>
+<li><p><strong>COMMIT</strong> : “module testing package”</p></li>
+<li><p>nuova todolist (stavolta su carta)</p></li>
+</ul>
+<hr class="docutils" />
+<p>lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">erl1</a>:</p>
+<ul>
+<li><p>download codice sul desktop</p></li>
+<li><p><strong>NUOVO PACKAGE</strong> armor msgs</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_armor_msgs std_msgs armor_msgs std_srvs
+</pre></div>
+</div>
+</li>
+<li><p>senza perdere tempo, prima documentazione</p></li>
+<li><p><strong>NUOVO PACKAGE</strong> armor</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_armor roscpp rospy armor_msgs robocluedo_armor_msgs srd_msgs std_srvs
+</pre></div>
+</div>
+</li>
+<li><p>e prima documentazione anche qui senza perdere tempo</p></li>
+<li><p>giusto per, proviamo a compilare, non si sa mai</p></li>
+<li><p><strong>COMMIT</strong> : “armor packages setup”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
