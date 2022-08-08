@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   std_srvs
+  robocluedo_armor
 )
 
 ## System dependencies are found with CMake's conventions
@@ -106,10 +107,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES robocluedo_module_testing
-#  CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs std_srvs
-#  DEPENDS system_lib
+ INCLUDE_DIRS include
+ LIBRARIES robocluedo_module_testing
+ CATKIN_DEPENDS geometry_msgs nav_msgs roscpp rospy std_msgs std_srvs armor_tools
+ DEPENDS system_lib
 )
 
 ###########
@@ -137,6 +138,14 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/robocluedo_module_testing_node.cpp)
+
+add_executable( test_armor src/test_armor/test_armor.cpp )
+add_dependencies( test_armor ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( test_armor ${catkin_LIBRARIES} )
+
+add_executable( test_armor_tools src/test_armor/test_armor_tools.cpp )
+add_dependencies( test_armor_tools ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( test_armor_tools ${catkin_LIBRARIES} armor_tools armor_cluedo )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

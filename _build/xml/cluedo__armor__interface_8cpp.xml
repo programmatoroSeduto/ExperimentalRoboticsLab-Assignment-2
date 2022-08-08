@@ -224,7 +224,7 @@
       <memberdef kind="define" id="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" prot="public" static="no">
         <name>OUTLOG</name>
         <param><defname>msg</defname></param>
-        <initializer>ROS_INFO_STREAM( <ref refid="cluedo__armor__interface_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref> &lt;&lt; &quot; &quot; &lt;&lt; msg );</initializer>
+        <initializer>ROS_INFO_STREAM( <ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref> &lt;&lt; &quot; &quot; &lt;&lt; msg );</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -644,7 +644,7 @@
 <para><bold>Parameters:</bold> <linebreak/>
  <itemizedlist>
 <listitem>
-<para>[GET] <emphasis> <ref refid="cluedo__armor__interface_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kindref="member">ONTOLOGY_PARAM</ref> </emphasis> : string <linebreak/>
+<para>[GET] <emphasis> <ref refid="test__armor__tools_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kindref="member">ONTOLOGY_PARAM</ref> </emphasis> : string <linebreak/>
  path of the ontology <linebreak/>
 <linebreak/>
   </para>

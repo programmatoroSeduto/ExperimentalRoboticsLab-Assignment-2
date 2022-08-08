@@ -8,6 +8,7 @@
     <includes local="no">string</includes>
     <includedby refid="armor__cluedo_8cpp" local="yes">robocluedo_armor/src/armor_tools/armor_cluedo.cpp</includedby>
     <includedby refid="cluedo__armor__interface_8cpp" local="yes">robocluedo_armor/src/cluedo_armor_interface.cpp</includedby>
+    <includedby refid="test__armor__tools_8cpp" local="yes">robocluedo_module_testing/src/test_armor/test_armor_tools.cpp</includedby>
     <incdepgraph>
       <node id="2">
         <label>armor_tools/armor_tools.h</label>
@@ -77,6 +78,10 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="4">
+        <label>robocluedo_module_testing/src/test_armor/test_armor_tools.cpp</label>
+        <link refid="test__armor__tools_8cpp"/>
+      </node>
       <node id="3">
         <label>robocluedo_armor/src/cluedo_armor_interface.cpp</label>
         <link refid="cluedo__armor__interface_8cpp"/>
@@ -87,6 +92,8 @@
         <childnode refid="2" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
         </childnode>
       </node>
       <node id="2">

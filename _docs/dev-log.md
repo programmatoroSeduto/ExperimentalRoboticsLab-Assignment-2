@@ -84,6 +84,51 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 - prima di fare altro, proviamo a compilare ... OK! perfetto
 - e aggiornamento docs
 - **COMMIT** : "armor package first re-adaptation"
+- template per le pagine di documentazione con UML
+- nuovi diagrammi per aRMOR (quelli che ci sono sono sbagliati...)
+	- class diagram iniziale
+	- vediamo se genera... 
+	- ho dovuto risolvere uno *stupido problema di padding*, vedi `skinparam Padding <tot>`
+	- per il momento ci accontentiamo di semplici blocchi
+- voglio provare un po' la compilazione esterna di una libreria
+	- module testing dal vecchio modulo ... in quello del module testing
+	- proviamo a compiare ... non va
+		```text
+		CMake Error at /opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package):
+		  Could not find a package configuration file provided by "armor_tools" with
+		  any of the following names:
+
+			armor_toolsConfig.cmake
+			armor_tools-config.cmake
+
+		  Add the installation prefix of "armor_tools" to CMAKE_PREFIX_PATH or set
+		  "armor_tools_DIR" to a directory containing one of the above files.  If
+		  "armor_tools" provides a separate development package or SDK, be sure it
+		  has been installed.
+		Call Stack (most recent call first):
+		  ExperimentalRoboticsLab-Assignment-2/robocluedo_module_testing/CMakeLists.txt:10 (find_package)
+
+
+		-- Configuring incomplete, errors occurred!
+		See also "/root/ros_ws/build/CMakeFiles/CMakeOutput.log".
+		See also "/root/ros_ws/build/CMakeFiles/CMakeError.log".
+		make: *** [Makefile:17330: cmake_check_build_system] Error 1
+		Invoking "make cmake_check_build_system" failed
+		```
+	- *per usare le librerie di un package A in un package B basta riferirsi al package A nel package B*
+	- proviamo un po' questo test, giusto per essere sicuri
+		- questo ... OK (dopo qualche fortissima bestemmia ... prossima volta controlla anche i file inclusi)
+			```
+			roslaunch robocluedo_module_testing test_armor.launch
+			```
+		- questo ... OK (ci è voluto poco stavolta, per fortuna)
+			```
+			roslaunch robocluedo_module_testing test_armor_tools.launch
+			```
+- voglio un attimo documentare i test in UML, per avere sempre presenti come sono fatti
+
+
+
 
 	
 
@@ -93,12 +138,11 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 
 TODO
 
-- nuovi diagrammi per aRMOR (quelli che ci sono sono sbagliati...)
 - rimuovere le immagini dalla documentazione del codice per armor
-- template per le pagine di documentazione con UML
 - un branch per la documentazione Sphinx
 - e uno script per mettere online la documentazione sphinx "senza sbattersi troppo"
 - autenticazione SSH sul Docker di lavoro
+- approfondire UML armor
 
 NOTE
 
