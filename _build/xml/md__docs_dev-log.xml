@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md__docs_dev-log" kind="page">
+    <compoundname>md__docs_dev-log</compoundname>
+    <title>RoboCLuedo – Development Log</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>template:</para>
+<para><programlisting><codeline><highlight class="normal">##<sp/>data</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>...</highlight></codeline>
+</programlisting></para>
+<sect1 id="md__docs_dev-log_1autotoc_md16">
+<title>08/08/2022 – project refatoring</title>
+<para>la versione precedente del progetto ha parecchi difetti:</para>
+<para><itemizedlist>
+<listitem><para>veramente poco intuitiva</para>
+</listitem><listitem><para>mancanza di un module testing serio</para>
+</listitem><listitem><para>codice poco chiaro ed eccessivo</para>
+</listitem><listitem><para>usare ROSPlan come KB è una pessima idea: complica il PDDL e potrebbe dare strani errori</para>
+</listitem></itemizedlist>
+</para>
+<para>link alla vecchia versione del progetto: <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git">ExperimentalRoboticsLab-Assignment-2-OLD</ulink></para>
+<para>prima del primo commit,</para>
+<para><itemizedlist>
+<listitem><para>creazione di una nuova repository per il progetto, link <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git">qui</ulink></para>
+</listitem><listitem><para>craeazione di un template di repository che permetta di usare plantUML (è finito il tempo di scrivere gli UML su draw.io) vedi <ulink url="https://github.com/programmatoroSeduto/plantuml-sphinx">qui (privata)</ulink></para>
+</listitem><listitem><para><bold>primo setup dell&apos;area di lavoro</bold> con plantUML e Sphinx funzionante</para>
+</listitem><listitem><para>struttura readme, solo elenco puntato per il momento (estendere man mano che andiamo avanti)</para>
+</listitem><listitem><para>creazione di un branch vuoto per la copia degli altri eventuali pacchetti da scaricare</para>
+</listitem><listitem><para><bold>primo vero commit</bold> con tutto il materiale iniziale funzionante</para>
+</listitem></itemizedlist>
+</para>
+<para>TODO<itemizedlist>
+<listitem><para>un branch per la documentazione Sphinx</para>
+</listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>
+</listitem><listitem><para>autenticazione SSH sul Docker di lavoro </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

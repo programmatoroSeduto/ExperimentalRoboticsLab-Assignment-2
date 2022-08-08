@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dev-log_8md" kind="file" language="Markdown">
+    <compoundname>dev-log.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>RoboCLuedo<sp/>--<sp/>Development<sp/>Log</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">template:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>data</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>08/08/2022<sp/>--<sp/>project<sp/>refatoring</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">la<sp/>versione<sp/>precedente<sp/>del<sp/>progetto<sp/>ha<sp/>parecchi<sp/>difetti:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>veramente<sp/>poco<sp/>intuitiva</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mancanza<sp/>di<sp/>un<sp/>module<sp/>testing<sp/>serio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>codice<sp/>poco<sp/>chiaro<sp/>ed<sp/>eccessivo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>usare<sp/>ROSPlan<sp/>come<sp/>KB<sp/>è<sp/>una<sp/>pessima<sp/>idea:<sp/>complica<sp/>il<sp/>PDDL<sp/>e<sp/>potrebbe<sp/>dare<sp/>strani<sp/>errori</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">link<sp/>alla<sp/>vecchia<sp/>versione<sp/>del<sp/>progetto:<sp/>[ExperimentalRoboticsLab-Assignment-2-OLD](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">prima<sp/>del<sp/>primo<sp/>commit,</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>creazione<sp/>di<sp/>una<sp/>nuova<sp/>repository<sp/>per<sp/>il<sp/>progetto,<sp/>link<sp/>[qui](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>craeazione<sp/>di<sp/>un<sp/>template<sp/>di<sp/>repository<sp/>che<sp/>permetta<sp/>di<sp/>usare<sp/>plantUML<sp/>(è<sp/>finito<sp/>il<sp/>tempo<sp/>di<sp/>scrivere<sp/>gli<sp/>UML<sp/>su<sp/>draw.io)<sp/>vedi<sp/>[qui<sp/>(privata)](https://github.com/programmatoroSeduto/plantuml-sphinx)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**primo<sp/>setup<sp/>dell&apos;area<sp/>di<sp/>lavoro**<sp/>con<sp/>plantUML<sp/>e<sp/>Sphinx<sp/>funzionante</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>struttura<sp/>readme,<sp/>solo<sp/>elenco<sp/>puntato<sp/>per<sp/>il<sp/>momento<sp/>(estendere<sp/>man<sp/>mano<sp/>che<sp/>andiamo<sp/>avanti)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>creazione<sp/>di<sp/>un<sp/>branch<sp/>vuoto<sp/>per<sp/>la<sp/>copia<sp/>degli<sp/>altri<sp/>eventuali<sp/>pacchetti<sp/>da<sp/>scaricare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**primo<sp/>vero<sp/>commit**<sp/>con<sp/>tutto<sp/>il<sp/>materiale<sp/>iniziale<sp/>funzionante</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">TODO</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+    </programlisting>
+    <location file="_docs/dev-log.md"/>
+  </compounddef>
+</doxygen>
