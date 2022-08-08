@@ -14,7 +14,7 @@
 <codeline><highlight class="normal">-<sp/>...</highlight></codeline>
 </programlisting></para>
 <sect1 id="md__docs_dev-log_1autotoc_md16">
-<title>08/08/2022 – project refatoring</title>
+<title>08/08/2022 – setup della documentazione e project refactoring</title>
 <para>la versione precedente del progetto ha parecchi difetti:</para>
 <para><itemizedlist>
 <listitem><para>veramente poco intuitiva</para>
@@ -30,14 +30,35 @@
 </listitem><listitem><para>craeazione di un template di repository che permetta di usare plantUML (è finito il tempo di scrivere gli UML su draw.io) vedi <ulink url="https://github.com/programmatoroSeduto/plantuml-sphinx">qui (privata)</ulink></para>
 </listitem><listitem><para><bold>primo setup dell&apos;area di lavoro</bold> con plantUML e Sphinx funzionante</para>
 </listitem><listitem><para>struttura readme, solo elenco puntato per il momento (estendere man mano che andiamo avanti)</para>
-</listitem><listitem><para>creazione di un branch vuoto per la copia degli altri eventuali pacchetti da scaricare</para>
-</listitem><listitem><para><bold>primo vero commit</bold> con tutto il materiale iniziale funzionante</para>
+</listitem><listitem><para><bold>COMMIT</bold> creazione di un branch vuoto per la copia degli altri eventuali pacchetti da scaricare</para>
+</listitem><listitem><para><bold>COMMIT</bold> con tutto il materiale iniziale funzionante</para>
 </listitem></itemizedlist>
 </para>
-<para>TODO<itemizedlist>
-<listitem><para>un branch per la documentazione Sphinx</para>
+<para><emphasis>ora siamo pronti per iniziare a lavorare con ROS</emphasis>. Prima di tutto, il package per il module testing:</para>
+<para><itemizedlist>
+<listitem><para>creazione package per il module testing: ``` catkin_create_pkg robocluedo_module_testing roscpp rospy std_msgs geometry_msgs nav_msgs std_srvs ```</para>
+</listitem><listitem><para>documentazione interna al module testing con index e tutto il resto</para>
+</listitem><listitem><para>creazione template per la pagina index di un package</para>
+</listitem><listitem><para>qualche check prima del commit:<itemizedlist>
+<listitem><para>prova a compilare .. .OK</para>
+</listitem><listitem><para>make documentazione .. OK</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> :</para>
+</listitem></itemizedlist>
+</para>
+<para>TODO</para>
+<para><itemizedlist>
+<listitem><para>templates per il CMakeLists (praticamente continuare il lavoro del vecchio assignment)</para>
+</listitem><listitem><para>template per le pagine di documentazione con UML</para>
+</listitem><listitem><para>un branch per la documentazione Sphinx</para>
 </listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>
-</listitem><listitem><para>autenticazione SSH sul Docker di lavoro </para>
+</listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
+</listitem></itemizedlist>
+</para>
+<para>NOTE</para>
+<para><itemizedlist>
+<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio. </para>
 </listitem></itemizedlist>
 </para>
 </sect1>

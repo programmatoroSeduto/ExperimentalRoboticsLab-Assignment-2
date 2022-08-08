@@ -1,0 +1,27 @@
+
+PKG DOCS -- ...pkgname...
+==========================================
+
+...description
+
+
+.. toctree::
+	:caption: Package Code Documentation
+	:glob:
+	
+	./src/*
+	./scripts/*
+
+
+.. toctree::
+	:caption: Other User Documentation
+	:glob:
+	
+	./_docs/*
+
+
+.. toctree::
+	:caption: UML diagrams
+	:glob:
+	
+	./_docs/*

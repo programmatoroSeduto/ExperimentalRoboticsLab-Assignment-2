@@ -21,7 +21,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>08/08/2022<sp/>--<sp/>project<sp/>refatoring</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>08/08/2022<sp/>--<sp/>setup<sp/>della<sp/>documentazione<sp/>e<sp/>project<sp/>refactoring</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">la<sp/>versione<sp/>precedente<sp/>del<sp/>progetto<sp/>ha<sp/>parecchi<sp/>difetti:</highlight></codeline>
 <codeline></codeline>
@@ -38,14 +38,35 @@
 <codeline><highlight class="normal">-<sp/>craeazione<sp/>di<sp/>un<sp/>template<sp/>di<sp/>repository<sp/>che<sp/>permetta<sp/>di<sp/>usare<sp/>plantUML<sp/>(è<sp/>finito<sp/>il<sp/>tempo<sp/>di<sp/>scrivere<sp/>gli<sp/>UML<sp/>su<sp/>draw.io)<sp/>vedi<sp/>[qui<sp/>(privata)](https://github.com/programmatoroSeduto/plantuml-sphinx)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**primo<sp/>setup<sp/>dell&apos;area<sp/>di<sp/>lavoro**<sp/>con<sp/>plantUML<sp/>e<sp/>Sphinx<sp/>funzionante</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>struttura<sp/>readme,<sp/>solo<sp/>elenco<sp/>puntato<sp/>per<sp/>il<sp/>momento<sp/>(estendere<sp/>man<sp/>mano<sp/>che<sp/>andiamo<sp/>avanti)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>creazione<sp/>di<sp/>un<sp/>branch<sp/>vuoto<sp/>per<sp/>la<sp/>copia<sp/>degli<sp/>altri<sp/>eventuali<sp/>pacchetti<sp/>da<sp/>scaricare</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**primo<sp/>vero<sp/>commit**<sp/>con<sp/>tutto<sp/>il<sp/>materiale<sp/>iniziale<sp/>funzionante</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>creazione<sp/>di<sp/>un<sp/>branch<sp/>vuoto<sp/>per<sp/>la<sp/>copia<sp/>degli<sp/>altri<sp/>eventuali<sp/>pacchetti<sp/>da<sp/>scaricare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>con<sp/>tutto<sp/>il<sp/>materiale<sp/>iniziale<sp/>funzionante</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*ora<sp/>siamo<sp/>pronti<sp/>per<sp/>iniziare<sp/>a<sp/>lavorare<sp/>con<sp/>ROS*.<sp/>Prima<sp/>di<sp/>tutto,<sp/>il<sp/>package<sp/>per<sp/>il<sp/>module<sp/>testing:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>creazione<sp/>package<sp/>per<sp/>il<sp/>module<sp/>testing:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_module_testing<sp/>roscpp<sp/>rospy<sp/>std_msgs<sp/>geometry_msgs<sp/>nav_msgs<sp/>std_srvs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>interna<sp/>al<sp/>module<sp/>testing<sp/>con<sp/>index<sp/>e<sp/>tutto<sp/>il<sp/>resto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>creazione<sp/>template<sp/>per<sp/>la<sp/>pagina<sp/>index<sp/>di<sp/>un<sp/>package</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>qualche<sp/>check<sp/>prima<sp/>del<sp/>commit:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>a<sp/>compilare<sp/>..<sp/>.OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>make<sp/>documentazione<sp/>..<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>templates<sp/>per<sp/>il<sp/>CMakeLists<sp/>(praticamente<sp/>continuare<sp/>il<sp/>lavoro<sp/>del<sp/>vecchio<sp/>assignment)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>template<sp/>per<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>con<sp/>UML</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">NOTE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
     </programlisting>
     <location file="_docs/dev-log.md"/>
   </compounddef>
