@@ -106,10 +106,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES robocluedo_armor
-#  CATKIN_DEPENDS armor_msgs robocluedo_armor_msgs roscpp rospy srd_msgs std_srvs
-#  DEPENDS system_lib
+ INCLUDE_DIRS include
+ LIBRARIES armor_tools
+ CATKIN_DEPENDS roscpp rospy std_msgs armor_msgs
 )
 
 ###########
@@ -119,7 +118,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -127,6 +126,12 @@ include_directories(
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/robocluedo_armor.cpp
 # )
+
+add_library( armor_tools src/armor_tools/armor_tools.cpp )
+target_link_libraries( armor_tools ${catkin_LIBRARIES} )
+
+add_library( armor_cluedo src/armor_tools/armor_cluedo.cpp )
+target_link_libraries( armor_cluedo ${catkin_LIBRARIES} armor_tools )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -137,6 +142,10 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/robocluedo_armor_node.cpp)
+
+add_executable( robocluedo_armor_interface src/cluedo_armor_interface.cpp )
+add_dependencies( robocluedo_armor_interface ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( robocluedo_armor_interface ${catkin_LIBRARIES} armor_tools armor_cluedo )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

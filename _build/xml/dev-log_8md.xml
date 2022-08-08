@@ -76,6 +76,24 @@
 <codeline><highlight class="normal">-<sp/>e<sp/>prima<sp/>documentazione<sp/>anche<sp/>qui<sp/>senza<sp/>perdere<sp/>tempo</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>giusto<sp/>per,<sp/>proviamo<sp/>a<sp/>compilare,<sp/>non<sp/>si<sp/>sa<sp/>mai</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;armor<sp/>packages<sp/>setup&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>importazione<sp/>del<sp/>codice<sp/>delle<sp/>interfacce<sp/>aRMOR</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(header)<sp/>armor<sp/>tools</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(header)<sp/>armor<sp/>cluedo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(codice)<sp/>armor<sp/>tools<sp/>e<sp/>armor<sp/>cluedo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(codice<sp/>nodo)<sp/>cluedo<sp/>armor<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>primo<sp/>lavoro<sp/>è<sp/>quello<sp/>di<sp/>creare<sp/>i<sp/>messaggi<sp/>da<sp/>compilare,<sp/>guardando<sp/>che<sp/>cosa<sp/>richiede<sp/>l&apos;interfaccia<sp/>nodo<sp/>armor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>AddHint<sp/>srv</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>DiscardHypothesis<sp/>srv<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>Hypothesis<sp/>msg</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>FindConsistentHypotheses<sp/>srv</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compilaziione<sp/>messaggi<sp/>con<sp/>catkin</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora<sp/>devo<sp/>&quot;solo&quot;<sp/>aggiornare<sp/>il<sp/>codice<sp/>C++<sp/>del<sp/>nodo<sp/>ROS<sp/>e<sp/>scrivere<sp/>il<sp/>catkin</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora<sp/>mancano<sp/>cose<sp/>tipo<sp/>...<sp/>la<sp/>ontology<sp/>...<sp/>e<sp/>tutto<sp/>il<sp/>resto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>selezione<sp/>dei<sp/>vecchi<sp/>diagrammi<sp/>UML<sp/>riferiti<sp/>ad<sp/>aRMOR</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>fare<sp/>altro,<sp/>proviamo<sp/>a<sp/>compilare<sp/>...<sp/>OK!<sp/>perfetto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>aggiornamento<sp/>docs</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -83,7 +101,8 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>templates<sp/>per<sp/>il<sp/>CMakeLists<sp/>(praticamente<sp/>continuare<sp/>il<sp/>lavoro<sp/>del<sp/>vecchio<sp/>assignment)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nuovi<sp/>diagrammi<sp/>per<sp/>aRMOR<sp/>(quelli<sp/>che<sp/>ci<sp/>sono<sp/>sono<sp/>sbagliati...)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>template<sp/>per<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>con<sp/>UML</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>

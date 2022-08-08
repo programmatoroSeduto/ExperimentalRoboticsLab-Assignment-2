@@ -13,7 +13,7 @@
 <codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>...</highlight></codeline>
 </programlisting></para>
-<sect1 id="md__docs_dev-log_1autotoc_md16">
+<sect1 id="md__docs_dev-log_1autotoc_md20">
 <title>08/08/2022 – setup della documentazione e project refactoring</title>
 <para>la versione precedente del progetto ha parecchi difetti:</para>
 <para><itemizedlist>
@@ -63,11 +63,32 @@
 </listitem><listitem><para>e prima documentazione anche qui senza perdere tempo</para>
 </listitem><listitem><para>giusto per, proviamo a compilare, non si sa mai</para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;armor packages setup&quot;</para>
+</listitem><listitem><para>importazione del codice delle interfacce aRMOR<itemizedlist>
+<listitem><para>(header) armor tools</para>
+</listitem><listitem><para>(header) armor cluedo</para>
+</listitem><listitem><para>(codice) armor tools e armor cluedo</para>
+</listitem><listitem><para>(codice nodo) cluedo armor interface</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>il primo lavoro è quello di creare i messaggi da compilare, guardando che cosa richiede l&apos;interfaccia nodo armor<itemizedlist>
+<listitem><para>AddHint srv</para>
+</listitem><listitem><para>DiscardHypothesis srv</para>
+</listitem><listitem><para>Hypothesis msg</para>
+</listitem><listitem><para>FindConsistentHypotheses srv</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>compilaziione messaggi con catkin</para>
+</listitem><listitem><para>ora devo &quot;solo&quot; aggiornare il codice C++ del nodo ROS e scrivere il catkin</para>
+</listitem><listitem><para>ora mancano cose tipo ... la ontology ... e tutto il resto</para>
+</listitem><listitem><para>selezione dei vecchi diagrammi UML riferiti ad aRMOR</para>
+</listitem><listitem><para>prima di fare altro, proviamo a compilare ... OK! perfetto</para>
+</listitem><listitem><para>e aggiornamento docs</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
 <para><itemizedlist>
-<listitem><para>templates per il CMakeLists (praticamente continuare il lavoro del vecchio assignment)</para>
+<listitem><para>nuovi diagrammi per aRMOR (quelli che ci sono sono sbagliati...)</para>
+</listitem><listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>
 </listitem><listitem><para>template per le pagine di documentazione con UML</para>
 </listitem><listitem><para>un branch per la documentazione Sphinx</para>
 </listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>

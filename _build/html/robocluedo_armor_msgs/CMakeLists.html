@@ -58,6 +58,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="../_docs/catkin-notes.html">Notes about Catkin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/dev-log.html">RoboCLuedo – Development Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
@@ -142,17 +143,21 @@ message_generation</p>
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES …)</p>
 <p>## Generate messages in the ‘msg’ folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )</p>
+add_message_files(</p>
+<blockquote>
+<div><p>FILES
+Hypothesis.msg</p>
+</div></blockquote>
+<p>)</p>
 <p>## Generate services in the ‘srv’ folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )</p>
+add_service_files(</p>
+<blockquote>
+<div><p>FILES
+AddHint.srv
+FindConsistentHypotheses.srv
+DiscardHypothesis.srv</p>
+</div></blockquote>
+<p>)</p>
 <p>## Generate actions in the ‘action’ folder
 # add_action_files(
 #   FILES
@@ -160,10 +165,12 @@ message_generation</p>
 #   Action2.action
 # )</p>
 <p>## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   armor_msgs#   std_msgs
-# )</p>
+generate_messages(</p>
+<blockquote>
+<div><p>DEPENDENCIES
+std_msgs</p>
+</div></blockquote>
+<p>)</p>
 </div>
 <div class="section" id="declare-ros-dynamic-reconfigure-parameters">
 <h1>## Declare ROS dynamic reconfigure parameters ##<a class="headerlink" href="#declare-ros-dynamic-reconfigure-parameters" title="Permalink to this heading"></a></h1>

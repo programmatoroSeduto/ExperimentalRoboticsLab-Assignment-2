@@ -67,6 +67,25 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 - e prima documentazione anche qui senza perdere tempo
 - giusto per, proviamo a compilare, non si sa mai
 - **COMMIT** : "armor packages setup"
+- importazione del codice delle interfacce aRMOR
+	- (header) armor tools
+	- (header) armor cluedo
+	- (codice) armor tools e armor cluedo
+	- (codice nodo) cluedo armor interface
+- il primo lavoro è quello di creare i messaggi da compilare, guardando che cosa richiede l'interfaccia nodo armor
+	- AddHint srv
+	- DiscardHypothesis srv 
+	- Hypothesis msg
+	- FindConsistentHypotheses srv
+- compilaziione messaggi con catkin
+- ora devo "solo" aggiornare il codice C++ del nodo ROS e scrivere il catkin
+- ora mancano cose tipo ... la ontology ... e tutto il resto
+- selezione dei vecchi diagrammi UML riferiti ad aRMOR
+- prima di fare altro, proviamo a compilare ... OK! perfetto
+- e aggiornamento docs
+- **COMMIT** : "armor package first re-adaptation"
+
+	
 
 
 
@@ -74,7 +93,8 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 
 TODO
 
-- templates per il CMakeLists (praticamente continuare il lavoro del vecchio assignment)
+- nuovi diagrammi per aRMOR (quelli che ci sono sono sbagliati...)
+- rimuovere le immagini dalla documentazione del codice per armor
 - template per le pagine di documentazione con UML
 - un branch per la documentazione Sphinx
 - e uno script per mettere online la documentazione sphinx "senza sbattersi troppo"

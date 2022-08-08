@@ -60,6 +60,7 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="catkin-notes.html">Notes about Catkin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">RoboCLuedo – Development Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
@@ -168,10 +169,33 @@
 <li><p>e prima documentazione anche qui senza perdere tempo</p></li>
 <li><p>giusto per, proviamo a compilare, non si sa mai</p></li>
 <li><p><strong>COMMIT</strong> : “armor packages setup”</p></li>
+<li><p>importazione del codice delle interfacce aRMOR</p>
+<ul class="simple">
+<li><p>(header) armor tools</p></li>
+<li><p>(header) armor cluedo</p></li>
+<li><p>(codice) armor tools e armor cluedo</p></li>
+<li><p>(codice nodo) cluedo armor interface</p></li>
+</ul>
+</li>
+<li><p>il primo lavoro è quello di creare i messaggi da compilare, guardando che cosa richiede l’interfaccia nodo armor</p>
+<ul class="simple">
+<li><p>AddHint srv</p></li>
+<li><p>DiscardHypothesis srv</p></li>
+<li><p>Hypothesis msg</p></li>
+<li><p>FindConsistentHypotheses srv</p></li>
+</ul>
+</li>
+<li><p>compilaziione messaggi con catkin</p></li>
+<li><p>ora devo “solo” aggiornare il codice C++ del nodo ROS e scrivere il catkin</p></li>
+<li><p>ora mancano cose tipo … la ontology … e tutto il resto</p></li>
+<li><p>selezione dei vecchi diagrammi UML riferiti ad aRMOR</p></li>
+<li><p>prima di fare altro, proviamo a compilare … OK! perfetto</p></li>
+<li><p>e aggiornamento docs</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
-<li><p>templates per il CMakeLists (praticamente continuare il lavoro del vecchio assignment)</p></li>
+<li><p>nuovi diagrammi per aRMOR (quelli che ci sono sono sbagliati…)</p></li>
+<li><p>rimuovere le immagini dalla documentazione del codice per armor</p></li>
 <li><p>template per le pagine di documentazione con UML</p></li>
 <li><p>un branch per la documentazione Sphinx</p></li>
 <li><p>e uno script per mettere online la documentazione sphinx “senza sbattersi troppo”</p></li>
