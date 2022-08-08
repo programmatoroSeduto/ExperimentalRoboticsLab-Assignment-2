@@ -127,9 +127,9 @@
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"></highlight><highlight class="comment">#<sp/>plantuml<sp/>=<sp/>&apos;java<sp/>-Djava.awt.headless=true<sp/>-jar<sp/>_ext/plantuml.jar<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight><highlight class="comment">#<sp/>plantuml<sp/>=<sp/>&apos;java<sp/>-jar<sp/>_ext/plantuml.jar<sp/>&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="120" refid="namespaceconf_1a04c272e775af47ba3baf2be945ab445f" refkind="member"><highlight class="normal">plantuml<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;java<sp/>-jar<sp/>%s&apos;</highlight><highlight class="normal"><sp/>%<sp/>os.path.join(os.path.dirname(__file__),<sp/></highlight><highlight class="stringliteral">&quot;_ext&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;plantuml.jar&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="120" refid="namespaceconf_1a04c272e775af47ba3baf2be945ab445f" refkind="member"><highlight class="normal">plantuml<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;java<sp/>-jar<sp/>%s<sp/>-verbose&apos;</highlight><highlight class="normal"><sp/>%<sp/>os.path.join(os.path.dirname(__file__),<sp/></highlight><highlight class="stringliteral">&quot;_ext&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;plantuml.jar&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="121"><highlight class="normal"></highlight></codeline>
-<codeline lineno="122" refid="namespaceconf_1abf3d1998a088118adf9f95de73a60449" refkind="member"><highlight class="normal">plantuml_output_format<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;png&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="122" refid="namespaceconf_1abf3d1998a088118adf9f95de73a60449" refkind="member"><highlight class="normal">plantuml_output_format<sp/>=<sp/></highlight><highlight class="stringliteral">&apos;svg&apos;</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
     <location file="conf.py"/>
   </compounddef>

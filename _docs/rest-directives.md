@@ -184,6 +184,16 @@ extension:
 extensions = ['sphinxcontrib.plantuml']
 ```
 
+### plantUML and markdown
+
+```
+\```{uml} 
+@startuml
+
+@endtuml
+\```
+```
+
 ## Links
 
 ```rst

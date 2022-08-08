@@ -193,6 +193,16 @@
 <codeline><highlight class="normal">extensions<sp/>=<sp/>[&apos;sphinxcontrib.plantuml&apos;]</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">###<sp/>plantUML<sp/>and<sp/>markdown</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">\```{uml}<sp/></highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@endtuml</highlight></codeline>
+<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Links</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```rst</highlight></codeline>

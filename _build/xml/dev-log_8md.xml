@@ -92,6 +92,52 @@
 <codeline><highlight class="normal">-<sp/>selezione<sp/>dei<sp/>vecchi<sp/>diagrammi<sp/>UML<sp/>riferiti<sp/>ad<sp/>aRMOR</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>fare<sp/>altro,<sp/>proviamo<sp/>a<sp/>compilare<sp/>...<sp/>OK!<sp/>perfetto</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>aggiornamento<sp/>docs</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;armor<sp/>package<sp/>first<sp/>re-adaptation&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>template<sp/>per<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>con<sp/>UML</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nuovi<sp/>diagrammi<sp/>per<sp/>aRMOR<sp/>(quelli<sp/>che<sp/>ci<sp/>sono<sp/>sono<sp/>sbagliati...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>class<sp/>diagram<sp/>iniziale</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>vediamo<sp/>se<sp/>genera...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>dovuto<sp/>risolvere<sp/>uno<sp/>*stupido<sp/>problema<sp/>di<sp/>padding*,<sp/>vedi<sp/>`skinparam<sp/>Padding<sp/>&lt;tot&gt;`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>il<sp/>momento<sp/>ci<sp/>accontentiamo<sp/>di<sp/>semplici<sp/>blocchi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>voglio<sp/>provare<sp/>un<sp/>po&apos;<sp/>la<sp/>compilazione<sp/>esterna<sp/>di<sp/>una<sp/>libreria</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>module<sp/>testing<sp/>dal<sp/>vecchio<sp/>modulo<sp/>...<sp/>in<sp/>quello<sp/>del<sp/>module<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>a<sp/>compiare<sp/>...<sp/>non<sp/>va</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>CMake<sp/>Error<sp/>at<sp/>/opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake:83<sp/>(find_package):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Could<sp/>not<sp/>find<sp/>a<sp/>package<sp/>configuration<sp/>file<sp/>provided<sp/>by<sp/>&quot;armor_tools&quot;<sp/>with</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>any<sp/>of<sp/>the<sp/>following<sp/>names:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor_toolsConfig.cmake</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor_tools-config.cmake</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Add<sp/>the<sp/>installation<sp/>prefix<sp/>of<sp/>&quot;armor_tools&quot;<sp/>to<sp/>CMAKE_PREFIX_PATH<sp/>or<sp/>set</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;armor_tools_DIR&quot;<sp/>to<sp/>a<sp/>directory<sp/>containing<sp/>one<sp/>of<sp/>the<sp/>above<sp/>files.<sp/><sp/>If</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&quot;armor_tools&quot;<sp/>provides<sp/>a<sp/>separate<sp/>development<sp/>package<sp/>or<sp/>SDK,<sp/>be<sp/>sure<sp/>it</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>has<sp/>been<sp/>installed.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Call<sp/>Stack<sp/>(most<sp/>recent<sp/>call<sp/>first):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ExperimentalRoboticsLab-Assignment-2/robocluedo_module_testing/CMakeLists.txt:10<sp/>(find_package)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--<sp/>Configuring<sp/>incomplete,<sp/>errors<sp/>occurred!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>See<sp/>also<sp/>&quot;/root/ros_ws/build/CMakeFiles/CMakeOutput.log&quot;.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>See<sp/>also<sp/>&quot;/root/ros_ws/build/CMakeFiles/CMakeError.log&quot;.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>make:<sp/>***<sp/>[Makefile:17330:<sp/>cmake_check_build_system]<sp/>Error<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Invoking<sp/>&quot;make<sp/>cmake_check_build_system&quot;<sp/>failed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*per<sp/>usare<sp/>le<sp/>librerie<sp/>di<sp/>un<sp/>package<sp/>A<sp/>in<sp/>un<sp/>package<sp/>B<sp/>basta<sp/>riferirsi<sp/>al<sp/>package<sp/>A<sp/>nel<sp/>package<sp/>B*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>un<sp/>po&apos;<sp/>questo<sp/>test,<sp/>giusto<sp/>per<sp/>essere<sp/>sicuri</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>...<sp/>OK<sp/>(dopo<sp/>qualche<sp/>fortissima<sp/>bestemmia<sp/>...<sp/>prossima<sp/>volta<sp/>controlla<sp/>anche<sp/>i<sp/>file<sp/>inclusi)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_module_testing<sp/>test_armor.launch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>...<sp/>OK<sp/>(ci<sp/>è<sp/>voluto<sp/>poco<sp/>stavolta,<sp/>per<sp/>fortuna)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_module_testing<sp/>test_armor_tools.launch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>voglio<sp/>un<sp/>attimo<sp/>documentare<sp/>i<sp/>test<sp/>in<sp/>UML,<sp/>per<sp/>avere<sp/>sempre<sp/>presenti<sp/>come<sp/>sono<sp/>fatti</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
@@ -101,12 +147,11 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>nuovi<sp/>diagrammi<sp/>per<sp/>aRMOR<sp/>(quelli<sp/>che<sp/>ci<sp/>sono<sp/>sono<sp/>sbagliati...)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>template<sp/>per<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>con<sp/>UML</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">NOTE</highlight></codeline>
 <codeline></codeline>

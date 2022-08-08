@@ -18,3 +18,10 @@ this package contains some node used for testing the modules of the project.
 	:glob:
 	
 	./_docs/*
+
+
+.. toctree::
+	:caption: Diagrams
+	:glob:
+	
+	./_uml/*

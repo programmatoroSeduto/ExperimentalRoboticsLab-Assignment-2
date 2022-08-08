@@ -118,6 +118,8 @@
   <compound refid="example__armor__tools__2_8cpp" kind="file"><name>example_armor_tools_2.cpp</name>
     <member refid="example__armor__tools__2_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="armor-interface-class-diagram_8md" kind="file"><name>armor-interface-class-diagram.md</name>
+  </compound>
   <compound refid="robocluedo__armor_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="robocluedo__armor__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
@@ -183,6 +185,42 @@
     <member refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" kind="function"><name>ServiceBackupOntology</name></member>
     <member refid="cluedo__armor__interface_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="test__armor_8cpp" kind="file"><name>test_armor.cpp</name>
+    <member refid="test__armor_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kind="define"><name>ONTOLOGY_PARAM</name></member>
+    <member refid="test__armor_8cpp_1acb73a2cbb815c8cdf8ba0ccaf4fa6ae6" kind="define"><name>SERVICE_ARMOR_SINGLE_REQUEST</name></member>
+    <member refid="test__armor_8cpp_1a3eb94cb231e1b302f9d12d1ede64cb97" kind="define"><name>SERVICE_ARMOR_MULTIPLE_REQUESTS</name></member>
+    <member refid="test__armor_8cpp_1a8d32a85a0e3b8cb7dcbbeadc7a8b284a" kind="define"><name>ARMOR_CLIENT_NAME</name></member>
+    <member refid="test__armor_8cpp_1a6d75905dbd9fc2052398257505c694cf" kind="define"><name>ARMOR_REFERENCE_NAME</name></member>
+    <member refid="test__armor_8cpp_1a8a8c942aeb830679546ea2e20592f70a" kind="define"><name>ARMOR_CMD_LOAD</name></member>
+    <member refid="test__armor_8cpp_1ab5b373ba9f647d494868eb4091121d40" kind="define"><name>ARMOR_TIMEOUT</name></member>
+    <member refid="test__armor_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kind="define"><name>OUTLABEL</name></member>
+    <member refid="test__armor_8cpp_1a186fe566fd11435e6aa34702dd79cac1" kind="define"><name>OUTLOG</name></member>
+    <member refid="test__armor_8cpp_1a7acd05993f001ce64575f2742dd023ae" kind="define"><name>OUTERR</name></member>
+    <member refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kind="define"><name>LOGSQUARE</name></member>
+    <member refid="test__armor_8cpp_1af4f289b8ad162b609975620166e3d407" kind="define"><name>SS</name></member>
+    <member refid="test__armor_8cpp_1a7a571e6f0c662a683b2741f0e4cd4c26" kind="define"><name>SSS</name></member>
+    <member refid="test__armor_8cpp_1a425e0b3a1e6c60b7ed0330df24c67e66" kind="function"><name>fileExist</name></member>
+    <member refid="test__armor_8cpp_1a70961d77b4dba027046302569e947a8d" kind="function"><name>armorGetArgs</name></member>
+    <member refid="test__armor_8cpp_1a789f053ee9576f78228a8ebfb86fa107" kind="function"><name>armorGetRequest</name></member>
+    <member refid="test__armor_8cpp_1a093155b99db1f38d96329a10bb7738d3" kind="function"><name>armorPrintRequest</name></member>
+    <member refid="test__armor_8cpp_1ad9da254399d28a823eac1445696c6274" kind="function"><name>armorPrintResponse</name></member>
+    <member refid="test__armor_8cpp_1a43568c05742adcc36486995190475e93" kind="function"><name>armorCallService</name></member>
+    <member refid="test__armor_8cpp_1abff933932da2d36d8bd8dc968ced4019" kind="function"><name>armorTestSession</name></member>
+    <member refid="test__armor_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="test__armor__tools_8cpp" kind="file"><name>test_armor_tools.cpp</name>
+    <member refid="test__armor__tools_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kind="define"><name>ONTOLOGY_PARAM</name></member>
+    <member refid="test__armor__tools_8cpp_1acb73a2cbb815c8cdf8ba0ccaf4fa6ae6" kind="define"><name>SERVICE_ARMOR_SINGLE_REQUEST</name></member>
+    <member refid="test__armor__tools_8cpp_1a3eb94cb231e1b302f9d12d1ede64cb97" kind="define"><name>SERVICE_ARMOR_MULTIPLE_REQUESTS</name></member>
+    <member refid="test__armor__tools_8cpp_1a8d32a85a0e3b8cb7dcbbeadc7a8b284a" kind="define"><name>ARMOR_CLIENT_NAME</name></member>
+    <member refid="test__armor__tools_8cpp_1a6d75905dbd9fc2052398257505c694cf" kind="define"><name>ARMOR_REFERENCE_NAME</name></member>
+    <member refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kind="define"><name>OUTLABEL</name></member>
+    <member refid="test__armor__tools_8cpp_1a425e0b3a1e6c60b7ed0330df24c67e66" kind="function"><name>fileExist</name></member>
+    <member refid="test__armor__tools_8cpp_1a349df24894d6a8c020f02bf53b723769" kind="function"><name>printList</name></member>
+    <member refid="test__armor__tools_8cpp_1a86644574dffd07a880d40f455d113782" kind="function"><name>armorTestSession</name></member>
+    <member refid="test__armor__tools_8cpp_1a78703009283c736ea377ca3a343cbd58" kind="function"><name>armorTestSession2</name></member>
+    <member refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
+  </compound>
   <compound refid="md__docs_catkin-notes" kind="page"><name>md__docs_catkin-notes</name>
   </compound>
   <compound refid="md__docs_cpp-docs-template" kind="page"><name>md__docs_cpp-docs-template</name>
@@ -203,6 +241,8 @@
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
+  <compound refid="md_robocluedo_armor__uml_armor-interface-class-diagram" kind="page"><name>md_robocluedo_armor__uml_armor-interface-class-diagram</name>
+  </compound>
   <compound refid="todo" kind="page"><name>todo</name>
   </compound>
   <compound refid="dir_478f92b34e45e14d753bbfb48456fb76" kind="dir"><name>_docs</name>
@@ -212,6 +252,8 @@
   <compound refid="dir_635b2744a73b973a9e9b2181949bc77f" kind="dir"><name>robocluedo_armor/_examples</name>
   </compound>
   <compound refid="dir_2fa2ed979a7f6a67d6f5371dd454464f" kind="dir"><name>_ext</name>
+  </compound>
+  <compound refid="dir_94539ea0841c6d2e0d7ac25c028db2e8" kind="dir"><name>robocluedo_armor/_uml</name>
   </compound>
   <compound refid="dir_921cc45e4a1bc444cc9638cb64f2c440" kind="dir"><name>robocluedo_armor/include/armor_tools</name>
   </compound>
@@ -239,7 +281,11 @@
   </compound>
   <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
+  <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
+  </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
+  </compound>
+  <compound refid="dir_952419341069c2adb786d19a7245beeb" kind="dir"><name>robocluedo_module_testing/src/test_armor</name>
   </compound>
   <compound refid="_armor_cluedo_01-_01001_01-_01_working_01on_01_individuals-example" kind="example"><name>ArmorCluedo - 001 - Working on Individuals</name>
   </compound>

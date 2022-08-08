@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="armor-interface-class-diagram_8md" kind="file" language="Markdown">
+    <compoundname>armor-interface-class-diagram.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>UML<sp/>CLASS<sp/>--<sp/>robocluedo<sp/>armor</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```{uml}<sp/></highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">title<sp/>robocluedo_armor<sp/>project<sp/>structure</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>&quot;armor_tools&quot;<sp/>as<sp/>ARMOR1<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>&quot;armor_cluedo&quot;<sp/>as<sp/>ARMOR2<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;armor_interface&quot;<sp/>as<sp/>NODE<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">database<sp/>&quot;armor&quot;<sp/>as<sp/>ARMOR<sp/>{</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ARMOR1<sp/>-up-|&gt;<sp/>ARMOR2<sp/>:<sp/>&quot;<sp/><sp/><sp/>&quot;</highlight></codeline>
+<codeline><highlight class="normal">ARMOR2<sp/>--&gt;<sp/>ARMOR1<sp/>:<sp/>&quot;<sp/><sp/><sp/>&quot;</highlight></codeline>
+<codeline><highlight class="normal">ARMOR2<sp/>-up-|&gt;<sp/>NODE<sp/>:<sp/>&quot;inherits...&quot;</highlight></codeline>
+<codeline><highlight class="normal">ARMOR1<sp/>&quot;cl&quot;<sp/>-right-&gt;<sp/>&quot;srv&quot;<sp/>ARMOR<sp/>:<sp/>&quot;as<sp/>client&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="robocluedo_armor/_uml/armor-interface-class-diagram.md"/>
+  </compounddef>
+</doxygen>

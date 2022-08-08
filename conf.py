@@ -117,6 +117,6 @@ breathe_default_members = ('members', 'undoc-members')
 
 # plantuml = 'java -Djava.awt.headless=true -jar _ext/plantuml.jar '
 # plantuml = 'java -jar _ext/plantuml.jar '
-plantuml = 'java -jar %s' % os.path.join(os.path.dirname(__file__), "_ext", "plantuml.jar")
+plantuml = 'java -jar %s -verbose' % os.path.join(os.path.dirname(__file__), "_ext", "plantuml.jar")
 
-plantuml_output_format = 'png'
+plantuml_output_format = 'svg'

@@ -270,7 +270,7 @@
         <definition>string conf.plantuml</definition>
         <argsstring></argsstring>
         <name>plantuml</name>
-        <initializer>=  &apos;java -jar %s&apos; % os.path.join(os.path.dirname(__file__), &quot;_ext&quot;, &quot;plantuml.jar&quot;)</initializer>
+        <initializer>=  &apos;java -jar %s -verbose&apos; % os.path.join(os.path.dirname(__file__), &quot;_ext&quot;, &quot;plantuml.jar&quot;)</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -284,7 +284,7 @@
         <definition>string conf.plantuml_output_format</definition>
         <argsstring></argsstring>
         <name>plantuml_output_format</name>
-        <initializer>=  &apos;png&apos;</initializer>
+        <initializer>=  &apos;svg&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

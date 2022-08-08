@@ -156,11 +156,19 @@
 <para><programlisting filename=".py"><codeline><highlight class="normal">extensions<sp/>=<sp/>[</highlight><highlight class="stringliteral">&apos;sphinxcontrib.plantuml&apos;</highlight><highlight class="normal">]</highlight></codeline>
 </programlisting></para>
 </sect2>
-</sect1>
-<sect1 id="md__docs_rest-directives_1autotoc_md40">
-<title>Links</title>
-<para><programlisting filename=".rst"><codeline><highlight class="normal">`anchor<sp/>text<sp/>&lt;URL&gt;`__</highlight></codeline>
+<sect2 id="md__docs_rest-directives_1autotoc_md40">
+<title>plantUML and markdown</title>
+<para><programlisting><codeline><highlight class="normal">\```{uml}<sp/></highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@endtuml</highlight></codeline>
+</programlisting></para>
+<para><programlisting><codeline><highlight class="normal">##<sp/>Links</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```rst</highlight></codeline>
+<codeline><highlight class="normal">`anchor<sp/>text<sp/>&lt;URL&gt;`__</highlight></codeline>
 </programlisting> </para>
+</sect2>
 </sect1>
     </detaileddescription>
   </compounddef>

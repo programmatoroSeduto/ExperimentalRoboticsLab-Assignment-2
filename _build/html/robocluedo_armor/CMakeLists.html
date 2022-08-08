@@ -55,6 +55,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index.html">PKG DOCS – robocluedo armor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
@@ -260,17 +261,18 @@ target_link_libraries( robocluedo_armor_interface ${catkin_LIBRARIES} armor_tool
 # )</p>
 <p>## Mark libraries for installation
 ## See <a class="reference external" href="http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html">http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_libraries.html</a>
-# install(TARGETS ${PROJECT_NAME}
-#   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
-#   RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}
-# )</p>
+install(TARGETS armor_tools</p>
+<blockquote>
+<div><p>ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
+RUNTIME DESTINATION ${CATKIN_GLOBAL_BIN_DESTINATION}</p>
+</div></blockquote>
+<p>)</p>
 <p>## Mark cpp header files for installation
-# install(DIRECTORY include/${PROJECT_NAME}/
-#   DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
-#   FILES_MATCHING PATTERN “<a href="#id1"><span class="problematic" id="id2">*</span></a>.h”
-#   PATTERN “.svn” EXCLUDE
-# )</p>
+install(DIRECTORY include/${PROJECT_NAME}/</p>
+<blockquote>
+<div><p>DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION} )</p>
+</div></blockquote>
 <p>## Mark other files for installation (e.g. launch and bag files, etc.)
 # install(FILES
 #   # myfile1

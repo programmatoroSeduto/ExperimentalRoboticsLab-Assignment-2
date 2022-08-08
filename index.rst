@@ -21,6 +21,7 @@ RCL -- RoboCLuedo - v1.0.0
    
    ./robocluedo_armor_msgs/index.rst
    ./robocluedo_armor/index.rst
+   ./robocluedo_module_testing/index.rst
 
 
 .. toctree::
