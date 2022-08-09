@@ -118,8 +118,8 @@
 <div class="section" id="schema-knowledge-base">
 <h2>schema – knowledge base<a class="headerlink" href="#schema-knowledge-base" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-2041777c2f9572c68c9a5edec988668e8126d9f9.svg" type="image/svg+xml" style="width:1602px;height:355px;background:#FFFFFF;">
-<img src="../../_images/plantuml-2041777c2f9572c68c9a5edec988668e8126d9f9.png" alt="&#64;startuml
+<object data="../../_images/plantuml-74ac4160d9ff613cef254b9eae30bf584e104b5d.svg" type="image/svg+xml" style="width:1763px;height:355px;background:#FFFFFF;">
+<img src="../../_images/plantuml-74ac4160d9ff613cef254b9eae30bf584e104b5d.png" alt="&#64;startuml
 
 ''' INFOS
 title robocluedo_armor project structure
@@ -138,17 +138,21 @@ KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_
 note on link: 
 '/
 
-() &quot;/rosplan_knowledge_base/clear&quot; as SRV_KB_CLEAR
-KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_CLEAR
-note on link: std_srvs::Empty
+' () &quot;/rosplan_knowledge_base/clear&quot; as SRV_KB_CLEAR
+' KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_CLEAR
+' note on link: std_srvs::Empty
 
 () &quot;/rosplan_knowledge_base/state/propositions&quot; as SRV_KB_GET_PRED
 KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_GET_PRED
-note on link: rosplan_knowledge_msgs::GetAttributeService
+note on link: rosplan_knowledge_msgs/GetAttributeService
 
-() &quot;/rosplan_knowledge_base/update&quot; as SRV_KB_UPDATE
+() &quot;/rosplan_knowledge_base/update_array&quot; as SRV_KB_UPDATE
 KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_UPDATE
 note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() &quot;/rosplan_knowledge_base/update&quot; as SRV_KB_UPDATE_ARRAY
+KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_UPDATE_ARRAY
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateServiceArray
 
 () &quot;/rosplan_knowledge_base/query_state&quot; as SRV_QUERY
 KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_QUERY
@@ -165,8 +169,8 @@ note on link: rosplan_knowledge_msgs/KnowledgeQueryService
 <div class="section" id="schema-class-kb-tools">
 <h2>schema – CLASS kb_tools<a class="headerlink" href="#schema-class-kb-tools" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-4728d295c7dd1a977a3f9d7929c9e06276df3f4a.svg" type="image/svg+xml" style="width:837px;height:598px;background:#FFFFFF;">
-<img src="../../_images/plantuml-4728d295c7dd1a977a3f9d7929c9e06276df3f4a.png" alt="&#64;startuml
+<object data="../../_images/plantuml-7febc559997f9c93a50f561f7e75253db1aa5711.svg" type="image/svg+xml" style="width:837px;height:630px;background:#FFFFFF;">
+<img src="../../_images/plantuml-7febc559997f9c93a50f561f7e75253db1aa5711.png" alt="&#64;startuml
 
 ''' INFOS
 title robocluedo_armor project structure
@@ -181,6 +185,8 @@ database &quot;knowledge base&quot; &lt;&lt;ROSPlan&gt;&gt; as KB
 class &quot;kb_tools&quot; as TOOLS {
 + get_predicate(string pname, map&lt;keyvalue&gt; args) : bool
 + set_predicate(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
+' + get_goal(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
++ set_goal(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
 }
 
 
@@ -433,7 +439,7 @@ bool success
 
 <span class="n">rosplan_knowledge_msgs</span><span class="o">::</span><span class="n">KnowledgeUpdateService</span><span class="w"> </span><span class="n">kbm</span><span class="p">;</span><span class="w"></span>
 
-<span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">update_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nl">KB_ADD_KNOWLEDGE</span> <span class="p">:</span><span class="w"> </span><span class="n">KB_DEL_KNOWLEDGE</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">update_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nl">KB_ADD_KNOWLEDGE</span> <span class="p">:</span><span class="w"> </span><span class="n">KB_DEL_KNOWLEDGE</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
 <span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">knowledge</span><span class="p">.</span><span class="n">knowledge_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KB_KTYPE_PREDICATE</span><span class="p">;</span><span class="w"></span>
 <span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">knowledge</span><span class="p">.</span><span class="n">attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pname</span><span class="p">;</span><span class="w"></span>
 
@@ -468,6 +474,64 @@ bool success
 <span class="w">	</span><span class="n">ROS_ERR</span><span class="p">(</span><span class="s">&quot;kb tools set predicate&quot;</span><span class="p">);</span><span class="w"></span>
 </pre></div>
 </div>
+</div>
+</div>
+<div class="section" id="dealing-with-goals">
+<h2>dealing with goals<a class="headerlink" href="#dealing-with-goals" title="Permalink to this heading"></a></h2>
+<p>libraries:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;diagnostic_msgs/KeyValue.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rosplan_knowledge_msgs/KnowledgeItem.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rosplan_knowledge_msgs/KnowledgeUpdateService.h&quot;</span><span class="cp"></span>
+
+<span class="c1">// kb knowledge type</span>
+<span class="cp">#define KB_KTYPE_FLUENT 2</span>
+<span class="cp">#define KB_KTYPE_PREDICATE 1</span>
+
+<span class="c1">// kb action</span>
+<span class="cp">#define KB_ADD_KNOWLEDGE 0</span>
+<span class="cp">#define KB_DEL_KNOWLEDGE 2</span>
+<span class="cp">#define KB_ADD_GOAL 1</span>
+<span class="cp">#define KB_DEL_GOAL 3</span>
+</pre></div>
+</div>
+<p>message <strong>rosplan_knowledge_msgs/KnowledgeUpdate</strong> (see above)</p>
+<p>in order to make this update, open a client with <code class="docutils literal notranslate"><span class="pre">/rosplan_knowledge_base/update</span></code> of type <code class="docutils literal notranslate"><span class="pre">rosplan_knowledge_msgs::KnowledgeUpdate</span></code></p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define SERVICE_KB_UPDATE &quot;/rosplan_knowledge_base/update&quot;</span>
+<span class="n">ros</span><span class="o">::</span><span class="n">ServiceClient</span><span class="w"> </span><span class="n">cl_kb_update</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh</span><span class="p">.</span><span class="n">serviceClient</span><span class="o">&lt;</span><span class="n">rosplan_knowledge_msgs</span><span class="o">::</span><span class="n">KnowledgeUpdateService</span><span class="o">&gt;</span><span class="p">(</span><span class="w"> </span><span class="n">SERVICE_KB_UPDATE</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+<p>here’s the code for the action:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">pname</span><span class="w"></span>
+<span class="n">std</span><span class="o">::</span><span class="n">map</span><span class="o">&lt;</span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="p">,</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="o">&gt;</span><span class="w"> </span><span class="n">params</span><span class="w"></span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// the new val for the predicate</span>
+
+
+<span class="c1">// === PREPARE THE REQUEST === //</span>
+
+<span class="n">rosplan_knowledge_msgs</span><span class="o">::</span><span class="n">KnowledgeUpdateService</span><span class="w"> </span><span class="n">kbm</span><span class="p">;</span><span class="w"></span>
+
+<span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">update_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="nl">KB_ADD_GOAL</span> <span class="p">:</span><span class="w"> </span><span class="n">KB_DEL_GOAL</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">knowledge</span><span class="p">.</span><span class="n">knowledge_type</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">KB_KTYPE_PREDICATE</span><span class="p">;</span><span class="w"></span>
+<span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">knowledge</span><span class="p">.</span><span class="n">attribute_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pname</span><span class="p">;</span><span class="w"></span>
+
+<span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="k">auto</span><span class="w"> </span><span class="n">it</span><span class="o">=</span><span class="n">params</span><span class="p">.</span><span class="n">begin</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="n">it</span><span class="o">!=</span><span class="n">params</span><span class="p">.</span><span class="n">end</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">;</span><span class="w"> </span><span class="o">++</span><span class="n">it</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">diagnostic_msgs</span><span class="o">::</span><span class="n">KeyValue</span><span class="w"> </span><span class="n">kv</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">kv</span><span class="p">.</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">first</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">kv</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">it</span><span class="o">-&gt;</span><span class="n">second</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">kbm</span><span class="p">.</span><span class="n">request</span><span class="p">.</span><span class="n">knowledge</span><span class="p">.</span><span class="n">values</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="w"> </span><span class="n">kv</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="c1">// === PERFORM THE REQUEST === //</span>
+
+<span class="n">cl_kb_update</span><span class="p">.</span><span class="n">call</span><span class="p">(</span><span class="w"> </span><span class="n">kbm</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+
+<span class="c1">// === EVALUATE THE RESULT === //</span>
+
+<span class="kt">bool</span><span class="w"> </span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">kbm</span><span class="p">.</span><span class="n">response</span><span class="p">.</span><span class="n">success</span><span class="p">;</span><span class="w"></span>
+</pre></div>
 </div>
 </div>
 </div>

@@ -381,7 +381,12 @@ il pddl di base è pronto. adesso, passiamo al package:
 - assumiamo che kb tools funzioni a dovere (dovrebbe, l'ho usata nel vecchio progetto e andava bene)
 	- UML di kb_tools
 - **COMMIT** : "re-adaptation of kb_tools"
-
+- manca ancora una cosa prima di poter implementare ad esempio il sistema di landmark: *come settare un goal* ?
+	- documentazione sui goal
+	- implementazione dei due metodi per i goal ... anzi, solo il setter, il getter è noioso da fare e probabilmente non mi servirà
+	- aggiornamento degli uml di ROSplan
+- compila? compila.
+- **COMMIT** : "set goal method"
 
 
 

@@ -27,17 +27,21 @@
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/></highlight></codeline>
 <codeline><highlight class="normal">&apos;/</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/clear&quot;<sp/>as<sp/>SRV_KB_CLEAR</highlight></codeline>
-<codeline><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_CLEAR</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs::Empty</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>()<sp/>&quot;/rosplan_knowledge_base/clear&quot;<sp/>as<sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>note<sp/>on<sp/>link:<sp/>std_srvs::Empty</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/state/propositions&quot;<sp/>as<sp/>SRV_KB_GET_PRED</highlight></codeline>
 <codeline><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_GET_PRED</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs::GetAttributeService</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/GetAttributeService</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/update&quot;<sp/>as<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/update_array&quot;<sp/>as<sp/>SRV_KB_UPDATE</highlight></codeline>
 <codeline><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_UPDATE</highlight></codeline>
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeUpdateService</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/update&quot;<sp/>as<sp/>SRV_KB_UPDATE_ARRAY</highlight></codeline>
+<codeline><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_UPDATE_ARRAY</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeUpdateServiceArray</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/query_state&quot;<sp/>as<sp/>SRV_QUERY</highlight></codeline>
 <codeline><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_QUERY</highlight></codeline>
@@ -67,6 +71,8 @@
 <codeline><highlight class="normal">class<sp/>&quot;kb_tools&quot;<sp/>as<sp/>TOOLS<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">+<sp/>get_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args)<sp/>:<sp/>bool</highlight></codeline>
 <codeline><highlight class="normal">+<sp/>set_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>+<sp/>get_goal(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">+<sp/>set_goal(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -314,7 +320,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">rosplan_knowledge_msgs::KnowledgeUpdateService<sp/>kbm;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">kbm.request.update_type<sp/>=<sp/>(<sp/>value<sp/>?<sp/>KB_ADD_KNOWLEDGE<sp/>:<sp/>KB_DEL_KNOWLEDGE<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">kbm.request.update_type<sp/>=<sp/>(<sp/>val<sp/>?<sp/>KB_ADD_KNOWLEDGE<sp/>:<sp/>KB_DEL_KNOWLEDGE<sp/>);</highlight></codeline>
 <codeline><highlight class="normal">kbm.request.knowledge.knowledge_type<sp/>=<sp/>KB_KTYPE_PREDICATE;</highlight></codeline>
 <codeline><highlight class="normal">kbm.request.knowledge.attribute_name<sp/>=<sp/>pname;</highlight></codeline>
 <codeline></codeline>
@@ -347,8 +353,66 @@
 <codeline><highlight class="normal">bool<sp/>res<sp/>=<sp/>kbt.set_predicate(<sp/>pname,<sp/>params,<sp/>val<sp/>);</highlight></codeline>
 <codeline><highlight class="normal">if(!kbt-&gt;ok())</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERR(&quot;kb<sp/>tools<sp/>set<sp/>predicate&quot;);</highlight></codeline>
-</programlisting> </para>
+</programlisting></para>
 </sect2>
+</sect1>
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md94">
+<title>dealing with goals</title>
+<para>libraries:</para>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;diagnostic_msgs/KeyValue.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeItem.h&quot;</highlight></codeline>
+<codeline><highlight class="normal">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeUpdateService.h&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>kb<sp/>knowledge<sp/>type</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_KTYPE_FLUENT<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_KTYPE_PREDICATE<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>kb<sp/>action</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_ADD_KNOWLEDGE<sp/>0</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_DEL_KNOWLEDGE<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_ADD_GOAL<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>KB_DEL_GOAL<sp/>3</highlight></codeline>
+</programlisting></para>
+<para>message <bold>rosplan_knowledge_msgs/KnowledgeUpdate</bold> (see above)</para>
+<para>in order to make this update, open a client with <computeroutput>/rosplan_knowledge_base/update</computeroutput> of type <computeroutput>rosplan_knowledge_msgs::KnowledgeUpdate</computeroutput></para>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">#define<sp/>SERVICE_KB_UPDATE<sp/>&quot;/rosplan_knowledge_base/update&quot;</highlight></codeline>
+<codeline><highlight class="normal">ros::ServiceClient<sp/>cl_kb_update<sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;(<sp/>SERVICE_KB_UPDATE<sp/>);</highlight></codeline>
+</programlisting></para>
+<para>here&apos;s the code for the action:</para>
+<para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
+<codeline><highlight class="normal">std::string<sp/>pname</highlight></codeline>
+<codeline><highlight class="normal">std::map&lt;std::string,<sp/>std::string&gt;<sp/>params</highlight></codeline>
+<codeline><highlight class="normal">bool<sp/>val<sp/>=<sp/>false;<sp/>//<sp/>the<sp/>new<sp/>val<sp/>for<sp/>the<sp/>predicate</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>===<sp/>PREPARE<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosplan_knowledge_msgs::KnowledgeUpdateService<sp/>kbm;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">kbm.request.update_type<sp/>=<sp/>(<sp/>value<sp/>?<sp/>KB_ADD_GOAL<sp/>:<sp/>KB_DEL_GOAL<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">kbm.request.knowledge.knowledge_type<sp/>=<sp/>KB_KTYPE_PREDICATE;</highlight></codeline>
+<codeline><highlight class="normal">kbm.request.knowledge.attribute_name<sp/>=<sp/>pname;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">for<sp/>(<sp/>auto<sp/>it=params.begin(<sp/>)<sp/>;<sp/>it!=params.end(<sp/>)<sp/>;<sp/>++it<sp/>)</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>diagnostic_msgs::KeyValue<sp/>kv;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>kv.key<sp/>=<sp/>it-&gt;first;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>kv.value<sp/>=<sp/>it-&gt;second;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>kbm.request.knowledge.values.push_back(<sp/>kv<sp/>);</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>===<sp/>PERFORM<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">cl_kb_update.call(<sp/>kbm<sp/>);</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">//<sp/>===<sp/>EVALUATE<sp/>THE<sp/>RESULT<sp/>===<sp/>//</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">bool<sp/>success<sp/>=<sp/>kbm.response.success;</highlight></codeline>
+</programlisting> </para>
 </sect1>
     </detaileddescription>
   </compounddef>

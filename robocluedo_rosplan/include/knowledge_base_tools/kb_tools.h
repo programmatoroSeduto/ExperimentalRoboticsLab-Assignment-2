@@ -47,6 +47,8 @@
 // kb action
 #define KB_ADD_KNOWLEDGE 0
 #define KB_DEL_KNOWLEDGE 2
+#define KB_ADD_GOAL 1
+#define KB_DEL_GOAL 3
 
 // kb knowledge type
 #define KB_KTYPE_FLUENT 2
@@ -160,6 +162,29 @@ public:
 		const std::string& pname, 
 		std::map<std::string, std::string> params,
 		bool pvalue );
+	
+	/********************************************//**
+	 *  
+	 * \brief set the truth value of a goal predicate
+	 * 
+	 * @param pname the name of the goal predicate to get
+	 * 
+	 * @param params the map of the parameters of the goal 
+	 * predicate to check 
+	 * 
+	 * @param pvalue the boolean value to set for that goal predicate
+	 * 
+	 * @returns (bool) <b>true</b> if the operation has gone well, <b>false</b>
+	 * otherwise.
+	 * 
+	 * @note no need here to check the success of the call using \ref ok:
+	 * the return value is sufficient to understand what's going on.
+	 * 
+	 ***********************************************/
+	bool set_goal( 
+		const std::string& pname, 
+		std::map<std::string, std::string> params,
+		bool pvalue );
 
 
 
@@ -213,7 +238,8 @@ protected:
 	rosplan_knowledge_msgs::KnowledgeUpdateService request_update(
 		const std::string pname, 
 		std::map<std::string, std::string>& params, 
-		bool value );
+		bool value,
+		bool is_goal = false );
 	
 	/********************************************//**
 	 *  

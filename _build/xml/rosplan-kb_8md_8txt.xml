@@ -1,0 +1,973 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="rosplan-kb_8md_8txt" kind="file" language="C++">
+    <compoundname>rosplan-kb.md.txt</compoundname>
+    <includes local="yes">diagnostic_msgs/KeyValue.h</includes>
+    <includes local="yes">rosplan_knowledge_msgs/KnowledgeItem.h</includes>
+    <includes local="yes">rosplan_knowledge_msgs/KnowledgeQueryService.h</includes>
+    <includes local="yes">rosplan_knowledge_msgs/KnowledgeUpdateService.h</includes>
+    <incdepgraph>
+      <node id="5">
+        <label>rosplan_knowledge_msgs/KnowledgeUpdateService.h</label>
+      </node>
+      <node id="1">
+        <label>_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt</label>
+        <link refid="rosplan-kb_8md_8txt"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>diagnostic_msgs/KeyValue.h</label>
+      </node>
+      <node id="4">
+        <label>rosplan_knowledge_msgs/KnowledgeQueryService.h</label>
+      </node>
+      <node id="3">
+        <label>rosplan_knowledge_msgs/KnowledgeItem.h</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="define">
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a88abd2411c29b85c73440826c34e802a" prot="public" static="no">
+        <name>KB_KTYPE_FLUENT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="106" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a4fe1e5d1ed4ba3fd4237490006e06dd2" prot="public" static="no">
+        <name>KB_KTYPE_PREDICATE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="107" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a14480e81381e195709ebd903dedd6c60" prot="public" static="no">
+        <name>SERVICE_QUERY</name>
+        <initializer>&quot;/rosplan_knowledge_base/query_state&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="113" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a14480e81381e195709ebd903dedd6c60" prot="public" static="no">
+        <name>SERVICE_QUERY</name>
+        <initializer>&quot;/rosplan_knowledge_base/query_state&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="120" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a88abd2411c29b85c73440826c34e802a" prot="public" static="no">
+        <name>KB_KTYPE_FLUENT</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="286" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a4fe1e5d1ed4ba3fd4237490006e06dd2" prot="public" static="no">
+        <name>KB_KTYPE_PREDICATE</name>
+        <initializer>1</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="287" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1ae383a0070aad6f5b5ff2e0e8ecc57980" prot="public" static="no">
+        <name>KB_ADD_KNOWLEDGE</name>
+        <initializer>0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="290" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1a3fc8fe8eaf6f19d6e73eb762b5608590" prot="public" static="no">
+        <name>KB_DEL_KNOWLEDGE</name>
+        <initializer>2</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="291" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" prot="public" static="no">
+        <name>SERVICE_KB_UPDATE</name>
+        <initializer>&quot;/rosplan_knowledge_base/<ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="297" column="9"/>
+      </memberdef>
+      <memberdef kind="define" id="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" prot="public" static="no">
+        <name>SERVICE_KB_UPDATE</name>
+        <initializer>&quot;/rosplan_knowledge_base/<ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="304" column="9"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" prot="public" static="no" mutable="no">
+        <type>a more detailed way to open <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>a more detailed way to open the service</definition>
+        <argsstring></argsstring>
+        <name>service</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="117" column="33" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="6" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a086326a699b26ebe7df30517626276ae" prot="public" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient cl_query</definition>
+        <argsstring></argsstring>
+        <name>cl_query</name>
+        <initializer>= nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeQueryService&gt;( <ref refid="kb__tools_8h_1a14480e81381e195709ebd903dedd6c60" kindref="member">SERVICE_QUERY</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="124" column="20" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="124" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a9c811ad3d226eb15acd76aa5cc9b2813" prot="public" static="no" mutable="no">
+        <type>message **rosplan_knowledge_msgs KnowledgeQueryService **text rosplan_knowledge_msgs KnowledgeItem[] knowledge bool all_true bool[] results rosplan_knowledge_msgs KnowledgeItem[] false_knowledge message **rosplan_knowledge_msgs KnowledgeItem **needed to perform <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> request text uint8</type>
+        <definition>message** rosplan_knowledge_msgs KnowledgeQueryService** text rosplan_knowledge_msgs KnowledgeItem [] knowledge bool all_true bool [] results rosplan_knowledge_msgs KnowledgeItem [] false_knowledge message** rosplan_knowledge_msgs KnowledgeItem** needed to perform the request text uint8 INSTANCE</definition>
+        <argsstring></argsstring>
+        <name>INSTANCE</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="148" column="7" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="148" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" prot="public" static="no" mutable="no">
+        <type>or also response results[] showing each truth value c std::string pname std::map&lt; std::string, std::string &gt; params rosplan_knowledge_msgs::KnowledgeQueryService</type>
+        <definition>or also response results [] showing each truth value c std::string pname std::map&lt;std::string, std::string&gt; params rosplan_knowledge_msgs::KnowledgeQueryService query</definition>
+        <argsstring></argsstring>
+        <name>query</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="220" column="47" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="220" bodyend="-1"/>
+        <referencedby refid="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" compoundref="rosplan-kb_8md_8txt" startline="247" endline="255">if</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" prot="public" static="no" mutable="no">
+        <type>rosplan_knowledge_msgs::KnowledgeItem</type>
+        <definition>rosplan_knowledge_msgs::KnowledgeUpdateService kbm</definition>
+        <argsstring></argsstring>
+        <name>kbm</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="221" column="39" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="221" bodyend="-1"/>
+        <referencedby refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" compoundref="rosplan-kb_8md_8txt" startline="225" endline="231">for</referencedby>
+        <referencedby refid="classkb__tools_1a28db234bb29bece4e83b7a27201fa013" compoundref="kb__tools_8cpp" startline="109" endline="141">kb_tools::set_predicate</referencedby>
+        <referencedby refid="classkb__tools_1a7fb58239d1af820464b79c37ed7baa54" compoundref="kb__tools_8cpp" startline="145" endline="176">kb_tools::set_goal</referencedby>
+        <referencedby refid="classkb__tools_1a1b5b559fba6923f0e73b426a0144c5a7" compoundref="kb__tools_8cpp" startline="184" endline="206">kb_tools::request_query</referencedby>
+        <referencedby refid="classkb__tools_1a2687b3d61e2e8abe4469ed3011c75320" compoundref="kb__tools_8cpp" startline="210" endline="235">kb_tools::request_update</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1ab615893b263a230690e15f03cfc8c3f0" prot="public" static="no" mutable="no">
+        <type><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref></type>
+        <definition>kbm request knowledge knowledge_type</definition>
+        <argsstring></argsstring>
+        <name>knowledge_type</name>
+        <initializer>= <ref refid="kb__tools_8h_1a4fe1e5d1ed4ba3fd4237490006e06dd2" kindref="member">KB_KTYPE_PREDICATE</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="223" column="4" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a2c63fa55be0f230caec37a72dfe26bcf" prot="public" static="no" mutable="no">
+        <type><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref></type>
+        <definition>kbm request knowledge attribute_name</definition>
+        <argsstring></argsstring>
+        <name>attribute_name</name>
+        <initializer>= pname</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="224" column="4" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="224" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool res</definition>
+        <argsstring></argsstring>
+        <name>res</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="245" column="6" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="245" bodyend="-1"/>
+        <referencedby refid="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" compoundref="rosplan-kb_8md_8txt" startline="247" endline="255">if</referencedby>
+        <referencedby refid="class_armor_tools_1a34d27d93c2faec3d3de3ba24d08f436b" compoundref="armor__tools_8cpp" startline="385" endline="389">ArmorTools::GetLastRes</referencedby>
+        <referencedby refid="classkb__tools_1ac39559c5414b4254d13d61fca5c3f6a5" compoundref="kb__tools_8cpp" startline="239" endline="248">kb_tools::keyvalue2map</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a0544c3fe466e421738dae463968b70ba" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>else</definition>
+        <argsstring></argsstring>
+        <name>else</name>
+        <initializer>{
+	
+}
+```
+
+how to perform <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> reading using KB tools:
+
+```c++
+
+std::string pname
+std::map&lt;std::string, std::string&gt; params
+
+<ref refid="classkb__tools" kindref="compound">kb_tools</ref> <ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="256" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="257" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" prot="public" static="no" mutable="no">
+        <type>libraries</type>
+        <definition>libraries __pad2__</definition>
+        <argsstring></argsstring>
+        <name>__pad2__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="278" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="298" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" prot="public" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient cl_kb_update</definition>
+        <argsstring></argsstring>
+        <name>cl_kb_update</name>
+        <initializer>= nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;( <ref refid="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="308" column="20" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="308" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" prot="public" static="no" mutable="no">
+        <type><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> **rosplan_knowledge_msgs::KnowledgeUpdateService **text uint8 <ref refid="rosplan-kb_8md_8txt_1ad8d83de4ff7d47d67988337edeead5d8" kindref="member">update_type</ref> rosplan_knowledge_msgs KnowledgeItem knowledge bool <ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref> message **rosplan_knowledge_msgs KnowledgeItem **see above message **diagnostic_msgs KeyValue **see above how to perform <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>service** rosplan_knowledge_msgs::KnowledgeUpdateService** text uint8 update_type rosplan_knowledge_msgs KnowledgeItem knowledge bool success message** rosplan_knowledge_msgs KnowledgeItem** see above message** diagnostic_msgs KeyValue** see above how to perform the update</definition>
+        <argsstring></argsstring>
+        <name>update</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="332" column="20" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1af509caefa33170c15c97d6cca601cac6" prot="public" static="no" mutable="no">
+        <type><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> **rosplan_knowledge_msgs::KnowledgeUpdateService **text uint8 <ref refid="rosplan-kb_8md_8txt_1ad8d83de4ff7d47d67988337edeead5d8" kindref="member">update_type</ref> rosplan_knowledge_msgs KnowledgeItem knowledge bool <ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref> message **rosplan_knowledge_msgs KnowledgeItem **see above message **diagnostic_msgs KeyValue **see above how to perform <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> std::string params bool</type>
+        <definition>how to perform the update with std::string params bool val</definition>
+        <argsstring></argsstring>
+        <name>val</name>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="337" column="6" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="337" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1ad8d83de4ff7d47d67988337edeead5d8" prot="public" static="no" mutable="no">
+        <type><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref> request</type>
+        <definition>kbm request update_type</definition>
+        <argsstring></argsstring>
+        <name>update_type</name>
+        <initializer>= ( value ? <ref refid="kb__tools_8h_1ae383a0070aad6f5b5ff2e0e8ecc57980" kindref="member">KB_ADD_KNOWLEDGE</ref> : <ref refid="kb__tools_8h_1a3fc8fe8eaf6f19d6e73eb762b5608590" kindref="member">KB_DEL_KNOWLEDGE</ref> )</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="344" column="11" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="344" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool success</definition>
+        <argsstring></argsstring>
+        <name>success</name>
+        <initializer>= kbm.response.success</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="364" column="6" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="364" bodyend="-1"/>
+        <referencedby refid="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" compoundref="rosplan-kb_8md_8txt" startline="309" endline="315">if</referencedby>
+        <referencedby refid="class_armor_cluedo_1a2086082362b61607798d6f968c263f9e" compoundref="armor__cluedo_8cpp" startline="112" endline="126">ArmorCluedo::ExistsIndiv</referencedby>
+        <referencedby refid="cluedo__armor__interface_8cpp_1a9da26ecbc92f8ac7288574c3d05195b2" compoundref="cluedo__armor__interface_8cpp" startline="279" endline="287">DiscardHypothesis</referencedby>
+        <referencedby refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" compoundref="cluedo__armor__interface_8cpp" startline="306" endline="328">ServiceBackupOntology</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a26bce720ec71ef391d8b7706f8a44b84" prot="public" static="no" mutable="no">
+        <type>how to perform <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref> with</type>
+        <definition>how to perform the update with kb_tools</definition>
+        <argsstring></argsstring>
+        <name>kb_tools</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="368" column="32" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="372" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" prot="public" static="no" mutable="no">
+        <type><ref refid="classkb__tools" kindref="compound">kb_tools</ref></type>
+        <definition>kb_tools kbt</definition>
+        <argsstring></argsstring>
+        <name>kbt</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="375" column="10" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="375" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a123684fb4f21dfb0816ae98b02163d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(!this-&gt;cl_query.waitForExistence(ros::Duration(TIMEOUT_QUERY)))</argsstring>
+        <name>if</name>
+        <param>
+          <type>!<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;cl_query.</type>
+          <declname>waitForExistence</declname>
+          <array>ros::Duration(TIMEOUT_QUERY)</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="125" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="125" bodyend="129"/>
+        <references refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c">TERR</references>
+        <references refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" compoundref="kb__tools_8h" startline="31">TIMEOUT_QUERY</references>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1afb21a56e2c9fb4d0c72a34ea32d9f94d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TLOG</definition>
+        <argsstring>(&quot;Opening client &quot;&lt;&lt; LOGSQUARE(SERVICE_QUERY)&lt;&lt; &quot;... OK&quot;)</argsstring>
+        <name>TLOG</name>
+        <param>
+          <type>&quot;Opening client &quot;&lt;&lt; LOGSQUARE(<ref refid="kb__tools_8h_1a14480e81381e195709ebd903dedd6c60" kindref="member">SERVICE_QUERY</ref>)&lt;&lt; &quot;... OK&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="130" column="1" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="130" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>for</definition>
+        <argsstring>(auto it=params.begin() ;it!=params.end() ;++it)</argsstring>
+        <name>for</name>
+        <param>
+          <type>auto</type>
+          <declname>it</declname>
+          <defval>params.begin() ;it!=params.end() ;++it</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="225" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="225" bodyend="231"/>
+        <references refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" compoundref="rosplan-kb_8md_8txt" startline="221">kbm</references>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a122f6721bedfd0d97dfb71be8cee291e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref> request knowledge</type>
+        <definition>query request knowledge push_back</definition>
+        <argsstring>(kbm)</argsstring>
+        <name>push_back</name>
+        <param>
+          <type><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="233" column="22" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="233" declcolumn="22"/>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="rosplan-kb_8md_8txt_1a086326a699b26ebe7df30517626276ae" kindref="member">cl_query</ref></type>
+        <definition>cl_query call</definition>
+        <argsstring>(query)</argsstring>
+        <name>call</name>
+        <param>
+          <type><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="240" column="9" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="240" declcolumn="9"/>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(query.response.results.size()==1)</argsstring>
+        <name>if</name>
+        <param>
+          <type>query.response.results.</type>
+          <declname>size</declname>
+          <array>()</array>
+          <defval>=1</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="247" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="247" bodyend="255"/>
+        <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="245">res</references>
+        <references refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" compoundref="rosplan-kb_8md_8txt" startline="220">query</references>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a2cbe539f187060e027d58b3cbeb9556d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(!kbt-&gt;ok()) ROS_ERR(&quot;kb tools get predicate&quot;)</argsstring>
+        <name>if</name>
+        <param>
+          <type>!<ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>-&gt;</type>
+          <declname>ok</declname>
+          <array>()</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="272" column="1" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="272" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>if</definition>
+        <argsstring>(!this-&gt;cl_kb_update.waitForExistence(ros::Duration(TIMEOUT_KB_UPDATE)))</argsstring>
+        <name>if</name>
+        <param>
+          <type>!<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;cl_kb_update.</type>
+          <declname>waitForExistence</declname>
+          <array>ros::Duration(TIMEOUT_KB_UPDATE)</array>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="309" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="309" bodyend="315"/>
+        <references refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c">TERR</references>
+        <references refid="kb__tools_8h_1a6dffd91fadc72daca40e06d00a34b254" compoundref="kb__tools_8h" startline="39">TIMEOUT_KB_UPDATE</references>
+        <references refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" compoundref="rosplan-kb_8md_8txt" startline="364">success</references>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1a3eddf7abb4859ad3b4598a8019fd3dab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>TLOG</definition>
+        <argsstring>(&quot;Opening client &quot;&lt;&lt; LOGSQUARE(SERVICE_KB_UPDATE)&lt;&lt; &quot;... OK&quot;)</argsstring>
+        <name>TLOG</name>
+        <param>
+          <type>&quot;Opening client &quot;&lt;&lt; LOGSQUARE(<ref refid="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref>)&lt;&lt; &quot;... OK&quot;</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="316" column="1" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="316" declcolumn="1"/>
+      </memberdef>
+      <memberdef kind="function" id="rosplan-kb_8md_8txt_1ad71a655597c577c015771b708c43fb46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref></type>
+        <definition>cl_kb_update call</definition>
+        <argsstring>(kbm)</argsstring>
+        <name>call</name>
+        <param>
+          <type><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref></type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="359" column="13" declfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" declline="359" declcolumn="13"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>UML<sp/>--<sp/>ROSPlann<sp/>Knowledge<sp/>base<sp/>--<sp/>formal<sp/>ROS<sp/>description</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>schema<sp/>--<sp/>knowledge<sp/>base</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6" refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" refkind="member"><highlight class="normal">```{uml}<sp/></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">@startuml</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>INFOS</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kindref="member">title</ref><sp/>robocluedo_armor<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a20c83287cc65b058019b4777d1dbe59f" kindref="member">project</ref><sp/>structure</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>COMPONENTS</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">database<sp/></highlight><highlight class="stringliteral">&quot;knowledge<sp/>base&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;ROSPlan&gt;&gt;<sp/>as<sp/>KB</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>SERVICES</highlight></codeline>
+<codeline lineno="20"><highlight class="normal">/</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">()<sp/>&quot;srv&quot;<sp/>as<sp/>SRV_</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_</highlight></codeline>
+<codeline lineno="23"><highlight class="stringliteral">note<sp/>on<sp/>link:<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral">&apos;</highlight><highlight class="normal">/</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">()<sp/></highlight><highlight class="stringliteral">&quot;/rosplan_knowledge_base/clear&quot;</highlight><highlight class="normal"><sp/>as<sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline lineno="27"><highlight class="normal">KB<sp/></highlight><highlight class="stringliteral">&quot;srv&quot;</highlight><highlight class="normal"><sp/>--&gt;<sp/></highlight><highlight class="stringliteral">&quot;cl&quot;</highlight><highlight class="normal"><sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs::Empty</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">()<sp/></highlight><highlight class="stringliteral">&quot;/rosplan_knowledge_base/state/propositions&quot;</highlight><highlight class="normal"><sp/>as<sp/>SRV_KB_GET_PRED</highlight></codeline>
+<codeline lineno="31"><highlight class="normal">KB<sp/></highlight><highlight class="stringliteral">&quot;srv&quot;</highlight><highlight class="normal"><sp/>--&gt;<sp/></highlight><highlight class="stringliteral">&quot;cl&quot;</highlight><highlight class="normal"><sp/>SRV_KB_GET_PRED</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs::GetAttributeService</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">()<sp/></highlight><highlight class="stringliteral">&quot;/rosplan_knowledge_base/update&quot;</highlight><highlight class="normal"><sp/>as<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">KB<sp/></highlight><highlight class="stringliteral">&quot;srv&quot;</highlight><highlight class="normal"><sp/>--&gt;<sp/></highlight><highlight class="stringliteral">&quot;cl&quot;</highlight><highlight class="normal"><sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline lineno="36"><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeUpdateService</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">()<sp/></highlight><highlight class="stringliteral">&quot;/rosplan_knowledge_base/query_state&quot;</highlight><highlight class="normal"><sp/>as<sp/>SRV_QUERY</highlight></codeline>
+<codeline lineno="39"><highlight class="normal">KB<sp/></highlight><highlight class="stringliteral">&quot;srv&quot;</highlight><highlight class="normal"><sp/>--&gt;<sp/></highlight><highlight class="stringliteral">&quot;cl&quot;</highlight><highlight class="normal"><sp/>SRV_QUERY</highlight></codeline>
+<codeline lineno="40"><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeQueryService</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>CONNECTIONS</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight><highlight class="stringliteral">&apos;<sp/>...</highlight></codeline>
+<codeline lineno="45"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="46"><highlight class="stringliteral">@enduml</highlight></codeline>
+<codeline lineno="47"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="48"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="49"><highlight class="stringliteral">##<sp/>schema<sp/>--<sp/>CLASS<sp/>kb_tools</highlight></codeline>
+<codeline lineno="50"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="51"><highlight class="stringliteral">```{uml}<sp/></highlight></codeline>
+<codeline lineno="52"><highlight class="stringliteral">@startuml</highlight></codeline>
+<codeline lineno="53"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="54"><highlight class="stringliteral">&apos;</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal"><sp/>INFOS</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><ref refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kindref="member">title</ref><sp/>robocluedo_armor<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a20c83287cc65b058019b4777d1dbe59f" kindref="member">project</ref><sp/>structure</highlight></codeline>
+<codeline lineno="56"><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline lineno="57"><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>COMPONENTS</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">&quot;ROSPlan&quot;<sp/>{</highlight></codeline>
+<codeline lineno="62"><highlight class="normal">database<sp/>&quot;knowledge<sp/>base&quot;<sp/>&lt;&lt;ROSPlan&gt;&gt;<sp/>as<sp/>KB</highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="64"><highlight class="normal">class<sp/>&quot;kb_tools&quot;<sp/>as<sp/>TOOLS<sp/>{</highlight></codeline>
+<codeline lineno="65"><highlight class="normal">+<sp/>get_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args)<sp/>:<sp/>bool</highlight></codeline>
+<codeline lineno="66"><highlight class="normal">+<sp/>set_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal">&apos;&apos;&apos;<sp/>SERVICES</highlight></codeline>
+<codeline lineno="71"><highlight class="normal">/&apos;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal">()<sp/>&quot;srv&quot;<sp/>as<sp/>SRV_</highlight></codeline>
+<codeline lineno="73"><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_</highlight></codeline>
+<codeline lineno="74"><highlight class="normal">note<sp/>on<sp/>link:<sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal">&apos;/</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77"><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/update&quot;<sp/>as<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline lineno="78"><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline lineno="79"><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeUpdateService</highlight></codeline>
+<codeline lineno="80"><highlight class="normal">SRV_KB_UPDATE<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>TOOLS</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/query_state&quot;<sp/>as<sp/>SRV_QUERY</highlight></codeline>
+<codeline lineno="83"><highlight class="normal">KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_QUERY</highlight></codeline>
+<codeline lineno="84"><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeQueryService</highlight></codeline>
+<codeline lineno="85"><highlight class="normal">SRV_QUERY<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>TOOLS</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal">@enduml</highlight></codeline>
+<codeline lineno="92"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal">##<sp/>the<sp/>long<sp/>list<sp/>of<sp/>HOW<sp/>TOs<sp/>...</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal">###<sp/>HOW<sp/>TO<sp/>read<sp/>a<sp/>predicate</highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal">libraries<sp/>to<sp/>import:</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="101"><highlight class="normal">#include<sp/>&quot;diagnostic_msgs/KeyValue.h&quot;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeItem.h&quot;</highlight></codeline>
+<codeline lineno="103"><highlight class="normal">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeQueryService.h&quot;</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight><highlight class="comment">//<sp/>kb<sp/>knowledge<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal">#define<sp/>KB_KTYPE_FLUENT<sp/>2</highlight></codeline>
+<codeline lineno="107"><highlight class="normal">#define<sp/>KB_KTYPE_PREDICATE<sp/>1</highlight></codeline>
+<codeline lineno="108"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal">the<sp/>client<sp/>to<sp/>open:</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="113"><highlight class="normal">#define<sp/>SERVICE_QUERY<sp/>&quot;/rosplan_knowledge_base/query_state&quot;</highlight></codeline>
+<codeline lineno="114"><highlight class="normal">ros::ServiceClient<sp/>cl_query<sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeQueryService&gt;(<sp/>SERVICE_QUERY<sp/>);</highlight></codeline>
+<codeline lineno="115"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal">a<sp/>more<sp/>detailed<sp/>way<sp/>to<sp/>open<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref>:</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_QUERY<sp/>&quot;/rosplan_knowledge_base/query_state&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>Predicates<sp/>Query<sp/>service<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1afb21a56e2c9fb4d0c72a34ea32d9f94d" kindref="member">TLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>client<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/><ref refid="rosplan-kb_8md_8txt_1a14480e81381e195709ebd903dedd6c60" kindref="member">SERVICE_QUERY</ref><sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="124" refid="rosplan-kb_8md_8txt_1a086326a699b26ebe7df30517626276ae" refkind="member"><highlight class="normal">ros::ServiceClient<sp/><ref refid="rosplan-kb_8md_8txt_1a086326a699b26ebe7df30517626276ae" kindref="member">cl_query</ref><sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeQueryService&gt;(<sp/><ref refid="rosplan-kb_8md_8txt_1a14480e81381e195709ebd903dedd6c60" kindref="member">SERVICE_QUERY</ref><sp/>);</highlight></codeline>
+<codeline lineno="125" refid="rosplan-kb_8md_8txt_1a123684fb4f21dfb0816ae98b02163d53" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!this-&gt;cl_query.waitForExistence(<sp/>ros::Duration(<sp/><ref refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" kindref="member">TIMEOUT_QUERY</ref><sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kindref="member">TERR</ref>(<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>contact<sp/>the<sp/>server<sp/>-<sp/>timeout<sp/>expired<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" kindref="member">TIMEOUT_QUERY</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;s)<sp/>&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>return;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1afb21a56e2c9fb4d0c72a34ea32d9f94d" kindref="member">TLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>client<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/><ref refid="rosplan-kb_8md_8txt_1a14480e81381e195709ebd903dedd6c60" kindref="member">SERVICE_QUERY</ref><sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...<sp/>OK&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal">message<sp/>**rosplan_knowledge_msgs/KnowledgeQueryService**</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal">```text</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">rosplan_knowledge_msgs/KnowledgeItem[]<sp/>knowledge</highlight></codeline>
+<codeline lineno="137"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>all_true</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">[]<sp/>results</highlight></codeline>
+<codeline lineno="140"><highlight class="normal">rosplan_knowledge_msgs/KnowledgeItem[]<sp/>false_knowledge</highlight></codeline>
+<codeline lineno="141"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="143"><highlight class="normal">message<sp/>**rosplan_knowledge_msgs/KnowledgeItem**<sp/>(needed<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>request)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal">```text</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">#<sp/>A<sp/>knowledge<sp/>item<sp/>used<sp/>to<sp/>represent<sp/>a<sp/>piece<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>state<sp/>in<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="rosplan-kb_8md_8txt_1a9c811ad3d226eb15acd76aa5cc9b2813" refkind="member"><highlight class="normal">uint8<sp/><ref refid="rosplan-kb_8md_8txt_1a9c811ad3d226eb15acd76aa5cc9b2813" kindref="member">INSTANCE</ref><sp/>=<sp/>0</highlight></codeline>
+<codeline lineno="149"><highlight class="normal">uint8<sp/>FACT<sp/>=<sp/>1</highlight></codeline>
+<codeline lineno="150"><highlight class="normal">uint8<sp/>FUNCTION<sp/>=<sp/>2</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">uint8<sp/>EXPRESSION<sp/>=<sp/>3</highlight></codeline>
+<codeline lineno="152"><highlight class="normal">uint8<sp/>INEQUALITY<sp/>=<sp/>4</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal">uint8<sp/><ref refid="rosplan-kb_8md_8txt_1ab615893b263a230690e15f03cfc8c3f0" kindref="member">knowledge_type</ref></highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="156"><highlight class="normal">#<sp/>time<sp/>at<sp/>which<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>knowledge<sp/>becomes<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">time<sp/>initial_time</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">#<sp/>knowledge<sp/>is<sp/>explicitly<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>is_negative</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal">#---------</highlight></codeline>
+<codeline lineno="163"><highlight class="normal">#<sp/><ref refid="rosplan-kb_8md_8txt_1a9c811ad3d226eb15acd76aa5cc9b2813" kindref="member">INSTANCE</ref></highlight></codeline>
+<codeline lineno="164"><highlight class="normal">#---------</highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal">#<sp/>instance<sp/><ref refid="rosplan-kb_8md_8txt_1ab615893b263a230690e15f03cfc8c3f0" kindref="member">knowledge_type</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>instance_type</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>instance_name</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170"><highlight class="normal">#----------------------</highlight></codeline>
+<codeline lineno="171"><highlight class="normal">#<sp/>PREDICATE<sp/>OR<sp/>FUNCTION</highlight></codeline>
+<codeline lineno="172"><highlight class="normal">#----------------------</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"></highlight></codeline>
+<codeline lineno="174"><highlight class="normal">#<sp/>attribute<sp/><ref refid="rosplan-kb_8md_8txt_1ab615893b263a230690e15f03cfc8c3f0" kindref="member">knowledge_type</ref></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a2c63fa55be0f230caec37a72dfe26bcf" kindref="member">attribute_name</ref></highlight></codeline>
+<codeline lineno="176"><highlight class="normal">diagnostic_msgs/KeyValue[]<sp/>values</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"></highlight></codeline>
+<codeline lineno="178"><highlight class="normal">#---------</highlight></codeline>
+<codeline lineno="179"><highlight class="normal">#<sp/>FUNCTION</highlight></codeline>
+<codeline lineno="180"><highlight class="normal">#---------</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="182"><highlight class="normal">#<sp/></highlight><highlight class="keyword">function</highlight><highlight class="normal"><sp/>value</highlight></codeline>
+<codeline lineno="183"><highlight class="normal">float64<sp/>function_value</highlight></codeline>
+<codeline lineno="184"><highlight class="normal"></highlight></codeline>
+<codeline lineno="185"><highlight class="normal">#-----------</highlight></codeline>
+<codeline lineno="186"><highlight class="normal">#<sp/>EXPRESSION</highlight></codeline>
+<codeline lineno="187"><highlight class="normal">#-----------</highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>optimization</highlight></codeline>
+<codeline lineno="190"><highlight class="normal">rosplan_knowledge_msgs/ExprComposite<sp/>expr</highlight></codeline>
+<codeline lineno="191"><highlight class="normal"></highlight></codeline>
+<codeline lineno="192"><highlight class="normal">#-----------</highlight></codeline>
+<codeline lineno="193"><highlight class="normal">#<sp/>INEQUALITY</highlight></codeline>
+<codeline lineno="194"><highlight class="normal">#-----------</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="196"><highlight class="normal">rosplan_knowledge_msgs/DomainInequality<sp/>ineq</highlight></codeline>
+<codeline lineno="197"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="198"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal">message<sp/>**diagnostic_msgs/KeyValue**<sp/>:<sp/></highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="201"><highlight class="normal">```text</highlight></codeline>
+<codeline lineno="202"><highlight class="normal">#<sp/>what<sp/>to<sp/>label<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>value<sp/>when<sp/>viewing</highlight></codeline>
+<codeline lineno="203"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>key</highlight></codeline>
+<codeline lineno="204"><highlight class="normal">#<sp/>a<sp/>value<sp/>to<sp/>track<sp/>over<sp/>time</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>value</highlight></codeline>
+<codeline lineno="206"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="207"><highlight class="normal"></highlight></codeline>
+<codeline lineno="208"><highlight class="normal">how<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>reading:</highlight></codeline>
+<codeline lineno="209"><highlight class="normal"></highlight></codeline>
+<codeline lineno="210"><highlight class="normal">&gt;<sp/>reading<sp/>predicates<sp/>:<sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>you</highlight><highlight class="stringliteral">&apos;re<sp/>sure<sp/>that<sp/>the<sp/>predicate<sp/>you&apos;</highlight><highlight class="normal">re<sp/>asking<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>is<sp/>unique,<sp/>use<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>field<sp/>response.all_true;<sp/>or<sp/>also<sp/>.response.results\[]<sp/>showing<sp/>each<sp/>truth<sp/>value.</highlight></codeline>
+<codeline lineno="211"><highlight class="normal"></highlight></codeline>
+<codeline lineno="212"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"></highlight><highlight class="comment">//<sp/>data<sp/>for<sp/>request</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal">std::string<sp/>pname</highlight></codeline>
+<codeline lineno="215"><highlight class="normal">std::map&lt;std::string,<sp/>std::string&gt;<sp/>params</highlight></codeline>
+<codeline lineno="216"><highlight class="normal"></highlight></codeline>
+<codeline lineno="217"><highlight class="normal"></highlight></codeline>
+<codeline lineno="218"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PREPARE<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"></highlight></codeline>
+<codeline lineno="220" refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" refkind="member"><highlight class="normal">rosplan_knowledge_msgs::KnowledgeQueryService<sp/><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref>;</highlight></codeline>
+<codeline lineno="221" refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" refkind="member"><highlight class="normal">rosplan_knowledge_msgs::KnowledgeItem<sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>;</highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="223" refid="rosplan-kb_8md_8txt_1ab615893b263a230690e15f03cfc8c3f0" refkind="member"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.knowledge_type<sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a4fe1e5d1ed4ba3fd4237490006e06dd2" kindref="member">KB_KTYPE_PREDICATE</ref>;<sp/></highlight><highlight class="comment">//<sp/>it<sp/>corresponds<sp/>to<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="224" refid="rosplan-kb_8md_8txt_1a2c63fa55be0f230caec37a72dfe26bcf" refkind="member"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.attribute_name<sp/>=<sp/>pname;<sp/></highlight><highlight class="comment">//<sp/>the<sp/>name<sp/>of<sp/>the<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="225" refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" refkind="member"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it=params.begin(<sp/>)<sp/>;<sp/>it!=params.end(<sp/>)<sp/>;<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="226"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/>diagnostic_msgs::KeyValue<sp/>kv;</highlight></codeline>
+<codeline lineno="228"><highlight class="normal"><sp/><sp/><sp/><sp/>kv.key<sp/>=<sp/>it-&gt;first;</highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/>kv.value<sp/>=<sp/>it-&gt;second;</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.values.push_back(<sp/>kv<sp/>);</highlight></codeline>
+<codeline lineno="231"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref>.request.knowledge.push_back(<sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref><sp/>);</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"></highlight><highlight class="comment">//<sp/>...<sp/>the<sp/>same<sp/>thing<sp/>for<sp/>each<sp/>predicate<sp/>you<sp/>want</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight><highlight class="comment">//<sp/><sp/><sp/><sp/>n<sp/>predicate<sp/>in<sp/>list<sp/>-&gt;<sp/>n<sp/>values<sp/>inside<sp/>the<sp/>result</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"></highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PERFORM<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal"></highlight></codeline>
+<codeline lineno="240"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a086326a699b26ebe7df30517626276ae" kindref="member">cl_query</ref>.call(<sp/><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref><sp/>);</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal"></highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>EVALUATE<sp/>THE<sp/>RESULT<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245" refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" kindref="member">res</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="247" refid="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref>.response.results.size()<sp/>==<sp/>1<sp/>)</highlight></codeline>
+<codeline lineno="248"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>only<sp/>one<sp/>predicate<sp/>compatible</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>method<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" kindref="member">res</ref><sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref>.response.results[0];</highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>method<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="254"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" kindref="member">res</ref><sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a18c002488da9ef79d94b730e2c144703" kindref="member">query</ref>.response.all_true;</highlight></codeline>
+<codeline lineno="255"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="257" refid="rosplan-kb_8md_8txt_1a0544c3fe466e421738dae463968b70ba" refkind="member"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>many<sp/>predicates<sp/>(many<sp/>results...)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="259"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="260"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="261"><highlight class="normal"></highlight></codeline>
+<codeline lineno="262"><highlight class="normal">how<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>reading<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/>KB<sp/>tools:</highlight></codeline>
+<codeline lineno="263"><highlight class="normal"></highlight></codeline>
+<codeline lineno="264"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="265"><highlight class="normal"></highlight><highlight class="comment">//<sp/>just<sp/>one<sp/>predicate!</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="266"><highlight class="normal">std::string<sp/>pname</highlight></codeline>
+<codeline lineno="267"><highlight class="normal">std::map&lt;std::string,<sp/>std::string&gt;<sp/>params</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"></highlight></codeline>
+<codeline lineno="269"><highlight class="normal"><ref refid="classkb__tools" kindref="compound">kb_tools</ref><sp/><ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>;</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"></highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" kindref="member">res</ref><sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>.<ref refid="classkb__tools_1afcdd633b556099168c1c97df9923e33d" kindref="member">get_predicate</ref>(<sp/>pname,<sp/>params<sp/>);</highlight></codeline>
+<codeline lineno="272"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>-&gt;<ref refid="classkb__tools_1a84232df0b5e76bad833c8f617abccf30" kindref="member">ok</ref>())</highlight></codeline>
+<codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERR(</highlight><highlight class="stringliteral">&quot;kb<sp/>tools<sp/>get<sp/>predicate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="274"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="275"><highlight class="normal"></highlight></codeline>
+<codeline lineno="276"><highlight class="normal"></highlight><highlight class="preprocessor">###<sp/>HOW<sp/>TO<sp/>modify<sp/>a<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="277"><highlight class="normal"></highlight></codeline>
+<codeline lineno="278"><highlight class="normal">libraries:</highlight></codeline>
+<codeline lineno="279"><highlight class="normal"></highlight></codeline>
+<codeline lineno="280"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="281"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;diagnostic_msgs/KeyValue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="282"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeItem.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="283"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;rosplan_knowledge_msgs/KnowledgeUpdateService.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="284"><highlight class="normal"></highlight></codeline>
+<codeline lineno="285"><highlight class="normal"></highlight><highlight class="comment">//<sp/>kb<sp/>knowledge<sp/>type</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="286"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KB_KTYPE_FLUENT<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="287"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KB_KTYPE_PREDICATE<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"></highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight><highlight class="comment">//<sp/>kb<sp/>action</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="290"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KB_ADD_KNOWLEDGE<sp/>0</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="291"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>KB_DEL_KNOWLEDGE<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="292"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="293"><highlight class="normal"></highlight></codeline>
+<codeline lineno="294"><highlight class="normal"><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref><sp/>to<sp/>interact<sp/>with:</highlight></codeline>
+<codeline lineno="295"><highlight class="normal"></highlight></codeline>
+<codeline lineno="296"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="297"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_KB_UPDATE<sp/>&quot;/rosplan_knowledge_base/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="298" refid="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" refkind="member"><highlight class="normal">ros::ServiceClient<sp/><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref><sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>);</highlight></codeline>
+<codeline lineno="299"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="300"><highlight class="normal"></highlight></codeline>
+<codeline lineno="301"><highlight class="normal">a<sp/>more<sp/>detailed<sp/>way<sp/>to<sp/>open<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref>:</highlight></codeline>
+<codeline lineno="302"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_KB_UPDATE<sp/>&quot;/rosplan_knowledge_base/update&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>update<sp/>service<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1afb21a56e2c9fb4d0c72a34ea32d9f94d" kindref="member">TLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>client<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="308" refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" refkind="member"><highlight class="normal">ros::ServiceClient<sp/><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref><sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>);</highlight></codeline>
+<codeline lineno="309" refid="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" refkind="member"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!this-&gt;cl_kb_update.waitForExistence(<sp/>ros::Duration(<sp/><ref refid="kb__tools_8h_1a6dffd91fadc72daca40e06d00a34b254" kindref="member">TIMEOUT_KB_UPDATE</ref><sp/>)<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="310"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kindref="member">TERR</ref>(<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>contact<sp/>the<sp/>server<sp/>-<sp/>timeout<sp/>expired<sp/>(&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="kb__tools_8h_1a6dffd91fadc72daca40e06d00a34b254" kindref="member">TIMEOUT_KB_UPDATE</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;s)<sp/>&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="313"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;<ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="314"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="315"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="316"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1afb21a56e2c9fb4d0c72a34ea32d9f94d" kindref="member">TLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Opening<sp/>client<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;...<sp/>OK&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="317"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="318"><highlight class="normal"></highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref><sp/>**rosplan_knowledge_msgs::KnowledgeUpdateService**</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"></highlight></codeline>
+<codeline lineno="321"><highlight class="normal">```text</highlight></codeline>
+<codeline lineno="322"><highlight class="normal">uint8<sp/><ref refid="rosplan-kb_8md_8txt_1ad8d83de4ff7d47d67988337edeead5d8" kindref="member">update_type</ref></highlight></codeline>
+<codeline lineno="323"><highlight class="normal">rosplan_knowledge_msgs/KnowledgeItem<sp/>knowledge</highlight></codeline>
+<codeline lineno="324"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="325"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref></highlight></codeline>
+<codeline lineno="326"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"></highlight></codeline>
+<codeline lineno="328"><highlight class="normal">message<sp/>**rosplan_knowledge_msgs/KnowledgeItem**<sp/>(see<sp/>above)</highlight></codeline>
+<codeline lineno="329"><highlight class="normal"></highlight></codeline>
+<codeline lineno="330"><highlight class="normal">message<sp/>**diagnostic_msgs/KeyValue**<sp/>(see<sp/>above)</highlight></codeline>
+<codeline lineno="331"><highlight class="normal"></highlight></codeline>
+<codeline lineno="332"><highlight class="normal">how<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>:</highlight></codeline>
+<codeline lineno="333"><highlight class="normal"></highlight></codeline>
+<codeline lineno="334"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="335"><highlight class="normal">std::string<sp/>pname</highlight></codeline>
+<codeline lineno="336" refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" refkind="member"><highlight class="normal">std::map&lt;std::string,<sp/>std::string&gt;<sp/>params</highlight></codeline>
+<codeline lineno="337" refid="rosplan-kb_8md_8txt_1af509caefa33170c15c97d6cca601cac6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1af509caefa33170c15c97d6cca601cac6" kindref="member">val</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>the<sp/>new<sp/>val<sp/>for<sp/>the<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="338"><highlight class="normal"></highlight></codeline>
+<codeline lineno="339"><highlight class="normal"></highlight></codeline>
+<codeline lineno="340"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PREPARE<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="341"><highlight class="normal"></highlight></codeline>
+<codeline lineno="342"><highlight class="normal">rosplan_knowledge_msgs::KnowledgeUpdateService<sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>;</highlight></codeline>
+<codeline lineno="343"><highlight class="normal"></highlight></codeline>
+<codeline lineno="344" refid="rosplan-kb_8md_8txt_1ad8d83de4ff7d47d67988337edeead5d8" refkind="member"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.request.update_type<sp/>=<sp/>(<sp/>value<sp/>?<sp/><ref refid="rosplan-kb_8md_8txt_1ae383a0070aad6f5b5ff2e0e8ecc57980" kindref="member">KB_ADD_KNOWLEDGE</ref><sp/>:<sp/><ref refid="rosplan-kb_8md_8txt_1a3fc8fe8eaf6f19d6e73eb762b5608590" kindref="member">KB_DEL_KNOWLEDGE</ref><sp/>);</highlight></codeline>
+<codeline lineno="345"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.request.knowledge.knowledge_type<sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a4fe1e5d1ed4ba3fd4237490006e06dd2" kindref="member">KB_KTYPE_PREDICATE</ref>;</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.request.knowledge.attribute_name<sp/>=<sp/>pname;</highlight></codeline>
+<codeline lineno="347"><highlight class="normal"></highlight></codeline>
+<codeline lineno="348"><highlight class="normal"></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it=params.begin(<sp/>)<sp/>;<sp/>it!=params.end(<sp/>)<sp/>;<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="349"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/>diagnostic_msgs::KeyValue<sp/>kv;</highlight></codeline>
+<codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/>kv.key<sp/>=<sp/>it-&gt;first;</highlight></codeline>
+<codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/>kv.value<sp/>=<sp/>it-&gt;second;</highlight></codeline>
+<codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.request.knowledge.values.push_back(<sp/>kv<sp/>);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"></highlight></codeline>
+<codeline lineno="356"><highlight class="normal"></highlight></codeline>
+<codeline lineno="357"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PERFORM<sp/>THE<sp/>REQUEST<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="358"><highlight class="normal"></highlight></codeline>
+<codeline lineno="359"><highlight class="normal"><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref>.call(<sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref><sp/>);</highlight></codeline>
+<codeline lineno="360"><highlight class="normal"></highlight></codeline>
+<codeline lineno="361"><highlight class="normal"></highlight></codeline>
+<codeline lineno="362"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>EVALUATE<sp/>THE<sp/>RESULT<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="363"><highlight class="normal"></highlight></codeline>
+<codeline lineno="364" refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref><sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a1c4a72d1174dc069f7cda8bd0b749190" kindref="member">kbm</ref>.response.success;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"></highlight></codeline>
+<codeline lineno="366"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="367"><highlight class="normal"></highlight></codeline>
+<codeline lineno="368"><highlight class="normal">how<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref><sp/>with<sp/><ref refid="rosplan-kb_8md_8txt_1a26bce720ec71ef391d8b7706f8a44b84" kindref="member">kb_tools</ref>:</highlight></codeline>
+<codeline lineno="369"><highlight class="normal"></highlight></codeline>
+<codeline lineno="370"><highlight class="normal">```c++</highlight></codeline>
+<codeline lineno="371"><highlight class="normal">std::string<sp/>pname</highlight></codeline>
+<codeline lineno="372" refid="rosplan-kb_8md_8txt_1a26bce720ec71ef391d8b7706f8a44b84" refkind="member"><highlight class="normal">std::map&lt;std::string,<sp/>std::string&gt;<sp/>params</highlight></codeline>
+<codeline lineno="373"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1af509caefa33170c15c97d6cca601cac6" kindref="member">val</ref><sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>the<sp/>new<sp/>val<sp/>for<sp/>the<sp/>predicate</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="374"><highlight class="normal"></highlight></codeline>
+<codeline lineno="375" refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" refkind="member"><highlight class="normal"><ref refid="classkb__tools" kindref="compound">kb_tools</ref><sp/><ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>;</highlight></codeline>
+<codeline lineno="376"><highlight class="normal"></highlight></codeline>
+<codeline lineno="377"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" kindref="member">res</ref><sp/>=<sp/><ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>.<ref refid="classkb__tools_1a28db234bb29bece4e83b7a27201fa013" kindref="member">set_predicate</ref>(<sp/>pname,<sp/>params,<sp/><ref refid="rosplan-kb_8md_8txt_1af509caefa33170c15c97d6cca601cac6" kindref="member">val</ref><sp/>);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!<ref refid="rosplan-kb_8md_8txt_1a30b2d8857f98fca61a3e173394029c9b" kindref="member">kbt</ref>-&gt;<ref refid="classkb__tools_1a84232df0b5e76bad833c8f617abccf30" kindref="member">ok</ref>())</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERR(</highlight><highlight class="stringliteral">&quot;kb<sp/>tools<sp/>set<sp/>predicate&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt"/>
+  </compounddef>
+</doxygen>

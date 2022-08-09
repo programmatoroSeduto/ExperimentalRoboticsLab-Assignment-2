@@ -23,17 +23,21 @@ KB "srv" --> "cl" SRV_
 note on link: 
 '/
 
-() "/rosplan_knowledge_base/clear" as SRV_KB_CLEAR
-KB "srv" --> "cl" SRV_KB_CLEAR
-note on link: std_srvs::Empty
+' () "/rosplan_knowledge_base/clear" as SRV_KB_CLEAR
+' KB "srv" --> "cl" SRV_KB_CLEAR
+' note on link: std_srvs::Empty
 
 () "/rosplan_knowledge_base/state/propositions" as SRV_KB_GET_PRED
 KB "srv" --> "cl" SRV_KB_GET_PRED
-note on link: rosplan_knowledge_msgs::GetAttributeService
+note on link: rosplan_knowledge_msgs/GetAttributeService
 
-() "/rosplan_knowledge_base/update" as SRV_KB_UPDATE
+() "/rosplan_knowledge_base/update_array" as SRV_KB_UPDATE
 KB "srv" --> "cl" SRV_KB_UPDATE
 note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() "/rosplan_knowledge_base/update" as SRV_KB_UPDATE_ARRAY
+KB "srv" --> "cl" SRV_KB_UPDATE_ARRAY
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateServiceArray
 
 () "/rosplan_knowledge_base/query_state" as SRV_QUERY
 KB "srv" --> "cl" SRV_QUERY
@@ -64,6 +68,8 @@ database "knowledge base" <<ROSPlan>> as KB
 class "kb_tools" as TOOLS {
 + get_predicate(string pname, map<keyvalue> args) : bool
 + set_predicate(string pname, map<keyvalue> args, bool newvalue) : bool
+' + get_goal(string pname, map<keyvalue> args, bool newvalue) : bool
++ set_goal(string pname, map<keyvalue> args, bool newvalue) : bool
 }
 
 
@@ -341,7 +347,7 @@ bool val = false; // the new val for the predicate
 
 rosplan_knowledge_msgs::KnowledgeUpdateService kbm;
 
-kbm.request.update_type = ( value ? KB_ADD_KNOWLEDGE : KB_DEL_KNOWLEDGE );
+kbm.request.update_type = ( val ? KB_ADD_KNOWLEDGE : KB_DEL_KNOWLEDGE );
 kbm.request.knowledge.knowledge_type = KB_KTYPE_PREDICATE;
 kbm.request.knowledge.attribute_name = pname;
 
@@ -378,3 +384,70 @@ bool res = kbt.set_predicate( pname, params, val );
 if(!kbt->ok())
 	ROS_ERR("kb tools set predicate");
 ```
+
+## dealing with goals
+
+libraries:
+
+```c++
+#include "diagnostic_msgs/KeyValue.h"
+#include "rosplan_knowledge_msgs/KnowledgeItem.h"
+#include "rosplan_knowledge_msgs/KnowledgeUpdateService.h"
+
+// kb knowledge type
+#define KB_KTYPE_FLUENT 2
+#define KB_KTYPE_PREDICATE 1
+
+// kb action
+#define KB_ADD_KNOWLEDGE 0
+#define KB_DEL_KNOWLEDGE 2
+#define KB_ADD_GOAL 1
+#define KB_DEL_GOAL 3
+
+```
+
+message **rosplan_knowledge_msgs/KnowledgeUpdate** (see above)
+
+in order to make this update, open a client with `/rosplan_knowledge_base/update` of type `rosplan_knowledge_msgs::KnowledgeUpdate`
+
+```c++
+#define SERVICE_KB_UPDATE "/rosplan_knowledge_base/update"
+ros::ServiceClient cl_kb_update = nh.serviceClient<rosplan_knowledge_msgs::KnowledgeUpdateService>( SERVICE_KB_UPDATE );
+```
+
+here's the code for the action: 
+
+```c++
+std::string pname
+std::map<std::string, std::string> params
+bool val = false; // the new val for the predicate
+
+
+// === PREPARE THE REQUEST === //
+
+rosplan_knowledge_msgs::KnowledgeUpdateService kbm;
+
+kbm.request.update_type = ( value ? KB_ADD_GOAL : KB_DEL_GOAL );
+kbm.request.knowledge.knowledge_type = KB_KTYPE_PREDICATE;
+kbm.request.knowledge.attribute_name = pname;
+
+for ( auto it=params.begin( ) ; it!=params.end( ) ; ++it )
+{
+	diagnostic_msgs::KeyValue kv;
+	kv.key = it->first;
+	kv.value = it->second;
+	kbm.request.knowledge.values.push_back( kv );
+}
+
+
+// === PERFORM THE REQUEST === //
+
+cl_kb_update.call( kbm );
+
+
+// === EVALUATE THE RESULT === //
+
+bool success = kbm.response.success;
+
+```
+

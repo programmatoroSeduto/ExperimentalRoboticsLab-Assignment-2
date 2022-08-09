@@ -390,7 +390,12 @@
 <codeline><highlight class="normal">-<sp/>assumiamo<sp/>che<sp/>kb<sp/>tools<sp/>funzioni<sp/>a<sp/>dovere<sp/>(dovrebbe,<sp/>l&apos;ho<sp/>usata<sp/>nel<sp/>vecchio<sp/>progetto<sp/>e<sp/>andava<sp/>bene)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>UML<sp/>di<sp/>kb_tools</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;re-adaptation<sp/>of<sp/>kb_tools&quot;</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>manca<sp/>ancora<sp/>una<sp/>cosa<sp/>prima<sp/>di<sp/>poter<sp/>implementare<sp/>ad<sp/>esempio<sp/>il<sp/>sistema<sp/>di<sp/>landmark:<sp/>*come<sp/>settare<sp/>un<sp/>goal*<sp/>?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>sui<sp/>goal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>dei<sp/>due<sp/>metodi<sp/>per<sp/>i<sp/>goal<sp/>...<sp/>anzi,<sp/>solo<sp/>il<sp/>setter,<sp/>il<sp/>getter<sp/>è<sp/>noioso<sp/>da<sp/>fare<sp/>e<sp/>probabilmente<sp/>non<sp/>mi<sp/>servirà</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>degli<sp/>uml<sp/>di<sp/>ROSplan</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;set<sp/>goal<sp/>method&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

@@ -113,7 +113,7 @@ bool kb_tools::set_predicate(
 {
 	// formulate the request
 	rosplan_knowledge_msgs::KnowledgeUpdateService kbm = 
-		this->request_update( pname, params, pvalue );
+		this->request_update( pname, params, pvalue, false );
 	
 	if( debug_mode ) 
 	{
@@ -123,6 +123,41 @@ bool kb_tools::set_predicate(
 		ROS_INFO_STREAM( "kb_tools::set_predicate" << "( " << pname << pm << ", pvalue=" << (pvalue ? "true" : "false" ) << " )"  );
 	}
 		
+	// send command
+	if( !this->cl_kb_update.call( kbm ) ) 
+	{ 
+		ROS_WARN_STREAM( "unable to make a service request -- failed calling service " 
+			<< SERVICE_KB_UPDATE
+			<< (!this->cl_kb_update.exists( ) ? " -- it seems not opened" : "") );
+		
+		this->success = false;
+		return false;
+	}
+	
+	this->success = kbm.response.success;
+	if( debug_mode ) ROS_INFO_STREAM( "kb_tools::set_predicate" << " CALL SUCCESS with return " 
+		<< (kbm.response.success ? "success" : "NOT success")  );
+	return kbm.response.success;
+}
+
+
+// set a goal value
+bool kb_tools::set_goal( 
+	const std::string& pname, 
+	std::map<std::string, std::string> params,
+	bool pvalue )
+{
+	rosplan_knowledge_msgs::KnowledgeUpdateService kbm = 
+		this->request_update( pname, params, pvalue, true );
+	
+	if( debug_mode ) 
+	{
+		std::string pm = "";
+		for ( auto it=params.begin( ) ; it!=params.end( ) ; ++it )
+			pm += ", " + it->first + "=" + it->second;
+		ROS_INFO_STREAM( "kb_tools::set_predicate" << "( " << pname << pm << ", pvalue=" << (pvalue ? "true" : "false" ) << " )"  );
+	}
+	
 	// send command
 	if( !this->cl_kb_update.call( kbm ) ) 
 	{ 
@@ -175,11 +210,16 @@ rosplan_knowledge_msgs::KnowledgeQueryService kb_tools::request_query(
 rosplan_knowledge_msgs::KnowledgeUpdateService kb_tools::request_update(
 	const std::string pname, 
 	std::map<std::string, std::string>& params, 
-	bool value )
+	bool value,
+	bool is_goal )
 {
 	rosplan_knowledge_msgs::KnowledgeUpdateService kbm;
-
-	kbm.request.update_type = ( value ? KB_ADD_KNOWLEDGE : KB_DEL_KNOWLEDGE );
+	
+	if(is_goal)
+		kbm.request.update_type = ( value ? KB_ADD_KNOWLEDGE : KB_DEL_KNOWLEDGE );
+	else
+		kbm.request.update_type = ( value ? KB_ADD_GOAL : KB_DEL_GOAL );
+	
 	kbm.request.knowledge.knowledge_type = KB_KTYPE_PREDICATE;
 	kbm.request.knowledge.attribute_name = pname;
 

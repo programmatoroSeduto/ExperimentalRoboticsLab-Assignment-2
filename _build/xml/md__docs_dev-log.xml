@@ -268,7 +268,7 @@
 <listitem><para>le macro per il log non mi piacciono molto...</para>
 <para>```c++ #define NODE_NAME &quot;kb_tools&quot;</para>
 <para>#ifndef <bold>DEBUG_MACROS</bold> #define <bold>DEBUG_MACROS</bold></para>
-<para>#define <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( str )</ref> &quot;[&quot; &lt;&lt; str &lt;&lt; &quot;] &quot; #define OUTLABEL <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( NODE_NAME )</ref> #define TLOG( msg ) ROS_INFO_STREAM( OUTLABEL &lt;&lt; msg ) #define TWARN( msg ) ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;WARNING: &quot; &lt;&lt; msg ) #define TERR( msg ) ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;ERROR: &quot; &lt;&lt; msg )</para>
+<para>#define <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( str )</ref> &quot;[&quot; &lt;&lt; str &lt;&lt; &quot;] &quot; #define OUTLABEL <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( NODE_NAME )</ref> #define <ref refid="dev-log_8md_8txt_1a4c242fea9a3b706e637163f8b0eed95c" kindref="member">TLOG( msg )</ref> ROS_INFO_STREAM( OUTLABEL &lt;&lt; msg ) #define <ref refid="dev-log_8md_8txt_1a723a84b8e4828b3ba1ad2ccf3e787643" kindref="member">TWARN( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;WARNING: &quot; &lt;&lt; msg ) #define <ref refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kindref="member">TERR( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;ERROR: &quot; &lt;&lt; msg )</para>
 <para>#endif ```</para>
 <para>non mi piacciono perchè fanno spuntare troppi warning inutili...</para>
 </listitem><listitem><para>via la db mode!<itemizedlist>
@@ -290,6 +290,14 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;re-adaptation of kb_tools&quot;</para>
+</listitem><listitem><para>manca ancora una cosa prima di poter implementare ad esempio il sistema di landmark: <emphasis>come settare un goal</emphasis> ?<itemizedlist>
+<listitem><para>documentazione sui goal</para>
+</listitem><listitem><para>implementazione dei due metodi per i goal ... anzi, solo il setter, il getter è noioso da fare e probabilmente non mi servirà</para>
+</listitem><listitem><para>aggiornamento degli uml di ROSplan</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;set goal method&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
