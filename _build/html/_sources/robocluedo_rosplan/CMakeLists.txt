@@ -108,10 +108,25 @@ find_package(catkin REQUIRED COMPONENTS
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
-catkin_package(
+# catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES robocluedo_rosplan
 #  CATKIN_DEPENDS diagnostic_msgs robocluedo_rosplan_msgs roscpp rosplan_dependencies rosplan_dispatch_msgs rosplan_knowledge_msgs rospy std_msgs std_srvs
+#  DEPENDS system_lib
+# )
+catkin_package(
+ INCLUDE_DIRS include
+ LIBRARIES 
+	knowledge_base_tools 
+	# dispatch_actions 
+	# robocluedo_rosplan_action_interface
+ CATKIN_DEPENDS 
+	roscpp 
+	std_msgs 
+	std_srvs 
+	diagnostic_msgs
+	rosplan_dispatch_msgs 
+	rosplan_knowledge_msgs 
 #  DEPENDS system_lib
 )
 
@@ -122,7 +137,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -130,6 +145,9 @@ include_directories(
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/robocluedo_rosplan.cpp
 # )
+
+add_library( kb_tools src/knowledge_base_tools/kb_tools.cpp )
+target_link_libraries( kb_tools ${catkin_LIBRARIES} )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="355px" preserveAspectRatio="none" style="width:1602px;height:355px;background:#FFFFFF;" version="1.1" viewBox="0 0 1602 355" width="1602px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="310" x="639" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="284" x="652" y="30.9951">robocluedo_armor project structure</text><!--MD5=[3287247eb5ef114031405aae8a2c204e]
+entity KB--><g id="elem_KB"><path d="M563,69.2969 C563,59.2969 638,59.2969 638,59.2969 C638,59.2969 713,59.2969 713,69.2969 L713,142.8906 C713,152.8906 638,152.8906 638,152.8906 C638,152.8906 563,152.8906 563,142.8906 L563,69.2969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M563,69.2969 C563,79.2969 638,79.2969 638,79.2969 C638,79.2969 713,79.2969 713,69.2969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="599.5" y="104.292">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="581" y="136.5889">knowledge base</text></g><!--MD5=[1d8b27e0f79fdb1009bfcfe1a473fb0b]
+entity SRV_KB_CLEAR--><g id="elem_SRV_KB_CLEAR"><ellipse cx="115" cy="309.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="6" y="347.292">/rosplan_knowledge_base/clear</text></g><!--MD5=[d9b0ff4e9238b5304521bdcfabd6e54a]
+entity SRV_KB_GET_PRED--><g id="elem_SRV_KB_GET_PRED"><ellipse cx="446" cy="309.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="311" x="290.5" y="347.292">/rosplan_knowledge_base/state/propositions</text></g><!--MD5=[c601e9962b697d328cec0a57ddc55295]
+entity SRV_KB_UPDATE--><g id="elem_SRV_KB_UPDATE"><ellipse cx="830" cy="309.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="234" x="713" y="347.292">/rosplan_knowledge_base/update</text></g><!--MD5=[8cd373876d6b622e4e1028111b915192]
+entity SRV_QUERY--><g id="elem_SRV_QUERY"><ellipse cx="1246" cy="309.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="266" x="1113" y="347.292">/rosplan_knowledge_base/query_state</text></g><!--MD5=[1f9b6526e511e4c6cae76ca42cb51b3f]
+link KB to SRV_KB_CLEAR--><g id="link_KB_SRV_KB_CLEAR"><path codeLine="20" d="M562.93,112.6369 C486.6,120.3669 366.45,138.9969 272,183.2969 C209.72,212.5069 150.12,271.0169 126.11,296.2469 " fill="none" id="KB-to-SRV_KB_CLEAR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="122.57,300.0069,131.6585,296.2124,126.004,296.3726,125.8437,290.718,122.57,300.0069" style="stroke:#181818;stroke-width:1.0;"/><path d="M277,188.2969 L277,229.2969 L416,229.2969 L416,198.2969 L406,188.2969 L277,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M406,188.2969 L406,198.2969 L416,198.2969 L406,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="102" x="291" y="213.3638">std_srvs::Empty</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="527.9748" y="100.9397">srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="102.8392" y="281.1931">cl</text></g><!--MD5=[019d1a5a01cdb7fb327e3ed7eb8fa7c4]
+link KB to SRV_KB_GET_PRED--><g id="link_KB_SRV_KB_GET_PRED"><path codeLine="24" d="M562.65,115.9569 C519.91,125.1669 469.76,144.1469 443,183.2969 C419.44,217.7669 432.97,270.9869 441.16,295.3369 " fill="none" id="KB-to-SRV_KB_GET_PRED" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="442.81,300.0769,443.599,290.2597,441.1519,295.3598,436.0517,292.9127,442.81,300.0769" style="stroke:#181818;stroke-width:1.0;"/><path d="M448,188.2969 L448,229.2969 L782,229.2969 L782,198.2969 L772,188.2969 L448,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M772,188.2969 L772,198.2969 L782,198.2969 L772,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="297" x="462" y="213.3638">rosplan_knowledge_msgs::GetAttributeService</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="527.9609" y="138.1297">srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="419.6494" y="281.2854">cl</text></g><!--MD5=[42433cea24859ba38bfb9dd4ddfc1684]
+link KB to SRV_KB_UPDATE--><g id="link_KB_SRV_KB_UPDATE"><path codeLine="28" d="M713.02,130.3569 C740.86,142.2369 770.6,159.3769 791,183.2969 C819.39,216.5869 827.13,270.4669 829.23,295.1669 " fill="none" id="KB-to-SRV_KB_UPDATE" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="829.62,300.2469,832.9139,290.9652,829.2343,295.2618,824.9377,291.5822,829.62,300.2469" style="stroke:#181818;stroke-width:1.0;"/><path d="M822,188.2969 L822,229.2969 L1188,229.2969 L1188,198.2969 L1178,188.2969 L822,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1178,188.2969 L1178,198.2969 L1188,198.2969 L1178,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="329" x="836" y="213.3638">rosplan_knowledge_msgs/KnowledgeUpdateService</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="728.9709" y="153.8466">srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="807.1879" y="281.2036">cl</text></g><!--MD5=[e9e1beea8ed5832efcb346ac2c86a2c0]
+link KB to SRV_QUERY--><g id="link_KB_SRV_QUERY"><path codeLine="32" d="M713.22,108.0369 C848.95,110.8569 1127.55,123.9369 1201,183.2969 C1236,211.5869 1243.79,269.3669 1245.51,295.2469 " fill="none" id="KB-to-SRV_QUERY" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1245.8,300.2669,1249.2785,291.0528,1245.5139,295.2751,1241.2916,291.5105,1245.8,300.2669" style="stroke:#181818;stroke-width:1.0;"/><path d="M1238,188.2969 L1238,229.2969 L1595,229.2969 L1595,198.2969 L1585,188.2969 L1238,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1585,188.2969 L1585,198.2969 L1595,198.2969 L1585,188.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="320" x="1252" y="213.3638">rosplan_knowledge_msgs/KnowledgeQueryService</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="728.8984" y="95.9866">srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="1223.4275" y="281.2302">cl</text></g><!--MD5=[c6562151add55794f2f7b66dc7a7a098]
+@startuml
+
+''' INFOS
+title robocluedo_armor project structure
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+database "knowledge base" <<ROSPlan>> as KB
+
+
+''' SERVICES
+/'
+() "srv" as SRV_
+KB "srv" - -> "cl" SRV_
+note on link: 
+'/
+
+() "/rosplan_knowledge_base/clear" as SRV_KB_CLEAR
+KB "srv" - -> "cl" SRV_KB_CLEAR
+note on link: std_srvs::Empty
+
+() "/rosplan_knowledge_base/state/propositions" as SRV_KB_GET_PRED
+KB "srv" - -> "cl" SRV_KB_GET_PRED
+note on link: rosplan_knowledge_msgs::GetAttributeService
+
+() "/rosplan_knowledge_base/update" as SRV_KB_UPDATE
+KB "srv" - -> "cl" SRV_KB_UPDATE
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() "/rosplan_knowledge_base/query_state" as SRV_QUERY
+KB "srv" - -> "cl" SRV_QUERY
+note on link: rosplan_knowledge_msgs/KnowledgeQueryService
+
+
+''' CONNECTIONS
+' ...
+
+@enduml
+
+@startuml
+
+title robocluedo_armor project structure
+skinparam Padding 8
+allow_mixing
+
+
+database "knowledge base" <<ROSPlan>> as KB
+
+
+
+() "/rosplan_knowledge_base/clear" as SRV_KB_CLEAR
+KB "srv" - -> "cl" SRV_KB_CLEAR
+note on link: std_srvs::Empty
+
+() "/rosplan_knowledge_base/state/propositions" as SRV_KB_GET_PRED
+KB "srv" - -> "cl" SRV_KB_GET_PRED
+note on link: rosplan_knowledge_msgs::GetAttributeService
+
+() "/rosplan_knowledge_base/update" as SRV_KB_UPDATE
+KB "srv" - -> "cl" SRV_KB_UPDATE
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() "/rosplan_knowledge_base/query_state" as SRV_QUERY
+KB "srv" - -> "cl" SRV_QUERY
+note on link: rosplan_knowledge_msgs/KnowledgeQueryService
+
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

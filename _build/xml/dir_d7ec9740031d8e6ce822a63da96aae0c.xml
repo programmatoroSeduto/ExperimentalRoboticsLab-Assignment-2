@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir">
+    <compoundname>robocluedo_rosplan/src</compoundname>
+    <innerdir refid="dir_9c71da56d12fc4e7ecdb43adaba26494">robocluedo_rosplan/src/knowledge_base_tools</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="robocluedo_rosplan/src/"/>
+  </compounddef>
+</doxygen>

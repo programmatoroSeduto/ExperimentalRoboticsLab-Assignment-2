@@ -4,7 +4,9 @@
     <compoundname>robocluedo_rosplan</compoundname>
     <innerdir refid="dir_7a143a32def369bdd1a3cede121292e1">robocluedo_rosplan/_docs</innerdir>
     <innerdir refid="dir_1fcca81b52f889fab1c5f049bd5dad05">robocluedo_rosplan/_uml</innerdir>
+    <innerdir refid="dir_8ac4453b272c73dc7502911cb6230c81">robocluedo_rosplan/include</innerdir>
     <innerdir refid="dir_93829e55076e13599f35fa93e9f2ce24">robocluedo_rosplan/pddl</innerdir>
+    <innerdir refid="dir_d7ec9740031d8e6ce822a63da96aae0c">robocluedo_rosplan/src</innerdir>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

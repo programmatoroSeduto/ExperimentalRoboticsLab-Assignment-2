@@ -247,6 +247,49 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>ora chiariamo la questione dei landmark</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on PDDL (end of the job)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>il pddl di base è pronto. adesso, passiamo al package:</para>
+<para><itemizedlist>
+<listitem><para>una descrizione formale della KB<itemizedlist>
+<listitem><para>un UML sistemato della KB di ROSPlan</para>
+</listitem><listitem><para>senza dovermi reinventare nulla, dovrei avere del codice già pronto dalla vecchia repo...</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ancora meglio</bold> : ho direttamente le classi!<itemizedlist>
+<listitem><para>importo il codice nella repo nuova allora, e lo rivedo un attimino</para>
+</listitem><listitem><para>il codice va un attimino semplificato... ma soprattutto reso più comprensibile</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>kb tools pezzo per pezzo<itemizedlist>
+<listitem><para>le macro per il log non mi piacciono molto...</para>
+<para>```c++ #define NODE_NAME &quot;kb_tools&quot;</para>
+<para>#ifndef <bold>DEBUG_MACROS</bold> #define <bold>DEBUG_MACROS</bold></para>
+<para>#define <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( str )</ref> &quot;[&quot; &lt;&lt; str &lt;&lt; &quot;] &quot; #define OUTLABEL <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( NODE_NAME )</ref> #define TLOG( msg ) ROS_INFO_STREAM( OUTLABEL &lt;&lt; msg ) #define TWARN( msg ) ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;WARNING: &quot; &lt;&lt; msg ) #define TERR( msg ) ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;ERROR: &quot; &lt;&lt; msg )</para>
+<para>#endif ```</para>
+<para>non mi piacciono perchè fanno spuntare troppi warning inutili...</para>
+</listitem><listitem><para>via la db mode!<itemizedlist>
+<listitem><para>un compromesso: piuttosto che avere la variabile al costruttore, posso definire una macro...</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>meglio fare anche il codice in parallelo oltre che l&apos;header</para>
+</listitem><listitem><para>per il momento, meglio <emphasis>eliminare la parte dei fluents</emphasis> dato che comunque per l&apos;attuale progetto non mi servono. Posso pensare di reintrodurli più avanti.</para>
+</listitem><listitem><para>anche la sezione <emphasis>other queries</emphasis> si può eliminare, non mi è mai servita nemmeno per il precedente progetto<itemizedlist>
+<listitem><para>già che ci sono, documento la lettura di un predicate da codice</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>escluderei l&apos;altra libreria... non mi sembra molto utile, e comunque voglio mantenere tutto sul semplice</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>prima di andare avanti, <emphasis>prova a compilare la libreria</emphasis></para>
+</listitem><listitem><para>assumiamo che kb tools funzioni a dovere (dovrebbe, l&apos;ho usata nel vecchio progetto e andava bene)<itemizedlist>
+<listitem><para>UML di <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;re-adaptation of kb_tools&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

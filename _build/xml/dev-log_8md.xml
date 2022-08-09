@@ -347,8 +347,49 @@
 <codeline><highlight class="normal">-<sp/>ancora<sp/>lavoro<sp/>sul<sp/>PDDL</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>azione<sp/>solve</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>ora<sp/>chiariamo<sp/>la<sp/>questione<sp/>dei<sp/>landmark</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>PDDL<sp/>(end<sp/>of<sp/>the<sp/>job)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">il<sp/>pddl<sp/>di<sp/>base<sp/>è<sp/>pronto.<sp/>adesso,<sp/>passiamo<sp/>al<sp/>package:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>una<sp/>descrizione<sp/>formale<sp/>della<sp/>KB</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un<sp/>UML<sp/>sistemato<sp/>della<sp/>KB<sp/>di<sp/>ROSPlan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>senza<sp/>dovermi<sp/>reinventare<sp/>nulla,<sp/>dovrei<sp/>avere<sp/>del<sp/>codice<sp/>già<sp/>pronto<sp/>dalla<sp/>vecchia<sp/>repo...<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ancora<sp/>meglio**<sp/>:<sp/>ho<sp/>direttamente<sp/>le<sp/>classi!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>importo<sp/>il<sp/>codice<sp/>nella<sp/>repo<sp/>nuova<sp/>allora,<sp/>e<sp/>lo<sp/>rivedo<sp/>un<sp/>attimino</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>codice<sp/>va<sp/>un<sp/>attimino<sp/>semplificato...<sp/>ma<sp/>soprattutto<sp/>reso<sp/>più<sp/>comprensibile</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>kb<sp/>tools<sp/>pezzo<sp/>per<sp/>pezzo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>le<sp/>macro<sp/>per<sp/>il<sp/>log<sp/>non<sp/>mi<sp/>piacciono<sp/>molto...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>NODE_NAME<sp/>&quot;kb_tools&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#ifndef<sp/>__DEBUG_MACROS__</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>__DEBUG_MACROS__</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>LOGSQUARE(<sp/>str<sp/>)<sp/><sp/>&quot;[&quot;<sp/>&lt;&lt;<sp/>str<sp/>&lt;&lt;<sp/>&quot;]<sp/>&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>OUTLABEL<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>LOGSQUARE(<sp/>NODE_NAME<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TLOG(<sp/>msg<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/>OUTLABEL<sp/>&lt;&lt;<sp/>msg<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TWARN(<sp/>msg<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/>ROS_WARN_STREAM(<sp/>OUTLABEL<sp/>&lt;&lt;<sp/>&quot;WARNING:<sp/>&quot;<sp/>&lt;&lt;<sp/>msg<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>TERR(<sp/>msg<sp/>)<sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_WARN_STREAM(<sp/>OUTLABEL<sp/>&lt;&lt;<sp/>&quot;ERROR:<sp/>&quot;<sp/>&lt;&lt;<sp/>msg<sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>non<sp/>mi<sp/>piacciono<sp/>perchè<sp/>fanno<sp/>spuntare<sp/>troppi<sp/>warning<sp/>inutili...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>via<sp/>la<sp/>db<sp/>mode!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>un<sp/>compromesso:<sp/>piuttosto<sp/>che<sp/>avere<sp/>la<sp/>variabile<sp/>al<sp/>costruttore,<sp/>posso<sp/>definire<sp/>una<sp/>macro...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>meglio<sp/>fare<sp/>anche<sp/>il<sp/>codice<sp/>in<sp/>parallelo<sp/>oltre<sp/>che<sp/>l&apos;header</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>il<sp/>momento,<sp/>meglio<sp/>*eliminare<sp/>la<sp/>parte<sp/>dei<sp/>fluents*<sp/>dato<sp/>che<sp/>comunque<sp/>per<sp/>l&apos;attuale<sp/>progetto<sp/>non<sp/>mi<sp/>servono.<sp/>Posso<sp/>pensare<sp/>di<sp/>reintrodurli<sp/>più<sp/>avanti.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>la<sp/>sezione<sp/>*other<sp/>queries*<sp/>si<sp/>può<sp/>eliminare,<sp/>non<sp/>mi<sp/>è<sp/>mai<sp/>servita<sp/>nemmeno<sp/>per<sp/>il<sp/>precedente<sp/>progetto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>già<sp/>che<sp/>ci<sp/>sono,<sp/>documento<sp/>la<sp/>lettura<sp/>di<sp/>un<sp/>predicate<sp/>da<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>escluderei<sp/>l&apos;altra<sp/>libreria...<sp/>non<sp/>mi<sp/>sembra<sp/>molto<sp/>utile,<sp/>e<sp/>comunque<sp/>voglio<sp/>mantenere<sp/>tutto<sp/>sul<sp/>semplice</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>andare<sp/>avanti,<sp/>*prova<sp/>a<sp/>compilare<sp/>la<sp/>libreria*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>assumiamo<sp/>che<sp/>kb<sp/>tools<sp/>funzioni<sp/>a<sp/>dovere<sp/>(dovrebbe,<sp/>l&apos;ho<sp/>usata<sp/>nel<sp/>vecchio<sp/>progetto<sp/>e<sp/>andava<sp/>bene)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>UML<sp/>di<sp/>kb_tools</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;re-adaptation<sp/>of<sp/>kb_tools&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

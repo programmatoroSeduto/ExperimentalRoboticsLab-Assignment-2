@@ -338,8 +338,49 @@ ora, iniziamo a lavorare su rosplan:
 - ancora lavoro sul PDDL
 	- azione solve
 - ora chiariamo la questione dei landmark
+- **COMMIT** : "working on PDDL (end of the job)"
 
+---
 
+il pddl di base è pronto. adesso, passiamo al package:
+
+- una descrizione formale della KB
+	- un UML sistemato della KB di ROSPlan
+	- senza dovermi reinventare nulla, dovrei avere del codice già pronto dalla vecchia repo... 
+- **ancora meglio** : ho direttamente le classi!
+	- importo il codice nella repo nuova allora, e lo rivedo un attimino
+	- il codice va un attimino semplificato... ma soprattutto reso più comprensibile
+- kb tools pezzo per pezzo
+	- le macro per il log non mi piacciono molto...
+		
+		```c++
+		#define NODE_NAME "kb_tools"
+
+		#ifndef __DEBUG_MACROS__
+		#define __DEBUG_MACROS__
+
+		#define LOGSQUARE( str )  "[" << str << "] "
+		#define OUTLABEL          LOGSQUARE( NODE_NAME )
+		#define TLOG( msg )       ROS_INFO_STREAM( OUTLABEL << msg )
+		#define TWARN( msg )      ROS_WARN_STREAM( OUTLABEL << "WARNING: " << msg )
+		#define TERR( msg )       ROS_WARN_STREAM( OUTLABEL << "ERROR: " << msg )
+
+		#endif
+		```
+		
+		non mi piacciono perchè fanno spuntare troppi warning inutili...
+		
+	- via la db mode!
+		- un compromesso: piuttosto che avere la variabile al costruttore, posso definire una macro...
+	- meglio fare anche il codice in parallelo oltre che l'header
+	- per il momento, meglio *eliminare la parte dei fluents* dato che comunque per l'attuale progetto non mi servono. Posso pensare di reintrodurli più avanti.
+	- anche la sezione *other queries* si può eliminare, non mi è mai servita nemmeno per il precedente progetto
+		- già che ci sono, documento la lettura di un predicate da codice
+	- escluderei l'altra libreria... non mi sembra molto utile, e comunque voglio mantenere tutto sul semplice
+- prima di andare avanti, *prova a compilare la libreria*
+- assumiamo che kb tools funzioni a dovere (dovrebbe, l'ho usata nel vecchio progetto e andava bene)
+	- UML di kb_tools
+- **COMMIT** : "re-adaptation of kb_tools"
 
 
 

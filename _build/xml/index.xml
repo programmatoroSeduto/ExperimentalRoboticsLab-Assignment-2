@@ -56,6 +56,25 @@
     <member refid="class_armor_tools_1ac7f632ed614b226cbc2b2fa352989643" kind="function"><name>PrintLastReq</name></member>
     <member refid="class_armor_tools_1a57b657d8afdad44cccfc824564bec285" kind="function"><name>FileExist</name></member>
   </compound>
+  <compound refid="classkb__tools" kind="class"><name>kb_tools</name>
+    <member refid="classkb__tools_1a8ace0d8aefb4528d49284a31021d7f2b" kind="variable"><name>nh</name></member>
+    <member refid="classkb__tools_1aef928170758f6785ee44daf81c814cc6" kind="variable"><name>debug_mode</name></member>
+    <member refid="classkb__tools_1a25b2a84da20ed8d1bb6cea6f07ef45f1" kind="variable"><name>success</name></member>
+    <member refid="classkb__tools_1a390ed9fa0dd2f3040bb9b68b6ddacc64" kind="variable"><name>cl_query</name></member>
+    <member refid="classkb__tools_1a5acd0b9499c152a88178d9d440855f3e" kind="variable"><name>cl_query_2</name></member>
+    <member refid="classkb__tools_1a43e96579ec72e7c1e69addb92ac32bb9" kind="variable"><name>cl_kb_update</name></member>
+    <member refid="classkb__tools_1a5e11278de7c22d50cd185f21e46f3ccc" kind="variable"><name>cl_kb_get_fluent</name></member>
+    <member refid="classkb__tools_1a785a2d86d2fb4c7ea199527425c2600d" kind="function"><name>kb_tools</name></member>
+    <member refid="classkb__tools_1a07d99e246e9d60f9c2bdbcd60b626294" kind="function"><name>~kb_tools</name></member>
+    <member refid="classkb__tools_1a84232df0b5e76bad833c8f617abccf30" kind="function"><name>ok</name></member>
+    <member refid="classkb__tools_1a8e669891a5a1483f4c40642a17ac3c5a" kind="function"><name>set_debug_mode</name></member>
+    <member refid="classkb__tools_1afcdd633b556099168c1c97df9923e33d" kind="function"><name>get_predicate</name></member>
+    <member refid="classkb__tools_1a28db234bb29bece4e83b7a27201fa013" kind="function"><name>set_predicate</name></member>
+    <member refid="classkb__tools_1a1b5b559fba6923f0e73b426a0144c5a7" kind="function"><name>request_query</name></member>
+    <member refid="classkb__tools_1a2c367f5c5ca48951f5896c894fb14877" kind="function"><name>request_update</name></member>
+    <member refid="classkb__tools_1ac39559c5414b4254d13d61fca5c3f6a5" kind="function"><name>keyvalue2map</name></member>
+    <member refid="classkb__tools_1a72c124c0a09d80f93d43a015d1d26d0e" kind="function"><name>open_services</name></member>
+  </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
     <member refid="namespaceconf_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
@@ -233,9 +252,29 @@
   </compound>
   <compound refid="rosplan-arch_8md" kind="file"><name>rosplan-arch.md</name>
   </compound>
+  <compound refid="rosplan-kb_8md" kind="file"><name>rosplan-kb.md</name>
+  </compound>
+  <compound refid="kb__tools_8h" kind="file"><name>kb_tools.h</name>
+    <member refid="kb__tools_8h_1a257d1e4055caccb2686196243d38b145" kind="define"><name>__H_KB_TOOLS__</name></member>
+    <member refid="kb__tools_8h_1a35867bb3311de7b885b59b9d27705a5a" kind="define"><name>DEBUG_MODE_ENABLED</name></member>
+    <member refid="kb__tools_8h_1a14480e81381e195709ebd903dedd6c60" kind="define"><name>SERVICE_QUERY</name></member>
+    <member refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" kind="define"><name>TIMEOUT_QUERY</name></member>
+    <member refid="kb__tools_8h_1a9fc44d999b6cccf47bd22cc287534dd5" kind="define"><name>SERVICE_QUERY_2</name></member>
+    <member refid="kb__tools_8h_1a71faade5e7a632cccdcf59fcdb5f3a99" kind="define"><name>TIMEOUT_QUERY_2</name></member>
+    <member refid="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kind="define"><name>SERVICE_KB_UPDATE</name></member>
+    <member refid="kb__tools_8h_1a6dffd91fadc72daca40e06d00a34b254" kind="define"><name>TIMEOUT_KB_UPDATE</name></member>
+    <member refid="kb__tools_8h_1ad9bf9b6c4bef240a0227d98c852f49ec" kind="define"><name>SERVICE_KB_GET_FLUENT</name></member>
+    <member refid="kb__tools_8h_1af02cb6589b18d5496fedc9c13088f3b3" kind="define"><name>TIMEOUT_KB_GET_FLUENT</name></member>
+    <member refid="kb__tools_8h_1ae383a0070aad6f5b5ff2e0e8ecc57980" kind="define"><name>KB_ADD_KNOWLEDGE</name></member>
+    <member refid="kb__tools_8h_1a3fc8fe8eaf6f19d6e73eb762b5608590" kind="define"><name>KB_DEL_KNOWLEDGE</name></member>
+    <member refid="kb__tools_8h_1a88abd2411c29b85c73440826c34e802a" kind="define"><name>KB_KTYPE_FLUENT</name></member>
+    <member refid="kb__tools_8h_1a4fe1e5d1ed4ba3fd4237490006e06dd2" kind="define"><name>KB_KTYPE_PREDICATE</name></member>
+  </compound>
   <compound refid="robocluedo_8md" kind="file"><name>robocluedo.md</name>
   </compound>
   <compound refid="simpletest_8md" kind="file"><name>simpletest.md</name>
+  </compound>
+  <compound refid="kb__tools_8cpp" kind="file"><name>kb_tools.cpp</name>
   </compound>
   <compound refid="md__docs_catkin-notes" kind="page"><name>md__docs_catkin-notes</name>
   </compound>
@@ -266,6 +305,8 @@
   <compound refid="md_robocluedo_rosplan__docs_pddl-and-rosplan" kind="page"><name>md_robocluedo_rosplan__docs_pddl-and-rosplan</name>
   </compound>
   <compound refid="md_robocluedo_rosplan__uml_rosplan-arch" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-arch</name>
+  </compound>
+  <compound refid="md_robocluedo_rosplan__uml_rosplan-kb" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-kb</name>
   </compound>
   <compound refid="md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo" kind="page"><name>md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo</name>
   </compound>
@@ -305,6 +346,12 @@
   </compound>
   <compound refid="dir_22bf9e93c2a1eaeeae7b6be064f10539" kind="dir"><name>robocluedo_armor/include</name>
   </compound>
+  <compound refid="dir_8ac4453b272c73dc7502911cb6230c81" kind="dir"><name>robocluedo_rosplan/include</name>
+  </compound>
+  <compound refid="dir_9c71da56d12fc4e7ecdb43adaba26494" kind="dir"><name>robocluedo_rosplan/src/knowledge_base_tools</name>
+  </compound>
+  <compound refid="dir_9d33d1fe96cc85be6475dbae3b84b312" kind="dir"><name>robocluedo_rosplan/include/knowledge_base_tools</name>
+  </compound>
   <compound refid="dir_e384e4dd08a5a65e6849884196c04c98" kind="dir"><name>robocluedo_armor/logs</name>
   </compound>
   <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
@@ -323,9 +370,11 @@
   </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
   </compound>
-  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
+  <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
   </compound>
   <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
+  </compound>
+  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
   </compound>
