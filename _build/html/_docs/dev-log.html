@@ -563,9 +563,200 @@ b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6
 <li><p>compila? compila.</p></li>
 <li><p><strong>COMMIT</strong> : “set goal method”</p></li>
 </ul>
+<hr class="docutils" />
+<p>implementazione dell’interfaccia minima con la kb</p>
+<ul class="simple">
+<li><p>launch file per ROSPlan</p>
+<ul>
+<li><p>copiato dal vecchio progetto</p></li>
+<li><p>avviare si avvia senza problemi</p></li>
+</ul>
+</li>
+<li><p>già che ci sono voglio fare qualche prova sui goals</p></li>
+</ul>
+<p>problem instance:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosservice call /rosplan_problem_interface/problem_generation_server
+rostopic <span class="nb">echo</span> /rosplan_problem_interface/problem_instance -n <span class="m">1</span> -p
+</pre></div>
+</div>
+<p>ottenere l’attuale goal:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># rosservice call /rosplan_knowledge_base/state/goals &quot;predicate_name: &#39;&#39;&quot; 
+attributes: 
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: &#39;&#39;
+    instance_name: &#39;&#39;
+    attribute_name: &quot;dirty&quot;
+    values: []
+    function_value: 0.0
+    optimization: &#39;&#39;
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: &#39;&#39;
+    instance_name: &#39;&#39;
+    attribute_name: &quot;hint-collected&quot;
+    values: 
+      - 
+        key: &quot;wp&quot;
+        value: &quot;wp1&quot;
+    function_value: 0.0
+    optimization: &#39;&#39;
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: &#39;&#39;
+    instance_name: &#39;&#39;
+    attribute_name: &quot;hint-collected&quot;
+    values: 
+      - 
+        key: &quot;wp&quot;
+        value: &quot;wp3&quot;
+    function_value: 0.0
+    optimization: &#39;&#39;
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: &#39;&#39;
+    instance_name: &#39;&#39;
+    attribute_name: &quot;at-center&quot;
+    values: []
+    function_value: 0.0
+    optimization: &#39;&#39;
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+</pre></div>
+</div>
+<ul>
+<li><p>(altre prove più avanti, mi rifiuto di scrivere chissà che sulla shell)</p></li>
+<li><p><strong>NUOVO NODO</strong> : (c++) <code class="docutils literal notranslate"><span class="pre">kb_interface</span></code></p>
+<ul class="simple">
+<li><p>uml del nuovo nodo</p></li>
+<li><p>template del codice</p></li>
+<li><p>apertura dell’unico servizio del nodo</p></li>
+</ul>
+</li>
+<li><p>compila? compila.</p></li>
+<li><p>ora occupiamoci di fare il replan. l’idea sarebbe di fare un ciclo “stupido” su un tot di predicati con parametri.</p>
+<ul class="simple">
+<li><p>anzitutto, struttura degli elementi del PDDL nel codice c++</p></li>
+<li><p>scrittura del codice nel costruttore, <strong>PER ORA SOLO INIT</strong></p></li>
+<li><p>compilare compila (a runtime bisogna vedere…)</p></li>
+<li><p>replan: il ciclo stupido di cui si parlava sopra</p></li>
+</ul>
+</li>
+<li><p>alcune domande:</p>
+<ul class="simple">
+<li><p><em>è necessario resettare anche il goal?</em> penso proprio di no</p></li>
+<li><p><em>serve un servizio per scrivere il goal?</em> assolutamente sì</p></li>
+</ul>
+</li>
+<li><p>servizio per indicare il goal</p>
+<ul class="simple">
+<li><p>aggiornamento UML</p></li>
+<li><p>creazione del nuovo tipo di servizio</p></li>
+<li><p>ora, servirà definire i vari predicati (il principio è sempre quello del ciclo stupido)</p></li>
+<li><p>apertura del nuovo servizio</p></li>
+<li><p>compilare compila (ora bisogna vedere se funge)</p></li>
+</ul>
+</li>
+<li><p>un minimo testing per il nodo</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch robocluedo_rosplan load_rosplan.launch
+
+rosrun robocluedo_rosplan kb_interface
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+
+<span class="c1"># rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</span>
+
+rosservice list
+<span class="c1"># /update_goal</span>
+<span class="c1"># /replan</span>
+</pre></div>
+</div>
+<p>azione di replan:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosservice call /replan <span class="s2">&quot;{}&quot;</span> 
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+
+rosservice call /rosplan_knowledge_base/clear 
+
+rosservice call /replan <span class="s2">&quot;{}&quot;</span> 
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+
+<span class="c1"># rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</span>
+</pre></div>
+</div>
+<p>landmarks:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>rosservice call /update_goal <span class="s2">&quot;landmark: 0&quot;</span> 
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+
+rosservice call /update_goal <span class="s2">&quot;landmark: 1&quot;</span> 
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+
+rosservice call /update_goal <span class="s2">&quot;landmark: 2&quot;</span> 
+
+rosservice call /rosplan_problem_interface/problem_generation_server
+</pre></div>
+</div>
+</li>
+<li><p>direi che funziona! bene bene bene</p></li>
+<li><p><strong>COMMIT</strong> : “kb interface first version (seems stable)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
-<li><p>rivedere la topologia del problema</p></li>
+<li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
+<li><p><em>module testing</em> su kb_tools</p></li>
 <li><p>implementazione di una funzionalità per fare un clear “sicuro” della ontology (quello di rosplan funziona maluccio)</p></li>
 <li><p>spostare la documentazione di ROSplan nella nuova workspace di erl2</p></li>
 <li><p>come settare un goal via codice da ROSplan?</p></li>

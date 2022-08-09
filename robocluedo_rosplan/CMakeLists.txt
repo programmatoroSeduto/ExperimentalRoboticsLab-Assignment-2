@@ -159,6 +159,10 @@ target_link_libraries( kb_tools ${catkin_LIBRARIES} )
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/robocluedo_rosplan_node.cpp)
 
+add_executable( kb_interface src/kb_interface.cpp )
+add_dependencies( kb_interface ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( kb_interface ${catkin_LIBRARIES} kb_tools )
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use

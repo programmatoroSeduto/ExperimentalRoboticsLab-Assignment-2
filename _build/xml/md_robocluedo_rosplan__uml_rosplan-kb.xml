@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md89">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md94">
 <title>schema – knowledge base</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -54,7 +54,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md90">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md95">
 <title>schema – CLASS kb_tools</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -100,9 +100,9 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md91">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md96">
 <title>the long list of HOW TOs ...</title>
-<sect2 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md92">
+<sect2 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md97">
 <title>HOW TO read a predicate</title>
 <para>libraries to import:</para>
 <para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
@@ -264,7 +264,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_ERR(&quot;kb<sp/>tools<sp/>get<sp/>predicate&quot;);</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md93">
+<sect2 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md98">
 <title>HOW TO modify a predicate</title>
 <para>libraries:</para>
 <para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
@@ -356,7 +356,7 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md94">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md99">
 <title>dealing with goals</title>
 <para>libraries:</para>
 <para><programlisting><codeline><highlight class="normal"><sp/>{c++}</highlight></codeline>
@@ -412,6 +412,62 @@
 <codeline><highlight class="normal">//<sp/>===<sp/>EVALUATE<sp/>THE<sp/>RESULT<sp/>===<sp/>//</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">bool<sp/>success<sp/>=<sp/>kbm.response.success;</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-kb_1autotoc_md100">
+<title>schema – NODE kb_interface</title>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>robocluedo_armor<sp/>project<sp/>structure</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;KB<sp/>interface&quot;<sp/>&lt;&lt;node&gt;&gt;<sp/>as<sp/>KB_INTERFACE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">class<sp/>&quot;kb_tools&quot;<sp/>as<sp/>TOOLS<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">+<sp/>get_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">+<sp/>set_predicate(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>+<sp/>get_goal(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">+<sp/>set_goal(string<sp/>pname,<sp/>map&lt;keyvalue&gt;<sp/>args,<sp/>bool<sp/>newvalue)<sp/>:<sp/>bool</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline><highlight class="normal">KB_INTERFACE<sp/>&lt;|--<sp/>TOOLS</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/replan&quot;<sp/>as<sp/>SRV_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">KB_INTERFACE<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_msgs::Empty</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/update_goal&quot;<sp/>as<sp/>SRV_UPDATE_GOAL</highlight></codeline>
+<codeline><highlight class="normal">KB_INTERFACE<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_UPDATE_GOAL</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs::UpdateGoal</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>SERVICES</highlight></codeline>
+<codeline><highlight class="normal">/&apos;</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;srv&quot;<sp/>as<sp/>SRV_</highlight></codeline>
+<codeline><highlight class="normal">KB_INTERFACE<sp/>&quot;srv&quot;<sp/>&lt;--<sp/>&quot;cl&quot;<sp/>SRV_</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/></highlight></codeline>
+<codeline><highlight class="normal">&apos;/</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;<sp/>()<sp/>&quot;/rosplan_knowledge_base/clear&quot;<sp/>as<sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>KB<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>SRV_KB_CLEAR</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>note<sp/>on<sp/>link:<sp/>std_srvs::Empty</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/update_array&quot;<sp/>as<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline><highlight class="normal">TOOLS<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_KB_UPDATE</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeUpdateService</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/rosplan_knowledge_base/query_state&quot;<sp/>as<sp/>SRV_QUERY</highlight></codeline>
+<codeline><highlight class="normal">TOOLS<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_QUERY</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>rosplan_knowledge_msgs/KnowledgeQueryService</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting> </para>
 </sect1>
     </detaileddescription>

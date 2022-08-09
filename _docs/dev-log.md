@@ -388,6 +388,187 @@ il pddl di base è pronto. adesso, passiamo al package:
 - compila? compila.
 - **COMMIT** : "set goal method"
 
+---
+
+implementazione dell'interfaccia minima con la kb
+
+- launch file per ROSPlan
+	- copiato dal vecchio progetto
+	- avviare si avvia senza problemi
+- già che ci sono voglio fare qualche prova sui goals
+
+problem instance:
+
+```bash
+rosservice call /rosplan_problem_interface/problem_generation_server
+rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p
+
+```
+
+ottenere l'attuale goal:
+
+```text
+# rosservice call /rosplan_knowledge_base/state/goals "predicate_name: ''" 
+attributes: 
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: ''
+    instance_name: ''
+    attribute_name: "dirty"
+    values: []
+    function_value: 0.0
+    optimization: ''
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: ''
+    instance_name: ''
+    attribute_name: "hint-collected"
+    values: 
+      - 
+        key: "wp"
+        value: "wp1"
+    function_value: 0.0
+    optimization: ''
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: ''
+    instance_name: ''
+    attribute_name: "hint-collected"
+    values: 
+      - 
+        key: "wp"
+        value: "wp3"
+    function_value: 0.0
+    optimization: ''
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+  - 
+    knowledge_type: 1
+    initial_time: 
+      secs: 0
+      nsecs:         0
+    is_negative: False
+    instance_type: ''
+    instance_name: ''
+    attribute_name: "at-center"
+    values: []
+    function_value: 0.0
+    optimization: ''
+    expr: 
+      tokens: []
+    ineq: 
+      comparison_type: 0
+      LHS: 
+        tokens: []
+      RHS: 
+        tokens: []
+      grounded: False
+
+```
+
+- (altre prove più avanti, mi rifiuto di scrivere chissà che sulla shell)
+- **NUOVO NODO** : (c++) `kb_interface`
+	- uml del nuovo nodo
+	- template del codice
+	- apertura dell'unico servizio del nodo
+- compila? compila.
+- ora occupiamoci di fare il replan. l'idea sarebbe di fare un ciclo "stupido" su un tot di predicati con parametri.
+	- anzitutto, struttura degli elementi del PDDL nel codice c++
+	- scrittura del codice nel costruttore, **PER ORA SOLO INIT**
+	- compilare compila (a runtime bisogna vedere...)
+	- replan: il ciclo stupido di cui si parlava sopra
+- alcune domande:
+	- *è necessario resettare anche il goal?* penso proprio di no
+	- *serve un servizio per scrivere il goal?* assolutamente sì
+- servizio per indicare il goal
+	- aggiornamento UML
+	- creazione del nuovo tipo di servizio
+	- ora, servirà definire i vari predicati (il principio è sempre quello del ciclo stupido)
+	- apertura del nuovo servizio
+	- compilare compila (ora bisogna vedere se funge)
+- un minimo testing per il nodo
+	```bash
+	roslaunch robocluedo_rosplan load_rosplan.launch
+	
+	rosrun robocluedo_rosplan kb_interface
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	# rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p
+	
+	rosservice list
+	# /update_goal
+	# /replan
+	```
+	azione di replan:
+	```bash
+	rosservice call /replan "{}" 
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	rosservice call /rosplan_knowledge_base/clear 
+	
+	rosservice call /replan "{}" 
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	# rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p
+	```
+	landmarks:
+	```bash
+	rosservice call /update_goal "landmark: 0" 
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	rosservice call /update_goal "landmark: 1" 
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	rosservice call /update_goal "landmark: 2" 
+	
+	rosservice call /rosplan_problem_interface/problem_generation_server
+	
+	```
+- direi che funziona! bene bene bene
+- **COMMIT** : "kb interface first version (seems stable)"
+
 
 
 	
@@ -398,7 +579,8 @@ il pddl di base è pronto. adesso, passiamo al package:
 
 TODO
 
-- rivedere la topologia del problema
+- aggiungere le pagine di documentazione del codice di Sphinx!
+- *module testing* su kb_tools
 - implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)
 - spostare la documentazione di ROSplan nella nuova workspace di erl2
 - come settare un goal via codice da ROSplan?

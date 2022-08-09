@@ -9,6 +9,7 @@
     <includes local="yes">rosplan_knowledge_msgs/KnowledgeUpdateService.h</includes>
     <includes local="no">string</includes>
     <includes local="no">map</includes>
+    <includedby refid="kb__interface_8cpp" local="yes">robocluedo_rosplan/src/kb_interface.cpp</includedby>
     <includedby refid="kb__tools_8cpp" local="yes">robocluedo_rosplan/src/knowledge_base_tools/kb_tools.cpp</includedby>
     <incdepgraph>
       <node id="1">
@@ -57,10 +58,16 @@
         <link refid="kb__tools_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="3">
         <label>robocluedo_rosplan/src/knowledge_base_tools/kb_tools.cpp</label>
         <link refid="kb__tools_8cpp"/>
+      </node>
+      <node id="2">
+        <label>robocluedo_rosplan/src/kb_interface.cpp</label>
+        <link refid="kb__interface_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classkb__tools" prot="public">kb_tools</innerclass>
@@ -133,7 +140,7 @@
       </memberdef>
       <memberdef kind="define" id="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" prot="public" static="no">
         <name>SERVICE_KB_UPDATE</name>
-        <initializer>&quot;/rosplan_knowledge_base/<ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>&quot;</initializer>
+        <initializer>&quot;/rosplan_knowledge_base/update&quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

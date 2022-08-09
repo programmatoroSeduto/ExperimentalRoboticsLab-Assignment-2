@@ -268,7 +268,7 @@
 <listitem><para>le macro per il log non mi piacciono molto...</para>
 <para>```c++ #define NODE_NAME &quot;kb_tools&quot;</para>
 <para>#ifndef <bold>DEBUG_MACROS</bold> #define <bold>DEBUG_MACROS</bold></para>
-<para>#define <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( str )</ref> &quot;[&quot; &lt;&lt; str &lt;&lt; &quot;] &quot; #define OUTLABEL <ref refid="test__armor_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( NODE_NAME )</ref> #define <ref refid="dev-log_8md_8txt_1a4c242fea9a3b706e637163f8b0eed95c" kindref="member">TLOG( msg )</ref> ROS_INFO_STREAM( OUTLABEL &lt;&lt; msg ) #define <ref refid="dev-log_8md_8txt_1a723a84b8e4828b3ba1ad2ccf3e787643" kindref="member">TWARN( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;WARNING: &quot; &lt;&lt; msg ) #define <ref refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kindref="member">TERR( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;ERROR: &quot; &lt;&lt; msg )</para>
+<para>#define <ref refid="kb__interface_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( str )</ref> &quot;[&quot; &lt;&lt; str &lt;&lt; &quot;] &quot; #define OUTLABEL <ref refid="kb__interface_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE( NODE_NAME )</ref> #define <ref refid="kb__interface_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" kindref="member">TLOG( msg )</ref> ROS_INFO_STREAM( OUTLABEL &lt;&lt; msg ) #define <ref refid="kb__interface_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" kindref="member">TWARN( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;WARNING: &quot; &lt;&lt; msg ) #define <ref refid="kb__interface_8cpp_1a59b71c836719259a2e9b1428ec35504c" kindref="member">TERR( msg )</ref> ROS_WARN_STREAM( OUTLABEL &lt;&lt; &quot;ERROR: &quot; &lt;&lt; msg )</para>
 <para>#endif ```</para>
 <para>non mi piacciono perchè fanno spuntare troppi warning inutili...</para>
 </listitem><listitem><para>via la db mode!<itemizedlist>
@@ -300,9 +300,183 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;set goal method&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>implementazione dell&apos;interfaccia minima con la kb</para>
+<para><itemizedlist>
+<listitem><para>launch file per ROSPlan<itemizedlist>
+<listitem><para>copiato dal vecchio progetto</para>
+</listitem><listitem><para>avviare si avvia senza problemi</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>già che ci sono voglio fare qualche prova sui goals</para>
+</listitem></itemizedlist>
+</para>
+<para>problem instance:</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">rosservice<sp/>call<sp/>/rosplan_problem_interface/problem_generation_server</highlight></codeline>
+<codeline><highlight class="normal">rostopic<sp/>echo<sp/>/rosplan_problem_interface/problem_instance<sp/>-n<sp/>1<sp/>-p</highlight></codeline>
+</programlisting></para>
+<para>ottenere l&apos;attuale goal:</para>
+<para><programlisting filename=".text"><codeline><highlight class="normal">#<sp/>rosservice<sp/>call<sp/>/rosplan_knowledge_base/state/goals<sp/>&quot;predicate_name:<sp/>&apos;&apos;&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">attributes:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>knowledge_type:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initial_time:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>secs:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nsecs:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>is_negative:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_type:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_name:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>attribute_name:<sp/>&quot;dirty&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>values:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>function_value:<sp/>0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>optimization:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>expr:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ineq:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>comparison_type:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grounded:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>knowledge_type:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initial_time:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>secs:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nsecs:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>is_negative:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_type:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_name:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>attribute_name:<sp/>&quot;hint-collected&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>values:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key:<sp/>&quot;wp&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value:<sp/>&quot;wp1&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>function_value:<sp/>0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>optimization:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>expr:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ineq:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>comparison_type:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grounded:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>knowledge_type:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initial_time:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>secs:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nsecs:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>is_negative:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_type:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_name:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>attribute_name:<sp/>&quot;hint-collected&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>values:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>key:<sp/>&quot;wp&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value:<sp/>&quot;wp3&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>function_value:<sp/>0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>optimization:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>expr:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ineq:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>comparison_type:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grounded:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>knowledge_type:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>initial_time:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>secs:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>nsecs:<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>is_negative:<sp/>False</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_type:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>instance_name:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>attribute_name:<sp/>&quot;at-center&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>values:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>function_value:<sp/>0.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>optimization:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>expr:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ineq:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>comparison_type:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>LHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>RHS:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tokens:<sp/>[]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>grounded:<sp/>False</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>(altre prove più avanti, mi rifiuto di scrivere chissà che sulla shell)</para>
+</listitem><listitem><para><bold>NUOVO NODO</bold> : (c++) <computeroutput><ref refid="classkb__interface" kindref="compound">kb_interface</ref></computeroutput><itemizedlist>
+<listitem><para>uml del nuovo nodo</para>
+</listitem><listitem><para>template del codice</para>
+</listitem><listitem><para>apertura dell&apos;unico servizio del nodo</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem><listitem><para>ora occupiamoci di fare il replan. l&apos;idea sarebbe di fare un ciclo &quot;stupido&quot; su un tot di predicati con parametri.<itemizedlist>
+<listitem><para>anzitutto, struttura degli elementi del PDDL nel codice c++</para>
+</listitem><listitem><para>scrittura del codice nel costruttore, <bold>PER ORA SOLO INIT</bold></para>
+</listitem><listitem><para>compilare compila (a runtime bisogna vedere...)</para>
+</listitem><listitem><para>replan: il ciclo stupido di cui si parlava sopra</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>alcune domande:<itemizedlist>
+<listitem><para><emphasis>è necessario resettare anche il goal?</emphasis> penso proprio di no</para>
+</listitem><listitem><para><emphasis>serve un servizio per scrivere il goal?</emphasis> assolutamente sì</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>servizio per indicare il goal<itemizedlist>
+<listitem><para>aggiornamento UML</para>
+</listitem><listitem><para>creazione del nuovo tipo di servizio</para>
+</listitem><listitem><para>ora, servirà definire i vari predicati (il principio è sempre quello del ciclo stupido)</para>
+</listitem><listitem><para>apertura del nuovo servizio</para>
+</listitem><listitem><para>compilare compila (ora bisogna vedere se funge)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>un minimo testing per il nodo ```bash roslaunch robocluedo_rosplan load_rosplan.launch</para>
+<para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md31">
+<title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
+<para>rosservice list </para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md32">
+<title>/update_goal</title>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md33">
+<title>/replan</title>
+<para>``` azione di replan: ```bash rosservice call /replan &quot;{}&quot;</para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+<para>rosservice call /rosplan_knowledge_base/clear</para>
+<para>rosservice call /replan &quot;{}&quot;</para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md34">
+<title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
+<para>``` landmarks: ```bash rosservice call /update_goal &quot;landmark: 0&quot;</para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+<para>rosservice call /update_goal &quot;landmark: 1&quot;</para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+<para>rosservice call /update_goal &quot;landmark: 2&quot;</para>
+<para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
+<para>```<itemizedlist>
+<listitem><para>direi che funziona! bene bene bene</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;kb interface first version (seems stable)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
-<listitem><para>rivedere la topologia del problema</para>
+<listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
+</listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
 </listitem><listitem><para>implementazione di una funzionalità per fare un clear &quot;sicuro&quot; della ontology (quello di rosplan funziona maluccio)</para>
 </listitem><listitem><para>spostare la documentazione di ROSplan nella nuova workspace di erl2</para>
 </listitem><listitem><para>come settare un goal via codice da ROSplan?</para>

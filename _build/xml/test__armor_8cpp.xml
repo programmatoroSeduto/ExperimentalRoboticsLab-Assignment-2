@@ -189,7 +189,7 @@
       </memberdef>
       <memberdef kind="define" id="test__armor_8cpp_1a186fe566fd11435e6aa34702dd79cac1" prot="public" static="no">
         <name>OUTLOG</name>
-        <initializer>std::cout &lt;&lt; <ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref> &lt;&lt; &quot; &quot;</initializer>
+        <initializer>std::cout &lt;&lt; <ref refid="kb__interface_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref> &lt;&lt; &quot; &quot;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

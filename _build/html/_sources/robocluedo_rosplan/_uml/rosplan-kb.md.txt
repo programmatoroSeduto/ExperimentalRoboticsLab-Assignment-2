@@ -451,3 +451,59 @@ bool success = kbm.response.success;
 
 ```
 
+## schema -- NODE kb_interface
+
+```{uml} 
+@startuml
+
+''' INFOS
+title robocluedo_armor project structure
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+component "KB interface" <<node>> as KB_INTERFACE
+
+class "kb_tools" as TOOLS {
++ get_predicate(string pname, map<keyvalue> args) : bool
++ set_predicate(string pname, map<keyvalue> args, bool newvalue) : bool
+' + get_goal(string pname, map<keyvalue> args, bool newvalue) : bool
++ set_goal(string pname, map<keyvalue> args, bool newvalue) : bool
+}
+KB_INTERFACE <|-- TOOLS
+
+() "/replan" as SRV_REPLAN
+KB_INTERFACE "srv" --> SRV_REPLAN
+note on link: std_msgs::Empty
+
+() "/update_goal" as SRV_UPDATE_GOAL
+KB_INTERFACE "srv" --> SRV_UPDATE_GOAL
+note on link: robocluedo_rosplan_msgs::UpdateGoal
+
+
+''' SERVICES
+/'
+() "srv" as SRV_
+KB_INTERFACE "srv" <-- "cl" SRV_
+note on link: 
+'/
+
+' () "/rosplan_knowledge_base/clear" as SRV_KB_CLEAR
+' KB "srv" --> "cl" SRV_KB_CLEAR
+' note on link: std_srvs::Empty
+
+() "/rosplan_knowledge_base/update_array" as SRV_KB_UPDATE
+TOOLS "cl" <-- SRV_KB_UPDATE
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() "/rosplan_knowledge_base/query_state" as SRV_QUERY
+TOOLS "cl" <-- SRV_QUERY
+note on link: rosplan_knowledge_msgs/KnowledgeQueryService
+
+
+''' CONNECTIONS
+' ...
+
+@enduml
+```

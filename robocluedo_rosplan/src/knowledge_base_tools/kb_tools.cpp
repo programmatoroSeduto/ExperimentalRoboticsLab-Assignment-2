@@ -215,7 +215,7 @@ rosplan_knowledge_msgs::KnowledgeUpdateService kb_tools::request_update(
 {
 	rosplan_knowledge_msgs::KnowledgeUpdateService kbm;
 	
-	if(is_goal)
+	if(!is_goal)
 		kbm.request.update_type = ( value ? KB_ADD_KNOWLEDGE : KB_DEL_KNOWLEDGE );
 	else
 		kbm.request.update_type = ( value ? KB_ADD_GOAL : KB_DEL_GOAL );

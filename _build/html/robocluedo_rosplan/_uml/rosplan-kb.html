@@ -534,6 +534,65 @@ bool success
 </pre></div>
 </div>
 </div>
+<div class="section" id="schema-node-kb-interface">
+<h2>schema – NODE kb_interface<a class="headerlink" href="#schema-node-kb-interface" title="Permalink to this heading"></a></h2>
+<p class="plantuml">
+<object data="../../_images/plantuml-8796080bda4485b62925cb7170351c6947514542.svg" type="image/svg+xml" style="width:1182px;height:623px;background:#FFFFFF;">
+<img src="../../_images/plantuml-8796080bda4485b62925cb7170351c6947514542.png" alt="&#64;startuml
+
+''' INFOS
+title robocluedo_armor project structure
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+component &quot;KB interface&quot; &lt;&lt;node&gt;&gt; as KB_INTERFACE
+
+class &quot;kb_tools&quot; as TOOLS {
++ get_predicate(string pname, map&lt;keyvalue&gt; args) : bool
++ set_predicate(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
+' + get_goal(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
++ set_goal(string pname, map&lt;keyvalue&gt; args, bool newvalue) : bool
+}
+KB_INTERFACE &lt;|-- TOOLS
+
+() &quot;/replan&quot; as SRV_REPLAN
+KB_INTERFACE &quot;srv&quot; --&gt; SRV_REPLAN
+note on link: std_msgs::Empty
+
+() &quot;/update_goal&quot; as SRV_UPDATE_GOAL
+KB_INTERFACE &quot;srv&quot; --&gt; SRV_UPDATE_GOAL
+note on link: robocluedo_rosplan_msgs::UpdateGoal
+
+
+''' SERVICES
+/'
+() &quot;srv&quot; as SRV_
+KB_INTERFACE &quot;srv&quot; &lt;-- &quot;cl&quot; SRV_
+note on link: 
+'/
+
+' () &quot;/rosplan_knowledge_base/clear&quot; as SRV_KB_CLEAR
+' KB &quot;srv&quot; --&gt; &quot;cl&quot; SRV_KB_CLEAR
+' note on link: std_srvs::Empty
+
+() &quot;/rosplan_knowledge_base/update_array&quot; as SRV_KB_UPDATE
+TOOLS &quot;cl&quot; &lt;-- SRV_KB_UPDATE
+note on link: rosplan_knowledge_msgs/KnowledgeUpdateService
+
+() &quot;/rosplan_knowledge_base/query_state&quot; as SRV_QUERY
+TOOLS &quot;cl&quot; &lt;-- SRV_QUERY
+note on link: rosplan_knowledge_msgs/KnowledgeQueryService
+
+
+''' CONNECTIONS
+' ...
+
+&#64;enduml"/>
+
+</object></p>
+</div>
 </div>
 
 
