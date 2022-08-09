@@ -13,29 +13,35 @@
 <codeline><highlight class="normal">```{uml}<sp/></highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">title<sp/>robocluedo_armor<sp/>project<sp/>structure</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>package<sp/>robocluedo_armor</highlight></codeline>
 <codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">class<sp/>&quot;armor_tools&quot;<sp/>as<sp/>ARMOR1<sp/>{</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">package<sp/>&quot;aRMOR&quot;<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>database<sp/>&quot;knowledge<sp/>base&quot;<sp/>&lt;&lt;aRMOR&gt;&gt;<sp/>as<sp/>A_KB</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>component<sp/>&quot;services&quot;<sp/>&lt;&lt;aRMOR&gt;&gt;<sp/>as<sp/>A_SRV</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>A_KB<sp/>-right-<sp/>A_SRV</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">class<sp/>&quot;armor_cluedo&quot;<sp/>as<sp/>ARMOR2<sp/>{</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">package<sp/>&quot;aRMOR<sp/>tools&quot;<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>&quot;aRMOR<sp/>tools&quot;<sp/>as<sp/>A_TOOLS<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>&quot;aRMOR<sp/>cluedo&quot;<sp/>as<sp/>A_CLUEDO<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>A_TOOLS<sp/>-up-|&gt;<sp/>A_CLUEDO</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>component<sp/>&quot;aRMOR<sp/>interface&quot;<sp/>&lt;&lt;ROS<sp/>node&gt;&gt;<sp/>as<sp/>A_NODE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>A_CLUEDO<sp/>-up-|&gt;<sp/>A_NODE</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;armor_interface&quot;<sp/>as<sp/>NODE<sp/>{</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;add<sp/>hint&quot;<sp/>as<sp/>SRV_ADD</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;mark<sp/>wrong<sp/>hint&quot;<sp/>as<sp/>SRV_DELETE</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;check<sp/>hints&quot;<sp/>as<sp/>SRV_GET</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">database<sp/>&quot;armor&quot;<sp/>as<sp/>ARMOR<sp/>{</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ARMOR1<sp/>-up-|&gt;<sp/>ARMOR2<sp/>:<sp/>&quot;<sp/><sp/><sp/>&quot;</highlight></codeline>
-<codeline><highlight class="normal">ARMOR2<sp/>--&gt;<sp/>ARMOR1<sp/>:<sp/>&quot;<sp/><sp/><sp/>&quot;</highlight></codeline>
-<codeline><highlight class="normal">ARMOR2<sp/>-up-|&gt;<sp/>NODE<sp/>:<sp/>&quot;inherits...&quot;</highlight></codeline>
-<codeline><highlight class="normal">ARMOR1<sp/>&quot;cl&quot;<sp/>-right-&gt;<sp/>&quot;srv&quot;<sp/>ARMOR<sp/>:<sp/>&quot;as<sp/>client&quot;</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
+<codeline><highlight class="normal">A_SRV<sp/>-right-&gt;<sp/>A_TOOLS</highlight></codeline>
+<codeline><highlight class="normal">A_NODE<sp/>--&gt;<sp/>SRV_ADD</highlight></codeline>
+<codeline><highlight class="normal">A_NODE<sp/>--&gt;<sp/>SRV_DELETE</highlight></codeline>
+<codeline><highlight class="normal">A_NODE<sp/>--&gt;<sp/>SRV_GET</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>

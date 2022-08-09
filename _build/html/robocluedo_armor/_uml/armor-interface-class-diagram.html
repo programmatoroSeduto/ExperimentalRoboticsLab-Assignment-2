@@ -52,6 +52,7 @@
               <p class="caption" role="heading"><span class="caption-text">README</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../README.html">the project main README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_uml/arch.html">UML overall arch</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
 <ul class="current">
@@ -110,32 +111,38 @@
   <div class="section" id="uml-class-robocluedo-armor">
 <h1>UML CLASS – robocluedo armor<a class="headerlink" href="#uml-class-robocluedo-armor" title="Permalink to this heading"></a></h1>
 <p class="plantuml">
-<object data="../../_images/plantuml-3d68addeb6e727b3a60ad0033703c80bf75577fa.svg" type="image/svg+xml" style="width:351px;height:444px;background:#FFFFFF;">
-<img src="../../_images/plantuml-3d68addeb6e727b3a60ad0033703c80bf75577fa.png" alt="&#64;startuml
+<object data="../../_images/plantuml-25775b236e7a6746401f5a9498d2fcb4ebd03978.svg" type="image/svg+xml" style="width:995px;height:540px;background:#FFFFFF;">
+<img src="../../_images/plantuml-25775b236e7a6746401f5a9498d2fcb4ebd03978.png" alt="&#64;startuml
 
-title robocluedo_armor project structure
+''' INFOS
+title package robocluedo_armor
 skinparam Padding 8
+allow_mixing
 
-class &quot;armor_tools&quot; as ARMOR1 {
-
+''' COMPONENTS
+package &quot;aRMOR&quot; {
+	database &quot;knowledge base&quot; &lt;&lt;aRMOR&gt;&gt; as A_KB
+	component &quot;services&quot; &lt;&lt;aRMOR&gt;&gt; as A_SRV
+	A_KB -right- A_SRV
 }
 
-class &quot;armor_cluedo&quot; as ARMOR2 {
-
+package &quot;aRMOR tools&quot; {
+	class &quot;aRMOR tools&quot; as A_TOOLS 
+	class &quot;aRMOR cluedo&quot; as A_CLUEDO 
+	A_TOOLS -up-|&gt; A_CLUEDO
+	component &quot;aRMOR interface&quot; &lt;&lt;ROS node&gt;&gt; as A_NODE
+	A_CLUEDO -up-|&gt; A_NODE
 }
 
-component &quot;armor_interface&quot; as NODE {
+() &quot;add hint&quot; as SRV_ADD
+() &quot;mark wrong hint&quot; as SRV_DELETE
+() &quot;check hints&quot; as SRV_GET
 
-}
-
-database &quot;armor&quot; as ARMOR {
-
-}
-
-ARMOR1 -up-|&gt; ARMOR2 : &quot;   &quot;
-ARMOR2 --&gt; ARMOR1 : &quot;   &quot;
-ARMOR2 -up-|&gt; NODE : &quot;inherits...&quot;
-ARMOR1 &quot;cl&quot; -right-&gt; &quot;srv&quot; ARMOR : &quot;as client&quot;
+''' CONNECTIONS
+A_SRV -right-&gt; A_TOOLS
+A_NODE --&gt; SRV_ADD
+A_NODE --&gt; SRV_DELETE
+A_NODE --&gt; SRV_GET
 
 &#64;enduml"/>
 

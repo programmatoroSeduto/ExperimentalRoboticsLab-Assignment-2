@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1150px" preserveAspectRatio="none" style="width:639px;height:1150px;background:#FFFFFF;" version="1.1" viewBox="0 0 639 1150" width="639px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="180" x="222.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="154" x="235.5" y="30.9951">robocluedo rosplan</text><!--MD5=[19e394d6c1aed6b811eba8f457712ea3]
+cluster robocluedo rosplan--><g id="cluster_robocluedo rosplan"><path d="M8.5,59.2969 L179.5,59.2969 A3.75,3.75 0 0 1 182,61.7969 L189,97.5938 L629.5,97.5938 A2.5,2.5 0 0 1 632,100.0938 L632,1140.7969 A2.5,2.5 0 0 1 629.5,1143.2969 L8.5,1143.2969 A2.5,2.5 0 0 1 6,1140.7969 L6,61.7969 A2.5,2.5 0 0 1 8.5,59.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="189" y1="97.5938" y2="97.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="154" x="18" y="82.292">robocluedo rosplan</text></g><!--MD5=[214036b6393beeef3a45e6f3b8ce1c8f]
+cluster ROSplan--><g id="cluster_ROSplan"><path d="M32.5,195.2969 L114.5,195.2969 A3.75,3.75 0 0 1 117,197.7969 L124,233.5938 L420.5,233.5938 A2.5,2.5 0 0 1 423,236.0938 L423,819.7969 A2.5,2.5 0 0 1 420.5,822.2969 L32.5,822.2969 A2.5,2.5 0 0 1 30,819.7969 L30,197.7969 A2.5,2.5 0 0 1 32.5,195.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="30" x2="124" y1="233.5938" y2="233.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="65" x="42" y="218.292">ROSplan</text></g><!--MD5=[c6f484c93ca94aa050b568abff685dd1]
+cluster actions dispatch--><g id="cluster_actions dispatch"><path d="M449.5,676.7969 L595.5,676.7969 A3.75,3.75 0 0 1 598,679.2969 L605,715.0938 L605.5,715.0938 A2.5,2.5 0 0 1 608,717.5938 L608,803.2969 A2.5,2.5 0 0 1 605.5,805.7969 L449.5,805.7969 A2.5,2.5 0 0 1 447,803.2969 L447,679.2969 A2.5,2.5 0 0 1 449.5,676.7969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="447" x2="605" y1="715.0938" y2="715.0938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="129" x="459" y="699.792">actions dispatch</text></g><!--MD5=[c32029475a673329c3ad8c466c13ff13]
+entity PDDL_DOM--><g id="elem_PDDL_DOM"><path d="M175.5,112.7969 L175.5,176.3906 A2.5,2.5 0 0 0 178,178.8906 L260,178.8906 A2.5,2.5 0 0 0 262.5,176.3906 L262.5,120.2969 L252.5,110.2969 L178,110.2969 A2.5,2.5 0 0 0 175.5,112.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M252.5,110.2969 L252.5,117.7969 A2.5,2.5 0 0 0 255,120.2969 L262.5,120.2969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="193.5" y="141.292">pddl</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="193.5" y="157.5889">domain</text></g><!--MD5=[032fa86fe1238ac49b7d1f0d93309a4a]
+entity PDDL_PROB--><g id="elem_PDDL_PROB"><path d="M47.5,112.7969 L47.5,176.3906 A2.5,2.5 0 0 0 50,178.8906 L138,178.8906 A2.5,2.5 0 0 0 140.5,176.3906 L140.5,120.2969 L130.5,110.2969 L50,110.2969 A2.5,2.5 0 0 0 47.5,112.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M130.5,110.2969 L130.5,117.7969 A2.5,2.5 0 0 0 133,120.2969 L140.5,120.2969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="65.5" y="141.292">pddl</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="65.5" y="157.5889">problem</text></g><!--MD5=[f538cd5cfea9b9f400fdca51e86c13d1]
+entity FEEDBACK--><g id="elem_FEEDBACK"><rect fill="#F1F1F1" height="78.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="120" x="459" y="882.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="559" y="887.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="557" y="889.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="557" y="893.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="64" x="482" y="923.292">feedback</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="482" y="939.5889">manager</text></g><!--MD5=[4a6774d2d636828099b9e534edd85988]
+entity TOPIC_FEEDBACK--><g id="elem_TOPIC_FEEDBACK"><ellipse cx="529" cy="1082.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="102" x="478" y="1120.292">feedback topic</text></g><!--MD5=[d31e9ee264fe380d83edc82a54b843cf]
+entity MANAGER--><g id="elem_MANAGER"><rect fill="#F1F1F1" height="110.8906" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="175" x="238.5" y="866.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="393.5" y="871.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="391.5" y="873.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="391.5" y="877.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="54" x="294" y="907.292">«node»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="261.5" y="939.5889">ROSPlan</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="119" x="261.5" y="955.8857">pipeline manager</text></g><!--MD5=[344489d3fd119170a3238c0c85f4da92]
+entity SRV_MANAGER--><g id="elem_SRV_MANAGER"><ellipse cx="325" cy="1082.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="172" x="239" y="1120.292">service pipeline manager</text></g><!--MD5=[3287247eb5ef114031405aae8a2c204e]
+entity KB--><g id="elem_KB"><path d="M46,256.7969 C46,246.7969 121,246.7969 121,246.7969 C121,246.7969 196,246.7969 196,256.7969 L196,330.3906 C196,340.3906 121,340.3906 121,340.3906 C121,340.3906 46,340.3906 46,330.3906 L46,256.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M46,256.7969 C46,266.7969 121,266.7969 121,266.7969 C121,266.7969 196,266.7969 196,256.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="82.5" y="291.792">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="114" x="64" y="324.0889">knowledge base</text></g><!--MD5=[e79c8e6bb3a9323b12a58d750a988a49]
+entity PROBLEM--><g id="elem_PROBLEM"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="177" x="230.5" y="246.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="387.5" y="251.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="385.5" y="253.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="385.5" y="257.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="275.5" y="287.292">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="121" x="253.5" y="319.5889">problem interface</text></g><!--MD5=[02ea8b2314e0d0d23d286ba4611632a1]
+entity PLAN--><g id="elem_PLAN"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="179" x="192.5" y="401.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="351.5" y="406.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="349.5" y="408.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="349.5" y="412.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="238.5" y="442.292">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="123" x="215.5" y="474.5889">planning interface</text></g><!--MD5=[014bc5ca5401618d6f7935a2c849fb3a]
+entity PARSE--><g id="elem_PARSE"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="171" x="155.5" y="556.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="306.5" y="561.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="304.5" y="563.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="304.5" y="567.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="197.5" y="597.292">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="115" x="178.5" y="629.5889">parsing interface</text></g><!--MD5=[82817458b664c54c40293f09e7dd8da8]
+entity DISPATCH--><g id="elem_DISPATCH"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="162" x="128" y="711.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="270" y="716.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="268" y="718.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="268" y="722.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="77" x="165.5" y="752.292">«ROSPlan»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="106" x="151" y="784.5889">plan dispatcher</text></g><!--MD5=[19a4372ec6384714f7128c4c3231e834]
+entity ACTION--><g id="elem_ACTION"><rect fill="#F1F1F1" height="62.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="98" x="468" y="727.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="546" y="732.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="544" y="734.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="544" y="738.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="491" y="768.792">action</text></g><!--MD5=[bb9595c6d383560a9747c5ee557e7288]
+link KB to PROBLEM--><g id="link_KB_PROBLEM"><path d="M196.02,293.7969 C205.7,293.7969 215.39,293.7969 225.07,293.7969 " fill="none" id="KB-to-PROBLEM" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="230.13,293.7969,221.13,289.7969,225.13,293.7969,221.13,297.7969,230.13,293.7969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a5428df31876122ec0a957eaa7670c51]
+link PROBLEM to PLAN--><g id="link_PROBLEM_PLAN"><path d="M307.7,341.5369 C303.52,358.8069 298.76,378.4769 294.49,396.1569 " fill="none" id="PROBLEM-to-PLAN" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="293.3,401.0869,299.2986,393.2755,294.4723,396.2262,291.5216,391.3999,293.3,401.0869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[aa8815982f1a66de47d205f89c42f108]
+link PLAN to PARSE--><g id="link_PLAN_PARSE"><path d="M269.48,496.5369 C264.85,513.8069 259.58,533.4769 254.84,551.1569 " fill="none" id="PLAN-to-PARSE" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="253.52,556.0869,259.7222,548.4362,254.8199,551.2588,251.9973,546.3564,253.52,556.0869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1430abca236160ecee2090fced0690c9]
+link KB to PARSE--><g id="link_KB_PARSE"><path d="M129.34,340.8969 C137.81,382.5869 152.85,445.1069 175,496.2969 C183.9,516.8569 196.32,538.1169 207.99,556.1769 " fill="none" id="KB-PARSE" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[38226559f342952f54409100cdf2b7fa]
+link PARSE to DISPATCH--><g id="link_PARSE_DISPATCH"><path d="M231.23,651.5369 C227.61,668.8069 223.5,688.4769 219.8,706.1569 " fill="none" id="PARSE-to-DISPATCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="218.77,711.0869,224.5336,703.1006,219.7972,706.1935,216.7042,701.4571,218.77,711.0869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cd597169a586affe267fac75c2503e56]
+link DISPATCH to KB--><g id="link_DISPATCH_KB"><path d="M169.96,711.1369 C157.42,693.4869 144.98,672.5069 138,651.2969 C102.9,544.6169 108.98,410.2869 115.52,340.9469 " fill="none" id="DISPATCH-KB" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[80f77982fa39c7cbdf9f1b50cbac05b0]
+link DISPATCH to ACTION--><g id="link_DISPATCH_ACTION"><path d="M290.21,758.7969 C347.68,758.7969 405.16,758.7969 462.63,758.7969 " fill="none" id="DISPATCH-to-ACTION" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="467.83,758.7969,458.83,754.7969,462.83,758.7969,458.83,762.7969,467.83,758.7969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[62991ef91f99bee3fb9d9e2d4fe55ada]
+link PDDL_DOM to KB--><g id="link_PDDL_DOM_KB"><path d="M196.52,179.5169 C184.12,198.1169 168.48,221.5769 154.65,242.3169 " fill="none" id="PDDL_DOM-to-KB" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="151.73,246.6969,160.0505,241.4272,154.5035,242.5366,153.3941,236.9896,151.73,246.6969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[717701e14dda4d2e6deac24fc3b4f732]
+link PDDL_PROB to KB--><g id="link_PDDL_PROB_KB"><path d="M100.19,179.5169 C103.57,197.8869 107.81,220.9869 111.58,241.5369 " fill="none" id="PDDL_PROB-to-KB" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="112.53,246.6969,114.8433,237.1235,111.6293,241.7787,106.9741,238.5647,112.53,246.6969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[16d15e542ce838403090355992ed061e]
+link ACTION to FEEDBACK--><g id="link_ACTION_FEEDBACK"><path d="M517.38,790.0769 C517.68,814.6069 518.11,849.4869 518.46,877.0469 " fill="none" id="ACTION-to-FEEDBACK" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="518.52,882.1069,522.391,873.0507,518.4486,877.1074,514.3918,873.1649,518.52,882.1069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0d91df645df5ea738140d6024ee71c06]
+link FEEDBACK to TOPIC_FEEDBACK--><g id="link_FEEDBACK_TOPIC_FEEDBACK"><path d="M521.45,961.5669 C523.63,996.1869 526.7,1044.8869 528.16,1068.0569 " fill="none" id="FEEDBACK-to-TOPIC_FEEDBACK" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="528.48,1073.1169,531.9075,1063.8837,528.1663,1068.1267,523.9233,1064.3855,528.48,1073.1169" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[1731a2b834dd093c2be5fedcecd3ae43]
+link PROBLEM to MANAGER--><g id="link_PROBLEM_MANAGER"><path d="M358.05,341.3669 C370.47,359.0069 382.63,379.9969 389,401.2969 C413.44,482.9569 406.35,633.3569 361,830.2969 C358.66,840.4569 355.41,850.9869 351.82,861.1269 " fill="none" id="PROBLEM-to-MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="350.03,866.0669,356.8527,858.964,351.7307,861.365,349.3297,856.2429,350.03,866.0669" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[bfa20aa4d3564532537a8b8a0c8c78a5]
+link PLAN to MANAGER--><g id="link_PLAN_MANAGER"><path d="M316.31,496.4369 C327.42,514.2469 338.34,535.3269 344,556.2969 C372.17,660.6869 354.79,787.8769 340.06,861.0769 " fill="none" id="PLAN-to-MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="339.01,866.2569,344.7289,858.2385,340.0098,861.3579,336.8904,856.6388,339.01,866.2569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9d26c7df7500e0a5c4d3642686c35ae3]
+link PARSE to MANAGER--><g id="link_PARSE_MANAGER"><path d="M297.15,651.3769 C301.39,656.8569 305.12,662.6869 308,668.7969 C336.63,729.6369 337.42,807.9869 333.46,861.0469 " fill="none" id="PARSE-to-MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="333.06,866.1069,337.7689,857.4567,333.461,861.123,329.7947,856.8151,333.06,866.1069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[44304d84a77b9c12313e580eb8f02140]
+link DISPATCH to MANAGER--><g id="link_DISPATCH_MANAGER"><path d="M242.84,806.3669 C255.45,823.7169 269.94,843.6469 283.24,861.9669 " fill="none" id="DISPATCH-to-MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="286.24,866.0869,284.1996,856.4517,283.3068,862.0376,277.7209,861.1448,286.24,866.0869" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[eae5336970671b01d545cadf53e4732d]
+link MANAGER to SRV_MANAGER--><g id="link_MANAGER_SRV_MANAGER"><path d="M325.66,977.3469 C325.45,1009.7569 325.21,1048.2969 325.08,1068.0969 " fill="none" id="MANAGER-to-SRV_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="325.05,1073.1669,329.1014,1064.1899,325.0786,1068.167,321.1015,1064.1442,325.05,1073.1669" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[7173cfcc59acd111f8d788aaa4ba9d20]
+@startuml
+
+''' DIAGRAM INFOS
+title "robocluedo rosplan"
+skinparam Padding 8
+
+
+''' DIAGRAM ELEMENTS
+package "robocluedo rosplan" {
+
+file "pddl\ndomain" as PDDL_DOM
+file "pddl\nproblem" as PDDL_PROB
+
+package "ROSplan" {
+	database "knowledge base" <<ROSPlan>> as KB
+	[problem interface] <<ROSPlan>> as PROBLEM
+	[planning interface] <<ROSPlan>> as PLAN
+	[parsing interface] <<ROSPlan>> as PARSE
+	[plan dispatcher] <<ROSPlan>> as DISPATCH
+
+	KB -right-> PROBLEM
+	PROBLEM -down-> PLAN
+	PLAN -down-> PARSE
+	KB -right- PARSE
+	PARSE -down-> DISPATCH
+	KB -left- DISPATCH
+}
+
+package "actions dispatch" {
+	[action] as ACTION
+}
+
+[feedback\nmanager] as FEEDBACK
+interface "feedback topic" as TOPIC_FEEDBACK
+[ROSPlan\npipeline manager] <<node>> as MANAGER
+interface "service pipeline manager" as SRV_MANAGER
+
+DISPATCH -right-> ACTION
+PDDL_DOM - -> KB
+PDDL_PROB - -> KB
+
+ACTION - -> FEEDBACK
+FEEDBACK - -> TOPIC_FEEDBACK
+
+PROBLEM - -> MANAGER
+PLAN - -> MANAGER
+PARSE - -> MANAGER
+DISPATCH - -> MANAGER
+
+MANAGER - -> SRV_MANAGER
+}
+@enduml
+
+@startuml
+
+title "robocluedo rosplan"
+skinparam Padding 8
+
+
+package "robocluedo rosplan" {
+
+file "pddl\ndomain" as PDDL_DOM
+file "pddl\nproblem" as PDDL_PROB
+
+package "ROSplan" {
+	database "knowledge base" <<ROSPlan>> as KB
+	[problem interface] <<ROSPlan>> as PROBLEM
+	[planning interface] <<ROSPlan>> as PLAN
+	[parsing interface] <<ROSPlan>> as PARSE
+	[plan dispatcher] <<ROSPlan>> as DISPATCH
+
+	KB -right-> PROBLEM
+	PROBLEM -down-> PLAN
+	PLAN -down-> PARSE
+	KB -right- PARSE
+	PARSE -down-> DISPATCH
+	KB -left- DISPATCH
+}
+
+package "actions dispatch" {
+	[action] as ACTION
+}
+
+[feedback\nmanager] as FEEDBACK
+interface "feedback topic" as TOPIC_FEEDBACK
+[ROSPlan\npipeline manager] <<node>> as MANAGER
+interface "service pipeline manager" as SRV_MANAGER
+
+DISPATCH -right-> ACTION
+PDDL_DOM - -> KB
+PDDL_PROB - -> KB
+
+ACTION - -> FEEDBACK
+FEEDBACK - -> TOPIC_FEEDBACK
+
+PROBLEM - -> MANAGER
+PLAN - -> MANAGER
+PARSE - -> MANAGER
+DISPATCH - -> MANAGER
+
+MANAGER - -> SRV_MANAGER
+}
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

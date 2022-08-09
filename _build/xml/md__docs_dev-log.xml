@@ -6,6 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><ulink url="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</ulink></para>
 <para>template:</para>
 <para><programlisting><codeline><highlight class="normal">##<sp/>data</highlight></codeline>
 <codeline></codeline>
@@ -96,7 +97,7 @@
 <listitem><para>module testing dal vecchio modulo ... in quello del module testing</para>
 </listitem><listitem><para>proviamo a compiare ... non va ```text CMake Error at /opt/ros/noetic/share/catkin/cmake/catkinConfig.cmake:83 (find_package): Could not find a package configuration file provided by &quot;armor_tools&quot; with any of the following names:</para>
 <para>armor_toolsConfig.cmake armor_tools-config.cmake</para>
-<para>Add the installation prefix of &quot;armor_tools&quot; to CMAKE_PREFIX_PATH or set &quot;armor_tools_DIR&quot; to a directory containing one of the above files. If &quot;armor_tools&quot; provides a separate development package or SDK, be sure it has been installed. Call Stack (most recent call first): <ref refid="robocluedo__module__testing_2_c_make_lists_8txt" kindref="compound">ExperimentalRoboticsLab-Assignment-2/robocluedo_module_testing/CMakeLists.txt</ref>:10 (find_package)</para>
+<para>Add the installation prefix of &quot;armor_tools&quot; to CMAKE_PREFIX_PATH or set &quot;armor_tools_DIR&quot; to a directory containing one of the above files. If &quot;armor_tools&quot; provides a separate development package or SDK, be sure it has been installed. Call Stack (most recent call first): ExperimentalRoboticsLab-Assignment-2/robocluedo_module_testing/CMakeLists.txt:10 (find_package)</para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
@@ -119,6 +120,26 @@
         ```
 </verbatim><itemizedlist>
 <listitem><para>voglio un attimo documentare i test in UML, per avere sempre presenti come sono fatti</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;testing armor and first documentation&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md25">
+<title>09/08/2022 –</title>
+<para><itemizedlist>
+<listitem><para>serve uno <emphasis>schema completo</emphasis> dell&apos;applicazione prima di iniziare<itemizedlist>
+<listitem><para>components robocluedo rosplan (solo bozza)</para>
+</listitem><listitem><para><emphasis>meglio lavorare in MD</emphasis> : nessuna tabulazione fastidiosa, è più facile lavorarci su</para>
+</listitem><listitem><para>components armor<itemizedlist>
+<listitem><para>(ricorda di usare l&apos;opzione <computeroutput>allow_mixing</computeroutput> all&apos;inizio del codice per poter usare diversi tipi di UML nello stesso schema)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>component movement controller</para>
+</listitem><listitem><para><bold>il mission manager non lo faccio adesso</bold> perchè è il nodo che va a &quot;legare&quot; tutte le parti dell&apos;architettura. quindi, meglio lasciarlo a quando avrò un&apos;idea chiara</para>
+</listitem></itemizedlist>
+</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

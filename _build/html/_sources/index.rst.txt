@@ -12,6 +12,7 @@ RCL -- RoboCLuedo - v1.0.0
    :glob:
    
    the project main README <./README.md>
+   UML overall arch <./_uml/arch.md>
 
 
 .. toctree::
