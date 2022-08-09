@@ -150,6 +150,202 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(ricorda<sp/>di<sp/>usare<sp/>l&apos;opzione<sp/>`allow_mixing`<sp/>all&apos;inizio<sp/>del<sp/>codice<sp/>per<sp/>poter<sp/>usare<sp/>diversi<sp/>tipi<sp/>di<sp/>UML<sp/>nello<sp/>stesso<sp/>schema)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>component<sp/>movement<sp/>controller</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**il<sp/>mission<sp/>manager<sp/>non<sp/>lo<sp/>faccio<sp/>adesso**<sp/>perchè<sp/>è<sp/>il<sp/>nodo<sp/>che<sp/>va<sp/>a<sp/>&quot;legare&quot;<sp/>tutte<sp/>le<sp/>parti<sp/>dell&apos;architettura.<sp/>quindi,<sp/>meglio<sp/>lasciarlo<sp/>a<sp/>quando<sp/>avrò<sp/>un&apos;idea<sp/>chiara</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;uml<sp/>arch<sp/>first<sp/>draft&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ora,<sp/>iniziamo<sp/>a<sp/>lavorare<sp/>su<sp/>rosplan:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_rosplan_msgs<sp/>std_msgs<sp/>std_srvs<sp/>diagnostic_msgs<sp/>geometry_msgs<sp/>nav_msgs<sp/>rosplan_dispatch_msgs<sp/>rosplan_knowledge_msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>e<sp/>prima<sp/>configurazione<sp/>(penso<sp/>userò<sp/>quello<sp/>che<sp/>ho<sp/>fatto<sp/>nella<sp/>precedente<sp/>versione,<sp/>inutile<sp/>reinventare<sp/>chissà<sp/>che)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>trasferimento<sp/>dei<sp/>messaggi<sp/>nel<sp/>nuovo<sp/>package<sp/>(copia<sp/>incolla<sp/>facile<sp/>facile)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>compilazione<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_rosplan<sp/>roscpp<sp/>rospy<sp/>std_msgs<sp/>std_srvs<sp/>diagnostic_msgs<sp/>rosplan_dispatch_msgs<sp/>rosplan_knowledge_msgs<sp/>rosplan_dependencies<sp/>robocluedo_rosplan_msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>primo<sp/>setup<sp/>del<sp/>package</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compilazione<sp/>da<sp/>vuoto<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;rosplan<sp/>first<sp/>setup&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">è<sp/>il<sp/>momento<sp/>di<sp/>rifare<sp/>il<sp/>PDDL</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>iniziamo<sp/>col<sp/>prendere<sp/>l&apos;environment<sp/>dal<sp/>precedente<sp/>progetto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mi<sp/>converrà<sp/>progettare<sp/>prima<sp/>di<sp/>fiondarmi<sp/>sul<sp/>codice...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>nuovo<sp/>documento<sp/>sul<sp/>PDDL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>una<sp/>lista<sp/>delle<sp/>azioni<sp/>PDDL<sp/>e<sp/>dei<sp/>landmarks</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(ho<sp/>dovuto<sp/>aggiornare<sp/>l&apos;UML<sp/>di<sp/>robocluedo<sp/>rosplan,<sp/>mi<sp/>serviva<sp/>un<sp/>componente<sp/>che<sp/>non<sp/>avevo<sp/>ancora<sp/>menzionato)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(l&apos;idea<sp/>è<sp/>di<sp/>fare<sp/>il<sp/>design<sp/>dell&apos;intero<sp/>PDDL<sp/>sul<sp/>documento,<sp/>in<sp/>modo<sp/>da<sp/>non<sp/>dover<sp/>fare<sp/>due<sp/>cose<sp/>assieme,<sp/>design<sp/>e<sp/>implementazione,<sp/>nella<sp/>fase<sp/>di<sp/>implementazione,<sp/>*perchè<sp/>so<sp/>quanto<sp/>romperà<sp/>il<sp/>planner*)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>pddl<sp/>delle<sp/>varie<sp/>azioni</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>ora,<sp/>implementazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>versione<sp/>*completamente<sp/>vuota*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>parse<sp/>...<sp/>OK<sp/>(però<sp/>bisogna<sp/>vedere<sp/>se<sp/>fa<sp/>il<sp/>plan<sp/>o<sp/>no)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>plan<sp/>...<sp/>NO<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>domain:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(define<sp/>(domain<sp/>robocluedo)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:requirements<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL1.1<sp/>===<sp/>;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:strips<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:typing<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:equality<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:existential-preconditions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:universal-preconditions<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:conditional-effects</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:quantified-preconditions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL2.1<sp/>===<sp/>;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:numeric-fluents</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:durative-actions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:types</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>navigation<sp/>system</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>waypoint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:predicates</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(stub<sp/>)<sp/>(not-stub<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:functions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:durative-action<sp/>stub-true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:condition<sp/>(and<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-stub<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-stub<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(stub))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>problem:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(define<sp/>(problem<sp/>robocluedo-task)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:domain<sp/>robocluedo)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:objects</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:init</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(not-stub<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(stub<sp/>))</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan<sp/>(fino<sp/>ad<sp/>ora):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo#<sp/>./solve_popf.sh<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Number<sp/>of<sp/>literals:<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constructing<sp/>lookup<sp/>tables:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Post<sp/>filtering<sp/>unreachable<sp/>actions:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>No<sp/>analytic<sp/>limits<sp/>found,<sp/>not<sp/>considering<sp/>limit<sp/>effects<sp/>of<sp/>goal-only<sp/>operators</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>All<sp/>the<sp/>ground<sp/>actions<sp/>in<sp/>this<sp/>problem<sp/>are<sp/>compression-safe</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Initial<sp/>heuristic<sp/>=<sp/>1.000</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;;;<sp/>Solution<sp/>Found</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>States<sp/>evaluated:<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Cost:<sp/>0.990</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Time<sp/>0.00</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.000:<sp/>(stub-true)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(ora,<sp/>una<sp/>sola<sp/>azione<sp/>alla<sp/>volta)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>replan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>importazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>parse<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>plan<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*precondition<sp/>e<sp/>effect<sp/>richiedono<sp/>comunque<sp/>l&apos;operatore<sp/>and,<sp/>anche<sp/>se<sp/>hanno<sp/>un<sp/>solo<sp/>predicato<sp/>al<sp/>loro<sp/>interno*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>del<sp/>replan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>move-to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>importazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>meglio<sp/>separare<sp/>`move-to`<sp/>dall&apos;ottenere<sp/>l&apos;hint<sp/>...<sp/>nuova<sp/>azione<sp/>`signal-collect-hint`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>parse<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>plan<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>dell&apos;azione<sp/>implementata<sp/>in<sp/>ROS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>signal-collect-hint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>importazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>parse<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>plan<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>plan<sp/>finora:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>States<sp/>evaluated:<sp/>14</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Cost:<sp/>9.909</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Time<sp/>0.00</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.000:<sp/>(replan)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.991:<sp/>(move-to<sp/>center<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.982:<sp/>(signal-collect-hint<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2.973:<sp/>(collect-hint<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.964:<sp/>(move-to<sp/>wp1<sp/>wp2)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.955:<sp/>(move-to<sp/>wp2<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5.946:<sp/>(signal-collect-hint<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6.937:<sp/>(collect-hint<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7.928:<sp/>(move-to<sp/>wp3<sp/>wp4)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8.919:<sp/>(signal-collect-hint<sp/>wp4)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>per<sp/>il<sp/>goal</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(and<sp/>(not-dirty<sp/>)<sp/>(at<sp/>wp4<sp/>)<sp/>(hint-ready<sp/>)<sp/>(hint-collected<sp/>wp1)<sp/>(hint-collected<sp/>wp3<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>uml</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>move<sp/>to<sp/>center</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>importazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>solve</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ultimo<sp/>output:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>./solve_popf.sh<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Number<sp/>of<sp/>literals:<sp/>28</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constructing<sp/>lookup<sp/>tables:<sp/>[10%]<sp/>[20%]<sp/>[30%]<sp/>[40%]<sp/>[50%]<sp/>[60%]<sp/>[70%]<sp/>[80%]<sp/>[90%]<sp/>[100%]<sp/>[110%]<sp/>[120%]<sp/>[130%]<sp/>[140%]<sp/>[150%]<sp/>[160%]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Post<sp/>filtering<sp/>unreachable<sp/>actions:<sp/><sp/>[10%]<sp/>[20%]<sp/>[30%]<sp/>[40%]<sp/>[50%]<sp/>[60%]<sp/>[70%]<sp/>[80%]<sp/>[90%]<sp/>[100%]<sp/>[110%]<sp/>[120%]<sp/>[130%]<sp/>[140%]<sp/>[150%]<sp/>[160%]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>No<sp/>analytic<sp/>limits<sp/>found,<sp/>not<sp/>considering<sp/>limit<sp/>effects<sp/>of<sp/>goal-only<sp/>operators</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>93%<sp/>of<sp/>the<sp/>ground<sp/>temporal<sp/>actions<sp/>in<sp/>this<sp/>problem<sp/>are<sp/>compression-safe</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Initial<sp/>heuristic<sp/>=<sp/>8.000</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>b<sp/>(7.000<sp/>|<sp/>0.990)b<sp/>(6.000<sp/>|<sp/>0.990)b<sp/>(5.000<sp/>|<sp/>2.972)b<sp/>(4.000<sp/>|<sp/>5.945)b<sp/>(3.000<sp/>|<sp/>6.936)b<sp/>(2.000<sp/>|<sp/>7.927)b<sp/>(1.000<sp/>|<sp/>8.918);;;;<sp/>Solution<sp/>Found</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>States<sp/>evaluated:<sp/>15</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Cost:<sp/>9.909</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;<sp/>Time<sp/>0.00</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.000:<sp/>(replan)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>0.991:<sp/>(move-to<sp/>center<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>1.982:<sp/>(signal-collect-hint<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>2.973:<sp/>(collect-hint<sp/>wp1)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>3.964:<sp/>(move-to<sp/>wp1<sp/>wp2)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>4.955:<sp/>(move-to<sp/>wp2<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>5.946:<sp/>(signal-collect-hint<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>6.937:<sp/>(collect-hint<sp/>wp3)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>7.928:<sp/>(move-to<sp/>wp3<sp/>wp4)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>8.919:<sp/>(move-to-center<sp/>wp4<sp/>center)<sp/><sp/>[0.990]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>per<sp/>il<sp/>goal:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(and<sp/>(not-dirty<sp/>)<sp/>(hint-collected<sp/>wp1)<sp/>(hint-collected<sp/>wp3<sp/>)<sp/>(at-center<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>PDDL<sp/>(not<sp/>yet<sp/>finished)&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -163,6 +359,9 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>

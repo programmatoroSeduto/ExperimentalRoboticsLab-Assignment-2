@@ -59,6 +59,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul class="current">
@@ -269,9 +271,230 @@ Invoking &quot;make cmake_check_build_system&quot; failed
 <li><p><strong>il mission manager non lo faccio adesso</strong> perchè è il nodo che va a “legare” tutte le parti dell’architettura. quindi, meglio lasciarlo a quando avrò un’idea chiara</p></li>
 </ul>
 </li>
+<li><p><strong>COMMIT</strong> : “uml arch first draft”</p></li>
+</ul>
+<hr class="docutils" />
+<p>ora, iniziamo a lavorare su rosplan:</p>
+<ul>
+<li><p><strong>NUOVO PACKAGE</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_rosplan_msgs std_msgs std_srvs diagnostic_msgs geometry_msgs nav_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs
+</pre></div>
+</div>
+</li>
+<li><p>documentazione del package e prima configurazione (penso userò quello che ho fatto nella precedente versione, inutile reinventare chissà che)</p></li>
+<li><p>e trasferimento dei messaggi nel nuovo package (copia incolla facile facile)</p>
+<ul class="simple">
+<li><p>e compilazione … OK</p></li>
+</ul>
+</li>
+<li><p><strong>NUOVO PACKAGE</strong></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_rosplan roscpp rospy std_msgs std_srvs diagnostic_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs rosplan_dependencies robocluedo_rosplan_msgs
+</pre></div>
+</div>
+</li>
+<li><p>e primo setup del package</p></li>
+<li><p>compilazione da vuoto … OK</p></li>
+<li><p><strong>COMMIT</strong> : “rosplan first setup”</p></li>
+</ul>
+<hr class="docutils" />
+<p>è il momento di rifare il PDDL</p>
+<ul>
+<li><p>iniziamo col prendere l’environment dal precedente progetto</p></li>
+<li><p>mi converrà progettare prima di fiondarmi sul codice…</p>
+<ul class="simple">
+<li><p>nuovo documento sul PDDL</p></li>
+<li><p>una lista delle azioni PDDL e dei landmarks</p></li>
+<li><p>(ho dovuto aggiornare l’UML di robocluedo rosplan, mi serviva un componente che non avevo ancora menzionato)</p></li>
+<li><p>(l’idea è di fare il design dell’intero PDDL sul documento, in modo da non dover fare due cose assieme, design e implementazione, nella fase di implementazione, <em>perchè so quanto romperà il planner</em>)</p></li>
+<li><p>pddl delle varie azioni</p></li>
+</ul>
+</li>
+<li><p>e ora, implementazione</p>
+<ul>
+<li><p>prima versione <em>completamente vuota</em></p></li>
+<li><p>parse … OK (però bisogna vedere se fa il plan o no)</p></li>
+<li><p>plan … NO … OK
+domain:</p>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">define</span> <span class="p">(</span><span class="nv">domain</span> <span class="nv">robocluedo</span><span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:requirements</span> 
+	<span class="c1">;; === PDDL1.1 === ;;</span>
+	<span class="ss">:strips</span> 
+	<span class="ss">:typing</span> 
+	<span class="ss">:equality</span> 
+	<span class="ss">:existential-preconditions</span>
+	<span class="ss">:universal-preconditions</span> 
+	<span class="ss">:conditional-effects</span>
+	<span class="ss">:quantified-preconditions</span>
+	
+	<span class="c1">;; === PDDL2.1 === ;;</span>
+	<span class="ss">:numeric-fluents</span>
+	<span class="ss">:durative-actions</span>
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:types</span>
+	<span class="c1">;; navigation system</span>
+	<span class="nv">waypoint</span>
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:predicates</span>
+	<span class="p">(</span><span class="nv">stub</span> <span class="p">)</span> <span class="p">(</span><span class="nv">not-stub</span> <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:functions</span>
+	
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:durative-action</span> <span class="nv">stub-true</span>
+	<span class="ss">:parameters</span> <span class="p">(</span> <span class="p">)</span>
+	
+	<span class="ss">:duration</span> <span class="p">(</span><span class="nb">=</span> <span class="nv">?duration</span> <span class="mf">0.99</span> <span class="p">)</span>
+	
+	<span class="ss">:condition</span> <span class="p">(</span><span class="nb">and</span> 
+		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nv">not-stub</span> <span class="p">))</span>
+	<span class="p">)</span>
+	
+	<span class="ss">:effect</span> <span class="p">(</span><span class="nb">and</span>
+		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nb">not</span> <span class="p">(</span><span class="nv">not-stub</span> <span class="p">)))</span>
+		<span class="p">(</span><span class="nv">at</span> <span class="nv">end</span> <span class="p">(</span><span class="nv">stub</span><span class="p">))</span>
+	<span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>problem:</p>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">define</span> <span class="p">(</span><span class="nv">problem</span> <span class="nv">robocluedo-task</span><span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:domain</span> <span class="nv">robocluedo</span><span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:objects</span>
+	
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:init</span>
+	<span class="p">(</span><span class="nv">not-stub</span> <span class="p">)</span>
+<span class="p">)</span>
+
+<span class="p">(</span><span class="ss">:goal</span> <span class="p">(</span><span class="nv">stub</span> <span class="p">))</span>
+
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>plan (fino ad ora):</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo# ./solve_popf.sh 
+Number of literals: 2
+Constructing lookup tables:
+Post filtering unreachable actions: 
+No analytic limits found, not considering limit effects of goal-only operators
+All the ground actions in this problem are compression-safe
+Initial heuristic = 1.000
+;;;; Solution Found
+; States evaluated: 2
+; Cost: 0.990
+; Time 0.00
+0.000: (stub-true)  [0.990]
+</pre></div>
+</div>
+</li>
+<li><p>(ora, una sola azione alla volta)</p></li>
+<li><p>replan</p>
+<ul class="simple">
+<li><p>importazione</p></li>
+<li><p>parse … OK</p></li>
+<li><p>plan … OK</p>
+<ul>
+<li><p><em>precondition e effect richiedono comunque l’operatore and, anche se hanno un solo predicato al loro interno</em></p></li>
+</ul>
+</li>
+<li><p>uml del replan</p></li>
+</ul>
+</li>
+<li><p>move-to</p>
+<ul class="simple">
+<li><p>importazione</p>
+<ul>
+<li><p>meglio separare <code class="docutils literal notranslate"><span class="pre">move-to</span></code> dall’ottenere l’hint … nuova azione <code class="docutils literal notranslate"><span class="pre">signal-collect-hint</span></code></p></li>
+</ul>
+</li>
+<li><p>parse …</p></li>
+<li><p>plan …</p></li>
+<li><p>uml dell’azione implementata in ROS</p></li>
+</ul>
+</li>
+<li><p>signal-collect-hint</p>
+<ul class="simple">
+<li><p>importazione</p></li>
+<li><p>parse …</p></li>
+<li><p>plan … OK</p></li>
+</ul>
+<p>plan finora:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>; States evaluated: 14
+; Cost: 9.909
+; Time 0.00
+0.000: (replan)  [0.990]
+0.991: (move-to center wp1)  [0.990]
+1.982: (signal-collect-hint wp1)  [0.990]
+2.973: (collect-hint wp1)  [0.990]
+3.964: (move-to wp1 wp2)  [0.990]
+4.955: (move-to wp2 wp3)  [0.990]
+5.946: (signal-collect-hint wp3)  [0.990]
+6.937: (collect-hint wp3)  [0.990]
+7.928: (move-to wp3 wp4)  [0.990]
+8.919: (signal-collect-hint wp4)  [0.990]
+</pre></div>
+</div>
+<p>per il goal</p>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="ss">:goal</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span> <span class="p">(</span><span class="nv">at</span> <span class="nv">wp4</span> <span class="p">)</span> <span class="p">(</span><span class="nv">hint-ready</span> <span class="p">)</span> <span class="p">(</span><span class="nv">hint-collected</span> <span class="nv">wp1</span><span class="p">)</span> <span class="p">(</span><span class="nv">hint-collected</span> <span class="nv">wp3</span> <span class="p">)))</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>uml</p></li>
+</ul>
+</li>
+<li><p>move to center</p>
+<ul class="simple">
+<li><p>importazione</p></li>
+<li><p>solve</p></li>
+</ul>
+<p>ultimo output:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span># ./solve_popf.sh 
+Number of literals: 28
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%]
+Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%]
+No analytic limits found, not considering limit effects of goal-only operators
+93% of the ground temporal actions in this problem are compression-safe
+Initial heuristic = 8.000
+b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6.936)b (2.000 | 7.927)b (1.000 | 8.918);;;; Solution Found
+; States evaluated: 15
+; Cost: 9.909
+; Time 0.00
+0.000: (replan)  [0.990]
+0.991: (move-to center wp1)  [0.990]
+1.982: (signal-collect-hint wp1)  [0.990]
+2.973: (collect-hint wp1)  [0.990]
+3.964: (move-to wp1 wp2)  [0.990]
+4.955: (move-to wp2 wp3)  [0.990]
+5.946: (signal-collect-hint wp3)  [0.990]
+6.937: (collect-hint wp3)  [0.990]
+7.928: (move-to wp3 wp4)  [0.990]
+8.919: (move-to-center wp4 center)  [0.990]
+</pre></div>
+</div>
+<p>per il goal:</p>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="ss">:goal</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span> <span class="p">(</span><span class="nv">hint-collected</span> <span class="nv">wp1</span><span class="p">)</span> <span class="p">(</span><span class="nv">hint-collected</span> <span class="nv">wp3</span> <span class="p">)</span> <span class="p">(</span><span class="nv">at-center</span> <span class="p">)))</span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on PDDL (not yet finished)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
+<li><p>implementazione di una funzionalità per fare un clear “sicuro” della ontology (quello di rosplan funziona maluccio)</p></li>
+<li><p>spostare la documentazione di ROSplan nella nuova workspace di erl2</p></li>
+<li><p>come settare un goal via codice da ROSplan?</p></li>
 <li><p>rimuovere le immagini dalla documentazione del codice per armor</p></li>
 <li><p>un branch per la documentazione Sphinx</p></li>
 <li><p>e uno script per mettere online la documentazione sphinx “senza sbattersi troppo”</p></li>

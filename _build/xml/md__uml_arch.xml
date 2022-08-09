@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md__uml_arch_1autotoc_md54">
+<sect1 id="md__uml_arch_1autotoc_md57">
 <title>pkg – robocluedo_rosplan</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -41,28 +41,33 @@
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">[feedback\nmanager]<sp/>as<sp/>FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">interface<sp/>&quot;feedback<sp/>topic&quot;<sp/>as<sp/>TOPIC_FEEDBACK</highlight></codeline>
 <codeline><highlight class="normal">[ROSPlan\npipeline<sp/>manager]<sp/>&lt;&lt;node&gt;&gt;<sp/>as<sp/>MANAGER</highlight></codeline>
-<codeline><highlight class="normal">interface<sp/>&quot;service<sp/>pipeline<sp/>manager&quot;<sp/>as<sp/>SRV_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">[KB<sp/>interface]<sp/>&lt;&lt;node&gt;&gt;<sp/>as<sp/>IKB</highlight></codeline>
+<codeline><highlight class="normal">ACTION<sp/>--&gt;<sp/>IKB</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">DISPATCH<sp/>-right-&gt;<sp/>ACTION</highlight></codeline>
 <codeline><highlight class="normal">PDDL_DOM<sp/>--&gt;<sp/>KB</highlight></codeline>
 <codeline><highlight class="normal">PDDL_PROB<sp/>--&gt;<sp/>KB</highlight></codeline>
+<codeline><highlight class="normal">IKB<sp/>&lt;--&gt;<sp/>KB</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">ACTION<sp/>--&gt;<sp/>FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">FEEDBACK<sp/>--&gt;<sp/>TOPIC_FEEDBACK</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">PROBLEM<sp/>--&gt;<sp/>MANAGER</highlight></codeline>
-<codeline><highlight class="normal">PLAN<sp/>--&gt;<sp/>MANAGER</highlight></codeline>
-<codeline><highlight class="normal">PARSE<sp/>--&gt;<sp/>MANAGER</highlight></codeline>
-<codeline><highlight class="normal">DISPATCH<sp/>--&gt;<sp/>MANAGER</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANAGER<sp/>--&gt;<sp/>SRV_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">PROBLEM<sp/>-right-&gt;<sp/>MANAGER</highlight></codeline>
+<codeline><highlight class="normal">PLAN<sp/>-right-&gt;<sp/>MANAGER</highlight></codeline>
+<codeline><highlight class="normal">PARSE<sp/>-right-&gt;<sp/>MANAGER</highlight></codeline>
+<codeline><highlight class="normal">DISPATCH<sp/>-right-&gt;<sp/>MANAGER</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>topic&quot;<sp/>as<sp/>TOPIC_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">FEEDBACK<sp/>--&gt;<sp/>TOPIC_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;service<sp/>pipeline<sp/>manager&quot;<sp/>as<sp/>SRV_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">MANAGER<sp/>--&gt;<sp/>SRV_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;KB<sp/>interface<sp/>service&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">IKB<sp/>--&gt;<sp/>SRV_IKB</highlight></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md55">
+<sect1 id="md__uml_arch_1autotoc_md58">
 <title>pkg – robocluedo_movement_controller</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -97,7 +102,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md56">
+<sect1 id="md__uml_arch_1autotoc_md59">
 <title>pkg – robocluedo_armor</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -134,7 +139,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md57">
+<sect1 id="md__uml_arch_1autotoc_md60">
 <title>pkg – robocluedo_mission_manager</title>
 <para><programlisting filename=".uml"></programlisting> </para>
 </sect1>

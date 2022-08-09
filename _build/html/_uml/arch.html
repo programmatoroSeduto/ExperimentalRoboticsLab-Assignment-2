@@ -59,6 +59,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
@@ -109,8 +111,8 @@
 <div class="section" id="pkg-robocluedo-rosplan">
 <h2>pkg – robocluedo_rosplan<a class="headerlink" href="#pkg-robocluedo-rosplan" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../_images/plantuml-e7d413cd08ad66c2ed6716658b73c3c2c5bb67bd.svg" type="image/svg+xml" style="width:639px;height:1150px;background:#FFFFFF;">
-<img src="../_images/plantuml-e7d413cd08ad66c2ed6716658b73c3c2c5bb67bd.png" alt="&#64;startuml
+<object data="../_images/plantuml-2b730d5f3ddcaab05e73d157fccf745ae4016dd2.svg" type="image/svg+xml" style="width:1027px;height:1149px;background:#FFFFFF;">
+<img src="../_images/plantuml-2b730d5f3ddcaab05e73d157fccf745ae4016dd2.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
 title &quot;robocluedo rosplan&quot;
@@ -143,24 +145,29 @@ package &quot;actions dispatch&quot; {
 }
 
 [feedback\nmanager] as FEEDBACK
-interface &quot;feedback topic&quot; as TOPIC_FEEDBACK
 [ROSPlan\npipeline manager] &lt;&lt;node&gt;&gt; as MANAGER
-interface &quot;service pipeline manager&quot; as SRV_MANAGER
+[KB interface] &lt;&lt;node&gt;&gt; as IKB
+ACTION --&gt; IKB
 
 DISPATCH -right-&gt; ACTION
 PDDL_DOM --&gt; KB
 PDDL_PROB --&gt; KB
+IKB &lt;--&gt; KB
 
 ACTION --&gt; FEEDBACK
-FEEDBACK --&gt; TOPIC_FEEDBACK
 
-PROBLEM --&gt; MANAGER
-PLAN --&gt; MANAGER
-PARSE --&gt; MANAGER
-DISPATCH --&gt; MANAGER
-
-MANAGER --&gt; SRV_MANAGER
+PROBLEM -right-&gt; MANAGER
+PLAN -right-&gt; MANAGER
+PARSE -right-&gt; MANAGER
+DISPATCH -right-&gt; MANAGER
 }
+
+() &quot;feedback topic&quot; as TOPIC_FEEDBACK
+FEEDBACK --&gt; TOPIC_FEEDBACK
+() &quot;service pipeline manager&quot; as SRV_MANAGER
+MANAGER --&gt; SRV_MANAGER
+() &quot;KB interface service&quot; as SRV_IKB
+IKB --&gt; SRV_IKB
 &#64;enduml"/>
 
 </object></p>

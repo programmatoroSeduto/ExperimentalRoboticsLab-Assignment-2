@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="168px" preserveAspectRatio="none" style="width:243px;height:168px;background:#FFFFFF;" version="1.1" viewBox="0 0 243 168" width="243px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="225" x="5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="199" x="18" y="30.9951">(ACTION) move-to-center</text><!--MD5=[a6dfd19d8f52ada75f70dff6424775c3]
+entity ACT_MOVE_TO_CENTER--><g id="elem_ACT_MOVE_TO_CENTER"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="163" x="36.5" y="60.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="179.5" y="65.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="177.5" y="67.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="177.5" y="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="102" x="62" y="101.292">«PDDL action»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="107" x="59.5" y="133.5889">move-to-center</text></g><!--MD5=[31d43b70a71de6046dacaaf31fc82e41]
+@startuml
+
+''' DIAGRAM INFOS
+title "(ACTION) move-to-center"
+skinparam Padding 8
+allow_mixing
+
+
+''' FROM OTHER DIAGRAMS
+' ...
+
+
+''' COMPONENTS
+component "move-to-center" <<PDDL action>> as ACT_MOVE_TO_CENTER
+
+
+''' LINKS
+' ...
+@end
+
+@startuml
+
+title "(ACTION) move-to-center"
+skinparam Padding 8
+allow_mixing
+
+
+
+
+component "move-to-center" <<PDDL action>> as ACT_MOVE_TO_CENTER
+
+
+@end
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

@@ -1,0 +1,432 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_robocluedo_rosplan__docs_new-robocluedo" kind="page">
+    <compoundname>md_robocluedo_rosplan__docs_new-robocluedo</compoundname>
+    <title>PDDL description – the new RoboCLuedo</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md64">
+<title>differences from the previous version</title>
+<para><itemizedlist>
+<listitem><para>usage of <emphasis>landmarks</emphasis> instead of only one goal</para>
+</listitem><listitem><para>the PDDL just manages the movements and how the robot works, and not othe rinformations</para>
+</listitem><listitem><para>clear distinction between the KB os ROSPlan and the aRMOR KB</para>
+</listitem><listitem><para><emphasis>a simpler, concise model</emphasis>: this increases the flexibility of the model, and in particular it makes quicker any future update of the arch</para>
+</listitem><listitem><para>much more like a stata machine than the previous version (or also like a flow chart)</para>
+</listitem><listitem><para><emphasis>no usage of fluents</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md65">
+<title>list of Landmarks</title>
+<para><itemizedlist>
+<listitem><para>replan preconditions: ```lisp</para>
+<para>``` goal: ```lisp</para>
+<para>```</para>
+</listitem><listitem><para>propose a solution <ndash/> solve preconditions: ```lisp</para>
+<para>``` goal: ```lisp</para>
+<para>```</para>
+</listitem><listitem><para>collect a new hint <ndash/> collect preconditions: ```lisp</para>
+<para>``` goal: ```lisp</para>
+<para>```</para>
+</listitem></itemizedlist>
+</para>
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md66">
+<title>list of predicates</title>
+<para>environment:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>(at ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-at ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(passage ?wp1 ?wp2 - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(is-center ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-is-center ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(explored ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-explored ?wp - waypoint )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(at-center )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-at-center )</computeroutput></para>
+</listitem><listitem><para><computeroutput>( )</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>LANDMARK replan:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>(dirty )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-dirty )</computeroutput></para>
+</listitem><listitem><para><computeroutput>( )</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>LANDMARK collect:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>(hint-ready )</computeroutput></para>
+</listitem><listitem><para><computeroutput>(not-hint-ready )</computeroutput></para>
+</listitem><listitem><para><computeroutput>( )</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+<para>LANDMARK solve</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>( )</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md67">
+<title>list of services provided by the kb interface</title>
+<para><itemizedlist>
+<listitem><para>write a predicate into the kb</para>
+</listitem><listitem><para>read a predicate from kb</para>
+</listitem><listitem><para>read the goal</para>
+</listitem><listitem><para>set the goal</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md68">
+<title>list of actions</title>
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md69">
+<title>replan</title>
+<para><itemizedlist>
+<listitem><para>**(ACTION) replan**<itemizedlist>
+<listitem><para>c&apos;è un bool <computeroutput>(dirty )</computeroutput> che indica quando il sistema non è inizializzato</para>
+</listitem><listitem><para>questa azione serve solo per &quot;resettare&quot; la KB di rosplan</para>
+</listitem><listitem><para>per l&apos;aggiornamento, la action usa il nodo <computeroutput>KB interface</computeroutput> che si occuperà di lettura e scrittura nella kb di rosplan</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>replan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(dirty<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>implementazione ROS:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>replan&quot;</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;KB<sp/>interface<sp/>service&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;replan&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_REPLAN</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-up-<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md70">
+<title>collect</title>
+<para><itemizedlist>
+<listitem><para>**(ACTION) move-to**<itemizedlist>
+<listitem><para>semplice azione di movimento da un punto ad un altro</para>
+</listitem><listitem><para>il sistema è <emphasis>molto simile a quello della vecchia versione</emphasis> se non per qualche predicato di meno</para>
+</listitem><listitem><para>le posizioni in cui il robot può andare sono quelle non marcate come <computeroutput>(is-center ?wp)</computeroutput>, ovvero usa il not</para>
+</listitem><listitem><para>il robot <emphasis>non può compiere un&apos;azione di movimento verso lo stesso punto in cui si trova</emphasis>: insomma, deve muoversi</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>move-to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?from<sp/>?to<sp/>-<sp/>waypoint<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at<sp/>?from<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>passage</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(passage<sp/>?from<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>path<sp/>tracking</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-explored<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;center<sp/>conditions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-is-center<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(at<sp/>?from<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(at<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>(in<sp/>any<sp/>case)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(at-center<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not-at-center<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>path<sp/>tracking</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-explored<sp/>?to)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(explored<sp/>?to))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>implementazione ROS:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>go_to_point&quot;</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;nav<sp/>service&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;move-to&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_MOVE_TO</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>**(ACTION) signal-collect-hint**<itemizedlist>
+<listitem><para>il robot si prepara a raccogliere l&apos;hint dal marker</para>
+</listitem><listitem><para><bold>implementato come una simulated action</bold></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>signal-collect-hint<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?wp<sp/>-<sp/>waypoint<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at<sp/>?wp<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>hint<sp/>inside</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-collected<sp/>?wp<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-hint-ready<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>**(ACTION) collect-hint**<itemizedlist>
+<listitem><para>l&apos;azione include due step, per semplicità: mossa del manipolatore verso l&apos;hint, aggiornamento della kb, e verifica della presenza di una soluzione</para>
+</listitem><listitem><para><emphasis>in caso si presenterà il bisogno di aggiornare il sistema di raccolta degli hint</emphasis> (ad esempio, detection degli hint tramite una videocamera piuttosto che tramite un sistema di hints) <emphasis>si dovrà cambiare solo questa particolare azione</emphasis> e stop.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>collect-hint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?wp<sp/>-<sp/>waypoint<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at<sp/>?wp<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-is-center<sp/>?wp<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(hint-ready<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not-hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>implementazione ROS:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>collect-hint&quot;</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;manip<sp/>service&quot;<sp/>as<sp/>SRV_MANIP</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;add<sp/>hint&quot;<sp/>as<sp/>SRV_ADD</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;hint<sp/>from<sp/>the<sp/>Oracle&quot;<sp/>as<sp/>TOPIC_ORACLE_HINT</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;collect-hint&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_COLLECT_HINT</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>--&gt;<sp/>SRV_ADD</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>--&gt;<sp/>SRV_MANIP</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&lt;-up-<sp/>TOPIC_ORACLE_HINT</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+</programlisting></para>
+</sect2>
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md73">
+<title>solve</title>
+<para><itemizedlist>
+<listitem><para>**(ACTION) move-to-center**<itemizedlist>
+<listitem><para>come precondizione il robot non si trova al centro, quindi la posizione attuale è <computeroutput>(not-is-center ?wp)</computeroutput></para>
+</listitem><listitem><para>al termine dell&apos;azione, il robot è in stato <computeroutput>(ready-to-solve )</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>move-to-center</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?from<sp/>?to<sp/>-<sp/>waypoint<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at<sp/>?from<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(is-center<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>center<sp/>conditions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-at-center<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>passage</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(passage<sp/>?from<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>localization</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(at<sp/>?from<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(at<sp/>?to<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>in<sp/>center</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-at-center<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(at-center<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>implementazione ROS:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>move-to-center&quot;</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;move-to-center&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_MOVE_TO_CENTER</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+</programlisting></para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>**(ACTION) solve**<itemizedlist>
+<listitem><para>l&apos;azione PDDL non fa che settare tutto per fare il replan</para>
+</listitem><listitem><para>a differenza della precedente versione, il PDDL non tiene traccia delle ipotesi (per questo c&apos;è aRMOR)</para>
+</listitem><listitem><para>l&apos;implementazione ROS cerca possibili soluzioni dalla KB aRMOR e propone la soluzione</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para>azione PDDL:</para>
+<para><programlisting filename=".lisp"><codeline><highlight class="normal">(:durative-action<sp/>solve</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>0.99<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;status</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at-center<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
+<codeline><highlight class="normal">)</highlight></codeline>
+</programlisting></para>
+<para>implementazione ROS:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>solve&quot;</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;solve&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_SOLVE</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+</programlisting> </para>
+</sect2>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

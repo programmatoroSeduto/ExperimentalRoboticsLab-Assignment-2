@@ -162,6 +162,183 @@ ora, iniziamo a lavorare su rosplan:
 - compilazione da vuoto ... OK
 - **COMMIT** : "rosplan first setup"
 
+---
+
+è il momento di rifare il PDDL
+
+- iniziamo col prendere l'environment dal precedente progetto
+- mi converrà progettare prima di fiondarmi sul codice...
+	- nuovo documento sul PDDL
+	- una lista delle azioni PDDL e dei landmarks
+	- (ho dovuto aggiornare l'UML di robocluedo rosplan, mi serviva un componente che non avevo ancora menzionato)
+	- (l'idea è di fare il design dell'intero PDDL sul documento, in modo da non dover fare due cose assieme, design e implementazione, nella fase di implementazione, *perchè so quanto romperà il planner*)
+	- pddl delle varie azioni
+- e ora, implementazione
+	- prima versione *completamente vuota*
+	- parse ... OK (però bisogna vedere se fa il plan o no)
+	- plan ... NO ... OK
+		domain:
+		```lisp
+		(define (domain robocluedo)
+
+		(:requirements 
+			;; === PDDL1.1 === ;;
+			:strips 
+			:typing 
+			:equality 
+			:existential-preconditions
+			:universal-preconditions 
+			:conditional-effects
+			:quantified-preconditions
+			
+			;; === PDDL2.1 === ;;
+			:numeric-fluents
+			:durative-actions
+		)
+
+		(:types
+			;; navigation system
+			waypoint
+		)
+
+		(:predicates
+			(stub ) (not-stub )
+		)
+
+		(:functions
+			
+		)
+
+		(:durative-action stub-true
+			:parameters ( )
+			
+			:duration (= ?duration 0.99 )
+			
+			:condition (and 
+				(at start (not-stub ))
+			)
+			
+			:effect (and
+				(at start (not (not-stub )))
+				(at end (stub))
+			)
+		)
+
+		)
+		```
+		problem:
+		```lisp
+		(define (problem robocluedo-task)
+
+		(:domain robocluedo)
+
+		(:objects
+			
+		)
+
+		(:init
+			(not-stub )
+		)
+
+		(:goal (stub ))
+
+		)
+		```
+		plan (fino ad ora):
+		```text
+		root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo# ./solve_popf.sh 
+		Number of literals: 2
+		Constructing lookup tables:
+		Post filtering unreachable actions: 
+		No analytic limits found, not considering limit effects of goal-only operators
+		All the ground actions in this problem are compression-safe
+		Initial heuristic = 1.000
+		;;;; Solution Found
+		; States evaluated: 2
+		; Cost: 0.990
+		; Time 0.00
+		0.000: (stub-true)  [0.990]
+		```
+	- (ora, una sola azione alla volta)
+	- replan
+		- importazione
+		- parse ... OK
+		- plan ... OK
+			- *precondition e effect richiedono comunque l'operatore and, anche se hanno un solo predicato al loro interno*
+		- uml del replan
+	- move-to
+		- importazione
+			- meglio separare `move-to` dall'ottenere l'hint ... nuova azione `signal-collect-hint`
+		- parse ...
+		- plan ...
+		- uml dell'azione implementata in ROS
+	- signal-collect-hint
+		- importazione
+		- parse ...
+		- plan ... OK
+		
+		plan finora: 
+		```text
+		; States evaluated: 14
+		; Cost: 9.909
+		; Time 0.00
+		0.000: (replan)  [0.990]
+		0.991: (move-to center wp1)  [0.990]
+		1.982: (signal-collect-hint wp1)  [0.990]
+		2.973: (collect-hint wp1)  [0.990]
+		3.964: (move-to wp1 wp2)  [0.990]
+		4.955: (move-to wp2 wp3)  [0.990]
+		5.946: (signal-collect-hint wp3)  [0.990]
+		6.937: (collect-hint wp3)  [0.990]
+		7.928: (move-to wp3 wp4)  [0.990]
+		8.919: (signal-collect-hint wp4)  [0.990]
+		```
+		per il goal
+		```lisp
+		(:goal (and (not-dirty ) (at wp4 ) (hint-ready ) (hint-collected wp1) (hint-collected wp3 )))
+		```
+		
+		- uml
+	- move to center
+		- importazione
+		- solve
+		
+		ultimo output:
+		
+		```text
+		# ./solve_popf.sh 
+		Number of literals: 28
+		Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%]
+		Post filtering unreachable actions:  [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%]
+		No analytic limits found, not considering limit effects of goal-only operators
+		93% of the ground temporal actions in this problem are compression-safe
+		Initial heuristic = 8.000
+		b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6.936)b (2.000 | 7.927)b (1.000 | 8.918);;;; Solution Found
+		; States evaluated: 15
+		; Cost: 9.909
+		; Time 0.00
+		0.000: (replan)  [0.990]
+		0.991: (move-to center wp1)  [0.990]
+		1.982: (signal-collect-hint wp1)  [0.990]
+		2.973: (collect-hint wp1)  [0.990]
+		3.964: (move-to wp1 wp2)  [0.990]
+		4.955: (move-to wp2 wp3)  [0.990]
+		5.946: (signal-collect-hint wp3)  [0.990]
+		6.937: (collect-hint wp3)  [0.990]
+		7.928: (move-to wp3 wp4)  [0.990]
+		8.919: (move-to-center wp4 center)  [0.990]
+		```
+		
+		per il goal:
+		
+		```lisp
+		(:goal (and (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+		```
+- **COMMIT** : "working on PDDL (not yet finished)"
+		
+
+
+
 
 
 
@@ -173,6 +350,9 @@ ora, iniziamo a lavorare su rosplan:
 
 TODO
 
+- implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)
+- spostare la documentazione di ROSplan nella nuova workspace di erl2
+- come settare un goal via codice da ROSplan?
 - rimuovere le immagini dalla documentazione del codice per armor
 - un branch per la documentazione Sphinx
 - e uno script per mettere online la documentazione sphinx "senza sbattersi troppo"

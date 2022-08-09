@@ -140,11 +140,116 @@
 </listitem><listitem><para><bold>il mission manager non lo faccio adesso</bold> perchè è il nodo che va a &quot;legare&quot; tutte le parti dell&apos;architettura. quindi, meglio lasciarlo a quando avrò un&apos;idea chiara</para>
 </listitem></itemizedlist>
 </para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;uml arch first draft&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>ora, iniziamo a lavorare su rosplan:</para>
+<para><itemizedlist>
+<listitem><para><bold>NUOVO PACKAGE</bold> ```bash catkin_create_pkg robocluedo_rosplan_msgs std_msgs std_srvs diagnostic_msgs geometry_msgs nav_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs ```</para>
+</listitem><listitem><para>documentazione del package e prima configurazione (penso userò quello che ho fatto nella precedente versione, inutile reinventare chissà che)</para>
+</listitem><listitem><para>e trasferimento dei messaggi nel nuovo package (copia incolla facile facile)<itemizedlist>
+<listitem><para>e compilazione ... OK</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>NUOVO PACKAGE</bold> ```bash catkin_create_pkg robocluedo_rosplan roscpp rospy std_msgs std_srvs diagnostic_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs rosplan_dependencies robocluedo_rosplan_msgs ```</para>
+</listitem><listitem><para>e primo setup del package</para>
+</listitem><listitem><para>compilazione da vuoto ... OK</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;rosplan first setup&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>è il momento di rifare il PDDL</para>
+<para><itemizedlist>
+<listitem><para>iniziamo col prendere l&apos;environment dal precedente progetto</para>
+</listitem><listitem><para>mi converrà progettare prima di fiondarmi sul codice...<itemizedlist>
+<listitem><para>nuovo documento sul PDDL</para>
+</listitem><listitem><para>una lista delle azioni PDDL e dei landmarks</para>
+</listitem><listitem><para>(ho dovuto aggiornare l&apos;UML di robocluedo rosplan, mi serviva un componente che non avevo ancora menzionato)</para>
+</listitem><listitem><para>(l&apos;idea è di fare il design dell&apos;intero PDDL sul documento, in modo da non dover fare due cose assieme, design e implementazione, nella fase di implementazione, <emphasis>perchè so quanto romperà il planner</emphasis>)</para>
+</listitem><listitem><para>pddl delle varie azioni</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e ora, implementazione<itemizedlist>
+<listitem><para>prima versione <emphasis>completamente vuota</emphasis></para>
+</listitem><listitem><para>parse ... OK (però bisogna vedere se fa il plan o no)</para>
+</listitem><listitem><para>plan ... NO ... OK domain: ```lisp (define (domain robocluedo)</para>
+<para>(:requirements ;; === PDDL1.1 === ;; :strips :typing :equality :existential-preconditions :universal-preconditions :conditional-effects :quantified-preconditions</para>
+<para>;; === PDDL2.1 === ;; :numeric-fluents :durative-actions )</para>
+<para>(:types ;; navigation system waypoint )</para>
+<para>(:predicates (stub ) (not-stub ) )</para>
+<para>(:functions</para>
+<para>)</para>
+<para>(:durative-action stub-true :parameters ( )</para>
+<para>:duration (= ?duration 0.99 )</para>
+<para>:condition (and (at start (not-stub )) )</para>
+<para>:effect (and (at start (not (not-stub ))) (at end (stub)) ) )</para>
+<para>) ``` problem: ```lisp (define (problem robocluedo-task)</para>
+<para>(:domain robocluedo)</para>
+<para>(:objects</para>
+<para>)</para>
+<para>(:init (not-stub ) )</para>
+<para>(:goal (stub ))</para>
+<para>) ``` plan (fino ad ora): ```text root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo# ./solve_popf.sh Number of literals: 2 Constructing lookup tables: Post filtering unreachable actions: No analytic limits found, not considering limit effects of goal-only operators All the ground actions in this problem are compression-safe Initial heuristic = 1.000 ;;;; Solution Found ; States evaluated: 2 ; Cost: 0.990 ; Time 0.00 0.000: (stub-true) [0.990] ```</para>
+</listitem><listitem><para>(ora, una sola azione alla volta)</para>
+</listitem><listitem><para>replan<itemizedlist>
+<listitem><para>importazione</para>
+</listitem><listitem><para>parse ... OK</para>
+</listitem><listitem><para>plan ... OK<itemizedlist>
+<listitem><para><emphasis>precondition e effect richiedono comunque l&apos;operatore and, anche se hanno un solo predicato al loro interno</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>uml del replan</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>move-to<itemizedlist>
+<listitem><para>importazione<itemizedlist>
+<listitem><para>meglio separare <computeroutput>move-to</computeroutput> dall&apos;ottenere l&apos;hint ... nuova azione <computeroutput>signal-collect-hint</computeroutput></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>parse ...</para>
+</listitem><listitem><para>plan ...</para>
+</listitem><listitem><para>uml dell&apos;azione implementata in ROS</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>signal-collect-hint<itemizedlist>
+<listitem><para>importazione</para>
+</listitem><listitem><para>parse ...</para>
+</listitem><listitem><para>plan ... OK</para>
+</listitem></itemizedlist>
+</para>
+<para>plan finora: ```text ; States evaluated: 14 ; Cost: 9.909 ; Time 0.00 0.000: (replan) [0.990] 0.991: (move-to center wp1) [0.990] 1.982: (signal-collect-hint wp1) [0.990] 2.973: (collect-hint wp1) [0.990] 3.964: (move-to wp1 wp2) [0.990] 4.955: (move-to wp2 wp3) [0.990] 5.946: (signal-collect-hint wp3) [0.990] 6.937: (collect-hint wp3) [0.990] 7.928: (move-to wp3 wp4) [0.990] 8.919: (signal-collect-hint wp4) [0.990] ``` per il goal ```lisp (:goal (and (not-dirty ) (at wp4 ) (hint-ready ) (hint-collected wp1) (hint-collected wp3 ))) ```<itemizedlist>
+<listitem><para>uml</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>move to center<itemizedlist>
+<listitem><para>importazione</para>
+</listitem><listitem><para>solve</para>
+</listitem></itemizedlist>
+</para>
+<para>ultimo output:</para>
+<para>```text </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md28">
+<title>./solve_popf.sh</title>
+<para>Number of literals: 28 Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] Post filtering unreachable actions: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] No analytic limits found, not considering limit effects of goal-only operators 93% of the ground temporal actions in this problem are compression-safe Initial heuristic = 8.000 b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6.936)b (2.000 | 7.927)b (1.000 | 8.918);;;; Solution Found ; States evaluated: 15 ; Cost: 9.909 ; Time 0.00 0.000: (replan) [0.990] 0.991: (move-to center wp1) [0.990] 1.982: (signal-collect-hint wp1) [0.990] 2.973: (collect-hint wp1) [0.990] 3.964: (move-to wp1 wp2) [0.990] 4.955: (move-to wp2 wp3) [0.990] 5.946: (signal-collect-hint wp3) [0.990] 6.937: (collect-hint wp3) [0.990] 7.928: (move-to wp3 wp4) [0.990] 8.919: (move-to-center wp4 center) [0.990] ```</para>
+<para>per il goal:</para>
+<para>```lisp (:goal (and (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center ))) ```<itemizedlist>
+<listitem><para><bold>COMMIT</bold> : &quot;working on PDDL (not yet finished)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
 <para><itemizedlist>
-<listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>
+<listitem><para>implementazione di una funzionalità per fare un clear &quot;sicuro&quot; della ontology (quello di rosplan funziona maluccio)</para>
+</listitem><listitem><para>spostare la documentazione di ROSplan nella nuova workspace di erl2</para>
+</listitem><listitem><para>come settare un goal via codice da ROSplan?</para>
+</listitem><listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>
 </listitem><listitem><para>un branch per la documentazione Sphinx</para>
 </listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>
 </listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>

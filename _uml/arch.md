@@ -37,24 +37,29 @@ package "actions dispatch" {
 }
 
 [feedback\nmanager] as FEEDBACK
-interface "feedback topic" as TOPIC_FEEDBACK
 [ROSPlan\npipeline manager] <<node>> as MANAGER
-interface "service pipeline manager" as SRV_MANAGER
+[KB interface] <<node>> as IKB
+ACTION --> IKB
 
 DISPATCH -right-> ACTION
 PDDL_DOM --> KB
 PDDL_PROB --> KB
+IKB <--> KB
 
 ACTION --> FEEDBACK
-FEEDBACK --> TOPIC_FEEDBACK
 
-PROBLEM --> MANAGER
-PLAN --> MANAGER
-PARSE --> MANAGER
-DISPATCH --> MANAGER
-
-MANAGER --> SRV_MANAGER
+PROBLEM -right-> MANAGER
+PLAN -right-> MANAGER
+PARSE -right-> MANAGER
+DISPATCH -right-> MANAGER
 }
+
+() "feedback topic" as TOPIC_FEEDBACK
+FEEDBACK --> TOPIC_FEEDBACK
+() "service pipeline manager" as SRV_MANAGER
+MANAGER --> SRV_MANAGER
+() "KB interface service" as SRV_IKB
+IKB --> SRV_IKB
 @enduml
 ```
 
