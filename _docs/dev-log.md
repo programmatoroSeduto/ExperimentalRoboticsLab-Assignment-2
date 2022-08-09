@@ -143,6 +143,25 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 	- **il mission manager non lo faccio adesso** perchè è il nodo che va a "legare" tutte le parti dell'architettura. quindi, meglio lasciarlo a quando avrò un'idea chiara
 - **COMMIT** : "uml arch first draft"
 
+---
+
+ora, iniziamo a lavorare su rosplan:
+
+- **NUOVO PACKAGE**
+	```bash
+	catkin_create_pkg robocluedo_rosplan_msgs std_msgs std_srvs diagnostic_msgs geometry_msgs nav_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs
+	```
+- documentazione del package e prima configurazione (penso userò quello che ho fatto nella precedente versione, inutile reinventare chissà che)
+- e trasferimento dei messaggi nel nuovo package (copia incolla facile facile)
+	- e compilazione ... OK
+- **NUOVO PACKAGE** 
+	```bash
+	catkin_create_pkg robocluedo_rosplan roscpp rospy std_msgs std_srvs diagnostic_msgs rosplan_dispatch_msgs rosplan_knowledge_msgs rosplan_dependencies robocluedo_rosplan_msgs
+	```
+- e primo setup del package
+- compilazione da vuoto ... OK
+- **COMMIT** : "rosplan first setup"
+
 
 
 
