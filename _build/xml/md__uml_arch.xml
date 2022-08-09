@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md__uml_arch_1autotoc_md63">
+<sect1 id="md__uml_arch_1autotoc_md68">
 <title>pkg – robocluedo_rosplan</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -67,7 +67,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md64">
+<sect1 id="md__uml_arch_1autotoc_md69">
 <title>pkg – robocluedo_movement_controller</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -102,7 +102,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md65">
+<sect1 id="md__uml_arch_1autotoc_md70">
 <title>pkg – robocluedo_armor</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -139,7 +139,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md__uml_arch_1autotoc_md66">
+<sect1 id="md__uml_arch_1autotoc_md71">
 <title>pkg – robocluedo_mission_manager</title>
 <para><programlisting filename=".uml"></programlisting> </para>
 </sect1>

@@ -113,6 +113,36 @@
     <member refid="namespaceconf_1a04c272e775af47ba3baf2be945ab445f" kind="variable"><name>plantuml</name></member>
     <member refid="namespaceconf_1abf3d1998a088118adf9f95de73a60449" kind="variable"><name>plantuml_output_format</name></member>
   </compound>
+  <compound refid="namespacerosplan__pipeline__manager" kind="namespace"><name>rosplan_pipeline_manager</name>
+    <member refid="namespacerosplan__pipeline__manager_1af67313e182b518b7e12a8bdc1b1ce928" kind="variable"><name>NODE_NAME</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a71cbb2ff94ceca4d06d83941c96a4ed1" kind="variable"><name>SRV_TIMEOUT</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a27bda4847a862497110825860172fe65" kind="variable"><name>LANDMARK_REPLAN</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a089a6aa178af0c21e96f91fafc12b140" kind="variable"><name>LANDMARK_COLLECT</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1ada8c52d91cb03cf31a3de048a25e7862" kind="variable"><name>LANDMARK_SOLVE</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a83cb0fe438a9c6b7269e7da9d40e83d0" kind="variable"><name>service_problem</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a874a50cd896e6da49b7e900cf248e68e" kind="variable"><name>cl_problem</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1af6e6c135dc0b4de72a8d674d92ba1bad" kind="variable"><name>topic_problem_instance</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a6c19d661d19be88de8b7f36ec3c8302b" kind="variable"><name>sub_problem_instance</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a847b840c2627bb3b39dbb4ab04c2f855" kind="variable"><name>problem_instance_received</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1abd457929f442acfb6ca2db21c9743747" kind="variable"><name>problem_instance_text</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a3696c8a00cb7f03fab226e938f25d8cf" kind="variable"><name>service_plan</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a8115aefae17a7281df978dad004a8420" kind="variable"><name>cl_plan</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a936075d7d32b51fda7c37d5b09644e89" kind="variable"><name>service_parse</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a52e0b3f4b63f349889ca69901270fe1c" kind="variable"><name>cl_parse</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a0a74f0075fea7d306e1190bc4624f555" kind="variable"><name>service_dispatch</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a9c2b89c0b483b7770945d18295fcb67e" kind="variable"><name>cl_dispatch</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1af7237d230c308b9eea9dabd65608740d" kind="variable"><name>topic_action_feedback</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1ae5c59ddee1e43bb080a549921a6286fc" kind="variable"><name>sub_action_feedback</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a71a38b6cda85fbe31ac9d970bd3b4ca4" kind="variable"><name>service_pipeline</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1ac68c6c0ecd9061312945ed141fb88613" kind="variable"><name>srv_pipeline</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1aa325df5cc382aa64310f31ba125c8c4e" kind="variable"><name>service_update_goal</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a54424a02475278b6dd9d11e0ed9e0ec4" kind="variable"><name>cl_update_goal</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a4a793b4099219688e197ee0097eaa2a1" kind="function"><name>cbk_problem_instance</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1ac4875cedc578142a6b03b8c721318dce" kind="function"><name>cbk_action_feedback</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" kind="function"><name>cbk_pipeline</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a4d57633fa7601b3cb704b1dd87fff920" kind="function"><name>shut_msg</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1aa3d37070be64a4f6757a93e0d53c88c2" kind="function"><name>open_cl</name></member>
+  </compound>
   <compound refid="catkin-notes_8md" kind="file"><name>catkin-notes.md</name>
   </compound>
   <compound refid="cpp-docs-template_8md" kind="file"><name>cpp-docs-template.md</name>
@@ -271,6 +301,8 @@
   </compound>
   <compound refid="rosplan-kb_8md" kind="file"><name>rosplan-kb.md</name>
   </compound>
+  <compound refid="rosplan-pipeline_8md" kind="file"><name>rosplan-pipeline.md</name>
+  </compound>
   <compound refid="kb__tools_8h" kind="file"><name>kb_tools.h</name>
     <member refid="kb__tools_8h_1a257d1e4055caccb2686196243d38b145" kind="define"><name>__H_KB_TOOLS__</name></member>
     <member refid="kb__tools_8h_1a35867bb3311de7b885b59b9d27705a5a" kind="define"><name>DEBUG_MODE_ENABLED</name></member>
@@ -292,6 +324,8 @@
   <compound refid="robocluedo_8md" kind="file"><name>robocluedo.md</name>
   </compound>
   <compound refid="simpletest_8md" kind="file"><name>simpletest.md</name>
+  </compound>
+  <compound refid="rosplan__pipeline__manager_8py" kind="file"><name>rosplan_pipeline_manager.py</name>
   </compound>
   <compound refid="kb__interface_8cpp" kind="file"><name>kb_interface.cpp</name>
     <member refid="kb__interface_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kind="define"><name>NODE_NAME</name></member>
@@ -343,6 +377,8 @@
   <compound refid="md_robocluedo_rosplan__uml_rosplan-arch" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-arch</name>
   </compound>
   <compound refid="md_robocluedo_rosplan__uml_rosplan-kb" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-kb</name>
+  </compound>
+  <compound refid="md_robocluedo_rosplan__uml_rosplan-pipeline" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-pipeline</name>
   </compound>
   <compound refid="md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo" kind="page"><name>md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo</name>
   </compound>
@@ -404,13 +440,15 @@
   </compound>
   <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
   </compound>
+  <compound refid="dir_e1cd440dd794230a2b27c099159b1776" kind="dir"><name>robocluedo_rosplan/scripts</name>
+  </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
   </compound>
   <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
   </compound>
-  <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
-  </compound>
   <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
+  </compound>
+  <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
   </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
   </compound>

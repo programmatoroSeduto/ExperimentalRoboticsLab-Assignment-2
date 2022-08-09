@@ -16,6 +16,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   std_srvs
   message_generation
+  message_runtime
 )
 
 ## System dependencies are found with CMake's conventions

@@ -132,7 +132,7 @@ lavoro su aRMOR, estrazione del codice dal vecchio assignment, vedi [erl1](https
 
 ---
 
-## 09/08/2022 -- 
+## 09/08/2022 -- modello PDDL e ROSPlan package
 
 - serve uno *schema completo* dell'applicazione prima di iniziare
 	- components robocluedo rosplan (solo bozza)
@@ -569,9 +569,83 @@ attributes:
 - direi che funziona! bene bene bene
 - **COMMIT** : "kb interface first version (seems stable)"
 
+---
+
+sperando che il nodo  appena implementato funzioni a dovere senza sorprese, andiamo avanti col pipeline manager. *stavolta lo voglio implementare in Python*.
+
+- **NUOVO NODO** : rosplan_pipeline_manager.py
+	- primo template del nodo (penso stavolta farò un nodo semplice, procedurale, tanto sono solo servizi)
+	- subito, UML del nodo e degli elementi principali di ROSplan
+	- ora, *usando l'UML che ho appena fatto*, implemento i servizi per il pipeline manager (manca il feedback per ora)
+	- ho preparato un minimo template per l'apertura dei client in ROSpy:
+		```py
+		def open_cl( cl_name, cl_type, SRV_TIMEOUT=60 ):
+			'''open a client
+			'''
+			
+			global NODE_NAME
+			
+			rospy.loginfo(f"({NODE_NAME}) client: {cl_name} ... ")
+			try:
+				rospy.wait_for_service( cl_name, timeout=SRV_TIMEOUT )
+				
+			except ROSException as e:
+				rospy.logwarn(f"({NODE_NAME}) client: {cl_name} UNABLE TO CONTACT within the timeout ({SRV_TIMEOUT}s) cause: {e}")
+				raise e
+				
+			cl_this = rospy.ServiceProxy( cl_name, cl_type )
+			rospy.loginfo("OK")
+			
+			rospy.sleep(rospy.Duration(0.75))
+			
+			return cl_this
+		```
+	- ora che le interfacce le abbiamo, abbozzo un UML del nodo (mancano ancora parecchie cose)
+- vediamo un po' di riadattare se possibile il vecchio sistema di feedback ... possibile?
+	- posso ... riadattare l'idea, ma il vecchio sistema in se va riadattato
+	- partiamo dallo scrivere il messaggio di feedback
+	- ora il servizio implementato dal pipeline manager
+	- compila? compila, dopo qualche bestemmia
+		- ricorda di inserire nel cmake anche *message_runtime* oltre a *message_generation*, altrimenti non si riesce ad importare i messaggi nei servizi nell'ambito dello stesso package
+	- (voglio mantenere l'idea del feedback da C++)
+	- aggiornamento dell'UML del nodo includendo anche il feedback manager
+	- e apriamo il servizio e il topic
+- adesso che il nodo ha tutte le interfacce esposte, lavoro per aggiungere le funzionalità una ad una
+	- *caricamento del problema*
+		- serve ancora una subscription, altrimenti non riesco a capire quando il load non ha avuto successo
+		- prima di andare avanti, UML (sarà lunga stasera...)
+		- ovviamente manca anche la parte in cui scrivo i landmark nel problema... aggiungere
+		- e dopo averla implementata, aggiornare l'UML
+	- e test intermedio (mai fidarsi di Python)
+		```
+		# shell 1
+		roslaunch robocluedo_rosplan load_rosplan.launch
+		
+		# shell 2
+		rosrun robocluedo_rosplan kb_interface
+		
+		# shell 3
+		rosrun robocluedo_rosplan rosplan_pipeline_manager.py
+		
+		# shell 4
+		rosservice list | grep robocluedo
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: false, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}" 
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}" 
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 1}" 
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 2}" 
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 3}" 
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: -1}" 
+		```
+- *per oggi ho sofferto abbastanza*
+- **COMMIT** : "working on pipeline manager (adding functionalities)"
 
 
-	
 
 
 

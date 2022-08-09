@@ -10,20 +10,11 @@ diagnostic_msgs/KeyValue[] parameters
 
 ## === plan statistics
 
-# inconsistency
-bool kb_not_consistent
-
-# problem solvable (false: not solvable)
-bool problem_solvable
-
-# problem solvable by exclusion
-bool by_exclusion
-
 # goal achieved, problem solved
 bool goal_achieved
 
-# need for replanning
-bool need_replan
+# if a failure occurred
+bool failure
 
 # failure of the navigation system
 bool failure_nav_system

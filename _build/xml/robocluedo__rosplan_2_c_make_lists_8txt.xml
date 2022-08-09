@@ -196,10 +196,10 @@
 <codeline lineno="187"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="188"><highlight class="stringliteral">##<sp/>Mark<sp/>executable<sp/>scripts<sp/>(Python<sp/>etc.)<sp/>for<sp/>installation</highlight></codeline>
 <codeline lineno="189"><highlight class="stringliteral">##<sp/>in<sp/>contrast<sp/>to<sp/>setup.py,<sp/>you<sp/>can<sp/>choose<sp/>the<sp/>destination</highlight></codeline>
-<codeline lineno="190"><highlight class="stringliteral">#<sp/>catkin_install_python(PROGRAMS</highlight></codeline>
-<codeline lineno="191"><highlight class="stringliteral">#<sp/><sp/><sp/>scripts/my_python_script</highlight></codeline>
-<codeline lineno="192"><highlight class="stringliteral">#<sp/><sp/><sp/>DESTINATION<sp/>${CATKIN_PACKAGE_BIN_DESTINATION}</highlight></codeline>
-<codeline lineno="193"><highlight class="stringliteral">#<sp/>)</highlight></codeline>
+<codeline lineno="190"><highlight class="stringliteral">catkin_install_python(PROGRAMS</highlight></codeline>
+<codeline lineno="191"><highlight class="stringliteral"><sp/><sp/>scripts/rosplan_pipeline_manager.py</highlight></codeline>
+<codeline lineno="192"><highlight class="stringliteral"><sp/><sp/>DESTINATION<sp/>${CATKIN_PACKAGE_BIN_DESTINATION}</highlight></codeline>
+<codeline lineno="193"><highlight class="stringliteral">)</highlight></codeline>
 <codeline lineno="194"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="195"><highlight class="stringliteral">##<sp/>Mark<sp/>executables<sp/>for<sp/>installation</highlight></codeline>
 <codeline lineno="196"><highlight class="stringliteral">##<sp/>See<sp/>http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html</highlight></codeline>

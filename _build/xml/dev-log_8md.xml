@@ -141,7 +141,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>09/08/2022<sp/>--<sp/></highlight></codeline>
+<codeline><highlight class="normal">##<sp/>09/08/2022<sp/>--<sp/>modello<sp/>PDDL<sp/>e<sp/>ROSPlan<sp/>package</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>serve<sp/>uno<sp/>*schema<sp/>completo*<sp/>dell&apos;applicazione<sp/>prima<sp/>di<sp/>iniziare</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>components<sp/>robocluedo<sp/>rosplan<sp/>(solo<sp/>bozza)</highlight></codeline>
@@ -578,9 +578,83 @@
 <codeline><highlight class="normal">-<sp/>direi<sp/>che<sp/>funziona!<sp/>bene<sp/>bene<sp/>bene</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;kb<sp/>interface<sp/>first<sp/>version<sp/>(seems<sp/>stable)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">sperando<sp/>che<sp/>il<sp/>nodo<sp/><sp/>appena<sp/>implementato<sp/>funzioni<sp/>a<sp/>dovere<sp/>senza<sp/>sorprese,<sp/>andiamo<sp/>avanti<sp/>col<sp/>pipeline<sp/>manager.<sp/>*stavolta<sp/>lo<sp/>voglio<sp/>implementare<sp/>in<sp/>Python*.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>primo<sp/>template<sp/>del<sp/>nodo<sp/>(penso<sp/>stavolta<sp/>farò<sp/>un<sp/>nodo<sp/>semplice,<sp/>procedurale,<sp/>tanto<sp/>sono<sp/>solo<sp/>servizi)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>subito,<sp/>UML<sp/>del<sp/>nodo<sp/>e<sp/>degli<sp/>elementi<sp/>principali<sp/>di<sp/>ROSplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora,<sp/>*usando<sp/>l&apos;UML<sp/>che<sp/>ho<sp/>appena<sp/>fatto*,<sp/>implemento<sp/>i<sp/>servizi<sp/>per<sp/>il<sp/>pipeline<sp/>manager<sp/>(manca<sp/>il<sp/>feedback<sp/>per<sp/>ora)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>preparato<sp/>un<sp/>minimo<sp/>template<sp/>per<sp/>l&apos;apertura<sp/>dei<sp/>client<sp/>in<sp/>ROSpy:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/>open_cl(<sp/>cl_name,<sp/>cl_type,<sp/>SRV_TIMEOUT=60<sp/>):</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;&apos;&apos;open<sp/>a<sp/>client</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global<sp/>NODE_NAME</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.loginfo(f&quot;({NODE_NAME})<sp/>client:<sp/>{cl_name}<sp/>...<sp/>&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>try:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.wait_for_service(<sp/>cl_name,<sp/>timeout=SRV_TIMEOUT<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>except<sp/>ROSException<sp/>as<sp/>e:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.logwarn(f&quot;({NODE_NAME})<sp/>client:<sp/>{cl_name}<sp/>UNABLE<sp/>TO<sp/>CONTACT<sp/>within<sp/>the<sp/>timeout<sp/>({SRV_TIMEOUT}s)<sp/>cause:<sp/>{e}&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>raise<sp/>e</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl_this<sp/>=<sp/>rospy.ServiceProxy(<sp/>cl_name,<sp/>cl_type<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.loginfo(&quot;OK&quot;)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rospy.sleep(rospy.Duration(0.75))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>cl_this</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>che<sp/>le<sp/>interfacce<sp/>le<sp/>abbiamo,<sp/>abbozzo<sp/>un<sp/>UML<sp/>del<sp/>nodo<sp/>(mancano<sp/>ancora<sp/>parecchie<sp/>cose)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>vediamo<sp/>un<sp/>po&apos;<sp/>di<sp/>riadattare<sp/>se<sp/>possibile<sp/>il<sp/>vecchio<sp/>sistema<sp/>di<sp/>feedback<sp/>...<sp/>possibile?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>...<sp/>riadattare<sp/>l&apos;idea,<sp/>ma<sp/>il<sp/>vecchio<sp/>sistema<sp/>in<sp/>se<sp/>va<sp/>riadattato</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>partiamo<sp/>dallo<sp/>scrivere<sp/>il<sp/>messaggio<sp/>di<sp/>feedback</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>il<sp/>servizio<sp/>implementato<sp/>dal<sp/>pipeline<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila,<sp/>dopo<sp/>qualche<sp/>bestemmia</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ricorda<sp/>di<sp/>inserire<sp/>nel<sp/>cmake<sp/>anche<sp/>*message_runtime*<sp/>oltre<sp/>a<sp/>*message_generation*,<sp/>altrimenti<sp/>non<sp/>si<sp/>riesce<sp/>ad<sp/>importare<sp/>i<sp/>messaggi<sp/>nei<sp/>servizi<sp/>nell&apos;ambito<sp/>dello<sp/>stesso<sp/>package</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(voglio<sp/>mantenere<sp/>l&apos;idea<sp/>del<sp/>feedback<sp/>da<sp/>C++)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>dell&apos;UML<sp/>del<sp/>nodo<sp/>includendo<sp/>anche<sp/>il<sp/>feedback<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>apriamo<sp/>il<sp/>servizio<sp/>e<sp/>il<sp/>topic</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>adesso<sp/>che<sp/>il<sp/>nodo<sp/>ha<sp/>tutte<sp/>le<sp/>interfacce<sp/>esposte,<sp/>lavoro<sp/>per<sp/>aggiungere<sp/>le<sp/>funzionalità<sp/>una<sp/>ad<sp/>una</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*caricamento<sp/>del<sp/>problema*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>serve<sp/>ancora<sp/>una<sp/>subscription,<sp/>altrimenti<sp/>non<sp/>riesco<sp/>a<sp/>capire<sp/>quando<sp/>il<sp/>load<sp/>non<sp/>ha<sp/>avuto<sp/>successo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>andare<sp/>avanti,<sp/>UML<sp/>(sarà<sp/>lunga<sp/>stasera...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ovviamente<sp/>manca<sp/>anche<sp/>la<sp/>parte<sp/>in<sp/>cui<sp/>scrivo<sp/>i<sp/>landmark<sp/>nel<sp/>problema...<sp/>aggiungere</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e<sp/>dopo<sp/>averla<sp/>implementata,<sp/>aggiornare<sp/>l&apos;UML</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>test<sp/>intermedio<sp/>(mai<sp/>fidarsi<sp/>di<sp/>Python)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>list<sp/>|<sp/>grep<sp/>robocluedo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>false,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>2}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>3}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>false,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>-1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*per<sp/>oggi<sp/>ho<sp/>sofferto<sp/>abbastanza*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(adding<sp/>functionalities)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UML – robocluedo rosplan &mdash; RobotCLuedo 1.0.0 documentation</title>
+  <title>UML – ROSPlan pipeline &mdash; RobotCLuedo 1.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="UML – ROSPlann Knowledge base – formal ROS description" href="rosplan-kb.html" />
-    <link rel="prev" title="PDDL and ROSPlan" href="../_docs/pddl-and-rosplan.html" /> 
+    <link rel="next" title="PKG DOCS – robocluedo_rosplan_msgs" href="../../robocluedo_rosplan_msgs/index.html" />
+    <link rel="prev" title="UML – ROSPlann Knowledge base – formal ROS description" href="rosplan-kb.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -62,9 +62,9 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PKG DOCS – robocluedo_rosplan</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../_docs/new-robocluedo.html">PDDL description – the new RoboCLuedo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_docs/pddl-and-rosplan.html">PDDL and ROSPlan</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">UML – robocluedo rosplan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rosplan-arch.html">UML – robocluedo rosplan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rosplan-kb.html">UML – ROSPlann Knowledge base – formal ROS description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rosplan-pipeline.html">UML – ROSPlan pipeline</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">UML – ROSPlan pipeline</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
@@ -104,9 +104,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">PKG DOCS – robocluedo_rosplan</a> &raquo;</li>
-      <li>UML – robocluedo rosplan</li>
+      <li>UML – ROSPlan pipeline</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../../_sources/robocluedo_rosplan/_uml/rosplan-arch.md.txt" rel="nofollow"> View page source</a>
+            <a href="../../_sources/robocluedo_rosplan/_uml/rosplan-pipeline.md.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -114,80 +114,121 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="uml-robocluedo-rosplan">
-<h1>UML – robocluedo rosplan<a class="headerlink" href="#uml-robocluedo-rosplan" title="Permalink to this heading"></a></h1>
-<div class="section" id="simple-description">
-<h2>simple description<a class="headerlink" href="#simple-description" title="Permalink to this heading"></a></h2>
-<p>nodes and components:</p>
-<ul class="simple">
-<li><p>knowledge base</p></li>
-<li><p>problem interface</p></li>
-<li><p>planning interface</p></li>
-<li><p>parsing interface</p></li>
-<li><p>plan dispatcher</p></li>
-<li><p>… actions …</p></li>
-<li><p>feedback manager</p></li>
-<li><p>rosplan kb interface</p></li>
-<li><p>rosplan pipeline manager</p></li>
-</ul>
+  <div class="section" id="uml-rosplan-pipeline">
+<h1>UML – ROSPlan pipeline<a class="headerlink" href="#uml-rosplan-pipeline" title="Permalink to this heading"></a></h1>
+<div class="section" id="schema-of-rosplan">
+<h2>schema of ROSPlan<a class="headerlink" href="#schema-of-rosplan" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-20800ddf017905e8c447db5dbfae9c597a529030.svg" type="image/svg+xml" style="width:1027px;height:1149px;background:#FFFFFF;">
-<img src="../../_images/plantuml-20800ddf017905e8c447db5dbfae9c597a529030.png" alt="&#64;startuml
+<object data="../../_images/plantuml-777c171198d50beec23eb0bfad8e08f6cfea862b.svg" type="image/svg+xml" style="width:829px;height:892px;background:#FFFFFF;">
+<img src="../../_images/plantuml-777c171198d50beec23eb0bfad8e08f6cfea862b.png" alt="&#64;startuml
 
-''' DIAGRAM INFOS
-title &quot;robocluedo rosplan&quot;
-skinparam Padding 8
+''' INFOS
+title ROSPlan main pipeline
+skinparam Padding 10
+allow_mixing
 
 
-''' DIAGRAM ELEMENTS
-package &quot;robocluedo rosplan&quot; {
+''' COMPONENTS
+file &quot;robolcuedo\nproblem&quot; &lt;&lt;PDDL&gt;&gt; as PROBLEM
+file &quot;robolcuedo\ndomain&quot; &lt;&lt;PDDL&gt;&gt; as DOMAIN
 
-file &quot;pddl\ndomain&quot; as PDDL_DOM
-file &quot;pddl\nproblem&quot; as PDDL_PROB
-
-package &quot;ROSplan&quot; {
-	database &quot;knowledge base&quot; &lt;&lt;ROSPlan&gt;&gt; as KB
-	[problem interface] &lt;&lt;ROSPlan&gt;&gt; as PROBLEM
-	[planning interface] &lt;&lt;ROSPlan&gt;&gt; as PLAN
-	[parsing interface] &lt;&lt;ROSPlan&gt;&gt; as PARSE
-	[plan dispatcher] &lt;&lt;ROSPlan&gt;&gt; as DISPATCH
-
-	KB -right-&gt; PROBLEM
-	PROBLEM -down-&gt; PLAN
-	PLAN -down-&gt; PARSE
-	KB -right- PARSE
-	PARSE -down-&gt; DISPATCH
-	KB -left- DISPATCH
+package &quot;ROSPlan&quot;{
+  database &quot;Knowledge Base&quot; &lt;&lt;ROSPlan&gt;&gt; as RP_KB
+  component &quot;Problem Interface&quot; &lt;&lt;ROSPlan&gt;&gt; as RP_PROBLEM
+  component &quot;Planning Interface&quot; &lt;&lt;ROSPlan&gt;&gt; as RP_PLAN
+  component &quot;Plan Parsing&quot; &lt;&lt;ROSPlan&gt;&gt; as RP_PARSE
+  component &quot;Plan Dispatcher&quot; &lt;&lt;ROSPlan&gt;&gt; as RP_DISPATCH
+  
+  RP_KB -right-&gt; RP_PROBLEM
+  RP_PROBLEM --&gt; RP_PLAN
+  RP_PLAN --&gt; RP_PARSE
+  RP_KB --&gt; RP_PARSE
+  RP_PARSE --&gt; RP_DISPATCH
+  RP_KB --&gt; RP_DISPATCH
 }
 
-package &quot;actions dispatch&quot; {
-	[action] as ACTION
-}
+''' INTERFACES
+() &quot;/rosplan_problem_interface/problem_generation_server&quot; as SRV_PROBLEM_TRIG
+RP_PROBLEM &quot;srv&quot; -right-&gt; SRV_PROBLEM_TRIG
+note on link : std_srvs/Empty
 
-[feedback\nmanager] as FEEDBACK
-[ROSPlan\npipeline manager] &lt;&lt;node&gt;&gt; as MANAGER
-[KB interface] &lt;&lt;node&gt;&gt; as IKB
-ACTION --&gt; IKB
+() &quot;/rosplan_planner_interface/planning_server&quot; as SRV_PLAN_TRIG
+RP_PLAN &quot;srv&quot; -right-&gt; SRV_PLAN_TRIG
+note on link : std_srvs/Empty
 
-DISPATCH -right-&gt; ACTION
-PDDL_DOM --&gt; KB
-PDDL_PROB --&gt; KB
-IKB &lt;--&gt; KB
+() &quot;rosservice call /rosplan_parsing_interface/parse_plan&quot; as SRV_PARSE_TRIG
+RP_PARSE &quot;srv&quot; -right-&gt; SRV_PARSE_TRIG
+note on link : std_srvs/Empty
 
-ACTION --&gt; FEEDBACK
+() &quot;/rosplan_plan_dispatcher/dispatch_plan&quot; as SRV_DISPATCH_TRIG
+RP_DISPATCH &quot;srv&quot; -right-&gt; SRV_DISPATCH_TRIG
+note on link : rosplan_dispatch_msgs/DispatchService
 
-PROBLEM -right-&gt; MANAGER
-PLAN -right-&gt; MANAGER
-PARSE -right-&gt; MANAGER
-DISPATCH -right-&gt; MANAGER
-}
+''' CONNECTIONS
+RP_KB &lt;-up- PROBLEM
+RP_KB &lt;-up- DOMAIN
 
-() &quot;feedback topic&quot; as TOPIC_FEEDBACK
-FEEDBACK --&gt; TOPIC_FEEDBACK
-() &quot;service pipeline manager&quot; as SRV_MANAGER
-MANAGER --&gt; SRV_MANAGER
-() &quot;KB interface service&quot; as SRV_IKB
-IKB --&gt; SRV_IKB
+&#64;enduml"/>
+
+</object></p>
+<p>message <strong>rosplan_dispatch_msgs/DispatchService</strong> :</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>---
+bool success
+bool goal_achieved
+</pre></div>
+</div>
+</div>
+<div class="section" id="schema-rosplan-pipeline-manager">
+<h2>SCHEMA – rosplan_pipeline_manager<a class="headerlink" href="#schema-rosplan-pipeline-manager" title="Permalink to this heading"></a></h2>
+<p class="plantuml">
+<object data="../../_images/plantuml-63cc233c603f86a2672798479d24ac0d94fa81e4.svg" type="image/svg+xml" style="width:2208px;height:395px;background:#FFFFFF;">
+<img src="../../_images/plantuml-63cc233c603f86a2672798479d24ac0d94fa81e4.png" alt="&#64;startuml
+
+''' INFOS
+title ROSPlan main pipeline
+skinparam Padding 10
+allow_mixing
+
+
+''' COMPONENTS
+component &quot;rosplan \n pipeline manager&quot; &lt;&lt;RoboCLuedo&gt;&gt; as RCL_PIPELINE
+
+''' INTERFACES
+() &quot;/rosplan_problem_interface/problem_generation_server&quot; as SRV_PROBLEM_TRIG
+RCL_PIPELINE &quot;cl&quot; &lt;-- SRV_PROBLEM_TRIG
+note on link : std_srvs/Empty
+
+() &quot;/rosplan_planner_interface/planning_server&quot; as SRV_PLAN_TRIG
+RCL_PIPELINE &quot;cl&quot; &lt;-- SRV_PLAN_TRIG
+note on link : std_srvs/Empty
+
+() &quot;rosservice call /rosplan_parsing_interface/parse_plan&quot; as SRV_PARSE_TRIG
+RCL_PIPELINE &quot;cl&quot; &lt;-- SRV_PARSE_TRIG
+note on link : std_srvs/Empty
+
+() &quot;/rosplan_plan_dispatcher/dispatch_plan&quot; as SRV_DISPATCH_TRIG
+RCL_PIPELINE &quot;cl&quot; &lt;-- SRV_DISPATCH_TRIG
+note on link : rosplan_dispatch_msgs/DispatchService
+
+() &quot;/update_goal&quot; as SRV_UPDATE_GOAL
+RCL_PIPELINE &quot;cl&quot; &lt;-- SRV_UPDATE_GOAL
+note on link : robocluedo_rosplan_msgs/UpdateGoal
+
+() &quot;/robocluedo/action_feedback&quot; as TOPIC_ACT_FEEDBACK
+RCL_PIPELINE &quot;sub&quot; &lt;-left- TOPIC_ACT_FEEDBACK
+note on link : robocluedo_rosplan_msgs/ActionFeedback
+
+() &quot;/rosplan_problem_interface/problem_instance&quot; as TOPIC_PROBLEM_INSTANCE
+RCL_PIPELINE &quot;sub&quot; &lt;-- TOPIC_PROBLEM_INSTANCE
+note on link : std_msgs/String
+
+() &quot;/robocluedo/pipeline_manager&quot; as SRV_PIPELINE
+RCL_PIPELINE &quot;srv&quot; -right-&gt; SRV_PIPELINE
+note on link : robocluedo_rosplan_msgs/RosplanPipelineManagerService
+
+''' CONNECTIONS
+
+
 &#64;enduml"/>
 
 </object></p>
@@ -198,8 +239,8 @@ IKB --&gt; SRV_IKB
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../_docs/pddl-and-rosplan.html" class="btn btn-neutral float-left" title="PDDL and ROSPlan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="rosplan-kb.html" class="btn btn-neutral float-right" title="UML – ROSPlann Knowledge base – formal ROS description" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="rosplan-kb.html" class="btn btn-neutral float-left" title="UML – ROSPlann Knowledge base – formal ROS description" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../robocluedo_rosplan_msgs/index.html" class="btn btn-neutral float-right" title="PKG DOCS – robocluedo_rosplan_msgs" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

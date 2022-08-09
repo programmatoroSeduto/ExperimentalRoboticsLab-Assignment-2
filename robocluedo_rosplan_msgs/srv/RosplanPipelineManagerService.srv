@@ -2,63 +2,48 @@
 
 ## Request
 
-## === operations
+# landmarks
+int32 LANDMARK_NONE = -1
+int32 LANDMARK_REPLAN = 0
+int32 LANDMARK_COLLECT = 1
+int32 LANDMARK_SOLVE = 2
 
-# run the problem instance, then plan and parse
-bool load_and_plan
+# load the problem
+bool load_problem
 
-# run the dispatcher
+# try to solve the problem with the planner
+bool solve_problem
+
+# try to parse the plan
+bool parse_plan
+
+# execute the plan
 bool execute_plan
 
-# number of max loops given by the mission manager
-bool use_max_moves
-
-int32 max_moves
+# landmark to execute
+int32 landmark
 
 ---
 
 ## Response
 
-## === load_and_plan request
-# each one is true when the service call succeeds
+# success or failure?
+bool success
 
-bool plan_loaded
+# loading phase success
+bool success_load_problem
 
-bool solution_found
+# planner execution success
+bool success_solve_problem
 
-bool plan_parsed
+# planner not able to solve the problem
+bool problem_not_solvable
 
-## === plan execution request
+# parsing execution success
+bool success_parse_plan
 
-# reserved for any technical problem
-bool exec_success
+# execution phase success
+bool success_execute_plan
 
-# goal status
-bool goal_achieved
-
-## === plan execution statistics
-
-# inconsistency
-bool kb_not_consistent
-
-# problem solvable (false: not solvable)
-bool problem_solvable
-
-# problem solvable by exclusion
-bool by_exclusion
-
-# need for replanning
-bool need_replan
-
-# failure of the navigation system
-bool failure_nav_system
-
-# failure of the manipulator
-bool failure_manipulation
-
-# a very particular case of error
-bool not_goal_achievend_and_not_feedback_received
-
-# details about the response as string
-string details
-
+# the last feedback received from the system
+ActionFeedback feedback

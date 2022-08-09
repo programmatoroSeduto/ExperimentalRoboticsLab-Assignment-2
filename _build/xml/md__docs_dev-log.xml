@@ -127,7 +127,7 @@
 </para>
 </sect1>
 <sect1 id="md__docs_dev-log_1autotoc_md25">
-<title>09/08/2022 –</title>
+<title>09/08/2022 – modello PDDL e ROSPlan package</title>
 <para><itemizedlist>
 <listitem><para>serve uno <emphasis>schema completo</emphasis> dell&apos;applicazione prima di iniziare<itemizedlist>
 <listitem><para>components robocluedo rosplan (solo bozza)</para>
@@ -471,6 +471,76 @@
 <para>```<itemizedlist>
 <listitem><para>direi che funziona! bene bene bene</para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;kb interface first version (seems stable)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>sperando che il nodo appena implementato funzioni a dovere senza sorprese, andiamo avanti col pipeline manager. <emphasis>stavolta lo voglio implementare in Python</emphasis>.</para>
+<para><itemizedlist>
+<listitem><para><bold>NUOVO NODO</bold> : <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref><itemizedlist>
+<listitem><para>primo template del nodo (penso stavolta farò un nodo semplice, procedurale, tanto sono solo servizi)</para>
+</listitem><listitem><para>subito, UML del nodo e degli elementi principali di ROSplan</para>
+</listitem><listitem><para>ora, <emphasis>usando l&apos;UML che ho appena fatto</emphasis>, implemento i servizi per il pipeline manager (manca il feedback per ora)</para>
+</listitem><listitem><para>ho preparato un minimo template per l&apos;apertura dei client in ROSpy: ```py def open_cl( cl_name, cl_type, SRV_TIMEOUT=60 ): &apos;&apos;&apos;open a client &apos;&apos;&apos;</para>
+<para>global NODE_NAME</para>
+<para>rospy.loginfo(f&quot;({NODE_NAME}) client: {cl_name} ... &quot;) try: rospy.wait_for_service( cl_name, timeout=SRV_TIMEOUT )</para>
+<para>except ROSException as e: rospy.logwarn(f&quot;({NODE_NAME}) client: {cl_name} UNABLE TO CONTACT within the timeout ({SRV_TIMEOUT}s) cause: {e}&quot;) raise e</para>
+<para>cl_this = rospy.ServiceProxy( cl_name, cl_type ) rospy.loginfo(&quot;OK&quot;)</para>
+<para>rospy.sleep(rospy.Duration(0.75))</para>
+<para>return cl_this ```</para>
+</listitem><listitem><para>ora che le interfacce le abbiamo, abbozzo un UML del nodo (mancano ancora parecchie cose)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>vediamo un po&apos; di riadattare se possibile il vecchio sistema di feedback ... possibile?<itemizedlist>
+<listitem><para>posso ... riadattare l&apos;idea, ma il vecchio sistema in se va riadattato</para>
+</listitem><listitem><para>partiamo dallo scrivere il messaggio di feedback</para>
+</listitem><listitem><para>ora il servizio implementato dal pipeline manager</para>
+</listitem><listitem><para>compila? compila, dopo qualche bestemmia<itemizedlist>
+<listitem><para>ricorda di inserire nel cmake anche <emphasis>message_runtime</emphasis> oltre a <emphasis>message_generation</emphasis>, altrimenti non si riesce ad importare i messaggi nei servizi nell&apos;ambito dello stesso package</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(voglio mantenere l&apos;idea del feedback da C++)</para>
+</listitem><listitem><para>aggiornamento dell&apos;UML del nodo includendo anche il feedback manager</para>
+</listitem><listitem><para>e apriamo il servizio e il topic</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>adesso che il nodo ha tutte le interfacce esposte, lavoro per aggiungere le funzionalità una ad una<itemizedlist>
+<listitem><para><emphasis>caricamento del problema</emphasis><itemizedlist>
+<listitem><para>serve ancora una subscription, altrimenti non riesco a capire quando il load non ha avuto successo</para>
+</listitem><listitem><para>prima di andare avanti, UML (sarà lunga stasera...)</para>
+</listitem><listitem><para>ovviamente manca anche la parte in cui scrivo i landmark nel problema... aggiungere</para>
+</listitem><listitem><para>e dopo averla implementata, aggiornare l&apos;UML</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e test intermedio (mai fidarsi di Python) ``` </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md36">
+<title>shell 1</title>
+<para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md37">
+<title>shell 2</title>
+<para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md38">
+<title>shell 3</title>
+<para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md39">
+<title>shell 4</title>
+<para>rosservice list | grep robocluedo</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: false, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 1}&quot;</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 2}&quot;</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 3}&quot;</para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: -1}&quot; ```<itemizedlist>
+<listitem><para><emphasis>per oggi ho sofferto abbastanza</emphasis></para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on pipeline manager (adding functionalities)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

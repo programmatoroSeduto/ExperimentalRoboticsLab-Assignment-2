@@ -255,8 +255,8 @@ Invoking &quot;make cmake_check_build_system&quot; failed
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="id1">
-<h2>09/08/2022 –<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<div class="section" id="modello-pddl-e-rosplan-package">
+<h2>09/08/2022 – modello PDDL e ROSPlan package<a class="headerlink" href="#modello-pddl-e-rosplan-package" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>serve uno <em>schema completo</em> dell’applicazione prima di iniziare</p>
 <ul>
@@ -752,6 +752,98 @@ rosservice call /rosplan_problem_interface/problem_generation_server
 </li>
 <li><p>direi che funziona! bene bene bene</p></li>
 <li><p><strong>COMMIT</strong> : “kb interface first version (seems stable)”</p></li>
+</ul>
+<hr class="docutils" />
+<p>sperando che il nodo  appena implementato funzioni a dovere senza sorprese, andiamo avanti col pipeline manager. <em>stavolta lo voglio implementare in Python</em>.</p>
+<ul>
+<li><p><strong>NUOVO NODO</strong> : rosplan_pipeline_manager.py</p>
+<ul>
+<li><p>primo template del nodo (penso stavolta farò un nodo semplice, procedurale, tanto sono solo servizi)</p></li>
+<li><p>subito, UML del nodo e degli elementi principali di ROSplan</p></li>
+<li><p>ora, <em>usando l’UML che ho appena fatto</em>, implemento i servizi per il pipeline manager (manca il feedback per ora)</p></li>
+<li><p>ho preparato un minimo template per l’apertura dei client in ROSpy:</p>
+<div class="highlight-py notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">open_cl</span><span class="p">(</span> <span class="n">cl_name</span><span class="p">,</span> <span class="n">cl_type</span><span class="p">,</span> <span class="n">SRV_TIMEOUT</span><span class="o">=</span><span class="mi">60</span> <span class="p">):</span>
+	<span class="sd">&#39;&#39;&#39;open a client</span>
+<span class="sd">	&#39;&#39;&#39;</span>
+	
+	<span class="k">global</span> <span class="n">NODE_NAME</span>
+	
+	<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">NODE_NAME</span><span class="si">}</span><span class="s2">) client: </span><span class="si">{</span><span class="n">cl_name</span><span class="si">}</span><span class="s2"> ... &quot;</span><span class="p">)</span>
+	<span class="k">try</span><span class="p">:</span>
+		<span class="n">rospy</span><span class="o">.</span><span class="n">wait_for_service</span><span class="p">(</span> <span class="n">cl_name</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="n">SRV_TIMEOUT</span> <span class="p">)</span>
+		
+	<span class="k">except</span> <span class="n">ROSException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+		<span class="n">rospy</span><span class="o">.</span><span class="n">logwarn</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;(</span><span class="si">{</span><span class="n">NODE_NAME</span><span class="si">}</span><span class="s2">) client: </span><span class="si">{</span><span class="n">cl_name</span><span class="si">}</span><span class="s2"> UNABLE TO CONTACT within the timeout (</span><span class="si">{</span><span class="n">SRV_TIMEOUT</span><span class="si">}</span><span class="s2">s) cause: </span><span class="si">{</span><span class="n">e</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+		<span class="k">raise</span> <span class="n">e</span>
+		
+	<span class="n">cl_this</span> <span class="o">=</span> <span class="n">rospy</span><span class="o">.</span><span class="n">ServiceProxy</span><span class="p">(</span> <span class="n">cl_name</span><span class="p">,</span> <span class="n">cl_type</span> <span class="p">)</span>
+	<span class="n">rospy</span><span class="o">.</span><span class="n">loginfo</span><span class="p">(</span><span class="s2">&quot;OK&quot;</span><span class="p">)</span>
+	
+	<span class="n">rospy</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="n">rospy</span><span class="o">.</span><span class="n">Duration</span><span class="p">(</span><span class="mf">0.75</span><span class="p">))</span>
+	
+	<span class="k">return</span> <span class="n">cl_this</span>
+</pre></div>
+</div>
+</li>
+<li><p>ora che le interfacce le abbiamo, abbozzo un UML del nodo (mancano ancora parecchie cose)</p></li>
+</ul>
+</li>
+<li><p>vediamo un po’ di riadattare se possibile il vecchio sistema di feedback … possibile?</p>
+<ul class="simple">
+<li><p>posso … riadattare l’idea, ma il vecchio sistema in se va riadattato</p></li>
+<li><p>partiamo dallo scrivere il messaggio di feedback</p></li>
+<li><p>ora il servizio implementato dal pipeline manager</p></li>
+<li><p>compila? compila, dopo qualche bestemmia</p>
+<ul>
+<li><p>ricorda di inserire nel cmake anche <em>message_runtime</em> oltre a <em>message_generation</em>, altrimenti non si riesce ad importare i messaggi nei servizi nell’ambito dello stesso package</p></li>
+</ul>
+</li>
+<li><p>(voglio mantenere l’idea del feedback da C++)</p></li>
+<li><p>aggiornamento dell’UML del nodo includendo anche il feedback manager</p></li>
+<li><p>e apriamo il servizio e il topic</p></li>
+</ul>
+</li>
+<li><p>adesso che il nodo ha tutte le interfacce esposte, lavoro per aggiungere le funzionalità una ad una</p>
+<ul>
+<li><p><em>caricamento del problema</em></p>
+<ul class="simple">
+<li><p>serve ancora una subscription, altrimenti non riesco a capire quando il load non ha avuto successo</p></li>
+<li><p>prima di andare avanti, UML (sarà lunga stasera…)</p></li>
+<li><p>ovviamente manca anche la parte in cui scrivo i landmark nel problema… aggiungere</p></li>
+<li><p>e dopo averla implementata, aggiornare l’UML</p></li>
+</ul>
+</li>
+<li><p>e test intermedio (mai fidarsi di Python)</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+<span class="n">roslaunch</span> <span class="n">robocluedo_rosplan</span> <span class="n">load_rosplan</span><span class="o">.</span><span class="n">launch</span>
+
+<span class="c1"># shell 2</span>
+<span class="n">rosrun</span> <span class="n">robocluedo_rosplan</span> <span class="n">kb_interface</span>
+
+<span class="c1"># shell 3</span>
+<span class="n">rosrun</span> <span class="n">robocluedo_rosplan</span> <span class="n">rosplan_pipeline_manager</span><span class="o">.</span><span class="n">py</span>
+
+<span class="c1"># shell 4</span>
+<span class="n">rosservice</span> <span class="n">list</span> <span class="o">|</span> <span class="n">grep</span> <span class="n">robocluedo</span>
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: false, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</span> 
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</span> 
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 1}&quot;</span> 
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 2}&quot;</span> 
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 3}&quot;</span> 
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: false, parse_plan: false, execute_plan: false, landmark: -1}&quot;</span> 
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p><em>per oggi ho sofferto abbastanza</em></p></li>
+<li><p><strong>COMMIT</strong> : “working on pipeline manager (adding functionalities)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">

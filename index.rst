@@ -1,6 +1,8 @@
 
-RCL -- RoboCLuedo - v1.0.0
+RCL -- the RoboCLuedo Project - part 2
 ========================================
+
+*here we go again*
 
 .. image:: _media/cluedologo.jpg
    :class: with-border with-shadow
