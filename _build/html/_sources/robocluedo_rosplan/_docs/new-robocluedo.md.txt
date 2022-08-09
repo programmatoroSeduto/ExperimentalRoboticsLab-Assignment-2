@@ -15,29 +15,30 @@
 - replan
 	preconditions:
 	```lisp
-	
+	(dirty )
 	```
 	goal:
 	```lisp
-	
+	(not-dirty )
 	```
 - propose a solution -- solve
 	preconditions:
 	```lisp
-	
+	(not-dirty )
 	```
 	goal:
 	```lisp
-	
+	(dirty )
 	```
 - collect a new hint -- collect
 	preconditions:
 	```lisp
-	
+	(not-dirty )
 	```
 	goal:
 	```lisp
-	
+	(not-dirty )
+	(hint-collected ?wp )
 	```
 
 ### list of predicates
@@ -77,6 +78,11 @@ LANDMARK solve
 - read a predicate from kb
 - read the goal
 - set the goal
+
+more specific:
+
+- secure clean
+- set one particular objective among the predefined landmarks
 
 ## list of actions
 
@@ -398,11 +404,12 @@ azione PDDL:
 		;;status
 		(at start (not-hint-ready ))
 		(at start (at-center ))
-		;; (at start (not-dirty ))
+		(at start (not-dirty ))
 		
 	)
 	
 	:effect (and
+		(at start (not (not-dirty )))
 		(at end (dirty ))
 	)
 )
@@ -428,5 +435,8 @@ component "solve" <<PDDL action>> as ACT_SOLVE
 
 
 ''' LINKS
-' ...
+() "feedback manager" as TOPIC_FEEDBACK_MANAGER
+ACT_SOLVE -down-> TOPIC_FEEDBACK_MANAGER
+() "action dispatch" as DISPATCH
+ACT_SOLVE <-left- DISPATCH
 ```

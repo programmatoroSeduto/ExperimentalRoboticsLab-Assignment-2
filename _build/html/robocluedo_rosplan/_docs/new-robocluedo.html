@@ -130,31 +130,32 @@
 <ul>
 <li><p>replan
 preconditions:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">dirty</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>goal:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p>propose a solution – solve
 preconditions:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>goal:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">dirty</span> <span class="p">)</span>
 </pre></div>
 </div>
 </li>
 <li><p>collect a new hint – collect
 preconditions:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span>
 </pre></div>
 </div>
 <p>goal:</p>
-<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span>
+<div class="highlight-lisp notranslate"><div class="highlight"><pre><span></span><span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)</span>
+<span class="p">(</span><span class="nv">hint-collected</span> <span class="nv">?wp</span> <span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -198,6 +199,11 @@ preconditions:</p>
 <li><p>read a predicate from kb</p></li>
 <li><p>read the goal</p></li>
 <li><p>set the goal</p></li>
+</ul>
+<p>more specific:</p>
+<ul class="simple">
+<li><p>secure clean</p></li>
+<li><p>set one particular objective among the predefined landmarks</p></li>
 </ul>
 </div>
 </div>
@@ -532,11 +538,12 @@ component &quot;move-to-center&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO_
 		<span class="c1">;;status</span>
 		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nv">not-hint-ready</span> <span class="p">))</span>
 		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nv">at-center</span> <span class="p">))</span>
-		<span class="c1">;; (at start (not-dirty ))</span>
+		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nv">not-dirty</span> <span class="p">))</span>
 		
 	<span class="p">)</span>
 	
 	<span class="ss">:effect</span> <span class="p">(</span><span class="nb">and</span>
+		<span class="p">(</span><span class="nv">at</span> <span class="nv">start</span> <span class="p">(</span><span class="nb">not</span> <span class="p">(</span><span class="nv">not-dirty</span> <span class="p">)))</span>
 		<span class="p">(</span><span class="nv">at</span> <span class="nv">end</span> <span class="p">(</span><span class="nv">dirty</span> <span class="p">))</span>
 	<span class="p">)</span>
 <span class="p">)</span>
@@ -544,8 +551,8 @@ component &quot;move-to-center&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO_
 </div>
 <p>implementazione ROS:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-8a23c770aabf078854a980d2c94777fb7fb9ad58.svg" type="image/svg+xml" style="width:179px;height:168px;background:#FFFFFF;">
-<img src="../../_images/plantuml-8a23c770aabf078854a980d2c94777fb7fb9ad58.png" alt="&#64;startuml
+<object data="../../_images/plantuml-347ce74bd6adbd7ce2bc0ceb678f198c0bee297c.svg" type="image/svg+xml" style="width:266px;height:306px;background:#FFFFFF;">
+<img src="../../_images/plantuml-347ce74bd6adbd7ce2bc0ceb678f198c0bee297c.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
 title &quot;(ACTION) solve&quot;
@@ -562,7 +569,10 @@ component &quot;solve&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_SOLVE
 
 
 ''' LINKS
-' ..."/>
+() &quot;feedback manager&quot; as TOPIC_FEEDBACK_MANAGER
+ACT_SOLVE -down-&gt; TOPIC_FEEDBACK_MANAGER
+() &quot;action dispatch&quot; as DISPATCH
+ACT_SOLVE &lt;-left- DISPATCH"/>
 
 </object></p>
 </div>

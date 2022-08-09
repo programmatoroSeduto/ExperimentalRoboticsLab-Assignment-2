@@ -335,7 +335,9 @@ ora, iniziamo a lavorare su rosplan:
 		(:goal (and (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
 		```
 - **COMMIT** : "working on PDDL (not yet finished)"
-		
+- ancora lavoro sul PDDL
+	- azione solve
+- ora chiariamo la questione dei landmark
 
 
 
@@ -350,6 +352,7 @@ ora, iniziamo a lavorare su rosplan:
 
 TODO
 
+- rivedere la topologia del problema
 - implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)
 - spostare la documentazione di ROSplan nella nuova workspace di erl2
 - come settare un goal via codice da ROSplan?

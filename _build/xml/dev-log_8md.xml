@@ -344,7 +344,9 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(and<sp/>(not-dirty<sp/>)<sp/>(hint-collected<sp/>wp1)<sp/>(hint-collected<sp/>wp3<sp/>)<sp/>(at-center<sp/>)))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>PDDL<sp/>(not<sp/>yet<sp/>finished)&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ancora<sp/>lavoro<sp/>sul<sp/>PDDL</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>azione<sp/>solve</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora<sp/>chiariamo<sp/>la<sp/>questione<sp/>dei<sp/>landmark</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -359,6 +361,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>rivedere<sp/>la<sp/>topologia<sp/>del<sp/>problema</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>

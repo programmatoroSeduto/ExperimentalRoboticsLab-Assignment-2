@@ -181,4 +181,23 @@
 	)
 )
 
+(:durative-action solve
+	:parameters ( )
+	
+	:duration (= ?duration 0.99 )
+	
+	:condition (and
+		;;status
+		(at start (not-hint-ready ))
+		(at start (at-center ))
+		(at start (not-dirty ))
+		
+	)
+	
+	:effect (and
+		(at start (not (not-dirty )))
+		(at end (dirty ))
+	)
+)
+
 )

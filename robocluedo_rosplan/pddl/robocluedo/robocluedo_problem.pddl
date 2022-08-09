@@ -32,6 +32,6 @@
 	(not-hint-ready )
 )
 
-(:goal (and (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+(:goal (and (dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
 
 )

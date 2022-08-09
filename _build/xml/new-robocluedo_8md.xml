@@ -24,29 +24,30 @@
 <codeline><highlight class="normal">-<sp/>replan</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>preconditions:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(dirty<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>goal:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(not-dirty<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>propose<sp/>a<sp/>solution<sp/>--<sp/>solve</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>preconditions:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(not-dirty<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>goal:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(dirty<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>collect<sp/>a<sp/>new<sp/>hint<sp/>--<sp/>collect</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>preconditions:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(not-dirty<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>goal:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```lisp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(not-dirty<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(hint-collected<sp/>?wp<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>list<sp/>of<sp/>predicates</highlight></codeline>
@@ -86,6 +87,11 @@
 <codeline><highlight class="normal">-<sp/>read<sp/>a<sp/>predicate<sp/>from<sp/>kb</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>read<sp/>the<sp/>goal</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>set<sp/>the<sp/>goal</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">more<sp/>specific:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>secure<sp/>clean</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>set<sp/>one<sp/>particular<sp/>objective<sp/>among<sp/>the<sp/>predefined<sp/>landmarks</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>list<sp/>of<sp/>actions</highlight></codeline>
 <codeline></codeline>
@@ -407,11 +413,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;status</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at-center<sp/>))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-dirty<sp/>)))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(dirty<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline><highlight class="normal">)</highlight></codeline>
@@ -437,7 +444,10 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_SOLVE<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_SOLVE<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
     <location file="robocluedo_rosplan/_docs/new-robocluedo.md"/>

@@ -242,11 +242,17 @@
 <para>per il goal:</para>
 <para>```lisp (:goal (and (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center ))) ```<itemizedlist>
 <listitem><para><bold>COMMIT</bold> : &quot;working on PDDL (not yet finished)&quot;</para>
+</listitem><listitem><para>ancora lavoro sul PDDL<itemizedlist>
+<listitem><para>azione solve</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ora chiariamo la questione dei landmark</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
 <para><itemizedlist>
-<listitem><para>implementazione di una funzionalità per fare un clear &quot;sicuro&quot; della ontology (quello di rosplan funziona maluccio)</para>
+<listitem><para>rivedere la topologia del problema</para>
+</listitem><listitem><para>implementazione di una funzionalità per fare un clear &quot;sicuro&quot; della ontology (quello di rosplan funziona maluccio)</para>
 </listitem><listitem><para>spostare la documentazione di ROSplan nella nuova workspace di erl2</para>
 </listitem><listitem><para>come settare un goal via codice da ROSplan?</para>
 </listitem><listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>

@@ -21,15 +21,9 @@
 <sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md65">
 <title>list of Landmarks</title>
 <para><itemizedlist>
-<listitem><para>replan preconditions: ```lisp</para>
-<para>``` goal: ```lisp</para>
-<para>```</para>
-</listitem><listitem><para>propose a solution <ndash/> solve preconditions: ```lisp</para>
-<para>``` goal: ```lisp</para>
-<para>```</para>
-</listitem><listitem><para>collect a new hint <ndash/> collect preconditions: ```lisp</para>
-<para>``` goal: ```lisp</para>
-<para>```</para>
+<listitem><para>replan preconditions: ```lisp (dirty ) ``` goal: ```lisp (not-dirty ) ```</para>
+</listitem><listitem><para>propose a solution <ndash/> solve preconditions: ```lisp (not-dirty ) ``` goal: ```lisp (dirty ) ```</para>
+</listitem><listitem><para>collect a new hint <ndash/> collect preconditions: ```lisp (not-dirty ) ``` goal: ```lisp (not-dirty ) (hint-collected ?wp ) ```</para>
 </listitem></itemizedlist>
 </para>
 <sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md66">
@@ -75,6 +69,12 @@
 </listitem><listitem><para>read a predicate from kb</para>
 </listitem><listitem><para>read the goal</para>
 </listitem><listitem><para>set the goal</para>
+</listitem></itemizedlist>
+</para>
+<para>more specific:</para>
+<para><itemizedlist>
+<listitem><para>secure clean</para>
+</listitem><listitem><para>set one particular objective among the predefined landmarks</para>
 </listitem></itemizedlist>
 </para>
 </sect2>
@@ -396,11 +396,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;status</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-hint-ready<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(at-center<sp/>))</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>;;<sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not-dirty<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>start<sp/>(not<sp/>(not-dirty<sp/>)))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(dirty<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline><highlight class="normal">)</highlight></codeline>
@@ -423,7 +424,10 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_SOLVE<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_SOLVE<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
 </programlisting> </para>
 </sect2>
 </sect1>
