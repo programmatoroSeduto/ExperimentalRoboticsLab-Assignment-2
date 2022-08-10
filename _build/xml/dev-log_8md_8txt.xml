@@ -2,6 +2,85 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="dev-log_8md_8txt" kind="file" language="C++">
     <compoundname>dev-log.md.txt</compoundname>
+    <includes local="yes">ros/ros.h</includes>
+    <includes local="yes">rosplan_action_interface/RPActionInterface.h</includes>
+    <includes refid="feedback__manager_8h" local="yes">knowledge_base_tools/feedback_manager.h</includes>
+    <includes local="yes">rosplan_dispatch_msgs/ActionDispatch.h</includes>
+    <includes refid="action__name_8h" local="yes">robocluedo_rosplan_actions/action_name.h</includes>
+    <includes local="no">signal.h</includes>
+    <incdepgraph>
+      <node id="6">
+        <label>robocluedo_rosplan_msgs/ActionFeedback.h</label>
+      </node>
+      <node id="11">
+        <label>robocluedo_rosplan_actions/action_name.h</label>
+        <link refid="action__name_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>knowledge_base_tools/feedback_manager.h</label>
+        <link refid="feedback__manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>rosplan_action_interface/RPActionInterface.h</label>
+      </node>
+      <node id="10">
+        <label>rosplan_dispatch_msgs/ActionDispatch.h</label>
+      </node>
+      <node id="8">
+        <label>vector</label>
+      </node>
+      <node id="12">
+        <label>signal.h</label>
+      </node>
+      <node id="5">
+        <label>diagnostic_msgs/KeyValue.h</label>
+      </node>
+      <node id="2">
+        <label>ros/ros.h</label>
+      </node>
+      <node id="1">
+        <label>_build/html/_sources/_docs/dev-log.md.txt</label>
+        <link refid="dev-log_8md_8txt"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
       <sectiondef kind="define">
       <memberdef kind="define" id="dev-log_8md_8txt_1a8cc8d559acdd2f74085b20977182d5b7" prot="public" static="no">
         <name>NODE_NAME</name>
@@ -82,6 +161,27 @@
         <inbodydescription>
         </inbodydescription>
         <location file="_build/html/_sources/_docs/dev-log.md.txt" line="366" column="11"/>
+      </memberdef>
+      <memberdef kind="define" id="dev-log_8md_8txt_1ab7b75cbe2e073c2d76c9de53e1ea6b72" prot="public" static="no">
+        <name>__H_ACTION_NAME_H__</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/dev-log.md.txt" line="774" column="10"/>
+      </memberdef>
+      <memberdef kind="define" id="dev-log_8md_8txt_1a5fd6c7de99fa188561b1bbb00cc7ea50" prot="public" static="no">
+        <name>ROSPLAN_ACTION_NAME</name>
+        <initializer>&quot;action_name&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/dev-log.md.txt" line="776" column="10"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -868,28 +968,249 @@
 <codeline lineno="749"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline lineno="750"><highlight class="stringliteral">-<sp/>UML<sp/>del<sp/>feedback<sp/>manager<sp/>(per<sp/>ora<sp/>senza<sp/>indicare<sp/>i<sp/>tipi<sp/>di<sp/>feedback)</highlight></codeline>
 <codeline lineno="751"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>feedback<sp/>manager<sp/>(first<sp/>basic<sp/>implementation)&quot;</highlight></codeline>
-<codeline lineno="752"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="753"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="752"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="753"><highlight class="stringliteral">---</highlight></codeline>
 <codeline lineno="754"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="755"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="755"><highlight class="stringliteral">meglio<sp/>iniziare<sp/>a<sp/>strutturare<sp/>le<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL:</highlight></codeline>
 <codeline lineno="756"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="757"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="758"><highlight class="stringliteral">TODO</highlight></codeline>
-<codeline lineno="759"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="760"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
-<codeline lineno="761"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
-<codeline lineno="762"><highlight class="stringliteral">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
-<codeline lineno="763"><highlight class="stringliteral">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
-<codeline lineno="764"><highlight class="stringliteral">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
-<codeline lineno="765"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline lineno="766"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
-<codeline lineno="767"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
-<codeline lineno="768"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
-<codeline lineno="769"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
-<codeline lineno="770"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="771"><highlight class="stringliteral">NOTE</highlight></codeline>
+<codeline lineno="757"><highlight class="stringliteral">-<sp/>prima,<sp/>meglio<sp/>farsi<sp/>un<sp/>template<sp/>minimo<sp/>per<sp/>gli<sp/>header</highlight></codeline>
+<codeline lineno="758"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="759"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>header:<sp/>(action_name.h)</highlight></codeline>
+<codeline lineno="760"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="761"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline lineno="762"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="763"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
+<codeline lineno="764"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
+<codeline lineno="765"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.h</highlight></codeline>
+<codeline lineno="766"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation</highlight></codeline>
+<codeline lineno="767"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="768"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
+<codeline lineno="769"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
+<codeline lineno="770"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="771"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
 <codeline lineno="772"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="773"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline lineno="773"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#ifndef<sp/>__H_ACTION_NAME_H__</highlight></codeline>
+<codeline lineno="774"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#define<sp/>__H_ACTION_NAME_H__</highlight></codeline>
+<codeline lineno="775"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="776"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#define<sp/>ROSPLAN_ACTION_NAME<sp/>&quot;action_name&quot;</highlight></codeline>
+<codeline lineno="777"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="778"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;ros/ros.h&quot;</highlight></codeline>
+<codeline lineno="779"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;rosplan_action_interface/RPActionInterface.h&quot;</highlight></codeline>
+<codeline lineno="780"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;knowledge_base_tools/feedback_manager.h&quot;</highlight></codeline>
+<codeline lineno="781"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;rosplan_dispatch_msgs/ActionDispatch.h&quot;</highlight></codeline>
+<codeline lineno="782"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="783"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>namespace<sp/>KCL_rosplan<sp/></highlight></codeline>
+<codeline lineno="784"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="785"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="786"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>class<sp/>RP_rcl_action_name<sp/>:<sp/>public<sp/>RPActionInterface</highlight></codeline>
+<codeline lineno="787"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="788"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>public:</highlight></codeline>
+<codeline lineno="789"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="791"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RP_rcl_action_name(<sp/>ros::NodeHandle&amp;<sp/>nh_<sp/>);</highlight></codeline>
+<codeline lineno="792"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="794"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~RP_rcl_action_name(<sp/>);</highlight></codeline>
+<codeline lineno="795"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="797"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>concreteCallback(<sp/>const<sp/>rosplan_dispatch_msgs::ActionDispatch::ConstPtr&amp;<sp/>msg<sp/>);</highlight></codeline>
+<codeline lineno="798"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="799"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>private:</highlight></codeline>
+<codeline lineno="800"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="802"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::NodeHandle&amp;<sp/>nh;</highlight></codeline>
+<codeline lineno="803"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="805"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_feedback_manager<sp/>fb;</highlight></codeline>
+<codeline lineno="806"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="807"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="808"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="809"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="810"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
+<codeline lineno="811"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="812"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="813"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="814"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>implementazione<sp/>della<sp/>classe:<sp/>(action_name.cpp)</highlight></codeline>
+<codeline lineno="815"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="816"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline lineno="817"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="818"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
+<codeline lineno="819"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
+<codeline lineno="820"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.cpp</highlight></codeline>
+<codeline lineno="821"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation</highlight></codeline>
+<codeline lineno="822"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="823"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
+<codeline lineno="824"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
+<codeline lineno="825"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="826"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>feedback_manager.h</highlight></codeline>
+<codeline lineno="827"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="828"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
+<codeline lineno="829"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="830"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;robocluedo_rosplan_actions/action_name.h&quot;</highlight></codeline>
+<codeline lineno="831"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="832"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/*</highlight></codeline>
+<codeline lineno="833"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#<sp/>actionDispatch<sp/>message</highlight></codeline>
+<codeline lineno="834"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="835"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>int32<sp/>action_id</highlight></codeline>
+<codeline lineno="836"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>int32<sp/>plan_id</highlight></codeline>
+<codeline lineno="837"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>string<sp/>name</highlight></codeline>
+<codeline lineno="838"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>diagnostic_msgs/KeyValue[]<sp/>parameters</highlight></codeline>
+<codeline lineno="839"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>float32<sp/>duration</highlight></codeline>
+<codeline lineno="840"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>float32<sp/>dispatch_time</highlight></codeline>
+<codeline lineno="841"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline lineno="842"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="843"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/*</highlight></codeline>
+<codeline lineno="844"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager]<sp/>&quot;&lt;&lt;&quot;&quot;);</highlight></codeline>
+<codeline lineno="845"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>ROS_WARN_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager]<sp/>WARNING:<sp/>&quot;&lt;&lt;&quot;&quot;);</highlight></codeline>
+<codeline lineno="846"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*/</highlight></codeline>
+<codeline lineno="847"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="848"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>namespace<sp/>KCL_rosplan</highlight></codeline>
+<codeline lineno="849"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="850"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="851"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="852"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>BASE<sp/>METHODS<sp/>===<sp/>//</highlight></codeline>
+<codeline lineno="853"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="854"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>class<sp/>constructor</highlight></codeline>
+<codeline lineno="855"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>RP_rcl_action_name::RP_rcl_action_name(<sp/>ros::NodeHandle&amp;<sp/>nh_<sp/>)<sp/>:<sp/></highlight></codeline>
+<codeline lineno="856"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RPActionInterface(<sp/>),</highlight></codeline>
+<codeline lineno="857"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nh(<sp/>nh_<sp/>)</highlight></codeline>
+<codeline lineno="858"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="859"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>action<sp/>feedback</highlight></codeline>
+<codeline lineno="860"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;fb.action_name<sp/>=<sp/>ROSPLAN_ACTION_NAME;</highlight></codeline>
+<codeline lineno="861"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="862"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;nh<sp/>=<sp/>nh_;</highlight></codeline>
+<codeline lineno="863"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="864"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline lineno="865"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="866"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="867"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="868"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>class<sp/>destructor</highlight></codeline>
+<codeline lineno="869"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>RP_rcl_action_name::~RP_rcl_action_name(<sp/>)</highlight></codeline>
+<codeline lineno="870"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="871"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline lineno="872"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="873"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="874"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="875"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="876"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="877"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>CONCRETE<sp/>CALLBACK<sp/>===<sp/>//</highlight></codeline>
+<codeline lineno="878"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="879"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline lineno="880"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>bool<sp/>RP_rcl_action_name::concreteCallback(<sp/>const<sp/>rosplan_dispatch_msgs::ActionDispatch::ConstPtr&amp;<sp/>msg<sp/>)</highlight></codeline>
+<codeline lineno="881"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="882"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline lineno="883"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="884"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline lineno="885"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="886"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="887"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="888"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="889"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="890"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>PRIVATE<sp/>METHODS<sp/>===<sp/>//</highlight></codeline>
+<codeline lineno="891"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="892"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
+<codeline lineno="893"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="894"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="895"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="896"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="897"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="898"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="899"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>nodo<sp/>che<sp/>implementa<sp/>la<sp/>classe:<sp/>(action\_name_node.cpp)</highlight></codeline>
+<codeline lineno="900"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="901"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline lineno="902"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="903"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
+<codeline lineno="904"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
+<codeline lineno="905"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.cpp</highlight></codeline>
+<codeline lineno="906"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation<sp/>as<sp/>ROS<sp/>node</highlight></codeline>
+<codeline lineno="907"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="908"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
+<codeline lineno="909"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
+<codeline lineno="910"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="911"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>feedback_manager.h</highlight></codeline>
+<codeline lineno="912"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
+<codeline lineno="913"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
+<codeline lineno="914"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="915"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;ros/ros.h&quot;</highlight></codeline>
+<codeline lineno="916"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;knowledge_base_tools/feedback_manager.h&quot;</highlight></codeline>
+<codeline lineno="917"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&quot;robocluedo_rosplan_actions/action_name.h&quot;</highlight></codeline>
+<codeline lineno="918"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="919"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>#include<sp/>&lt;signal.h&gt;</highlight></codeline>
+<codeline lineno="920"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="921"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>void<sp/>shut_msg(<sp/>int<sp/>sig<sp/>)</highlight></codeline>
+<codeline lineno="922"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="923"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;stopping...&quot;);</highlight></codeline>
+<codeline lineno="924"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::shutdown(<sp/>);</highlight></codeline>
+<codeline lineno="925"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="926"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="927"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>int<sp/>main(int<sp/>argc,<sp/>char<sp/>**argv)<sp/></highlight></codeline>
+<codeline lineno="928"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="929"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::init(argc,<sp/>argv,<sp/>ROSPLAN_ACTION_NAME,<sp/></highlight></codeline>
+<codeline lineno="930"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::init_options::AnonymousName<sp/>|<sp/>ros::init_options::NoSigintHandler<sp/>);</highlight></codeline>
+<codeline lineno="931"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGINT,<sp/>shut_msg);</highlight></codeline>
+<codeline lineno="932"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="933"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh(&quot;~&quot;);</highlight></codeline>
+<codeline lineno="934"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="935"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;starting...&quot;);</highlight></codeline>
+<codeline lineno="936"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KCL_rosplan::RP_rcl_action_name<sp/>ac(<sp/>nh<sp/>);</highlight></codeline>
+<codeline lineno="937"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="938"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;ready&quot;);</highlight></codeline>
+<codeline lineno="939"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ac.runActionInterface(<sp/>);</highlight></codeline>
+<codeline lineno="940"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="941"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
+<codeline lineno="942"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="943"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="944"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="945"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="946"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin:</highlight></codeline>
+<codeline lineno="947"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="948"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```cmake</highlight></codeline>
+<codeline lineno="949"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>add_library(<sp/>action_name<sp/>src/robocluedo_rosplan_actions/action_name.cpp<sp/>)</highlight></codeline>
+<codeline lineno="950"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>target_link_libraries(<sp/>action_name<sp/>${catkin_LIBRARIES}<sp/>feedback_manager<sp/>kb_tools<sp/>rosplan_action_interface<sp/>)</highlight></codeline>
+<codeline lineno="951"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>add_executable(<sp/>node_action_name<sp/>src/robocluedo_rosplan_actions/action_name_node.cpp<sp/>)</highlight></codeline>
+<codeline lineno="952"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>add_dependencies(<sp/>node_action_name<sp/>${${PROJECT_NAME}_EXPORTED_TARGETS}<sp/>${catkin_EXPORTED_TARGETS}<sp/>)</highlight></codeline>
+<codeline lineno="953"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>target_link_libraries(<sp/>node_action_name<sp/>${catkin_LIBRARIES}<sp/>feedback_manager<sp/>kb_tools<sp/>rosplan_action_interface<sp/>action_name<sp/>)</highlight></codeline>
+<codeline lineno="954"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="955"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="956"><highlight class="stringliteral">-<sp/>compila?<sp/></highlight></codeline>
+<codeline lineno="957"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>[ricorda<sp/>questo<sp/>errore!](https://cplusplus.com/forum/general/203321/)<sp/>piuttosto<sp/>fastidioso<sp/>da<sp/>risolvere</highlight></codeline>
+<codeline lineno="958"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>dopo<sp/>aver<sp/>tribolato<sp/>mezz&apos;</highlight><highlight class="normal">ora,<sp/>ci<sp/>siamo</highlight></codeline>
+<codeline lineno="959"><highlight class="normal">-<sp/>adesso<sp/>possiamo<sp/>partire<sp/>con<sp/>l</highlight><highlight class="stringliteral">&apos;implementazione<sp/>delle<sp/>azioni</highlight></codeline>
+<codeline lineno="960"><highlight class="stringliteral">-<sp/>*replan*</highlight></codeline>
+<codeline lineno="961"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>delle<sp/>azioni</highlight></codeline>
+<codeline lineno="962"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>UML<sp/>dell&apos;</highlight><highlight class="normal">azione,<sp/>giusto<sp/>per<sp/>capire<sp/>che<sp/>canali<sp/>aprire</highlight></codeline>
+<codeline lineno="963"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
+<codeline lineno="964"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
+<codeline lineno="965"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline lineno="966"><highlight class="normal">-<sp/>*move-to*</highlight></codeline>
+<codeline lineno="967"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>dell</highlight><highlight class="stringliteral">&apos;azione</highlight></codeline>
+<codeline lineno="968"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>UML<sp/>della<sp/>action<sp/></highlight></codeline>
+<codeline lineno="969"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>manca<sp/>un<sp/>servizio<sp/>per<sp/>move_to<sp/>...<sp/></highlight></codeline>
+<codeline lineno="970"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>apertura<sp/>delle<sp/>interfacce<sp/>(ne<sp/>serve<sp/>solo<sp/>una)</highlight></codeline>
+<codeline lineno="971"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
+<codeline lineno="972"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>cmake</highlight></codeline>
+<codeline lineno="973"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/></highlight></codeline>
+<codeline lineno="974"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="975"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="976"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="977"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="978"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="979"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="980"><highlight class="stringliteral">TODO</highlight></codeline>
+<codeline lineno="981"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="982"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;</highlight><highlight class="normal">azione<sp/>move-to</highlight></codeline>
+<codeline lineno="983"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;hw<sp/>navigation<sp/>failure&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="984"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;impossibile<sp/>contattare<sp/>il<sp/>server&quot;</highlight><highlight class="normal"><sp/>(failure<sp/>generica)</highlight></codeline>
+<codeline lineno="985"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;success&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="986"><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline lineno="987"><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/><ref refid="classkb__tools" kindref="compound">kb_tools</ref></highlight></codeline>
+<codeline lineno="988"><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/></highlight><highlight class="stringliteral">&quot;sicuro&quot;</highlight><highlight class="normal"><sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
+<codeline lineno="989"><highlight class="normal">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
+<codeline lineno="990"><highlight class="normal">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
+<codeline lineno="991"><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
+<codeline lineno="992"><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline lineno="993"><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/></highlight><highlight class="stringliteral">&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="994"><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline lineno="995"><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="996"><highlight class="normal"></highlight></codeline>
+<codeline lineno="997"><highlight class="normal">NOTE</highlight></codeline>
+<codeline lineno="998"><highlight class="normal"></highlight></codeline>
+<codeline lineno="999"><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/_docs/dev-log.md.txt"/>
   </compounddef>

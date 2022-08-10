@@ -12,6 +12,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>what<sp/>is<sp/>this</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>project<sp/>tree</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aims<sp/>of<sp/>the<sp/>project</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>how<sp/>to<sp/>install<sp/>the<sp/>project</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>dependencies:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>moveit</highlight></codeline>

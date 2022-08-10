@@ -41,37 +41,6 @@
 	(hint-collected ?wp )
 	```
 
-### list of predicates
-
-environment:
-
-- `(at ?wp - waypoint )`
-- `(not-at ?wp - waypoint )`
-- `(passage ?wp1 ?wp2 - waypoint )`
-- `(is-center ?wp - waypoint )`
-- `(not-is-center ?wp - waypoint )`
-- `(explored ?wp - waypoint )`
-- `(not-explored ?wp - waypoint )`
-- `(at-center )`
-- `(not-at-center )`
-- `( )`
-
-LANDMARK replan:
-
-- `(dirty )`
-- `(not-dirty )`
-- `( )`
-
-LANDMARK collect:
-
-- `(hint-ready )`
-- `(not-hint-ready )`
-- `( )`
-
-LANDMARK solve
-
-- `( )`
-
 ### list of services provided by the kb interface
 
 - write a predicate into the kb
@@ -120,22 +89,23 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-() "KB interface service" as SRV_IKB
-
-
 ''' COMPONENTS
-component "replan" <<PDDL action>> as ACT_REPLAN
+component "replan" <<PDDL ROS action>> as ACT_REPLAN
 
 
 ''' LINKS
-ACT_REPLAN <-up- SRV_IKB
+() "/replan" as SRV_IKB
+ACT_REPLAN "cl" <-- SRV_IKB
+note on link: std_msgs::Empty
+
 () "action dispatch" as DISPATCH
-ACT_REPLAN <-left- DISPATCH
+ACT_REPLAN <.. DISPATCH
 () "action feedback" as DISP_FEEDBACK 
-ACT_REPLAN -right-> DISP_FEEDBACK
-() "feedback manager" as TOPIC_FEEDBACK_MANAGER
-ACT_REPLAN -down-> TOPIC_FEEDBACK_MANAGER
+ACT_REPLAN ..> DISP_FEEDBACK
+
+() "/robocluedo/action_feedback" as TOPIC_FEEDBACK_MANAGER
+ACT_REPLAN "pub" --> TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
 
 @enduml
 ```
@@ -147,6 +117,8 @@ ACT_REPLAN -down-> TOPIC_FEEDBACK_MANAGER
 	- il sistema è *molto simile a quello della vecchia versione* se non per qualche predicato di meno
 	- le posizioni in cui il robot può andare sono quelle non marcate come `(is-center ?wp)`, ovvero usa il not
 	- il robot *non può compiere un'azione di movimento verso lo stesso punto in cui si trova*: insomma, deve muoversi
+	- l'azione si aspetta che qualche altro sistema implementi un servizio a cui l'azione si connette come client per interagire col navigation system
+	- tale servizio si occupa anche di associare il nome del waypoint alla posizione del waypoint in termini di coordinate cartesiane
 
 azione PDDL:
 
@@ -196,13 +168,9 @@ implementazione ROS:
 @startuml
 
 ''' DIAGRAM INFOS
-title "(ACTION) go_to_point"
+title "(ACTION) move_to"
 skinparam Padding 8
 allow_mixing
-
-
-''' FROM OTHER DIAGRAMS
-() "nav service" as SRV_NAV
 
 
 ''' COMPONENTS
@@ -210,13 +178,18 @@ component "move-to" <<PDDL action>> as ACT_MOVE_TO
 
 
 ''' LINKS
-ACT_MOVE_TO --> SRV_NAV
-() "action feedback" as DISP_FEEDBACK 
-ACT_MOVE_TO -right-> DISP_FEEDBACK
-() "feedback manager" as TOPIC_FEEDBACK_MANAGER
-ACT_MOVE_TO -down-> TOPIC_FEEDBACK_MANAGER
+() "/robocluedo/action_feedback" as TOPIC_FEEDBACK_MANAGER
+ACT_MOVE_TO "pub" --> TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+() "/robocluedo/navigation_command" as SRV_NAV
+ACT_MOVE_TO "srv" --> SRV_NAV
+note on link: robocluedo_rosplan_msgs/NavigationCommand
+
 () "action dispatch" as DISPATCH
-ACT_MOVE_TO <-left- DISPATCH
+ACT_MOVE_TO <.. DISPATCH
+() "action feedback" as DISP_FEEDBACK 
+ACT_MOVE_TO ..> DISP_FEEDBACK
 
 @enduml
 ```

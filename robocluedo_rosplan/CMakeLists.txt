@@ -14,6 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
   rosplan_dependencies
   rosplan_dispatch_msgs
   rosplan_knowledge_msgs
+  rosplan_planning_system
   rospy
   std_msgs
   std_srvs
@@ -118,7 +119,7 @@ catkin_package(
  INCLUDE_DIRS include
  LIBRARIES 
 	knowledge_base_tools 
-	# dispatch_actions 
+	robocluedo_rosplan_actions
 	# robocluedo_rosplan_action_interface
  CATKIN_DEPENDS 
 	roscpp 
@@ -127,6 +128,7 @@ catkin_package(
 	diagnostic_msgs
 	rosplan_dispatch_msgs 
 	rosplan_knowledge_msgs 
+	rosplan_planning_system
 #  DEPENDS system_lib
 )
 
@@ -138,6 +140,7 @@ catkin_package(
 ## Your package locations should be listed before other locations
 include_directories(
   include
+  robocluedo_rosplan_actions
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -165,6 +168,18 @@ target_link_libraries( feedback_manager ${catkin_LIBRARIES} )
 add_executable( kb_interface src/kb_interface.cpp )
 add_dependencies( kb_interface ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( kb_interface ${catkin_LIBRARIES} kb_tools )
+
+add_library( replan src/robocluedo_rosplan_actions/replan.cpp )
+target_link_libraries( replan ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface )
+add_executable( node_replan src/robocluedo_rosplan_actions/replan_node.cpp )
+add_dependencies( node_replan ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( node_replan ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface replan )
+
+add_library( move_to src/robocluedo_rosplan_actions/move_to.cpp )
+target_link_libraries( move_to ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface )
+add_executable( node_move_to src/robocluedo_rosplan_actions/move_to_node.cpp )
+add_dependencies( node_move_to ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( node_move_to ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface move_to )
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the

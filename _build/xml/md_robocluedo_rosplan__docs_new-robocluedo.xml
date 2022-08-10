@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md82">
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md84">
 <title>differences from the previous version</title>
 <para><itemizedlist>
 <listitem><para>usage of <emphasis>landmarks</emphasis> instead of only one goal</para>
@@ -18,7 +18,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md83">
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md85">
 <title>list of Landmarks</title>
 <para><itemizedlist>
 <listitem><para>replan preconditions: ```lisp (dirty ) ``` goal: ```lisp (not-dirty ) ```</para>
@@ -26,43 +26,7 @@
 </listitem><listitem><para>collect a new hint <ndash/> collect preconditions: ```lisp (not-dirty ) ``` goal: ```lisp (not-dirty ) (hint-collected ?wp ) ```</para>
 </listitem></itemizedlist>
 </para>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md84">
-<title>list of predicates</title>
-<para>environment:</para>
-<para><itemizedlist>
-<listitem><para><computeroutput>(at ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-at ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(passage ?wp1 ?wp2 - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(is-center ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-is-center ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(explored ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-explored ?wp - waypoint )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(at-center )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-at-center )</computeroutput></para>
-</listitem><listitem><para><computeroutput>( )</computeroutput></para>
-</listitem></itemizedlist>
-</para>
-<para>LANDMARK replan:</para>
-<para><itemizedlist>
-<listitem><para><computeroutput>(dirty )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-dirty )</computeroutput></para>
-</listitem><listitem><para><computeroutput>( )</computeroutput></para>
-</listitem></itemizedlist>
-</para>
-<para>LANDMARK collect:</para>
-<para><itemizedlist>
-<listitem><para><computeroutput>(hint-ready )</computeroutput></para>
-</listitem><listitem><para><computeroutput>(not-hint-ready )</computeroutput></para>
-</listitem><listitem><para><computeroutput>( )</computeroutput></para>
-</listitem></itemizedlist>
-</para>
-<para>LANDMARK solve</para>
-<para><itemizedlist>
-<listitem><para><computeroutput>( )</computeroutput></para>
-</listitem></itemizedlist>
-</para>
-</sect2>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md85">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md86">
 <title>list of services provided by the kb interface</title>
 <para><itemizedlist>
 <listitem><para>write a predicate into the kb</para>
@@ -79,9 +43,9 @@
 </para>
 </sect2>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md86">
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md87">
 <title>list of actions</title>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md87">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md88">
 <title>replan</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) replan**<itemizedlist>
@@ -114,27 +78,28 @@
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;KB<sp/>interface<sp/>service&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;replan&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;replan&quot;<sp/>&lt;&lt;PDDL<sp/>ROS<sp/>action&gt;&gt;<sp/>as<sp/>ACT_REPLAN</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-up-<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/replan&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_msgs::Empty</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md88">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md89">
 <title>collect</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) move-to**<itemizedlist>
@@ -142,6 +107,8 @@
 </listitem><listitem><para>il sistema è <emphasis>molto simile a quello della vecchia versione</emphasis> se non per qualche predicato di meno</para>
 </listitem><listitem><para>le posizioni in cui il robot può andare sono quelle non marcate come <computeroutput>(is-center ?wp)</computeroutput>, ovvero usa il not</para>
 </listitem><listitem><para>il robot <emphasis>non può compiere un&apos;azione di movimento verso lo stesso punto in cui si trova</emphasis>: insomma, deve muoversi</para>
+</listitem><listitem><para>l&apos;azione si aspetta che qualche altro sistema implementi un servizio a cui l&apos;azione si connette come client per interagire col navigation system</para>
+</listitem><listitem><para>tale servizio si occupa anche di associare il nome del waypoint alla posizione del waypoint in termini di coordinate cartesiane</para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
@@ -189,13 +156,9 @@
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>go_to_point&quot;</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>move_to&quot;</highlight></codeline>
 <codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;nav<sp/>service&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
@@ -203,13 +166,18 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/navigation_command&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/NavigationCommand</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
@@ -312,7 +280,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md91">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md92">
 <title>solve</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) move-to-center**<itemizedlist>

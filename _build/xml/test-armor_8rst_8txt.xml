@@ -20,7 +20,7 @@
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>@startuml</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;aRMOR<sp/>model&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a1c16caf6c0e7d1b16fec03690a3e1d8a" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;aRMOR<sp/>model&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>skinparam<sp/>Padding<sp/>8</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight></codeline>
@@ -44,7 +44,7 @@
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>@startuml</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;test_armor.cpp<sp/>node&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a1c16caf6c0e7d1b16fec03690a3e1d8a" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;test_armor.cpp<sp/>node&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>skinparam<sp/>Padding<sp/>8</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
@@ -69,7 +69,7 @@
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>@startuml</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"><sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;entire<sp/>test<sp/>model&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="new-robocluedo_8md_8txt_1a1c16caf6c0e7d1b16fec03690a3e1d8a" kindref="member">title</ref><sp/></highlight><highlight class="stringliteral">&quot;entire<sp/>test<sp/>model&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>skinparam<sp/>Padding<sp/>8</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>

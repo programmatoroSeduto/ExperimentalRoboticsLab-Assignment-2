@@ -1,9 +1,9 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.8.17">
   <compound refid="classaction__feedback__manager" kind="class"><name>action_feedback_manager</name>
+    <member refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" kind="variable"><name>action_name</name></member>
     <member refid="classaction__feedback__manager_1afd0e88e5b7403e536bdfb98f4ac7fcc0" kind="variable"><name>nh</name></member>
     <member refid="classaction__feedback__manager_1a1d4d567f99749d30031a0ef36056b740" kind="variable"><name>pub_action_feedback</name></member>
-    <member refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" kind="variable"><name>action_name</name></member>
     <member refid="classaction__feedback__manager_1a1e39f6b9fbe49dd45d48010c48968a66" kind="function"><name>action_feedback_manager</name></member>
     <member refid="classaction__feedback__manager_1a03578c1ddea3134821802d1a9f751db4" kind="function"><name>~action_feedback_manager</name></member>
     <member refid="classaction__feedback__manager_1a79e5419924ad7cf1bf1d4d82c915eeb6" kind="function"><name>build_msg</name></member>
@@ -101,6 +101,32 @@
     <member refid="classpredicate__instance_1a4225683c001580c09308f7807776e34c" kind="function"><name>set_param</name></member>
     <member refid="classpredicate__instance_1a9867672c23698ee24c258129be388cba" kind="function"><name>set_param_2</name></member>
   </compound>
+  <compound refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name" kind="class"><name>KCL_rosplan::RP_rcl_action_name</name>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a25a1a29cf23a0c8f588c23c5480ccc75" kind="variable"><name>nh</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a5c89f00f3291e03ffb3455e50d69a008" kind="variable"><name>fb</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a3c2f28be200df08839afdc23fffc1d53" kind="variable"><name>action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a3befcad5dcfd741a55f10a5340dc2e4e" kind="function"><name>RP_rcl_action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1ac4cc189c2e3ea7c5007ed1176c751c1f" kind="function"><name>~RP_rcl_action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1aedc33c3b0d766221dba843adeac9df78" kind="function"><name>concreteCallback</name></member>
+  </compound>
+  <compound refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to" kind="class"><name>KCL_rosplan::RP_rcl_move_to</name>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1afe4b87003a79b54c48c519af1b58a479" kind="variable"><name>nh</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1a411a7f285aa428930330a6410af551b3" kind="variable"><name>fb</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1af97c2bebd006d8d824c95c9a7ee680ed" kind="variable"><name>cl_navigation</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1a27c042320443ba784f5511089a4cbd25" kind="variable"><name>action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1a02307dc878a7bfc57216a7ea284e9d3d" kind="function"><name>RP_rcl_move_to</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1a8132d9d1aa2637c852c5ae1700169335" kind="function"><name>~RP_rcl_move_to</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__move__to_1ac52760b641826a4348f0621617b5434a" kind="function"><name>concreteCallback</name></member>
+  </compound>
+  <compound refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan" kind="class"><name>KCL_rosplan::RP_rcl_replan</name>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1ac39251b46cfd6d616b764f34f275e930" kind="variable"><name>nh</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1aadde4b9319468532cc0d4378b1fcab1d" kind="variable"><name>fb</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a5f631783e3f6ce3d1fba11809416914a" kind="variable"><name>cl_replan</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1ab76283e51b1ad52b176790ce5fe7671e" kind="variable"><name>action_name</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a1beb4fbe01f4f554f541f633d29d86d9" kind="function"><name>RP_rcl_replan</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a60c822a2b3c95f8f6cdaf9aafce13adf" kind="function"><name>~RP_rcl_replan</name></member>
+    <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a6574542a6a62bae28d6bf0d74b94c4d7" kind="function"><name>concreteCallback</name></member>
+  </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
     <member refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kind="variable"><name>project</name></member>
     <member refid="namespaceconf_1a33fa97cf51dcb25970fbf53f10159589" kind="variable"><name>copyright</name></member>
@@ -121,6 +147,8 @@
     <member refid="namespaceconf_1a54585428ce84441199d9dfd7087e2243" kind="variable"><name>breathe_default_members</name></member>
     <member refid="namespaceconf_1a04c272e775af47ba3baf2be945ab445f" kind="variable"><name>plantuml</name></member>
     <member refid="namespaceconf_1abf3d1998a088118adf9f95de73a60449" kind="variable"><name>plantuml_output_format</name></member>
+  </compound>
+  <compound refid="namespace_k_c_l__rosplan" kind="namespace"><name>KCL_rosplan</name>
   </compound>
   <compound refid="namespacerosplan__pipeline__manager" kind="namespace"><name>rosplan_pipeline_manager</name>
     <member refid="namespacerosplan__pipeline__manager_1af67313e182b518b7e12a8bdc1b1ce928" kind="variable"><name>NODE_NAME</name></member>
@@ -179,6 +207,8 @@
     <member refid="dev-log_8md_8txt_1a4c242fea9a3b706e637163f8b0eed95c" kind="define"><name>TLOG</name></member>
     <member refid="dev-log_8md_8txt_1a723a84b8e4828b3ba1ad2ccf3e787643" kind="define"><name>TWARN</name></member>
     <member refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
+    <member refid="dev-log_8md_8txt_1ab7b75cbe2e073c2d76c9de53e1ea6b72" kind="define"><name>__H_ACTION_NAME_H__</name></member>
+    <member refid="dev-log_8md_8txt_1a5fd6c7de99fa188561b1bbb00cc7ea50" kind="define"><name>ROSPLAN_ACTION_NAME</name></member>
     <member refid="dev-log_8md_8txt_1a29e5243652e2540105e88d5d9b65ee96" kind="variable"><name>__pad0__</name></member>
     <member refid="dev-log_8md_8txt_1a540c4cc7b9b94eea49009256dbcce06c" kind="variable"><name>progetto</name></member>
   </compound>
@@ -279,15 +309,13 @@
     <member refid="new-robocluedo_8md_8txt_1a9871c04fde04dd1c1544b47c55da1a15" kind="variable"><name>works</name></member>
     <member refid="new-robocluedo_8md_8txt_1a2f54305162dfba58aaba0e705ce73bc5" kind="variable"><name>simpler</name></member>
     <member refid="new-robocluedo_8md_8txt_1a3a2c9c61d83c7558e9374f9909675295" kind="function"><name>version</name></member>
-    <member refid="new-robocluedo_8md_8txt_1a93b0cc32476314c193c4f41c7134578e" kind="function"><name>title</name></member>
+    <member refid="new-robocluedo_8md_8txt_1a1c16caf6c0e7d1b16fec03690a3e1d8a" kind="function"><name>title</name></member>
     <member refid="new-robocluedo_8md_8txt_1a974453c72d02ca4ef12472826ac86b4a" kind="function"><name>status</name></member>
-    <member refid="new-robocluedo_8md_8txt_1af432cac63f3dfee1b2aa7bcf8bbae325" kind="function"><name>localization</name></member>
-    <member refid="new-robocluedo_8md_8txt_1a5c6c418cfc05edf02b84a9ffcb6d3490" kind="function"><name>passage</name></member>
-    <member refid="new-robocluedo_8md_8txt_1a183e12ba0acc5f64fa994e47c21a010a" kind="function"><name>tracking</name></member>
-    <member refid="new-robocluedo_8md_8txt_1ae60573395bb4bb233566efc7393833a3" kind="function"><name>conditions</name></member>
     <member refid="new-robocluedo_8md_8txt_1a311d7edcf627782ff29bb02ae893e2a4" kind="function"><name>localization</name></member>
     <member refid="new-robocluedo_8md_8txt_1a6bfcb0dd409077d5e73360aca5679140" kind="function"><name>inside</name></member>
+    <member refid="new-robocluedo_8md_8txt_1a99a540da14e7094667719404b83320f4" kind="function"><name>localization</name></member>
     <member refid="new-robocluedo_8md_8txt_1a76d10fc68fb562f57c2f735ccb197ee2" kind="function"><name>conditions</name></member>
+    <member refid="new-robocluedo_8md_8txt_1aa30e99675ff516f3d14ba0570dd15fa7" kind="function"><name>passage</name></member>
     <member refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kind="function"><name>ipotesi</name></member>
   </compound>
   <compound refid="pddl-and-rosplan_8md_8txt" kind="file"><name>pddl-and-rosplan.md.txt</name>
@@ -561,6 +589,17 @@
     <member refid="kb__tools_8h_1a88abd2411c29b85c73440826c34e802a" kind="define"><name>KB_KTYPE_FLUENT</name></member>
     <member refid="kb__tools_8h_1a4fe1e5d1ed4ba3fd4237490006e06dd2" kind="define"><name>KB_KTYPE_PREDICATE</name></member>
   </compound>
+  <compound refid="action__name_8h" kind="file"><name>action_name.h</name>
+    <member refid="action__name_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" kind="define"><name>ROSPLAN_ACTION_NAME</name></member>
+  </compound>
+  <compound refid="move__to_8h" kind="file"><name>move_to.h</name>
+    <member refid="move__to_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" kind="define"><name>ROSPLAN_ACTION_NAME</name></member>
+    <member refid="move__to_8h_1a86d0cfb83d16525602716fa35858cd2b" kind="define"><name>SRV_NAVIGATION</name></member>
+  </compound>
+  <compound refid="replan_8h" kind="file"><name>replan.h</name>
+    <member refid="replan_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" kind="define"><name>ROSPLAN_ACTION_NAME</name></member>
+    <member refid="replan_8h_1ac62d611007560a363e737ed381abab60" kind="define"><name>SRV_REPLAN</name></member>
+  </compound>
   <compound refid="robocluedo_8md" kind="file"><name>robocluedo.md</name>
   </compound>
   <compound refid="simpletest_8md" kind="file"><name>simpletest.md</name>
@@ -587,6 +626,24 @@
   <compound refid="feedback__manager_8cpp" kind="file"><name>feedback_manager.cpp</name>
   </compound>
   <compound refid="kb__tools_8cpp" kind="file"><name>kb_tools.cpp</name>
+  </compound>
+  <compound refid="action__name_8cpp" kind="file"><name>action_name.cpp</name>
+  </compound>
+  <compound refid="action__name__node_8cpp" kind="file"><name>action_name_node.cpp</name>
+    <member refid="action__name__node_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
+    <member refid="action__name__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="move__to_8cpp" kind="file"><name>move_to.cpp</name>
+  </compound>
+  <compound refid="move__to__node_8cpp" kind="file"><name>move_to_node.cpp</name>
+    <member refid="move__to__node_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
+    <member refid="move__to__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="replan_8cpp_8cpp" kind="file"><name>replan.cpp.cpp</name>
+  </compound>
+  <compound refid="replan__node_8cpp" kind="file"><name>replan_node.cpp</name>
+    <member refid="replan__node_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
+    <member refid="replan__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
   <compound refid="md__docs_catkin-notes" kind="page"><name>md__docs_catkin-notes</name>
   </compound>
@@ -692,9 +749,9 @@
   </compound>
   <compound refid="dir_63358181ce567149a79d24bdd45b3e93" kind="dir"><name>_build/html</name>
   </compound>
-  <compound refid="dir_8ac4453b272c73dc7502911cb6230c81" kind="dir"><name>robocluedo_rosplan/include</name>
-  </compound>
   <compound refid="dir_22bf9e93c2a1eaeeae7b6be064f10539" kind="dir"><name>robocluedo_armor/include</name>
+  </compound>
+  <compound refid="dir_8ac4453b272c73dc7502911cb6230c81" kind="dir"><name>robocluedo_rosplan/include</name>
   </compound>
   <compound refid="dir_9d33d1fe96cc85be6475dbae3b84b312" kind="dir"><name>robocluedo_rosplan/include/knowledge_base_tools</name>
   </compound>
@@ -708,25 +765,29 @@
   </compound>
   <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
   </compound>
-  <compound refid="dir_79e927a63bd10ed6630522c8d3643182" kind="dir"><name>_build/html/_sources/robocluedo_armor</name>
-  </compound>
   <compound refid="dir_5aaac04fc6fafbbe52fedcf263b68c45" kind="dir"><name>robocluedo_armor</name>
   </compound>
-  <compound refid="dir_934cd6e3ac3db9c35879847003d5d9d8" kind="dir"><name>robocluedo_armor_msgs</name>
+  <compound refid="dir_79e927a63bd10ed6630522c8d3643182" kind="dir"><name>_build/html/_sources/robocluedo_armor</name>
   </compound>
   <compound refid="dir_1bc8f5eb2d7a05c4833216afec3fe5f7" kind="dir"><name>_build/html/_sources/robocluedo_armor_msgs</name>
+  </compound>
+  <compound refid="dir_934cd6e3ac3db9c35879847003d5d9d8" kind="dir"><name>robocluedo_armor_msgs</name>
   </compound>
   <compound refid="dir_0c7c9d8ce38b319ef680cfddfa679c53" kind="dir"><name>robocluedo_module_testing</name>
   </compound>
   <compound refid="dir_7ace0c494f2656716c52bacac0d50c3f" kind="dir"><name>_build/html/_sources/robocluedo_module_testing</name>
   </compound>
+  <compound refid="dir_5ad723c609f290c688780fa75d9eba80" kind="dir"><name>robocluedo_rosplan/pddl/robocluedo_old</name>
+  </compound>
   <compound refid="dir_0bcc7debfa214158000ea320167ae841" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old</name>
   </compound>
-  <compound refid="dir_5ad723c609f290c688780fa75d9eba80" kind="dir"><name>robocluedo_rosplan/pddl/robocluedo_old</name>
+  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
   </compound>
   <compound refid="dir_491f45b8c84f891ab332eebbf76e03c9" kind="dir"><name>robocluedo_rosplan</name>
   </compound>
-  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
+  <compound refid="dir_de4a62721825576670555fae0e93d072" kind="dir"><name>robocluedo_rosplan/include/robocluedo_rosplan_actions</name>
+  </compound>
+  <compound refid="dir_7e75f3d459997a3bda519bea1280dc2e" kind="dir"><name>robocluedo_rosplan/src/robocluedo_rosplan_actions</name>
   </compound>
   <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
   </compound>
@@ -738,15 +799,15 @@
   </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
   </compound>
-  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
-  </compound>
   <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
+  </compound>
+  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
   <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
   </compound>
-  <compound refid="dir_2d3088292a90fed69878338281a2af0d" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs/test_20211109</name>
-  </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
+  </compound>
+  <compound refid="dir_2d3088292a90fed69878338281a2af0d" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs/test_20211109</name>
   </compound>
   <compound refid="dir_952419341069c2adb786d19a7245beeb" kind="dir"><name>robocluedo_module_testing/src/test_armor</name>
   </compound>

@@ -162,38 +162,6 @@ preconditions:</p>
 </div>
 </li>
 </ul>
-<div class="section" id="list-of-predicates">
-<h3>list of predicates<a class="headerlink" href="#list-of-predicates" title="Permalink to this heading"></a></h3>
-<p>environment:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">(at</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-at</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(passage</span> <span class="pre">?wp1</span> <span class="pre">?wp2</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(is-center</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-is-center</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(explored</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-explored</span> <span class="pre">?wp</span> <span class="pre">-</span> <span class="pre">waypoint</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(at-center</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-at-center</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
-</ul>
-<p>LANDMARK replan:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">(dirty</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-dirty</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
-</ul>
-<p>LANDMARK collect:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">(hint-ready</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(not-hint-ready</span> <span class="pre">)</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
-</ul>
-<p>LANDMARK solve</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
-</ul>
-</div>
 <div class="section" id="list-of-services-provided-by-the-kb-interface">
 <h3>list of services provided by the kb interface<a class="headerlink" href="#list-of-services-provided-by-the-kb-interface" title="Permalink to this heading"></a></h3>
 <ul class="simple">
@@ -238,8 +206,8 @@ preconditions:</p>
 </div>
 <p>implementazione ROS:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-a6a3b2b92fd696f7784ef89f483714f81ce5d471.svg" type="image/svg+xml" style="width:366px;height:418px;background:#FFFFFF;">
-<img src="../../_images/plantuml-a6a3b2b92fd696f7784ef89f483714f81ce5d471.png" alt="&#64;startuml
+<object data="../../_images/plantuml-62fd138731662723878faa86f5440c9d3895bc4c.svg" type="image/svg+xml" style="width:791px;height:357px;background:#FFFFFF;">
+<img src="../../_images/plantuml-62fd138731662723878faa86f5440c9d3895bc4c.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
 title &quot;(ACTION) replan&quot;
@@ -247,22 +215,23 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-() &quot;KB interface service&quot; as SRV_IKB
-
-
 ''' COMPONENTS
-component &quot;replan&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_REPLAN
+component &quot;replan&quot; &lt;&lt;PDDL ROS action&gt;&gt; as ACT_REPLAN
 
 
 ''' LINKS
-ACT_REPLAN &lt;-up- SRV_IKB
+() &quot;/replan&quot; as SRV_IKB
+ACT_REPLAN &quot;cl&quot; &lt;-- SRV_IKB
+note on link: std_msgs::Empty
+
 () &quot;action dispatch&quot; as DISPATCH
-ACT_REPLAN &lt;-left- DISPATCH
+ACT_REPLAN &lt;.. DISPATCH
 () &quot;action feedback&quot; as DISP_FEEDBACK 
-ACT_REPLAN -right-&gt; DISP_FEEDBACK
-() &quot;feedback manager&quot; as TOPIC_FEEDBACK_MANAGER
-ACT_REPLAN -down-&gt; TOPIC_FEEDBACK_MANAGER
+ACT_REPLAN ..&gt; DISP_FEEDBACK
+
+() &quot;/robocluedo/action_feedback&quot; as TOPIC_FEEDBACK_MANAGER
+ACT_REPLAN &quot;pub&quot; --&gt; TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
 
 &#64;enduml"/>
 
@@ -277,6 +246,8 @@ ACT_REPLAN -down-&gt; TOPIC_FEEDBACK_MANAGER
 <li><p>il sistema è <em>molto simile a quello della vecchia versione</em> se non per qualche predicato di meno</p></li>
 <li><p>le posizioni in cui il robot può andare sono quelle non marcate come <code class="docutils literal notranslate"><span class="pre">(is-center</span> <span class="pre">?wp)</span></code>, ovvero usa il not</p></li>
 <li><p>il robot <em>non può compiere un’azione di movimento verso lo stesso punto in cui si trova</em>: insomma, deve muoversi</p></li>
+<li><p>l’azione si aspetta che qualche altro sistema implementi un servizio a cui l’azione si connette come client per interagire col navigation system</p></li>
+<li><p>tale servizio si occupa anche di associare il nome del waypoint alla posizione del waypoint in termini di coordinate cartesiane</p></li>
 </ul>
 </li>
 </ul>
@@ -322,17 +293,13 @@ ACT_REPLAN -down-&gt; TOPIC_FEEDBACK_MANAGER
 </div>
 <p>implementazione ROS:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-fb1630135cf97655e1d99259171b4a94388e2be1.svg" type="image/svg+xml" style="width:366px;height:306px;background:#FFFFFF;">
-<img src="../../_images/plantuml-fb1630135cf97655e1d99259171b4a94388e2be1.png" alt="&#64;startuml
+<object data="../../_images/plantuml-6f225f55e7121adc7ef2d53781364ddea24d4f4c.svg" type="image/svg+xml" style="width:1078px;height:357px;background:#FFFFFF;">
+<img src="../../_images/plantuml-6f225f55e7121adc7ef2d53781364ddea24d4f4c.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
-title &quot;(ACTION) go_to_point&quot;
+title &quot;(ACTION) move_to&quot;
 skinparam Padding 8
 allow_mixing
-
-
-''' FROM OTHER DIAGRAMS
-() &quot;nav service&quot; as SRV_NAV
 
 
 ''' COMPONENTS
@@ -340,13 +307,18 @@ component &quot;move-to&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO
 
 
 ''' LINKS
-ACT_MOVE_TO --&gt; SRV_NAV
-() &quot;action feedback&quot; as DISP_FEEDBACK 
-ACT_MOVE_TO -right-&gt; DISP_FEEDBACK
-() &quot;feedback manager&quot; as TOPIC_FEEDBACK_MANAGER
-ACT_MOVE_TO -down-&gt; TOPIC_FEEDBACK_MANAGER
+() &quot;/robocluedo/action_feedback&quot; as TOPIC_FEEDBACK_MANAGER
+ACT_MOVE_TO &quot;pub&quot; --&gt; TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+() &quot;/robocluedo/navigation_command&quot; as SRV_NAV
+ACT_MOVE_TO &quot;srv&quot; --&gt; SRV_NAV
+note on link: robocluedo_rosplan_msgs/NavigationCommand
+
 () &quot;action dispatch&quot; as DISPATCH
-ACT_MOVE_TO &lt;-left- DISPATCH
+ACT_MOVE_TO &lt;.. DISPATCH
+() &quot;action feedback&quot; as DISP_FEEDBACK 
+ACT_MOVE_TO ..&gt; DISP_FEEDBACK
 
 &#64;enduml"/>
 

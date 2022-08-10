@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_7e75f3d459997a3bda519bea1280dc2e" kind="dir">
+    <compoundname>robocluedo_rosplan/src/robocluedo_rosplan_actions</compoundname>
+    <innerfile refid="action__name_8cpp">action_name.cpp</innerfile>
+    <innerfile refid="action__name__node_8cpp">action_name_node.cpp</innerfile>
+    <innerfile refid="move__to_8cpp">move_to.cpp</innerfile>
+    <innerfile refid="move__to__node_8cpp">move_to_node.cpp</innerfile>
+    <innerfile refid="replan_8cpp_8cpp">replan.cpp.cpp</innerfile>
+    <innerfile refid="replan__node_8cpp">replan_node.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="robocluedo_rosplan/src/robocluedo_rosplan_actions/"/>
+  </compounddef>
+</doxygen>

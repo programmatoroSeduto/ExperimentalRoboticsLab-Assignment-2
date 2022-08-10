@@ -3,6 +3,7 @@
 
 - what is this
 	- project tree
+	- aims of the project
 - how to install the project
 	- dependencies:
 		- moveit

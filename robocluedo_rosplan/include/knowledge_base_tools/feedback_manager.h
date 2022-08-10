@@ -42,6 +42,9 @@ class action_feedback_manager
 {
 public:
 	
+	/// the name of the action
+	std::string action_name;
+	
 	
 	// === BASE METHODS === //
 	
@@ -72,9 +75,6 @@ private:
 	
 	/// the publisher handle
 	ros::Publisher pub_action_feedback;
-	
-	/// the name of the action
-	std::string action_name;
 	
 	/********************************************//**
 	 *  

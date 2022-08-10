@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="395" column="2" bodyfile="_build/html/_sources/robocluedo_rosplan/_docs/new-robocluedo.md.txt" bodystart="350" bodyend="367" declfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" declline="395" declcolumn="2"/>
+        <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="395" column="2" bodyfile="_build/html/_sources/robocluedo_rosplan/_docs/new-robocluedo.md.txt" bodystart="323" bodyend="340" declfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" declline="395" declcolumn="2"/>
       </memberdef>
       <memberdef kind="function" id="robocluedo_8md_8txt_1a183e12ba0acc5f64fa994e47c21a010a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>path</type>
@@ -704,7 +704,7 @@
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="131"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">(sherlok-is-thinking<sp/>?wp<sp/>)</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1ae60573395bb4bb233566efc7393833a3" kindref="member">conditions</ref>?<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a76d10fc68fb562f57c2f735ccb197ee2" kindref="member">conditions</ref>?<sp/></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>aggiorna<sp/>i<sp/>conteggi</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>-&gt;VERIFICA<sp/>SE<sp/>IL<sp/>PROBLEMA<sp/>E</highlight><highlight class="stringliteral">&apos;<sp/>ANCORA<sp/>RISOLVIBILE</highlight></codeline>
 <codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>questa<sp/>procedura<sp/>non<sp/>dovrebbe<sp/>essere<sp/>eseguita<sp/>una<sp/>volta<sp/>ritratto<sp/>il<sp/>braccio?</highlight></codeline>
@@ -722,7 +722,7 @@
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="150"><highlight class="normal">(bright-bulb-over-head<sp/>?wp<sp/>)</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1ae60573395bb4bb233566efc7393833a3" kindref="member">conditions</ref>?<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a76d10fc68fb562f57c2f735ccb197ee2" kindref="member">conditions</ref>?<sp/></highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>aggiorna<sp/>la<sp/>KB<sp/>e<sp/>vai<sp/>avanti</highlight></codeline>
 <codeline lineno="153"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>

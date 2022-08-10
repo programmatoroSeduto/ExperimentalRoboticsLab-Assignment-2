@@ -8,7 +8,14 @@
     <includes local="no">string</includes>
     <includes local="no">vector</includes>
     <includes local="no">map</includes>
+    <includedby refid="dev-log_8md_8txt" local="yes">_build/html/_sources/_docs/dev-log.md.txt</includedby>
+    <includedby refid="action__name_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h</includedby>
+    <includedby refid="move__to_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h</includedby>
+    <includedby refid="replan_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h</includedby>
     <includedby refid="feedback__manager_8cpp" local="yes">robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp</includedby>
+    <includedby refid="action__name__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name_node.cpp</includedby>
+    <includedby refid="move__to__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_node.cpp</includedby>
+    <includedby refid="replan__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/replan_node.cpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>robocluedo_rosplan_msgs/ActionFeedback.h</label>
@@ -46,15 +53,83 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="3">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h</label>
+        <link refid="action__name_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp</label>
+        <link refid="action__name_8cpp"/>
+      </node>
       <node id="1">
         <label>robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h</label>
         <link refid="feedback__manager_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
       </node>
-      <node id="2">
+      <node id="11">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan_node.cpp</label>
+        <link refid="replan__node_8cpp"/>
+      </node>
+      <node id="6">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h</label>
+        <link refid="move__to_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp</label>
+        <link refid="move__to_8cpp"/>
+      </node>
+      <node id="9">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h</label>
+        <link refid="replan_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_node.cpp</label>
+        <link refid="move__to__node_8cpp"/>
+      </node>
+      <node id="5">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name_node.cpp</label>
+        <link refid="action__name__node_8cpp"/>
+      </node>
+      <node id="12">
         <label>robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp</label>
         <link refid="feedback__manager_8cpp"/>
+      </node>
+      <node id="2">
+        <label>_build/html/_sources/_docs/dev-log.md.txt</label>
+        <link refid="dev-log_8md_8txt"/>
+      </node>
+      <node id="10">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp</label>
+        <link refid="replan_8cpp_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classaction__feedback__manager" prot="public">action_feedback_manager</innerclass>
@@ -122,28 +197,28 @@
 <codeline lineno="42"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>BASE<sp/>METHODS<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="46" refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" kindref="member">action_name</ref>;</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classaction__feedback__manager_1a1e39f6b9fbe49dd45d48010c48968a66" kindref="member">action_feedback_manager</ref>(<sp/>std::string<sp/>act_name<sp/>=<sp/><ref refid="feedback__manager_8h_1a7fde9014c619ef02f705989a9032a8a5" kindref="member">ACTION_NAME_UNKNOWN</ref><sp/>);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classaction__feedback__manager_1a03578c1ddea3134821802d1a9f751db4" kindref="member">~action_feedback_manager</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>BASE<sp/>METHODS<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classaction__feedback__manager_1a1e39f6b9fbe49dd45d48010c48968a66" kindref="member">action_feedback_manager</ref>(<sp/>std::string<sp/>act_name<sp/>=<sp/><ref refid="feedback__manager_8h_1a7fde9014c619ef02f705989a9032a8a5" kindref="member">ACTION_NAME_UNKNOWN</ref><sp/>);</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>FEEDBACK<sp/>SYSTEM<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classaction__feedback__manager_1a03578c1ddea3134821802d1a9f751db4" kindref="member">~action_feedback_manager</ref>(<sp/>);</highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>FEEDBACK<sp/>SYSTEM<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh;</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Publisher<sp/>pub_action_feedback;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh;</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>action_name;</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Publisher<sp/>pub_action_feedback;</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>robocluedo_rosplan_msgs::ActionFeedback<sp/>build_msg(<sp/></highlight></codeline>

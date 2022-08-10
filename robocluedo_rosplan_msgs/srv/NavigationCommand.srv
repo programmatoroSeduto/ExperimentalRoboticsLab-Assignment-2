@@ -3,15 +3,8 @@
 
 ## REQUEST
 
-# only x and y, planar navigation
-geometry_msgs/Point target
-
-# compute or not the orientation? 
-#    (compute the orientation with the marker if true)
-bool look_to_marker
-
-# the marker to reach (if look_to_marker)
-geometry_msgs/Point marker
+# the marker (as string)
+string waypoint
 
 ---
 

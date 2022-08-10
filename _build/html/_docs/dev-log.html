@@ -980,8 +980,229 @@ unsolvable.
 <li><p>UML del feedback manager (per ora senza indicare i tipi di feedback)</p></li>
 <li><p><strong>COMMIT</strong> : “working on feedback manager (first basic implementation)”</p></li>
 </ul>
+<hr class="docutils" />
+<p>meglio iniziare a strutturare le implementazioni delle azioni PDDL:</p>
+<ul>
+<li><p>prima, meglio farsi un template minimo per gli header</p>
+<p>header: (action_name.h)</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************************//**</span>
+<span class="cm">*  </span>
+<span class="cm">* @file ???.h</span>
+<span class="cm">* @brief ROSPlan action implementation</span>
+<span class="cm">* </span>
+<span class="cm">* @authors Francesco Ganci</span>
+<span class="cm">* @version v1.0</span>
+<span class="cm">* </span>
+<span class="cm">***********************************************/</span><span class="w"></span>
+
+<span class="cp">#ifndef __H_ACTION_NAME_H__</span>
+<span class="cp">#define __H_ACTION_NAME_H__</span>
+
+<span class="cp">#define ROSPLAN_ACTION_NAME &quot;action_name&quot;</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rosplan_action_interface/RPActionInterface.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;knowledge_base_tools/feedback_manager.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;rosplan_dispatch_msgs/ActionDispatch.h&quot;</span><span class="cp"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">KCL_rosplan</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+
+<span class="k">class</span> <span class="nc">RP_rcl_action_name</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="k">public</span><span class="w"> </span><span class="n">RPActionInterface</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="k">public</span><span class="o">:</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="cm">/** class constructor */</span><span class="w"></span>
+<span class="w">	</span><span class="n">RP_rcl_action_name</span><span class="p">(</span><span class="w"> </span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nh_</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="cm">/** class destructor */</span><span class="w"></span>
+<span class="w">	</span><span class="o">~</span><span class="n">RP_rcl_action_name</span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="cm">/** ROSPlan concrete callback */</span><span class="w"></span>
+<span class="w">	</span><span class="kt">bool</span><span class="w"> </span><span class="nf">concreteCallback</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">rosplan_dispatch_msgs</span><span class="o">::</span><span class="n">ActionDispatch</span><span class="o">::</span><span class="n">ConstPtr</span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+
+<span class="k">private</span><span class="o">:</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">/// node handle</span>
+<span class="w">	</span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nh</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">/// action feedback manager (as object instance)</span>
+<span class="w">	</span><span class="n">action_feedback_manager</span><span class="w"> </span><span class="n">fb</span><span class="p">;</span><span class="w"></span>
+<span class="p">};</span><span class="w"></span>
+
+<span class="p">}</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</pre></div>
+</div>
+<p>implementazione della classe: (action_name.cpp)</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************************//**</span>
+<span class="cm">*  </span>
+<span class="cm">* @file ???.cpp</span>
+<span class="cm">* @brief ROSPlan action implementation</span>
+<span class="cm">* </span>
+<span class="cm">* @authors Francesco Ganci</span>
+<span class="cm">* @version v1.0</span>
+<span class="cm">* </span>
+<span class="cm">* @see feedback_manager.h</span>
+<span class="cm">* </span>
+<span class="cm">***********************************************/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;robocluedo_rosplan_actions/action_name.h&quot;</span><span class="cp"></span>
+
+<span class="cm">/*</span>
+<span class="cm"># actionDispatch message</span>
+
+<span class="cm">int32 action_id</span>
+<span class="cm">int32 plan_id</span>
+<span class="cm">string name</span>
+<span class="cm">diagnostic_msgs/KeyValue[] parameters</span>
+<span class="cm">float32 duration</span>
+<span class="cm">float32 dispatch_time</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cm">/*</span>
+<span class="cm">ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager] &quot;&lt;&lt;&quot;&quot;);</span>
+<span class="cm">ROS_WARN_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager] WARNING: &quot;&lt;&lt;&quot;&quot;);</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="k">namespace</span><span class="w"> </span><span class="nn">KCL_rosplan</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+
+
+<span class="c1">// === BASE METHODS === //</span>
+
+<span class="c1">// class constructor</span>
+<span class="n">RP_rcl_action_name</span><span class="o">::</span><span class="n">RP_rcl_action_name</span><span class="p">(</span><span class="w"> </span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="o">&amp;</span><span class="w"> </span><span class="n">nh_</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span>
+<span class="w">	</span><span class="n">RPActionInterface</span><span class="p">(</span><span class="w"> </span><span class="p">),</span><span class="w"></span>
+<span class="w">	</span><span class="n">nh</span><span class="p">(</span><span class="w"> </span><span class="n">nh_</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// action feedback</span>
+<span class="w">	</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">fb</span><span class="p">.</span><span class="n">action_name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ROSPLAN_ACTION_NAME</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">nh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nh_</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+
+
+<span class="c1">// class destructor</span>
+<span class="n">RP_rcl_action_name</span><span class="o">::~</span><span class="n">RP_rcl_action_name</span><span class="p">(</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// ...</span>
+<span class="p">}</span><span class="w"></span>
+
+
+
+
+<span class="c1">// === CONCRETE CALLBACK === //</span>
+
+<span class="c1">// ...</span>
+<span class="kt">bool</span><span class="w"> </span><span class="n">RP_rcl_action_name</span><span class="o">::</span><span class="n">concreteCallback</span><span class="p">(</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="n">rosplan_dispatch_msgs</span><span class="o">::</span><span class="n">ActionDispatch</span><span class="o">::</span><span class="n">ConstPtr</span><span class="o">&amp;</span><span class="w"> </span><span class="n">msg</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="c1">// ...</span>
+<span class="w">	</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+
+
+
+<span class="c1">// === PRIVATE METHODS === //</span>
+
+<span class="c1">// ...</span>
+
+
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>nodo che implementa la classe: (action_name_node.cpp)</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cm">/********************************************//**</span>
+<span class="cm">*  </span>
+<span class="cm">* @file ???.cpp</span>
+<span class="cm">* @brief ROSPlan action implementation as ROS node</span>
+<span class="cm">* </span>
+<span class="cm">* @authors Francesco Ganci</span>
+<span class="cm">* @version v1.0</span>
+<span class="cm">* </span>
+<span class="cm">* @see feedback_manager.h</span>
+<span class="cm">* </span>
+<span class="cm">***********************************************/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;ros/ros.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;knowledge_base_tools/feedback_manager.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;robocluedo_rosplan_actions/action_name.h&quot;</span><span class="cp"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;signal.h&gt;</span><span class="cp"></span>
+
+<span class="kt">void</span><span class="w"> </span><span class="nf">shut_msg</span><span class="p">(</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">sig</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="o">&lt;&lt;</span><span class="n">ROSPLAN_ACTION_NAME</span><span class="o">&lt;&lt;</span><span class="s">&quot;] &quot;</span><span class="o">&lt;&lt;</span><span class="s">&quot;stopping...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">ros</span><span class="o">::</span><span class="n">shutdown</span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">ros</span><span class="o">::</span><span class="n">init</span><span class="p">(</span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="n">argv</span><span class="p">,</span><span class="w"> </span><span class="n">ROSPLAN_ACTION_NAME</span><span class="p">,</span><span class="w"> </span>
+<span class="w">		</span><span class="n">ros</span><span class="o">::</span><span class="n">init_options</span><span class="o">::</span><span class="n">AnonymousName</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">ros</span><span class="o">::</span><span class="n">init_options</span><span class="o">::</span><span class="n">NoSigintHandler</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">signal</span><span class="p">(</span><span class="n">SIGINT</span><span class="p">,</span><span class="w"> </span><span class="n">shut_msg</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="n">ros</span><span class="o">::</span><span class="n">NodeHandle</span><span class="w"> </span><span class="n">nh</span><span class="p">(</span><span class="s">&quot;~&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="o">&lt;&lt;</span><span class="n">ROSPLAN_ACTION_NAME</span><span class="o">&lt;&lt;</span><span class="s">&quot;] &quot;</span><span class="o">&lt;&lt;</span><span class="s">&quot;starting...&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">KCL_rosplan</span><span class="o">::</span><span class="n">RP_rcl_action_name</span><span class="w"> </span><span class="n">ac</span><span class="p">(</span><span class="w"> </span><span class="n">nh</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="n">ROS_INFO_STREAM</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="o">&lt;&lt;</span><span class="n">ROSPLAN_ACTION_NAME</span><span class="o">&lt;&lt;</span><span class="s">&quot;] &quot;</span><span class="o">&lt;&lt;</span><span class="s">&quot;ready&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span><span class="n">ac</span><span class="p">.</span><span class="n">runActionInterface</span><span class="p">(</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<p>catkin:</p>
+<div class="highlight-cmake notranslate"><div class="highlight"><pre><span></span><span class="nb">add_library</span><span class="p">(</span> <span class="s">action_name</span> <span class="s">src/robocluedo_rosplan_actions/action_name.cpp</span> <span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span> <span class="s">action_name</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span> <span class="s">feedback_manager</span> <span class="s">kb_tools</span> <span class="s">rosplan_action_interface</span> <span class="p">)</span>
+<span class="nb">add_executable</span><span class="p">(</span> <span class="s">node_action_name</span> <span class="s">src/robocluedo_rosplan_actions/action_name_node.cpp</span> <span class="p">)</span>
+<span class="nb">add_dependencies</span><span class="p">(</span> <span class="s">node_action_name</span> <span class="o">${</span><span class="nv">${PROJECT_NAME</span><span class="o">}</span><span class="s">_EXPORTED_TARGETS}</span> <span class="o">${</span><span class="nv">catkin_EXPORTED_TARGETS</span><span class="o">}</span> <span class="p">)</span>
+<span class="nb">target_link_libraries</span><span class="p">(</span> <span class="s">node_action_name</span> <span class="o">${</span><span class="nv">catkin_LIBRARIES</span><span class="o">}</span> <span class="s">feedback_manager</span> <span class="s">kb_tools</span> <span class="s">rosplan_action_interface</span> <span class="s">action_name</span> <span class="p">)</span>
+</pre></div>
+</div>
+</li>
+<li><p>compila?</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://cplusplus.com/forum/general/203321/">ricorda questo errore!</a> piuttosto fastidioso da risolvere</p></li>
+<li><p>dopo aver tribolato mezz’ora, ci siamo</p></li>
+</ul>
+</li>
+<li><p>adesso possiamo partire con l’implementazione delle azioni</p></li>
+<li><p><em>replan</em></p>
+<ul class="simple">
+<li><p>creazione delle azioni</p></li>
+<li><p>UML dell’azione, giusto per capire che canali aprire</p></li>
+<li><p>implementazione</p></li>
+<li><p>cmake</p></li>
+<li><p>compila? compila.</p></li>
+</ul>
+</li>
+<li><p><em>move-to</em></p>
+<ul class="simple">
+<li><p>creazione dell’azione</p></li>
+<li><p>UML della action</p></li>
+<li><p>manca un servizio per move_to …</p></li>
+<li><p>apertura delle interfacce (ne serve solo una)</p></li>
+<li><p>implementazione</p></li>
+<li><p>e cmake</p></li>
+<li><p>compila? compila.</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on robocluedo_rosplan_actions (replan, move_to)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
+<li><p>implementazione precisa dell’azione move-to</p></li>
+<li><p>feedback “hw navigation failure”</p></li>
+<li><p>feedback “impossibile contattare il server” (failure generica)</p></li>
+<li><p>feedback “success”</p></li>
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
 <li><p>implementazione di una funzionalità per fare un clear “sicuro” della ontology (quello di rosplan funziona maluccio)</p></li>

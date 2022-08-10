@@ -50,37 +50,6 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(hint-collected<sp/>?wp<sp/>)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>list<sp/>of<sp/>predicates</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">environment:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>`(at<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-at<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(passage<sp/>?wp1<sp/>?wp2<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(is-center<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-is-center<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(explored<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-explored<sp/>?wp<sp/>-<sp/>waypoint<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(at-center<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-at-center<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(<sp/>)`</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">LANDMARK<sp/>replan:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>`(dirty<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-dirty<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(<sp/>)`</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">LANDMARK<sp/>collect:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>`(hint-ready<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(not-hint-ready<sp/>)`</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>`(<sp/>)`</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">LANDMARK<sp/>solve</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>`(<sp/>)`</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">###<sp/>list<sp/>of<sp/>services<sp/>provided<sp/>by<sp/>the<sp/>kb<sp/>interface</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>write<sp/>a<sp/>predicate<sp/>into<sp/>the<sp/>kb</highlight></codeline>
@@ -129,22 +98,23 @@
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;KB<sp/>interface<sp/>service&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;replan&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;replan&quot;<sp/>&lt;&lt;PDDL<sp/>ROS<sp/>action&gt;&gt;<sp/>as<sp/>ACT_REPLAN</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-up-<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/replan&quot;<sp/>as<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_IKB</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_msgs::Empty</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_REPLAN<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_REPLAN<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
@@ -156,6 +126,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>sistema<sp/>è<sp/>*molto<sp/>simile<sp/>a<sp/>quello<sp/>della<sp/>vecchia<sp/>versione*<sp/>se<sp/>non<sp/>per<sp/>qualche<sp/>predicato<sp/>di<sp/>meno</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>le<sp/>posizioni<sp/>in<sp/>cui<sp/>il<sp/>robot<sp/>può<sp/>andare<sp/>sono<sp/>quelle<sp/>non<sp/>marcate<sp/>come<sp/>`(is-center<sp/>?wp)`,<sp/>ovvero<sp/>usa<sp/>il<sp/>not</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>robot<sp/>*non<sp/>può<sp/>compiere<sp/>un&apos;azione<sp/>di<sp/>movimento<sp/>verso<sp/>lo<sp/>stesso<sp/>punto<sp/>in<sp/>cui<sp/>si<sp/>trova*:<sp/>insomma,<sp/>deve<sp/>muoversi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>l&apos;azione<sp/>si<sp/>aspetta<sp/>che<sp/>qualche<sp/>altro<sp/>sistema<sp/>implementi<sp/>un<sp/>servizio<sp/>a<sp/>cui<sp/>l&apos;azione<sp/>si<sp/>connette<sp/>come<sp/>client<sp/>per<sp/>interagire<sp/>col<sp/>navigation<sp/>system</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>tale<sp/>servizio<sp/>si<sp/>occupa<sp/>anche<sp/>di<sp/>associare<sp/>il<sp/>nome<sp/>del<sp/>waypoint<sp/>alla<sp/>posizione<sp/>del<sp/>waypoint<sp/>in<sp/>termini<sp/>di<sp/>coordinate<sp/>cartesiane</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">azione<sp/>PDDL:</highlight></codeline>
 <codeline></codeline>
@@ -205,13 +177,9 @@
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>go_to_point&quot;</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>move_to&quot;</highlight></codeline>
 <codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;nav<sp/>service&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
@@ -219,13 +187,18 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/navigation_command&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/NavigationCommand</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>

@@ -643,23 +643,18 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on feedback manager (first basic implementation)&quot;</para>
 </listitem></itemizedlist>
 </para>
-<para>TODO</para>
-<para><itemizedlist>
-<listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
-</listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
-</listitem><listitem><para>implementazione di una funzionalità per fare un clear &quot;sicuro&quot; della ontology (quello di rosplan funziona maluccio)</para>
-</listitem><listitem><para>spostare la documentazione di ROSplan nella nuova workspace di erl2</para>
-</listitem><listitem><para>come settare un goal via codice da ROSplan?</para>
-</listitem><listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>
-</listitem><listitem><para>un branch per la documentazione Sphinx</para>
-</listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>
-</listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
-</listitem><listitem><para>approfondire UML armor</para>
-</listitem></itemizedlist>
+<para><hruler/>
 </para>
-<para>NOTE</para>
+<para>meglio iniziare a strutturare le implementazioni delle azioni PDDL:</para>
 <para><itemizedlist>
-<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio. </para>
+<listitem><para>prima, meglio farsi un template minimo per gli header</para>
+<para>header: (<ref refid="action__name_8h" kindref="compound">action_name.h</ref>)</para>
+<para>```c++</para>
+<para>/********************************************//**<itemizedlist>
+<listitem><para><linebreak/>
+</para>
+</listitem><listitem></listitem></itemizedlist>
+</para>
 </listitem></itemizedlist>
 </para>
 </sect1>

@@ -749,7 +749,230 @@ passiamo a lavorare sul feedback manager:
 	- compila? compila.
 - UML del feedback manager (per ora senza indicare i tipi di feedback)
 - **COMMIT** : "working on feedback manager (first basic implementation)"
+
+---
+
+meglio iniziare a strutturare le implementazioni delle azioni PDDL:
+
+- prima, meglio farsi un template minimo per gli header
 	
+	header: (action_name.h)
+	
+	```c++
+
+	/********************************************//**
+	*  
+	* @file ???.h
+	* @brief ROSPlan action implementation
+	* 
+	* @authors Francesco Ganci
+	* @version v1.0
+	* 
+	***********************************************/
+
+	#ifndef __H_ACTION_NAME_H__
+	#define __H_ACTION_NAME_H__
+
+	#define ROSPLAN_ACTION_NAME "action_name"
+
+	#include "ros/ros.h"
+	#include "rosplan_action_interface/RPActionInterface.h"
+	#include "knowledge_base_tools/feedback_manager.h"
+	#include "rosplan_dispatch_msgs/ActionDispatch.h"
+
+	namespace KCL_rosplan 
+	{
+
+	class RP_rcl_action_name : public RPActionInterface
+	{
+	public:
+		
+		/** class constructor */
+		RP_rcl_action_name( ros::NodeHandle& nh_ );
+		
+		/** class destructor */
+		~RP_rcl_action_name( );
+		
+		/** ROSPlan concrete callback */
+		bool concreteCallback( const rosplan_dispatch_msgs::ActionDispatch::ConstPtr& msg );
+
+	private:
+		
+		/// node handle
+		ros::NodeHandle& nh;
+		
+		/// action feedback manager (as object instance)
+		action_feedback_manager fb;
+	};
+
+	}
+
+	#endif
+
+	```
+	
+	implementazione della classe: (action_name.cpp)
+	
+	```c++
+
+	/********************************************//**
+	*  
+	* @file ???.cpp
+	* @brief ROSPlan action implementation
+	* 
+	* @authors Francesco Ganci
+	* @version v1.0
+	* 
+	* @see feedback_manager.h
+	* 
+	***********************************************/
+
+	#include "robocluedo_rosplan_actions/action_name.h"
+
+	/*
+	# actionDispatch message
+
+	int32 action_id
+	int32 plan_id
+	string name
+	diagnostic_msgs/KeyValue[] parameters
+	float32 duration
+	float32 dispatch_time
+	*/
+
+	/*
+	ROS_INFO_STREAM("["<<action_name<<"::feedback_manager] "<<"");
+	ROS_WARN_STREAM("["<<action_name<<"::feedback_manager] WARNING: "<<"");
+	*/
+
+	namespace KCL_rosplan
+	{
+
+
+	// === BASE METHODS === //
+
+	// class constructor
+	RP_rcl_action_name::RP_rcl_action_name( ros::NodeHandle& nh_ ) : 
+		RPActionInterface( ),
+		nh( nh_ )
+	{
+		// action feedback
+		this->fb.action_name = ROSPLAN_ACTION_NAME;
+		
+		this->nh = nh_;
+		
+		// ...
+	}
+
+
+	// class destructor
+	RP_rcl_action_name::~RP_rcl_action_name( )
+	{
+		// ...
+	}
+
+
+
+
+	// === CONCRETE CALLBACK === //
+
+	// ...
+	bool RP_rcl_action_name::concreteCallback( const rosplan_dispatch_msgs::ActionDispatch::ConstPtr& msg )
+	{
+		// ...
+		
+		return true;
+	}
+
+
+
+
+	// === PRIVATE METHODS === //
+
+	// ...
+
+
+	}
+
+	```
+	
+	nodo che implementa la classe: (action\_name_node.cpp)
+	
+	```c++
+
+	/********************************************//**
+	*  
+	* @file ???.cpp
+	* @brief ROSPlan action implementation as ROS node
+	* 
+	* @authors Francesco Ganci
+	* @version v1.0
+	* 
+	* @see feedback_manager.h
+	* 
+	***********************************************/
+
+	#include "ros/ros.h"
+	#include "knowledge_base_tools/feedback_manager.h"
+	#include "robocluedo_rosplan_actions/action_name.h"
+
+	#include <signal.h>
+
+	void shut_msg( int sig )
+	{
+		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"stopping...");
+		ros::shutdown( );
+	}
+
+	int main(int argc, char **argv) 
+	{
+		ros::init(argc, argv, ROSPLAN_ACTION_NAME, 
+			ros::init_options::AnonymousName | ros::init_options::NoSigintHandler );
+		signal(SIGINT, shut_msg);
+		
+		ros::NodeHandle nh("~");
+		
+		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"starting...");
+		KCL_rosplan::RP_rcl_action_name ac( nh );
+		
+		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"ready");
+		ac.runActionInterface( );
+		
+		return 0;
+	}
+
+	```
+	
+	catkin:
+	
+	```cmake
+	add_library( action_name src/robocluedo_rosplan_actions/action_name.cpp )
+	target_link_libraries( action_name ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface )
+	add_executable( node_action_name src/robocluedo_rosplan_actions/action_name_node.cpp )
+	add_dependencies( node_action_name ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+	target_link_libraries( node_action_name ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface action_name )
+	```
+	
+- compila? 
+	- [ricorda questo errore!](https://cplusplus.com/forum/general/203321/) piuttosto fastidioso da risolvere
+	- dopo aver tribolato mezz'ora, ci siamo
+- adesso possiamo partire con l'implementazione delle azioni
+- *replan*
+	- creazione delle azioni
+	- UML dell'azione, giusto per capire che canali aprire
+	- implementazione
+	- cmake
+	- compila? compila.
+- *move-to*
+	- creazione dell'azione
+	- UML della action 
+	- manca un servizio per move_to ... 
+	- apertura delle interfacce (ne serve solo una)
+	- implementazione
+	- e cmake
+	- compila? compila.
+- **COMMIT** : "working on robocluedo_rosplan_actions (replan, move_to)"
+
 
 
 
@@ -757,6 +980,10 @@ passiamo a lavorare sul feedback manager:
 
 TODO
 
+- implementazione precisa dell'azione move-to
+- feedback "hw navigation failure"
+- feedback "impossibile contattare il server" (failure generica)
+- feedback "success"
 - aggiungere le pagine di documentazione del codice di Sphinx!
 - *module testing* su kb_tools
 - implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)
