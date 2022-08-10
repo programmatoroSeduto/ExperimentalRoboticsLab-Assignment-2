@@ -944,6 +944,28 @@ unsolvable.
 </ul>
 </li>
 <li><p><strong>COMMIT</strong> : “working on pipeline manager (parsing interface)”</p></li>
+<li><p>prima di andare avanti mi servono le simulated actions</p>
+<ul>
+<li><p>posso implementare una prima versione del dispatcher (per ora senza il feedback)</p></li>
+<li><p>test</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}&quot;</span> 
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>per quanto riguarda il pipeline manager questo è tutto ciò che posso fare ora.</p></li>
+<li><p><strong>COMMIT</strong> : “working on pipeline manager (simulated action and dispatch)”</p></li>
+</ul>
+<hr class="docutils" />
+<p>passiamo a lavorare sul feedback manager:</p>
+<ul class="simple">
+<li><p>anzitutto lettura del vecchio codice (l’idea è la stessa: una classe che posso usare da padre per altre classi, o che posso istanziare)</p></li>
+<li><p>la classe precedente non è più utilizzabile, però posso riadattarla, stesso lavoro di kb_tools direi</p>
+<ul>
+<li><p>creazione header</p></li>
+</ul>
+</li>
 </ul>
 <p>TODO</p>
 <ul class="simple">

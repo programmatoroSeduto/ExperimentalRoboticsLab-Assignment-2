@@ -139,7 +139,7 @@
     <member refid="namespacerosplan__pipeline__manager_1a30cd1c85592af4b31d40c97a6ab702b3" kind="variable"><name>parsing_interface_received</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a851609c2fbee71bbcf5eed542af9c56b" kind="variable"><name>parsing_interface_array</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a0a74f0075fea7d306e1190bc4624f555" kind="variable"><name>service_dispatch</name></member>
-    <member refid="namespacerosplan__pipeline__manager_1a9c2b89c0b483b7770945d18295fcb67e" kind="variable"><name>cl_dispatch</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1aa9d8b6462db1c77d1ef614490f183e8b" kind="variable"><name>cl_dispatch</name></member>
     <member refid="namespacerosplan__pipeline__manager_1af7237d230c308b9eea9dabd65608740d" kind="variable"><name>topic_action_feedback</name></member>
     <member refid="namespacerosplan__pipeline__manager_1ae5c59ddee1e43bb080a549921a6286fc" kind="variable"><name>sub_action_feedback</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a71a38b6cda85fbe31ac9d970bd3b4ca4" kind="variable"><name>service_pipeline</name></member>

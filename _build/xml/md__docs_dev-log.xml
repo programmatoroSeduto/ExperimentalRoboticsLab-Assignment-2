@@ -612,6 +612,24 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on pipeline manager (parsing interface)&quot;</para>
+</listitem><listitem><para>prima di andare avanti mi servono le simulated actions<itemizedlist>
+<listitem><para>posso implementare una prima versione del dispatcher (per ora senza il feedback)</para>
+</listitem><listitem><para>test ``` rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}&quot; ```</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per quanto riguarda il pipeline manager questo è tutto ciò che posso fare ora.</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on pipeline manager (simulated action and dispatch)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>passiamo a lavorare sul feedback manager:</para>
+<para><itemizedlist>
+<listitem><para>anzitutto lettura del vecchio codice (l&apos;idea è la stessa: una classe che posso usare da padre per altre classi, o che posso istanziare)</para>
+</listitem><listitem><para>la classe precedente non è più utilizzabile, però posso riadattarla, stesso lavoro di <ref refid="classkb__tools" kindref="compound">kb_tools</ref> direi<itemizedlist>
+<listitem><para>creazione header</para>
+</listitem></itemizedlist>
+</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

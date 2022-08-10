@@ -735,6 +735,23 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>(solo<sp/>trigger<sp/>per<sp/>ora)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>test<sp/>...<sp/>funge!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(parsing<sp/>interface)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>andare<sp/>avanti<sp/>mi<sp/>servono<sp/>le<sp/>simulated<sp/>actions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>implementare<sp/>una<sp/>prima<sp/>versione<sp/>del<sp/>dispatcher<sp/>(per<sp/>ora<sp/>senza<sp/>il<sp/>feedback)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>il<sp/>pipeline<sp/>manager<sp/>questo<sp/>è<sp/>tutto<sp/>ciò<sp/>che<sp/>posso<sp/>fare<sp/>ora.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(simulated<sp/>action<sp/>and<sp/>dispatch)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">passiamo<sp/>a<sp/>lavorare<sp/>sul<sp/>feedback<sp/>manager:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>anzitutto<sp/>lettura<sp/>del<sp/>vecchio<sp/>codice<sp/>(l&apos;idea<sp/>è<sp/>la<sp/>stessa:<sp/>una<sp/>classe<sp/>che<sp/>posso<sp/>usare<sp/>da<sp/>padre<sp/>per<sp/>altre<sp/>classi,<sp/>o<sp/>che<sp/>posso<sp/>istanziare)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>la<sp/>classe<sp/>precedente<sp/>non<sp/>è<sp/>più<sp/>utilizzabile,<sp/>però<sp/>posso<sp/>riadattarla,<sp/>stesso<sp/>lavoro<sp/>di<sp/>kb_tools<sp/>direi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>header</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

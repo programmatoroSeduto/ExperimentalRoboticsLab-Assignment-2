@@ -45,5 +45,8 @@ bool success_parse_plan
 # execution phase success
 bool success_execute_plan
 
+# received a feedback (not received a feedback indicates a anomalous situation)
+bool feedback_received
+
 # the last feedback received from the system
 ActionFeedback feedback

@@ -215,6 +215,8 @@ def cbk_pipeline( req ):
 	global parsing_interface_received
 	global parsing_interface_array
 	
+	global cl_dispatch
+	
 	res = RosplanPipelineManagerServiceResponse( )
 	res.success = True
 	res.success_load_problem = True
@@ -222,6 +224,7 @@ def cbk_pipeline( req ):
 	res.problem_not_solvable = False
 	res.success_parse_plan = True
 	res.success_execute_plan = True
+	res.feedback_received = True
 	
 	
 	## === PROBLEM INTERFACE === ## 
@@ -342,7 +345,25 @@ def cbk_pipeline( req ):
 	
 	## === DISPATCH === ## 
 	
-	# ...
+	if req.execute_plan:
+		rospy.loginfo(f"({NODE_NAME}) dispatch -- dispatching plan")
+		
+		# trigger and wait
+		try:
+			cl_dispatch()
+			rospy.sleep(rospy.Duration(1))
+		except rospy.serviceException as e:
+			rospy.logwarn(f"({NODE_NAME}) dispatch -- ERROR in calling the service ({e})")
+			
+			res.success = False
+			res.success_execute_plan = False
+			res.feedback_received = False
+			return res
+		
+		# TODO: receive a feedback
+		
+	else:
+		rospy.loginfo(f"({NODE_NAME}) dispatch -- skipping")
 	
 	return res
 
@@ -399,7 +420,7 @@ if __name__ == "__main__":
 		cl_problem = open_cl( service_problem, Empty )
 		cl_plan = open_cl( service_plan, Empty )
 		cl_parse = open_cl( service_parse, Empty )
-		# cl_dispatch = open_cl( service_dispatch, DispatchService )
+		cl_dispatch = open_cl( service_dispatch, DispatchService )
 		
 		cl_update_goal = open_cl( service_update_goal, UpdateGoal )
 		

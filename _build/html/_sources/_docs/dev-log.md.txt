@@ -726,6 +726,23 @@ torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l'i
 	- implementazione (solo trigger per ora)
 	- e test ... funge!
 - **COMMIT** : "working on pipeline manager (parsing interface)"
+- prima di andare avanti mi servono le simulated actions
+	- posso implementare una prima versione del dispatcher (per ora senza il feedback)
+	- test
+		```
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}" 
+		```
+- per quanto riguarda il pipeline manager questo è tutto ciò che posso fare ora.
+- **COMMIT** : "working on pipeline manager (simulated action and dispatch)"
+
+--- 
+
+passiamo a lavorare sul feedback manager:
+
+- anzitutto lettura del vecchio codice (l'idea è la stessa: una classe che posso usare da padre per altre classi, o che posso istanziare)
+- la classe precedente non è più utilizzabile, però posso riadattarla, stesso lavoro di kb_tools direi
+	- creazione header
+	
 
 
 
