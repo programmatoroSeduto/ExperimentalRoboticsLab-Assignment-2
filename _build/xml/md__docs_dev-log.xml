@@ -627,9 +627,20 @@
 <para><itemizedlist>
 <listitem><para>anzitutto lettura del vecchio codice (l&apos;idea è la stessa: una classe che posso usare da padre per altre classi, o che posso istanziare)</para>
 </listitem><listitem><para>la classe precedente non è più utilizzabile, però posso riadattarla, stesso lavoro di <ref refid="classkb__tools" kindref="compound">kb_tools</ref> direi<itemizedlist>
-<listitem><para>creazione header</para>
+<listitem><para>creazione header e cpp file</para>
 </listitem></itemizedlist>
 </para>
+</listitem><listitem><para>adesso, una cosa per volta, a partire dall&apos;header<itemizedlist>
+<listitem><para>librerie e &quot;contorno&quot;</para>
+</listitem><listitem><para>funzione per la scrittura rapida del messaggio</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per ora basta che compili (i feedback li scrivo man mano che scrivo le azioni)<itemizedlist>
+<listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>UML del feedback manager (per ora senza indicare i tipi di feedback)</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on feedback manager (first basic implementation)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

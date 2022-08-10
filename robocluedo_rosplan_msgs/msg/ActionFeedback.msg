@@ -16,6 +16,9 @@ bool goal_achieved
 # if a failure occurred
 bool failure
 
+# specific for hardware failure
+bool hw_failure
+
 # failure of the navigation system
 bool failure_nav_system
 

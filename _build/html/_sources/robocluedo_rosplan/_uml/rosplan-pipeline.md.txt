@@ -40,7 +40,7 @@ note on link : std_srvs/Empty
 RP_PLAN "srv" -right-> SRV_PLAN_TRIG
 note on link : std_srvs/Empty
 
-() "rosservice call /rosplan_parsing_interface/parse_plan" as SRV_PARSE_TRIG
+() "/rosplan_parsing_interface/parse_plan" as SRV_PARSE_TRIG
 RP_PARSE "srv" -right-> SRV_PARSE_TRIG
 note on link : std_srvs/Empty
 
@@ -112,6 +112,34 @@ note on link : robocluedo_rosplan_msgs/RosplanPipelineManagerService
 
 ''' CONNECTIONS
 
+
+@enduml
+```
+
+## SCHEMA -- feedback manager
+
+```{uml}
+@startuml
+
+''' INFOS
+title ROSPlan feedback manager
+skinparam Padding 10
+allow_mixing
+
+
+''' COMPONENTS
+class "Feedback Manager" as FEEDBACK
+{
+  + fb_???( ...params... )
+}
+
+() "/robocluedo/action_feedback" as SRV_FEEDBACK
+FEEDBACK --> SRV_FEEDBACK
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+
+''' CONNECTIONS
+' ...
 
 @enduml
 ```

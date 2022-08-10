@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classaction__feedback__manager" kind="class" language="C++" prot="public">
+    <compoundname>action_feedback_manager</compoundname>
+    <includes refid="feedback__manager_8h" local="no">feedback_manager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classaction__feedback__manager_1afd0e88e5b7403e536bdfb98f4ac7fcc0" prot="private" static="no" mutable="no">
+        <type>ros::NodeHandle</type>
+        <definition>ros::NodeHandle action_feedback_manager::nh</definition>
+        <argsstring></argsstring>
+        <name>nh</name>
+        <briefdescription>
+<para>ROS node handle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="71" column="17" bodyfile="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaction__feedback__manager_1a1d4d567f99749d30031a0ef36056b740" prot="private" static="no" mutable="no">
+        <type>ros::Publisher</type>
+        <definition>ros::Publisher action_feedback_manager::pub_action_feedback</definition>
+        <argsstring></argsstring>
+        <name>pub_action_feedback</name>
+        <briefdescription>
+<para>the publisher handle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="74" column="16" bodyfile="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string action_feedback_manager::action_name</definition>
+        <argsstring></argsstring>
+        <name>action_name</name>
+        <briefdescription>
+<para>the name of the action </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="77" column="13" bodyfile="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" bodystart="77" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classaction__feedback__manager_1a1e39f6b9fbe49dd45d48010c48968a66" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>action_feedback_manager::action_feedback_manager</definition>
+        <argsstring>(std::string act_name=ACTION_NAME_UNKNOWN)</argsstring>
+        <name>action_feedback_manager</name>
+        <param>
+          <type>std::string</type>
+          <declname>act_name</declname>
+          <defval><ref refid="feedback__manager_8h_1a7fde9014c619ef02f705989a9032a8a5" kindref="member">ACTION_NAME_UNKNOWN</ref></defval>
+        </param>
+        <briefdescription>
+<para>constructor of <ref refid="classaction__feedback__manager" kindref="compound">action_feedback_manager</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>this function opens the publisher and performs some other intialization. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="56" column="1" bodyfile="robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp" bodystart="23" bodyend="31"/>
+        <references refid="feedback__manager_8h_1a56390d2d0f99e7a63ae2e7ea05a9b53e" compoundref="feedback__manager_8h" startline="28">TOPIC_ACTION_FEEDBACK</references>
+      </memberdef>
+      <memberdef kind="function" id="classaction__feedback__manager_1a03578c1ddea3134821802d1a9f751db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>action_feedback_manager::~action_feedback_manager</definition>
+        <argsstring>()</argsstring>
+        <name>~action_feedback_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>class destructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="59" column="1" bodyfile="robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp" bodystart="35" bodyend="38"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classaction__feedback__manager_1a79e5419924ad7cf1bf1d4d82c915eeb6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>robocluedo_rosplan_msgs::ActionFeedback</type>
+        <definition>robocluedo_rosplan_msgs::ActionFeedback action_feedback_manager::build_msg</definition>
+        <argsstring>(std::vector&lt; diagnostic_msgs::KeyValue &gt; parameters, bool goal_achieved=true, bool failure=false, bool hw_failure=false, bool failure_nav_system=false, bool failure_manipulation=false, std::string details=&quot;&quot;)</argsstring>
+        <name>build_msg</name>
+        <param>
+          <type>std::vector&lt; diagnostic_msgs::KeyValue &gt;</type>
+          <declname>parameters</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>goal_achieved</declname>
+          <defval>true</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>failure</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>hw_failure</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>failure_nav_system</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>failure_manipulation</declname>
+          <defval>false</defval>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>details</declname>
+          <defval>&quot;&quot;</defval>
+        </param>
+        <briefdescription>
+<para>build a action feedback message </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>parameters</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>directly from the propertied of the action</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>the feedback message ready to be sent </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="88" column="41" bodyfile="robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp" bodystart="53" bodyend="80"/>
+      </memberdef>
+      <memberdef kind="function" id="classaction__feedback__manager_1a6c70967243103c8cdc91f0feadf23ec6" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool action_feedback_manager::pub</definition>
+        <argsstring>(robocluedo_rosplan_msgs::ActionFeedback &amp;msg)</argsstring>
+        <name>pub</name>
+        <param>
+          <type>robocluedo_rosplan_msgs::ActionFeedback &amp;</type>
+          <declname>msg</declname>
+        </param>
+        <briefdescription>
+<para>publish the feedback </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>true if the publication succeeded, false otherwise </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="104" column="6" bodyfile="robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp" bodystart="84" bodyend="88"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>utilities for sending further infos to the pipeline manager. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" line="42" column="1" bodyfile="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h" bodystart="41" bodyend="105"/>
+    <listofallmembers>
+      <member refid="classaction__feedback__manager_1a1e39f6b9fbe49dd45d48010c48968a66" prot="public" virt="non-virtual"><scope>action_feedback_manager</scope><name>action_feedback_manager</name></member>
+      <member refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" prot="private" virt="non-virtual"><scope>action_feedback_manager</scope><name>action_name</name></member>
+      <member refid="classaction__feedback__manager_1a79e5419924ad7cf1bf1d4d82c915eeb6" prot="private" virt="non-virtual"><scope>action_feedback_manager</scope><name>build_msg</name></member>
+      <member refid="classaction__feedback__manager_1afd0e88e5b7403e536bdfb98f4ac7fcc0" prot="private" virt="non-virtual"><scope>action_feedback_manager</scope><name>nh</name></member>
+      <member refid="classaction__feedback__manager_1a6c70967243103c8cdc91f0feadf23ec6" prot="private" virt="non-virtual"><scope>action_feedback_manager</scope><name>pub</name></member>
+      <member refid="classaction__feedback__manager_1a1d4d567f99749d30031a0ef36056b740" prot="private" virt="non-virtual"><scope>action_feedback_manager</scope><name>pub_action_feedback</name></member>
+      <member refid="classaction__feedback__manager_1a03578c1ddea3134821802d1a9f751db4" prot="public" virt="non-virtual"><scope>action_feedback_manager</scope><name>~action_feedback_manager</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

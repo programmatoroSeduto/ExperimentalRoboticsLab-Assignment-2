@@ -750,7 +750,14 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>anzitutto<sp/>lettura<sp/>del<sp/>vecchio<sp/>codice<sp/>(l&apos;idea<sp/>è<sp/>la<sp/>stessa:<sp/>una<sp/>classe<sp/>che<sp/>posso<sp/>usare<sp/>da<sp/>padre<sp/>per<sp/>altre<sp/>classi,<sp/>o<sp/>che<sp/>posso<sp/>istanziare)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>la<sp/>classe<sp/>precedente<sp/>non<sp/>è<sp/>più<sp/>utilizzabile,<sp/>però<sp/>posso<sp/>riadattarla,<sp/>stesso<sp/>lavoro<sp/>di<sp/>kb_tools<sp/>direi</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>header</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>header<sp/>e<sp/>cpp<sp/>file</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>adesso,<sp/>una<sp/>cosa<sp/>per<sp/>volta,<sp/>a<sp/>partire<sp/>dall&apos;header</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>librerie<sp/>e<sp/>&quot;contorno&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>funzione<sp/>per<sp/>la<sp/>scrittura<sp/>rapida<sp/>del<sp/>messaggio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>ora<sp/>basta<sp/>che<sp/>compili<sp/>(i<sp/>feedback<sp/>li<sp/>scrivo<sp/>man<sp/>mano<sp/>che<sp/>scrivo<sp/>le<sp/>azioni)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>UML<sp/>del<sp/>feedback<sp/>manager<sp/>(per<sp/>ora<sp/>senza<sp/>indicare<sp/>i<sp/>tipi<sp/>di<sp/>feedback)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>feedback<sp/>manager<sp/>(first<sp/>basic<sp/>implementation)&quot;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>

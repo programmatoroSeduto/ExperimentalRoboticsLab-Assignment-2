@@ -149,6 +149,9 @@ include_directories(
 add_library( kb_tools src/knowledge_base_tools/kb_tools.cpp )
 target_link_libraries( kb_tools ${catkin_LIBRARIES} )
 
+add_library( feedback_manager src/knowledge_base_tools/feedback_manager.cpp )
+target_link_libraries( feedback_manager ${catkin_LIBRARIES} )
+
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure

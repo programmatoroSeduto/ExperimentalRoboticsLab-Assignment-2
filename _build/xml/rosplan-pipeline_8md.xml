@@ -49,7 +49,7 @@
 <codeline><highlight class="normal">RP_PLAN<sp/>&quot;srv&quot;<sp/>-right-&gt;<sp/>SRV_PLAN_TRIG</highlight></codeline>
 <codeline><highlight class="normal">note<sp/>on<sp/>link<sp/>:<sp/>std_srvs/Empty</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;rosservice<sp/>call<sp/>/rosplan_parsing_interface/parse_plan&quot;<sp/>as<sp/>SRV_PARSE_TRIG</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/rosplan_parsing_interface/parse_plan&quot;<sp/>as<sp/>SRV_PARSE_TRIG</highlight></codeline>
 <codeline><highlight class="normal">RP_PARSE<sp/>&quot;srv&quot;<sp/>-right-&gt;<sp/>SRV_PARSE_TRIG</highlight></codeline>
 <codeline><highlight class="normal">note<sp/>on<sp/>link<sp/>:<sp/>std_srvs/Empty</highlight></codeline>
 <codeline></codeline>
@@ -121,6 +121,34 @@
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
 <codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>SCHEMA<sp/>--<sp/>feedback<sp/>manager</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```{uml}</highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>ROSPlan<sp/>feedback<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>10</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">class<sp/>&quot;Feedback<sp/>Manager&quot;<sp/>as<sp/>FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>+<sp/>fb_???(<sp/>...params...<sp/>)</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>SRV_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">FEEDBACK<sp/>--&gt;<sp/>SRV_FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>

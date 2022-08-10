@@ -119,8 +119,8 @@
 <div class="section" id="schema-of-rosplan">
 <h2>schema of ROSPlan<a class="headerlink" href="#schema-of-rosplan" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-777c171198d50beec23eb0bfad8e08f6cfea862b.svg" type="image/svg+xml" style="width:829px;height:892px;background:#FFFFFF;">
-<img src="../../_images/plantuml-777c171198d50beec23eb0bfad8e08f6cfea862b.png" alt="&#64;startuml
+<object data="../../_images/plantuml-fbe55677ca046fb470168db86fa87f92f854cc40.svg" type="image/svg+xml" style="width:829px;height:892px;background:#FFFFFF;">
+<img src="../../_images/plantuml-fbe55677ca046fb470168db86fa87f92f854cc40.png" alt="&#64;startuml
 
 ''' INFOS
 title ROSPlan main pipeline
@@ -156,7 +156,7 @@ note on link : std_srvs/Empty
 RP_PLAN &quot;srv&quot; -right-&gt; SRV_PLAN_TRIG
 note on link : std_srvs/Empty
 
-() &quot;rosservice call /rosplan_parsing_interface/parse_plan&quot; as SRV_PARSE_TRIG
+() &quot;/rosplan_parsing_interface/parse_plan&quot; as SRV_PARSE_TRIG
 RP_PARSE &quot;srv&quot; -right-&gt; SRV_PARSE_TRIG
 note on link : std_srvs/Empty
 
@@ -228,6 +228,36 @@ note on link : robocluedo_rosplan_msgs/RosplanPipelineManagerService
 
 ''' CONNECTIONS
 
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+<div class="section" id="schema-feedback-manager">
+<h2>SCHEMA – feedback manager<a class="headerlink" href="#schema-feedback-manager" title="Permalink to this heading"></a></h2>
+<p class="plantuml">
+<object data="../../_images/plantuml-05804ec79083e99d963ac68a423255fa38126dc6.svg" type="image/svg+xml" style="width:432px;height:375px;background:#FFFFFF;">
+<img src="../../_images/plantuml-05804ec79083e99d963ac68a423255fa38126dc6.png" alt="&#64;startuml
+
+''' INFOS
+title ROSPlan feedback manager
+skinparam Padding 10
+allow_mixing
+
+
+''' COMPONENTS
+class &quot;Feedback Manager&quot; as FEEDBACK
+{
+  + fb_???( ...params... )
+}
+
+() &quot;/robocluedo/action_feedback&quot; as SRV_FEEDBACK
+FEEDBACK --&gt; SRV_FEEDBACK
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+
+''' CONNECTIONS
+' ...
 
 &#64;enduml"/>
 

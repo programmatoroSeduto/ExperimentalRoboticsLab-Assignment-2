@@ -741,7 +741,14 @@ passiamo a lavorare sul feedback manager:
 
 - anzitutto lettura del vecchio codice (l'idea è la stessa: una classe che posso usare da padre per altre classi, o che posso istanziare)
 - la classe precedente non è più utilizzabile, però posso riadattarla, stesso lavoro di kb_tools direi
-	- creazione header
+	- creazione header e cpp file
+- adesso, una cosa per volta, a partire dall'header
+	- librerie e "contorno"
+	- funzione per la scrittura rapida del messaggio
+- per ora basta che compili (i feedback li scrivo man mano che scrivo le azioni)
+	- compila? compila.
+- UML del feedback manager (per ora senza indicare i tipi di feedback)
+- **COMMIT** : "working on feedback manager (first basic implementation)"
 	
 
 
