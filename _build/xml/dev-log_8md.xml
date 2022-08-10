@@ -731,6 +731,10 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>pare<sp/>che<sp/>funzioni.<sp/>tutti<sp/>i<sp/>landmark<sp/>paiono<sp/>portare<sp/>ad<sp/>una<sp/>soluzione</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>(ma<sp/>basta<sp/>solo<sp/>stare<sp/>attenti):<sp/>il<sp/>goal<sp/>col<sp/>fallimento<sp/>immediato<sp/>`(:goal<sp/>(and<sp/>(not-is-center<sp/>center<sp/>)))`<sp/>rimane<sp/>nel<sp/>goal,<sp/>non<sp/>viene<sp/>eliminata<sp/>dalla<sp/>kb<sp/>interface.<sp/></highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(planning<sp/>interface)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*parsing<sp/>del<sp/>plan*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>(solo<sp/>trigger<sp/>per<sp/>ora)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>test<sp/>...<sp/>funge!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(parsing<sp/>interface)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

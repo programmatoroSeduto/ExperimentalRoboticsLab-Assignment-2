@@ -722,6 +722,10 @@ torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l'i
 	- pare che funzioni. tutti i landmark paiono portare ad una soluzione
 	- **ISSUE** (ma basta solo stare attenti): il goal col fallimento immediato `(:goal (and (not-is-center center )))` rimane nel goal, non viene eliminata dalla kb interface. 
 - **COMMIT** : "working on pipeline manager (planning interface)"
+- *parsing del plan*
+	- implementazione (solo trigger per ora)
+	- e test ... funge!
+- **COMMIT** : "working on pipeline manager (parsing interface)"
 
 
 

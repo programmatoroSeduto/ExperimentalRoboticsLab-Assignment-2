@@ -605,7 +605,15 @@
 </listitem><listitem><para><bold>ISSUE</bold> (ma basta solo stare attenti): il goal col fallimento immediato <computeroutput>(:goal (and (not-is-center center )))</computeroutput> rimane nel goal, non viene eliminata dalla kb interface.</para>
 </listitem></itemizedlist>
 </para>
-<para><bold>COMMIT</bold> : &quot;working on pipeline manager (planning interface)&quot;</para>
+<para><bold>COMMIT</bold> : &quot;working on pipeline manager (planning interface)&quot;<itemizedlist>
+<listitem><para><emphasis>parsing del plan</emphasis><itemizedlist>
+<listitem><para>implementazione (solo trigger per ora)</para>
+</listitem><listitem><para>e test ... funge!</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on pipeline manager (parsing interface)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>

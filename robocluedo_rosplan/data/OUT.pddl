@@ -45,7 +45,6 @@
 
 )
 (:goal (and
-    (not-is-center center)
     (not-dirty)
 ))
 )

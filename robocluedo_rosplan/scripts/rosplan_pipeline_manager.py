@@ -8,6 +8,7 @@ from rosplan_dispatch_msgs.srv import DispatchService, DispatchServiceRequest, D
 from robocluedo_rosplan_msgs.msg import ActionFeedback
 from robocluedo_rosplan_msgs.srv import RosplanPipelineManagerService, RosplanPipelineManagerServiceRequest, RosplanPipelineManagerServiceResponse
 from robocluedo_rosplan_msgs.srv import UpdateGoal, UpdateGoalRequest, UpdateGoalResponse
+from rosplan_dispatch_msgs.msg import CompletePlan
 
 NODE_NAME = "rosplan_pipeline_manager"
 ''' nothing to say, node name
@@ -91,6 +92,22 @@ planner_interface_solution_path = ""
 ''' the value of the parameter "output_problem_path"
 '''
 
+topic_parser_interface = "/rosplan_parsing_interface/complete_plan"
+''' used for checking the outcome of the parsing interface
+''' 
+
+sub_parser_interface = None
+''' (ros subscription handle)
+''' 
+
+parsing_interface_received = False
+''' if the parsed plan han been sent or not
+''' 
+
+parsing_interface_array = []
+''' the parsed plan
+''' 
+
 service_dispatch = "/rosplan_plan_dispatcher/dispatch_plan"
 ''' name of the service plan dispatch
 '''
@@ -145,6 +162,17 @@ def cbk_planning_interface( plan ): # std_msgs/String
 	planner_interface_text = plan.data
 
 
+def cbk_parsing_interface( plan ): # rosplan_dispatch_msgs/CompletePlan
+	''' this callback receives the output from the parsing interface, if any
+	'''
+	
+	global parsing_interface_received
+	global parsing_interface_array
+	
+	parsing_interface_received = True
+	parsing_interface_array = plan
+
+
 def cbk_action_feedback( feedback ):
 	''' receive a feedback from the ROSPlan action
 	'''
@@ -165,7 +193,7 @@ def inspect_planner_output( fpath ):
 		fcontent = fp.read( )
 	
 	return ( fcontent.find("the problem has been deemed unsolvable") < 0 )
-	
+
 
 
 def cbk_pipeline( req ):
@@ -182,6 +210,10 @@ def cbk_pipeline( req ):
 	global planner_interface_received
 	global planner_interface_text
 	global planner_interface_solution_path
+	
+	global cl_parse
+	global parsing_interface_received
+	global parsing_interface_array
 	
 	res = RosplanPipelineManagerServiceResponse( )
 	res.success = True
@@ -243,7 +275,7 @@ def cbk_pipeline( req ):
 	## === PLANNER INTERFACE === ## 
 	
 	if req.solve_problem:
-		rospy.loginfo(f"({NODE_NAME}) parsing interface -- trying to solve ...")
+		rospy.loginfo(f"({NODE_NAME}) planning interface -- trying to solve ...")
 		
 		planner_interface_received = False
 		planner_interface_text = ""
@@ -270,10 +302,47 @@ def cbk_pipeline( req ):
 			return res
 			
 		else:
-			rospy.loginfo(f"({NODE_NAME}) parsing interface -- SOLVED")
+			rospy.loginfo(f"({NODE_NAME}) planning interface -- SOLVED")
 		
 	else:
-		rospy.loginfo(f"({NODE_NAME}) parsing interface -- skipping problem solution")
+		rospy.loginfo(f"({NODE_NAME}) planning interface -- skipping problem solution")
+	
+	
+	## === PLANNER INTERFACE === ## 
+	
+	if req.parse_plan:
+		rospy.loginfo(f"({NODE_NAME}) parsing interface -- parsing...")
+		
+		parsing_interface_received = False
+		parsing_interface_array = []
+		
+		try:
+			cl_parse( )
+			rospy.sleep(rospy.Duration(1))
+			
+		except rospy.ServiceException:
+			rospy.loginfo(f"({NODE_NAME}) parsing interface -- something went wrong while parsing the plan")
+			
+			res.success = False
+			res.success_parse_plan = False
+			return res
+		
+		if not parsing_interface_received:
+			rospy.loginfo(f"({NODE_NAME}) parsing interface -- something went wrong while parsing the plan")
+			
+			res.success = False
+			res.success_parse_plan = False
+			return res
+			
+		else:
+			rospy.loginfo(f"({NODE_NAME}) parsing interface -- plan parsing SUCCESS")
+	else:
+		rospy.loginfo(f"({NODE_NAME}) parsing interface -- skipping plan parsing")
+	
+	
+	## === DISPATCH === ## 
+	
+	# ...
 	
 	return res
 
@@ -288,7 +357,7 @@ def shut_msg( ):
 
 
 def open_cl( cl_name, cl_type ):
-	'''open a client
+	''' handful utility to open a client
 	'''
 	
 	global SRV_TIMEOUT
@@ -329,7 +398,7 @@ if __name__ == "__main__":
 		
 		cl_problem = open_cl( service_problem, Empty )
 		cl_plan = open_cl( service_plan, Empty )
-		# cl_parse = open_cl( service_parse, Empty )
+		cl_parse = open_cl( service_parse, Empty )
 		# cl_dispatch = open_cl( service_dispatch, DispatchService )
 		
 		cl_update_goal = open_cl( service_update_goal, UpdateGoal )
@@ -351,6 +420,11 @@ if __name__ == "__main__":
 		
 		rospy.loginfo(f"({NODE_NAME}) subscription: {topic_planner_interface} ... ")
 		sub_planner_interface = rospy.Subscriber( topic_planner_interface, String, cbk_planning_interface )
+		rospy.sleep(rospy.Duration(0.75))
+		rospy.loginfo(f"({NODE_NAME}) OK")
+		
+		rospy.loginfo(f"({NODE_NAME}) subscription: {topic_parser_interface} ... ")
+		sub_parser_interface = rospy.Subscriber( topic_parser_interface, CompletePlan, cbk_parsing_interface )
 		rospy.sleep(rospy.Duration(0.75))
 		rospy.loginfo(f"({NODE_NAME}) OK")
 		
