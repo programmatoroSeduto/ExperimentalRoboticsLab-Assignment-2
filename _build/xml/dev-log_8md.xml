@@ -654,7 +654,83 @@
 <codeline><highlight class="normal">-<sp/>*per<sp/>oggi<sp/>ho<sp/>sofferto<sp/>abbastanza*</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(adding<sp/>functionalities)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">##<sp/>10/08/2021<sp/>--<sp/>ancora<sp/>su<sp/>rosplan</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">torniamo<sp/>a<sp/>lavorare<sp/>sul<sp/>pipeline<sp/>manager,<sp/>una<sp/>funzionalità<sp/>per<sp/>volta.<sp/>Ieri:<sp/>l&apos;istanza<sp/>del<sp/>problema.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>*soluzione<sp/>del<sp/>problema*<sp/>usando<sp/>il<sp/>planner</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>serve<sp/>anche<sp/>aprire<sp/>il<sp/>subscriber<sp/>con<sp/>il<sp/>planner<sp/>per<sp/>capire<sp/>quando<sp/>il<sp/>plan<sp/>è<sp/>andato<sp/>bene</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*come<sp/>capire<sp/>se<sp/>il<sp/>problema<sp/>non<sp/>è<sp/>risolvibile<sp/>o<sp/>se<sp/>c&apos;è<sp/>stato<sp/>qualcos&apos;altro<sp/>che<sp/>non<sp/>va?*<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>provare,<sp/>rendo<sp/>volutamente<sp/>irrisolvibile<sp/>il<sp/>problema:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(and<sp/>(dirty<sp/>)<sp/>(not-dirty<sp/>)<sp/>(hint-collected<sp/>wp1)<sp/>(hint-collected<sp/>wp3<sp/>)<sp/>(at-center<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>output<sp/>lato<sp/>rosplan:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112152.481829500]:<sp/>KCL:<sp/>(/rosplan_problem_interface)<sp/>(OUT.pddl)<sp/>Generating<sp/>problem<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112152.829298800]:<sp/>KCL:<sp/>(/rosplan_problem_interface)<sp/>(OUT.pddl)<sp/>The<sp/>problem<sp/>was<sp/>generated.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112152.829847100]:<sp/>KCL:<sp/>(/rosplan_planner_interface)<sp/>Problem<sp/>received.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112162.234649900]:<sp/>KCL:<sp/>(/rosplan_planner_interface)<sp/>(OUT.pddl)<sp/>Writing<sp/>problem<sp/>to<sp/>file.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112162.234786600]:<sp/>KCL:<sp/>(/rosplan_planner_interface)<sp/>(OUT.pddl)<sp/>Running:<sp/>timeout<sp/>10<sp/>/root/ros_ws/src/ROSPlan/rosplan_planning_system/common/bin/popf<sp/>-T<sp/>/root/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo/robocluedo_domain.pddl<sp/>/root/ros_ws/src/erl2-new/robocluedo_rosplan/data/OUT.pddl<sp/>&gt;<sp/>/root/ros_ws/src/erl2-new/robocluedo_rosplan/data/plan.pddl</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112172.240622500]:<sp/>KCL:<sp/>(/rosplan_planner_interface)<sp/>(OUT.pddl)<sp/>Planning<sp/>complete</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660112172.240715400]:<sp/>KCL:<sp/>(/rosplan_planner_interface)<sp/>(OUT.pddl)<sp/>Plan<sp/>was<sp/>unsolvable.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>output<sp/>lato<sp/>shell:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch#<sp/>rosservice<sp/>call<sp/>/rosplan_problem_interface/problem_generation_server</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch#<sp/>rosservice<sp/>call<sp/>/rosplan_planner_interface/planning_server</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ERROR:<sp/>service<sp/>[/rosplan_planner_interface/planning_server]<sp/>responded<sp/>with<sp/>an<sp/>error:<sp/>b&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch#<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>topic<sp/>non<sp/>riceve<sp/>nulla,<sp/>quindi<sp/>significa<sp/>che<sp/>il<sp/>plan<sp/>non<sp/>è<sp/>andato<sp/>a<sp/>buon<sp/>fine</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>goal<sp/>che<sp/>ho<sp/>scelto<sp/>causa<sp/>attesa<sp/>(in<sp/>questo<sp/>caso<sp/>viene<sp/>sollevata<sp/>un&apos;eccezione<sp/>riguadante<sp/>il<sp/>server)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mi<sp/>serve<sp/>un<sp/>goal<sp/>che<sp/>dia<sp/>contraddizione<sp/>immediata.<sp/>questo<sp/>funziona:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(:goal<sp/>(and<sp/>(not-is-center<sp/>center<sp/>)))</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>in<sp/>questo<sp/>caso<sp/>non<sp/>viene<sp/>inviato<sp/>nulla<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>file<sp/>generato<sp/>dal<sp/>planner<sp/>contiene<sp/>questo:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Number<sp/>of<sp/>literals:<sp/>28</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Constructing<sp/>lookup<sp/>tables:<sp/>[10%]<sp/>[20%]<sp/>[30%]<sp/>[40%]<sp/>[50%]<sp/>[60%]<sp/>[70%]<sp/>[80%]<sp/>[90%]<sp/>[100%]<sp/>[110%]<sp/>[120%]<sp/>[130%]<sp/>[140%]<sp/>[150%]<sp/>[160%]<sp/>[170%]</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>A<sp/>problem<sp/>has<sp/>been<sp/>encountered,<sp/>and<sp/>the<sp/>problem<sp/>has<sp/>been<sp/>deemed<sp/>unsolvable</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>--------------------------------------------------------------------------</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>The<sp/>goal<sp/>fact:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(not-is-center<sp/>center)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...cannot<sp/>be<sp/>found<sp/>either<sp/>in<sp/>the<sp/>initial<sp/>state,<sp/>as<sp/>an<sp/>add<sp/>effect<sp/>of<sp/>an</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action,<sp/>or<sp/>as<sp/>a<sp/>timed<sp/>initial<sp/>literal.<sp/><sp/>As<sp/>such,<sp/>the<sp/>problem<sp/>has<sp/>been<sp/>deemed</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsolvable.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>capire<sp/>se<sp/>il<sp/>problema<sp/>non<sp/>è<sp/>risolvibile,<sp/>occore</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>eliminare<sp/>il<sp/>precedente<sp/>file<sp/>di<sp/>plan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>caricare<sp/>nel<sp/>parameter<sp/>server<sp/>il<sp/>percorso<sp/>dove<sp/>verrà<sp/>caricato<sp/>il<sp/>file<sp/>di<sp/>plan<sp/>dal<sp/>planner</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>leggere<sp/>il<sp/>file<sp/>di<sp/>plan<sp/>e<sp/>cercare<sp/>all&apos;interno<sp/>di<sp/>esso<sp/>la<sp/>stringa<sp/>&quot;the<sp/>problem<sp/>has<sp/>been<sp/>deemed<sp/>unsolvable&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>se<sp/>la<sp/>stringa<sp/>c&apos;è,<sp/>allora<sp/>il<sp/>problema<sp/>è<sp/>chiaramente<sp/>irrisolvibile,<sp/>altrimenti<sp/>(il<sp/>file<sp/>non<sp/>esiste<sp/>proprio<sp/>oppure<sp/>è<sp/>diverso)<sp/>il<sp/>problema<sp/>è<sp/>di<sp/>altra<sp/>natura</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>caricamento<sp/>percorso<sp/>nel<sp/>parameter<sp/>server<sp/>tramite<sp/>launch<sp/>file</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>lavoro<sp/>col<sp/>file<sp/>di<sp/>plan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>manca<sp/>solo<sp/>l&apos;eccezione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>urge<sp/>una<sp/>prova<sp/>a<sp/>questo<sp/>punto:<sp/>per<sp/>ora<sp/>nel<sp/>caso<sp/>del<sp/>plan<sp/>unsolvable<sp/>immediatamente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>false,<sp/>execute_plan:<sp/>false,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>pare<sp/>che<sp/>funzioni.<sp/>tutti<sp/>i<sp/>landmark<sp/>paiono<sp/>portare<sp/>ad<sp/>una<sp/>soluzione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>(ma<sp/>basta<sp/>solo<sp/>stare<sp/>attenti):<sp/>il<sp/>goal<sp/>col<sp/>fallimento<sp/>immediato<sp/>`(:goal<sp/>(and<sp/>(not-is-center<sp/>center<sp/>)))`<sp/>rimane<sp/>nel<sp/>goal,<sp/>non<sp/>viene<sp/>eliminata<sp/>dalla<sp/>kb<sp/>interface.<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>pipeline<sp/>manager<sp/>(planning<sp/>interface)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

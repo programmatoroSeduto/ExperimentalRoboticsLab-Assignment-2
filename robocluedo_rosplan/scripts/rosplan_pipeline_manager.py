@@ -1,5 +1,6 @@
 #! /usr/bin/env python
 
+import os
 import rospy
 from std_srvs.srv import Empty, EmptyRequest, EmptyResponse
 from std_msgs.msg import String
@@ -69,6 +70,27 @@ cl_parse = None
 ''' (ros client handle) plan parser trigger
 '''
 
+topic_planner_interface = "/rosplan_planner_interface/planner_output"
+''' used for checking if the plan succeeded
+'''
+
+sub_planner_interface = None
+''' (ros subscription handle)
+'''
+
+planner_interface_received = False
+''' it becomes false a bit before triggering the planner,
+	and true when the planning interface succeeded.
+'''
+
+planner_interface_text = ""
+''' text received from the planning interface
+'''
+
+planner_interface_solution_path = ""
+''' the value of the parameter "output_problem_path"
+'''
+
 service_dispatch = "/rosplan_plan_dispatcher/dispatch_plan"
 ''' name of the service plan dispatch
 '''
@@ -101,7 +123,7 @@ cl_update_goal = None
 ''' (ros client handle) set a particular goal into the rosplan knowledge base
 '''
 
-def cbk_problem_instance( problem ):
+def cbk_problem_instance( problem ): # std_msgs/String
 	''' this callback received the problem instance from the problem interface
 	'''
 	
@@ -112,6 +134,17 @@ def cbk_problem_instance( problem ):
 	problem_instance_text = problem.data
 
 
+def cbk_planning_interface( plan ): # std_msgs/String
+	''' this callback receives the output from the planner, if any
+	'''
+	
+	global planner_interface_received
+	global planner_interface_text
+	
+	planner_interface_received = True
+	planner_interface_text = plan.data
+
+
 def cbk_action_feedback( feedback ):
 	''' receive a feedback from the ROSPlan action
 	'''
@@ -119,14 +152,36 @@ def cbk_action_feedback( feedback ):
 	pass
 
 
+def inspect_planner_output( fpath ):
+	''' the function reurns true when the problem has been found
+		unsolvable. Otherwise, it returns false.
+	'''
+	if not os.path.exists( fpath ):
+		return False
+	
+	fcontent = ""
+	
+	with open( fpath, "r" ) as fp:
+		fcontent = fp.read( )
+	
+	return ( fcontent.find("the problem has been deemed unsolvable") < 0 )
+	
+
+
 def cbk_pipeline( req ):
 	''' implementation of the service pipeline manager
 	'''
 	
 	global cl_problem
-	global cl_update_goal
 	global problem_instance_received
 	global problem_instance_text
+	
+	global cl_update_goal
+	
+	global cl_plan
+	global planner_interface_received
+	global planner_interface_text
+	global planner_interface_solution_path
 	
 	res = RosplanPipelineManagerServiceResponse( )
 	res.success = True
@@ -135,6 +190,9 @@ def cbk_pipeline( req ):
 	res.problem_not_solvable = False
 	res.success_parse_plan = True
 	res.success_execute_plan = True
+	
+	
+	## === PROBLEM INTERFACE === ## 
 	
 	if req.load_problem:
 		# needed a landmark!
@@ -173,13 +231,49 @@ def cbk_pipeline( req ):
 			if not problem_instance_received:
 				rospy.logwarn(f"({NODE_NAME}) something went wrong while generating the problem instance")
 				
-				res.success_load_problem = False
 				res.success = False
+				res.success_load_problem = False
 				return res
 			else:
 				rospy.loginfo(f"({NODE_NAME}) problem interface -- problem loading SUCCEEDED with landmark {req.landmark}")
 	else:
-		rospy.loginfo(f"({NODE_NAME}) skipping problem generation")
+		rospy.loginfo(f"({NODE_NAME}) problem interface -- skipping problem generation")
+	
+	
+	## === PLANNER INTERFACE === ## 
+	
+	if req.solve_problem:
+		rospy.loginfo(f"({NODE_NAME}) parsing interface -- trying to solve ...")
+		
+		planner_interface_received = False
+		planner_interface_text = ""
+		exception_raised = False
+		
+		# trigger the planner
+		try:
+			cl_plan( )
+			rospy.sleep(rospy.Duration(1))
+		except rospy.ServiceException as serv_exc:
+			rospy.logwarn(f"({NODE_NAME}) planning interface -- raised an exception ({serv_exc})")
+			exception_raised = True
+		
+		if (not planner_interface_received) or exception_raised:
+			rospy.logwarn(f"({NODE_NAME}) something went wrong in solving the problem")
+			
+			res.success = False
+			res.success_solve_problem = False
+			res.problem_not_solvable = inspect_planner_output( planner_interface_solution_path )
+			
+			if res.problem_not_solvable:
+				rospy.logwarn(f"({NODE_NAME}) PROBLEM SEEMS UNSOLVABLE")
+			
+			return res
+			
+		else:
+			rospy.loginfo(f"({NODE_NAME}) parsing interface -- SOLVED")
+		
+	else:
+		rospy.loginfo(f"({NODE_NAME}) parsing interface -- skipping problem solution")
 	
 	return res
 
@@ -223,8 +317,18 @@ if __name__ == "__main__":
 		
 		rospy.loginfo(f"{NODE_NAME} starting... ")
 		
+		planner_interface_solution_path = rospy.get_param( "/output_problem_path", "" )
+		if planner_interface_solution_path == "" :
+			rospy.logwarn( f"({NODE_NAME}) plan output path missing! ('/output_problem_path' no defined in the parameter server)" )
+		else:
+			rospy.loginfo(f"({NODE_NAME}) planning output path: {planner_interface_solution_path} (removed before flight)")
+			try:
+				os.remove( planner_interface_solution_path )
+			except FileNotFoundError:
+				pass
+		
 		cl_problem = open_cl( service_problem, Empty )
-		# cl_plan = open_cl( service_plan, Empty )
+		cl_plan = open_cl( service_plan, Empty )
 		# cl_parse = open_cl( service_parse, Empty )
 		# cl_dispatch = open_cl( service_dispatch, DispatchService )
 		
@@ -232,14 +336,22 @@ if __name__ == "__main__":
 		
 		rospy.loginfo(f"({NODE_NAME}) service: {service_pipeline} ... ")
 		srv_pipeline = rospy.Service( service_pipeline, RosplanPipelineManagerService, cbk_pipeline )
+		rospy.sleep(rospy.Duration(0.75))
 		rospy.loginfo(f"({NODE_NAME}) OK")
 		
 		rospy.loginfo(f"({NODE_NAME}) subscription: {topic_action_feedback} ... ")
 		sub_action_feedback = rospy.Subscriber( topic_action_feedback, ActionFeedback, cbk_action_feedback )
+		rospy.sleep(rospy.Duration(0.75))
 		rospy.loginfo(f"({NODE_NAME}) OK")
 		
 		rospy.loginfo(f"({NODE_NAME}) subscription: {topic_problem_instance} ... ")
 		sub_problem_instance = rospy.Subscriber( topic_problem_instance, String, cbk_problem_instance )
+		rospy.sleep(rospy.Duration(0.75))
+		rospy.loginfo(f"({NODE_NAME}) OK")
+		
+		rospy.loginfo(f"({NODE_NAME}) subscription: {topic_planner_interface} ... ")
+		sub_planner_interface = rospy.Subscriber( topic_planner_interface, String, cbk_planning_interface )
+		rospy.sleep(rospy.Duration(0.75))
 		rospy.loginfo(f"({NODE_NAME}) OK")
 		
 		rospy.loginfo(f"{NODE_NAME} ready")

@@ -845,6 +845,99 @@ rosservice call /rosplan_problem_interface/problem_generation_server
 <li><p><em>per oggi ho sofferto abbastanza</em></p></li>
 <li><p><strong>COMMIT</strong> : “working on pipeline manager (adding functionalities)”</p></li>
 </ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="ancora-su-rosplan">
+<h2>10/08/2021 – ancora su rosplan<a class="headerlink" href="#ancora-su-rosplan" title="Permalink to this heading"></a></h2>
+<p>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l’istanza del problema.</p>
+<ul>
+<li><p><em>soluzione del problema</em> usando il planner</p>
+<ul>
+<li><p>implementazione</p></li>
+<li><p>serve anche aprire il subscriber con il planner per capire quando il plan è andato bene</p></li>
+<li><p><em>come capire se il problema non è risolvibile o se c’è stato qualcos’altro che non va?</em></p></li>
+<li><p>per provare, rendo volutamente irrisolvibile il problema:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>(:goal (and (dirty ) (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+</pre></div>
+</div>
+</li>
+<li><p>output lato rosplan:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>[ INFO] [1660112152.481829500]: KCL: (/rosplan_problem_interface) (OUT.pddl) Generating problem file.
+[ INFO] [1660112152.829298800]: KCL: (/rosplan_problem_interface) (OUT.pddl) The problem was generated.
+[ INFO] [1660112152.829847100]: KCL: (/rosplan_planner_interface) Problem received.
+[ INFO] [1660112162.234649900]: KCL: (/rosplan_planner_interface) (OUT.pddl) Writing problem to file.
+[ INFO] [1660112162.234786600]: KCL: (/rosplan_planner_interface) (OUT.pddl) Running: timeout 10 /root/ros_ws/src/ROSPlan/rosplan_planning_system/common/bin/popf -T /root/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo/robocluedo_domain.pddl /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/OUT.pddl &gt; /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/plan.pddl
+[ INFO] [1660112172.240622500]: KCL: (/rosplan_planner_interface) (OUT.pddl) Planning complete
+[ INFO] [1660112172.240715400]: KCL: (/rosplan_planner_interface) (OUT.pddl) Plan was unsolvable.
+</pre></div>
+</div>
+</li>
+<li><p>output lato shell:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_problem_interface/problem_generation_server
+
+root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_planner_interface/planning_server
+ERROR: service [/rosplan_planner_interface/planning_server] responded with an error: b&#39;&#39;
+root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# 
+</pre></div>
+</div>
+</li>
+<li><p>il topic non riceve nulla, quindi significa che il plan non è andato a buon fine</p></li>
+<li><p>il goal che ho scelto causa attesa (in questo caso viene sollevata un’eccezione riguadante il server)</p></li>
+<li><p>mi serve un goal che dia contraddizione immediata. questo funziona:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>(:goal (and (not-is-center center )))
+</pre></div>
+</div>
+</li>
+<li><p>anche in questo caso non viene inviato nulla</p></li>
+<li><p>il file generato dal planner contiene questo:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>Number of literals: 28
+Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] [170%]
+A problem has been encountered, and the problem has been deemed unsolvable
+--------------------------------------------------------------------------
+The goal fact:
+(not-is-center center)
+
+...cannot be found either in the initial state, as an add effect of an
+action, or as a timed initial literal.  As such, the problem has been deemed
+unsolvable.
+</pre></div>
+</div>
+</li>
+<li><p>per capire se il problema non è risolvibile, occore</p>
+<ul class="simple">
+<li><p>eliminare il precedente file di plan</p></li>
+<li><p>caricare nel parameter server il percorso dove verrà caricato il file di plan dal planner</p></li>
+<li><p>leggere il file di plan e cercare all’interno di esso la stringa “the problem has been deemed unsolvable”</p></li>
+<li><p>se la stringa c’è, allora il problema è chiaramente irrisolvibile, altrimenti (il file non esiste proprio oppure è diverso) il problema è di altra natura</p></li>
+</ul>
+</li>
+<li><p>implementazione …</p>
+<ul class="simple">
+<li><p>caricamento percorso nel parameter server tramite launch file</p></li>
+<li><p>lavoro col file di plan</p></li>
+<li><p>ora manca solo l’eccezione</p></li>
+</ul>
+</li>
+<li><p>e urge una prova a questo punto: per ora nel caso del plan unsolvable immediatamente</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+<span class="n">roslaunch</span> <span class="n">robocluedo_rosplan</span> <span class="n">load_rosplan</span><span class="o">.</span><span class="n">launch</span>
+
+<span class="c1"># shell 2</span>
+<span class="n">rosrun</span> <span class="n">robocluedo_rosplan</span> <span class="n">kb_interface</span>
+
+<span class="c1"># shell 3</span>
+<span class="n">rosrun</span> <span class="n">robocluedo_rosplan</span> <span class="n">rosplan_pipeline_manager</span><span class="o">.</span><span class="n">py</span>
+
+<span class="n">rosservice</span> <span class="n">call</span> <span class="o">/</span><span class="n">robocluedo</span><span class="o">/</span><span class="n">pipeline_manager</span> <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: false, execute_plan: false, landmark: 0}&quot;</span> 
+</pre></div>
+</div>
+</li>
+<li><p>pare che funzioni. tutti i landmark paiono portare ad una soluzione</p></li>
+<li><p><strong>ISSUE</strong> (ma basta solo stare attenti): il goal col fallimento immediato <code class="docutils literal notranslate"><span class="pre">(:goal</span> <span class="pre">(and</span> <span class="pre">(not-is-center</span> <span class="pre">center</span> <span class="pre">)))</span></code> rimane nel goal, non viene eliminata dalla kb interface.</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on pipeline manager (planning interface)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>

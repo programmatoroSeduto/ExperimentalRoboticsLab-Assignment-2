@@ -543,6 +543,69 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on pipeline manager (adding functionalities)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<sect2 id="md__docs_dev-log_1autotoc_md41">
+<title>10/08/2021 – ancora su rosplan</title>
+<para>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l&apos;istanza del problema.</para>
+<para><itemizedlist>
+<listitem><para><emphasis>soluzione del problema</emphasis> usando il planner<itemizedlist>
+<listitem><para>implementazione</para>
+</listitem><listitem><para>serve anche aprire il subscriber con il planner per capire quando il plan è andato bene</para>
+</listitem><listitem><para><emphasis>come capire se il problema non è risolvibile o se c&apos;è stato qualcos&apos;altro che non va?</emphasis></para>
+</listitem><listitem><para>per provare, rendo volutamente irrisolvibile il problema: ``` (:goal (and (dirty ) (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center ))) ```</para>
+</listitem><listitem><para>output lato rosplan: ``` [ INFO] [1660112152.481829500]: KCL: (/rosplan_problem_interface) (OUT.pddl) Generating problem file. [ INFO] [1660112152.829298800]: KCL: (/rosplan_problem_interface) (OUT.pddl) The problem was generated. [ INFO] [1660112152.829847100]: KCL: (/rosplan_planner_interface) Problem received. [ INFO] [1660112162.234649900]: KCL: (/rosplan_planner_interface) (OUT.pddl) Writing problem to file. [ INFO] [1660112162.234786600]: KCL: (/rosplan_planner_interface) (OUT.pddl) Running: timeout 10 /root/ros_ws/src/ROSPlan/rosplan_planning_system/common/bin/popf -T /root/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo/robocluedo_domain.pddl /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/OUT.pddl &gt; /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/plan.pddl [ INFO] [1660112172.240622500]: KCL: (/rosplan_planner_interface) (OUT.pddl) Planning complete [ INFO] [1660112172.240715400]: KCL: (/rosplan_planner_interface) (OUT.pddl) Plan was unsolvable. ```</para>
+</listitem><listitem><para>output lato shell: ``` root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_problem_interface/problem_generation_server</para>
+<para>root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_planner_interface/planning_server ERROR: service [/rosplan_planner_interface/planning_server] responded with an error: b&apos;&apos; root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# ```</para>
+</listitem><listitem><para>il topic non riceve nulla, quindi significa che il plan non è andato a buon fine</para>
+</listitem><listitem><para>il goal che ho scelto causa attesa (in questo caso viene sollevata un&apos;eccezione riguadante il server)</para>
+</listitem><listitem><para>mi serve un goal che dia contraddizione immediata. questo funziona: ``` (:goal (and (not-is-center center ))) ```</para>
+</listitem><listitem><para>anche in questo caso non viene inviato nulla</para>
+</listitem><listitem><para>il file generato dal planner contiene questo: ``` Number of literals: 28 Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] [170%] </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md42">
+<title>A problem has been encountered, and the problem has been deemed unsolvable</title>
+<para>The goal fact: (not-is-center center)</para>
+<para>...cannot be found either in the initial state, as an add effect of an action, or as a timed initial literal. As such, the problem has been deemed unsolvable. ```<itemizedlist>
+<listitem><para>per capire se il problema non è risolvibile, occore<itemizedlist>
+<listitem><para>eliminare il precedente file di plan</para>
+</listitem><listitem><para>caricare nel parameter server il percorso dove verrà caricato il file di plan dal planner</para>
+</listitem><listitem><para>leggere il file di plan e cercare all&apos;interno di esso la stringa &quot;the problem has been deemed unsolvable&quot;</para>
+</listitem><listitem><para>se la stringa c&apos;è, allora il problema è chiaramente irrisolvibile, altrimenti (il file non esiste proprio oppure è diverso) il problema è di altra natura</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>implementazione ...<itemizedlist>
+<listitem><para>caricamento percorso nel parameter server tramite launch file</para>
+</listitem><listitem><para>lavoro col file di plan</para>
+</listitem><listitem><para>ora manca solo l&apos;eccezione</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e urge una prova a questo punto: per ora nel caso del plan unsolvable immediatamente ``` </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md43">
+<title>shell 1</title>
+<para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md44">
+<title>shell 2</title>
+<para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md45">
+<title>shell 3</title>
+<para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: false, execute_plan: false, landmark: 0}&quot; ```<itemizedlist>
+<listitem><para>pare che funzioni. tutti i landmark paiono portare ad una soluzione</para>
+</listitem><listitem><para><bold>ISSUE</bold> (ma basta solo stare attenti): il goal col fallimento immediato <computeroutput>(:goal (and (not-is-center center )))</computeroutput> rimane nel goal, non viene eliminata dalla kb interface.</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>COMMIT</bold> : &quot;working on pipeline manager (planning interface)&quot;</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>

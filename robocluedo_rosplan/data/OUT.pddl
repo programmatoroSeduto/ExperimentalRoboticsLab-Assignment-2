@@ -4,8 +4,8 @@
     center wp1 wp2 wp3 wp4 - waypoint
 )
 (:init
+    (dirty)
 
-    (not-dirty)
 
     (is-center center)
 
@@ -45,6 +45,7 @@
 
 )
 (:goal (and
-    (dirty)
+    (not-is-center center)
+    (not-dirty)
 ))
 )

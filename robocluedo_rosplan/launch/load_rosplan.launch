@@ -8,6 +8,7 @@
 
 <arg name="output_problem_path"
 	default="$(find robocluedo_rosplan)/data/OUT.pddl" />
+<param name="output_problem_path" value="$(arg output_problem_path)" />
 
 <!-- other options -->
 <arg name="output" default="screen" />

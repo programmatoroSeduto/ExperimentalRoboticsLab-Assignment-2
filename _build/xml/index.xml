@@ -126,9 +126,14 @@
     <member refid="namespacerosplan__pipeline__manager_1a847b840c2627bb3b39dbb4ab04c2f855" kind="variable"><name>problem_instance_received</name></member>
     <member refid="namespacerosplan__pipeline__manager_1abd457929f442acfb6ca2db21c9743747" kind="variable"><name>problem_instance_text</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a3696c8a00cb7f03fab226e938f25d8cf" kind="variable"><name>service_plan</name></member>
-    <member refid="namespacerosplan__pipeline__manager_1a8115aefae17a7281df978dad004a8420" kind="variable"><name>cl_plan</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a3b46bd8f88dd37fced345c12f1828119" kind="variable"><name>cl_plan</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a936075d7d32b51fda7c37d5b09644e89" kind="variable"><name>service_parse</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a52e0b3f4b63f349889ca69901270fe1c" kind="variable"><name>cl_parse</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a4ae76c3e3568801c3d95b40158fdd6a8" kind="variable"><name>topic_planner_interface</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a1f3f9503771a6197c5c80a21c870aa7a" kind="variable"><name>sub_planner_interface</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a09cb1e4fbedc790b08bdef81668313a3" kind="variable"><name>planner_interface_received</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a813c7b25dce3248e47a4e961b551e405" kind="variable"><name>planner_interface_text</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1aa2a780e60dd94ca4dfe5b136ed759499" kind="variable"><name>planner_interface_solution_path</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a0a74f0075fea7d306e1190bc4624f555" kind="variable"><name>service_dispatch</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a9c2b89c0b483b7770945d18295fcb67e" kind="variable"><name>cl_dispatch</name></member>
     <member refid="namespacerosplan__pipeline__manager_1af7237d230c308b9eea9dabd65608740d" kind="variable"><name>topic_action_feedback</name></member>
@@ -138,7 +143,9 @@
     <member refid="namespacerosplan__pipeline__manager_1aa325df5cc382aa64310f31ba125c8c4e" kind="variable"><name>service_update_goal</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a54424a02475278b6dd9d11e0ed9e0ec4" kind="variable"><name>cl_update_goal</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a4a793b4099219688e197ee0097eaa2a1" kind="function"><name>cbk_problem_instance</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1abeb9d184340a05843317f23e71991725" kind="function"><name>cbk_planning_interface</name></member>
     <member refid="namespacerosplan__pipeline__manager_1ac4875cedc578142a6b03b8c721318dce" kind="function"><name>cbk_action_feedback</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a613f82a87f799dd8ba19867b92a72583" kind="function"><name>inspect_planner_output</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" kind="function"><name>cbk_pipeline</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a4d57633fa7601b3cb704b1dd87fff920" kind="function"><name>shut_msg</name></member>
     <member refid="namespacerosplan__pipeline__manager_1aa3d37070be64a4f6757a93e0d53c88c2" kind="function"><name>open_cl</name></member>

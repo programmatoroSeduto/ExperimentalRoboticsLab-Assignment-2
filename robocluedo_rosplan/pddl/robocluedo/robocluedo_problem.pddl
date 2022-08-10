@@ -32,6 +32,9 @@
 	(not-hint-ready )
 )
 
-(:goal (and (dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+;; (:goal (and (dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+;; (:goal (and (dirty ) (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+;; (:goal (and (not-is-center center )))
+;; (:goal (not-is-center center ))
 
 )

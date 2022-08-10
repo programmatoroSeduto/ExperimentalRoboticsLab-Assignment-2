@@ -645,7 +645,83 @@ sperando che il nodo  appena implementato funzioni a dovere senza sorprese, andi
 - *per oggi ho sofferto abbastanza*
 - **COMMIT** : "working on pipeline manager (adding functionalities)"
 
+---
 
+## 10/08/2021 -- ancora su rosplan
+
+torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l'istanza del problema. 
+
+- *soluzione del problema* usando il planner
+	- implementazione
+	- serve anche aprire il subscriber con il planner per capire quando il plan è andato bene
+	- *come capire se il problema non è risolvibile o se c'è stato qualcos'altro che non va?* 
+	- per provare, rendo volutamente irrisolvibile il problema:
+		```
+		(:goal (and (dirty ) (not-dirty ) (hint-collected wp1) (hint-collected wp3 ) (at-center )))
+		```
+	- output lato rosplan:
+		```
+		[ INFO] [1660112152.481829500]: KCL: (/rosplan_problem_interface) (OUT.pddl) Generating problem file.
+		[ INFO] [1660112152.829298800]: KCL: (/rosplan_problem_interface) (OUT.pddl) The problem was generated.
+		[ INFO] [1660112152.829847100]: KCL: (/rosplan_planner_interface) Problem received.
+		[ INFO] [1660112162.234649900]: KCL: (/rosplan_planner_interface) (OUT.pddl) Writing problem to file.
+		[ INFO] [1660112162.234786600]: KCL: (/rosplan_planner_interface) (OUT.pddl) Running: timeout 10 /root/ros_ws/src/ROSPlan/rosplan_planning_system/common/bin/popf -T /root/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo/robocluedo_domain.pddl /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/OUT.pddl > /root/ros_ws/src/erl2-new/robocluedo_rosplan/data/plan.pddl
+		[ INFO] [1660112172.240622500]: KCL: (/rosplan_planner_interface) (OUT.pddl) Planning complete
+		[ INFO] [1660112172.240715400]: KCL: (/rosplan_planner_interface) (OUT.pddl) Plan was unsolvable.
+		```
+	- output lato shell:
+		```
+		root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_problem_interface/problem_generation_server
+
+		root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# rosservice call /rosplan_planner_interface/planning_server
+		ERROR: service [/rosplan_planner_interface/planning_server] responded with an error: b''
+		root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/launch# 
+		```
+	- il topic non riceve nulla, quindi significa che il plan non è andato a buon fine
+	- il goal che ho scelto causa attesa (in questo caso viene sollevata un'eccezione riguadante il server)
+	- mi serve un goal che dia contraddizione immediata. questo funziona:
+		```
+		(:goal (and (not-is-center center )))
+		```
+	- anche in questo caso non viene inviato nulla 
+	- il file generato dal planner contiene questo:
+		```
+		Number of literals: 28
+		Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] [170%]
+		A problem has been encountered, and the problem has been deemed unsolvable
+		--------------------------------------------------------------------------
+		The goal fact:
+		(not-is-center center)
+
+		...cannot be found either in the initial state, as an add effect of an
+		action, or as a timed initial literal.  As such, the problem has been deemed
+		unsolvable.
+		```
+	- per capire se il problema non è risolvibile, occore
+		- eliminare il precedente file di plan
+		- caricare nel parameter server il percorso dove verrà caricato il file di plan dal planner
+		- leggere il file di plan e cercare all'interno di esso la stringa "the problem has been deemed unsolvable"
+		- se la stringa c'è, allora il problema è chiaramente irrisolvibile, altrimenti (il file non esiste proprio oppure è diverso) il problema è di altra natura
+	- implementazione ...
+		- caricamento percorso nel parameter server tramite launch file
+		- lavoro col file di plan
+		- ora manca solo l'eccezione
+	- e urge una prova a questo punto: per ora nel caso del plan unsolvable immediatamente
+		```
+		# shell 1
+		roslaunch robocluedo_rosplan load_rosplan.launch
+
+		# shell 2
+		rosrun robocluedo_rosplan kb_interface
+
+		# shell 3
+		rosrun robocluedo_rosplan rosplan_pipeline_manager.py
+		
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: false, execute_plan: false, landmark: 0}" 
+		```
+	- pare che funzioni. tutti i landmark paiono portare ad una soluzione
+	- **ISSUE** (ma basta solo stare attenti): il goal col fallimento immediato `(:goal (and (not-is-center center )))` rimane nel goal, non viene eliminata dalla kb interface. 
+- **COMMIT** : "working on pipeline manager (planning interface)"
 
 
 
