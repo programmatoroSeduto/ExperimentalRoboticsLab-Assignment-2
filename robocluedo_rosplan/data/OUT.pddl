@@ -4,8 +4,8 @@
     center wp1 wp2 wp3 wp4 - waypoint
 )
 (:init
-    (dirty)
 
+    (not-dirty)
 
     (is-center center)
 
@@ -25,8 +25,8 @@
     (passage wp3 wp4)
 
     (explored center)
+    (explored wp1)
 
-    (not-explored wp1)
     (not-explored wp2)
     (not-explored wp3)
     (not-explored wp4)
@@ -37,14 +37,15 @@
 
     (not-hint-ready)
 
+    (hint-collected wp1)
 
-    (not-hint-collected wp1)
     (not-hint-collected wp2)
     (not-hint-collected wp3)
     (not-hint-collected wp4)
 
 )
 (:goal (and
-    (not-dirty)
+    (at wp2)
+    (hint-collected wp2)
 ))
 )

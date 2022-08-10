@@ -201,6 +201,8 @@
     <member refid="namespacerosplan__pipeline__manager_1aa9d8b6462db1c77d1ef614490f183e8b" kind="variable"><name>cl_dispatch</name></member>
     <member refid="namespacerosplan__pipeline__manager_1af7237d230c308b9eea9dabd65608740d" kind="variable"><name>topic_action_feedback</name></member>
     <member refid="namespacerosplan__pipeline__manager_1ae5c59ddee1e43bb080a549921a6286fc" kind="variable"><name>sub_action_feedback</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a9967655fee142aeda8f2b4267eabd2bc" kind="variable"><name>action_feedback_received</name></member>
+    <member refid="namespacerosplan__pipeline__manager_1a753858ca2bc696c4485f6c2029d8068c" kind="variable"><name>action_feedback_msg</name></member>
     <member refid="namespacerosplan__pipeline__manager_1a71a38b6cda85fbe31ac9d970bd3b4ca4" kind="variable"><name>service_pipeline</name></member>
     <member refid="namespacerosplan__pipeline__manager_1ac68c6c0ecd9061312945ed141fb88613" kind="variable"><name>srv_pipeline</name></member>
     <member refid="namespacerosplan__pipeline__manager_1aa325df5cc382aa64310f31ba125c8c4e" kind="variable"><name>service_update_goal</name></member>

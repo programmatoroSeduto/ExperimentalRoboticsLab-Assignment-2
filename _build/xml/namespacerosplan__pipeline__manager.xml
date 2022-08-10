@@ -100,7 +100,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="37" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="37" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1af6e6c135dc0b4de72a8d674d92ba1bad" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -185,7 +185,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="62" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="62" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a936075d7d32b51fda7c37d5b09644e89" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -214,7 +214,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="70" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="70" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a4ae76c3e3568801c3d95b40158fdd6a8" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -369,7 +369,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="115" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="115" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1af7237d230c308b9eea9dabd65608740d" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -399,6 +399,34 @@
         </inbodydescription>
         <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="123" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="123" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a9967655fee142aeda8f2b4267eabd2bc" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool rosplan_pipeline_manager.action_feedback_received</definition>
+        <argsstring></argsstring>
+        <name>action_feedback_received</name>
+        <initializer>=  False</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="127" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a753858ca2bc696c4485f6c2029d8068c" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>rosplan_pipeline_manager.action_feedback_msg</definition>
+        <argsstring></argsstring>
+        <name>action_feedback_msg</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="131" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="131" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a71a38b6cda85fbe31ac9d970bd3b4ca4" prot="public" static="no" mutable="no">
         <type>string</type>
         <definition>string rosplan_pipeline_manager.service_pipeline</definition>
@@ -411,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="127" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="127" bodyend="-1"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="135" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="135" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1ac68c6c0ecd9061312945ed141fb88613" prot="public" static="no" mutable="no">
         <type></type>
@@ -425,7 +453,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="131" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="131" bodyend="-1"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="139" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="139" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1aa325df5cc382aa64310f31ba125c8c4e" prot="public" static="no" mutable="no">
         <type>string</type>
@@ -439,7 +467,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="135" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="135" bodyend="-1"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="143" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacerosplan__pipeline__manager_1a54424a02475278b6dd9d11e0ed9e0ec4" prot="public" static="no" mutable="no">
         <type></type>
@@ -453,8 +481,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="139" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="139" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="147" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="147" bodyend="-1"/>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -475,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="143" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="143" bodyend="153"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="151" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="151" bodyend="161"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1abeb9d184340a05843317f23e71991725" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -494,7 +522,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="154" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="154" bodyend="164"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="162" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="162" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1a73d05c1e677371e8708572026e5e6fbc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -513,7 +541,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="165" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="165" bodyend="175"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="173" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="173" bodyend="183"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1ac4875cedc578142a6b03b8c721318dce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -532,7 +560,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="176" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="176" bodyend="182"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="184" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="184" bodyend="194"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1a613f82a87f799dd8ba19867b92a72583" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -552,8 +580,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="183" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="183" bodyend="198"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="199" endline="373">cbk_pipeline</referencedby>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="195" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="195" bodyend="210"/>
+        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="409">cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -572,11 +600,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="199" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="199" bodyend="373"/>
-        <references refid="namespacerosplan__pipeline__manager_1a54424a02475278b6dd9d11e0ed9e0ec4" compoundref="rosplan__pipeline__manager_8py" startline="139">cl_update_goal</references>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="211" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="211" bodyend="409"/>
+        <references refid="namespacerosplan__pipeline__manager_1a54424a02475278b6dd9d11e0ed9e0ec4" compoundref="rosplan__pipeline__manager_8py" startline="147">cl_update_goal</references>
         <references refid="namespacerosplan__pipeline__manager_1a874a50cd896e6da49b7e900cf248e68e" compoundref="rosplan__pipeline__manager_8py" startline="37">cl_problem</references>
         <references refid="namespacerosplan__pipeline__manager_1a3b46bd8f88dd37fced345c12f1828119" compoundref="rosplan__pipeline__manager_8py" startline="62">cl_plan</references>
-        <references refid="namespacerosplan__pipeline__manager_1a613f82a87f799dd8ba19867b92a72583" compoundref="rosplan__pipeline__manager_8py" startline="183" endline="198">inspect_planner_output</references>
+        <references refid="namespacerosplan__pipeline__manager_1a613f82a87f799dd8ba19867b92a72583" compoundref="rosplan__pipeline__manager_8py" startline="195" endline="210">inspect_planner_output</references>
         <references refid="namespacerosplan__pipeline__manager_1ac640175e8336691efce9f9a87492d174" compoundref="rosplan__pipeline__manager_8py" startline="70">cl_parse</references>
         <references refid="namespacerosplan__pipeline__manager_1aa9d8b6462db1c77d1ef614490f183e8b" compoundref="rosplan__pipeline__manager_8py" startline="115">cl_dispatch</references>
       </memberdef>
@@ -593,7 +621,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="374" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="374" bodyend="379"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="410" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="410" bodyend="415"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__pipeline__manager_1aa3d37070be64a4f6757a93e0d53c88c2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -616,7 +644,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="380" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="380" bodyend="402"/>
+        <location file="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" line="416" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_pipeline_manager.py" bodystart="416" bodyend="438"/>
       </memberdef>
       </sectiondef>
     <briefdescription>

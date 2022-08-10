@@ -1000,6 +1000,29 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 	- in move to center
 	- in replan
 - **COMMIT** : "working on robocluedo_rosplan_actions (feedbacks from the actions)"
+- come *ultima fatica per oggi* implementazione dell'esecuzione nella pipeline (test domani)
+	- (manca solo la parte riguardande i feedback)
+	- giusto un micro test per capire se è tutto a posto
+		```
+		# shell 1
+		roslaunch robocluedo_rosplan load_rosplan.launch
+
+		# shell 2
+		rosrun robocluedo_rosplan kb_interface
+
+		# shell 3
+		rosrun robocluedo_rosplan rosplan_simulated_motion_system.py
+		
+		# shell 4
+		rosrun robocluedo_rosplan rosplan_pipeline_manager.py
+
+		rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}" 
+		```
+- **ISSUES** che non potevo notare prima di avere il sistema completo (usando solo simulated actions)
+	- (GRAVE) la sequenza dei landmark porta ad un problema irrisolvibile, vedi la combinazione tra i predicati at e explored (probabilmente è un problema della attuale kb interface che non tiene conto di questo conflitto). lo scenario di utilizzo dovrebbe essere: (landmarks) 0 1 1 1 ... 1 2 0 1 ...
+	- (minore) la pipeline non segnala il raggiungimento del goal nel messaggio...
+	- (minore) il log nella pipeline non segna la fine del dispatch
+	
 	
 
 

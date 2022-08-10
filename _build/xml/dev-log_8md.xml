@@ -1009,6 +1009,29 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to<sp/>center</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>replan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(feedbacks<sp/>from<sp/>the<sp/>actions)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>come<sp/>*ultima<sp/>fatica<sp/>per<sp/>oggi*<sp/>implementazione<sp/>dell&apos;esecuzione<sp/>nella<sp/>pipeline<sp/>(test<sp/>domani)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(manca<sp/>solo<sp/>la<sp/>parte<sp/>riguardande<sp/>i<sp/>feedback)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>micro<sp/>test<sp/>per<sp/>capire<sp/>se<sp/>è<sp/>tutto<sp/>a<sp/>posto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUES**<sp/>che<sp/>non<sp/>potevo<sp/>notare<sp/>prima<sp/>di<sp/>avere<sp/>il<sp/>sistema<sp/>completo<sp/>(usando<sp/>solo<sp/>simulated<sp/>actions)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(GRAVE)<sp/>la<sp/>sequenza<sp/>dei<sp/>landmark<sp/>porta<sp/>ad<sp/>un<sp/>problema<sp/>irrisolvibile,<sp/>vedi<sp/>la<sp/>combinazione<sp/>tra<sp/>i<sp/>predicati<sp/>at<sp/>e<sp/>explored<sp/>(probabilmente<sp/>è<sp/>un<sp/>problema<sp/>della<sp/>attuale<sp/>kb<sp/>interface<sp/>che<sp/>non<sp/>tiene<sp/>conto<sp/>di<sp/>questo<sp/>conflitto).<sp/>lo<sp/>scenario<sp/>di<sp/>utilizzo<sp/>dovrebbe<sp/>essere:<sp/>(landmarks)<sp/>0<sp/>1<sp/>1<sp/>1<sp/>...<sp/>1<sp/>2<sp/>0<sp/>1<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>la<sp/>pipeline<sp/>non<sp/>segnala<sp/>il<sp/>raggiungimento<sp/>del<sp/>goal<sp/>nel<sp/>messaggio...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>il<sp/>log<sp/>nella<sp/>pipeline<sp/>non<sp/>segna<sp/>la<sp/>fine<sp/>del<sp/>dispatch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>

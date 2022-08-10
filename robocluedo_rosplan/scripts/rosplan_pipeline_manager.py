@@ -124,6 +124,14 @@ sub_action_feedback = None
 ''' (ros subscriber handle) the feedback subscription
 '''
 
+action_feedback_received = False
+''' any pending feedback?
+'''
+
+action_feedback_msg = None
+''' the pending feedback from the actions
+'''
+
 service_pipeline = "/robocluedo/pipeline_manager"
 ''' service for the pipeline command manager
 '''
@@ -177,7 +185,11 @@ def cbk_action_feedback( feedback ):
 	''' receive a feedback from the ROSPlan action
 	'''
 	
-	pass
+	global action_feedback_msg
+	global action_feedback_received
+	
+	action_feedback_msg = feedback
+	action_feedback_received = True
 
 
 def inspect_planner_output( fpath ):
@@ -216,6 +228,8 @@ def cbk_pipeline( req ):
 	global parsing_interface_array
 	
 	global cl_dispatch
+	global action_feedback_msg
+	global action_feedback_received
 	
 	res = RosplanPipelineManagerServiceResponse( )
 	res.success = True
@@ -224,7 +238,7 @@ def cbk_pipeline( req ):
 	res.problem_not_solvable = False
 	res.success_parse_plan = True
 	res.success_execute_plan = True
-	res.feedback_received = True
+	res.feedback_received = False
 	
 	
 	## === PROBLEM INTERFACE === ## 
@@ -348,19 +362,41 @@ def cbk_pipeline( req ):
 	if req.execute_plan:
 		rospy.loginfo(f"({NODE_NAME}) dispatch -- dispatching plan")
 		
+		action_feedback_received = False
+		action_feedback_msg = None
+		
+		res_disp = None
+		
 		# trigger and wait
 		try:
-			cl_dispatch()
+			res_disp = cl_dispatch()
 			rospy.sleep(rospy.Duration(1))
 		except rospy.serviceException as e:
-			rospy.logwarn(f"({NODE_NAME}) dispatch -- ERROR in calling the service ({e})")
+			rospy.logwarn(f"({NODE_NAME}) dispatch -- ERROR in calling the dispatch service ({e})")
 			
 			res.success = False
 			res.success_execute_plan = False
 			res.feedback_received = False
+			
 			return res
 		
-		# TODO: receive a feedback
+		if not res_disp.goal_achieved:
+			res.success = False
+			res.success_execute_plan = False
+			
+			# need to look at the feedback
+			if action_feedback_msg != None:
+				res.feedback_received = True
+				res.feedback = action_feedback_msg
+				
+				rospy.logwarn(f"({NODE_NAME}) dispatch -- FAILURE with feedback received")
+			else:
+				# unable to explain the failure
+				rospy.logwarn(f"({NODE_NAME}) dispatch -- FAILURE with no feedback")
+				
+				res.feedback_received = False
+			
+			return res
 		
 	else:
 		rospy.loginfo(f"({NODE_NAME}) dispatch -- skipping")
