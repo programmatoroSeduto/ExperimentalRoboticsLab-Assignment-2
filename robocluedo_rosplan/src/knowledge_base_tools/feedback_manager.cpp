@@ -42,7 +42,33 @@ action_feedback_manager::~action_feedback_manager( )
 
 // === FEEDBACK SYSTEM === //
 
-// ...
+// other failures
+void action_feedback_manager::fb_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details )
+{
+	auto msg = this->build_msg( parameters, false, true, false, false, false, details );
+	this->pub( msg );
+}
+
+// unspecified hardware failure
+void action_feedback_manager::fb_hw_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details )
+{
+	auto msg = this->build_msg( parameters, false, true, true, false, false, details );
+	this->pub( msg );
+}
+
+// hardware manipulation failure
+void action_feedback_manager::fb_hw_manipulation_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details )
+{
+	auto msg = this->build_msg( parameters, false, true, true, false, true, details );
+	this->pub( msg );
+}
+
+// hardware navigation failure
+void action_feedback_manager::fb_hw_navigation_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details )
+{
+	auto msg = this->build_msg( parameters, false, true, true, true, false, details ) ;
+	this->pub( msg );
+}
 
 
 
@@ -81,8 +107,7 @@ robocluedo_rosplan_msgs::ActionFeedback action_feedback_manager::build_msg(
 
 
 // publish the feedback
-bool action_feedback_manager::pub( robocluedo_rosplan_msgs::ActionFeedback& msg )
+void action_feedback_manager::pub( robocluedo_rosplan_msgs::ActionFeedback& msg )
 {
 	this->pub_action_feedback.publish( msg );
-	return true;
 }

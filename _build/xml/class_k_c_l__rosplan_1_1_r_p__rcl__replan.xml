@@ -115,8 +115,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp" bodystart="92" bodyend="110"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp" bodystart="92" bodyend="108"/>
         <references refid="replan_8h_1ac62d611007560a363e737ed381abab60" compoundref="replan_8h" startline="23">SRV_REPLAN</references>
+        <references refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" compoundref="feedback__manager_8cpp" startline="46" endline="50">action_feedback_manager::fb_failure</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

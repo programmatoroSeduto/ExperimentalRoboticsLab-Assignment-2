@@ -361,8 +361,9 @@ ACT_MOVE_TO ..&gt; DISP_FEEDBACK
 <ul class="simple">
 <li><p><strong>(ACTION) collect-hint</strong></p>
 <ul>
-<li><p>l’azione include due step, per semplicità: mossa del manipolatore verso l’hint, aggiornamento della kb, e verifica della presenza di una soluzione</p></li>
+<li><p>l’azione implementa solo il moto del braccio verso il marker: avvicina, rimani fermo, rientra il braccio, e avanti</p></li>
 <li><p><em>in caso si presenterà il bisogno di aggiornare il sistema di raccolta degli hint</em> (ad esempio, detection degli hint tramite una videocamera piuttosto che tramite un sistema di hints) <em>si dovrà cambiare solo questa particolare azione</em> e stop.</p></li>
+<li><p>l’azione si aspetta che un altro nodo implementi il servizio che permette all’architettura di interagire con il manipulation controller</p></li>
 </ul>
 </li>
 </ul>
@@ -391,8 +392,8 @@ ACT_MOVE_TO ..&gt; DISP_FEEDBACK
 </div>
 <p>implementazione ROS:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-59a1cc3c6f9e9fa929f4fafd2feae4c5ca6ea910.svg" type="image/svg+xml" style="width:426px;height:418px;background:#FFFFFF;">
-<img src="../../_images/plantuml-59a1cc3c6f9e9fa929f4fafd2feae4c5ca6ea910.png" alt="&#64;startuml
+<object data="../../_images/plantuml-b037a3a0462bcc6ac2e3dce07f89eeff2ea59de3.svg" type="image/svg+xml" style="width:754px;height:357px;background:#FFFFFF;">
+<img src="../../_images/plantuml-b037a3a0462bcc6ac2e3dce07f89eeff2ea59de3.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
 title &quot;(ACTION) collect-hint&quot;
@@ -400,26 +401,19 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-() &quot;manip service&quot; as SRV_MANIP
-() &quot;add hint&quot; as SRV_ADD
-() &quot;hint from the Oracle&quot; as TOPIC_ORACLE_HINT
-
-
 ''' COMPONENTS
 component &quot;collect-hint&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_COLLECT_HINT
 
 
 ''' LINKS
-ACT_COLLECT_HINT --&gt; SRV_ADD
-ACT_COLLECT_HINT --&gt; SRV_MANIP
-() &quot;action feedback&quot; as DISP_FEEDBACK 
-ACT_COLLECT_HINT -right-&gt; DISP_FEEDBACK
-() &quot;feedback manager&quot; as TOPIC_FEEDBACK_MANAGER
-ACT_COLLECT_HINT -down-&gt; TOPIC_FEEDBACK_MANAGER
+() &quot;/robocluedo/manipulator_command&quot; as SRV_MANIP
+ACT_COLLECT_HINT &quot;cl&quot; &lt;-- SRV_MANIP
+note on link : robocluedo_rosplan_msgs/ManipulationCommand
+
 () &quot;action dispatch&quot; as DISPATCH
-ACT_COLLECT_HINT &lt;-left- DISPATCH
-ACT_COLLECT_HINT &lt;-up- TOPIC_ORACLE_HINT
+ACT_COLLECT_HINT &lt;.. DISPATCH
+() &quot;action feedback&quot; as DISP_FEEDBACK 
+ACT_COLLECT_HINT ..&gt; DISP_FEEDBACK
 
 &#64;enduml"/>
 
@@ -471,8 +465,8 @@ ACT_COLLECT_HINT &lt;-up- TOPIC_ORACLE_HINT
 </div>
 <p>implementazione ROS:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-5b9b1f0d73e54ade37390483fa442870968393c8.svg" type="image/svg+xml" style="width:243px;height:168px;background:#FFFFFF;">
-<img src="../../_images/plantuml-5b9b1f0d73e54ade37390483fa442870968393c8.png" alt="&#64;startuml
+<object data="../../_images/plantuml-639a42e0c10e44f80eb2445971357ab944f2ada0.svg" type="image/svg+xml" style="width:1078px;height:357px;background:#FFFFFF;">
+<img src="../../_images/plantuml-639a42e0c10e44f80eb2445971357ab944f2ada0.png" alt="&#64;startuml
 
 ''' DIAGRAM INFOS
 title &quot;(ACTION) move-to-center&quot;
@@ -480,16 +474,25 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-' ...
-
-
 ''' COMPONENTS
 component &quot;move-to-center&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO_CENTER
 
 
 ''' LINKS
-' ..."/>
+() &quot;/robocluedo/action_feedback&quot; as TOPIC_FEEDBACK_MANAGER
+ACT_MOVE_TO_CENTER &quot;pub&quot; --&gt; TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+() &quot;/robocluedo/navigation_command&quot; as SRV_NAV
+ACT_MOVE_TO_CENTER &quot;srv&quot; --&gt; SRV_NAV
+note on link: robocluedo_rosplan_msgs/NavigationCommand
+
+() &quot;action dispatch&quot; as DISPATCH
+ACT_MOVE_TO_CENTER &lt;.. DISPATCH
+() &quot;action feedback&quot; as DISP_FEEDBACK 
+ACT_MOVE_TO_CENTER ..&gt; DISP_FEEDBACK
+
+&#64;enduml"/>
 
 </object></p>
 <hr class="docutils" />
@@ -498,7 +501,8 @@ component &quot;move-to-center&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO_
 <ul>
 <li><p>l’azione PDDL non fa che settare tutto per fare il replan</p></li>
 <li><p>a differenza della precedente versione, il PDDL non tiene traccia delle ipotesi (per questo c’è aRMOR)</p></li>
-<li><p>l’implementazione ROS cerca possibili soluzioni dalla KB aRMOR e propone la soluzione</p></li>
+<li><p>arrivato alla solve, il mission manager ricerca e propone la soluzione</p></li>
+<li><p><strong>è implementata come una simulated action</strong></p></li>
 </ul>
 </li>
 </ul>
@@ -523,32 +527,6 @@ component &quot;move-to-center&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_MOVE_TO_
 <span class="p">)</span>
 </pre></div>
 </div>
-<p>implementazione ROS:</p>
-<p class="plantuml">
-<object data="../../_images/plantuml-347ce74bd6adbd7ce2bc0ceb678f198c0bee297c.svg" type="image/svg+xml" style="width:266px;height:306px;background:#FFFFFF;">
-<img src="../../_images/plantuml-347ce74bd6adbd7ce2bc0ceb678f198c0bee297c.png" alt="&#64;startuml
-
-''' DIAGRAM INFOS
-title &quot;(ACTION) solve&quot;
-skinparam Padding 8
-allow_mixing
-
-
-''' FROM OTHER DIAGRAMS
-' ...
-
-
-''' COMPONENTS
-component &quot;solve&quot; &lt;&lt;PDDL action&gt;&gt; as ACT_SOLVE
-
-
-''' LINKS
-() &quot;feedback manager&quot; as TOPIC_FEEDBACK_MANAGER
-ACT_SOLVE -down-&gt; TOPIC_FEEDBACK_MANAGER
-() &quot;action dispatch&quot; as DISPATCH
-ACT_SOLVE &lt;-left- DISPATCH"/>
-
-</object></p>
 </div>
 </div>
 </div>

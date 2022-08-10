@@ -3,6 +3,7 @@
   <compounddef id="dir_e1cd440dd794230a2b27c099159b1776" kind="dir">
     <compoundname>robocluedo_rosplan/scripts</compoundname>
     <innerfile refid="rosplan__pipeline__manager_8py">rosplan_pipeline_manager.py</innerfile>
+    <innerfile refid="rosplan__simulated__motion__system_8py">rosplan_simulated_motion_system.py</innerfile>
     <briefdescription>
     </briefdescription>
     <detaileddescription>

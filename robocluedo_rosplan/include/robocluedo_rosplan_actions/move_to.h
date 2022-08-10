@@ -9,8 +9,8 @@
 * 
 ***********************************************/
 
-#ifndef __H_ACTION_NAME_H__
-#define __H_ACTION_NAME_H__
+#ifndef __H_MOVE_TO_H__
+#define __H_MOVE_TO_H__
 
 #define ROSPLAN_ACTION_NAME "move_to"
 

@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="41" column="17" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="41" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="42" column="17" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="42" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a5c89f00f3291e03ffb3455e50d69a008" prot="private" static="no" mutable="no">
         <type><ref refid="classaction__feedback__manager" kindref="compound">action_feedback_manager</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="44" column="25" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="44" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="45" column="25" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a3c2f28be200df08839afdc23fffc1d53" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="47" column="13" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="47" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="48" column="13" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="30" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp" bodystart="60" bodyend="70"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="31" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp" bodystart="60" bodyend="70"/>
         <references refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" compoundref="feedback__manager_8h" startline="46">action_feedback_manager::action_name</references>
         <references refid="dev-log_8md_8txt_1a5fd6c7de99fa188561b1bbb00cc7ea50">ROSPLAN_ACTION_NAME</references>
       </memberdef>
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="33" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp" bodystart="74" bodyend="77"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="34" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp" bodystart="74" bodyend="77"/>
       </memberdef>
       <memberdef kind="function" id="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1aedc33c3b0d766221dba843adeac9df78" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -100,7 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="36" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp" bodystart="85" bodyend="90"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="37" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp" bodystart="85" bodyend="90"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -129,7 +129,7 @@
         <label>RPActionInterface</label>
       </node>
     </collaborationgraph>
-    <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="26" column="1" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="25" bodyend="48"/>
+    <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="27" column="1" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" bodystart="26" bodyend="49"/>
     <listofallmembers>
       <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1a3c2f28be200df08839afdc23fffc1d53" prot="private" virt="non-virtual"><scope>KCL_rosplan::RP_rcl_action_name</scope><name>action_name</name></member>
       <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1aedc33c3b0d766221dba843adeac9df78" prot="public" virt="non-virtual"><scope>KCL_rosplan::RP_rcl_action_name</scope><name>concreteCallback</name></member>

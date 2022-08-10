@@ -64,8 +64,21 @@ public:
 	
 	// === FEEDBACK SYSTEM === //
 	
-	// ...
+	/** other failures
+	 * 
+	 * forinstance, can't reach a given service. 
+	 * 
+	 */
+	void fb_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details );
 	
+	/// unspecified hardware failure
+	void fb_hw_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details );
+	
+	/// hardware manipulation failure
+	void fb_hw_manipulation_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details );
+	
+	/// hardware navigation failure
+	void fb_hw_navigation_failure( std::vector<diagnostic_msgs::KeyValue> parameters, std::string details );
 	
 	
 private:
@@ -94,14 +107,8 @@ private:
 		bool failure_manipulation = false,
 		std::string details = "" );
 	
-	/********************************************//**
-	 *  
-	 * \brief publish the feedback
-	 * 
-	 * @returns true if the publication succeeded, false otherwise
-	 * 
-	 ***********************************************/
-	bool pub( robocluedo_rosplan_msgs::ActionFeedback& msg );
+	/// publish the feedback
+	void pub( robocluedo_rosplan_msgs::ActionFeedback& msg );
 };
 
 #endif

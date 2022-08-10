@@ -219,8 +219,9 @@
 </para>
 <para><itemizedlist>
 <listitem><para>**(ACTION) collect-hint**<itemizedlist>
-<listitem><para>l&apos;azione include due step, per semplicità: mossa del manipolatore verso l&apos;hint, aggiornamento della kb, e verifica della presenza di una soluzione</para>
+<listitem><para>l&apos;azione implementa solo il moto del braccio verso il marker: avvicina, rimani fermo, rientra il braccio, e avanti</para>
 </listitem><listitem><para><emphasis>in caso si presenterà il bisogno di aggiornare il sistema di raccolta degli hint</emphasis> (ad esempio, detection degli hint tramite una videocamera piuttosto che tramite un sistema di hints) <emphasis>si dovrà cambiare solo questa particolare azione</emphasis> e stop.</para>
+</listitem><listitem><para>l&apos;azione si aspetta che un altro nodo implementi il servizio che permette all&apos;architettura di interagire con il manipulation controller</para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
@@ -256,26 +257,19 @@
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;manip<sp/>service&quot;<sp/>as<sp/>SRV_MANIP</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;add<sp/>hint&quot;<sp/>as<sp/>SRV_ADD</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;hint<sp/>from<sp/>the<sp/>Oracle&quot;<sp/>as<sp/>TOPIC_ORACLE_HINT</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;collect-hint&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_COLLECT_HINT</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>--&gt;<sp/>SRV_ADD</highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>--&gt;<sp/>SRV_MANIP</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>-right-&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/manipulator_command&quot;<sp/>as<sp/>SRV_MANIP</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_MANIP</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link<sp/>:<sp/>robocluedo_rosplan_msgs/ManipulationCommand</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&lt;-up-<sp/>TOPIC_ORACLE_HINT</highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_COLLECT_HINT<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
@@ -332,16 +326,25 @@
 <codeline><highlight class="normal">allow_mixing</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;move-to-center&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_MOVE_TO_CENTER</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/action_feedback&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO_CENTER<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/ActionFeedback</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/robocluedo/navigation_command&quot;<sp/>as<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO_CENTER<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_NAV</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_rosplan_msgs/NavigationCommand</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO_CENTER<sp/>&lt;..<sp/>DISPATCH</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;action<sp/>feedback&quot;<sp/>as<sp/>DISP_FEEDBACK<sp/></highlight></codeline>
+<codeline><highlight class="normal">ACT_MOVE_TO_CENTER<sp/>..&gt;<sp/>DISP_FEEDBACK</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 <para><hruler/>
 </para>
@@ -349,7 +352,8 @@
 <listitem><para>**(ACTION) solve**<itemizedlist>
 <listitem><para>l&apos;azione PDDL non fa che settare tutto per fare il replan</para>
 </listitem><listitem><para>a differenza della precedente versione, il PDDL non tiene traccia delle ipotesi (per questo c&apos;è aRMOR)</para>
-</listitem><listitem><para>l&apos;implementazione ROS cerca possibili soluzioni dalla KB aRMOR e propone la soluzione</para>
+</listitem><listitem><para>arrivato alla solve, il mission manager ricerca e propone la soluzione</para>
+</listitem><listitem><para><bold>è implementata come una simulated action</bold></para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
@@ -373,29 +377,6 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(dirty<sp/>))</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline><highlight class="normal">)</highlight></codeline>
-</programlisting></para>
-<para>implementazione ROS:</para>
-<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>DIAGRAM<sp/>INFOS</highlight></codeline>
-<codeline><highlight class="normal">title<sp/>&quot;(ACTION)<sp/>solve&quot;</highlight></codeline>
-<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
-<codeline><highlight class="normal">allow_mixing</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>FROM<sp/>OTHER<sp/>DIAGRAMS</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;solve&quot;<sp/>&lt;&lt;PDDL<sp/>action&gt;&gt;<sp/>as<sp/>ACT_SOLVE</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>LINKS</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">ACT_SOLVE<sp/>-down-&gt;<sp/>TOPIC_FEEDBACK_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;action<sp/>dispatch&quot;<sp/>as<sp/>DISPATCH</highlight></codeline>
-<codeline><highlight class="normal">ACT_SOLVE<sp/>&lt;-left-<sp/>DISPATCH</highlight></codeline>
 </programlisting> </para>
 </sect2>
 </sect1>

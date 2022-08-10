@@ -115,8 +115,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp" bodystart="92" bodyend="121"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp" bodystart="92" bodyend="122"/>
         <references refid="move__to_8h_1a86d0cfb83d16525602716fa35858cd2b" compoundref="move__to_8h" startline="23">SRV_NAVIGATION</references>
+        <references refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" compoundref="feedback__manager_8cpp" startline="46" endline="50">action_feedback_manager::fb_failure</references>
+        <references refid="classaction__feedback__manager_1accdda1a95b8e6c1545e49f3c38c386f6" compoundref="feedback__manager_8cpp" startline="67" endline="71">action_feedback_manager::fb_hw_navigation_failure</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

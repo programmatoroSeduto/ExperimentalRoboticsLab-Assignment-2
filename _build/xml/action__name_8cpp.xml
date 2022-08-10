@@ -19,12 +19,6 @@
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="1">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp</label>
-        <link refid="action__name_8cpp"/>
-        <childnode refid="2" relation="include">
-        </childnode>
-      </node>
       <node id="8">
         <label>string</label>
       </node>
@@ -55,6 +49,12 @@
       </node>
       <node id="9">
         <label>vector</label>
+      </node>
+      <node id="1">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp</label>
+        <link refid="action__name_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
       </node>
       <node id="6">
         <label>diagnostic_msgs/KeyValue.h</label>
@@ -159,6 +159,6 @@
 <codeline lineno="99"><highlight class="normal"></highlight></codeline>
 <codeline lineno="100"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp"/>
+    <location file="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp"/>
   </compounddef>
 </doxygen>

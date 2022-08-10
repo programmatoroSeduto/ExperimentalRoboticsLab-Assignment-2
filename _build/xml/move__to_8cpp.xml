@@ -179,30 +179,31 @@
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;[&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="move__to_8h_1a86d0cfb83d16525602716fa35858cd2b" kindref="member">SRV_NAVIGATION</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;]&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>(!cl_navigation.exists(<sp/>)<sp/>?<sp/></highlight><highlight class="stringliteral">&quot;<sp/>--<sp/>it<sp/>seems<sp/>not<sp/>opened&quot;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">)<sp/>);</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>feedback<sp/>:<sp/>unable<sp/>to<sp/>contact<sp/>the<sp/>service</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;fb.<ref refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" kindref="member">fb_failure</ref>(<sp/>msg-&gt;parameters,<sp/></highlight><highlight class="stringliteral">&quot;SERVICE<sp/>ERROR:<sp/>unable<sp/>to<sp/>contact<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>+<sp/>std::string(<ref refid="move__to_8h_1a86d0cfb83d16525602716fa35858cd2b" kindref="member">SRV_NAVIGATION</ref>)<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;&apos;&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>nav_srv.response.success<sp/>)</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>feedback<sp/>:<sp/>success</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>TODO<sp/>feedback<sp/>:<sp/>hardware<sp/>navigation<sp/>failure</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;fb.<ref refid="classaction__feedback__manager_1accdda1a95b8e6c1545e49f3c38c386f6" kindref="member">fb_hw_navigation_failure</ref>(<sp/>msg-&gt;parameters,<sp/></highlight><highlight class="stringliteral">&quot;navigation<sp/>failed<sp/>(success<sp/>flag<sp/>not<sp/>true)&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="121"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"></highlight></codeline>
+<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="122"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"></highlight></codeline>
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PRIVATE<sp/>METHODS<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="comment">//<sp/>===<sp/>PRIVATE<sp/>METHODS<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"></highlight></codeline>
+<codeline lineno="132"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp"/>
   </compounddef>

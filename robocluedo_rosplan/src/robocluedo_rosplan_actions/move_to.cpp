@@ -105,17 +105,18 @@ bool RP_rcl_move_to::concreteCallback( const rosplan_dispatch_msgs::ActionDispat
 			<< "[" << SRV_NAVIGATION << "]"
 			<< (!cl_navigation.exists( ) ? " -- it seems not opened" : "") );
 			
-		// TODO feedback : unable to contact the service
+		this->fb.fb_failure( msg->parameters, "SERVICE ERROR: unable to contact '" + std::string(SRV_NAVIGATION) + "'" );
 			
 		return false;
 	}
 	
 	if( nav_srv.response.success )
-		// TODO feedback : success
 		return true;
 	else
-		// TODO feedback : hardware navigation failure
+	{
+		this->fb.fb_hw_navigation_failure( msg->parameters, "navigation failed (success flag not true)" );
 		return false;
+	}
 	
 	return true;
 }

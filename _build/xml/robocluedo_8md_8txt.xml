@@ -439,7 +439,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="395" column="2" bodyfile="_build/html/_sources/robocluedo_rosplan/_docs/new-robocluedo.md.txt" bodystart="323" bodyend="340" declfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" declline="395" declcolumn="2"/>
+        <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="395" column="2" declfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" declline="395" declcolumn="2"/>
       </memberdef>
       <memberdef kind="function" id="robocluedo_8md_8txt_1a183e12ba0acc5f64fa994e47c21a010a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>path</type>
@@ -589,11 +589,11 @@
 <codeline lineno="15"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">(init-planning-<ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref><sp/>)</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>controlla<sp/>e<sp/>aggiorna<sp/>lo<sp/>stato<sp/>del<sp/>database</highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>conta<sp/>gli<sp/>elementi<sp/>associati<sp/>alle<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref></highlight></codeline>
-<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>e<sp/>classifica<sp/>le<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref><sp/>nelle<sp/>tre<sp/>categorie</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>conta<sp/>gli<sp/>elementi<sp/>associati<sp/>alle<sp/>ipotesi</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>e<sp/>classifica<sp/>le<sp/>ipotesi<sp/>nelle<sp/>tre<sp/>categorie</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>controlla<sp/>che<sp/>il<sp/>problema<sp/>ammetta<sp/>soluzione</highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>c&apos;è<sp/>almeno<sp/>un&apos;ipotesi<sp/>ammissibile?</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>IF<sp/>almeno<sp/>una<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref><sp/>ammissibile<sp/>-&gt;<sp/>REPLAN<sp/>(verso<sp/>la<sp/>soluzione)</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>IF<sp/>almeno<sp/>una<sp/>ipotesi<sp/>ammissibile<sp/>-&gt;<sp/>REPLAN<sp/>(verso<sp/>la<sp/>soluzione)</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>applica<sp/>l</highlight><highlight class="stringliteral">&apos;effetto<sp/>dell&apos;</highlight><highlight class="normal">azione</highlight></codeline>
 <codeline lineno="24"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
@@ -608,7 +608,7 @@
 <codeline lineno="34"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>questo<sp/>è<sp/>gestito<sp/>dall&apos;</highlight><highlight class="normal">esterno:<sp/>è<sp/>il<sp/>sistema<sp/>esterno<sp/>al<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a72b7badb1a65b571e3bc144937a5ddd7" kindref="member">PDDL</ref><sp/>che<sp/>individua<sp/>le<sp/>esclusioni.<sp/>il<sp/>planner<sp/>può<sp/>escludere<sp/>solo<sp/>questi<sp/>casi</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">-<sp/>un<sp/>ID<sp/>è<sp/>*ammissibile*<sp/>quando<sp/>i<sp/>tre<sp/>campi<sp/>hanno<sp/>uno<sp/>e<sp/>un<sp/>solo<sp/>elemento</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">il<sp/>sistema<sp/>iniziale<sp/>valuta<sp/>le<sp/>condizioni<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref><sp/>e<sp/>marca<sp/>i<sp/>tre<sp/>predicati<sp/>col<sp/>loro<sp/>stato.<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal">il<sp/>sistema<sp/>iniziale<sp/>valuta<sp/>le<sp/>condizioni<sp/>delle<sp/>ipotesi<sp/>e<sp/>marca<sp/>i<sp/>tre<sp/>predicati<sp/>col<sp/>loro<sp/>stato.<sp/></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal">il<sp/>sistema<sp/>fa<sp/>anche<sp/>il<sp/>check<sp/>se<sp/>il<sp/>problema<sp/>è<sp/>risolvibile.<sp/></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
@@ -680,7 +680,7 @@
 <codeline lineno="106"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/><sp/><sp/><sp/>(altrimenti<sp/>scartalo<sp/>e<sp/>passa<sp/>avanti)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>controllare<sp/>qui<sp/>se<sp/>l&apos;indizio<sp/>è<sp/>ridondante?</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>aggiungi<sp/>l</highlight><highlight class="stringliteral">&apos;indizio<sp/>alla<sp/>ontology</highlight></codeline>
-<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>in<sp/>base<sp/>all&apos;</highlight><highlight class="normal">indizio,<sp/>classifica<sp/>l</highlight><highlight class="stringliteral">&apos;ID<sp/>dell&apos;</highlight><highlight class="normal"><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref><sp/>implicata</highlight></codeline>
+<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>in<sp/>base<sp/>all&apos;</highlight><highlight class="normal">indizio,<sp/>classifica<sp/>l</highlight><highlight class="stringliteral">&apos;ID<sp/>dell&apos;</highlight><highlight class="normal">ipotesi<sp/>implicata</highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>INFINE<sp/>applica<sp/>il<sp/>nuovo<sp/>stato<sp/>alla<sp/>KB</highlight></codeline>
 <codeline lineno="111"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
@@ -704,7 +704,7 @@
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
 <codeline lineno="131"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="132"><highlight class="normal">(sherlok-is-thinking<sp/>?wp<sp/>)</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a76d10fc68fb562f57c2f735ccb197ee2" kindref="member">conditions</ref>?<sp/></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/>conditions?<sp/></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>aggiorna<sp/>i<sp/>conteggi</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>-&gt;VERIFICA<sp/>SE<sp/>IL<sp/>PROBLEMA<sp/>E</highlight><highlight class="stringliteral">&apos;<sp/>ANCORA<sp/>RISOLVIBILE</highlight></codeline>
 <codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>questa<sp/>procedura<sp/>non<sp/>dovrebbe<sp/>essere<sp/>eseguita<sp/>una<sp/>volta<sp/>ritratto<sp/>il<sp/>braccio?</highlight></codeline>
@@ -722,13 +722,13 @@
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="150"><highlight class="normal">(bright-bulb-over-head<sp/>?wp<sp/>)</highlight></codeline>
-<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a76d10fc68fb562f57c2f735ccb197ee2" kindref="member">conditions</ref>?<sp/></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>check<sp/>delle<sp/>conditions?<sp/></highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>aggiorna<sp/>la<sp/>KB<sp/>e<sp/>vai<sp/>avanti</highlight></codeline>
 <codeline lineno="153"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>la<sp/>soluzione<sp/>del<sp/>caso</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal">il<sp/>planner,<sp/>dato<sp/>che<sp/>funziona<sp/>offline,<sp/>non<sp/>può<sp/>ricevere<sp/>alcun<sp/>dato<sp/>sui<sp/>vari<sp/>ID<sp/>delle<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref>:<sp/>purchè<sp/>un</highlight><highlight class="stringliteral">&apos;ipotesi<sp/>sia<sp/>classificata<sp/>valida,<sp/>il<sp/>planner<sp/>può<sp/>sempre<sp/>sceglierla.<sp/>Sempre<sp/>nello<sp/>stesso<sp/>spirito:<sp/>*per<sp/>il<sp/>planner,<sp/>tutto<sp/>va<sp/>a<sp/>liscio<sp/>liscio*.<sp/>E&apos;</highlight><highlight class="normal"><sp/>il<sp/>sistema<sp/>esterno<sp/>che<sp/>deve<sp/>giudicare<sp/>la<sp/>soluzione<sp/>proposta,<sp/>evitando<sp/>decisioni<sp/></highlight><highlight class="stringliteral">&quot;eccessivamente<sp/>irrazionali&quot;</highlight><highlight class="normal"><sp/>da<sp/>parte<sp/>del<sp/>planner,<sp/>che<sp/>comunque<sp/>attua<sp/>una<sp/>scelta<sp/>al<sp/>termine<sp/>dell</highlight><highlight class="stringliteral">&apos;investigazione,<sp/>anche<sp/>se<sp/>non<sp/>dettata<sp/>da<sp/>un<sp/>effettivo<sp/>ragionamento<sp/>deduttivo.<sp/></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">il<sp/>planner,<sp/>dato<sp/>che<sp/>funziona<sp/>offline,<sp/>non<sp/>può<sp/>ricevere<sp/>alcun<sp/>dato<sp/>sui<sp/>vari<sp/>ID<sp/>delle<sp/>ipotesi:<sp/>purchè<sp/>un</highlight><highlight class="stringliteral">&apos;ipotesi<sp/>sia<sp/>classificata<sp/>valida,<sp/>il<sp/>planner<sp/>può<sp/>sempre<sp/>sceglierla.<sp/>Sempre<sp/>nello<sp/>stesso<sp/>spirito:<sp/>*per<sp/>il<sp/>planner,<sp/>tutto<sp/>va<sp/>a<sp/>liscio<sp/>liscio*.<sp/>E&apos;</highlight><highlight class="normal"><sp/>il<sp/>sistema<sp/>esterno<sp/>che<sp/>deve<sp/>giudicare<sp/>la<sp/>soluzione<sp/>proposta,<sp/>evitando<sp/>decisioni<sp/></highlight><highlight class="stringliteral">&quot;eccessivamente<sp/>irrazionali&quot;</highlight><highlight class="normal"><sp/>da<sp/>parte<sp/>del<sp/>planner,<sp/>che<sp/>comunque<sp/>attua<sp/>una<sp/>scelta<sp/>al<sp/>termine<sp/>dell</highlight><highlight class="stringliteral">&apos;investigazione,<sp/>anche<sp/>se<sp/>non<sp/>dettata<sp/>da<sp/>un<sp/>effettivo<sp/>ragionamento<sp/>deduttivo.<sp/></highlight></codeline>
 <codeline lineno="158"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="159"><highlight class="stringliteral">il<sp/>planner<sp/>può<sp/>scegliere<sp/>tra<sp/>le<sp/>opzioni<sp/>attive,<sp/>ed<sp/>escluderà<sp/>solo<sp/>quelle<sp/>risapute<sp/>non<sp/>valide<sp/>*a<sp/>priori*,<sp/>quindi<sp/>quelle<sp/>escluse<sp/>dal<sp/>problem<sp/>file<sp/>prima<sp/>di<sp/>fare<sp/>la<sp/>ricerca<sp/>della<sp/>soluzione.<sp/></highlight></codeline>
 <codeline lineno="160"><highlight class="stringliteral"></highlight></codeline>
@@ -746,7 +746,7 @@
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>e<sp/>passa<sp/>alla<sp/>valutazione<sp/>di<sp/>fattibilità</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>ELIF<sp/></highlight><highlight class="keywordtype">id</highlight><highlight class="normal"><sp/>classificato<sp/>attivo<sp/>:<sp/>REPLAN,<sp/>non<sp/>accettare<sp/>una<sp/>soluzione<sp/>non<sp/>motivata</highlight></codeline>
 <codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/>(*)<sp/>valutazione<sp/>di<sp/>fattibilità</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>il<sp/>problema<sp/>è<sp/>risolvibile?<sp/>ci<sp/>sono<sp/>ancora<sp/><ref refid="new-robocluedo_8md_8txt_1a4b0f36c959092ffd4e6b48799ee9ecb6" kindref="member">ipotesi</ref><sp/>smarcate?</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>il<sp/>problema<sp/>è<sp/>risolvibile?<sp/>ci<sp/>sono<sp/>ancora<sp/>ipotesi<sp/>smarcate?</highlight></codeline>
 <codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="preprocessor">#<sp/>se<sp/>non<sp/>c&apos;è<sp/>più<sp/>nulla<sp/>da<sp/>fare,<sp/>FAIL<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(*)<sp/>valuta<sp/>il<sp/>numero<sp/>di<sp/>cicli<sp/>alla<sp/>prossima<sp/>iterazione</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>se<sp/>c&apos;è<sp/>un<sp/>solo<sp/>ID<sp/>completo<sp/>da<sp/>provare,<sp/>0<sp/>potrebbe<sp/>essere<sp/>la<sp/>scelta</highlight><highlight class="normal"></highlight></codeline>

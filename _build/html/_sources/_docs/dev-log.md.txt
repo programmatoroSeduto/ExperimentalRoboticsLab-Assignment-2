@@ -972,7 +972,35 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 	- e cmake
 	- compila? compila.
 - **COMMIT** : "working on robocluedo_rosplan_actions (replan, move_to)"
-
+- *collect-hint*
+	- *pessimo design* : meglio ridimensionare questa azione
+	- *manca il servizio manipulation!*
+	- creazione dei file per l'implementazione dell'azione
+	- implementazione
+	- cmake
+	- compila? compila.
+- *move-to-center* è praticamente identica alla *move-to* di prima
+	- uml copiato e incollato
+	- l'implementazione è praticamente identica a *move-to*
+	- cmake
+	- compila? ovviamente compila.
+- la *solve* è una simulated action: dato che solo il mission manager può accedere alla ontology, la solve perde di ogni utilità
+- **COMMIT** : "working on robocluedo_rosplan_actions (end of the job)"
+- implementare (solo per il testing) un nodo che imiti navigation e manipulation
+	- **NUOVO NODO** : rosplan_simulated_motion_system
+	- implementazione e installazione
+	- e un minimo testing
+- (manca solo da chiarire il sistema di feedback)
+- feedback "hw manipulation failure"
+	- ...e tutti gli altri tipi di feedback
+- compila? compila
+- ora, tutti i feedback in tutte le azioni
+	- in collect hint
+	- in move to
+	- in move to center
+	- in replan
+- **COMMIT** : "working on robocluedo_rosplan_actions (feedbacks from the actions)"
+	
 
 
 
@@ -980,10 +1008,16 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 
 TODO
 
+- aggiornare il file di descrizione e design del PDDL con il codice corretto
+	- correggere i landmark, oppure eliminare direttamente la sezione
+- discutere l'utilità del landmark zero... è davvero così utile avere un'azione che faccia fare replan?
+- **gestire meglio l'invio dei feedback**. CI sono vari problemi:
+	- il feedback dev'essere inviato *solo quando si presenta un problema* e il pipeline manager dev'essere pronto a riceverlo
+	- va inviato solo ed esclusivamente un feedback alla volta
+	- il feedback di successo non esiste, è inutile
+- in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
+- aggiornare i template delle actions in questo file
 - implementazione precisa dell'azione move-to
-- feedback "hw navigation failure"
-- feedback "impossibile contattare il server" (failure generica)
-- feedback "success"
 - aggiungere le pagine di documentazione del codice di Sphinx!
 - *module testing* su kb_tools
 - implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)

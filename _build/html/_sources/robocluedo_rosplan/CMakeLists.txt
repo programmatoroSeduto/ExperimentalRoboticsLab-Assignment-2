@@ -181,6 +181,12 @@ add_executable( node_move_to src/robocluedo_rosplan_actions/move_to_node.cpp )
 add_dependencies( node_move_to ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( node_move_to ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface move_to )
 
+add_library( collect_hint src/robocluedo_rosplan_actions/collect_hint.cpp )
+target_link_libraries( collect_hint ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface )
+add_executable( node_collect_hint src/robocluedo_rosplan_actions/collect_hint_node.cpp )
+add_dependencies( node_collect_hint ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( node_collect_hint ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface collect_hint )
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -207,6 +213,7 @@ target_link_libraries( node_move_to ${catkin_LIBRARIES} feedback_manager kb_tool
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/rosplan_pipeline_manager.py
+  scripts/rosplan_simulated_motion_system.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

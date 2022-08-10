@@ -1184,33 +1184,62 @@
 <codeline lineno="970"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>apertura<sp/>delle<sp/>interfacce<sp/>(ne<sp/>serve<sp/>solo<sp/>una)</highlight></codeline>
 <codeline lineno="971"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
 <codeline lineno="972"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>cmake</highlight></codeline>
-<codeline lineno="973"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/></highlight></codeline>
-<codeline lineno="974"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="975"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="976"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="977"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="978"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="979"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="980"><highlight class="stringliteral">TODO</highlight></codeline>
-<codeline lineno="981"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="982"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;</highlight><highlight class="normal">azione<sp/>move-to</highlight></codeline>
-<codeline lineno="983"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;hw<sp/>navigation<sp/>failure&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="984"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;impossibile<sp/>contattare<sp/>il<sp/>server&quot;</highlight><highlight class="normal"><sp/>(failure<sp/>generica)</highlight></codeline>
-<codeline lineno="985"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;success&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="986"><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
-<codeline lineno="987"><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/><ref refid="classkb__tools" kindref="compound">kb_tools</ref></highlight></codeline>
-<codeline lineno="988"><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/></highlight><highlight class="stringliteral">&quot;sicuro&quot;</highlight><highlight class="normal"><sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
-<codeline lineno="989"><highlight class="normal">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
-<codeline lineno="990"><highlight class="normal">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
-<codeline lineno="991"><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline lineno="992"><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
-<codeline lineno="993"><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/></highlight><highlight class="stringliteral">&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="994"><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
-<codeline lineno="995"><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="973"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline lineno="974"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(replan,<sp/>move_to)&quot;</highlight></codeline>
+<codeline lineno="975"><highlight class="stringliteral">-<sp/>*collect-hint*</highlight></codeline>
+<codeline lineno="976"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>*pessimo<sp/>design*<sp/>:<sp/>meglio<sp/>ridimensionare<sp/>questa<sp/>azione</highlight></codeline>
+<codeline lineno="977"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>*manca<sp/>il<sp/>servizio<sp/>manipulation!*</highlight></codeline>
+<codeline lineno="978"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>dei<sp/>file<sp/>per<sp/>l&apos;</highlight><highlight class="normal">implementazione<sp/>dell</highlight><highlight class="stringliteral">&apos;azione</highlight></codeline>
+<codeline lineno="979"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
+<codeline lineno="980"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
+<codeline lineno="981"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline lineno="982"><highlight class="stringliteral">-<sp/>*move-to-center*<sp/>è<sp/>praticamente<sp/>identica<sp/>alla<sp/>*move-to*<sp/>di<sp/>prima</highlight></codeline>
+<codeline lineno="983"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>copiato<sp/>e<sp/>incollato</highlight></codeline>
+<codeline lineno="984"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>l&apos;</highlight><highlight class="normal">implementazione<sp/>è<sp/>praticamente<sp/>identica<sp/>a<sp/>*move-to*</highlight></codeline>
+<codeline lineno="985"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
+<codeline lineno="986"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>ovviamente<sp/>compila.</highlight></codeline>
+<codeline lineno="987"><highlight class="normal">-<sp/>la<sp/>*solve*<sp/>è<sp/>una<sp/>simulated<sp/><ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref>:<sp/>dato<sp/>che<sp/>solo<sp/>il<sp/>mission<sp/>manager<sp/>può<sp/>accedere<sp/>alla<sp/>ontology,<sp/>la<sp/>solve<sp/>perde<sp/>di<sp/>ogni<sp/>utilità</highlight></codeline>
+<codeline lineno="988"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(end<sp/>of<sp/>the<sp/>job)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="989"><highlight class="normal">-<sp/>implementare<sp/>(solo<sp/>per<sp/>il<sp/>testing)<sp/>un<sp/>nodo<sp/>che<sp/>imiti<sp/>navigation<sp/>e<sp/>manipulation</highlight></codeline>
+<codeline lineno="990"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/><ref refid="namespacerosplan__simulated__motion__system" kindref="compound">rosplan_simulated_motion_system</ref></highlight></codeline>
+<codeline lineno="991"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>e<sp/>installazione</highlight></codeline>
+<codeline lineno="992"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="993"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="994"><highlight class="normal"></highlight></codeline>
+<codeline lineno="995"><highlight class="normal"></highlight></codeline>
 <codeline lineno="996"><highlight class="normal"></highlight></codeline>
-<codeline lineno="997"><highlight class="normal">NOTE</highlight></codeline>
+<codeline lineno="997"><highlight class="normal"></highlight></codeline>
 <codeline lineno="998"><highlight class="normal"></highlight></codeline>
-<codeline lineno="999"><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline lineno="999"><highlight class="normal">TODO</highlight></codeline>
+<codeline lineno="1000"><highlight class="normal"></highlight></codeline>
+<codeline lineno="1001"><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a72b7badb1a65b571e3bc144937a5ddd7" kindref="member">PDDL</ref><sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline lineno="1002"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline lineno="1003"><highlight class="normal">-<sp/>discutere<sp/>l</highlight><highlight class="stringliteral">&apos;utilità<sp/>del<sp/>landmark<sp/>zero...<sp/>è<sp/>davvero<sp/>così<sp/>utile<sp/>avere<sp/>un&apos;</highlight><highlight class="normal">azione<sp/>che<sp/>faccia<sp/>fare<sp/>replan?</highlight></codeline>
+<codeline lineno="1004"><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l</highlight><highlight class="stringliteral">&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
+<codeline lineno="1005"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;</highlight><highlight class="normal">essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev</highlight><highlight class="stringliteral">&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
+<codeline lineno="1006"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
+<codeline lineno="1007"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
+<codeline lineno="1008"><highlight class="stringliteral">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;</highlight><highlight class="normal">è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline lineno="1009"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;hw<sp/>manipulation<sp/>failure&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1010"><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref></highlight></codeline>
+<codeline lineno="1011"><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell</highlight><highlight class="stringliteral">&apos;azione<sp/>move-to</highlight></codeline>
+<codeline lineno="1012"><highlight class="stringliteral">-<sp/>feedback<sp/>&quot;hw<sp/>navigation<sp/>failure&quot;</highlight></codeline>
+<codeline lineno="1013"><highlight class="stringliteral">-<sp/>feedback<sp/>&quot;impossibile<sp/>contattare<sp/>il<sp/>server&quot;<sp/>(failure<sp/>generica)</highlight></codeline>
+<codeline lineno="1014"><highlight class="stringliteral">-<sp/>feedback<sp/>&quot;success&quot;</highlight></codeline>
+<codeline lineno="1015"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline lineno="1016"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
+<codeline lineno="1017"><highlight class="stringliteral">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
+<codeline lineno="1018"><highlight class="stringliteral">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
+<codeline lineno="1019"><highlight class="stringliteral">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
+<codeline lineno="1020"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
+<codeline lineno="1021"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline lineno="1022"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
+<codeline lineno="1023"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline lineno="1024"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="1025"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1026"><highlight class="stringliteral">NOTE</highlight></codeline>
+<codeline lineno="1027"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1028"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/_docs/dev-log.md.txt"/>
   </compounddef>

@@ -230,8 +230,9 @@ azione PDDL:
 --- 
 
 - **(ACTION) collect-hint**
-	- l'azione include due step, per semplicità: mossa del manipolatore verso l'hint, aggiornamento della kb, e verifica della presenza di una soluzione
+	- l'azione implementa solo il moto del braccio verso il marker: avvicina, rimani fermo, rientra il braccio, e avanti
 	- *in caso si presenterà il bisogno di aggiornare il sistema di raccolta degli hint* (ad esempio, detection degli hint tramite una videocamera piuttosto che tramite un sistema di hints) *si dovrà cambiare solo questa particolare azione* e stop. 
+	- l'azione si aspetta che un altro nodo implementi il servizio che permette all'architettura di interagire con il manipulation controller
 
 azione PDDL:
 
@@ -269,26 +270,19 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-() "manip service" as SRV_MANIP
-() "add hint" as SRV_ADD
-() "hint from the Oracle" as TOPIC_ORACLE_HINT
-
-
 ''' COMPONENTS
 component "collect-hint" <<PDDL action>> as ACT_COLLECT_HINT
 
 
 ''' LINKS
-ACT_COLLECT_HINT --> SRV_ADD
-ACT_COLLECT_HINT --> SRV_MANIP
-() "action feedback" as DISP_FEEDBACK 
-ACT_COLLECT_HINT -right-> DISP_FEEDBACK
-() "feedback manager" as TOPIC_FEEDBACK_MANAGER
-ACT_COLLECT_HINT -down-> TOPIC_FEEDBACK_MANAGER
+() "/robocluedo/manipulator_command" as SRV_MANIP
+ACT_COLLECT_HINT "cl" <-- SRV_MANIP
+note on link : robocluedo_rosplan_msgs/ManipulationCommand
+
 () "action dispatch" as DISPATCH
-ACT_COLLECT_HINT <-left- DISPATCH
-ACT_COLLECT_HINT <-up- TOPIC_ORACLE_HINT
+ACT_COLLECT_HINT <.. DISPATCH
+() "action feedback" as DISP_FEEDBACK 
+ACT_COLLECT_HINT ..> DISP_FEEDBACK
 
 @enduml
 ```
@@ -346,16 +340,25 @@ skinparam Padding 8
 allow_mixing
 
 
-''' FROM OTHER DIAGRAMS
-' ...
-
-
 ''' COMPONENTS
 component "move-to-center" <<PDDL action>> as ACT_MOVE_TO_CENTER
 
 
 ''' LINKS
-' ...
+() "/robocluedo/action_feedback" as TOPIC_FEEDBACK_MANAGER
+ACT_MOVE_TO_CENTER "pub" --> TOPIC_FEEDBACK_MANAGER
+note on link: robocluedo_rosplan_msgs/ActionFeedback
+
+() "/robocluedo/navigation_command" as SRV_NAV
+ACT_MOVE_TO_CENTER "srv" --> SRV_NAV
+note on link: robocluedo_rosplan_msgs/NavigationCommand
+
+() "action dispatch" as DISPATCH
+ACT_MOVE_TO_CENTER <.. DISPATCH
+() "action feedback" as DISP_FEEDBACK 
+ACT_MOVE_TO_CENTER ..> DISP_FEEDBACK
+
+@enduml
 ```
 
 --- 
@@ -363,7 +366,8 @@ component "move-to-center" <<PDDL action>> as ACT_MOVE_TO_CENTER
 - **(ACTION) solve** 
 	- l'azione PDDL non fa che settare tutto per fare il replan
 	- a differenza della precedente versione, il PDDL non tiene traccia delle ipotesi (per questo c'è aRMOR)
-	- l'implementazione ROS cerca possibili soluzioni dalla KB aRMOR e propone la soluzione
+	- arrivato alla solve, il mission manager ricerca e propone la soluzione
+	- **è implementata come una simulated action**
 
 azione PDDL:
 
@@ -388,28 +392,3 @@ azione PDDL:
 )
 ```
 
-implementazione ROS:
-
-```{uml} 
-@startuml
-
-''' DIAGRAM INFOS
-title "(ACTION) solve"
-skinparam Padding 8
-allow_mixing
-
-
-''' FROM OTHER DIAGRAMS
-' ...
-
-
-''' COMPONENTS
-component "solve" <<PDDL action>> as ACT_SOLVE
-
-
-''' LINKS
-() "feedback manager" as TOPIC_FEEDBACK_MANAGER
-ACT_SOLVE -down-> TOPIC_FEEDBACK_MANAGER
-() "action dispatch" as DISPATCH
-ACT_SOLVE <-left- DISPATCH
-```

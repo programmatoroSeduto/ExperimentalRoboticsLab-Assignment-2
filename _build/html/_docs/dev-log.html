@@ -1196,13 +1196,68 @@ unsolvable.
 </ul>
 </li>
 <li><p><strong>COMMIT</strong> : “working on robocluedo_rosplan_actions (replan, move_to)”</p></li>
+<li><p><em>collect-hint</em></p>
+<ul class="simple">
+<li><p><em>pessimo design</em> : meglio ridimensionare questa azione</p></li>
+<li><p><em>manca il servizio manipulation!</em></p></li>
+<li><p>creazione dei file per l’implementazione dell’azione</p></li>
+<li><p>implementazione</p></li>
+<li><p>cmake</p></li>
+<li><p>compila? compila.</p></li>
+</ul>
+</li>
+<li><p><em>move-to-center</em> è praticamente identica alla <em>move-to</em> di prima</p>
+<ul class="simple">
+<li><p>uml copiato e incollato</p></li>
+<li><p>l’implementazione è praticamente identica a <em>move-to</em></p></li>
+<li><p>cmake</p></li>
+<li><p>compila? ovviamente compila.</p></li>
+</ul>
+</li>
+<li><p>la <em>solve</em> è una simulated action: dato che solo il mission manager può accedere alla ontology, la solve perde di ogni utilità</p></li>
+<li><p><strong>COMMIT</strong> : “working on robocluedo_rosplan_actions (end of the job)”</p></li>
+<li><p>implementare (solo per il testing) un nodo che imiti navigation e manipulation</p>
+<ul class="simple">
+<li><p><strong>NUOVO NODO</strong> : rosplan_simulated_motion_system</p></li>
+<li><p>implementazione e installazione</p></li>
+<li><p>e un minimo testing</p></li>
+</ul>
+</li>
+<li><p>(manca solo da chiarire il sistema di feedback)</p></li>
+<li><p>feedback “hw manipulation failure”</p>
+<ul class="simple">
+<li><p>…e tutti gli altri tipi di feedback</p></li>
+</ul>
+</li>
+<li><p>compila? compila</p></li>
+<li><p>ora, tutti i feedback in tutte le azioni</p>
+<ul class="simple">
+<li><p>in collect hint</p></li>
+<li><p>in move to</p></li>
+<li><p>in move to center</p></li>
+<li><p>in replan</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on robocluedo_rosplan_actions (feedbacks from the actions)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
+<li><p>aggiornare il file di descrizione e design del PDDL con il codice corretto</p>
+<ul>
+<li><p>correggere i landmark, oppure eliminare direttamente la sezione</p></li>
+</ul>
+</li>
+<li><p>discutere l’utilità del landmark zero… è davvero così utile avere un’azione che faccia fare replan?</p></li>
+<li><p><strong>gestire meglio l’invio dei feedback</strong>. CI sono vari problemi:</p>
+<ul>
+<li><p>il feedback dev’essere inviato <em>solo quando si presenta un problema</em> e il pipeline manager dev’essere pronto a riceverlo</p></li>
+<li><p>va inviato solo ed esclusivamente un feedback alla volta</p></li>
+<li><p>il feedback di successo non esiste, è inutile</p></li>
+</ul>
+</li>
+<li><p>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c’è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</p></li>
+<li><p>aggiornare i template delle actions in questo file</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
-<li><p>feedback “hw navigation failure”</p></li>
-<li><p>feedback “impossibile contattare il server” (failure generica)</p></li>
-<li><p>feedback “success”</p></li>
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
 <li><p>implementazione di una funzionalità per fare un clear “sicuro” della ontology (quello di rosplan funziona maluccio)</p></li>

@@ -981,7 +981,35 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>cmake</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(replan,<sp/>move_to)&quot;</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>*collect-hint*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*pessimo<sp/>design*<sp/>:<sp/>meglio<sp/>ridimensionare<sp/>questa<sp/>azione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*manca<sp/>il<sp/>servizio<sp/>manipulation!*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>dei<sp/>file<sp/>per<sp/>l&apos;implementazione<sp/>dell&apos;azione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*move-to-center*<sp/>è<sp/>praticamente<sp/>identica<sp/>alla<sp/>*move-to*<sp/>di<sp/>prima</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>copiato<sp/>e<sp/>incollato</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>l&apos;implementazione<sp/>è<sp/>praticamente<sp/>identica<sp/>a<sp/>*move-to*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>ovviamente<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>la<sp/>*solve*<sp/>è<sp/>una<sp/>simulated<sp/>action:<sp/>dato<sp/>che<sp/>solo<sp/>il<sp/>mission<sp/>manager<sp/>può<sp/>accedere<sp/>alla<sp/>ontology,<sp/>la<sp/>solve<sp/>perde<sp/>di<sp/>ogni<sp/>utilità</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(end<sp/>of<sp/>the<sp/>job)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>implementare<sp/>(solo<sp/>per<sp/>il<sp/>testing)<sp/>un<sp/>nodo<sp/>che<sp/>imiti<sp/>navigation<sp/>e<sp/>manipulation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>rosplan_simulated_motion_system</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>e<sp/>installazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>un<sp/>minimo<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(manca<sp/>solo<sp/>da<sp/>chiarire<sp/>il<sp/>sistema<sp/>di<sp/>feedback)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>feedback<sp/>&quot;hw<sp/>manipulation<sp/>failure&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...e<sp/>tutti<sp/>gli<sp/>altri<sp/>tipi<sp/>di<sp/>feedback</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compila?<sp/>compila</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora,<sp/>tutti<sp/>i<sp/>feedback<sp/>in<sp/>tutte<sp/>le<sp/>azioni</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>collect<sp/>hint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to<sp/>center</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>replan</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(feedbacks<sp/>from<sp/>the<sp/>actions)&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -989,10 +1017,16 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>discutere<sp/>l&apos;utilità<sp/>del<sp/>landmark<sp/>zero...<sp/>è<sp/>davvero<sp/>così<sp/>utile<sp/>avere<sp/>un&apos;azione<sp/>che<sp/>faccia<sp/>fare<sp/>replan?</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>feedback<sp/>&quot;hw<sp/>navigation<sp/>failure&quot;</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>feedback<sp/>&quot;impossibile<sp/>contattare<sp/>il<sp/>server&quot;<sp/>(failure<sp/>generica)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>feedback<sp/>&quot;success&quot;</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>

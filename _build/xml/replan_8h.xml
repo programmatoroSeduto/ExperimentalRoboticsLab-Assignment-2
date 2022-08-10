@@ -125,8 +125,8 @@
     <programlisting>
 <codeline lineno="1"><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
-<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>__H_ACTION_NAME_H__</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__H_ACTION_NAME_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="preprocessor">#ifndef<sp/>__H_REPLAN_H__</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>__H_REPLAN_H__</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="15" refid="replan_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ROSPLAN_ACTION_NAME<sp/>&quot;replan&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>

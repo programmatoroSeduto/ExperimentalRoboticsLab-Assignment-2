@@ -10,10 +10,14 @@
     <includes local="no">map</includes>
     <includedby refid="dev-log_8md_8txt" local="yes">_build/html/_sources/_docs/dev-log.md.txt</includedby>
     <includedby refid="action__name_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h</includedby>
+    <includedby refid="collect__hint_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h</includedby>
     <includedby refid="move__to_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h</includedby>
+    <includedby refid="move__to__center_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to_center.h</includedby>
     <includedby refid="replan_8h" local="yes">robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h</includedby>
     <includedby refid="feedback__manager_8cpp" local="yes">robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp</includedby>
-    <includedby refid="action__name__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name_node.cpp</includedby>
+    <includedby refid="action__name__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name_node.cpp</includedby>
+    <includedby refid="collect__hint__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint_node.cpp</includedby>
+    <includedby refid="move__to__center__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_center_node.cpp</includedby>
     <includedby refid="move__to__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_node.cpp</includedby>
     <includedby refid="replan__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/replan_node.cpp</includedby>
     <incdepgraph>
@@ -53,6 +57,14 @@
       </node>
     </incdepgraph>
     <invincdepgraph>
+      <node id="14">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_center_node.cpp</label>
+        <link refid="move__to__center__node_8cpp"/>
+      </node>
+      <node id="7">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp</label>
+        <link refid="collect__hint_8cpp"/>
+      </node>
       <node id="3">
         <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h</label>
         <link refid="action__name_8h"/>
@@ -63,9 +75,9 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="4">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name.cpp</label>
-        <link refid="action__name_8cpp"/>
+      <node id="8">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint_node.cpp</label>
+        <link refid="collect__hint__node_8cpp"/>
       </node>
       <node id="1">
         <label>robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h</label>
@@ -80,46 +92,66 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
         <childnode refid="5" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
         <childnode refid="11" relation="include">
         </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
       </node>
-      <node id="11">
+      <node id="17">
         <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan_node.cpp</label>
         <link refid="replan__node_8cpp"/>
       </node>
-      <node id="6">
+      <node id="9">
         <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to.h</label>
         <link refid="move__to_8h"/>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-      </node>
-      <node id="7">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp</label>
-        <link refid="move__to_8cpp"/>
-      </node>
-      <node id="9">
-        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h</label>
-        <link refid="replan_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
-      <node id="8">
+      <node id="12">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/move_to_center.h</label>
+        <link refid="move__to__center_8h"/>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_center.cpp</label>
+        <link refid="move__to__center_8cpp"/>
+      </node>
+      <node id="10">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to.cpp</label>
+        <link refid="move__to_8cpp"/>
+      </node>
+      <node id="4">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp</label>
+        <link refid="action__name_8cpp"/>
+      </node>
+      <node id="15">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h</label>
+        <link refid="replan_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
         <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/move_to_node.cpp</label>
         <link refid="move__to__node_8cpp"/>
       </node>
-      <node id="5">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name_node.cpp</label>
-        <link refid="action__name__node_8cpp"/>
-      </node>
-      <node id="12">
+      <node id="18">
         <label>robocluedo_rosplan/src/knowledge_base_tools/feedback_manager.cpp</label>
         <link refid="feedback__manager_8cpp"/>
       </node>
@@ -127,9 +159,21 @@
         <label>_build/html/_sources/_docs/dev-log.md.txt</label>
         <link refid="dev-log_8md_8txt"/>
       </node>
-      <node id="10">
+      <node id="6">
+        <label>robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h</label>
+        <link refid="collect__hint_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
         <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp</label>
         <link refid="replan_8cpp_8cpp"/>
+      </node>
+      <node id="5">
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name_node.cpp</label>
+        <link refid="action__name__node_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classaction__feedback__manager" prot="public">action_feedback_manager</innerclass>
@@ -210,31 +254,35 @@
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>===<sp/>FEEDBACK<sp/>SYSTEM<sp/>===<sp/>//</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh;</highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Publisher<sp/>pub_action_feedback;</highlight></codeline>
-<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="79"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>robocluedo_rosplan_msgs::ActionFeedback<sp/>build_msg(<sp/></highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>goal_achieved<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hw_failure<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure_nav_system<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure_manipulation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>details<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="97"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>pub(<sp/>robocluedo_rosplan_msgs::ActionFeedback&amp;<sp/>msg<sp/>);</highlight></codeline>
-<codeline lineno="105"><highlight class="normal">};</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"></highlight></codeline>
-<codeline lineno="107"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" kindref="member">fb_failure</ref>(<sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,<sp/>std::string<sp/>details<sp/>);</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classaction__feedback__manager_1a0aa1a67b824bf3f1ada4e2dd28262415" kindref="member">fb_hw_failure</ref>(<sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,<sp/>std::string<sp/>details<sp/>);</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classaction__feedback__manager_1a41faa38f3cea2f4c19fd2694368d4ff5" kindref="member">fb_hw_manipulation_failure</ref>(<sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,<sp/>std::string<sp/>details<sp/>);</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classaction__feedback__manager_1accdda1a95b8e6c1545e49f3c38c386f6" kindref="member">fb_hw_navigation_failure</ref>(<sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,<sp/>std::string<sp/>details<sp/>);</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>ros::Publisher<sp/>pub_action_feedback;</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="comment"><sp/><sp/><sp/><sp/>/********************************************/</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>robocluedo_rosplan_msgs::ActionFeedback<sp/>build_msg(<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::vector&lt;diagnostic_msgs::KeyValue&gt;<sp/>parameters,</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>goal_achieved<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>hw_failure<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure_nav_system<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>failure_manipulation<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>details<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>pub(<sp/>robocluedo_rosplan_msgs::ActionFeedback&amp;<sp/>msg<sp/>);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="114"><highlight class="normal"></highlight><highlight class="preprocessor">#endif</highlight></codeline>
     </programlisting>
     <location file="robocluedo_rosplan/include/knowledge_base_tools/feedback_manager.h"/>
   </compounddef>

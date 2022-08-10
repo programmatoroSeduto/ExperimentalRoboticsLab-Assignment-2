@@ -99,12 +99,10 @@ bool RP_rcl_replan::concreteCallback( const rosplan_dispatch_msgs::ActionDispatc
 			<< "[" << SRV_REPLAN << "]"
 			<< (!cl_replan.exists( ) ? " -- it seems not opened" : "") );
 		
-		// TODO feedback
+		this->fb.fb_failure( msg->parameters, "SERVICE ERROR: unable to contact '" + std::string(SRV_REPLAN) + "'" );
 		
 		return false;
 	}
-	
-	// TODO success feedback
 	
 	return true;
 }
