@@ -58,9 +58,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_movement_controller/index.html">PKG DOCS – robocluedo_movement_controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_movement_controller_msgs/index.html">PKG DOCS – robocluedo_movement_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Dependencies Documentation</span></p>
 <ul>
@@ -1267,13 +1269,64 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 <li><p>meglio salvarsi delle immagini dell’environment</p></li>
 </ul>
 </li>
+<li><p><strong>COMMIT</strong> : “working on robot model (world files)”</p></li>
+</ul>
+<hr class="docutils" />
+<p>ora, il lavoro sul movement controller</p>
+<ul>
+<li><p><strong>CREAZIONE NUOVO PACKAGE</strong> :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_movement_controller_msgs std_msgs std_srvs geometry_msgs moveit_msgs nav_msgs
+</pre></div>
+</div>
+</li>
+<li><p>e prima impostazione della documentazione</p></li>
+<li><p>compila? e meno male</p></li>
+<li><p><strong>CREAZIONE NUOVO PACKAGE</strong>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>catkin_create_pkg robocluedo_movement_controller roscpp rospy geometry_msgs std_msgs std_srvs nav_msgs actionlib actionlib_msgs moveit_msgs moveit_core moveit_ros_perception moveit_ros_planning moveit_ros_planning_interface robocluedo_movement_controller_msgs
+</pre></div>
+</div>
+</li>
+<li><p>al solito, prima documentazione</p></li>
+<li><p>mi da fastidio indicare i world files usando i path assoluti, per questo ho creato un finto package worlds usando i cmake files</p>
+<ul class="simple">
+<li><p>modifica ai file moveit</p></li>
+<li><p>prova … funziona</p></li>
+</ul>
+</li>
+<li><p>(ora che ho tutto, inizio col navigation system)</p></li>
+<li><p>schema UML del navigation system, giusto per avere le idee chiare</p>
+<ul class="simple">
+<li><p>wall follow</p></li>
+<li><p>go to point</p></li>
+<li><p>bug_m (e tutto l’ensemble)</p></li>
+</ul>
+</li>
+<li><p><strong>LIMITAZIONI</strong> dei nodi attuali per la navigation</p>
+<ul class="simple">
+<li><p>il wall follow va bene, non serve fare nulla</p></li>
+<li><p>il go to point dovrebbe stabilire un’orientazione finale</p></li>
+<li><p>(go to point) creare un servizio <em>normale</em> per la gestione del movimento, che faccia rimanere in attesa fin quando il robot non ha raggiunto il punto indicato</p></li>
+<li><p>(go to poit) oppure creare un topic che permetta di verificare lo stato del robot</p></li>
+<li><p>(go to point) per quanto riguarda l’orientazione potrei aggiungere semmai un servizio molto simile a quello che già c’è per l’orientazione</p></li>
+</ul>
+<p>la strategia migliore sarebbe la seguente:</p>
+<ul class="simple">
+<li><p>aggiornare go_to_point in modo da raggiungere anche una orientazione finale</p></li>
+<li><p>il nodo bug_m contiene tutto quello che serve per implementare il sistema di navigazione</p></li>
+<li><p>spostare la macchina a stati di bug_m dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto</p></li>
+</ul>
+<p><strong>se proprio ne avessi voglia</strong> potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell’environment</p>
+</li>
+<li><p><strong>COMMIT</strong> : “working on movement controller (py nodes)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
 <li><p>documentazione del package ROSPlan</p></li>
 <li><p>UML finale per ROSPlan</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
+<li><p>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
+<li><p>nel package moveit, anzichè trovare l’URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world</p></li>
 <li><p>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c’è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</p></li>
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
 <li><p>aggiornare i template delle actions in questo file</p></li>

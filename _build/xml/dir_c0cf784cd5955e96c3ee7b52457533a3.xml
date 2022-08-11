@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="dir_c0cf784cd5955e96c3ee7b52457533a3" kind="dir">
+    <compoundname>_build/html/_sources/robocluedo_armor/logs/test_20211109/config</compoundname>
+    <innerdir refid="dir_5f903063cb36bd9d7650be5142bd6cd3">_build/html/_sources/robocluedo_armor/logs/test_20211109/config/cluedo_items</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="_build/html/_sources/robocluedo_armor/logs/test_20211109/config/"/>
+  </compounddef>
+</doxygen>

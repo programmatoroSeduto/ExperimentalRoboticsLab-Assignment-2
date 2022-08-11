@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="robocluedo__movement__controller_2index_8rst_8txt" kind="file" language="C++">
+    <compoundname>index.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" prot="public" static="no" mutable="no">
+        <type>PKG DOCS</type>
+        <definition>PKG DOCS robocluedo_movement_controller</definition>
+        <argsstring></argsstring>
+        <name>robocluedo_movement_controller</name>
+        <initializer>==========================================
+
+<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> package enables <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> robot to move <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1a65c640a9873635f4a6674738d6670fed" kindref="member">manipulator</ref> and to navigate into <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1addc63bf7b58a728e484bbfd7df61bb1d" kindref="member">environment</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_movement_controller/index.rst.txt" line="2" column="11" bodyfile="_build/html/_sources/robocluedo_movement_controller/index.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PKG<sp/>DOCS<sp/>--<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref></highlight></codeline>
+<codeline lineno="3" refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" refkind="member"><highlight class="normal">==========================================</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">enables<sp/>the<sp/>robot<sp/>to<sp/>move<sp/>the<sp/>manipulator<sp/>and<sp/>to<sp/>navigate<sp/>into<sp/>the<sp/>environment,<sp/>usign<sp/>different<sp/>methods.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>:caption:<sp/>Package<sp/>Code<sp/>Documentation</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>./src</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"><sp/><sp/><sp/><sp/>./scripts/*</highlight></codeline>
+<codeline lineno="14"><highlight class="comment"></highlight></codeline>
+<codeline lineno="15"><highlight class="comment"></highlight></codeline>
+<codeline lineno="16"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="17"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Code<sp/>Examples</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="comment"><sp/><sp/><sp/><sp/>./_examples/*</highlight></codeline>
+<codeline lineno="21"><highlight class="comment"></highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Other<sp/>User<sp/>Documentation</highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"><sp/><sp/><sp/><sp/>./_docs/*</highlight></codeline>
+<codeline lineno="28"><highlight class="comment"></highlight></codeline>
+<codeline lineno="29"><highlight class="comment"></highlight></codeline>
+<codeline lineno="30"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>UML<sp/>diagrams</highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"><sp/><sp/><sp/><sp/>./_uml/*</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/robocluedo_movement_controller/index.rst.txt"/>
+  </compounddef>
+</doxygen>

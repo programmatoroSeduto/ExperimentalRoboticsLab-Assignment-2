@@ -980,7 +980,47 @@ lavoro sul movement controller, anzitutto il modello del robot:
 	- world files
 	- piccola prova ... ok!
 	- meglio salvarsi delle immagini dell'environment
+- **COMMIT** : "working on robot model (world files)"
 
+---
+
+ora, il lavoro sul movement controller
+
+- **CREAZIONE NUOVO PACKAGE** : 
+	```bash
+	catkin_create_pkg robocluedo_movement_controller_msgs std_msgs std_srvs geometry_msgs moveit_msgs nav_msgs
+	```
+- e prima impostazione della documentazione
+- compila? e meno male
+- **CREAZIONE NUOVO PACKAGE**:
+	```bash
+	catkin_create_pkg robocluedo_movement_controller roscpp rospy geometry_msgs std_msgs std_srvs nav_msgs actionlib actionlib_msgs moveit_msgs moveit_core moveit_ros_perception moveit_ros_planning moveit_ros_planning_interface robocluedo_movement_controller_msgs
+	```
+- al solito, prima documentazione
+- mi da fastidio indicare i world files usando i path assoluti, per questo ho creato un finto package worlds usando i cmake files
+	- modifica ai file moveit
+	- prova ... funziona
+- (ora che ho tutto, inizio col navigation system)
+- schema UML del navigation system, giusto per avere le idee chiare
+	- wall follow
+	- go to point
+	- bug_m (e tutto l'ensemble)
+- **LIMITAZIONI** dei nodi attuali per la navigation
+	
+	- il wall follow va bene, non serve fare nulla
+	- il go to point dovrebbe stabilire un'orientazione finale
+	- (go to point) creare un servizio *normale* per la gestione del movimento, che faccia rimanere in attesa fin quando il robot non ha raggiunto il punto indicato
+	- (go to poit) oppure creare un topic che permetta di verificare lo stato del robot
+	- (go to point) per quanto riguarda l'orientazione potrei aggiungere semmai un servizio molto simile a quello che già c'è per l'orientazione
+	
+	la strategia migliore sarebbe la seguente:
+	
+	- aggiornare go_to_point in modo da raggiungere anche una orientazione finale
+	- il nodo bug_m contiene tutto quello che serve per implementare il sistema di navigazione
+	- spostare la macchina a stati di bug_m dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto
+	
+	**se proprio ne avessi voglia** potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell'environment
+- **COMMIT** : "working on movement controller (py nodes)"
 
 
 
@@ -993,7 +1033,9 @@ TODO
 - UML finale per ROSPlan
 - *module testing* su kb_tools
 
+- modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione
 - implementazione precisa dell'azione move-to
+- nel package moveit, anzichè trovare l'URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world
 
 - in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
 - aggiungere le pagine di documentazione del codice di Sphinx!

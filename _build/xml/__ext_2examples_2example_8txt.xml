@@ -1,0 +1,23 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="__ext_2examples_2example_8txt" kind="file" language="C++">
+    <compoundname>example.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal">Example<sp/>1<sp/>--<sp/>simple<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">=================================</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">..<sp/>uml::</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/>@startuml</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>Alice<sp/>-&gt;<sp/>Bob:<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@end</highlight><highlight class="normal">uml</highlight></codeline>
+    </programlisting>
+    <location file="_ext/examples/example.txt"/>
+  </compounddef>
+</doxygen>

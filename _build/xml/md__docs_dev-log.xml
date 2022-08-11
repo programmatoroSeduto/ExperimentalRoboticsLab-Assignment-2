@@ -904,6 +904,46 @@
 </listitem><listitem><para>meglio salvarsi delle immagini dell&apos;environment</para>
 </listitem></itemizedlist>
 </para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (world files)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>ora, il lavoro sul movement controller</para>
+<para><itemizedlist>
+<listitem><para><bold>CREAZIONE NUOVO PACKAGE</bold> : ```bash catkin_create_pkg robocluedo_movement_controller_msgs std_msgs std_srvs geometry_msgs moveit_msgs nav_msgs ```</para>
+</listitem><listitem><para>e prima impostazione della documentazione</para>
+</listitem><listitem><para>compila? e meno male</para>
+</listitem><listitem><para><bold>CREAZIONE NUOVO PACKAGE</bold>: ```bash catkin_create_pkg robocluedo_movement_controller roscpp rospy geometry_msgs std_msgs std_srvs nav_msgs actionlib actionlib_msgs moveit_msgs moveit_core moveit_ros_perception moveit_ros_planning moveit_ros_planning_interface robocluedo_movement_controller_msgs ```</para>
+</listitem><listitem><para>al solito, prima documentazione</para>
+</listitem><listitem><para>mi da fastidio indicare i world files usando i path assoluti, per questo ho creato un finto package worlds usando i cmake files<itemizedlist>
+<listitem><para>modifica ai file moveit</para>
+</listitem><listitem><para>prova ... funziona</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(ora che ho tutto, inizio col navigation system)</para>
+</listitem><listitem><para>schema UML del navigation system, giusto per avere le idee chiare<itemizedlist>
+<listitem><para>wall follow</para>
+</listitem><listitem><para>go to point</para>
+</listitem><listitem><para><ref refid="namespacebug__m" kindref="compound">bug_m</ref> (e tutto l&apos;ensemble)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>LIMITAZIONI</bold> dei nodi attuali per la navigation<itemizedlist>
+<listitem><para>il wall follow va bene, non serve fare nulla</para>
+</listitem><listitem><para>il go to point dovrebbe stabilire un&apos;orientazione finale</para>
+</listitem><listitem><para>(go to point) creare un servizio <emphasis>normale</emphasis> per la gestione del movimento, che faccia rimanere in attesa fin quando il robot non ha raggiunto il punto indicato</para>
+</listitem><listitem><para>(go to poit) oppure creare un topic che permetta di verificare lo stato del robot</para>
+</listitem><listitem><para>(go to point) per quanto riguarda l&apos;orientazione potrei aggiungere semmai un servizio molto simile a quello che già c&apos;è per l&apos;orientazione</para>
+</listitem></itemizedlist>
+</para>
+<para>la strategia migliore sarebbe la seguente:<itemizedlist>
+<listitem><para>aggiornare go_to_point in modo da raggiungere anche una orientazione finale</para>
+</listitem><listitem><para>il nodo <ref refid="namespacebug__m" kindref="compound">bug_m</ref> contiene tutto quello che serve per implementare il sistema di navigazione</para>
+</listitem><listitem><para>spostare la macchina a stati di <ref refid="namespacebug__m" kindref="compound">bug_m</ref> dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>se proprio ne avessi voglia</bold> potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell&apos;environment</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on movement controller (py nodes)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
@@ -911,7 +951,9 @@
 <listitem><para>documentazione del package ROSPlan</para>
 </listitem><listitem><para>UML finale per ROSPlan</para>
 </listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
+</listitem><listitem><para>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</para>
 </listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
+</listitem><listitem><para>nel package moveit, anzichè trovare l&apos;URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world</para>
 </listitem><listitem><para>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c&apos;è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</para>
 </listitem><listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
 </listitem><listitem><para>aggiornare i template delle actions in questo file</para>

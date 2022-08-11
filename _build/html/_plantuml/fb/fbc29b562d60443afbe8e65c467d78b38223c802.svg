@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="433px" preserveAspectRatio="none" style="width:1075px;height:433px;background:#FFFFFF;" version="1.1" viewBox="0 0 1075 433" width="1075px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="164" x="448.5" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="138" x="461.5" y="30.9951">NODE go_to_point</text><!--MD5=[39c4eee9471449e046008ca5703679c3]
+cluster PARAMETERS--><g id="cluster_PARAMETERS"><path d="M732,95.2969 C732,85.2969 895,85.2969 895,85.2969 C895,85.2969 1058,85.2969 1058,95.2969 L1058,219.2969 C1058,229.2969 895,229.2969 895,229.2969 C895,229.2969 732,229.2969 732,219.2969 L732,95.2969 " style="stroke:#181818;stroke-width:1.0;fill:none;"/><path d="M732,95.2969 C732,105.2969 895,105.2969 895,105.2969 C895,105.2969 1058,105.2969 1058,95.2969 " fill="none" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="176" x="807" y="128.292">ROS parameter server</text></g><!--MD5=[df00c08cd854dd1b88de766977ab372e]
+cluster NODE_GO_TO_POINT--><g id="cluster_NODE_GO_TO_POINT"><rect height="177" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="422" x="278" y="60.2969"/><rect height="10" style="stroke:#181818;stroke-width:1.0;fill:none;" width="15" x="680" y="65.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="678" y="67.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="678" y="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="104" x="437" y="94.292">«ROSPy node»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="155" x="411.5" y="126.5889">go_to_point_service</text></g><!--MD5=[3d2d0cdc5a87e8d33dbbdf625e1e368a]
+entity des_pos_x--><g id="elem_des_pos_x"><polygon fill="#F1F1F1" points="912.5,161.2969,922.5,151.2969,1041.5,151.2969,1041.5,203.5938,1031.5,213.5938,912.5,213.5938,912.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1031.5" x2="1041.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="912.5" x2="1031.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="1031.5" x2="1031.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="935.5" y="192.292">des_pos_x</text></g><!--MD5=[f8ee79e2f34056c410e55b7856b01451]
+entity des_pos_y--><g id="elem_des_pos_y"><polygon fill="#F1F1F1" points="748.5,161.2969,758.5,151.2969,877.5,151.2969,877.5,203.5938,867.5,213.5938,748.5,213.5938,748.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="867.5" x2="877.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="748.5" x2="867.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="867.5" x2="867.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="73" x="771.5" y="192.292">des_pos_y</text></g><!--MD5=[495b0ec27928dd2ffdd338d6d2193b46]
+entity GOTOPOINT_SWITCH--><g id="elem_GOTOPOINT_SWITCH"><polygon fill="#F1F1F1" points="321,161.2969,331,151.2969,509,151.2969,509,203.5938,499,213.5938,321,213.5938,321,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="499" x2="509" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="321" x2="499" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="499" x2="499" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="132" x="344" y="192.292">go_to_point_switch</text></g><!--MD5=[7b95079480db49d6325c1d6758dd3de3]
+entity READ_ODOM--><g id="elem_READ_ODOM"><polygon fill="#F1F1F1" points="544.5,161.2969,554.5,151.2969,675.5,151.2969,675.5,203.5938,665.5,213.5938,544.5,213.5938,544.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="665.5" x2="675.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="544.5" x2="665.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="665.5" x2="665.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="567.5" y="192.292">clbk_odom</text></g><!--MD5=[f6958c67e7cc986b83148af66a9aba3c]
+class PARAMETER--><g id="elem_PARAMETER"><rect fill="#F1F1F1" height="58.2969" id="PARAMETER" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="7" y="358.2969"/><ellipse cx="22" cy="379.4453" fill="#ADD1B2" rx="11" ry="11" style="stroke:#181818;stroke-width:1.0;"/><path d="M24.9688,385.0859 Q24.3906,385.3828 23.75,385.5313 Q23.1094,385.6797 22.4063,385.6797 Q19.9063,385.6797 18.5859,384.0313 Q17.2656,382.3828 17.2656,379.2578 Q17.2656,376.1328 18.5859,374.4766 Q19.9063,372.8203 22.4063,372.8203 Q23.1094,372.8203 23.7578,372.9766 Q24.4063,373.1328 24.9688,373.4297 L24.9688,376.1484 Q24.3438,375.5703 23.75,375.2969 Q23.1563,375.0234 22.5313,375.0234 Q21.1875,375.0234 20.5,376.0938 Q19.8125,377.1641 19.8125,379.2578 Q19.8125,381.3516 20.5,382.4219 Q21.1875,383.4922 22.5313,383.4922 Q23.1563,383.4922 23.75,383.2188 Q24.3438,382.9453 24.9688,382.3672 L24.9688,385.0859 Z " fill="#000000"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="44" y="384.292">PARAMETER</text><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="140" y1="400.5938" y2="400.5938"/><line style="stroke:#181818;stroke-width:0.5;" x1="8" x2="140" y1="408.5938" y2="408.5938"/></g><!--MD5=[a29493d5c3d449fd805f8038216f6f38]
+entity TOPIC_VEL--><g id="elem_TOPIC_VEL"><ellipse cx="222" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="191.5" y="425.292">/cmd_vel</text></g><!--MD5=[9c0f7ecf381f88014a7ea481e5efb054]
+entity TOPIC_ODOM--><g id="elem_TOPIC_ODOM"><ellipse cx="697" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="674.5" y="425.292">/odom</text></g><!--MD5=[e6d9a3d81fc487a20f0b2c2970d6073d]
+entity SRV_GOTO_SWITCH--><g id="elem_SRV_GOTO_SWITCH"><ellipse cx="480" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="411.5" y="425.292">/go_to_point_switch</text></g><!--MD5=[049a6a5a193f9084c5cec169b6414394]
+reverse link NODE_GO_TO_POINT to PARAMETER--><g id="link_NODE_GO_TO_POINT_PARAMETER"><path codeLine="20" d="M277.8119,191.06 C277.5104,191.3458 277.2017,191.6385 276.8859,191.9378 C271.8344,196.7269 264.9863,203.2231 257.1225,210.6919 C241.395,225.6294 221.605,244.4569 204,261.2969 C169.27,294.5169 129.45,332.8369 103.13,358.2069 " fill="none" id="NODE_GO_TO_POINT-backto-PARAMETER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="277.8119,191.06,268.5283,194.3487,274.1831,194.4999,274.032,200.1547,277.8119,191.06" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="21" x="256.87" y="203.4938">get</text></g><!--MD5=[1a33593d04dbb53e66cf90ffc61b646d]
+link NODE_GO_TO_POINT to TOPIC_VEL--><g id="link_NODE_GO_TO_POINT_TOPIC_VEL"><path codeLine="23" d="M277.9466,189.3115 C277.871,189.3709 277.7949,189.4306 277.7185,189.4908 C277.5656,189.6112 277.411,189.7331 277.2547,189.8567 C276.9422,190.1039 276.6231,190.3574 276.2977,190.6173 C271.0909,194.7759 264.2706,200.5563 257.0638,207.5681 C242.65,221.5919 226.69,240.5419 219,261.2969 C204.76,299.7369 213.16,349.4969 218.55,372.9469 " fill="none" id="NODE_GO_TO_POINT-to-TOPIC_VEL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="219.77,378.0569,221.5484,368.3699,218.5977,373.1962,213.7714,370.2455,219.77,378.0569" style="stroke:#181818;stroke-width:1.0;"/><path d="M224,266.2969 L224,307.2969 L432,307.2969 L432,276.2969 L422,266.2969 L224,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M422,266.2969 L422,276.2969 L432,276.2969 L422,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="238" y="291.3638">geometry_msgs/Twist.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="253.85" y="172.4638">pub</text></g><!--MD5=[3eda043c1d89606ed2c4e072055c366b]
+reverse link READ_ODOM to TOPIC_ODOM--><g id="link_READ_ODOM_TOPIC_ODOM"><path codeLine="27" d="M625.11,218.5569 C645.92,267.1169 682.12,351.5769 693.48,378.0969 " fill="none" id="READ_ODOM-backto-TOPIC_ODOM" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="623.02,213.6869,622.8998,223.535,624.9948,218.2804,630.2494,220.3754,623.02,213.6869" style="stroke:#181818;stroke-width:1.0;"/><path d="M669,266.2969 L669,307.2969 L871,307.2969 L871,276.2969 L861,266.2969 L669,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M861,266.2969 L861,276.2969 L871,276.2969 L861,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="683" y="291.3638">nav_msgs/Odometry.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="590.9063" y="241.7989">sub</text></g><!--MD5=[a082e6564b5e87a24b4453dba4bf4849]
+link GOTOPOINT_SWITCH to SRV_GOTO_SWITCH--><g id="link_GOTOPOINT_SWITCH_SRV_GOTO_SWITCH"><path codeLine="31" d="M425.26,213.6269 C430.1,228.0469 435.92,245.5369 441,261.2969 C454.12,301.9569 468.99,350.2869 475.98,373.1069 " fill="none" id="GOTOPOINT_SWITCH-to-SRV_GOTO_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="477.5,378.0869,478.7051,368.312,476.0436,373.3037,471.052,370.6422,477.5,378.0869" style="stroke:#181818;stroke-width:1.0;"/><path d="M462,266.2969 L462,307.2969 L629,307.2969 L629,276.2969 L619,266.2969 L462,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M619,266.2969 L619,276.2969 L629,276.2969 L619,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="476" y="291.3638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="397.0156" y="241.7286">srv</text></g><!--MD5=[fd92d81409974d3ddcbf3e9c52f1fd1c]
+@startuml
+
+''' INFOS
+title NODE go_to_point
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+database "ROS parameter server" as PARAMETERS {
+	node "des_pos_x"
+	node "des_pos_y"
+}
+
+component "go_to_point_service" <<ROSPy node>> as NODE_GO_TO_POINT {
+	node "go_to_point_switch" as GOTOPOINT_SWITCH
+	node "clbk_odom" as READ_ODOM
+	
+}
+
+NODE_GO_TO_POINT "get" <- - PARAMETER
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_GO_TO_POINT "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/odom" as TOPIC_ODOM
+READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+GOTOPOINT_SWITCH "srv" - -> SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+@startuml
+
+title NODE go_to_point
+skinparam Padding 8
+allow_mixing
+
+
+database "ROS parameter server" as PARAMETERS {
+	node "des_pos_x"
+	node "des_pos_y"
+}
+
+component "go_to_point_service" <<ROSPy node>> as NODE_GO_TO_POINT {
+	node "go_to_point_switch" as GOTOPOINT_SWITCH
+	node "clbk_odom" as READ_ODOM
+	
+}
+
+NODE_GO_TO_POINT "get" <- - PARAMETER
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_GO_TO_POINT "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/odom" as TOPIC_ODOM
+READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+GOTOPOINT_SWITCH "srv" - -> SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

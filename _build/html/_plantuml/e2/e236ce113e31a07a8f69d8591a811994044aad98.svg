@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="391px" preserveAspectRatio="none" style="width:1199px;height:391px;background:#FFFFFF;" version="1.1" viewBox="0 0 1199 391" width="1199px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="125" x="530.25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="99" x="543.25" y="30.9951">NODE bug_m</text><!--MD5=[e925e593c91df2d506ed76dd0eea356f]
+cluster BUGM--><g id="cluster_BUGM"><path d="M693,59.2969 L756,59.2969 A3.75,3.75 0 0 1 758.5,61.7969 L765.5,97.5938 L1011,97.5938 A2.5,2.5 0 0 1 1013.5,100.0938 L1013.5,185.7969 A2.5,2.5 0 0 1 1011,188.2969 L693,188.2969 A2.5,2.5 0 0 1 690.5,185.7969 L690.5,61.7969 A2.5,2.5 0 0 1 693,59.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="690.5" x2="765.5" y1="97.5938" y2="97.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="46" x="702.5" y="82.292">BUGM</text></g><!--MD5=[463c334bc266f09be73de06e1d9b5cb6]
+entity NODE_BUG_M--><g id="elem_NODE_BUG_M"><rect fill="#F1F1F1" height="94.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="160" x="214.5" y="93.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="354.5" y="98.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="352.5" y="100.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="352.5" y="104.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="104" x="237.5" y="134.792">«ROSPy node»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="266" y="167.0889">bug_m</text></g><!--MD5=[454d87e673de24fdbd8ae086f532838d]
+entity BUGM.READ_ODOM--><g id="elem_BUGM.READ_ODOM"><polygon fill="#F1F1F1" points="707,120.2969,717,110.2969,838,110.2969,838,162.5938,828,172.5938,707,172.5938,707,120.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="828" x2="838" y1="120.2969" y2="110.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="707" x2="828" y1="120.2969" y2="120.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="828" x2="828" y1="120.2969" y2="172.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="730" y="151.292">clbk_odom</text></g><!--MD5=[b7fb01d8d5d976d97dfc44f84efb1a89]
+entity BUGM.LISTENER_LASER--><g id="elem_BUGM.LISTENER_LASER"><polygon fill="#F1F1F1" points="873.5,120.2969,883.5,110.2969,997.5,110.2969,997.5,162.5938,987.5,172.5938,873.5,172.5938,873.5,120.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="987.5" x2="997.5" y1="120.2969" y2="110.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="873.5" x2="987.5" y1="120.2969" y2="120.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="987.5" x2="987.5" y1="120.2969" y2="172.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="896.5" y="151.292">clbk_laser</text></g><!--MD5=[9c0f7ecf381f88014a7ea481e5efb054]
+entity TOPIC_ODOM--><g id="elem_TOPIC_ODOM"><ellipse cx="728.5" cy="344.7969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="706" y="382.792">/odom</text></g><!--MD5=[cf4c761246342468269b9fda4f668b9a]
+entity TOPIC_LASER--><g id="elem_TOPIC_LASER"><ellipse cx="980.5" cy="344.7969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="961.5" y="382.792">/scan</text></g><!--MD5=[a29493d5c3d449fd805f8038216f6f38]
+entity TOPIC_VEL--><g id="elem_TOPIC_VEL"><ellipse cx="36.5" cy="344.7969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="6" y="382.792">/cmd_vel</text></g><!--MD5=[e6d9a3d81fc487a20f0b2c2970d6073d]
+entity SRV_GOTO_SWITCH--><g id="elem_SRV_GOTO_SWITCH"><ellipse cx="294.5" cy="344.7969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="226" y="382.792">/go_to_point_switch</text></g><!--MD5=[0de5e037182cbe7d3ce53b2ba1c49cc1]
+entity SRV_WALL_SWITCH--><g id="elem_SRV_WALL_SWITCH"><ellipse cx="511.5" cy="344.7969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="441" y="382.792">/wall_follower_switch</text></g><!--MD5=[b46ba836f3e88783dc5af4ca9b093cfa]
+reverse link BUGM.READ_ODOM to TOPIC_ODOM--><g id="link_BUGM.READ_ODOM_TOPIC_ODOM"><path codeLine="15" d="M745.84,176.6369 C737.65,189.1969 729.69,203.9769 725.5,218.7969 C713.46,261.4069 722.51,315.4869 726.69,335.6969 " fill="none" id="BUGM.READ_ODOM-backto-TOPIC_ODOM" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="748.63,172.4669,740.297,177.7167,745.8466,176.6205,746.9428,182.1701,748.63,172.4669" style="stroke:#181818;stroke-width:1.0;"/><path d="M730.5,223.7969 L730.5,264.7969 L932.5,264.7969 L932.5,233.7969 L922.5,223.7969 L730.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M922.5,223.7969 L922.5,233.7969 L932.5,233.7969 L922.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="744.5" y="248.8638">nav_msgs/Odometry.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="710.1758" y="200.5411">sub</text></g><!--MD5=[0a75900d01e2cfc3d0062c64ab7bfa1c]
+reverse link BUGM.LISTENER_LASER to TOPIC_LASER--><g id="link_BUGM.LISTENER_LASER_TOPIC_LASER"><path codeLine="19" d="M943.38,177.5969 C954.16,225.8369 972.82,309.3869 978.68,335.6569 " fill="none" id="BUGM.LISTENER_LASER-backto-TOPIC_LASER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="942.24,172.4669,940.3206,182.1269,943.3413,177.3441,948.1241,180.3648,942.24,172.4669" style="stroke:#181818;stroke-width:1.0;"/><path d="M967.5,223.7969 L967.5,264.7969 L1192.5,264.7969 L1192.5,233.7969 L1182.5,223.7969 L967.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1182.5,223.7969 L1182.5,233.7969 L1192.5,233.7969 L1182.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="981.5" y="248.8638">sensor_msgs/LaserScan.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="909.0469" y="200.5411">sub</text></g><!--MD5=[2cbf74590d6c00b3fca55a4630363409]
+link NODE_BUG_M to TOPIC_VEL--><g id="link_NODE_BUG_M_TOPIC_VEL"><path codeLine="23" d="M214.35,149.4569 C164.72,158.0969 103.44,177.0969 65.5,218.7969 C36.65,250.5069 34.79,305.1869 35.64,330.3769 " fill="none" id="NODE_BUG_M-to-TOPIC_VEL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="35.87,335.5569,39.4548,326.3836,35.6417,330.5621,31.4632,326.7489,35.87,335.5569" style="stroke:#181818;stroke-width:1.0;"/><path d="M70.5,223.7969 L70.5,264.7969 L278.5,264.7969 L278.5,233.7969 L268.5,223.7969 L70.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M268.5,223.7969 L268.5,233.7969 L278.5,233.7969 L268.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="84.5" y="248.8638">geometry_msgs/Twist.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="174.3693" y="137.9603">pub</text></g><!--MD5=[d2b55514db171e2cbb2b77beeba89690]
+reverse link NODE_BUG_M to SRV_GOTO_SWITCH--><g id="link_NODE_BUG_M_SRV_GOTO_SWITCH"><path codeLine="27" d="M292.2,193.9469 C291.91,202.2569 291.66,210.7669 291.5,218.7969 C291.06,241.4569 291.04,247.1369 291.5,269.7969 C291.98,293.7069 293.35,321.9369 294.06,335.5869 " fill="none" id="NODE_BUG_M-backto-SRV_GOTO_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="292.38,188.8069,288.074,197.6645,292.2087,193.8039,296.0693,197.9387,292.38,188.8069" style="stroke:#181818;stroke-width:1.0;"/><path d="M296.5,223.7969 L296.5,264.7969 L463.5,264.7969 L463.5,233.7969 L453.5,223.7969 L296.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M453.5,223.7969 L453.5,233.7969 L463.5,233.7969 L453.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="310.5" y="248.8638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="279.8294" y="216.586">cl</text></g><!--MD5=[7fa9dd9e3b991b909dd28aede12b03b9]
+reverse link NODE_BUG_M to SRV_WALL_SWITCH--><g id="link_NODE_BUG_M_SRV_WALL_SWITCH"><path codeLine="31" d="M379.64,162.3269 C412.58,173.9269 448.14,191.7669 472.5,218.7969 C504.01,253.7469 510.06,313.9069 511.22,335.6569 " fill="none" id="NODE_BUG_M-backto-SRV_WALL_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="374.8,160.6569,382.0069,167.3696,379.5275,162.2851,384.612,159.8056,374.8,160.6569" style="stroke:#181818;stroke-width:1.0;"/><path d="M504.5,223.7969 L504.5,264.7969 L671.5,264.7969 L671.5,233.7969 L661.5,223.7969 L504.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M661.5,223.7969 L661.5,233.7969 L671.5,233.7969 L661.5,223.7969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="518.5" y="248.8638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="390.5264" y="150.0657">cl</text></g><!--MD5=[fff8cf608a6365924033861f148936ca]
+@startuml
+
+''' INFOS
+title NODE bug_m
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+component "bug_m" <<ROSPy node>> as NODE_BUG_M {
+	node "clbk_odom" as BUGM.READ_ODOM
+	node "clbk_laser" as BUGM.LISTENER_LASER
+}
+
+() "/odom" as TOPIC_ODOM
+BUGM.READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/scan" as TOPIC_LASER
+BUGM.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_BUG_M "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+NODE_BUG_M "cl" <- - SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+NODE_BUG_M "cl" <- - SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+@startuml
+
+title NODE bug_m
+skinparam Padding 8
+allow_mixing
+
+
+component "bug_m" <<ROSPy node>> as NODE_BUG_M {
+	node "clbk_odom" as BUGM.READ_ODOM
+	node "clbk_laser" as BUGM.LISTENER_LASER
+}
+
+() "/odom" as TOPIC_ODOM
+BUGM.READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/scan" as TOPIC_LASER
+BUGM.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_BUG_M "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+NODE_BUG_M "cl" <- - SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+NODE_BUG_M "cl" <- - SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

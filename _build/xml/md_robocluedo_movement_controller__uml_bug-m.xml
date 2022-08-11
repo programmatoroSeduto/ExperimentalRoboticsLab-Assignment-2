@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_robocluedo_movement_controller__uml_bug-m" kind="page">
+    <compoundname>md_robocluedo_movement_controller__uml_bug-m</compoundname>
+    <title>UML – bug_m PY node</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">./bug-m.md</highlight></codeline>
+</programlisting></para>
+<para><ref refid="namespacebug__m" kindref="compound">bug_m</ref> combines the two behaviours <computeroutput>go_to_point.py</computeroutput> ans <computeroutput>wall_follow.py</computeroutput> in order to reach a given position in a indoor environment with walls.</para>
+<sect1 id="md_robocluedo_movement_controller__uml_bug-m_1autotoc_md111">
+<title>SCHEMA</title>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>NODE<sp/>bug_m</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;bug_m&quot;<sp/>&lt;&lt;ROSPy<sp/>node&gt;&gt;<sp/>as<sp/>NODE_BUG_M<sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>&quot;clbk_odom&quot;<sp/>as<sp/>NODE_BUG_M.READ_ODOM</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>&quot;clbk_laser&quot;<sp/>as<sp/>NODE_BUG_M.LISTENER_LASER</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/odom&quot;<sp/>as<sp/>TOPIC_ODOM</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M.READ_ODOM<sp/>&quot;sub&quot;<sp/>&lt;--<sp/>TOPIC_ODOM</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>nav_msgs/Odometry.msg</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/scan&quot;<sp/>as<sp/>TOPIC_LASER</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M.LISTENER_LASER<sp/>&quot;sub&quot;<sp/>&lt;--<sp/>TOPIC_LASER</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>sensor_msgs/LaserScan.msg</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/cmd_vel&quot;<sp/>as<sp/>TOPIC_VEL</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_VEL</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>geometry_msgs/Twist.msg</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/go_to_point_switch&quot;<sp/>as<sp/>SRV_GOTO_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_GOTO_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/SetBool.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/wall_follower_switch&quot;<sp/>as<sp/>SRV_WALL_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_WALL_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/SetBool.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_robocluedo_movement_controller__uml_bug-m_1autotoc_md112">
+<title>HOW TO use the node – basic way</title>
+<para>it requires another node listening for the odom channel and checking when to deactivate the service</para>
+<para><itemizedlist>
+<listitem><para>set <computeroutput>des_pos_x</computeroutput> and <computeroutput>des_pos_y</computeroutput> into the paramater server</para>
+</listitem><listitem><para>activate the service with a request to <computeroutput>/go_to_point_switch</computeroutput> of type <computeroutput>std_srvs/SetBool</computeroutput> (flag <computeroutput>SetBool.Request.data=True</computeroutput>)</para>
+</listitem><listitem><para>... wait until the robot is near enough to the point</para>
+</listitem><listitem><para>turn off the node (flag <computeroutput>SetBool.Request.data=False</computeroutput>) </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

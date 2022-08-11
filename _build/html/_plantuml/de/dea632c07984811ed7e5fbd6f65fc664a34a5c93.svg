@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="433px" preserveAspectRatio="none" style="width:748px;height:433px;background:#FFFFFF;" version="1.1" viewBox="0 0 748 433" width="748px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="225" x="254.75" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="199" x="267.75" y="30.9951">NODE wall_follow_service</text><!--MD5=[e12d9cd362ffb28dfd886312c6eed98e]
+cluster NODE_WALL_FOLLOW--><g id="cluster_NODE_WALL_FOLLOW"><rect height="177" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="259" x="85.5" y="60.2969"/><rect height="10" style="stroke:#181818;stroke-width:1.0;fill:none;" width="15" x="324.5" y="65.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="322.5" y="67.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="322.5" y="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="104" x="163" y="94.292">«ROSPy node»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="151" x="139.5" y="126.5889">wall_follow_service</text></g><!--MD5=[03045059cf7fd235dcf919a18f2af524]
+cluster WALL--><g id="cluster_WALL"><path d="M436,100.2969 L497,100.2969 A3.75,3.75 0 0 1 499.5,102.7969 L506.5,138.5938 L587,138.5938 A2.5,2.5 0 0 1 589.5,141.0938 L589.5,226.7969 A2.5,2.5 0 0 1 587,229.2969 L436,229.2969 A2.5,2.5 0 0 1 433.5,226.7969 L433.5,102.7969 A2.5,2.5 0 0 1 436,100.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="433.5" x2="506.5" y1="138.5938" y2="138.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="44" x="445.5" y="123.292">WALL</text></g><!--MD5=[1300f8656fb494e4e343a571f1e3e6d8]
+entity WALL_FOLLOW_SWITCH--><g id="elem_WALL_FOLLOW_SWITCH"><polygon fill="#F1F1F1" points="128.5,161.2969,138.5,151.2969,320.5,151.2969,320.5,203.5938,310.5,213.5938,128.5,213.5938,128.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="310.5" x2="320.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="128.5" x2="310.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="310.5" x2="310.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="151.5" y="192.292">wall_follower_switch</text></g><!--MD5=[cc88f45c2c94d08fc88262ee0e901af8]
+entity WALL.LISTENER_LASER--><g id="elem_WALL.LISTENER_LASER"><polygon fill="#F1F1F1" points="449.5,161.2969,459.5,151.2969,573.5,151.2969,573.5,203.5938,563.5,213.5938,449.5,213.5938,449.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="563.5" x2="573.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="449.5" x2="563.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="563.5" x2="563.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="472.5" y="192.292">clbk_laser</text></g><!--MD5=[a29493d5c3d449fd805f8038216f6f38]
+entity TOPIC_VEL--><g id="elem_TOPIC_VEL"><ellipse cx="36.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="6" y="425.292">/cmd_vel</text></g><!--MD5=[cf4c761246342468269b9fda4f668b9a]
+entity TOPIC_LASER--><g id="elem_TOPIC_LASER"><ellipse cx="511.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="492.5" y="425.292">/scan</text></g><!--MD5=[0de5e037182cbe7d3ce53b2ba1c49cc1]
+entity SRV_WALL_SWITCH--><g id="elem_SRV_WALL_SWITCH"><ellipse cx="294.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="224" y="425.292">/wall_follower_switch</text></g><!--MD5=[4ad012aca25ff41036241224281b2c4c]
+link NODE_WALL_FOLLOW to TOPIC_VEL--><g id="link_NODE_WALL_FOLLOW_TOPIC_VEL"><path codeLine="15" d="M85.4378,190.2667 C85.3669,190.331 85.2957,190.3957 85.2241,190.4608 C85.0809,190.5911 84.9362,190.7229 84.7902,190.8564 C80.1159,195.1272 73.9956,201.035 67.5338,208.1281 C54.61,222.3144 40.32,241.2419 33.5,261.2969 C20.3,300.1069 28.21,349.6869 33.27,373.0269 " fill="none" id="NODE_WALL_FOLLOW-to-TOPIC_VEL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="34.41,378.1069,36.3294,368.4469,33.3087,373.2297,28.5259,370.2089,34.41,378.1069" style="stroke:#181818;stroke-width:1.0;"/><path d="M38.5,266.2969 L38.5,307.2969 L246.5,307.2969 L246.5,276.2969 L236.5,266.2969 L38.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M236.5,266.2969 L236.5,276.2969 L246.5,276.2969 L236.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="52.5" y="291.3638">geometry_msgs/Twist.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="61.37" y="172.4738">pub</text></g><!--MD5=[44f344d240e5000ea6c32520db9ae4b8]
+reverse link WALL.LISTENER_LASER to TOPIC_LASER--><g id="link_WALL.LISTENER_LASER_TOPIC_LASER"><path codeLine="19" d="M511.5,218.8569 C511.5,267.4569 511.5,351.6369 511.5,378.0969 " fill="none" id="WALL.LISTENER_LASER-backto-TOPIC_LASER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="511.5,213.6869,507.5,222.6869,511.5,218.6869,515.5,222.6869,511.5,213.6869" style="stroke:#181818;stroke-width:1.0;"/><path d="M516.5,266.2969 L516.5,307.2969 L741.5,307.2969 L741.5,276.2969 L731.5,266.2969 L516.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M731.5,266.2969 L731.5,276.2969 L741.5,276.2969 L731.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="530.5" y="291.3638">sensor_msgs/LaserScan.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="477.1484" y="241.7989">sub</text></g><!--MD5=[acff2b688ba2c61e68b9b7531ccb5aef]
+link WALL_FOLLOW_SWITCH to SRV_WALL_SWITCH--><g id="link_WALL_FOLLOW_SWITCH_SRV_WALL_SWITCH"><path codeLine="23" d="M237.11,213.4669 C242.96,227.8569 249.86,245.3669 255.5,261.2969 C269.76,301.5669 284.1,350.0769 290.72,373.0269 " fill="none" id="WALL_FOLLOW_SWITCH-to-SRV_WALL_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="292.16,378.0369,293.5068,368.2805,290.7732,373.2331,285.8207,370.4994,292.16,378.0369" style="stroke:#181818;stroke-width:1.0;"/><path d="M276.5,266.2969 L276.5,307.2969 L443.5,307.2969 L443.5,276.2969 L433.5,266.2969 L276.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M433.5,266.2969 L433.5,276.2969 L443.5,276.2969 L433.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="290.5" y="291.3638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="209.2695" y="241.5411">srv</text></g><!--MD5=[375f3505f2554e4e7db61c233bfcaada]
+@startuml
+
+''' INFOS
+title NODE wall_follow_service
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+component "wall_follow_service" <<ROSPy node>> as NODE_WALL_FOLLOW {
+	node "wall_follower_switch" as WALL_FOLLOW_SWITCH
+	node "clbk_laser" as WALL.LISTENER_LASER
+}
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_WALL_FOLLOW "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/scan" as TOPIC_LASER
+WALL.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+WALL_FOLLOW_SWITCH "srv" - -> SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+@startuml
+
+title NODE wall_follow_service
+skinparam Padding 8
+allow_mixing
+
+
+component "wall_follow_service" <<ROSPy node>> as NODE_WALL_FOLLOW {
+	node "wall_follower_switch" as WALL_FOLLOW_SWITCH
+	node "clbk_laser" as WALL.LISTENER_LASER
+}
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_WALL_FOLLOW "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/scan" as TOPIC_LASER
+WALL.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+WALL_FOLLOW_SWITCH "srv" - -> SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

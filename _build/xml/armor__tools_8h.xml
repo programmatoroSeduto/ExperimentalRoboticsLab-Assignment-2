@@ -258,7 +258,7 @@
       <memberdef kind="define" id="armor__tools_8h_1a6fa37f9111f92e4eb4228d33ed5e301f" prot="public" static="no">
         <name>ARMOR_INFO</name>
         <param><defname>msg</defname></param>
-        <initializer>if( this-&gt;DebugMode ) ROS_INFO_STREAM( <ref refid="armor__tools_8h_1a00e1b2c2f8c8b53c630b0968916b4e99" kindref="member">ARMOR_CLASS_LABEL</ref> &lt;&lt; &quot; &quot; &lt;&lt; msg )</initializer>
+        <initializer><ref refid="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" kindref="member">if</ref>( <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;DebugMode ) ROS_INFO_STREAM( <ref refid="armor__tools_8h_1a00e1b2c2f8c8b53c630b0968916b4e99" kindref="member">ARMOR_CLASS_LABEL</ref> &lt;&lt; &quot; &quot; &lt;&lt; msg )</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -270,7 +270,7 @@
       <memberdef kind="define" id="armor__tools_8h_1a07e1a753da9f7c716c4bf57d5ce2de54" prot="public" static="no">
         <name>ARMOR_ERR</name>
         <param><defname>msg</defname></param>
-        <initializer>if( this-&gt;DebugMode ) ROS_WARN_STREAM( <ref refid="armor__tools_8h_1a00e1b2c2f8c8b53c630b0968916b4e99" kindref="member">ARMOR_CLASS_LABEL</ref> &lt;&lt; &quot; ERROR: &quot; &lt;&lt; msg )</initializer>
+        <initializer><ref refid="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" kindref="member">if</ref>( <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;DebugMode ) ROS_WARN_STREAM( <ref refid="armor__tools_8h_1a00e1b2c2f8c8b53c630b0968916b4e99" kindref="member">ARMOR_CLASS_LABEL</ref> &lt;&lt; &quot; ERROR: &quot; &lt;&lt; msg )</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -282,7 +282,7 @@
       <memberdef kind="define" id="armor__tools_8h_1a1107fec0585eb46c08431ef303413f01" prot="public" static="no">
         <name>ARMOR_CHECK_INTERFACE</name>
         <param><defname>returnval</defname></param>
-        <initializer>if( !IsLoadedInterface || !ArmorSrv.exists( ) ) { <ref refid="armor__tools_8h_1a07e1a753da9f7c716c4bf57d5ce2de54" kindref="member">ARMOR_ERR</ref>( &quot;bad interface!&quot; ); return returnval; }</initializer>
+        <initializer><ref refid="rosplan-kb_8md_8txt_1a101e8d4e13051c1d9a3c167da5bfed54" kindref="member">if</ref>( !IsLoadedInterface || !ArmorSrv.exists( ) ) { <ref refid="armor__tools_8h_1a07e1a753da9f7c716c4bf57d5ce2de54" kindref="member">ARMOR_ERR</ref>( &quot;bad interface!&quot; ); return returnval; }</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

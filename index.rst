@@ -24,9 +24,14 @@ RCL -- the RoboCLuedo Project - part 2
    
    ./robocluedo_armor_msgs/index.rst
    ./robocluedo_armor/index.rst
-   ./robocluedo_module_testing/index.rst
+   
    ./robocluedo_rosplan/index.rst
    ./robocluedo_rosplan_msgs/index.rst
+   
+   ./robocluedo_movement_controller/index.rst
+   ./robocluedo_movement_controller_msgs/index.rst
+   
+   ./robocluedo_module_testing/index.rst
 
 
 .. toctree::

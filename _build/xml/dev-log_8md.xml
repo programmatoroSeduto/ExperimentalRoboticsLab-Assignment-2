@@ -989,7 +989,47 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>world<sp/>files</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>piccola<sp/>prova<sp/>...<sp/>ok!</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>meglio<sp/>salvarsi<sp/>delle<sp/>immagini<sp/>dell&apos;environment</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(world<sp/>files)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ora,<sp/>il<sp/>lavoro<sp/>sul<sp/>movement<sp/>controller</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**CREAZIONE<sp/>NUOVO<sp/>PACKAGE**<sp/>:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_movement_controller_msgs<sp/>std_msgs<sp/>std_srvs<sp/>geometry_msgs<sp/>moveit_msgs<sp/>nav_msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>prima<sp/>impostazione<sp/>della<sp/>documentazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compila?<sp/>e<sp/>meno<sp/>male</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**CREAZIONE<sp/>NUOVO<sp/>PACKAGE**:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_movement_controller<sp/>roscpp<sp/>rospy<sp/>geometry_msgs<sp/>std_msgs<sp/>std_srvs<sp/>nav_msgs<sp/>actionlib<sp/>actionlib_msgs<sp/>moveit_msgs<sp/>moveit_core<sp/>moveit_ros_perception<sp/>moveit_ros_planning<sp/>moveit_ros_planning_interface<sp/>robocluedo_movement_controller_msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>al<sp/>solito,<sp/>prima<sp/>documentazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mi<sp/>da<sp/>fastidio<sp/>indicare<sp/>i<sp/>world<sp/>files<sp/>usando<sp/>i<sp/>path<sp/>assoluti,<sp/>per<sp/>questo<sp/>ho<sp/>creato<sp/>un<sp/>finto<sp/>package<sp/>worlds<sp/>usando<sp/>i<sp/>cmake<sp/>files</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>modifica<sp/>ai<sp/>file<sp/>moveit</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>...<sp/>funziona</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(ora<sp/>che<sp/>ho<sp/>tutto,<sp/>inizio<sp/>col<sp/>navigation<sp/>system)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>schema<sp/>UML<sp/>del<sp/>navigation<sp/>system,<sp/>giusto<sp/>per<sp/>avere<sp/>le<sp/>idee<sp/>chiare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>wall<sp/>follow</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>go<sp/>to<sp/>point</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>bug_m<sp/>(e<sp/>tutto<sp/>l&apos;ensemble)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONI**<sp/>dei<sp/>nodi<sp/>attuali<sp/>per<sp/>la<sp/>navigation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>wall<sp/>follow<sp/>va<sp/>bene,<sp/>non<sp/>serve<sp/>fare<sp/>nulla</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>go<sp/>to<sp/>point<sp/>dovrebbe<sp/>stabilire<sp/>un&apos;orientazione<sp/>finale</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(go<sp/>to<sp/>point)<sp/>creare<sp/>un<sp/>servizio<sp/>*normale*<sp/>per<sp/>la<sp/>gestione<sp/>del<sp/>movimento,<sp/>che<sp/>faccia<sp/>rimanere<sp/>in<sp/>attesa<sp/>fin<sp/>quando<sp/>il<sp/>robot<sp/>non<sp/>ha<sp/>raggiunto<sp/>il<sp/>punto<sp/>indicato</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(go<sp/>to<sp/>poit)<sp/>oppure<sp/>creare<sp/>un<sp/>topic<sp/>che<sp/>permetta<sp/>di<sp/>verificare<sp/>lo<sp/>stato<sp/>del<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(go<sp/>to<sp/>point)<sp/>per<sp/>quanto<sp/>riguarda<sp/>l&apos;orientazione<sp/>potrei<sp/>aggiungere<sp/>semmai<sp/>un<sp/>servizio<sp/>molto<sp/>simile<sp/>a<sp/>quello<sp/>che<sp/>già<sp/>c&apos;è<sp/>per<sp/>l&apos;orientazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>la<sp/>strategia<sp/>migliore<sp/>sarebbe<sp/>la<sp/>seguente:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornare<sp/>go_to_point<sp/>in<sp/>modo<sp/>da<sp/>raggiungere<sp/>anche<sp/>una<sp/>orientazione<sp/>finale</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>nodo<sp/>bug_m<sp/>contiene<sp/>tutto<sp/>quello<sp/>che<sp/>serve<sp/>per<sp/>implementare<sp/>il<sp/>sistema<sp/>di<sp/>navigazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>spostare<sp/>la<sp/>macchina<sp/>a<sp/>stati<sp/>di<sp/>bug_m<sp/>dentro<sp/>ad<sp/>un<sp/>servizio<sp/>piuttosto<sp/>che<sp/>lasciarla<sp/>nella<sp/>main;<sp/>in<sp/>particolare<sp/>la<sp/>questione<sp/>dello<sp/>stato<sp/>2<sp/>non<sp/>mi<sp/>piace<sp/>affatto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>**se<sp/>proprio<sp/>ne<sp/>avessi<sp/>voglia**<sp/>potrei<sp/>implementare<sp/>io<sp/>un<sp/>semplice<sp/>behaviour<sp/>che,<sp/>guardando<sp/>i<sp/>sensori<sp/>laser<sp/>del<sp/>robot,<sp/>riesca<sp/>a<sp/>tracciare<sp/>un<sp/>percorso<sp/>autonomamente<sp/>nell&apos;environment</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>movement<sp/>controller<sp/>(py<sp/>nodes)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1002,7 +1042,9 @@
 <codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>modificare<sp/>uno<sp/>dei<sp/>nodi<sp/>del<sp/>navigation<sp/>per<sp/>raggiungere<sp/>una<sp/>certa<sp/>orientazione<sp/>al<sp/>termine<sp/>del<sp/>moto,<sp/>oltre<sp/>che<sp/>una<sp/>certa<sp/>posizione</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nel<sp/>package<sp/>moveit,<sp/>anzichè<sp/>trovare<sp/>l&apos;URDF<sp/>col<sp/>path<sp/>assoluto,<sp/>converrebbe<sp/>usare<sp/>lo<sp/>stesso<sp/>trucchetto<sp/>usato<sp/>per<sp/>i<sp/>file<sp/>world</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
