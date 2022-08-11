@@ -154,6 +154,7 @@
     <member refid="namespacebug__m_1abd32bbd25b55f71e56505e72ba56c2f6" kind="variable"><name>srv_client_go_to_point_</name></member>
     <member refid="namespacebug__m_1af40e8063430e5b54ef2f3f8368338744" kind="variable"><name>srv_client_wall_follower_</name></member>
     <member refid="namespacebug__m_1ac6217733c79e361a3bf86e4f51b6ecfd" kind="variable"><name>srv_client_user_interface_</name></member>
+    <member refid="namespacebug__m_1a114195dce88e79be8d187c1fa2d33503" kind="variable"><name>srv_client_head_orientation_</name></member>
     <member refid="namespacebug__m_1a8b5b5c9259592b8efd526c5adb95d95b" kind="variable"><name>yaw_</name></member>
     <member refid="namespacebug__m_1a23e5e76f14d9d0d139767cb229a53dda" kind="variable"><name>yaw_error_allowed_</name></member>
     <member refid="namespacebug__m_1ab108d02234aa3ec58605b9f6980ec090" kind="variable"><name>position_</name></member>
@@ -161,6 +162,9 @@
     <member refid="namespacebug__m_1af10f89c7f929c9babce108f5d7382996" kind="variable"><name>x</name></member>
     <member refid="namespacebug__m_1ab8596d2ae799585b0d89152b55891aa8" kind="variable"><name>y</name></member>
     <member refid="namespacebug__m_1afbb54887da57b97920c8d36c6daed1fc" kind="variable"><name>z</name></member>
+    <member refid="namespacebug__m_1a0d17003b395ea91a87e89bc43f1db474" kind="variable"><name>desired_yaw_</name></member>
+    <member refid="namespacebug__m_1a67e18cabb03c88213fa1ffdde7d58d93" kind="variable"><name>yaw_precision_</name></member>
+    <member refid="namespacebug__m_1af04eda47406661add747b6db997ac29e" kind="variable"><name>yaw_precision_2_</name></member>
     <member refid="namespacebug__m_1ac9d4d95c034fca5a2b5d08ea845bbfcb" kind="variable"><name>regions_</name></member>
     <member refid="namespacebug__m_1ae70f71d3816862f72790fae7bfaa543b" kind="variable"><name>state_desc_</name></member>
     <member refid="namespacebug__m_1a79dc362dff5bef439beacdd5c0c3b2f1" kind="variable"><name>state_</name></member>
@@ -217,6 +221,26 @@
     <member refid="namespacego__to__point__service__m_1aa0efa6e8f30a39de9a6440888882daf1" kind="function"><name>go_straight_ahead</name></member>
     <member refid="namespacego__to__point__service__m_1a22f1876bd87959557a463d43fa521ad3" kind="function"><name>done</name></member>
     <member refid="namespacego__to__point__service__m_1a294bca40052b9b1c83ddf85a023b276e" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespacehead__orientation" kind="namespace"><name>head_orientation</name>
+    <member refid="namespacehead__orientation_1a11b821464a66d965fdbf67c0cd9b4351" kind="variable"><name>yaw_precision_</name></member>
+    <member refid="namespacehead__orientation_1acca8bedea19008c489d2b7a59a1ad0a9" kind="variable"><name>yaw_precision_2_</name></member>
+    <member refid="namespacehead__orientation_1a9d5f539d06fcd70d958f738fa0f08e9a" kind="variable"><name>active_</name></member>
+    <member refid="namespacehead__orientation_1a3c3323217cda355d33aafabce844de46" kind="variable"><name>yaw_</name></member>
+    <member refid="namespacehead__orientation_1a6e753bf09a49fd7b5e9c65570008cefe" kind="variable"><name>state_</name></member>
+    <member refid="namespacehead__orientation_1a968369d23064d2114a59e814f4beec4a" kind="variable"><name>desired_yaw_</name></member>
+    <member refid="namespacehead__orientation_1abe66460d4861e04d097c9c96a6963240" kind="variable"><name>kp_a</name></member>
+    <member refid="namespacehead__orientation_1a6478906b5b863f36ac73b2908a637ab7" kind="variable"><name>kp_d</name></member>
+    <member refid="namespacehead__orientation_1a3e213b0fdbf137f0beadc706094040ef" kind="variable"><name>ub_a</name></member>
+    <member refid="namespacehead__orientation_1a3fc677e3c99d547051abc33e91f33dbd" kind="variable"><name>lb_a</name></member>
+    <member refid="namespacehead__orientation_1a343f53f3821ae694a64ee2ec52cfc004" kind="variable"><name>ub_d</name></member>
+    <member refid="namespacehead__orientation_1ae68beceaffe3f202f2863f3009f84c18" kind="variable"><name>pub</name></member>
+    <member refid="namespacehead__orientation_1ab361bda7a204c5c1ac01421804620f49" kind="function"><name>head_orient_switch</name></member>
+    <member refid="namespacehead__orientation_1a425229e83daeb9eb45e34285e600bb5e" kind="function"><name>clbk_odom</name></member>
+    <member refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" kind="function"><name>normalize_angle</name></member>
+    <member refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" kind="function"><name>fix_yaw</name></member>
+    <member refid="namespacehead__orientation_1a76d5fbeb4230d20e8642aeca6c7cb05a" kind="function"><name>done</name></member>
+    <member refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" kind="function"><name>main</name></member>
   </compound>
   <compound refid="namespace_k_c_l__rosplan" kind="namespace"><name>KCL_rosplan</name>
   </compound>
@@ -463,8 +487,12 @@
   <compound refid="test-armor_8rst_8txt" kind="file"><name>test-armor.rst.txt</name>
   </compound>
   <compound refid="bug-m_8md_8txt" kind="file"><name>bug-m.md.txt</name>
+    <member refid="bug-m_8md_8txt_1a63d8191a46ecb6bc684d7c3187f2b65a" kind="variable"><name>still</name></member>
+    <member refid="bug-m_8md_8txt_1a121c428f444654781668f2553bd7dd47" kind="function"><name>target</name></member>
   </compound>
   <compound refid="go-to-point_8md_8txt" kind="file"><name>go-to-point.md.txt</name>
+  </compound>
+  <compound refid="head-orient_8md_8txt" kind="file"><name>head-orient.md.txt</name>
   </compound>
   <compound refid="wall-follow_8md_8txt" kind="file"><name>wall-follow.md.txt</name>
   </compound>
@@ -745,11 +773,15 @@
   </compound>
   <compound refid="go-to-point_8md" kind="file"><name>go-to-point.md</name>
   </compound>
+  <compound refid="head-orient_8md" kind="file"><name>head-orient.md</name>
+  </compound>
   <compound refid="wall-follow_8md" kind="file"><name>wall-follow.md</name>
   </compound>
   <compound refid="bug__m_8py" kind="file"><name>bug_m.py</name>
   </compound>
   <compound refid="go__to__point__service__m_8py" kind="file"><name>go_to_point_service_m.py</name>
+  </compound>
+  <compound refid="head__orientation_8py" kind="file"><name>head_orientation.py</name>
   </compound>
   <compound refid="wall__follow__service__m_8py" kind="file"><name>wall_follow_service_m.py</name>
   </compound>
@@ -896,6 +928,8 @@
   <compound refid="md_robocluedo_movement_controller__uml_bug-m" kind="page"><name>md_robocluedo_movement_controller__uml_bug-m</name>
   </compound>
   <compound refid="md_robocluedo_movement_controller__uml_go-to-point" kind="page"><name>md_robocluedo_movement_controller__uml_go-to-point</name>
+  </compound>
+  <compound refid="md_robocluedo_movement_controller__uml_head-orient" kind="page"><name>md_robocluedo_movement_controller__uml_head-orient</name>
   </compound>
   <compound refid="md_robocluedo_movement_controller__uml_wall-follow" kind="page"><name>md_robocluedo_movement_controller__uml_wall-follow</name>
   </compound>

@@ -1,4 +1,4 @@
-#! /usr/bin/env python
+s
 
 ''' 
 turn towards the point
@@ -78,7 +78,7 @@ def clbk_odom(msg):
 def change_state(state):
     global state_
     state_ = state
-    print ('State changed to [%s]' % state_)
+    # print ('State changed to [%s]' % state_)
 
 
 def normalize_angle(angle):
@@ -92,7 +92,7 @@ def fix_yaw(des_pos):
     desired_yaw = math.atan2(des_pos.y - position_.y, des_pos.x - position_.x)
     err_yaw = normalize_angle(desired_yaw - yaw_)
 
-    rospy.loginfo(err_yaw)
+    # rospy.loginfo(err_yaw)
 
     twist_msg = Twist()
     if math.fabs(err_yaw) > yaw_precision_2_:
@@ -131,7 +131,7 @@ def go_straight_ahead(des_pos):
 
     # state change conditions
     if math.fabs(err_yaw) > yaw_precision_:
-        print ('Yaw error: [%s]' % err_yaw)
+        # print ('Yaw error: [%s]' % err_yaw)
         change_state(0)
 
 
@@ -152,9 +152,7 @@ def main():
     rospy.init_node('go_to_point')
 
     pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-
     sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
-
     srv = rospy.Service('go_to_point_switch', SetBool, go_to_point_switch)
 
     rate = rospy.Rate(20)

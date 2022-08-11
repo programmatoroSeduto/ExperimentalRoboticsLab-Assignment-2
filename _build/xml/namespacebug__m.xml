@@ -30,7 +30,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_movement_controller/scripts/bug_m.py" line="25" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="25" bodyend="-1"/>
-        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="71" endline="92">change_state</referencedby>
+        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">change_state</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1af40e8063430e5b54ef2f3f8368338744" prot="public" static="no" mutable="no">
         <type></type>
@@ -45,7 +45,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_movement_controller/scripts/bug_m.py" line="26" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="26" bodyend="-1"/>
-        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="71" endline="92">change_state</referencedby>
+        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">change_state</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1ac6217733c79e361a3bf86e4f51b6ecfd" prot="public" static="no" mutable="no">
         <type></type>
@@ -60,7 +60,22 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_movement_controller/scripts/bug_m.py" line="27" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="27" bodyend="-1"/>
-        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="71" endline="92">change_state</referencedby>
+        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">change_state</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebug__m_1a114195dce88e79be8d187c1fa2d33503" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>bug_m.srv_client_head_orientation_</definition>
+        <argsstring></argsstring>
+        <name>srv_client_head_orientation_</name>
+        <initializer>=  None</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="28" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="28" bodyend="-1"/>
+        <referencedby refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">change_state</referencedby>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1a8b5b5c9259592b8efd526c5adb95d95b" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -74,7 +89,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="28" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="28" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="29" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="29" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1a23e5e76f14d9d0d139767cb229a53dda" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -88,7 +103,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="29" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="29" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="30" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="30" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1ab108d02234aa3ec58605b9f6980ec090" prot="public" static="no" mutable="no">
         <type></type>
@@ -102,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="30" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="30" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="31" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="31" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1a8fb60e35f164091fe3355d3a0bce95af" prot="public" static="no" mutable="no">
         <type></type>
@@ -116,7 +131,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="31" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="31" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="32" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="32" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1af10f89c7f929c9babce108f5d7382996" prot="public" static="no" mutable="no">
         <type></type>
@@ -129,7 +144,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="32" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="32" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="33" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="33" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1ab8596d2ae799585b0d89152b55891aa8" prot="public" static="no" mutable="no">
         <type></type>
@@ -142,7 +157,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="33" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="33" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="34" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="34" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1afbb54887da57b97920c8d36c6daed1fc" prot="public" static="no" mutable="no">
         <type></type>
@@ -155,7 +170,49 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="34" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="34" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="35" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebug__m_1a0d17003b395ea91a87e89bc43f1db474" prot="public" static="no" mutable="no">
+        <type></type>
+        <definition>bug_m.desired_yaw_</definition>
+        <argsstring></argsstring>
+        <name>desired_yaw_</name>
+        <initializer>=  rospy.get_param(&apos;des_yaw&apos;)</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="36" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebug__m_1a67e18cabb03c88213fa1ffdde7d58d93" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bug_m.yaw_precision_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_</name>
+        <initializer>=  math.pi / 9</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="37" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacebug__m_1af04eda47406661add747b6db997ac29e" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int bug_m.yaw_precision_2_</definition>
+        <argsstring></argsstring>
+        <name>yaw_precision_2_</name>
+        <initializer>=  math.pi / 90</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="38" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="38" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1ac9d4d95c034fca5a2b5d08ea845bbfcb" prot="public" static="no" mutable="no">
         <type></type>
@@ -169,21 +226,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="35" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="35" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="39" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="39" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1ae70f71d3816862f72790fae7bfaa543b" prot="public" static="no" mutable="no">
         <type>list</type>
         <definition>list bug_m.state_desc_</definition>
         <argsstring></argsstring>
         <name>state_desc_</name>
-        <initializer>=  [&apos;Go to point&apos;, &apos;wall <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a95f54475c215df7f58e8573759c17625" kindref="member">following</ref>&apos;, &apos;target reached&apos;]</initializer>
+        <initializer>=  [&apos;Go to point&apos;, &apos;wall <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a95f54475c215df7f58e8573759c17625" kindref="member">following</ref>&apos;, &apos;<ref refid="bug-m_8md_8txt_1a121c428f444654781668f2553bd7dd47" kindref="member">target</ref> reached&apos;]</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="36" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="36" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="40" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="40" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="namespacebug__m_1a79dc362dff5bef439beacdd5c0c3b2f1" prot="public" static="no" mutable="no">
         <type>int</type>
@@ -197,7 +254,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="37" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="37" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="41" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="41" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -216,7 +273,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="44" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="44" bodyend="59"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="48" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="48" bodyend="63"/>
       </memberdef>
       <memberdef kind="function" id="namespacebug__m_1a6ab3d92b5b6ea12eaa52bf21cfa111f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -233,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="60" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="60" bodyend="70"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="64" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="64" bodyend="74"/>
       </memberdef>
       <memberdef kind="function" id="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -250,11 +307,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="71" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="71" bodyend="92"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="75" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="75" bodyend="111"/>
         <references refid="namespacebug__m_1abd32bbd25b55f71e56505e72ba56c2f6" compoundref="bug__m_8py" startline="25">srv_client_go_to_point_</references>
         <references refid="namespacebug__m_1af40e8063430e5b54ef2f3f8368338744" compoundref="bug__m_8py" startline="26">srv_client_wall_follower_</references>
+        <references refid="namespacebug__m_1a114195dce88e79be8d187c1fa2d33503" compoundref="bug__m_8py" startline="28">srv_client_head_orientation_</references>
         <references refid="namespacebug__m_1ac6217733c79e361a3bf86e4f51b6ecfd" compoundref="bug__m_8py" startline="27">srv_client_user_interface_</references>
-        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="99" endline="154">main</referencedby>
+        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="118" endline="207">main</referencedby>
+        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="125" endline="158">head_orientation.main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -271,9 +330,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="93" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="93" bodyend="98"/>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="112" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="112" bodyend="117"/>
         <references refid="rosplan-kb_8md_8txt_1a123684fb4f21dfb0816ae98b02163d53" compoundref="rosplan-kb_8md_8txt" startline="131" endline="135">if</references>
-        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="99" endline="154">main</referencedby>
+        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="118" endline="207">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacebug__m_1a357589ad533151302b9fa9a893833382" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -286,10 +345,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="99" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="99" bodyend="154"/>
-        <references refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="71" endline="92">change_state</references>
+        <location file="robocluedo_movement_controller/scripts/bug_m.py" line="118" column="1" bodyfile="robocluedo_movement_controller/scripts/bug_m.py" bodystart="118" bodyend="207"/>
+        <references refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">change_state</references>
         <references refid="rosplan-kb_8md_8txt_1a123684fb4f21dfb0816ae98b02163d53" compoundref="rosplan-kb_8md_8txt" startline="131" endline="135">if</references>
-        <references refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="93" endline="98">normalize_angle</references>
+        <references refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="112" endline="117">normalize_angle</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

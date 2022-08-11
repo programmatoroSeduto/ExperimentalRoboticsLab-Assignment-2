@@ -1015,12 +1015,19 @@ ora, il lavoro sul movement controller
 	
 	la strategia migliore sarebbe la seguente:
 	
-	- aggiornare go_to_point in modo da raggiungere anche una orientazione finale
-	- il nodo bug_m contiene tutto quello che serve per implementare il sistema di navigazione
-	- spostare la macchina a stati di bug_m dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto
-	
-	**se proprio ne avessi voglia** potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell'environment
-- **COMMIT** : "working on movement controller (py nodes)"
+	- serve un nodo che implementi un'interfaccia più intuitiva col navigation system: quella attale va bene, può funzionare, ma non è troppo intuitiva
+	- implementare l'orientazione come un behaviour a parte
+	- per l'angolo si può sempre implementare un sistema tipo parameter server
+
+- **NUOVO NODO** : (py) head_orientation.py
+- (vorrei mantenere l'approccio iniziale dell'implementazione del behaviour, trovo sia un approccio interessante)
+- implementazione del nodo head orientation
+- studio bug_m (devo trovare un modo furbo e rapido di modificarlo)
+- nuovo stato in bug_m
+- uml vari ed eventuali
+	- uml del nuovo nodo
+	- e altri UML
+- **NUOVO COMMIT** : "working on the navigation system (first version, not yet tested)"
 
 
 

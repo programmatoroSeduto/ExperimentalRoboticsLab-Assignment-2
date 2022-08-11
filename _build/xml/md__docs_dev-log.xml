@@ -937,13 +937,22 @@
 </listitem></itemizedlist>
 </para>
 <para>la strategia migliore sarebbe la seguente:<itemizedlist>
-<listitem><para>aggiornare go_to_point in modo da raggiungere anche una orientazione finale</para>
-</listitem><listitem><para>il nodo <ref refid="namespacebug__m" kindref="compound">bug_m</ref> contiene tutto quello che serve per implementare il sistema di navigazione</para>
-</listitem><listitem><para>spostare la macchina a stati di <ref refid="namespacebug__m" kindref="compound">bug_m</ref> dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto</para>
+<listitem><para>serve un nodo che implementi un&apos;interfaccia più intuitiva col navigation system: quella attale va bene, può funzionare, ma non è troppo intuitiva</para>
+</listitem><listitem><para>implementare l&apos;orientazione come un behaviour a parte</para>
+</listitem><listitem><para>per l&apos;angolo si può sempre implementare un sistema tipo parameter server</para>
 </listitem></itemizedlist>
 </para>
-<para><bold>se proprio ne avessi voglia</bold> potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell&apos;environment</para>
-</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on movement controller (py nodes)&quot;</para>
+</listitem><listitem><para><bold>NUOVO NODO</bold> : (py) <ref refid="head__orientation_8py" kindref="compound">head_orientation.py</ref></para>
+</listitem><listitem><para>(vorrei mantenere l&apos;approccio iniziale dell&apos;implementazione del behaviour, trovo sia un approccio interessante)</para>
+</listitem><listitem><para>implementazione del nodo head orientation</para>
+</listitem><listitem><para>studio <ref refid="namespacebug__m" kindref="compound">bug_m</ref> (devo trovare un modo furbo e rapido di modificarlo)</para>
+</listitem><listitem><para>nuovo stato in <ref refid="namespacebug__m" kindref="compound">bug_m</ref></para>
+</listitem><listitem><para>uml vari ed eventuali<itemizedlist>
+<listitem><para>uml del nuovo nodo</para>
+</listitem><listitem><para>e altri UML</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>NUOVO COMMIT</bold> : &quot;working on the navigation system (first version, not yet tested)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

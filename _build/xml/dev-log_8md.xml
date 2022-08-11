@@ -1024,12 +1024,19 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>la<sp/>strategia<sp/>migliore<sp/>sarebbe<sp/>la<sp/>seguente:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornare<sp/>go_to_point<sp/>in<sp/>modo<sp/>da<sp/>raggiungere<sp/>anche<sp/>una<sp/>orientazione<sp/>finale</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>nodo<sp/>bug_m<sp/>contiene<sp/>tutto<sp/>quello<sp/>che<sp/>serve<sp/>per<sp/>implementare<sp/>il<sp/>sistema<sp/>di<sp/>navigazione</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>spostare<sp/>la<sp/>macchina<sp/>a<sp/>stati<sp/>di<sp/>bug_m<sp/>dentro<sp/>ad<sp/>un<sp/>servizio<sp/>piuttosto<sp/>che<sp/>lasciarla<sp/>nella<sp/>main;<sp/>in<sp/>particolare<sp/>la<sp/>questione<sp/>dello<sp/>stato<sp/>2<sp/>non<sp/>mi<sp/>piace<sp/>affatto</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>**se<sp/>proprio<sp/>ne<sp/>avessi<sp/>voglia**<sp/>potrei<sp/>implementare<sp/>io<sp/>un<sp/>semplice<sp/>behaviour<sp/>che,<sp/>guardando<sp/>i<sp/>sensori<sp/>laser<sp/>del<sp/>robot,<sp/>riesca<sp/>a<sp/>tracciare<sp/>un<sp/>percorso<sp/>autonomamente<sp/>nell&apos;environment</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>movement<sp/>controller<sp/>(py<sp/>nodes)&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>serve<sp/>un<sp/>nodo<sp/>che<sp/>implementi<sp/>un&apos;interfaccia<sp/>più<sp/>intuitiva<sp/>col<sp/>navigation<sp/>system:<sp/>quella<sp/>attale<sp/>va<sp/>bene,<sp/>può<sp/>funzionare,<sp/>ma<sp/>non<sp/>è<sp/>troppo<sp/>intuitiva</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementare<sp/>l&apos;orientazione<sp/>come<sp/>un<sp/>behaviour<sp/>a<sp/>parte</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>l&apos;angolo<sp/>si<sp/>può<sp/>sempre<sp/>implementare<sp/>un<sp/>sistema<sp/>tipo<sp/>parameter<sp/>server</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>(py)<sp/>head_orientation.py</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(vorrei<sp/>mantenere<sp/>l&apos;approccio<sp/>iniziale<sp/>dell&apos;implementazione<sp/>del<sp/>behaviour,<sp/>trovo<sp/>sia<sp/>un<sp/>approccio<sp/>interessante)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>del<sp/>nodo<sp/>head<sp/>orientation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>studio<sp/>bug_m<sp/>(devo<sp/>trovare<sp/>un<sp/>modo<sp/>furbo<sp/>e<sp/>rapido<sp/>di<sp/>modificarlo)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nuovo<sp/>stato<sp/>in<sp/>bug_m</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>uml<sp/>vari<sp/>ed<sp/>eventuali</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>del<sp/>nuovo<sp/>nodo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>altri<sp/>UML</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>navigation<sp/>system<sp/>(first<sp/>version,<sp/>not<sp/>yet<sp/>tested)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

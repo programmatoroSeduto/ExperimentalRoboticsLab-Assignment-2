@@ -1311,13 +1311,23 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </ul>
 <p>la strategia migliore sarebbe la seguente:</p>
 <ul class="simple">
-<li><p>aggiornare go_to_point in modo da raggiungere anche una orientazione finale</p></li>
-<li><p>il nodo bug_m contiene tutto quello che serve per implementare il sistema di navigazione</p></li>
-<li><p>spostare la macchina a stati di bug_m dentro ad un servizio piuttosto che lasciarla nella main; in particolare la questione dello stato 2 non mi piace affatto</p></li>
+<li><p>serve un nodo che implementi un’interfaccia più intuitiva col navigation system: quella attale va bene, può funzionare, ma non è troppo intuitiva</p></li>
+<li><p>implementare l’orientazione come un behaviour a parte</p></li>
+<li><p>per l’angolo si può sempre implementare un sistema tipo parameter server</p></li>
 </ul>
-<p><strong>se proprio ne avessi voglia</strong> potrei implementare io un semplice behaviour che, guardando i sensori laser del robot, riesca a tracciare un percorso autonomamente nell’environment</p>
 </li>
-<li><p><strong>COMMIT</strong> : “working on movement controller (py nodes)”</p></li>
+<li><p><strong>NUOVO NODO</strong> : (py) head_orientation.py</p></li>
+<li><p>(vorrei mantenere l’approccio iniziale dell’implementazione del behaviour, trovo sia un approccio interessante)</p></li>
+<li><p>implementazione del nodo head orientation</p></li>
+<li><p>studio bug_m (devo trovare un modo furbo e rapido di modificarlo)</p></li>
+<li><p>nuovo stato in bug_m</p></li>
+<li><p>uml vari ed eventuali</p>
+<ul class="simple">
+<li><p>uml del nuovo nodo</p></li>
+<li><p>e altri UML</p></li>
+</ul>
+</li>
+<li><p><strong>NUOVO COMMIT</strong> : “working on the navigation system (first version, not yet tested)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">

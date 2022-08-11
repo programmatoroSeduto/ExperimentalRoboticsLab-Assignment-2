@@ -122,16 +122,35 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">UML – bug_m PY node</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#schema">SCHEMA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-use-the-node-basic-way">HOW TO use the node – basic way</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-use-the-node-user-interface">HOW TO use the node – user interface</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <p>bug_m combines the two behaviours <code class="docutils literal notranslate"><span class="pre">go_to_point.py</span></code> ans <code class="docutils literal notranslate"><span class="pre">wall_follow.py</span></code> in order to reach a given position in a indoor environment with walls.</p>
+<p>IN particular,</p>
+<ul class="simple">
+<li><p>(state 2) the robot is still, waiting for a target</p></li>
+<li><p>(a target distant at minimum 0.35m comes…)</p></li>
+<li><p>( <strong>state 0</strong> : go to point ) go ahead in straight line</p>
+<ul>
+<li><p>change to state 1 if the robot encounters an obstacle</p></li>
+<li><p>change to state 0 if the robot reaches the target</p></li>
+</ul>
+</li>
+<li><p>( <strong>state 1</strong> : wall following ) find and follow the wall</p>
+<ul>
+<li><p>change to 0 if the robot cannot go on (<em>the robot could get stuck in a blind corner</em>)</p></li>
+<li><p>change to state 2 if the robot is in the target</p></li>
+</ul>
+</li>
+</ul>
+<p>the robot reaches a target with a threshold distance of <strong>0.35m from the marker</strong>.</p>
 <div class="section" id="schema">
 <h2>SCHEMA<a class="headerlink" href="#schema" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-9a224875515c379f66e10725643b2bfcb8adc632.svg" type="image/svg+xml" style="width:1198px;height:433px;background:#FFFFFF;">
-<img src="../../_images/plantuml-9a224875515c379f66e10725643b2bfcb8adc632.png" alt="&#64;startuml
+<object data="../../_images/plantuml-0301c00ea5afdaedf3eca1873ac45a89612875e7.svg" type="image/svg+xml" style="width:1873px;height:650px;background:#FFFFFF;">
+<img src="../../_images/plantuml-0301c00ea5afdaedf3eca1873ac45a89612875e7.png" alt="&#64;startuml
 
 ''' INFOS
 title NODE bug_m
@@ -140,10 +159,18 @@ allow_mixing
 
 
 ''' COMPONENTS
+database &quot;ROS parameter server&quot; as PARAMETERS {
+	node &quot;des_pos_x&quot;
+	node &quot;des_pos_y&quot;
+	node &quot;des_yaw&quot;
+}
+
 component &quot;bug_m&quot; &lt;&lt;ROSPy node&gt;&gt; as NODE_BUG_M {
 	node &quot;clbk_odom&quot; as NODE_BUG_M.READ_ODOM
 	node &quot;clbk_laser&quot; as NODE_BUG_M.LISTENER_LASER
 }
+
+NODE_BUG_M &quot;get&quot; &lt;-- PARAMETERS
 
 () &quot;/odom&quot; as TOPIC_ODOM
 NODE_BUG_M.READ_ODOM &quot;sub&quot; &lt;-- TOPIC_ODOM
@@ -157,12 +184,20 @@ note on link: sensor_msgs/LaserScan.msg
 NODE_BUG_M &quot;pub&quot; --&gt; TOPIC_VEL
 note on link: geometry_msgs/Twist.msg
 
+() &quot;/bug_m_signal&quot; as TOPIC_BUG_M_SIGNAL
+NODE_BUG_M &quot;pub&quot; --&gt; TOPIC_BUG_M_SIGNAL
+note on link: std_srvs/Empty.srv
+
 () &quot;/go_to_point_switch&quot; as SRV_GOTO_SWITCH
 NODE_BUG_M &quot;cl&quot; &lt;-- SRV_GOTO_SWITCH
 note on link: std_srvs/SetBool.srv
 
 () &quot;/wall_follower_switch&quot; as SRV_WALL_SWITCH
 NODE_BUG_M &quot;cl&quot; &lt;-- SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() &quot;/head_orient_switch&quot; as SRV_HEAD_ORIENT_SWITCH
+NODE_BUG_M &quot;cl&quot; &lt;-- SRV_HEAD_ORIENT_SWITCH
 note on link: std_srvs/SetBool.srv
 
 &#64;enduml"/>
@@ -173,10 +208,25 @@ note on link: std_srvs/SetBool.srv
 <h2>HOW TO use the node – basic way<a class="headerlink" href="#how-to-use-the-node-basic-way" title="Permalink to this heading"></a></h2>
 <p>it requires another node listening for the odom channel and checking when to deactivate the service</p>
 <ul class="simple">
-<li><p>set <code class="docutils literal notranslate"><span class="pre">des_pos_x</span></code> and <code class="docutils literal notranslate"><span class="pre">des_pos_y</span></code> into the paramater server</p></li>
+<li><p>set <code class="docutils literal notranslate"><span class="pre">des_pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">des_pos_y</span></code> and <code class="docutils literal notranslate"><span class="pre">des_yaw</span></code> into the paramater server</p></li>
 <li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/go_to_point_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
 <li><p>… wait until the robot is near enough to the point</p></li>
 <li><p>turn off the node (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=False</span></code>)</p></li>
+</ul>
+</div>
+<div class="section" id="how-to-use-the-node-user-interface">
+<h2>HOW TO use the node – user interface<a class="headerlink" href="#how-to-use-the-node-user-interface" title="Permalink to this heading"></a></h2>
+<p>the node can signal another node when the final position hasn’t been reached.</p>
+<ul class="simple">
+<li><p>set <code class="docutils literal notranslate"><span class="pre">des_pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">des_pos_y</span></code> and <code class="docutils literal notranslate"><span class="pre">des_yaw</span></code> into the paramater server</p></li>
+<li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/go_to_point_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
+<li><p>open a client with <code class="docutils literal notranslate"><span class="pre">/bug_m_signal</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/Empty</span></code></p></li>
+<li><p>… wait …</p></li>
+<li><p>when the robot is near to the target point, the node bug_m calls the service</p>
+<ul>
+<li><p>from this, the node can infer that the node has reached the final position</p></li>
+</ul>
+</li>
 </ul>
 </div>
 </div>

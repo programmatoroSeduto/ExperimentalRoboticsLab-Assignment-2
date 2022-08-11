@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="433px" preserveAspectRatio="none" style="width:1633px;height:433px;background:#FFFFFF;" version="1.1" viewBox="0 0 1633 433" width="1633px" zoomAndPan="magnify"><defs/><g><rect height="42.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="125" x="747.25" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="99" x="760.25" y="30.9951">NODE bug_m</text><!--MD5=[01bf3e4363d59cfe4feb1f9f5aa6a0d4]
+cluster NODE_BUG_M--><g id="cluster_NODE_BUG_M"><rect height="177" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:1.0;fill:none;" width="358" x="711.5" y="60.2969"/><rect height="10" style="stroke:#181818;stroke-width:1.0;fill:none;" width="15" x="1049.5" y="65.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="1047.5" y="67.2969"/><rect height="2" style="stroke:#181818;stroke-width:1.0;fill:none;" width="4" x="1047.5" y="71.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="104" x="838.5" y="94.292">«ROSPy node»</text><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="51" x="865" y="126.5889">bug_m</text></g><!--MD5=[8e1eacda4580b15fb4a71e0bfab2db93]
+entity NODE_BUG_M.READ_ODOM--><g id="elem_NODE_BUG_M.READ_ODOM"><polygon fill="#F1F1F1" points="755,161.2969,765,151.2969,886,151.2969,886,203.5938,876,213.5938,755,213.5938,755,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="876" x2="886" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="755" x2="876" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="876" x2="876" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="75" x="778" y="192.292">clbk_odom</text></g><!--MD5=[05030d403f5f485f3569c237755bb83a]
+entity NODE_BUG_M.LISTENER_LASER--><g id="elem_NODE_BUG_M.LISTENER_LASER"><polygon fill="#F1F1F1" points="921.5,161.2969,931.5,151.2969,1045.5,151.2969,1045.5,203.5938,1035.5,213.5938,921.5,213.5938,921.5,161.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1035.5" x2="1045.5" y1="161.2969" y2="151.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="921.5" x2="1035.5" y1="161.2969" y2="161.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="1035.5" x2="1035.5" y1="161.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="944.5" y="192.292">clbk_laser</text></g><!--MD5=[9c0f7ecf381f88014a7ea481e5efb054]
+entity TOPIC_ODOM--><g id="elem_TOPIC_ODOM"><ellipse cx="1153.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="1131" y="425.292">/odom</text></g><!--MD5=[cf4c761246342468269b9fda4f668b9a]
+entity TOPIC_LASER--><g id="elem_TOPIC_LASER"><ellipse cx="1405.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="1386.5" y="425.292">/scan</text></g><!--MD5=[a29493d5c3d449fd805f8038216f6f38]
+entity TOPIC_VEL--><g id="elem_TOPIC_VEL"><ellipse cx="36.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="61" x="6" y="425.292">/cmd_vel</text></g><!--MD5=[e15ecfc50d5ee6f9b14c4c0ec877aca4]
+entity TOPIC_BUG_M_SIGNAL--><g id="elem_TOPIC_BUG_M_SIGNAL"><ellipse cx="294.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="245" y="425.292">/bug_m_signal</text></g><!--MD5=[e6d9a3d81fc487a20f0b2c2970d6073d]
+entity SRV_GOTO_SWITCH--><g id="elem_SRV_GOTO_SWITCH"><ellipse cx="502.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="137" x="434" y="425.292">/go_to_point_switch</text></g><!--MD5=[0de5e037182cbe7d3ce53b2ba1c49cc1]
+entity SRV_WALL_SWITCH--><g id="elem_SRV_WALL_SWITCH"><ellipse cx="719.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="141" x="649" y="425.292">/wall_follower_switch</text></g><!--MD5=[ce0550ece9e8498f5b487be6600f7375]
+entity SRV_HEAD_ORIENT_SWITCH--><g id="elem_SRV_HEAD_ORIENT_SWITCH"><ellipse cx="936.5" cy="387.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="138" x="867.5" y="425.292">/head_orient_switch</text></g><!--MD5=[50606cfa1abf67bc0bfa867db0e0c6f4]
+reverse link NODE_BUG_M.READ_ODOM to TOPIC_ODOM--><g id="link_NODE_BUG_M.READ_ODOM_TOPIC_ODOM"><path codeLine="15" d="M850.52,217.0769 C865.01,230.9669 883.57,245.5769 903.5,253.2969 C925.28,261.7269 1094.91,247.1769 1113.5,261.2969 C1151.42,290.0969 1154.09,355.1869 1153.79,378.1169 " fill="none" id="NODE_BUG_M.READ_ODOM-backto-TOPIC_ODOM" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="846.92,213.5669,850.5852,222.7084,850.5052,217.0521,856.1615,216.9721,846.92,213.5669" style="stroke:#181818;stroke-width:1.0;"/><path d="M1150.5,266.2969 L1150.5,307.2969 L1352.5,307.2969 L1352.5,276.2969 L1342.5,266.2969 L1150.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1342.5,266.2969 L1342.5,276.2969 L1352.5,276.2969 L1342.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="165" x="1164.5" y="291.3638">nav_msgs/Odometry.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="817.1094" y="241.6583">sub</text></g><!--MD5=[7d06c8ae2e1af6d4d11e89a8b0079aa3]
+reverse link NODE_BUG_M.LISTENER_LASER to TOPIC_LASER--><g id="link_NODE_BUG_M.LISTENER_LASER_TOPIC_LASER"><path codeLine="19" d="M1050.89,188.9269 C1147.8,198.3369 1319.9,220.3869 1365.5,261.2969 C1400.78,292.9469 1405.14,355.6869 1405.53,378.0969 " fill="none" id="NODE_BUG_M.LISTENER_LASER-backto-TOPIC_LASER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1045.76,188.4269,1054.3284,193.2831,1050.7363,188.9131,1055.1063,185.321,1045.76,188.4269" style="stroke:#181818;stroke-width:1.0;"/><path d="M1401.5,266.2969 L1401.5,307.2969 L1626.5,307.2969 L1626.5,276.2969 L1616.5,266.2969 L1401.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1616.5,266.2969 L1616.5,276.2969 L1626.5,276.2969 L1616.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="188" x="1415.5" y="291.3638">sensor_msgs/LaserScan.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="1061.5528" y="176.5929">sub</text></g><!--MD5=[2cbf74590d6c00b3fca55a4630363409]
+link NODE_BUG_M to TOPIC_VEL--><g id="link_NODE_BUG_M_TOPIC_VEL"><path codeLine="23" d="M711.2266,183.1308 C710.9433,183.1258 710.6531,183.1206 710.356,183.1154 C709.7619,183.105 709.1403,183.0944 708.4916,183.0836 C707.1944,183.0619 705.789,183.0395 704.279,183.0167 C701.2592,182.9712 697.821,182.9245 693.993,182.8799 C678.6809,182.7017 657.1302,182.5591 631.1547,182.6762 C579.2038,182.9106 509.5538,184.1844 436.715,188.2919 C291.0375,196.5069 132.605,216.0569 77.5,261.2969 C43.06,289.5769 37.3,347.3669 36.51,373.2469 " fill="none" id="NODE_BUG_M-to-TOPIC_VEL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="36.41,378.2669,40.5892,369.3487,36.51,373.2679,32.5908,369.1887,36.41,378.2669" style="stroke:#181818;stroke-width:1.0;"/><path d="M82.5,266.2969 L82.5,307.2969 L290.5,307.2969 L290.5,276.2969 L280.5,266.2969 L82.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M280.5,266.2969 L280.5,276.2969 L290.5,276.2969 L280.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="171" x="96.5" y="291.3638">geometry_msgs/Twist.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="687.4" y="172.3638">pub</text></g><!--MD5=[b608ae022f18d76ee49e8f6dca4752cc]
+link NODE_BUG_M to TOPIC_BUG_M_SIGNAL--><g id="link_NODE_BUG_M_TOPIC_BUG_M_SIGNAL"><path codeLine="27" d="M710.944,183.8498 C710.7231,183.8648 710.4981,183.8802 710.2693,183.8959 C708.4381,184.0215 706.3535,184.1675 704.0327,184.3343 C694.7494,185.0018 681.6869,186.0042 665.95,187.3816 C634.4763,190.1363 592.305,194.3906 548.275,200.4644 C460.215,212.6119 364.72,232.0369 332.5,261.2969 C300.03,290.7869 294.93,347.0469 294.38,372.8069 " fill="none" id="NODE_BUG_M-to-TOPIC_BUG_M_SIGNAL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="294.32,378.1069,298.4226,369.1532,294.3771,373.1072,290.4231,369.0618,294.32,378.1069" style="stroke:#181818;stroke-width:1.0;"/><path d="M337.5,266.2969 L337.5,307.2969 L495.5,307.2969 L495.5,276.2969 L485.5,266.2969 L337.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M485.5,266.2969 L485.5,276.2969 L495.5,276.2969 L485.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="121" x="351.5" y="291.3638">std_srvs/Empty.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="687.44" y="203.3638">pub</text></g><!--MD5=[d2b55514db171e2cbb2b77beeba89690]
+reverse link NODE_BUG_M to SRV_GOTO_SWITCH--><g id="link_NODE_BUG_M_SRV_GOTO_SWITCH"><path codeLine="31" d="M711.4148,184.0809 C711.2826,184.0957 711.1488,184.1107 711.0137,184.126 C710.473,184.1871 709.909,184.2523 709.3224,184.3216 C708.1491,184.4602 706.8855,184.6155 705.5373,184.789 C702.8408,185.136 699.8061,185.5555 696.4798,186.0597 C683.1747,188.0763 665.2044,191.4456 645.5587,196.9294 C606.2675,207.8969 560.275,227.3219 531.5,261.2969 C501.7,296.4869 501.13,356.4969 502,378.1769 " fill="none" id="NODE_BUG_M-backto-SRV_GOTO_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="711.4148,184.0809,702.0258,181.1064,706.4458,184.6368,702.9154,189.0568,711.4148,184.0809" style="stroke:#181818;stroke-width:1.0;"/><path d="M536.5,266.2969 L536.5,307.2969 L703.5,307.2969 L703.5,276.2969 L693.5,266.2969 L536.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M693.5,266.2969 L693.5,276.2969 L703.5,276.2969 L693.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="550.5" y="291.3638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="727.41" y="203.3738">cl</text></g><!--MD5=[7fa9dd9e3b991b909dd28aede12b03b9]
+reverse link NODE_BUG_M to SRV_WALL_SWITCH--><g id="link_NODE_BUG_M_SRV_WALL_SWITCH"><path codeLine="35" d="M717.1534,237.3531 C717.1488,237.4891 717.1443,237.6252 717.1397,237.7613 C717.1306,238.0335 717.1215,238.3059 717.1124,238.5785 C717.0762,239.6686 717.0408,240.7609 717.0062,241.8539 C716.937,244.04 716.8712,246.229 716.8098,248.4094 C716.6869,252.7703 716.5813,257.0969 716.5,261.2969 C716.06,283.9569 716.04,289.6369 716.5,312.2969 C716.98,336.2069 718.35,364.4369 719.06,378.0869 " fill="none" id="NODE_BUG_M-backto-SRV_WALL_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="717.1534,237.3531,712.852,246.213,716.9847,242.3502,720.8475,246.4829,717.1534,237.3531" style="stroke:#181818;stroke-width:1.0;"/><path d="M721.5,266.2969 L721.5,307.2969 L888.5,307.2969 L888.5,276.2969 L878.5,266.2969 L721.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M878.5,266.2969 L878.5,276.2969 L888.5,276.2969 L878.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="735.5" y="291.3638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="727.49" y="172.4938">cl</text></g><!--MD5=[c8ae8bb65eb275d034e3808df72582ff]
+reverse link NODE_BUG_M to SRV_HEAD_ORIENT_SWITCH--><g id="link_NODE_BUG_M_SRV_HEAD_ORIENT_SWITCH"><path codeLine="39" d="M726.5444,237.5445 C726.5964,237.6546 726.6487,237.7645 726.7013,237.8742 C726.8065,238.0936 726.9132,238.3123 727.0211,238.5301 C727.2371,238.9658 727.4585,239.3983 727.6855,239.8273 C728.5936,241.5433 729.5912,243.2038 730.6867,244.7912 C732.8777,247.9659 735.46,250.8481 738.5,253.2969 C766.05,275.4869 869.54,239.6269 897.5,261.2969 C935.05,290.3969 937.28,355.2969 936.84,378.1469 " fill="none" id="NODE_BUG_M-backto-SRV_HEAD_ORIENT_SWITCH" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="726.5444,237.5445,726.7686,247.3909,728.6786,242.0662,734.0032,243.9762,726.5444,237.5445" style="stroke:#181818;stroke-width:1.0;"/><path d="M933.5,266.2969 L933.5,307.2969 L1100.5,307.2969 L1100.5,276.2969 L1090.5,266.2969 L933.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1090.5,266.2969 L1090.5,276.2969 L1100.5,276.2969 L1090.5,266.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="130" x="947.5" y="291.3638">std_srvs/SetBool.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="701.48" y="172.5038">cl</text></g><!--MD5=[06dcd0764fad3e780b972b74bfdae648]
+@startuml
+
+''' INFOS
+title NODE bug_m
+skinparam Padding 8
+allow_mixing
+
+
+''' COMPONENTS
+component "bug_m" <<ROSPy node>> as NODE_BUG_M {
+	node "clbk_odom" as NODE_BUG_M.READ_ODOM
+	node "clbk_laser" as NODE_BUG_M.LISTENER_LASER
+}
+
+() "/odom" as TOPIC_ODOM
+NODE_BUG_M.READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/scan" as TOPIC_LASER
+NODE_BUG_M.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_BUG_M "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/bug_m_signal" as TOPIC_BUG_M_SIGNAL
+NODE_BUG_M "pub" - -> TOPIC_BUG_M_SIGNAL
+note on link: std_srvs/Empty.srv
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+NODE_BUG_M "cl" <- - SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+NODE_BUG_M "cl" <- - SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/head_orient_switch" as SRV_HEAD_ORIENT_SWITCH
+NODE_BUG_M "cl" <- - SRV_HEAD_ORIENT_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+@startuml
+
+title NODE bug_m
+skinparam Padding 8
+allow_mixing
+
+
+component "bug_m" <<ROSPy node>> as NODE_BUG_M {
+	node "clbk_odom" as NODE_BUG_M.READ_ODOM
+	node "clbk_laser" as NODE_BUG_M.LISTENER_LASER
+}
+
+() "/odom" as TOPIC_ODOM
+NODE_BUG_M.READ_ODOM "sub" <- - TOPIC_ODOM
+note on link: nav_msgs/Odometry.msg
+
+() "/scan" as TOPIC_LASER
+NODE_BUG_M.LISTENER_LASER "sub" <- - TOPIC_LASER
+note on link: sensor_msgs/LaserScan.msg
+
+() "/cmd_vel" as TOPIC_VEL
+NODE_BUG_M "pub" - -> TOPIC_VEL
+note on link: geometry_msgs/Twist.msg
+
+() "/bug_m_signal" as TOPIC_BUG_M_SIGNAL
+NODE_BUG_M "pub" - -> TOPIC_BUG_M_SIGNAL
+note on link: std_srvs/Empty.srv
+
+() "/go_to_point_switch" as SRV_GOTO_SWITCH
+NODE_BUG_M "cl" <- - SRV_GOTO_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/wall_follower_switch" as SRV_WALL_SWITCH
+NODE_BUG_M "cl" <- - SRV_WALL_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/head_orient_switch" as SRV_HEAD_ORIENT_SWITCH
+NODE_BUG_M "cl" <- - SRV_HEAD_ORIENT_SWITCH
+note on link: std_srvs/SetBool.srv
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
