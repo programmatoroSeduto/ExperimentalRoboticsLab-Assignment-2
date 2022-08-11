@@ -10,6 +10,11 @@
 
   <!-- By default, we won't load or override the robot_description -->
   <arg name="load_robot_description" default="false"/>
+  
+  <!-- world file -->
+  <arg name="world_path" default="/root/ros_ws/src/erl2-new/robocluedo_dependencies/worlds"/>
+  <arg name="world_file" default="$(arg world_path)/square_room.world"/>
+  <arg name="world_name" default="$(arg world_file)" />
 
   <!--
   By default, hide joint_state_publisher's GUI
@@ -32,6 +37,7 @@
     <arg name="paused" value="$(arg paused)"/>
     <arg name="gazebo_gui" value="$(arg gazebo_gui)"/>
     <arg name="urdf_path" value="$(arg urdf_path)"/>
+    <arg name="world_name" value="$(arg world_file)" />
   </include>
 
   <!-- If needed, broadcast static tf for robot root -->

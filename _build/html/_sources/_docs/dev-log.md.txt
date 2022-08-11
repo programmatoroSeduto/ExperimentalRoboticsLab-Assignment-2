@@ -976,6 +976,10 @@ lavoro sul movement controller, anzitutto il modello del robot:
 	- seguendo la procedura sulle slides...
 	- funziona? **funziona!**
 - **COMMIT** : "working on robot model (moveit package, fixes on the urdf model)"
+- mancano ancora alcune cose:
+	- world files
+	- piccola prova ... ok!
+	- meglio salvarsi delle immagini dell'environment
 
 
 

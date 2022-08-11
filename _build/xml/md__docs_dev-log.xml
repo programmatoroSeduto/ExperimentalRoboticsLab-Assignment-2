@@ -898,6 +898,12 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (moveit package, fixes on the urdf model)&quot;</para>
+</listitem><listitem><para>mancano ancora alcune cose:<itemizedlist>
+<listitem><para>world files</para>
+</listitem><listitem><para>piccola prova ... ok!</para>
+</listitem><listitem><para>meglio salvarsi delle immagini dell&apos;environment</para>
+</listitem></itemizedlist>
+</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

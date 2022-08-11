@@ -193,6 +193,18 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>HOW<sp/>TO<sp/>test<sp/>the<sp/>model<sp/>with<sp/>Gazebo</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">launch<sp/>this:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">it<sp/>should<sp/>appear<sp/>the<sp/>robot,<sp/>similar<sp/>to<sp/>this:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![robot](robocluedo_robot.png)</highlight></codeline>
     </programlisting>
     <location file="robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md"/>
   </compounddef>

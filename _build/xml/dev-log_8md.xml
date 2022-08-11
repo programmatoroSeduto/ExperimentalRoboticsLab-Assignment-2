@@ -985,6 +985,10 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>seguendo<sp/>la<sp/>procedura<sp/>sulle<sp/>slides...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>funziona?<sp/>**funziona!**</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(moveit<sp/>package,<sp/>fixes<sp/>on<sp/>the<sp/>urdf<sp/>model)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mancano<sp/>ancora<sp/>alcune<sp/>cose:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>world<sp/>files</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>piccola<sp/>prova<sp/>...<sp/>ok!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>meglio<sp/>salvarsi<sp/>delle<sp/>immagini<sp/>dell&apos;environment</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

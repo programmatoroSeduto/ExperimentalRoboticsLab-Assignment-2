@@ -345,6 +345,8 @@
   </compound>
   <compound refid="robocluedo-urdf-user-manual_8md" kind="file"><name>robocluedo-urdf-user-manual.md</name>
   </compound>
+  <compound refid="worlds-user-manual_8md" kind="file"><name>worlds-user-manual.md</name>
+  </compound>
   <compound refid="simulation_8cpp" kind="file"><name>simulation.cpp</name>
     <member refid="simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
     <member refid="simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
@@ -537,6 +539,8 @@
   <compound refid="md_robocluedo_dependencies__docs_erl2-oracle-user-manual" kind="page"><name>md_robocluedo_dependencies__docs_erl2-oracle-user-manual</name>
   </compound>
   <compound refid="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual" kind="page"><name>md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual</name>
+  </compound>
+  <compound refid="md_robocluedo_dependencies__docs_worlds-user-manual" kind="page"><name>md_robocluedo_dependencies__docs_worlds-user-manual</name>
   </compound>
   <compound refid="md_robocluedo_rosplan__docs_new-robocluedo" kind="page"><name>md_robocluedo_rosplan__docs_new-robocluedo</name>
   </compound>

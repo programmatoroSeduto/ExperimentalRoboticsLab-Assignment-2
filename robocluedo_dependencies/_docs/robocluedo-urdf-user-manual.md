@@ -184,3 +184,15 @@ joint_limits:
     max_acceleration: 0
 
 ```
+
+## HOW TO test the model with Gazebo
+
+launch this:
+
+```bash
+roslaunch robocluedo_robot gazebo.launch
+```
+
+it should appear the robot, similar to this:
+
+![robot](robocluedo_robot.png)
