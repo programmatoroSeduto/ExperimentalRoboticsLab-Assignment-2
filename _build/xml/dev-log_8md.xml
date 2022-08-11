@@ -1058,11 +1058,42 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>UML<sp/>di<sp/>bug_m<sp/></highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>:<sp/>tutti<sp/>i<sp/>nodi<sp/>devono<sp/>essere<sp/>*spenti*<sp/>all&apos;avvio<sp/>del<sp/>sistema</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>:<sp/>il<sp/>servizio,<sp/>quando<sp/>dovrebbe<sp/>disattivare<sp/>il<sp/>nodo,<sp/>*non<sp/>invia<sp/>il<sp/>segnale<sp/>di<sp/>stop!*</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>:<sp/>il<sp/>robot<sp/>si<sp/>incastra<sp/>per<sp/>terra<sp/>...<sp/>perchè<sp/>quella<sp/>cosa<sp/>sul<sp/>frontale<sp/>del<sp/>robot<sp/>*non<sp/>è<sp/>una<sp/>vera<sp/>castor<sp/>wheel*</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>comunque,<sp/>a<sp/>parte<sp/>qualche<sp/>difetto<sp/>di<sp/>meccanismo,<sp/>*sembra<sp/>funzionare*</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>l&apos;unica<sp/>cosa<sp/>davvero<sp/>da<sp/>risolvere<sp/>è<sp/>rifare<sp/>la<sp/>ruota<sp/>davanti<sp/>del<sp/>robot</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>navigation<sp/>system<sp/>(testing)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>:<sp/>il<sp/>robot<sp/>si<sp/>incastra<sp/>per<sp/>terra<sp/>...<sp/>perchè<sp/>quella<sp/>cosa<sp/>sul<sp/>frontale<sp/>del<sp/>robot<sp/>*non<sp/>è<sp/>una<sp/>vera<sp/>castor<sp/>wheel*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anzitutto,<sp/>la<sp/>situazione,<sp/>con<sp/>un<sp/>teleop<sp/>twist<sp/>keyboard<sp/>stupido<sp/>stupido<sp/>giusto<sp/>per<sp/>vedere<sp/>come<sp/>si<sp/>muove<sp/>il<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>provato<sp/>ad<sp/>aumentare<sp/>la<sp/>dimensione<sp/>della<sp/>&quot;castor&quot;<sp/>davanti,<sp/>giusto<sp/>per<sp/>avere<sp/>una<sp/>superficie<sp/>di<sp/>impatto<sp/>meno<sp/>aspra<sp/>e<sp/>sembra<sp/>funzionare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>torno<sp/>alla<sp/>vecchia<sp/>giusto<sp/>per<sp/>confrontare...<sp/>con<sp/>la<sp/>ruota<sp/>piccola<sp/>il<sp/>robot<sp/>tende<sp/>ad<sp/>impuntarsi<sp/>in<sp/>avanti</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>potrebbe<sp/>anche<sp/>essere<sp/>un<sp/>problema<sp/>di<sp/>guadagno:<sp/>per<sp/>il<sp/>movimento<sp/>bisogna<sp/>aumentare<sp/>la<sp/>velicità</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(voglio<sp/>mettere<sp/>esplicitamente<sp/>a<sp/>confronto<sp/>le<sp/>due<sp/>situazioni)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*robot<sp/>con<sp/>la<sp/>ruota<sp/>piccola*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>giro<sp/>su<sp/>se<sp/>stesso</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>il<sp/>robot<sp/>si<sp/>impunta<sp/>e<sp/>tende<sp/>a<sp/>ruotare<sp/>attorno<sp/>alla<sp/>castor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>andare<sp/>avanti<sp/>e<sp/>tornare<sp/>indietro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>andando<sp/>avanti<sp/>il<sp/>robot<sp/>tende<sp/>ad<sp/>oscillare<sp/>perchè<sp/>si<sp/>impunta<sp/>sulla<sp/>ruota,<sp/>viene<sp/>fuori<sp/>un<sp/>movimento<sp/>di<sp/>pitch<sp/>che<sp/>non<sp/>dovrebbe<sp/>esserci<sp/>e<sp/>che<sp/>disturba<sp/>la<sp/>odometry</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>girare<sp/>in<sp/>cerchio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>tende<sp/>a<sp/>non<sp/>girare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**il<sp/>braccio<sp/>deve<sp/>essere<sp/>sollevato<sp/>durante<sp/>i<sp/>test!**<sp/>altrimenti<sp/>certo<sp/>che<sp/>il<sp/>secondo<sp/>caso<sp/>è<sp/>meglio<sp/>del<sp/>primo:<sp/>il<sp/>braccio<sp/>è<sp/>piegato<sp/>all&apos;indietro!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*e<sp/>ora<sp/>robot<sp/>con<sp/>la<sp/>ruota<sp/>grande*,<sp/>aumentando<sp/>solo<sp/>la<sp/>dimensione<sp/>della<sp/>ruota<sp/>senza<sp/>alterarne<sp/>l&apos;origine</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>giro<sp/>su<sp/>se<sp/>stesso</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>molto<sp/>meglio,<sp/>anche<sp/>se<sp/>non<sp/>perfetto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>andare<sp/>avanti<sp/>e<sp/>tornare<sp/>indietro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>pitch<sp/>davvero<sp/>eccessivo...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>girare<sp/>in<sp/>cerchio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>il<sp/>comportamento<sp/>è<sp/>ancora<sp/>ondeggiante,<sp/>però<sp/>stavolta<sp/>il<sp/>robot<sp/>tende<sp/>a<sp/>fare<sp/>un<sp/>giro<sp/>più<sp/>stretto,<sp/>non<sp/>si<sp/>perde<sp/>il<sp/>giro</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>guardando<sp/>il<sp/>robot<sp/>però<sp/>mi<sp/>sta<sp/>venendo<sp/>un&apos;ideuzza:<sp/>*ma<sp/>se<sp/>lo<sp/>facessi<sp/>avanzare<sp/>dalla<sp/>parte<sp/>sul<sp/>retro<sp/>piuttosto<sp/>che<sp/>dalla<sp/>dua<sp/>parte<sp/>frontale?*<sp/>lo<sp/>faccio<sp/>andare<sp/>in<sp/>retromarcia<sp/>piuttosto<sp/>che<sp/>in<sp/>avanti<sp/>come<sp/>dovrebbe,<sp/>così<sp/>la<sp/>castor<sp/>la<sp/>trascina<sp/>e<sp/>basta,<sp/>senza<sp/>corrompere<sp/>così<sp/>tanto<sp/>il<sp/>robot,<sp/>e<sp/>potrei<sp/>anche<sp/>ripristinare<sp/>la<sp/>vecchia<sp/>ruota</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ripristino<sp/>della<sp/>vecchia<sp/>ruota<sp/>e<sp/>&quot;tenta<sp/>di<sp/>invertire&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*ha<sp/>funzionato!*<sp/>sono<sp/>molto<sp/>soddisfatto<sp/>del<sp/>risultato<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(basta<sp/>solo<sp/>non<sp/>andare<sp/>troppo<sp/>veloce<sp/>o<sp/>il<sp/>robot<sp/>si<sp/>ribalterà<sp/>in<sp/>avanti)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*maaa<sp/>se<sp/>gli<sp/>mettessi<sp/>altre<sp/>due<sp/>ruote?*<sp/>con<sp/>dei<sp/>joint<sp/>non<sp/>controllati</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*anche<sp/>questa<sp/>funziona!*<sp/>e<sp/>allora<sp/>sai<sp/>che<sp/>c&apos;è?<sp/>gli<sp/>tolgo<sp/>la<sp/>castor<sp/>adesso</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>già<sp/>che<sp/>siamo<sp/>in<sp/>vena<sp/>di<sp/>aggiornamenti,<sp/>voglio<sp/>provare<sp/>a<sp/>mettere<sp/>a<sp/>posto<sp/>il<sp/>gripper<sp/>(o<sp/>eliminarlo<sp/>direttamente?)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>come<sp/>temevo<sp/>ho<sp/>fatto<sp/>casino:<sp/>devo<sp/>rifare<sp/>il<sp/>pacchetto<sp/>moveit...</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

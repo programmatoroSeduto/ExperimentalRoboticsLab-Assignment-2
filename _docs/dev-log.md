@@ -1049,11 +1049,42 @@ rosrun robocluedo_movement_controller bug_m.py
 	- aggiornamento UML di bug_m 
 - **ISSUE** : tutti i nodi devono essere *spenti* all'avvio del sistema
 	- **ISSUE** : il servizio, quando dovrebbe disattivare il nodo, *non invia il segnale di stop!*
-- **ISSUE** : il robot si incastra per terra ... perchè quella cosa sul frontale del robot *non è una vera castor wheel*
 
 - comunque, a parte qualche difetto di meccanismo, *sembra funzionare*
 	- l'unica cosa davvero da risolvere è rifare la ruota davanti del robot
 - **COMMIT** : "working on the navigation system (testing)"
+
+---
+
+- **ISSUE** : il robot si incastra per terra ... perchè quella cosa sul frontale del robot *non è una vera castor wheel*
+	- anzitutto, la situazione, con un teleop twist keyboard stupido stupido giusto per vedere come si muove il robot
+	- ho provato ad aumentare la dimensione della "castor" davanti, giusto per avere una superficie di impatto meno aspra e sembra funzionare
+	- torno alla vecchia giusto per confrontare... con la ruota piccola il robot tende ad impuntarsi in avanti
+	- potrebbe anche essere un problema di guadagno: per il movimento bisogna aumentare la velicità
+- (voglio mettere esplicitamente a confronto le due situazioni)
+- *robot con la ruota piccola*
+	- test giro su se stesso
+		- il robot si impunta e tende a ruotare attorno alla castor
+	- test andare avanti e tornare indietro
+		- andando avanti il robot tende ad oscillare perchè si impunta sulla ruota, viene fuori un movimento di pitch che non dovrebbe esserci e che disturba la odometry
+	- test girare in cerchio
+		- tende a non girare
+- **il braccio deve essere sollevato durante i test!** altrimenti certo che il secondo caso è meglio del primo: il braccio è piegato all'indietro!
+- *e ora robot con la ruota grande*, aumentando solo la dimensione della ruota senza alterarne l'origine
+	- test giro su se stesso
+		- molto meglio, anche se non perfetto
+	- test andare avanti e tornare indietro
+		- pitch davvero eccessivo...
+	- test girare in cerchio
+		- il comportamento è ancora ondeggiante, però stavolta il robot tende a fare un giro più stretto, non si perde il giro
+- guardando il robot però mi sta venendo un'ideuzza: *ma se lo facessi avanzare dalla parte sul retro piuttosto che dalla dua parte frontale?* lo faccio andare in retromarcia piuttosto che in avanti come dovrebbe, così la castor la trascina e basta, senza corrompere così tanto il robot, e potrei anche ripristinare la vecchia ruota
+	- ripristino della vecchia ruota e "tenta di invertire"
+	- *ha funzionato!* sono molto soddisfatto del risultato 
+	- (basta solo non andare troppo veloce o il robot si ribalterà in avanti)
+	- *maaa se gli mettessi altre due ruote?* con dei joint non controllati
+	- *anche questa funziona!* e allora sai che c'è? gli tolgo la castor adesso
+	- già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)
+- come temevo ho fatto casino: devo rifare il pacchetto moveit...
 
 
 

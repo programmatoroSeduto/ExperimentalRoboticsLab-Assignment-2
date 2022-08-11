@@ -41,6 +41,7 @@
             <mechanicalInterface>1</mechanicalInterface>
         </actuator>
     </transmission>
+    <!--
     <transmission name="left_grip_trans">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="left_grip_joint">
@@ -61,6 +62,7 @@
             <mechanicalInterface>1</mechanicalInterface>
         </actuator>
     </transmission>
+    -->
     <transmission name="trans_joint_right_wheel">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="joint_right_wheel">
@@ -121,6 +123,7 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
+    <!--
     <transmission name="trans_right_grip_joint">
         <type>transmission_interface/SimpleTransmission</type>
         <joint name="right_grip_joint">
@@ -141,5 +144,6 @@
             <mechanicalReduction>1</mechanicalReduction>
         </actuator>
     </transmission>
+    -->
 
 </robot>

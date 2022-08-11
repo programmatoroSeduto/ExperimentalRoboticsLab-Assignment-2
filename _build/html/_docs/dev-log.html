@@ -80,6 +80,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run-the-project.html">How to Run this Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-the-project.html">How to Test the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="twist-keyboard.html">HOW TO – twist keyboard</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
 <ul>
@@ -1355,13 +1356,74 @@ rosrun robocluedo_movement_controller bug_m.py
 <li><p><strong>ISSUE</strong> : il servizio, quando dovrebbe disattivare il nodo, <em>non invia il segnale di stop!</em></p></li>
 </ul>
 </li>
-<li><p><strong>ISSUE</strong> : il robot si incastra per terra … perchè quella cosa sul frontale del robot <em>non è una vera castor wheel</em></p></li>
 <li><p>comunque, a parte qualche difetto di meccanismo, <em>sembra funzionare</em></p>
 <ul>
 <li><p>l’unica cosa davvero da risolvere è rifare la ruota davanti del robot</p></li>
 </ul>
 </li>
 <li><p><strong>COMMIT</strong> : “working on the navigation system (testing)”</p></li>
+</ul>
+<hr class="docutils" />
+<ul class="simple">
+<li><p><strong>ISSUE</strong> : il robot si incastra per terra … perchè quella cosa sul frontale del robot <em>non è una vera castor wheel</em></p>
+<ul>
+<li><p>anzitutto, la situazione, con un teleop twist keyboard stupido stupido giusto per vedere come si muove il robot</p></li>
+<li><p>ho provato ad aumentare la dimensione della “castor” davanti, giusto per avere una superficie di impatto meno aspra e sembra funzionare</p></li>
+<li><p>torno alla vecchia giusto per confrontare… con la ruota piccola il robot tende ad impuntarsi in avanti</p></li>
+<li><p>potrebbe anche essere un problema di guadagno: per il movimento bisogna aumentare la velicità</p></li>
+</ul>
+</li>
+<li><p>(voglio mettere esplicitamente a confronto le due situazioni)</p></li>
+<li><p><em>robot con la ruota piccola</em></p>
+<ul>
+<li><p>test giro su se stesso</p>
+<ul>
+<li><p>il robot si impunta e tende a ruotare attorno alla castor</p></li>
+</ul>
+</li>
+<li><p>test andare avanti e tornare indietro</p>
+<ul>
+<li><p>andando avanti il robot tende ad oscillare perchè si impunta sulla ruota, viene fuori un movimento di pitch che non dovrebbe esserci e che disturba la odometry</p></li>
+</ul>
+</li>
+<li><p>test girare in cerchio</p>
+<ul>
+<li><p>tende a non girare</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>il braccio deve essere sollevato durante i test!</strong> altrimenti certo che il secondo caso è meglio del primo: il braccio è piegato all’indietro!</p></li>
+<li><p><em>e ora robot con la ruota grande</em>, aumentando solo la dimensione della ruota senza alterarne l’origine</p>
+<ul>
+<li><p>test giro su se stesso</p>
+<ul>
+<li><p>molto meglio, anche se non perfetto</p></li>
+</ul>
+</li>
+<li><p>test andare avanti e tornare indietro</p>
+<ul>
+<li><p>pitch davvero eccessivo…</p></li>
+</ul>
+</li>
+<li><p>test girare in cerchio</p>
+<ul>
+<li><p>il comportamento è ancora ondeggiante, però stavolta il robot tende a fare un giro più stretto, non si perde il giro</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>guardando il robot però mi sta venendo un’ideuzza: <em>ma se lo facessi avanzare dalla parte sul retro piuttosto che dalla dua parte frontale?</em> lo faccio andare in retromarcia piuttosto che in avanti come dovrebbe, così la castor la trascina e basta, senza corrompere così tanto il robot, e potrei anche ripristinare la vecchia ruota</p>
+<ul>
+<li><p>ripristino della vecchia ruota e “tenta di invertire”</p></li>
+<li><p><em>ha funzionato!</em> sono molto soddisfatto del risultato</p></li>
+<li><p>(basta solo non andare troppo veloce o il robot si ribalterà in avanti)</p></li>
+<li><p><em>maaa se gli mettessi altre due ruote?</em> con dei joint non controllati</p></li>
+<li><p><em>anche questa funziona!</em> e allora sai che c’è? gli tolgo la castor adesso</p></li>
+<li><p>già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)</p></li>
+</ul>
+</li>
+<li><p>come temevo ho fatto casino: devo rifare il pacchetto moveit…</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">

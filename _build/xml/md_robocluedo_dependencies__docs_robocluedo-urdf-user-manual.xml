@@ -8,7 +8,7 @@
     <detaileddescription>
 <para><programlisting filename=".toctree"><codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
 </programlisting></para>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md101">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md106">
 <title>Model file structure</title>
 <para>inside the folder <computeroutput>robocluedo_urdf_model</computeroutput> there are these files:</para>
 <para><itemizedlist>
@@ -27,7 +27,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md102">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md107">
 <title>HOW TO generate the model</title>
 <para>execute the file <computeroutput>generate_model.sh</computeroutput>; the URDF and its schematic will be located into the folder <computeroutput>model</computeroutput> with names</para>
 <para><itemizedlist>
@@ -53,7 +53,7 @@
 <codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.pdf</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md103">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md108">
 <title>HOW TO generate the package with Moveit</title>
 <para>first of all, use the setup assistant to generate the package. Inside the project, <computeroutput>robocluedo_robot</computeroutput>.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>moveit_setup_assistant<sp/>setup.assistant.launch</highlight></codeline>
@@ -65,7 +65,7 @@
 </listitem><listitem><para>In config/joint_limits.yaml let&apos;s set to 1 the scaling factor.</para>
 </listitem></itemizedlist>
 </para>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md104">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md109">
 <title>file ros_controllers.yaml</title>
 <para><programlisting filename=".yaml"><codeline><highlight class="normal">#<sp/>Simulation<sp/>settings<sp/>for<sp/>using<sp/>moveit_sim_controllers</highlight></codeline>
 <codeline><highlight class="normal">moveit_sim_hw_interface:</highlight></codeline>
@@ -140,7 +140,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md105">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md110">
 <title>file joint_limits.yaml</title>
 <para><programlisting filename=".yaml"><codeline><highlight class="normal">#<sp/>joint_limits.yaml<sp/>allows<sp/>the<sp/>dynamics<sp/>properties<sp/>specified<sp/>in<sp/>the<sp/>URDF<sp/>to<sp/>be<sp/>overwritten<sp/>or<sp/>augmented<sp/>as<sp/>needed</highlight></codeline>
 <codeline></codeline>
@@ -185,7 +185,7 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md106">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md111">
 <title>HOW TO test the model with Gazebo</title>
 <para>launch this:</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>

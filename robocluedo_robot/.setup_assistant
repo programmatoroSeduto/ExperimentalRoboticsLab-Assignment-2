@@ -1,11 +1,11 @@
 moveit_setup_assistant_config:
   URDF:
-    package: ""
-    relative_path: /root/ros_ws/src/erl2-new/robocluedo_dependencies/robocluedo_urdf_model/model/robocluedo_urdf.urdf
+    package: robocluedo_urdf_model
+    relative_path: robot/model/robocluedo_urdf.urdf
     xacro_args: ""
   SRDF:
     relative_path: config/robocluedo_robot.srdf
   CONFIG:
-    author_name: programmatoroSeduto
-    author_email: francesc.ganci@gmail.com
-    generated_timestamp: 1660213186
+    author_name: gg
+    author_email: gg.gg@gg.gg
+    generated_timestamp: 1660247522

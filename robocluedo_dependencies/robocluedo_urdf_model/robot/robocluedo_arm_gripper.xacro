@@ -3,7 +3,7 @@
     
     <link name="cluedo_link">
         
-<inertial>
+		<inertial>
             <mass value="0.015" />
             <origin rpy="0 0 0" xyz="0 0 0" />
             <inertia ixx="0.000010279" ixy="0" ixz="0" iyy="0.000010279" iyz="0" izz="0.000007225" />
@@ -30,6 +30,8 @@
         <parent link="arm_link_03" />
         <child link="cluedo_link" />
     </joint>
+    
+<!--
     <link name="right_grip_link">
         
 <inertial>
@@ -88,5 +90,5 @@
         <parent link="cluedo_link" />
         <child link="left_grip_link" />
     </joint>
-    
+-->
 </robot>

@@ -3,7 +3,7 @@
     
     <link name="arm_base_link">
         
-<inertial>
+		<inertial>
             <mass value="0.1" />
             <origin rpy="0 0 0" xyz="0 0 0" />
             <inertia ixx="0.0000416666667" ixy="0" ixz="0" iyy="0.0000416666667" iyz="0" izz="0.0000416666667" />
@@ -25,14 +25,14 @@
     </link>
     
     <joint name="arm_base_to_base" type="fixed">
-        <origin rpy="0 0 0" xyz="0 0 0.085" />
+        <origin rpy="0 0 0" xyz="-0.075 0 0.085" />
         <parent link="base_link" />
         <child link="arm_base_link" />
     </joint>
     
     <link name="arm_link_01">
         
-<inertial>
+		<inertial>
             <mass value="0.025" />
             <origin rpy="0 0 0" xyz="0 0 0.15" />
             <inertia ixx="0.000010279" ixy="0" ixz="0" iyy="0.000010279" iyz="0" izz="0.000007225" />

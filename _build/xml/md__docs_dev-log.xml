@@ -978,12 +978,65 @@
 <listitem><para><bold>ISSUE</bold> : il servizio, quando dovrebbe disattivare il nodo, <emphasis>non invia il segnale di stop!</emphasis></para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para><bold>ISSUE</bold> : il robot si incastra per terra ... perchè quella cosa sul frontale del robot <emphasis>non è una vera castor wheel</emphasis></para>
 </listitem><listitem><para>comunque, a parte qualche difetto di meccanismo, <emphasis>sembra funzionare</emphasis><itemizedlist>
 <listitem><para>l&apos;unica cosa davvero da risolvere è rifare la ruota davanti del robot</para>
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on the navigation system (testing)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para><bold>ISSUE</bold> : il robot si incastra per terra ... perchè quella cosa sul frontale del robot <emphasis>non è una vera castor wheel</emphasis><itemizedlist>
+<listitem><para>anzitutto, la situazione, con un teleop twist keyboard stupido stupido giusto per vedere come si muove il robot</para>
+</listitem><listitem><para>ho provato ad aumentare la dimensione della &quot;castor&quot; davanti, giusto per avere una superficie di impatto meno aspra e sembra funzionare</para>
+</listitem><listitem><para>torno alla vecchia giusto per confrontare... con la ruota piccola il robot tende ad impuntarsi in avanti</para>
+</listitem><listitem><para>potrebbe anche essere un problema di guadagno: per il movimento bisogna aumentare la velicità</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(voglio mettere esplicitamente a confronto le due situazioni)</para>
+</listitem><listitem><para><emphasis>robot con la ruota piccola</emphasis><itemizedlist>
+<listitem><para>test giro su se stesso<itemizedlist>
+<listitem><para>il robot si impunta e tende a ruotare attorno alla castor</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test andare avanti e tornare indietro<itemizedlist>
+<listitem><para>andando avanti il robot tende ad oscillare perchè si impunta sulla ruota, viene fuori un movimento di pitch che non dovrebbe esserci e che disturba la odometry</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test girare in cerchio<itemizedlist>
+<listitem><para>tende a non girare</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>il braccio deve essere sollevato durante i test!</bold> altrimenti certo che il secondo caso è meglio del primo: il braccio è piegato all&apos;indietro!</para>
+</listitem><listitem><para><emphasis>e ora robot con la ruota grande</emphasis>, aumentando solo la dimensione della ruota senza alterarne l&apos;origine<itemizedlist>
+<listitem><para>test giro su se stesso<itemizedlist>
+<listitem><para>molto meglio, anche se non perfetto</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test andare avanti e tornare indietro<itemizedlist>
+<listitem><para>pitch davvero eccessivo...</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test girare in cerchio<itemizedlist>
+<listitem><para>il comportamento è ancora ondeggiante, però stavolta il robot tende a fare un giro più stretto, non si perde il giro</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>guardando il robot però mi sta venendo un&apos;ideuzza: <emphasis>ma se lo facessi avanzare dalla parte sul retro piuttosto che dalla dua parte frontale?</emphasis> lo faccio andare in retromarcia piuttosto che in avanti come dovrebbe, così la castor la trascina e basta, senza corrompere così tanto il robot, e potrei anche ripristinare la vecchia ruota<itemizedlist>
+<listitem><para>ripristino della vecchia ruota e &quot;tenta di invertire&quot;</para>
+</listitem><listitem><para><emphasis>ha funzionato!</emphasis> sono molto soddisfatto del risultato</para>
+</listitem><listitem><para>(basta solo non andare troppo veloce o il robot si ribalterà in avanti)</para>
+</listitem><listitem><para><emphasis>maaa se gli mettessi altre due ruote?</emphasis> con dei joint non controllati</para>
+</listitem><listitem><para><emphasis>anche questa funziona!</emphasis> e allora sai che c&apos;è? gli tolgo la castor adesso</para>
+</listitem><listitem><para>già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>come temevo ho fatto casino: devo rifare il pacchetto moveit...</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
