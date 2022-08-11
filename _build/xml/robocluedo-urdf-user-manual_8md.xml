@@ -14,6 +14,8 @@
 <codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Model<sp/>file<sp/>structure</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">inside<sp/>the<sp/>folder<sp/>`robocluedo_urdf_model`<sp/>there<sp/>are<sp/>these<sp/>files:</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>`generate_model.sh`<sp/>is<sp/>a<sp/>script<sp/>to<sp/>tect<sp/>the<sp/>correctness<sp/>of<sp/>the<sp/>model;<sp/>it<sp/>also<sp/>generates<sp/>a<sp/>`.pdf`<sp/>schematic<sp/>of<sp/>the<sp/>model</highlight></codeline>
@@ -53,6 +55,143 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>child(4):<sp/><sp/>link_right_wheel</highlight></codeline>
 <codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.gv</highlight></codeline>
 <codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.pdf</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>HOW<sp/>TO<sp/>generate<sp/>the<sp/>package<sp/>with<sp/>Moveit<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">first<sp/>of<sp/>all,<sp/>use<sp/>the<sp/>setup<sp/>assistant<sp/>to<sp/>generate<sp/>the<sp/>package.<sp/>Inside<sp/>the<sp/>project,<sp/>`robocluedo_robot`.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>moveit_setup_assistant<sp/>setup.assistant.launch</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">the<sp/>code<sp/>generated<sp/>by<sp/>the<sp/>setup<sp/>assistant<sp/>won&apos;t<sp/>work<sp/>at<sp/>the<sp/>beginning.<sp/>Here<sp/>are<sp/>the<sp/>fixes:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>In<sp/>trajectory_execution.launch.xml,<sp/>we<sp/>need<sp/>to<sp/>comment<sp/>line<sp/>21</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>In<sp/>config/ros_controllers.yaml,<sp/>let&apos;s<sp/>modify<sp/>the<sp/>gain<sp/>of<sp/>the<sp/>proportional<sp/>controllers</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>In<sp/>config/joint_limits.yaml<sp/>let&apos;s<sp/>set<sp/>to<sp/>1<sp/>the<sp/>scaling<sp/>factor.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>file<sp/>ros_controllers.yaml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```yaml</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Simulation<sp/>settings<sp/>for<sp/>using<sp/>moveit_sim_controllers</highlight></codeline>
+<codeline><highlight class="normal">moveit_sim_hw_interface:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>joint_model_group:<sp/>arm_group</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>joint_model_group_pose:<sp/>arm_home</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Settings<sp/>for<sp/>ros_control_boilerplate<sp/>control<sp/>loop</highlight></codeline>
+<codeline><highlight class="normal">generic_hw_control_loop:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>loop_hz:<sp/>300</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>cycle_time_error_threshold:<sp/>0.01</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Settings<sp/>for<sp/>ros_control<sp/>hardware<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal">hardware_interface:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_01</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>left_grip_joint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>right_grip_joint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>joint_left_wheel</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>joint_right_wheel</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>sim_control_mode:<sp/>1<sp/><sp/>#<sp/>0:<sp/>position,<sp/>1:<sp/>velocity</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Publish<sp/>all<sp/>joint<sp/>states</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Creates<sp/>the<sp/>/joint_states<sp/>topic<sp/>necessary<sp/>in<sp/>ROS</highlight></codeline>
+<codeline><highlight class="normal">joint_state_controller:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>type:<sp/>joint_state_controller/JointStateController</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>publish_rate:<sp/>50</highlight></codeline>
+<codeline><highlight class="normal">controller_list:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>name:<sp/>arm_group_controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>action_ns:<sp/>follow_joint_trajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>default:<sp/>True</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>FollowJointTrajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_01</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>name:<sp/>ee_group_controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>action_ns:<sp/>follow_joint_trajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>default:<sp/>True</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>FollowJointTrajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>left_grip_joint</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>right_grip_joint</highlight></codeline>
+<codeline><highlight class="normal">arm_group_controller:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>type:<sp/>effort_controllers/JointTrajectoryController</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_01</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>gains:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_01:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_02:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_03:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_04:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>file<sp/>joint_limits.yaml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```yaml</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>joint_limits.yaml<sp/>allows<sp/>the<sp/>dynamics<sp/>properties<sp/>specified<sp/>in<sp/>the<sp/>URDF<sp/>to<sp/>be<sp/>overwritten<sp/>or<sp/>augmented<sp/>as<sp/>needed</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>For<sp/>beginners,<sp/>we<sp/>downscale<sp/>velocity<sp/>and<sp/>acceleration<sp/>limits.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>You<sp/>can<sp/>always<sp/>specify<sp/>higher<sp/>scaling<sp/>factors<sp/>(&lt;=<sp/>1.0)<sp/>in<sp/>your<sp/>motion<sp/>requests.<sp/><sp/>#<sp/>Increase<sp/>the<sp/>values<sp/>below<sp/>to<sp/>1.0<sp/>to<sp/>always<sp/>move<sp/>at<sp/>maximum<sp/>speed.</highlight></codeline>
+<codeline><highlight class="normal">default_velocity_scaling_factor:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">default_acceleration_scaling_factor:<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>Specific<sp/>joint<sp/>properties<sp/>can<sp/>be<sp/>changed<sp/>with<sp/>the<sp/>keys<sp/>[max_position,<sp/>min_position,<sp/>max_velocity,<sp/>max_acceleration]</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Joint<sp/>limits<sp/>can<sp/>be<sp/>turned<sp/>off<sp/>with<sp/>[has_velocity_limits,<sp/>has_acceleration_limits]</highlight></codeline>
+<codeline><highlight class="normal">joint_limits:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>arm_joint_01:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>arm_joint_02:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>arm_joint_03:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>arm_joint_04:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>left_grip_joint:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>6.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>right_grip_joint:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_velocity:<sp/>6.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
     <location file="robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md"/>

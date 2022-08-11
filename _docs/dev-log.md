@@ -968,6 +968,14 @@ lavoro sul movement controller, anzitutto il modello del robot:
 	- ho solo scomposto il modello, dovrebbe continuare a funzionare... e funziona infatti (meno male)
 	- e torniamo sulla documentazione (per ora molto minimal)
 - **COMMIT** : "working on robot model (first setup, xacro model)"
+- e adesso il package in MoveIt
+	- prima creazione col setup assistant
+	- il gripper non funziona bene ... tento di correggerlo ... 
+	- (anche qui c'è voluto più del previsto)
+- e facciamo funzionare il package MoveIt
+	- seguendo la procedura sulle slides...
+	- funziona? **funziona!**
+- **COMMIT** : "working on robot model (moveit package, fixes on the urdf model)"
 
 
 

@@ -977,6 +977,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>solo<sp/>scomposto<sp/>il<sp/>modello,<sp/>dovrebbe<sp/>continuare<sp/>a<sp/>funzionare...<sp/>e<sp/>funziona<sp/>infatti<sp/>(meno<sp/>male)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>torniamo<sp/>sulla<sp/>documentazione<sp/>(per<sp/>ora<sp/>molto<sp/>minimal)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(first<sp/>setup,<sp/>xacro<sp/>model)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>adesso<sp/>il<sp/>package<sp/>in<sp/>MoveIt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>creazione<sp/>col<sp/>setup<sp/>assistant</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>gripper<sp/>non<sp/>funziona<sp/>bene<sp/>...<sp/>tento<sp/>di<sp/>correggerlo<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(anche<sp/>qui<sp/>c&apos;è<sp/>voluto<sp/>più<sp/>del<sp/>previsto)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>facciamo<sp/>funzionare<sp/>il<sp/>package<sp/>MoveIt</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>seguendo<sp/>la<sp/>procedura<sp/>sulle<sp/>slides...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>funziona?<sp/>**funziona!**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(moveit<sp/>package,<sp/>fixes<sp/>on<sp/>the<sp/>urdf<sp/>model)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

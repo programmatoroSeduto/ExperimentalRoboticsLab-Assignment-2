@@ -886,6 +886,18 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (first setup, xacro model)&quot;</para>
+</listitem><listitem><para>e adesso il package in MoveIt<itemizedlist>
+<listitem><para>prima creazione col setup assistant</para>
+</listitem><listitem><para>il gripper non funziona bene ... tento di correggerlo ...</para>
+</listitem><listitem><para>(anche qui c&apos;è voluto più del previsto)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e facciamo funzionare il package MoveIt<itemizedlist>
+<listitem><para>seguendo la procedura sulle slides...</para>
+</listitem><listitem><para>funziona? <bold>funziona!</bold></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (moveit package, fixes on the urdf model)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
