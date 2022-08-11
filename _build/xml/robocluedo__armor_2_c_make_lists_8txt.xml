@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal">cmake_minimum_required(VERSION<sp/>3.0.2)</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><ref refid="pddl-and-rosplan_8md_8txt_1a20c83287cc65b058019b4777d1dbe59f" kindref="member">project</ref>(robocluedo_armor)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><ref refid="namespaceconf_1a45653c983098153b78e33600e39230eb" kindref="member">project</ref>(robocluedo_armor)</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Compile<sp/>as<sp/>C++11,<sp/>supported<sp/>in<sp/>ROS<sp/>Kinetic<sp/>and<sp/>newer</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add_compile_options(-std=c++11)</highlight><highlight class="normal"></highlight></codeline>
@@ -142,7 +142,7 @@
 <codeline lineno="133"><highlight class="normal">add_library(<sp/>armor_cluedo<sp/>src/armor_tools/armor_cluedo.cpp<sp/>)</highlight></codeline>
 <codeline lineno="134"><highlight class="normal">target_link_libraries(<sp/>armor_cluedo<sp/>${catkin_LIBRARIES}<sp/>armor_tools<sp/>)</highlight></codeline>
 <codeline lineno="135"><highlight class="normal"></highlight></codeline>
-<codeline lineno="136"><highlight class="normal">##<sp/>Add<sp/>cmake<sp/>target<sp/>dependencies<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>library</highlight></codeline>
+<codeline lineno="136"><highlight class="normal">##<sp/>Add<sp/>cmake<sp/>target<sp/>dependencies<sp/>of<sp/>the<sp/>library</highlight></codeline>
 <codeline lineno="137"><highlight class="normal">##<sp/>as<sp/>an<sp/>example,<sp/>code<sp/>may<sp/>need<sp/>to<sp/>be<sp/>generated<sp/>before<sp/>libraries</highlight></codeline>
 <codeline lineno="138"><highlight class="normal">##<sp/>either<sp/>from<sp/>message<sp/>generation<sp/>or<sp/>dynamic<sp/>reconfigure</highlight></codeline>
 <codeline lineno="139"><highlight class="normal">#<sp/>add_dependencies(${PROJECT_NAME}<sp/>${${PROJECT_NAME}_EXPORTED_TARGETS}<sp/>${catkin_EXPORTED_TARGETS})</highlight></codeline>

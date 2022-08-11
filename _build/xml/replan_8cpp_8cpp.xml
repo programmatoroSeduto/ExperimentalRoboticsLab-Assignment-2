@@ -127,7 +127,7 @@
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>nh(<sp/>nh_<sp/>)</highlight></codeline>
 <codeline lineno="63"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>action<sp/>feedback</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fb.<ref refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" kindref="member">action_name</ref><sp/>=<sp/><ref refid="dev-log_8md_8txt_1a5fd6c7de99fa188561b1bbb00cc7ea50" kindref="member">ROSPLAN_ACTION_NAME</ref>;</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;fb.<ref refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" kindref="member">action_name</ref><sp/>=<sp/><ref refid="action__name_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" kindref="member">ROSPLAN_ACTION_NAME</ref>;</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;nh<sp/>=<sp/>nh_;</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>

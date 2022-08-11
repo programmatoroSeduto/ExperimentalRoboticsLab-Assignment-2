@@ -36,26 +36,30 @@
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>handful<sp/>utility<sp/>to<sp/>open<sp/>a<sp/>service</highlight></codeline>
 <codeline lineno="27"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>srv_this<sp/>=<sp/>rospy.Service(<sp/>srv_name,<sp/>srv_type,<sp/>srv_callback<sp/>)</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.sleep(<sp/>rospy.Duration(0.75)<sp/>)</highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>srv_this</highlight></codeline>
-<codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35" refid="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" kindref="member">shut_msg</ref>(<sp/>):</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>called<sp/>at<sp/>the<sp/>shutdown<sp/>of<sp/>the<sp/>node,<sp/>just<sp/>a<sp/>message</highlight></codeline>
-<codeline lineno="37"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(<sp/></highlight><highlight class="stringliteral">&quot;(simulated_motion_controller)<sp/>stopping<sp/>...<sp/>&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight></codeline>
-<codeline lineno="41"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.init_node(<sp/></highlight><highlight class="stringliteral">&quot;simulated_motion_controller&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.on_shutdown(<sp/>shut_msg<sp/>)</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" kindref="member">open_srv</ref>(<sp/></highlight><highlight class="stringliteral">&quot;/robocluedo/manipulator_command&quot;</highlight><highlight class="normal">,<sp/>ManipulationCommand,<sp/>simulated_manipulation<sp/>)</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" kindref="member">open_srv</ref>(<sp/></highlight><highlight class="stringliteral">&quot;/robocluedo/navigation_command&quot;</highlight><highlight class="normal">,<sp/>NavigationCommand,<sp/>simulated_navigation<sp/>)</highlight></codeline>
-<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.spin()</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(f</highlight><highlight class="stringliteral">&quot;(rosplan_simulated_motion_system)<sp/>service:<sp/>{srv_name}<sp/>...&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>srv_this<sp/>=<sp/>rospy.Service(<sp/>srv_name,<sp/>srv_type,<sp/>srv_callback<sp/>)</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.sleep(<sp/>rospy.Duration(0.75)<sp/>)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(f</highlight><highlight class="stringliteral">&quot;(rosplan_simulated_motion_system)<sp/>service:<sp/>{srv_name}<sp/>...<sp/>OK&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>srv_this</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37" refid="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" kindref="member">shut_msg</ref>(<sp/>):</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;&apos;&apos;<sp/>called<sp/>at<sp/>the<sp/>shutdown<sp/>of<sp/>the<sp/>node,<sp/>just<sp/>a<sp/>message</highlight></codeline>
+<codeline lineno="39"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(<sp/></highlight><highlight class="stringliteral">&quot;(simulated_motion_controller)<sp/>stopping<sp/>...<sp/>&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.init_node(<sp/></highlight><highlight class="stringliteral">&quot;simulated_motion_controller&quot;</highlight><highlight class="normal"><sp/>)</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.on_shutdown(<sp/>shut_msg<sp/>)</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;(rosplan_simulated_motion_system)<sp/>starting...&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" kindref="member">open_srv</ref>(<sp/></highlight><highlight class="stringliteral">&quot;/robocluedo/manipulator_command&quot;</highlight><highlight class="normal">,<sp/>ManipulationCommand,<sp/>simulated_manipulation<sp/>)</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" kindref="member">open_srv</ref>(<sp/></highlight><highlight class="stringliteral">&quot;/robocluedo/navigation_command&quot;</highlight><highlight class="normal">,<sp/>NavigationCommand,<sp/>simulated_navigation<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;(rosplan_simulated_motion_system)<sp/>ready&quot;</highlight><highlight class="normal">)</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.spin()</highlight></codeline>
     </programlisting>
     <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py"/>
   </compounddef>

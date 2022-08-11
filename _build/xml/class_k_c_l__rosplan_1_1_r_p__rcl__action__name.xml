@@ -68,7 +68,7 @@
         </inbodydescription>
         <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/action_name.h" line="31" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name.cpp" bodystart="60" bodyend="70"/>
         <references refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" compoundref="feedback__manager_8h" startline="46">action_feedback_manager::action_name</references>
-        <references refid="dev-log_8md_8txt_1a5fd6c7de99fa188561b1bbb00cc7ea50">ROSPLAN_ACTION_NAME</references>
+        <references refid="action__name_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" compoundref="action__name_8h" startline="15">ROSPLAN_ACTION_NAME</references>
       </memberdef>
       <memberdef kind="function" id="class_k_c_l__rosplan_1_1_r_p__rcl__action__name_1ac4cc189c2e3ea7c5007ed1176c751c1f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>

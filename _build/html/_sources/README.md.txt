@@ -28,3 +28,10 @@
 	- ... (sarebbe meglio fare questo lavoro nella documentazione Sphinx?)
 - authors and contacts 
 	- (questa è facile...)
+
+## scopi del progetto
+
+- implementazione di un'architettura ...
+- sfruttare maggiormente il formalismo UML per migliorare la progettazione
+- sfruttare meglio la documentazione (documentazione non solo come parte finale del codice, ma anche come ambiente di lavoro)
+

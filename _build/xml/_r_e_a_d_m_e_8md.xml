@@ -37,6 +37,13 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(sarebbe<sp/>meglio<sp/>fare<sp/>questo<sp/>lavoro<sp/>nella<sp/>documentazione<sp/>Sphinx?)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>authors<sp/>and<sp/>contacts<sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(questa<sp/>è<sp/>facile...)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>scopi<sp/>del<sp/>progetto</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>un&apos;architettura<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>sfruttare<sp/>maggiormente<sp/>il<sp/>formalismo<sp/>UML<sp/>per<sp/>migliorare<sp/>la<sp/>progettazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>sfruttare<sp/>meglio<sp/>la<sp/>documentazione<sp/>(documentazione<sp/>non<sp/>solo<sp/>come<sp/>parte<sp/>finale<sp/>del<sp/>codice,<sp/>ma<sp/>anche<sp/>come<sp/>ambiente<sp/>di<sp/>lavoro)</highlight></codeline>
+<codeline></codeline>
     </programlisting>
     <location file="README.md"/>
   </compounddef>

@@ -398,6 +398,11 @@ def cbk_pipeline( req ):
 			
 			return res
 		
+		else:
+			res.feedback_received = True
+			res.feedback.goal_achieved = True
+			res.feedback.details = "goal achieved"
+		
 	else:
 		rospy.loginfo(f"({NODE_NAME}) dispatch -- skipping")
 	

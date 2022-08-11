@@ -51,11 +51,20 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>authors and contacts<itemizedlist>
-<listitem><para>(questa è facile...) </para>
+<listitem><para>(questa è facile...)</para>
 </listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
 </para>
+<sect1 id="md__r_e_a_d_m_e_1autotoc_md88">
+<title>scopi del progetto</title>
+<para><itemizedlist>
+<listitem><para>implementazione di un&apos;architettura ...</para>
+</listitem><listitem><para>sfruttare maggiormente il formalismo UML per migliorare la progettazione</para>
+</listitem><listitem><para>sfruttare meglio la documentazione (documentazione non solo come parte finale del codice, ma anche come ambiente di lavoro) </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

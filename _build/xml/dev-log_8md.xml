@@ -768,188 +768,19 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>header:<sp/>(action_name.h)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.h</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#ifndef<sp/>__H_ACTION_NAME_H__</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#define<sp/>__H_ACTION_NAME_H__</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#define<sp/>ROSPLAN_ACTION_NAME<sp/>&quot;action_name&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;ros/ros.h&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;rosplan_action_interface/RPActionInterface.h&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;knowledge_base_tools/feedback_manager.h&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;rosplan_dispatch_msgs/ActionDispatch.h&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>namespace<sp/>KCL_rosplan<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>class<sp/>RP_rcl_action_name<sp/>:<sp/>public<sp/>RPActionInterface</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>public:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**<sp/>class<sp/>constructor<sp/>*/</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RP_rcl_action_name(<sp/>ros::NodeHandle&amp;<sp/>nh_<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**<sp/>class<sp/>destructor<sp/>*/</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>~RP_rcl_action_name(<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/**<sp/>ROSPlan<sp/>concrete<sp/>callback<sp/>*/</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>bool<sp/>concreteCallback(<sp/>const<sp/>rosplan_dispatch_msgs::ActionDispatch::ConstPtr&amp;<sp/>msg<sp/>);</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>private:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>node<sp/>handle</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::NodeHandle&amp;<sp/>nh;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>///<sp/>action<sp/>feedback<sp/>manager<sp/>(as<sp/>object<sp/>instance)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>action_feedback_manager<sp/>fb;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#endif</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>implementazione<sp/>della<sp/>classe:<sp/>(action_name.cpp)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.cpp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>feedback_manager.h</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;robocluedo_rosplan_actions/action_name.h&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#<sp/>actionDispatch<sp/>message</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32<sp/>action_id</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int32<sp/>plan_id</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>string<sp/>name</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>diagnostic_msgs/KeyValue[]<sp/>parameters</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float32<sp/>duration</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>float32<sp/>dispatch_time</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*/</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/*</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager]<sp/>&quot;&lt;&lt;&quot;&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_WARN_STREAM(&quot;[&quot;&lt;&lt;action_name&lt;&lt;&quot;::feedback_manager]<sp/>WARNING:<sp/>&quot;&lt;&lt;&quot;&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*/</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>namespace<sp/>KCL_rosplan</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>BASE<sp/>METHODS<sp/>===<sp/>//</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>class<sp/>constructor</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>RP_rcl_action_name::RP_rcl_action_name(<sp/>ros::NodeHandle&amp;<sp/>nh_<sp/>)<sp/>:<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>RPActionInterface(<sp/>),</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>nh(<sp/>nh_<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>action<sp/>feedback</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;fb.action_name<sp/>=<sp/>ROSPLAN_ACTION_NAME;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;nh<sp/>=<sp/>nh_;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>class<sp/>destructor</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>RP_rcl_action_name::~RP_rcl_action_name(<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>CONCRETE<sp/>CALLBACK<sp/>===<sp/>//</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>bool<sp/>RP_rcl_action_name::concreteCallback(<sp/>const<sp/>rosplan_dispatch_msgs::ActionDispatch::ConstPtr&amp;<sp/>msg<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>===<sp/>PRIVATE<sp/>METHODS<sp/>===<sp/>//</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>//<sp/>...</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>nodo<sp/>che<sp/>implementa<sp/>la<sp/>classe:<sp/>(action\_name_node.cpp)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>/********************************************//**</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@file<sp/>???.cpp</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@brief<sp/>ROSPlan<sp/>action<sp/>implementation<sp/>as<sp/>ROS<sp/>node</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@authors<sp/>Francesco<sp/>Ganci</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@version<sp/>v1.0</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/>@see<sp/>feedback_manager.h</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>***********************************************/</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;ros/ros.h&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;knowledge_base_tools/feedback_manager.h&quot;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&quot;robocluedo_rosplan_actions/action_name.h&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>#include<sp/>&lt;signal.h&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>void<sp/>shut_msg(<sp/>int<sp/>sig<sp/>)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;stopping...&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::shutdown(<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>int<sp/>main(int<sp/>argc,<sp/>char<sp/>**argv)<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::init(argc,<sp/>argv,<sp/>ROSPLAN_ACTION_NAME,<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::init_options::AnonymousName<sp/>|<sp/>ros::init_options::NoSigintHandler<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>signal(SIGINT,<sp/>shut_msg);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::NodeHandle<sp/>nh(&quot;~&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;starting...&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>KCL_rosplan::RP_rcl_action_name<sp/>ac(<sp/>nh<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(&quot;[&quot;&lt;&lt;ROSPLAN_ACTION_NAME&lt;&lt;&quot;]<sp/>&quot;&lt;&lt;&quot;ready&quot;);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ac.runActionInterface(<sp/>);</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>0;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin:</highlight></codeline>
@@ -1012,15 +843,15 @@
 <codeline><highlight class="normal">-<sp/>come<sp/>*ultima<sp/>fatica<sp/>per<sp/>oggi*<sp/>implementazione<sp/>dell&apos;esecuzione<sp/>nella<sp/>pipeline<sp/>(test<sp/>domani)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(manca<sp/>solo<sp/>la<sp/>parte<sp/>riguardande<sp/>i<sp/>feedback)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>micro<sp/>test<sp/>per<sp/>capire<sp/>se<sp/>è<sp/>tutto<sp/>a<sp/>posto</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>1</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>2</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3<sp/>(not<sp/>with<sp/>simulated<sp/>actions)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>4</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
@@ -1031,6 +862,92 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(GRAVE)<sp/>la<sp/>sequenza<sp/>dei<sp/>landmark<sp/>porta<sp/>ad<sp/>un<sp/>problema<sp/>irrisolvibile,<sp/>vedi<sp/>la<sp/>combinazione<sp/>tra<sp/>i<sp/>predicati<sp/>at<sp/>e<sp/>explored<sp/>(probabilmente<sp/>è<sp/>un<sp/>problema<sp/>della<sp/>attuale<sp/>kb<sp/>interface<sp/>che<sp/>non<sp/>tiene<sp/>conto<sp/>di<sp/>questo<sp/>conflitto).<sp/>lo<sp/>scenario<sp/>di<sp/>utilizzo<sp/>dovrebbe<sp/>essere:<sp/>(landmarks)<sp/>0<sp/>1<sp/>1<sp/>1<sp/>...<sp/>1<sp/>2<sp/>0<sp/>1<sp/>...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>la<sp/>pipeline<sp/>non<sp/>segnala<sp/>il<sp/>raggiungimento<sp/>del<sp/>goal<sp/>nel<sp/>messaggio...</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>il<sp/>log<sp/>nella<sp/>pipeline<sp/>non<sp/>segna<sp/>la<sp/>fine<sp/>del<sp/>dispatch</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>pipeline<sp/>manager<sp/>(feedback<sp/>management)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>11/08/2022<sp/>--<sp/>ancora<sp/>su<sp/>ROSPlan</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">anzitutto,<sp/>vorrei<sp/>lavorare<sp/>sulle<sp/>issue<sp/>di<sp/>ieri:<sp/>il<sp/>fatto<sp/>che<sp/>la<sp/>sequenza<sp/>di<sp/>landmark<sp/>che<sp/>mi<sp/>aspetto<sp/>non<sp/>funzioni<sp/>come<sp/>si<sp/>deve<sp/>è<sp/>un<sp/>problema<sp/>grave<sp/>che<sp/>va<sp/>risolto<sp/>al<sp/>più<sp/>presto.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>un<sp/>test<sp/>più<sp/>approfondito:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ALTRO<sp/>ASPETTO<sp/>DA<sp/>AFFINARE**:<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>managi<sp/>non<sp/>servirà,<sp/>però<sp/>va<sp/>comunque<sp/>scritto<sp/>nel<sp/>messaggio<sp/>di<sp/>ritorno.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(lo<sp/>faccio<sp/>adesso)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>...<sp/>e<sp/>ok!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora,<sp/>sostituisco<sp/>le<sp/>simulated<sp/>actions<sp/>con<sp/>le<sp/>mie<sp/>implementazioni</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```xml</highlight></codeline>
+<codeline><highlight class="normal">&lt;node<sp/>name=&quot;rosplan_interface_???&quot;<sp/>pkg=&quot;robocluedo_rosplan&quot;<sp/>type=&quot;node_???&quot;<sp/>respawn=&quot;false&quot;<sp/>output=&quot;screen&quot;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;knowledge_base&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;rosplan_knowledge_base&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;pddl_action_name&quot;<sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;???&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_dispatch_topic&quot;<sp/>value=&quot;/rosplan_plan_dispatcher/action_dispatch&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_feedback_topic&quot;<sp/>value=&quot;/rosplan_plan_dispatcher/action_feedback&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_duration&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;0.99&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_probability&quot;<sp/><sp/><sp/><sp/>value=&quot;1.0&quot;<sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/node&gt;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>test<sp/>delle<sp/>actions<sp/>reali</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*mi<sp/>sono<sp/>dimenticato<sp/>di<sp/>compilare<sp/>move_to_center!*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>5</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2<sp/>0<sp/>1<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>ERRORE<sp/>problema<sp/>non<sp/>risolvibile<sp/>(correttamente<sp/>segnalato<sp/>dal<sp/>pipeline<sp/>manager)</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>problema<sp/>risolvibile</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(alla<sp/>fine<sp/>la<sp/>issue<sp/>di<sp/>ieri<sp/>era<sp/>...<sp/>semplice<sp/>sonno)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo<sp/>rosplan<sp/>actions<sp/>(launch<sp/>file)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline></codeline>
@@ -1040,26 +957,26 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>discutere<sp/>l&apos;utilità<sp/>del<sp/>landmark<sp/>zero...<sp/>è<sp/>davvero<sp/>così<sp/>utile<sp/>avere<sp/>un&apos;azione<sp/>che<sp/>faccia<sp/>fare<sp/>replan?</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>implementazione<sp/>di<sp/>una<sp/>funzionalità<sp/>per<sp/>fare<sp/>un<sp/>clear<sp/>&quot;sicuro&quot;<sp/>della<sp/>ontology<sp/>(quello<sp/>di<sp/>rosplan<sp/>funziona<sp/>maluccio)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>spostare<sp/>la<sp/>documentazione<sp/>di<sp/>ROSplan<sp/>nella<sp/>nuova<sp/>workspace<sp/>di<sp/>erl2</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>come<sp/>settare<sp/>un<sp/>goal<sp/>via<sp/>codice<sp/>da<sp/>ROSplan?</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">NOTE</highlight></codeline>
 <codeline></codeline>

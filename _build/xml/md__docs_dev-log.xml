@@ -650,13 +650,232 @@
 <listitem><para>prima, meglio farsi un template minimo per gli header</para>
 <para>header: (<ref refid="action__name_8h" kindref="compound">action_name.h</ref>)</para>
 <para>```c++</para>
-<para>/********************************************//**<itemizedlist>
-<listitem><para><linebreak/>
+<para>```</para>
+<para>implementazione della classe: (<ref refid="action__name_8cpp" kindref="compound">action_name.cpp</ref>)</para>
+<para>```c++</para>
+<para>```</para>
+<para>nodo che implementa la classe: (<ref refid="action__name__node_8cpp" kindref="compound">action_name_node.cpp</ref>)</para>
+<para>```c++</para>
+<para>```</para>
+<para>catkin:</para>
+<para>```cmake add_library( action_name src/robocluedo_rosplan_actions/action_name.cpp ) target_link_libraries( action_name ${catkin_LIBRARIES} feedback_manager <ref refid="classkb__tools" kindref="compound">kb_tools</ref> rosplan_action_interface ) add_executable( node_action_name src/robocluedo_rosplan_actions/action_name_node.cpp ) add_dependencies( node_action_name ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} ) target_link_libraries( node_action_name ${catkin_LIBRARIES} feedback_manager <ref refid="classkb__tools" kindref="compound">kb_tools</ref> rosplan_action_interface action_name ) ```</para>
+</listitem><listitem><para>compila?<itemizedlist>
+<listitem><para><ulink url="https://cplusplus.com/forum/general/203321/">ricorda questo errore!</ulink> piuttosto fastidioso da risolvere</para>
+</listitem><listitem><para>dopo aver tribolato mezz&apos;ora, ci siamo</para>
+</listitem></itemizedlist>
 </para>
-</listitem><listitem></listitem></itemizedlist>
+</listitem><listitem><para>adesso possiamo partire con l&apos;implementazione delle azioni</para>
+</listitem><listitem><para><emphasis>replan</emphasis><itemizedlist>
+<listitem><para>creazione delle azioni</para>
+</listitem><listitem><para>UML dell&apos;azione, giusto per capire che canali aprire</para>
+</listitem><listitem><para>implementazione</para>
+</listitem><listitem><para>cmake</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><emphasis>move-to</emphasis><itemizedlist>
+<listitem><para>creazione dell&apos;azione</para>
+</listitem><listitem><para>UML della action</para>
+</listitem><listitem><para>manca un servizio per move_to ...</para>
+</listitem><listitem><para>apertura delle interfacce (ne serve solo una)</para>
+</listitem><listitem><para>implementazione</para>
+</listitem><listitem><para>e cmake</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robocluedo_rosplan_actions (replan, move_to)&quot;</para>
+</listitem><listitem><para><emphasis>collect-hint</emphasis><itemizedlist>
+<listitem><para><emphasis>pessimo design</emphasis> : meglio ridimensionare questa azione</para>
+</listitem><listitem><para><emphasis>manca il servizio manipulation!</emphasis></para>
+</listitem><listitem><para>creazione dei file per l&apos;implementazione dell&apos;azione</para>
+</listitem><listitem><para>implementazione</para>
+</listitem><listitem><para>cmake</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><emphasis>move-to-center</emphasis> è praticamente identica alla <emphasis>move-to</emphasis> di prima<itemizedlist>
+<listitem><para>uml copiato e incollato</para>
+</listitem><listitem><para>l&apos;implementazione è praticamente identica a <emphasis>move-to</emphasis></para>
+</listitem><listitem><para>cmake</para>
+</listitem><listitem><para>compila? ovviamente compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>la <emphasis>solve</emphasis> è una simulated action: dato che solo il mission manager può accedere alla ontology, la solve perde di ogni utilità</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robocluedo_rosplan_actions (end of the job)&quot;</para>
+</listitem><listitem><para>implementare (solo per il testing) un nodo che imiti navigation e manipulation<itemizedlist>
+<listitem><para><bold>NUOVO NODO</bold> : <ref refid="namespacerosplan__simulated__motion__system" kindref="compound">rosplan_simulated_motion_system</ref></para>
+</listitem><listitem><para>implementazione e installazione</para>
+</listitem><listitem><para>e un minimo testing</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(manca solo da chiarire il sistema di feedback)</para>
+</listitem><listitem><para>feedback &quot;hw manipulation failure&quot;<itemizedlist>
+<listitem><para>...e tutti gli altri tipi di feedback</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>compila? compila</para>
+</listitem><listitem><para>ora, tutti i feedback in tutte le azioni<itemizedlist>
+<listitem><para>in collect hint</para>
+</listitem><listitem><para>in move to</para>
+</listitem><listitem><para>in move to center</para>
+</listitem><listitem><para>in replan</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robocluedo_rosplan_actions (feedbacks from the actions)&quot;</para>
+</listitem><listitem><para>come <emphasis>ultima fatica per oggi</emphasis> implementazione dell&apos;esecuzione nella pipeline (test domani)<itemizedlist>
+<listitem><para>(manca solo la parte riguardande i feedback)</para>
+</listitem><listitem><para>giusto un micro test per capire se è tutto a posto ```bash </para>
+</listitem></itemizedlist>
 </para>
 </listitem></itemizedlist>
 </para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md48">
+<title>shell 1</title>
+<para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md49">
+<title>shell 2</title>
+<para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md50">
+<title>shell 3 (not with simulated actions)</title>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md51">
+<title>rosrun robocluedo_rosplan rosplan_simulated_motion_system.py</title>
+</sect1>
+<sect1 id="md__docs_dev-log_1autotoc_md52">
+<title>shell 4</title>
+<para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
+<para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}&quot; ```<itemizedlist>
+<listitem><para><bold>ISSUES</bold> che non potevo notare prima di avere il sistema completo (usando solo simulated actions)<itemizedlist>
+<listitem><para>(GRAVE) la sequenza dei landmark porta ad un problema irrisolvibile, vedi la combinazione tra i predicati at e explored (probabilmente è un problema della attuale kb interface che non tiene conto di questo conflitto). lo scenario di utilizzo dovrebbe essere: (landmarks) 0 1 1 1 ... 1 2 0 1 ...</para>
+</listitem><listitem><para>(minore) la pipeline non segnala il raggiungimento del goal nel messaggio...</para>
+</listitem><listitem><para>(minore) il log nella pipeline non segna la fine del dispatch</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on the pipeline manager (feedback management)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<sect2 id="md__docs_dev-log_1autotoc_md54">
+<title>11/08/2022 – ancora su ROSPlan</title>
+<para>anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto.</para>
+<para><itemizedlist>
+<listitem><para>un test più approfondito:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para><bold>ALTRO ASPETTO DA AFFINARE</bold>: il feedback di successo managi non servirà, però va comunque scritto nel messaggio di ritorno.<itemizedlist>
+<listitem><para>(lo faccio adesso)</para>
+</listitem><listitem><para>test ... e ok!</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ora, sostituisco le simulated actions con le mie implementazioni</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".xml"><codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">node</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;rosplan_interface_???&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">pkg</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;robocluedo_rosplan&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">type</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;node_???&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">respawn</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">output</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;screen&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;knowledge_base&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;rosplan_knowledge_base&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;pddl_action_name&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;???&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;action_dispatch_topic&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;/rosplan_plan_dispatcher/action_dispatch&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;action_feedback_topic&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;/rosplan_plan_dispatcher/action_feedback&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;action_duration&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;0.99&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;action_probability&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;1.0&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;/</highlight><highlight class="keywordtype">node</highlight><highlight class="normal">&gt;</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>e test delle actions reali<itemizedlist>
+<listitem><para><emphasis>mi sono dimenticato di compilare move_to_center!</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>5</highlight></codeline>
+<codeline><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2<sp/>0<sp/>1<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>ERRORE<sp/>problema<sp/>non<sp/>risolvibile<sp/>(correttamente<sp/>segnalato<sp/>dal<sp/>pipeline<sp/>manager)</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>problema<sp/>risolvibile</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>(alla fine la issue di ieri era ... semplice sonno)</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robocluedo rosplan actions (launch file)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para>TODO</para>
+<para><itemizedlist>
+<listitem><para>discutere l&apos;utilità del landmark zero... è davvero così utile avere un&apos;azione che faccia fare replan?</para>
+</listitem><listitem><para><bold>gestire meglio l&apos;invio dei feedback</bold>. CI sono vari problemi:<itemizedlist>
+<listitem><para>il feedback dev&apos;essere inviato <emphasis>solo quando si presenta un problema</emphasis> e il pipeline manager dev&apos;essere pronto a riceverlo</para>
+</listitem><listitem><para>va inviato solo ed esclusivamente un feedback alla volta</para>
+</listitem><listitem><para>il feedback di successo non esiste, è inutile</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
+</listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
+</listitem><listitem><para>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c&apos;è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</para>
+</listitem><listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
+</listitem><listitem><para>aggiornare i template delle actions in questo file</para>
+</listitem><listitem><para>rimuovere le immagini dalla documentazione del codice per armor</para>
+</listitem><listitem><para>un branch per la documentazione Sphinx</para>
+</listitem><listitem><para>e uno script per mettere online la documentazione sphinx &quot;senza sbattersi troppo&quot;</para>
+</listitem><listitem><para>approfondire UML armor</para>
+</listitem><listitem><para>aggiornare il file di descrizione e design del PDDL con il codice corretto<itemizedlist>
+<listitem><para>correggere i landmark, oppure eliminare direttamente la sezione</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
+</listitem></itemizedlist>
+</para>
+<para>NOTE</para>
+<para><itemizedlist>
+<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio. </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
 </sect1>
     </detaileddescription>
   </compounddef>

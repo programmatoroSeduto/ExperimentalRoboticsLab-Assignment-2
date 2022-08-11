@@ -26,8 +26,10 @@ def open_srv( srv_name, srv_type, srv_callback ):
 	''' handful utility to open a service
 	'''
 	
+	rospy.loginfo(f"(rosplan_simulated_motion_system) service: {srv_name} ...")
 	srv_this = rospy.Service( srv_name, srv_type, srv_callback )
 	rospy.sleep( rospy.Duration(0.75) )
+	rospy.loginfo(f"(rosplan_simulated_motion_system) service: {srv_name} ... OK")
 	
 	return srv_this
 
@@ -42,7 +44,9 @@ if __name__ == "__main__":
 	rospy.init_node( "simulated_motion_controller" )
 	rospy.on_shutdown( shut_msg )
 	
+	rospy.loginfo("(rosplan_simulated_motion_system) starting...")
 	open_srv( "/robocluedo/manipulator_command", ManipulationCommand, simulated_manipulation )
 	open_srv( "/robocluedo/navigation_command", NavigationCommand, simulated_navigation )
 	
+	rospy.loginfo("(rosplan_simulated_motion_system) ready")
 	rospy.spin()

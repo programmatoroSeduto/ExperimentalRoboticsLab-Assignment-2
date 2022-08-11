@@ -759,188 +759,19 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 	header: (action_name.h)
 	
 	```c++
-
-	/********************************************//**
-	*  
-	* @file ???.h
-	* @brief ROSPlan action implementation
-	* 
-	* @authors Francesco Ganci
-	* @version v1.0
-	* 
-	***********************************************/
-
-	#ifndef __H_ACTION_NAME_H__
-	#define __H_ACTION_NAME_H__
-
-	#define ROSPLAN_ACTION_NAME "action_name"
-
-	#include "ros/ros.h"
-	#include "rosplan_action_interface/RPActionInterface.h"
-	#include "knowledge_base_tools/feedback_manager.h"
-	#include "rosplan_dispatch_msgs/ActionDispatch.h"
-
-	namespace KCL_rosplan 
-	{
-
-	class RP_rcl_action_name : public RPActionInterface
-	{
-	public:
-		
-		/** class constructor */
-		RP_rcl_action_name( ros::NodeHandle& nh_ );
-		
-		/** class destructor */
-		~RP_rcl_action_name( );
-		
-		/** ROSPlan concrete callback */
-		bool concreteCallback( const rosplan_dispatch_msgs::ActionDispatch::ConstPtr& msg );
-
-	private:
-		
-		/// node handle
-		ros::NodeHandle& nh;
-		
-		/// action feedback manager (as object instance)
-		action_feedback_manager fb;
-	};
-
-	}
-
-	#endif
-
+	
 	```
 	
 	implementazione della classe: (action_name.cpp)
 	
 	```c++
 
-	/********************************************//**
-	*  
-	* @file ???.cpp
-	* @brief ROSPlan action implementation
-	* 
-	* @authors Francesco Ganci
-	* @version v1.0
-	* 
-	* @see feedback_manager.h
-	* 
-	***********************************************/
-
-	#include "robocluedo_rosplan_actions/action_name.h"
-
-	/*
-	# actionDispatch message
-
-	int32 action_id
-	int32 plan_id
-	string name
-	diagnostic_msgs/KeyValue[] parameters
-	float32 duration
-	float32 dispatch_time
-	*/
-
-	/*
-	ROS_INFO_STREAM("["<<action_name<<"::feedback_manager] "<<"");
-	ROS_WARN_STREAM("["<<action_name<<"::feedback_manager] WARNING: "<<"");
-	*/
-
-	namespace KCL_rosplan
-	{
-
-
-	// === BASE METHODS === //
-
-	// class constructor
-	RP_rcl_action_name::RP_rcl_action_name( ros::NodeHandle& nh_ ) : 
-		RPActionInterface( ),
-		nh( nh_ )
-	{
-		// action feedback
-		this->fb.action_name = ROSPLAN_ACTION_NAME;
-		
-		this->nh = nh_;
-		
-		// ...
-	}
-
-
-	// class destructor
-	RP_rcl_action_name::~RP_rcl_action_name( )
-	{
-		// ...
-	}
-
-
-
-
-	// === CONCRETE CALLBACK === //
-
-	// ...
-	bool RP_rcl_action_name::concreteCallback( const rosplan_dispatch_msgs::ActionDispatch::ConstPtr& msg )
-	{
-		// ...
-		
-		return true;
-	}
-
-
-
-
-	// === PRIVATE METHODS === //
-
-	// ...
-
-
-	}
-
 	```
 	
 	nodo che implementa la classe: (action\_name_node.cpp)
 	
 	```c++
-
-	/********************************************//**
-	*  
-	* @file ???.cpp
-	* @brief ROSPlan action implementation as ROS node
-	* 
-	* @authors Francesco Ganci
-	* @version v1.0
-	* 
-	* @see feedback_manager.h
-	* 
-	***********************************************/
-
-	#include "ros/ros.h"
-	#include "knowledge_base_tools/feedback_manager.h"
-	#include "robocluedo_rosplan_actions/action_name.h"
-
-	#include <signal.h>
-
-	void shut_msg( int sig )
-	{
-		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"stopping...");
-		ros::shutdown( );
-	}
-
-	int main(int argc, char **argv) 
-	{
-		ros::init(argc, argv, ROSPLAN_ACTION_NAME, 
-			ros::init_options::AnonymousName | ros::init_options::NoSigintHandler );
-		signal(SIGINT, shut_msg);
-		
-		ros::NodeHandle nh("~");
-		
-		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"starting...");
-		KCL_rosplan::RP_rcl_action_name ac( nh );
-		
-		ROS_INFO_STREAM("["<<ROSPLAN_ACTION_NAME<<"] "<<"ready");
-		ac.runActionInterface( );
-		
-		return 0;
-	}
-
+	
 	```
 	
 	catkin:
@@ -1003,15 +834,15 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 - come *ultima fatica per oggi* implementazione dell'esecuzione nella pipeline (test domani)
 	- (manca solo la parte riguardande i feedback)
 	- giusto un micro test per capire se è tutto a posto
-		```
+		```bash
 		# shell 1
 		roslaunch robocluedo_rosplan load_rosplan.launch
 
 		# shell 2
 		rosrun robocluedo_rosplan kb_interface
 
-		# shell 3
-		rosrun robocluedo_rosplan rosplan_simulated_motion_system.py
+		# shell 3 (not with simulated actions)
+		# rosrun robocluedo_rosplan rosplan_simulated_motion_system.py
 		
 		# shell 4
 		rosrun robocluedo_rosplan rosplan_pipeline_manager.py
@@ -1022,6 +853,92 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 	- (GRAVE) la sequenza dei landmark porta ad un problema irrisolvibile, vedi la combinazione tra i predicati at e explored (probabilmente è un problema della attuale kb interface che non tiene conto di questo conflitto). lo scenario di utilizzo dovrebbe essere: (landmarks) 0 1 1 1 ... 1 2 0 1 ...
 	- (minore) la pipeline non segnala il raggiungimento del goal nel messaggio...
 	- (minore) il log nella pipeline non segna la fine del dispatch
+- **COMMIT** : "working on the pipeline manager (feedback management)"
+
+---
+
+## 11/08/2022 -- ancora su ROSPlan
+
+anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto. 
+
+- un test più approfondito:
+
+```bash
+# shell 1
+roslaunch robocluedo_rosplan load_rosplan.launch
+
+# shell 2
+rosrun robocluedo_rosplan kb_interface
+
+# shell 3
+rosrun robocluedo_rosplan rosplan_pipeline_manager.py
+
+# shell 4
+#     landmarks: 0 1 1 1 2
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}"
+```
+
+- **ALTRO ASPETTO DA AFFINARE**: il feedback di successo managi non servirà, però va comunque scritto nel messaggio di ritorno.
+	- (lo faccio adesso)
+	- test ... e ok!
+- ora, sostituisco le simulated actions con le mie implementazioni
+
+```xml
+<node name="rosplan_interface_???" pkg="robocluedo_rosplan" type="node_???" respawn="false" output="screen">
+
+	<param name="knowledge_base"		value="rosplan_knowledge_base" />
+	<param name="pddl_action_name"		value="???" />
+	<param name="action_dispatch_topic"	value="/rosplan_plan_dispatcher/action_dispatch" />
+	<param name="action_feedback_topic"	value="/rosplan_plan_dispatcher/action_feedback" />
+	
+	<param name="action_duration"		value="0.99" />
+	<param name="action_probability"	value="1.0" />
+
+</node>
+```
+
+- e test delle actions reali
+	- *mi sono dimenticato di compilare move_to_center!*
+
+```bash
+# shell 1
+roslaunch robocluedo_rosplan load_rosplan.launch
+
+# shell 2
+rosrun robocluedo_rosplan kb_interface
+
+# shell 3
+rosrun robocluedo_rosplan rosplan_simulated_motion_system.py
+
+# shell 4
+rosrun robocluedo_rosplan rosplan_pipeline_manager.py
+
+# shell 5
+#     landmarks: 0 1 1 1 2 0 1 2
+
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}"
+
+# ERRORE problema non risolvibile (correttamente segnalato dal pipeline manager)
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+
+# problema risolvibile
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}" 
+rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}"
+```
+
+- (alla fine la issue di ieri era ... semplice sonno)
+- **COMMIT** : "working on robocluedo rosplan actions (launch file)"
+
+
 	
 	
 
@@ -1031,26 +948,26 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 
 TODO
 
-- aggiornare il file di descrizione e design del PDDL con il codice corretto
-	- correggere i landmark, oppure eliminare direttamente la sezione
 - discutere l'utilità del landmark zero... è davvero così utile avere un'azione che faccia fare replan?
 - **gestire meglio l'invio dei feedback**. CI sono vari problemi:
 	- il feedback dev'essere inviato *solo quando si presenta un problema* e il pipeline manager dev'essere pronto a riceverlo
 	- va inviato solo ed esclusivamente un feedback alla volta
 	- il feedback di successo non esiste, è inutile
-- in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
-- aggiornare i template delle actions in questo file
-- implementazione precisa dell'azione move-to
-- aggiungere le pagine di documentazione del codice di Sphinx!
 - *module testing* su kb_tools
-- implementazione di una funzionalità per fare un clear "sicuro" della ontology (quello di rosplan funziona maluccio)
-- spostare la documentazione di ROSplan nella nuova workspace di erl2
-- come settare un goal via codice da ROSplan?
+
+- implementazione precisa dell'azione move-to
+
+- in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
+- aggiungere le pagine di documentazione del codice di Sphinx!
+- aggiornare i template delle actions in questo file
 - rimuovere le immagini dalla documentazione del codice per armor
 - un branch per la documentazione Sphinx
 - e uno script per mettere online la documentazione sphinx "senza sbattersi troppo"
-- autenticazione SSH sul Docker di lavoro
 - approfondire UML armor
+- aggiornare il file di descrizione e design del PDDL con il codice corretto
+	- correggere i landmark, oppure eliminare direttamente la sezione
+
+- autenticazione SSH sul Docker di lavoro
 
 NOTE
 

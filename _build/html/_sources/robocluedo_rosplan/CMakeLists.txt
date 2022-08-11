@@ -187,6 +187,12 @@ add_executable( node_collect_hint src/robocluedo_rosplan_actions/collect_hint_no
 add_dependencies( node_collect_hint ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( node_collect_hint ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface collect_hint )
 
+add_library( move_to_center src/robocluedo_rosplan_actions/move_to_center.cpp )
+target_link_libraries( move_to_center ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface )
+add_executable( node_move_to_center src/robocluedo_rosplan_actions/move_to_center_node.cpp )
+add_dependencies( node_move_to_center ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( node_move_to_center ${catkin_LIBRARIES} feedback_manager kb_tools rosplan_action_interface move_to_center )
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
