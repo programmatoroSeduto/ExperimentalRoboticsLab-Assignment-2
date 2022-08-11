@@ -1328,6 +1328,40 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </ul>
 </li>
 <li><p><strong>NUOVO COMMIT</strong> : “working on the navigation system (first version, not yet tested)”</p></li>
+<li><p>adesso serve un po’ di testing:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_robot gazebo.launch
+
+<span class="c1"># shell 2</span>
+rosrun robocluedo_movement_controller wall_follow_service_m.py
+
+rosrun robocluedo_movement_controller go_to_point_service_m.py
+
+rosrun robocluedo_movement_controller head_orientation.py
+
+rosrun robocluedo_movement_controller bug_m.py
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>test completo (conviene creare un launch file)</p></li>
+<li><p>mancava l’active nel bug_m</p>
+<ul>
+<li><p>aggiornamento UML di bug_m</p></li>
+</ul>
+</li>
+<li><p><strong>ISSUE</strong> : tutti i nodi devono essere <em>spenti</em> all’avvio del sistema</p>
+<ul>
+<li><p><strong>ISSUE</strong> : il servizio, quando dovrebbe disattivare il nodo, <em>non invia il segnale di stop!</em></p></li>
+</ul>
+</li>
+<li><p><strong>ISSUE</strong> : il robot si incastra per terra … perchè quella cosa sul frontale del robot <em>non è una vera castor wheel</em></p></li>
+<li><p>comunque, a parte qualche difetto di meccanismo, <em>sembra funzionare</em></p>
+<ul>
+<li><p>l’unica cosa davvero da risolvere è rifare la ruota davanti del robot</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on the navigation system (testing)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">

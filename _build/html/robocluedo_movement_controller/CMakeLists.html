@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">PKG DOCS – robocluedo_movement_controller</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_movement_controller_msgs/index.html">PKG DOCS – robocluedo_movement_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 </ul>
@@ -260,10 +261,15 @@ include_directories(
 # See <a class="reference external" href="http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html">http://ros.org/doc/api/catkin/html/adv_user_guide/variables.html</a></p>
 <p>## Mark executable scripts (Python etc.) for installation
 ## in contrast to setup.py, you can choose the destination
-# catkin_install_python(PROGRAMS
-#   scripts/my_python_script
-#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-# )</p>
+catkin_install_python(PROGRAMS</p>
+<blockquote>
+<div><p>scripts/wall_follow_service_m.py
+scripts/go_to_point_service_m.py
+scripts/head_orientation.py
+scripts/bug_m.py
+DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}</p>
+</div></blockquote>
+<p>)</p>
 <p>## Mark executables for installation
 ## See <a class="reference external" href="http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html">http://docs.ros.org/melodic/api/catkin/html/howto/format1/building_executables.html</a>
 # install(TARGETS ${PROJECT_NAME}_node

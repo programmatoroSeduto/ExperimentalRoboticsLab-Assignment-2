@@ -190,7 +190,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="49" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="49" bodyend="62"/>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="49" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="49" bodyend="67"/>
       </memberdef>
       <memberdef kind="function" id="namespacehead__orientation_1a425229e83daeb9eb45e34285e600bb5e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -209,7 +209,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="63" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="63" bodyend="77"/>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="68" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="68" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="namespacehead__orientation_1a01ea2597e48d81cdd6a41c96eaf3ed2a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>def</type>
+        <definition>def head_orientation.change_state</definition>
+        <argsstring>(state)</argsstring>
+        <name>change_state</name>
+        <param>
+          <type>state</type>
+          <defname>state</defname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="83" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="83" bodyend="87"/>
+        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="135" endline="169">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -228,10 +246,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="78" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="78" bodyend="85"/>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="88" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="88" bodyend="95"/>
         <references refid="rosplan-kb_8md_8txt_1a123684fb4f21dfb0816ae98b02163d53" compoundref="rosplan-kb_8md_8txt" startline="131" endline="135">if</references>
-        <referencedby refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" compoundref="head__orientation_8py" startline="86" endline="112">fix_yaw</referencedby>
-        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="125" endline="158">main</referencedby>
+        <referencedby refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" compoundref="head__orientation_8py" startline="96" endline="122">fix_yaw</referencedby>
+        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="135" endline="169">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -255,9 +273,9 @@ Returns:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="86" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="86" bodyend="112"/>
-        <references refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="78" endline="85">normalize_angle</references>
-        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="125" endline="158">main</referencedby>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="96" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="96" bodyend="122"/>
+        <references refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="88" endline="95">normalize_angle</references>
+        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="135" endline="169">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacehead__orientation_1a76d5fbeb4230d20e8642aeca6c7cb05a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -272,8 +290,8 @@ Returns:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="113" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="113" bodyend="124"/>
-        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="125" endline="158">main</referencedby>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="123" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="123" bodyend="134"/>
+        <referencedby refid="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" compoundref="head__orientation_8py" startline="135" endline="169">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacehead__orientation_1ae3f07ae12d9ed747d3d1ef3d1aa42d5b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -286,11 +304,11 @@ Returns:
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="125" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="125" bodyend="158"/>
-        <references refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" compoundref="head__orientation_8py" startline="86" endline="112">fix_yaw</references>
-        <references refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" compoundref="bug__m_8py" startline="75" endline="111">bug_m.change_state</references>
-        <references refid="namespacehead__orientation_1a76d5fbeb4230d20e8642aeca6c7cb05a" compoundref="head__orientation_8py" startline="113" endline="124">done</references>
-        <references refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="78" endline="85">normalize_angle</references>
+        <location file="robocluedo_movement_controller/scripts/head_orientation.py" line="135" column="1" bodyfile="robocluedo_movement_controller/scripts/head_orientation.py" bodystart="135" bodyend="169"/>
+        <references refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" compoundref="head__orientation_8py" startline="96" endline="122">fix_yaw</references>
+        <references refid="namespacehead__orientation_1a01ea2597e48d81cdd6a41c96eaf3ed2a" compoundref="head__orientation_8py" startline="83" endline="87">change_state</references>
+        <references refid="namespacehead__orientation_1a76d5fbeb4230d20e8642aeca6c7cb05a" compoundref="head__orientation_8py" startline="123" endline="134">done</references>
+        <references refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="88" endline="95">normalize_angle</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

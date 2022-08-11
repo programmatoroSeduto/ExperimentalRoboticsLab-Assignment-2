@@ -150,6 +150,7 @@
     <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a6574542a6a62bae28d6bf0d74b94c4d7" kind="function"><name>concreteCallback</name></member>
   </compound>
   <compound refid="namespacebug__m" kind="namespace"><name>bug_m</name>
+    <member refid="namespacebug__m_1aac2be257b1acdebfb27dab0e311550d4" kind="variable"><name>active_</name></member>
     <member refid="namespacebug__m_1adc14150838edf40c8028207cd6bb2082" kind="variable"><name>pub</name></member>
     <member refid="namespacebug__m_1abd32bbd25b55f71e56505e72ba56c2f6" kind="variable"><name>srv_client_go_to_point_</name></member>
     <member refid="namespacebug__m_1af40e8063430e5b54ef2f3f8368338744" kind="variable"><name>srv_client_wall_follower_</name></member>
@@ -172,6 +173,7 @@
     <member refid="namespacebug__m_1a6ab3d92b5b6ea12eaa52bf21cfa111f1" kind="function"><name>clbk_laser</name></member>
     <member refid="namespacebug__m_1aca19305feae5c5489e7452e921fcbd9c" kind="function"><name>change_state</name></member>
     <member refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" kind="function"><name>normalize_angle</name></member>
+    <member refid="namespacebug__m_1a1dbc6228266b6c52ec33c0da1869e527" kind="function"><name>bug_switch</name></member>
     <member refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" kind="function"><name>main</name></member>
   </compound>
   <compound refid="namespaceconf" kind="namespace"><name>conf</name>
@@ -237,6 +239,7 @@
     <member refid="namespacehead__orientation_1ae68beceaffe3f202f2863f3009f84c18" kind="variable"><name>pub</name></member>
     <member refid="namespacehead__orientation_1ab361bda7a204c5c1ac01421804620f49" kind="function"><name>head_orient_switch</name></member>
     <member refid="namespacehead__orientation_1a425229e83daeb9eb45e34285e600bb5e" kind="function"><name>clbk_odom</name></member>
+    <member refid="namespacehead__orientation_1a01ea2597e48d81cdd6a41c96eaf3ed2a" kind="function"><name>change_state</name></member>
     <member refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" kind="function"><name>normalize_angle</name></member>
     <member refid="namespacehead__orientation_1a2081baf6e19ff357527017e6cd242c65" kind="function"><name>fix_yaw</name></member>
     <member refid="namespacehead__orientation_1a76d5fbeb4230d20e8642aeca6c7cb05a" kind="function"><name>done</name></member>

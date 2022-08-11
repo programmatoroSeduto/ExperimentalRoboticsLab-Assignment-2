@@ -1028,6 +1028,32 @@ ora, il lavoro sul movement controller
 	- uml del nuovo nodo
 	- e altri UML
 - **NUOVO COMMIT** : "working on the navigation system (first version, not yet tested)"
+- adesso serve un po' di testing:
+
+```bash
+# shell 1
+roslaunch robocluedo_robot gazebo.launch
+
+# shell 2
+rosrun robocluedo_movement_controller wall_follow_service_m.py
+
+rosrun robocluedo_movement_controller go_to_point_service_m.py
+
+rosrun robocluedo_movement_controller head_orientation.py
+
+rosrun robocluedo_movement_controller bug_m.py
+```
+
+- test completo (conviene creare un launch file)
+- mancava l'active nel bug_m
+	- aggiornamento UML di bug_m 
+- **ISSUE** : tutti i nodi devono essere *spenti* all'avvio del sistema
+	- **ISSUE** : il servizio, quando dovrebbe disattivare il nodo, *non invia il segnale di stop!*
+- **ISSUE** : il robot si incastra per terra ... perchè quella cosa sul frontale del robot *non è una vera castor wheel*
+
+- comunque, a parte qualche difetto di meccanismo, *sembra funzionare*
+	- l'unica cosa davvero da risolvere è rifare la ruota davanti del robot
+- **COMMIT** : "working on the navigation system (testing)"
 
 
 

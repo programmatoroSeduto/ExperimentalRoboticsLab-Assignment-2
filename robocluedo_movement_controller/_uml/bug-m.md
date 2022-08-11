@@ -41,6 +41,7 @@ database "ROS parameter server" as PARAMETERS {
 component "bug_m" <<ROSPy node>> as NODE_BUG_M {
 	node "clbk_odom" as NODE_BUG_M.READ_ODOM
 	node "clbk_laser" as NODE_BUG_M.LISTENER_LASER
+	node "bug_switch" as NODE_BUG_M.SWITCH
 }
 
 NODE_BUG_M "get" <-- PARAMETERS
@@ -71,6 +72,10 @@ note on link: std_srvs/SetBool.srv
 
 () "/head_orient_switch" as SRV_HEAD_ORIENT_SWITCH
 NODE_BUG_M "cl" <-- SRV_HEAD_ORIENT_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() "/bug_switch" as SRV_BUG_SWITCH
+NODE_BUG_M.SWITCH "srv" --> SRV_BUG_SWITCH
 note on link: std_srvs/SetBool.srv
 
 @enduml

@@ -49,14 +49,19 @@ pub = None
 def head_orient_switch(req):
 	''' node switch, service /head_orient_switch
 	'''
-	global active_
+	global active_, state_, pub
 	
 	active_ = req.data
+	if not active_:
+		twist_msg = Twist()
+		twist_msg.linear.x = 0
+		twist_msg.angular.z = 0
+		pub.publish(twist_msg)
+		state_ = 2
 	
 	res = SetBoolResponse()
 	res.success = True
 	res.message = 'Done!'
-	
 	return res
 
 
@@ -73,6 +78,11 @@ def clbk_odom(msg):
 		msg.pose.pose.orientation.w)
 	euler = transformations.euler_from_quaternion(quaternion)
 	yaw_ = euler[2]
+
+
+def change_state(state):
+	global state_
+	state_ = state
 
 
 def normalize_angle(angle):
@@ -123,7 +133,7 @@ def done( ):
 
 
 def main():
-	global pub, active_, yaw_precision_2_, desired_yaw_
+	global pub, active_, yaw_precision_2_, desired_yaw_, state_
 	
 	rospy.init_node('head_orientation')
 	
@@ -136,6 +146,7 @@ def main():
 		desired_yaw_ = rospy.get_param('des_yaw')
 		
 		if not active_:
+			rate.sleep()
 			continue
 		else:
 			if state_ == 0:
@@ -146,7 +157,7 @@ def main():
 				done( )
 				change_state(2)
 			
-			elif state == 2:
+			elif state_ == 2:
 				if normalize_angle(desired_yaw_ - yaw_) > yaw_precision_2_:
 					change_state(0)
 			

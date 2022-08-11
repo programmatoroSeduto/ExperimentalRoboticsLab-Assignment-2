@@ -149,8 +149,8 @@
 <div class="section" id="schema">
 <h2>SCHEMA<a class="headerlink" href="#schema" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-0301c00ea5afdaedf3eca1873ac45a89612875e7.svg" type="image/svg+xml" style="width:1873px;height:650px;background:#FFFFFF;">
-<img src="../../_images/plantuml-0301c00ea5afdaedf3eca1873ac45a89612875e7.png" alt="&#64;startuml
+<object data="../../_images/plantuml-a5ab2aa3445f8bf104055fa106f66627b071fbcd.svg" type="image/svg+xml" style="width:2017px;height:650px;background:#FFFFFF;">
+<img src="../../_images/plantuml-a5ab2aa3445f8bf104055fa106f66627b071fbcd.png" alt="&#64;startuml
 
 ''' INFOS
 title NODE bug_m
@@ -168,6 +168,7 @@ database &quot;ROS parameter server&quot; as PARAMETERS {
 component &quot;bug_m&quot; &lt;&lt;ROSPy node&gt;&gt; as NODE_BUG_M {
 	node &quot;clbk_odom&quot; as NODE_BUG_M.READ_ODOM
 	node &quot;clbk_laser&quot; as NODE_BUG_M.LISTENER_LASER
+	node &quot;bug_switch&quot; as NODE_BUG_M.SWITCH
 }
 
 NODE_BUG_M &quot;get&quot; &lt;-- PARAMETERS
@@ -198,6 +199,10 @@ note on link: std_srvs/SetBool.srv
 
 () &quot;/head_orient_switch&quot; as SRV_HEAD_ORIENT_SWITCH
 NODE_BUG_M &quot;cl&quot; &lt;-- SRV_HEAD_ORIENT_SWITCH
+note on link: std_srvs/SetBool.srv
+
+() &quot;/bug_switch&quot; as SRV_BUG_SWITCH
+NODE_BUG_M.SWITCH &quot;srv&quot; --&gt; SRV_BUG_SWITCH
 note on link: std_srvs/SetBool.srv
 
 &#64;enduml"/>

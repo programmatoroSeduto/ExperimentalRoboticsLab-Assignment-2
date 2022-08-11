@@ -1037,6 +1037,32 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>del<sp/>nuovo<sp/>nodo</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>altri<sp/>UML</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**NUOVO<sp/>COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>navigation<sp/>system<sp/>(first<sp/>version,<sp/>not<sp/>yet<sp/>tested)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>adesso<sp/>serve<sp/>un<sp/>po&apos;<sp/>di<sp/>testing:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>wall_follow_service_m.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>go_to_point_service_m.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>head_orientation.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>bug_m.py</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>test<sp/>completo<sp/>(conviene<sp/>creare<sp/>un<sp/>launch<sp/>file)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mancava<sp/>l&apos;active<sp/>nel<sp/>bug_m</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>UML<sp/>di<sp/>bug_m<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>:<sp/>tutti<sp/>i<sp/>nodi<sp/>devono<sp/>essere<sp/>*spenti*<sp/>all&apos;avvio<sp/>del<sp/>sistema</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>:<sp/>il<sp/>servizio,<sp/>quando<sp/>dovrebbe<sp/>disattivare<sp/>il<sp/>nodo,<sp/>*non<sp/>invia<sp/>il<sp/>segnale<sp/>di<sp/>stop!*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>:<sp/>il<sp/>robot<sp/>si<sp/>incastra<sp/>per<sp/>terra<sp/>...<sp/>perchè<sp/>quella<sp/>cosa<sp/>sul<sp/>frontale<sp/>del<sp/>robot<sp/>*non<sp/>è<sp/>una<sp/>vera<sp/>castor<sp/>wheel*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>comunque,<sp/>a<sp/>parte<sp/>qualche<sp/>difetto<sp/>di<sp/>meccanismo,<sp/>*sembra<sp/>funzionare*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>l&apos;unica<sp/>cosa<sp/>davvero<sp/>da<sp/>risolvere<sp/>è<sp/>rifare<sp/>la<sp/>ruota<sp/>davanti<sp/>del<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>navigation<sp/>system<sp/>(testing)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

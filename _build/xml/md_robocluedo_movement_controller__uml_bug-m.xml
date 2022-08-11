@@ -46,6 +46,7 @@
 <codeline><highlight class="normal">component<sp/>&quot;bug_m&quot;<sp/>&lt;&lt;ROSPy<sp/>node&gt;&gt;<sp/>as<sp/>NODE_BUG_M<sp/>{</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>&quot;clbk_odom&quot;<sp/>as<sp/>NODE_BUG_M.READ_ODOM</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>&quot;clbk_laser&quot;<sp/>as<sp/>NODE_BUG_M.LISTENER_LASER</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>node<sp/>&quot;bug_switch&quot;<sp/>as<sp/>NODE_BUG_M.SWITCH</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;get&quot;<sp/>&lt;--<sp/>PARAMETERS</highlight></codeline>
@@ -76,6 +77,10 @@
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/head_orient_switch&quot;<sp/>as<sp/>SRV_HEAD_ORIENT_SWITCH</highlight></codeline>
 <codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>SRV_HEAD_ORIENT_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/SetBool.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/bug_switch&quot;<sp/>as<sp/>SRV_BUG_SWITCH</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M.SWITCH<sp/>&quot;srv&quot;<sp/>--&gt;<sp/>SRV_BUG_SWITCH</highlight></codeline>
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/SetBool.srv</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>

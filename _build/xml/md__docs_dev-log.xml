@@ -953,6 +953,37 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>NUOVO COMMIT</bold> : &quot;working on the navigation system (first version, not yet tested)&quot;</para>
+</listitem><listitem><para>adesso serve un po&apos; di testing:</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>wall_follow_service_m.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>go_to_point_service_m.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>head_orientation.py</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>bug_m.py</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>test completo (conviene creare un launch file)</para>
+</listitem><listitem><para>mancava l&apos;active nel <ref refid="namespacebug__m" kindref="compound">bug_m</ref><itemizedlist>
+<listitem><para>aggiornamento UML di <ref refid="namespacebug__m" kindref="compound">bug_m</ref></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ISSUE</bold> : tutti i nodi devono essere <emphasis>spenti</emphasis> all&apos;avvio del sistema<itemizedlist>
+<listitem><para><bold>ISSUE</bold> : il servizio, quando dovrebbe disattivare il nodo, <emphasis>non invia il segnale di stop!</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ISSUE</bold> : il robot si incastra per terra ... perchè quella cosa sul frontale del robot <emphasis>non è una vera castor wheel</emphasis></para>
+</listitem><listitem><para>comunque, a parte qualche difetto di meccanismo, <emphasis>sembra funzionare</emphasis><itemizedlist>
+<listitem><para>l&apos;unica cosa davvero da risolvere è rifare la ruota davanti del robot</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on the navigation system (testing)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
