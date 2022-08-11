@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual" kind="page">
+    <compoundname>md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual</compoundname>
+    <title>the RoboCLuedo Project no.2 – robot URDF model – User Manual</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
+</programlisting></para>
+<para>inside the folder <computeroutput>robocluedo_urdf_model</computeroutput> there are these files:</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>generate_model.sh</computeroutput> is a script to tect the correctness of the model; it also generates a <computeroutput>.pdf</computeroutput> schematic of the model</para>
+</listitem><listitem><para><computeroutput>robocluedo_xacro.xacro</computeroutput> is (as the name suggests) the XACRO model of a robot labeled <bold>robocluedo_robot</bold>. the model is split into three files:<itemizedlist>
+<listitem><para><computeroutput>robocluedo_gazebo_materials</computeroutput> : graphical appearance of the robot</para>
+</listitem><listitem><para><computeroutput>robocluedo_chassis</computeroutput> : the moving platform of the robot</para>
+</listitem><listitem><para><computeroutput>robocluedo_arm</computeroutput> : the robotics arm</para>
+</listitem><listitem><para><computeroutput>robocluedo_arm_gripper</computeroutput> : the gripper of the robotic arm; it includes the link labeled <emphasis>cluedo_link</emphasis></para>
+</listitem><listitem><para><computeroutput>robocluedo_gazebo_sensing</computeroutput> : definition of the Gazebo pluging related to the sensing; vision, laser, everything inside this file</para>
+</listitem><listitem><para><computeroutput>robocluedo_sensing</computeroutput> : this file contains the sensors mounted on the robot</para>
+</listitem><listitem><para><computeroutput>robocluedo_gazebo_plugins</computeroutput> : definition of the Gazebo plugins, without the sensing part</para>
+</listitem><listitem><para><computeroutput>robocluedo_transmission</computeroutput> : Gazebo controllers</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md100">
+<title>HOW TO generate the model</title>
+<para>execute the file <computeroutput>generate_model.sh</computeroutput>; the URDF and its schematic will be located into the folder <computeroutput>model</computeroutput> with names</para>
+<para><itemizedlist>
+<listitem><para><computeroutput>robocluedo_urdf.urdf</computeroutput> for the URDF model,</para>
+</listitem><listitem><para>and <computeroutput>robocluedo_urdf.pdf</computeroutput> for the schematic</para>
+</listitem></itemizedlist>
+</para>
+<para>the output should be like the following:</para>
+<para><programlisting filename=".text"><codeline><highlight class="normal">robot<sp/>name<sp/>is:<sp/>robocluedo_robot</highlight></codeline>
+<codeline><highlight class="normal">----------<sp/>Successfully<sp/>Parsed<sp/>XML<sp/>---------------</highlight></codeline>
+<codeline><highlight class="normal">root<sp/>Link:<sp/>base_link<sp/>has<sp/>4<sp/>child(ren)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>arm_base_link</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>arm_link_01</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>arm_link_02</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>arm_link_03</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>cluedo_link</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(1):<sp/><sp/>left_grip_link</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>child(2):<sp/><sp/>right_grip_link</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>child(2):<sp/><sp/>laser</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>child(3):<sp/><sp/>link_left_wheel</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>child(4):<sp/><sp/>link_right_wheel</highlight></codeline>
+<codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.gv</highlight></codeline>
+<codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.pdf</highlight></codeline>
+</programlisting> </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

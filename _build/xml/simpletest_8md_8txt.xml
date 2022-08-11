@@ -9,7 +9,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="preprocessor">#<sp/>Simple<sp/>Test<sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">A<sp/>PDDL2.1<sp/>domain<sp/>to<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>ROSplan<sp/>in<sp/>a<sp/>very<sp/>simple<sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal">.<sp/></highlight></codeline>
+<codeline lineno="3"><highlight class="normal">A<sp/>PDDL2.1<sp/>domain<sp/>to<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>ROSplan<sp/>in<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>very<sp/>simple<sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal">.<sp/></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>First<sp/>version<sp/>--<sp/>very<sp/>simple</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
@@ -33,41 +33,41 @@
 <codeline lineno="24"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal">(:predicates</highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b<sp/>-<sp/>boolobj)</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b<sp/>-<sp/>boolobj)</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj)</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj)</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal">(:functions</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="33"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
-<codeline lineno="35"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?b<sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
-<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b)))</highlight></codeline>
-<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>)))</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"></highlight></codeline>
-<codeline lineno="50"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?b<sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
+<codeline lineno="50"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b)))</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>)))</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="63"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
@@ -88,14 +88,14 @@
 <codeline lineno="79"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="80"><highlight class="normal"></highlight></codeline>
 <codeline lineno="81"><highlight class="normal">(:init</highlight></codeline>
-<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
-<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="85"><highlight class="normal"></highlight></codeline>
 <codeline lineno="86"><highlight class="normal">(:goal<sp/>(and</highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)<sp/>(not<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1))</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)<sp/>(not<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2))</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)<sp/>(not<sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3))</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1))</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2))</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3))</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="91"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"></highlight></codeline>
@@ -127,8 +127,8 @@
 <codeline lineno="118"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal">(:predicates</highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b<sp/>-<sp/>boolobj)</highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b<sp/>-<sp/>boolobj)</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj)</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj)</highlight></codeline>
 <codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>)<sp/>(stop<sp/>)<sp/>(signal-stop<sp/>)</highlight></codeline>
 <codeline lineno="124"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
@@ -137,7 +137,7 @@
 <codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/>(f-zero)</highlight></codeline>
 <codeline lineno="129"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"></highlight></codeline>
-<codeline lineno="131"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>set-<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref></highlight></codeline>
+<codeline lineno="131"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>set-<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
 <codeline lineno="133"><highlight class="normal"></highlight></codeline>
 <codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
@@ -150,39 +150,39 @@
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="142"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="144"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(?b<sp/>-<sp/>boolobj)</highlight></codeline>
+<codeline lineno="144"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">true</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj)</highlight></codeline>
 <codeline lineno="146"><highlight class="normal"></highlight></codeline>
 <codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
-<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref>))</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
-<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b)))</highlight></codeline>
-<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>)))</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?b<sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>make-</highlight><highlight class="keyword">false</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>-<sp/>boolobj<sp/>)</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"></highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/>:condition<sp/>(and</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/><ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref><sp/>(<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref>))</highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>:effect<sp/>(and</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b)))</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?b))</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(not<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>)))</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(at<sp/>end<sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>?<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>))</highlight></codeline>
 <codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="174"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="176"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>set-signal-stop</highlight></codeline>
+<codeline lineno="176"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>set-signal-stop</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
 <codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
@@ -194,7 +194,7 @@
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="186"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"></highlight></codeline>
-<codeline lineno="188"><highlight class="normal">(:durative-<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref><sp/>set-stop</highlight></codeline>
+<codeline lineno="188"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>set-stop</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
 <codeline lineno="190"><highlight class="normal"></highlight></codeline>
 <codeline lineno="191"><highlight class="normal"><sp/><sp/><sp/><sp/>:duration<sp/>(=<sp/>?duration<sp/>1)</highlight></codeline>
@@ -223,11 +223,11 @@
 <codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/>b1<sp/>b2<sp/>b3<sp/>-<sp/>boolobj</highlight></codeline>
 <codeline lineno="215"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="216"><highlight class="normal">(:init</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"></highlight></codeline>
-<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)</highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"></highlight></codeline>
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/>(stop)</highlight></codeline>
@@ -239,12 +239,12 @@
 <codeline lineno="230"><highlight class="normal"></highlight></codeline>
 <codeline lineno="231"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="232"><highlight class="normal">(:goal<sp/>(and</highlight></codeline>
-<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1))</highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
-<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2))</highlight></codeline>
-<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>(b-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)</highlight></codeline>
-<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(b-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3))</highlight></codeline>
+<codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1)</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b1))</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2)</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b2))</highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><sp/><sp/><sp/><sp/>(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-not-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3)</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref>-</highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>b3))</highlight></codeline>
 <codeline lineno="239"><highlight class="normal"><sp/><sp/><sp/><sp/>(stop)</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>(not(<ref refid="robocluedo_8md_8txt_1ae2a336bd2153d696cb9dfc1838a7e760" kindref="member">start</ref>))</highlight></codeline>
 <codeline lineno="241"><highlight class="normal">))</highlight></codeline>

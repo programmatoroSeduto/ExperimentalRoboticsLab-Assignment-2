@@ -292,6 +292,8 @@
   </compound>
   <compound refid="__build_2html_2__sources_2robocluedo__armor__msgs_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
+  <compound refid="__build_2html_2__sources_2robocluedo__dependencies_2erl2_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
   <compound refid="__build_2html_2__sources_2robocluedo__module__testing_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="__build_2html_2__sources_2robocluedo__rosplan_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
@@ -333,6 +335,27 @@
   <compound refid="robocluedo__armor_2config_2cluedo__items_2cluedo__who_8txt" kind="file"><name>cluedo_who.txt</name>
   </compound>
   <compound refid="robocluedo__armor_2logs_2test__20211109_2config_2cluedo__items_2cluedo__who_8txt" kind="file"><name>cluedo_who.txt</name>
+  </compound>
+  <compound refid="erl2-oracle-user-manual_8md_8txt" kind="file"><name>erl2-oracle-user-manual.md.txt</name>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a008eb0c2ab23112cb3b014636309e62e" kind="variable"><name>RViz</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a6e6ada0784cd87d1df76e51dfde1536a" kind="variable"><name>stamp</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kind="variable"><name>action</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a16754163197eb074b61db8a8c354ccaf" kind="variable"><name>x</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a2f82cd5f2a14b7605818ee4df8fef0fe" kind="variable"><name>y</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a41e4ab58621449a60b55531d4f7b5823" kind="variable"><name>z</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1ad8812599e607b27862dbb74aa857f241" kind="variable"><name>w</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a09d0680988bbc4127cbfa7c02b57c0b8" kind="variable"><name>type</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" kind="variable"><name>r</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a1d061fa5db7f6a1d77b1c501610faa1d" kind="variable"><name>g</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kind="variable"><name>b</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kind="variable"><name>a</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a613aec3cea90947774335a408726fd2e" kind="variable"><name>message</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1af9d4c98cda366456ab5964c251059670" kind="variable"><name>deprecated</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1addab1b9086873b018521634dbdb58bb4" kind="variable"><name>object</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1aa8be41100e9f329a1d80d73eaf0d5b55" kind="variable"><name>NOTE</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a632de8b15e93d1707f094dd7429c5a99" kind="variable"><name>that</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a236b1ef97e62e6ad334f9b644c237d28" kind="variable"><name>all</name></member>
+    <member refid="erl2-oracle-user-manual_8md_8txt_1a94818b5eaf29d0eaf44d31daa86edd84" kind="variable"><name>then</name></member>
   </compound>
   <compound refid="test-armor_8rst_8txt" kind="file"><name>test-armor.rst.txt</name>
   </compound>
@@ -548,6 +571,10 @@
     <member refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" kind="function"><name>ServiceBackupOntology</name></member>
     <member refid="cluedo__armor__interface_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="erl2-oracle-user-manual_8md" kind="file"><name>erl2-oracle-user-manual.md</name>
+  </compound>
+  <compound refid="robocluedo-urdf-user-manual_8md" kind="file"><name>robocluedo-urdf-user-manual.md</name>
+  </compound>
   <compound refid="simulation_8cpp" kind="file"><name>simulation.cpp</name>
     <member refid="simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
     <member refid="simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
@@ -737,6 +764,10 @@
   </compound>
   <compound refid="md_robocluedo_armor__uml_armor-interface-class-diagram" kind="page"><name>md_robocluedo_armor__uml_armor-interface-class-diagram</name>
   </compound>
+  <compound refid="md_robocluedo_dependencies__docs_erl2-oracle-user-manual" kind="page"><name>md_robocluedo_dependencies__docs_erl2-oracle-user-manual</name>
+  </compound>
+  <compound refid="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual" kind="page"><name>md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual</name>
+  </compound>
   <compound refid="md_robocluedo_rosplan__docs_new-robocluedo" kind="page"><name>md_robocluedo_rosplan__docs_new-robocluedo</name>
   </compound>
   <compound refid="md_robocluedo_rosplan__docs_pddl-and-rosplan" kind="page"><name>md_robocluedo_rosplan__docs_pddl-and-rosplan</name>
@@ -757,9 +788,13 @@
   </compound>
   <compound refid="dir_e0a1f7b5db4906bb7de999fc8cfc7600" kind="dir"><name>_build/html/_sources/_docs</name>
   </compound>
+  <compound refid="dir_18a2bf0199f26c819a5d13c34428bbab" kind="dir"><name>_build/html/_sources/robocluedo_dependencies/_docs</name>
+  </compound>
   <compound refid="dir_65650028e1c8d4a5a96de3b0df8bae10" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/_docs</name>
   </compound>
   <compound refid="dir_478f92b34e45e14d753bbfb48456fb76" kind="dir"><name>_docs</name>
+  </compound>
+  <compound refid="dir_d188d0dc66f1f30fef75057913280fdd" kind="dir"><name>robocluedo_dependencies/_docs</name>
   </compound>
   <compound refid="dir_7a143a32def369bdd1a3cede121292e1" kind="dir"><name>robocluedo_rosplan/_docs</name>
   </compound>
@@ -779,9 +814,9 @@
   </compound>
   <compound refid="dir_c7828b997c47c49db066caa641de4284" kind="dir"><name>_build/html/_sources/robocluedo_module_testing/_uml</name>
   </compound>
-  <compound refid="dir_9cd68c2547acfb69855b321ccefa8574" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/_uml</name>
-  </compound>
   <compound refid="dir_d39b0442bb772aacf819816fff4c7bd3" kind="dir"><name>_build/html/_sources/_uml</name>
+  </compound>
+  <compound refid="dir_9cd68c2547acfb69855b321ccefa8574" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/_uml</name>
   </compound>
   <compound refid="dir_654c8e957ef41f3280730cd2bcdfb950" kind="dir"><name>_uml</name>
   </compound>
@@ -797,13 +832,15 @@
   </compound>
   <compound refid="dir_f606b0a89e814161acb16efe4e8b48a4" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/blocksworld</name>
   </compound>
+  <compound refid="dir_4c43aff1527fedf7bfef051462654a57" kind="dir"><name>robocluedo_armor/config/cluedo_items</name>
+  </compound>
   <compound refid="dir_62322488fb42eec52bb118aa217741d0" kind="dir"><name>robocluedo_armor/logs/test_20211109/config/cluedo_items</name>
   </compound>
   <compound refid="dir_7bd8c2acc27a46f0628ee608526779ca" kind="dir"><name>_build/html/_sources/robocluedo_armor/config/cluedo_items</name>
   </compound>
   <compound refid="dir_5f903063cb36bd9d7650be5142bd6cd3" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs/test_20211109/config/cluedo_items</name>
   </compound>
-  <compound refid="dir_4c43aff1527fedf7bfef051462654a57" kind="dir"><name>robocluedo_armor/config/cluedo_items</name>
+  <compound refid="dir_6c2d2d3d39cfb122b9ff27d497396bdc" kind="dir"><name>robocluedo_armor/config</name>
   </compound>
   <compound refid="dir_9143f52a996210688c48757e1b4b9b53" kind="dir"><name>robocluedo_armor/logs/test_20211109/config</name>
   </compound>
@@ -811,7 +848,7 @@
   </compound>
   <compound refid="dir_c0cf784cd5955e96c3ee7b52457533a3" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs/test_20211109/config</name>
   </compound>
-  <compound refid="dir_6c2d2d3d39cfb122b9ff27d497396bdc" kind="dir"><name>robocluedo_armor/config</name>
+  <compound refid="dir_21c0e96358cd4c8051f9403fc624e7d2" kind="dir"><name>_build/html/_sources/robocluedo_dependencies/erl2</name>
   </compound>
   <compound refid="dir_d20505803103fc21601c1d76fde171b1" kind="dir"><name>robocluedo_dependencies/erl2</name>
   </compound>
@@ -833,9 +870,9 @@
   </compound>
   <compound refid="dir_6d53e4f7b00aa4051ac4ef8a6aa61ac5" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs</name>
   </compound>
-  <compound refid="dir_7fd1181a89a56a8b2e96db9936551fb0" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl</name>
-  </compound>
   <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
+  </compound>
+  <compound refid="dir_7fd1181a89a56a8b2e96db9936551fb0" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl</name>
   </compound>
   <compound refid="dir_5aaac04fc6fafbbe52fedcf263b68c45" kind="dir"><name>robocluedo_armor</name>
   </compound>
@@ -847,25 +884,27 @@
   </compound>
   <compound refid="dir_3b1a7ac9f8fae5ec9cf32f4d52cbfc20" kind="dir"><name>robocluedo_dependencies</name>
   </compound>
+  <compound refid="dir_25b8c0fdfb354a5d6d96350cb7aa62f4" kind="dir"><name>_build/html/_sources/robocluedo_dependencies</name>
+  </compound>
   <compound refid="dir_0c7c9d8ce38b319ef680cfddfa679c53" kind="dir"><name>robocluedo_module_testing</name>
   </compound>
   <compound refid="dir_7ace0c494f2656716c52bacac0d50c3f" kind="dir"><name>_build/html/_sources/robocluedo_module_testing</name>
   </compound>
-  <compound refid="dir_0bcc7debfa214158000ea320167ae841" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old</name>
-  </compound>
   <compound refid="dir_5ad723c609f290c688780fa75d9eba80" kind="dir"><name>robocluedo_rosplan/pddl/robocluedo_old</name>
   </compound>
-  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
+  <compound refid="dir_0bcc7debfa214158000ea320167ae841" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old</name>
   </compound>
   <compound refid="dir_491f45b8c84f891ab332eebbf76e03c9" kind="dir"><name>robocluedo_rosplan</name>
+  </compound>
+  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
   </compound>
   <compound refid="dir_de4a62721825576670555fae0e93d072" kind="dir"><name>robocluedo_rosplan/include/robocluedo_rosplan_actions</name>
   </compound>
   <compound refid="dir_7e75f3d459997a3bda519bea1280dc2e" kind="dir"><name>robocluedo_rosplan/src/robocluedo_rosplan_actions</name>
   </compound>
-  <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
-  </compound>
   <compound refid="dir_a7cfc6dd926d5e88bf72c732ed4cf86b" kind="dir"><name>_build/html/_sources/robocluedo_rosplan_msgs</name>
+  </compound>
+  <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
   </compound>
   <compound refid="dir_e1cd440dd794230a2b27c099159b1776" kind="dir"><name>robocluedo_rosplan/scripts</name>
   </compound>
@@ -873,17 +912,17 @@
   </compound>
   <compound refid="dir_9fcfdd857c6f8068fe38fa8869df1d46" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/simpletest</name>
   </compound>
+  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
+  </compound>
   <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
   </compound>
   <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
   </compound>
-  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
-  </compound>
   <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
-  <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
-  </compound>
   <compound refid="dir_2d3088292a90fed69878338281a2af0d" kind="dir"><name>_build/html/_sources/robocluedo_armor/logs/test_20211109</name>
+  </compound>
+  <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
   </compound>
   <compound refid="dir_952419341069c2adb786d19a7245beeb" kind="dir"><name>robocluedo_module_testing/src/test_armor</name>
   </compound>

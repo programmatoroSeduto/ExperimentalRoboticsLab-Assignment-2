@@ -956,6 +956,18 @@ lavoro sul movement controller, anzitutto il modello del robot:
 	- (importazione in una cartella separata chiamata `robocluedo_dependencies`, in vista di importare anche openCV e simili)
 - compila? compila, *e vede correttamente il pakcage sotto la cartella dependencies*
 - **COMMIT** : "robocluedo dependencies"
+- documentazione dello starter kit (dal precedente assignment)
+	- *(mi sono appena reso conto che tale documentazione ... non esiste)*
+	- documentazione del nodo "simulation" con UML incluso
+		- (c'è voluto più tempo del previsto ...)
+- importazione del modello del robot dal precedente package (solo URDF per ora...)
+	- nuova cartella `robocluedo_dependencies/robocluedo_urdf_model` con tutti gli strumenti di sviluppo del caso
+	- con solito environment standard (al terzo progetto ce la facciamo...)
+	- e documentazione (un male necessario)
+	- *il precedente modello è troppo disordinato ...* meglio mettere in ordine, iniziando col separare i componenti di Gazebo (e altri lavori)
+	- ho solo scomposto il modello, dovrebbe continuare a funzionare... e funziona infatti (meno male)
+	- e torniamo sulla documentazione (per ora molto minimal)
+- **COMMIT** : "working on robot model (first setup, xacro model)"
 
 
 
@@ -980,6 +992,8 @@ TODO
 - approfondire UML armor
 - aggiornare il file di descrizione e design del PDDL con il codice corretto
 	- correggere i landmark, oppure eliminare direttamente la sezione
+- specificare negli UML, nel tipo di topic/servizio, *anche il formato del tipo*, ad esempio se è *.msg* o anche *.srv*
+
 
 - autenticazione SSH sul Docker di lavoro
 

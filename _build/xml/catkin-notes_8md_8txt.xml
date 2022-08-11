@@ -36,7 +36,7 @@
 <codeline lineno="8"><highlight class="normal">target_link_libraries(<sp/>???<sp/>${catkin_LIBRARIES}<sp/>???<sp/>)</highlight></codeline>
 <codeline lineno="9"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight></codeline>
-<codeline lineno="11"><highlight class="normal">##<sp/>compile<sp/>a<sp/>library</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">##<sp/>compile<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>library</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal">**section<sp/>CATKIN<sp/>SPECIFIC<sp/>CONFIGURATION**<sp/>declare<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>libraries:</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
@@ -53,7 +53,7 @@
 <codeline lineno="25"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="26"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal">**section<sp/>BUILD**<sp/>first<sp/>of<sp/>all,<sp/>make<sp/>sure<sp/>that<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>is<sp/>uncommented:</highlight></codeline>
+<codeline lineno="28"><highlight class="normal">**section<sp/>BUILD**<sp/>first<sp/>of<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a236b1ef97e62e6ad334f9b644c237d28" kindref="member">all</ref>,<sp/>make<sp/>sure<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a632de8b15e93d1707f094dd7429c5a99" kindref="member">that</ref><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>is<sp/>uncommented:</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">```cmake</highlight></codeline>
 <codeline lineno="31"><highlight class="normal">include_directories(</highlight></codeline>
@@ -62,7 +62,7 @@
 <codeline lineno="34"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="35"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal">compile<sp/>one<sp/>source<sp/>of<sp/>a<sp/>library:</highlight></codeline>
+<codeline lineno="37"><highlight class="normal">compile<sp/>one<sp/>source<sp/>of<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>library:</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal">```cmake</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">add_library(<sp/>???<sp/>src/???.cpp<sp/>)</highlight></codeline>
@@ -91,7 +91,7 @@
 <codeline lineno="63"><highlight class="normal">```cmake</highlight></codeline>
 <codeline lineno="64"><highlight class="normal">add_message_files(</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"><sp/><sp/>FILES</highlight></codeline>
-<codeline lineno="66"><highlight class="normal"><sp/><sp/>...message.msg...</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/>...<ref refid="erl2-oracle-user-manual_8md_8txt_1a613aec3cea90947774335a408726fd2e" kindref="member">message</ref>.msg...</highlight></codeline>
 <codeline lineno="67"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal">add_service_files(</highlight></codeline>
@@ -101,7 +101,7 @@
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal">add_action_files(</highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/>FILES</highlight></codeline>
-<codeline lineno="76"><highlight class="normal"><sp/><sp/>...<ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref>.msg...</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/>...<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref>.msg...</highlight></codeline>
 <codeline lineno="77"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="78"><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal">generate_messages(</highlight></codeline>

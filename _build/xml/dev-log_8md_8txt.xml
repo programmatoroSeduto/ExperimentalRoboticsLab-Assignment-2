@@ -202,7 +202,7 @@
 <codeline lineno="83"><highlight class="normal">-<sp/>ora<sp/>devo<sp/></highlight><highlight class="stringliteral">&quot;solo&quot;</highlight><highlight class="normal"><sp/>aggiornare<sp/>il<sp/>codice<sp/>C++<sp/>del<sp/>nodo<sp/>ROS<sp/>e<sp/>scrivere<sp/>il<sp/>catkin</highlight></codeline>
 <codeline lineno="84"><highlight class="normal">-<sp/>ora<sp/>mancano<sp/>cose<sp/>tipo<sp/>...<sp/>la<sp/>ontology<sp/>...<sp/>e<sp/>tutto<sp/>il<sp/>resto</highlight></codeline>
 <codeline lineno="85"><highlight class="normal">-<sp/>selezione<sp/>dei<sp/>vecchi<sp/>diagrammi<sp/>UML<sp/>riferiti<sp/>ad<sp/>aRMOR</highlight></codeline>
-<codeline lineno="86"><highlight class="normal">-<sp/>prima<sp/>di<sp/>fare<sp/>altro,<sp/>proviamo<sp/>a<sp/>compilare<sp/>...<sp/>OK!<sp/>perfetto</highlight></codeline>
+<codeline lineno="86"><highlight class="normal">-<sp/>prima<sp/>di<sp/>fare<sp/>altro,<sp/>proviamo<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>compilare<sp/>...<sp/>OK!<sp/>perfetto</highlight></codeline>
 <codeline lineno="87"><highlight class="normal">-<sp/>e<sp/>aggiornamento<sp/>docs</highlight></codeline>
 <codeline lineno="88"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;armor<sp/>package<sp/>first<sp/>re-adaptation&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal">-<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>per<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>con<sp/>UML</highlight></codeline>
@@ -257,9 +257,9 @@
 <codeline lineno="138"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>components<sp/>robocluedo<sp/>rosplan<sp/>(solo<sp/>bozza)</highlight></codeline>
 <codeline lineno="139"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>*meglio<sp/>lavorare<sp/>in<sp/>MD*<sp/>:<sp/>nessuna<sp/>tabulazione<sp/>fastidiosa,<sp/>è<sp/>più<sp/>facile<sp/>lavorarci<sp/>su</highlight></codeline>
 <codeline lineno="140"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>components<sp/>armor<sp/></highlight></codeline>
-<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(ricorda<sp/>di<sp/>usare<sp/>l&apos;</highlight><highlight class="normal">opzione<sp/>`allow_mixing`<sp/>all</highlight><highlight class="stringliteral">&apos;inizio<sp/>del<sp/>codice<sp/>per<sp/>poter<sp/>usare<sp/>diversi<sp/>tipi<sp/>di<sp/>UML<sp/>nello<sp/>stesso<sp/>schema)</highlight></codeline>
+<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(ricorda<sp/>di<sp/>usare<sp/>l&apos;</highlight><highlight class="normal">opzione<sp/>`allow_mixing`<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a236b1ef97e62e6ad334f9b644c237d28" kindref="member">all</ref></highlight><highlight class="stringliteral">&apos;inizio<sp/>del<sp/>codice<sp/>per<sp/>poter<sp/>usare<sp/>diversi<sp/>tipi<sp/>di<sp/>UML<sp/>nello<sp/>stesso<sp/>schema)</highlight></codeline>
 <codeline lineno="142"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>component<sp/>movement<sp/>controller</highlight></codeline>
-<codeline lineno="143"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>**il<sp/>mission<sp/>manager<sp/>non<sp/>lo<sp/>faccio<sp/>adesso**<sp/>perchè<sp/>è<sp/>il<sp/>nodo<sp/>che<sp/>va<sp/>a<sp/>&quot;legare&quot;<sp/>tutte<sp/>le<sp/>parti<sp/>dell&apos;</highlight><highlight class="normal">architettura.<sp/>quindi,<sp/>meglio<sp/>lasciarlo<sp/>a<sp/>quando<sp/>avrò<sp/>un</highlight><highlight class="stringliteral">&apos;idea<sp/>chiara</highlight></codeline>
+<codeline lineno="143"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>**il<sp/>mission<sp/>manager<sp/>non<sp/>lo<sp/>faccio<sp/>adesso**<sp/>perchè<sp/>è<sp/>il<sp/>nodo<sp/>che<sp/>va<sp/>a<sp/>&quot;legare&quot;<sp/>tutte<sp/>le<sp/>parti<sp/>dell&apos;</highlight><highlight class="normal">architettura.<sp/>quindi,<sp/>meglio<sp/>lasciarlo<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>quando<sp/>avrò<sp/>un</highlight><highlight class="stringliteral">&apos;idea<sp/>chiara</highlight></codeline>
 <codeline lineno="144"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;uml<sp/>arch<sp/>first<sp/>draft&quot;</highlight></codeline>
 <codeline lineno="145"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="146"><highlight class="stringliteral">---</highlight></codeline>
@@ -496,8 +496,8 @@
 <codeline lineno="377"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>la<sp/>sezione<sp/>*other<sp/>queries*<sp/>si<sp/>può<sp/>eliminare,<sp/>non<sp/>mi<sp/>è<sp/>mai<sp/>servita<sp/>nemmeno<sp/>per<sp/>il<sp/>precedente<sp/>progetto</highlight></codeline>
 <codeline lineno="378"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>già<sp/>che<sp/>ci<sp/>sono,<sp/>documento<sp/>la<sp/>lettura<sp/>di<sp/>un<sp/>predicate<sp/>da<sp/>codice</highlight></codeline>
 <codeline lineno="379"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>escluderei<sp/>l&apos;</highlight><highlight class="normal">altra<sp/>libreria...<sp/>non<sp/>mi<sp/>sembra<sp/>molto<sp/>utile,<sp/>e<sp/>comunque<sp/>voglio<sp/>mantenere<sp/>tutto<sp/>sul<sp/>semplice</highlight></codeline>
-<codeline lineno="380"><highlight class="normal">-<sp/>prima<sp/>di<sp/>andare<sp/>avanti,<sp/>*prova<sp/>a<sp/>compilare<sp/>la<sp/>libreria*</highlight></codeline>
-<codeline lineno="381"><highlight class="normal">-<sp/>assumiamo<sp/>che<sp/>kb<sp/>tools<sp/>funzioni<sp/>a<sp/>dovere<sp/>(dovrebbe,<sp/>l</highlight><highlight class="stringliteral">&apos;ho<sp/>usata<sp/>nel<sp/>vecchio<sp/>progetto<sp/>e<sp/>andava<sp/>bene)</highlight></codeline>
+<codeline lineno="380"><highlight class="normal">-<sp/>prima<sp/>di<sp/>andare<sp/>avanti,<sp/>*prova<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>compilare<sp/>la<sp/>libreria*</highlight></codeline>
+<codeline lineno="381"><highlight class="normal">-<sp/>assumiamo<sp/>che<sp/>kb<sp/>tools<sp/>funzioni<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>dovere<sp/>(dovrebbe,<sp/>l</highlight><highlight class="stringliteral">&apos;ho<sp/>usata<sp/>nel<sp/>vecchio<sp/>progetto<sp/>e<sp/>andava<sp/>bene)</highlight></codeline>
 <codeline lineno="382"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>UML<sp/>di<sp/>kb_tools</highlight></codeline>
 <codeline lineno="383"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;re-adaptation<sp/>of<sp/>kb_tools&quot;</highlight></codeline>
 <codeline lineno="384"><highlight class="stringliteral">-<sp/>manca<sp/>ancora<sp/>una<sp/>cosa<sp/>prima<sp/>di<sp/>poter<sp/>implementare<sp/>ad<sp/>esempio<sp/>il<sp/>sistema<sp/>di<sp/>landmark:<sp/>*come<sp/>settare<sp/>un<sp/>goal*<sp/>?</highlight></codeline>
@@ -699,7 +699,7 @@
 <codeline lineno="580"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>preparato<sp/>un<sp/>minimo<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>per<sp/>l</highlight><highlight class="stringliteral">&apos;apertura<sp/>dei<sp/>client<sp/>in<sp/>ROSpy:</highlight></codeline>
 <codeline lineno="581"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```py</highlight></codeline>
 <codeline lineno="582"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>def<sp/>open_cl(<sp/>cl_name,<sp/>cl_type,<sp/>SRV_TIMEOUT=60<sp/>):</highlight></codeline>
-<codeline lineno="583"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">open<sp/>a<sp/>client</highlight></codeline>
+<codeline lineno="583"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&apos;</highlight><highlight class="stringliteral">&apos;&apos;</highlight><highlight class="normal">open<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>client</highlight></codeline>
 <codeline lineno="584"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="charliteral">&apos;&apos;&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="585"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="586"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>global<sp/><ref refid="dev-log_8md_8txt_1a8cc8d559acdd2f74085b20977182d5b7" kindref="member">NODE_NAME</ref></highlight></codeline>
@@ -725,7 +725,7 @@
 <codeline lineno="606"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>partiamo<sp/>dallo<sp/>scrivere<sp/>il<sp/>messaggio<sp/>di<sp/>feedback</highlight></codeline>
 <codeline lineno="607"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>il<sp/>servizio<sp/>implementato<sp/>dal<sp/>pipeline<sp/>manager</highlight></codeline>
 <codeline lineno="608"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila,<sp/>dopo<sp/>qualche<sp/>bestemmia</highlight></codeline>
-<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ricorda<sp/>di<sp/>inserire<sp/>nel<sp/>cmake<sp/>anche<sp/>*message_runtime*<sp/>oltre<sp/>a<sp/>*message_generation*,<sp/>altrimenti<sp/>non<sp/>si<sp/>riesce<sp/>ad<sp/>importare<sp/>i<sp/>messaggi<sp/>nei<sp/>servizi<sp/>nell</highlight><highlight class="stringliteral">&apos;ambito<sp/>dello<sp/>stesso<sp/>package</highlight></codeline>
+<codeline lineno="609"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ricorda<sp/>di<sp/>inserire<sp/>nel<sp/>cmake<sp/>anche<sp/>*message_runtime*<sp/>oltre<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>*message_generation*,<sp/>altrimenti<sp/>non<sp/>si<sp/>riesce<sp/>ad<sp/>importare<sp/>i<sp/>messaggi<sp/>nei<sp/>servizi<sp/>nell</highlight><highlight class="stringliteral">&apos;ambito<sp/>dello<sp/>stesso<sp/>package</highlight></codeline>
 <codeline lineno="610"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(voglio<sp/>mantenere<sp/>l&apos;</highlight><highlight class="normal"><ref refid="robocluedo_8md_8txt_1ab8f7371bf96dfc5f97da7e8948f674aa" kindref="member">idea</ref><sp/>del<sp/>feedback<sp/>da<sp/>C++)</highlight></codeline>
 <codeline lineno="611"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>dell</highlight><highlight class="stringliteral">&apos;UML<sp/>del<sp/>nodo<sp/>includendo<sp/>anche<sp/>il<sp/>feedback<sp/>manager</highlight></codeline>
 <codeline lineno="612"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>apriamo<sp/>il<sp/>servizio<sp/>e<sp/>il<sp/>topic</highlight></codeline>
@@ -768,7 +768,7 @@
 <codeline lineno="649"><highlight class="normal"></highlight></codeline>
 <codeline lineno="650"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>10/08/2021<sp/>--<sp/>ancora<sp/>su<sp/>rosplan</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="651"><highlight class="normal"></highlight></codeline>
-<codeline lineno="652"><highlight class="normal">torniamo<sp/>a<sp/>lavorare<sp/>sul<sp/>pipeline<sp/>manager,<sp/>una<sp/>funzionalità<sp/>per<sp/>volta.<sp/>Ieri:<sp/>l</highlight><highlight class="stringliteral">&apos;istanza<sp/>del<sp/>problema.<sp/></highlight></codeline>
+<codeline lineno="652"><highlight class="normal">torniamo<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>lavorare<sp/>sul<sp/>pipeline<sp/>manager,<sp/>una<sp/>funzionalità<sp/>per<sp/>volta.<sp/>Ieri:<sp/>l</highlight><highlight class="stringliteral">&apos;istanza<sp/>del<sp/>problema.<sp/></highlight></codeline>
 <codeline lineno="653"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="654"><highlight class="stringliteral">-<sp/>*soluzione<sp/>del<sp/>problema*<sp/>usando<sp/>il<sp/>planner</highlight></codeline>
 <codeline lineno="655"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>implementazione</highlight></codeline>
@@ -813,13 +813,13 @@
 <codeline lineno="694"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(not-is-center<sp/>center)</highlight></codeline>
 <codeline lineno="695"><highlight class="normal"></highlight></codeline>
 <codeline lineno="696"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>...cannot<sp/>be<sp/>found<sp/>either<sp/>in<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>initial<sp/>state,<sp/>as<sp/>an<sp/>add<sp/>effect<sp/>of<sp/>an</highlight></codeline>
-<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref>,<sp/>or<sp/>as<sp/>a<sp/>timed<sp/>initial<sp/>literal.<sp/><sp/>As<sp/>such,<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>problem<sp/>has<sp/>been<sp/>deemed</highlight></codeline>
+<codeline lineno="697"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref>,<sp/>or<sp/>as<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>timed<sp/>initial<sp/>literal.<sp/><sp/>As<sp/>such,<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>problem<sp/>has<sp/>been<sp/>deemed</highlight></codeline>
 <codeline lineno="698"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>unsolvable.</highlight></codeline>
 <codeline lineno="699"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
 <codeline lineno="700"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>capire<sp/>se<sp/>il<sp/>problema<sp/>non<sp/>è<sp/>risolvibile,<sp/>occore</highlight></codeline>
 <codeline lineno="701"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>eliminare<sp/>il<sp/>precedente<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>plan</highlight></codeline>
 <codeline lineno="702"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>caricare<sp/>nel<sp/>parameter<sp/>server<sp/>il<sp/>percorso<sp/>dove<sp/>verrà<sp/>caricato<sp/>il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>plan<sp/>dal<sp/>planner</highlight></codeline>
-<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>leggere<sp/>il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>plan<sp/>e<sp/>cercare<sp/>all</highlight><highlight class="stringliteral">&apos;interno<sp/>di<sp/>esso<sp/>la<sp/>stringa<sp/>&quot;the<sp/>problem<sp/>has<sp/>been<sp/>deemed<sp/>unsolvable&quot;</highlight></codeline>
+<codeline lineno="703"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>leggere<sp/>il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>plan<sp/>e<sp/>cercare<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a236b1ef97e62e6ad334f9b644c237d28" kindref="member">all</ref></highlight><highlight class="stringliteral">&apos;interno<sp/>di<sp/>esso<sp/>la<sp/>stringa<sp/>&quot;the<sp/>problem<sp/>has<sp/>been<sp/>deemed<sp/>unsolvable&quot;</highlight></codeline>
 <codeline lineno="704"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>se<sp/>la<sp/>stringa<sp/>c&apos;</highlight><highlight class="normal">è,<sp/>allora<sp/>il<sp/>problema<sp/>è<sp/>chiaramente<sp/>irrisolvibile,<sp/>altrimenti<sp/>(il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>non<sp/>esiste<sp/>proprio<sp/>oppure<sp/>è<sp/>diverso)<sp/>il<sp/>problema<sp/>è<sp/>di<sp/>altra<sp/>natura</highlight></codeline>
 <codeline lineno="705"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>...</highlight></codeline>
 <codeline lineno="706"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>caricamento<sp/>percorso<sp/>nel<sp/>parameter<sp/>server<sp/>tramite<sp/>launch<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref></highlight></codeline>
@@ -861,7 +861,7 @@
 <codeline lineno="742"><highlight class="stringliteral">-<sp/>anzitutto<sp/>lettura<sp/>del<sp/>vecchio<sp/>codice<sp/>(l&apos;</highlight><highlight class="normal"><ref refid="robocluedo_8md_8txt_1ab8f7371bf96dfc5f97da7e8948f674aa" kindref="member">idea</ref><sp/>è<sp/>la<sp/>stessa:<sp/>una<sp/>classe<sp/>che<sp/>posso<sp/>usare<sp/>da<sp/>padre<sp/>per<sp/>altre<sp/>classi,<sp/>o<sp/>che<sp/>posso<sp/>istanziare)</highlight></codeline>
 <codeline lineno="743"><highlight class="normal">-<sp/>la<sp/>classe<sp/>precedente<sp/>non<sp/>è<sp/>più<sp/>utilizzabile,<sp/>però<sp/>posso<sp/>riadattarla,<sp/>stesso<sp/>lavoro<sp/>di<sp/><ref refid="classkb__tools" kindref="compound">kb_tools</ref><sp/>direi</highlight></codeline>
 <codeline lineno="744"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>header<sp/>e<sp/>cpp<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref></highlight></codeline>
-<codeline lineno="745"><highlight class="normal">-<sp/>adesso,<sp/>una<sp/>cosa<sp/>per<sp/>volta,<sp/>a<sp/>partire<sp/>dall</highlight><highlight class="stringliteral">&apos;header</highlight></codeline>
+<codeline lineno="745"><highlight class="normal">-<sp/>adesso,<sp/>una<sp/>cosa<sp/>per<sp/>volta,<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>partire<sp/>dall</highlight><highlight class="stringliteral">&apos;header</highlight></codeline>
 <codeline lineno="746"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>librerie<sp/>e<sp/>&quot;contorno&quot;</highlight></codeline>
 <codeline lineno="747"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>funzione<sp/>per<sp/>la<sp/>scrittura<sp/>rapida<sp/>del<sp/>messaggio</highlight></codeline>
 <codeline lineno="748"><highlight class="stringliteral">-<sp/>per<sp/>ora<sp/>basta<sp/>che<sp/>compili<sp/>(i<sp/>feedback<sp/>li<sp/>scrivo<sp/>man<sp/>mano<sp/>che<sp/>scrivo<sp/>le<sp/>azioni)</highlight></codeline>
@@ -931,10 +931,10 @@
 <codeline lineno="812"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline lineno="813"><highlight class="stringliteral">-<sp/>*move-to-center*<sp/>è<sp/>praticamente<sp/>identica<sp/>alla<sp/>*move-to*<sp/>di<sp/>prima</highlight></codeline>
 <codeline lineno="814"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>uml<sp/>copiato<sp/>e<sp/>incollato</highlight></codeline>
-<codeline lineno="815"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>l&apos;</highlight><highlight class="normal">implementazione<sp/>è<sp/>praticamente<sp/>identica<sp/>a<sp/>*move-to*</highlight></codeline>
+<codeline lineno="815"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>l&apos;</highlight><highlight class="normal">implementazione<sp/>è<sp/>praticamente<sp/>identica<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>*move-to*</highlight></codeline>
 <codeline lineno="816"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake</highlight></codeline>
 <codeline lineno="817"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>ovviamente<sp/>compila.</highlight></codeline>
-<codeline lineno="818"><highlight class="normal">-<sp/>la<sp/>*solve*<sp/>è<sp/>una<sp/>simulated<sp/><ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref>:<sp/>dato<sp/>che<sp/>solo<sp/>il<sp/>mission<sp/>manager<sp/>può<sp/>accedere<sp/>alla<sp/>ontology,<sp/>la<sp/>solve<sp/>perde<sp/>di<sp/>ogni<sp/>utilità</highlight></codeline>
+<codeline lineno="818"><highlight class="normal">-<sp/>la<sp/>*solve*<sp/>è<sp/>una<sp/>simulated<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref>:<sp/>dato<sp/>che<sp/>solo<sp/>il<sp/>mission<sp/>manager<sp/>può<sp/>accedere<sp/>alla<sp/>ontology,<sp/>la<sp/>solve<sp/>perde<sp/>di<sp/>ogni<sp/>utilità</highlight></codeline>
 <codeline lineno="819"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(end<sp/>of<sp/>the<sp/>job)&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="820"><highlight class="normal">-<sp/>implementare<sp/>(solo<sp/>per<sp/>il<sp/>testing)<sp/>un<sp/>nodo<sp/>che<sp/>imiti<sp/>navigation<sp/>e<sp/>manipulation</highlight></codeline>
 <codeline lineno="821"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/><ref refid="namespacerosplan__simulated__motion__system" kindref="compound">rosplan_simulated_motion_system</ref></highlight></codeline>
@@ -944,153 +944,172 @@
 <codeline lineno="825"><highlight class="normal">-<sp/>feedback<sp/></highlight><highlight class="stringliteral">&quot;hw<sp/>manipulation<sp/>failure&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="826"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...e<sp/>tutti<sp/>gli<sp/>altri<sp/>tipi<sp/>di<sp/>feedback</highlight></codeline>
 <codeline lineno="827"><highlight class="normal">-<sp/>compila?<sp/>compila</highlight></codeline>
-<codeline lineno="828"><highlight class="normal">-<sp/>ora,<sp/>tutti<sp/>i<sp/>feedback<sp/>in<sp/>tutte<sp/>le<sp/>azioni</highlight></codeline>
-<codeline lineno="829"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>collect<sp/>hint</highlight></codeline>
-<codeline lineno="830"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to</highlight></codeline>
-<codeline lineno="831"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to<sp/>center</highlight></codeline>
-<codeline lineno="832"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>replan</highlight></codeline>
-<codeline lineno="833"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(feedbacks<sp/>from<sp/>the<sp/>actions)&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="834"><highlight class="normal">-<sp/>come<sp/>*ultima<sp/>fatica<sp/>per<sp/>oggi*<sp/>implementazione<sp/>dell</highlight><highlight class="stringliteral">&apos;esecuzione<sp/>nella<sp/>pipeline<sp/>(test<sp/>domani)</highlight></codeline>
-<codeline lineno="835"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(manca<sp/>solo<sp/>la<sp/>parte<sp/>riguardande<sp/>i<sp/>feedback)</highlight></codeline>
-<codeline lineno="836"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>micro<sp/>test<sp/>per<sp/>capire<sp/>se<sp/>è<sp/>tutto<sp/>a<sp/>posto</highlight></codeline>
-<codeline lineno="837"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
-<codeline lineno="838"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>1</highlight></codeline>
-<codeline lineno="839"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
-<codeline lineno="840"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="841"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>2</highlight></codeline>
-<codeline lineno="842"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
-<codeline lineno="843"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="844"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>3<sp/>(not<sp/>with<sp/>simulated<sp/>actions)</highlight></codeline>
-<codeline lineno="845"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
-<codeline lineno="846"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="847"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>4</highlight></codeline>
-<codeline lineno="848"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
-<codeline lineno="849"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="850"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;<sp/></highlight></codeline>
-<codeline lineno="851"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
-<codeline lineno="852"><highlight class="stringliteral">-<sp/>**ISSUES**<sp/>che<sp/>non<sp/>potevo<sp/>notare<sp/>prima<sp/>di<sp/>avere<sp/>il<sp/>sistema<sp/>completo<sp/>(usando<sp/>solo<sp/>simulated<sp/>actions)</highlight></codeline>
-<codeline lineno="853"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(GRAVE)<sp/>la<sp/>sequenza<sp/>dei<sp/>landmark<sp/>porta<sp/>ad<sp/>un<sp/>problema<sp/>irrisolvibile,<sp/>vedi<sp/>la<sp/>combinazione<sp/>tra<sp/>i<sp/>predicati<sp/>at<sp/>e<sp/>explored<sp/>(probabilmente<sp/>è<sp/>un<sp/>problema<sp/>della<sp/>attuale<sp/>kb<sp/>interface<sp/>che<sp/>non<sp/>tiene<sp/>conto<sp/>di<sp/>questo<sp/>conflitto).<sp/>lo<sp/>scenario<sp/>di<sp/>utilizzo<sp/>dovrebbe<sp/>essere:<sp/>(landmarks)<sp/>0<sp/>1<sp/>1<sp/>1<sp/>...<sp/>1<sp/>2<sp/>0<sp/>1<sp/>...</highlight></codeline>
-<codeline lineno="854"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>la<sp/>pipeline<sp/>non<sp/>segnala<sp/>il<sp/>raggiungimento<sp/>del<sp/>goal<sp/>nel<sp/>messaggio...</highlight></codeline>
-<codeline lineno="855"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>il<sp/>log<sp/>nella<sp/>pipeline<sp/>non<sp/>segna<sp/>la<sp/>fine<sp/>del<sp/>dispatch</highlight></codeline>
-<codeline lineno="856"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>the<sp/>pipeline<sp/>manager<sp/>(feedback<sp/>management)&quot;</highlight></codeline>
-<codeline lineno="857"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="858"><highlight class="stringliteral">---</highlight></codeline>
-<codeline lineno="859"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="860"><highlight class="stringliteral">##<sp/>11/08/2022<sp/>--<sp/>ancora<sp/>su<sp/>ROSPlan</highlight></codeline>
-<codeline lineno="861"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="862"><highlight class="stringliteral">anzitutto,<sp/>vorrei<sp/>lavorare<sp/>sulle<sp/>issue<sp/>di<sp/>ieri:<sp/>il<sp/>fatto<sp/>che<sp/>la<sp/>sequenza<sp/>di<sp/>landmark<sp/>che<sp/>mi<sp/>aspetto<sp/>non<sp/>funzioni<sp/>come<sp/>si<sp/>deve<sp/>è<sp/>un<sp/>problema<sp/>grave<sp/>che<sp/>va<sp/>risolto<sp/>al<sp/>più<sp/>presto.<sp/></highlight></codeline>
-<codeline lineno="863"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="864"><highlight class="stringliteral">-<sp/>un<sp/>test<sp/>più<sp/>approfondito:</highlight></codeline>
-<codeline lineno="865"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="866"><highlight class="stringliteral">```bash</highlight></codeline>
-<codeline lineno="867"><highlight class="stringliteral">#<sp/>shell<sp/>1</highlight></codeline>
-<codeline lineno="868"><highlight class="stringliteral">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
-<codeline lineno="869"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="870"><highlight class="stringliteral">#<sp/>shell<sp/>2</highlight></codeline>
-<codeline lineno="871"><highlight class="stringliteral">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
-<codeline lineno="872"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="873"><highlight class="stringliteral">#<sp/>shell<sp/>3</highlight></codeline>
-<codeline lineno="874"><highlight class="stringliteral">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
-<codeline lineno="875"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="876"><highlight class="stringliteral">#<sp/>shell<sp/>4</highlight></codeline>
-<codeline lineno="877"><highlight class="stringliteral">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2</highlight></codeline>
-<codeline lineno="878"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
-<codeline lineno="879"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="880"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="881"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="882"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
-<codeline lineno="883"><highlight class="stringliteral">```</highlight></codeline>
-<codeline lineno="884"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="885"><highlight class="stringliteral">-<sp/>**ALTRO<sp/>ASPETTO<sp/>DA<sp/>AFFINARE**:<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>managi<sp/>non<sp/>servirà,<sp/>però<sp/>va<sp/>comunque<sp/>scritto<sp/>nel<sp/>messaggio<sp/>di<sp/>ritorno.</highlight></codeline>
-<codeline lineno="886"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(lo<sp/>faccio<sp/>adesso)</highlight></codeline>
-<codeline lineno="887"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>...<sp/>e<sp/>ok!</highlight></codeline>
-<codeline lineno="888"><highlight class="stringliteral">-<sp/>ora,<sp/>sostituisco<sp/>le<sp/>simulated<sp/>actions<sp/>con<sp/>le<sp/>mie<sp/>implementazioni</highlight></codeline>
-<codeline lineno="889"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="890"><highlight class="stringliteral">```xml</highlight></codeline>
-<codeline lineno="891"><highlight class="stringliteral">&lt;node<sp/>name=&quot;rosplan_interface_???&quot;<sp/>pkg=&quot;robocluedo_rosplan&quot;<sp/>type=&quot;node_???&quot;<sp/>respawn=&quot;false&quot;<sp/>output=&quot;screen&quot;&gt;</highlight></codeline>
-<codeline lineno="892"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="893"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;knowledge_base&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;rosplan_knowledge_base&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="894"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;pddl_action_name&quot;<sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;???&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="895"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_dispatch_topic&quot;<sp/>value=&quot;/rosplan_plan_dispatcher/action_dispatch&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="896"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_feedback_topic&quot;<sp/>value=&quot;/rosplan_plan_dispatcher/action_feedback&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="897"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="898"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_duration&quot;<sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=&quot;0.99&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="899"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=&quot;action_probability&quot;<sp/><sp/><sp/><sp/>value=&quot;1.0&quot;<sp/>/&gt;</highlight></codeline>
-<codeline lineno="900"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="901"><highlight class="stringliteral">&lt;/node&gt;</highlight></codeline>
-<codeline lineno="902"><highlight class="stringliteral">```</highlight></codeline>
-<codeline lineno="903"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="904"><highlight class="stringliteral">-<sp/>e<sp/>test<sp/>delle<sp/>actions<sp/>reali</highlight></codeline>
-<codeline lineno="905"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>*mi<sp/>sono<sp/>dimenticato<sp/>di<sp/>compilare<sp/>move_to_center!*</highlight></codeline>
-<codeline lineno="906"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="907"><highlight class="stringliteral">```bash</highlight></codeline>
-<codeline lineno="908"><highlight class="stringliteral">#<sp/>shell<sp/>1</highlight></codeline>
-<codeline lineno="909"><highlight class="stringliteral">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
-<codeline lineno="910"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="911"><highlight class="stringliteral">#<sp/>shell<sp/>2</highlight></codeline>
-<codeline lineno="912"><highlight class="stringliteral">rosrun<sp/>robocluedo_rosplan<sp/>kb_interface</highlight></codeline>
-<codeline lineno="913"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="914"><highlight class="stringliteral">#<sp/>shell<sp/>3</highlight></codeline>
-<codeline lineno="915"><highlight class="stringliteral">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight></codeline>
-<codeline lineno="916"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="917"><highlight class="stringliteral">#<sp/>shell<sp/>4</highlight></codeline>
-<codeline lineno="918"><highlight class="stringliteral">rosrun<sp/>robocluedo_rosplan<sp/>rosplan_pipeline_manager.py</highlight></codeline>
-<codeline lineno="919"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="920"><highlight class="stringliteral">#<sp/>shell<sp/>5</highlight></codeline>
-<codeline lineno="921"><highlight class="stringliteral">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2<sp/>0<sp/>1<sp/>2</highlight></codeline>
-<codeline lineno="922"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="923"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
-<codeline lineno="924"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="925"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="926"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="927"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
-<codeline lineno="928"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="929"><highlight class="stringliteral">#<sp/>ERRORE<sp/>problema<sp/>non<sp/>risolvibile<sp/>(correttamente<sp/>segnalato<sp/>dal<sp/>pipeline<sp/>manager)</highlight></codeline>
-<codeline lineno="930"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="931"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="932"><highlight class="stringliteral">#<sp/>problema<sp/>risolvibile</highlight></codeline>
-<codeline lineno="933"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;<sp/></highlight></codeline>
-<codeline lineno="934"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
-<codeline lineno="935"><highlight class="stringliteral">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
-<codeline lineno="936"><highlight class="stringliteral">```</highlight></codeline>
-<codeline lineno="937"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="938"><highlight class="stringliteral">-<sp/>(alla<sp/>fine<sp/>la<sp/>issue<sp/>di<sp/>ieri<sp/>era<sp/>...<sp/>semplice<sp/>sonno)</highlight></codeline>
-<codeline lineno="939"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo<sp/>rosplan<sp/>actions<sp/>(launch<sp/>file)&quot;</highlight></codeline>
-<codeline lineno="940"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="941"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="942"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="943"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="944"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="945"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="946"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="947"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="948"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="949"><highlight class="stringliteral">TODO</highlight></codeline>
-<codeline lineno="950"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="951"><highlight class="stringliteral">-<sp/>discutere<sp/>l&apos;</highlight><highlight class="normal">utilità<sp/>del<sp/>landmark<sp/>zero...<sp/>è<sp/>davvero<sp/>così<sp/>utile<sp/>avere<sp/>un</highlight><highlight class="stringliteral">&apos;azione<sp/>che<sp/>faccia<sp/>fare<sp/>replan?</highlight></codeline>
-<codeline lineno="952"><highlight class="stringliteral">-<sp/>**gestire<sp/>meglio<sp/>l&apos;</highlight><highlight class="normal">invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
-<codeline lineno="953"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev</highlight><highlight class="stringliteral">&apos;essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev&apos;</highlight><highlight class="normal">essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
-<codeline lineno="954"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
-<codeline lineno="955"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
-<codeline lineno="956"><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/><ref refid="classkb__tools" kindref="compound">kb_tools</ref></highlight></codeline>
-<codeline lineno="957"><highlight class="normal"></highlight></codeline>
-<codeline lineno="958"><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell</highlight><highlight class="stringliteral">&apos;azione<sp/>move-to</highlight></codeline>
-<codeline lineno="959"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="960"><highlight class="stringliteral">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;</highlight><highlight class="normal">è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
-<codeline lineno="961"><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
-<codeline lineno="962"><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/></highlight><highlight class="keyword">template</highlight><highlight class="normal"><sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref></highlight></codeline>
-<codeline lineno="963"><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline lineno="964"><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
-<codeline lineno="965"><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/></highlight><highlight class="stringliteral">&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="966"><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
-<codeline lineno="967"><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a72b7badb1a65b571e3bc144937a5ddd7" kindref="member">PDDL</ref><sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
-<codeline lineno="968"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
-<codeline lineno="969"><highlight class="normal"></highlight></codeline>
-<codeline lineno="970"><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
-<codeline lineno="971"><highlight class="normal"></highlight></codeline>
-<codeline lineno="972"><highlight class="normal">NOTE</highlight></codeline>
-<codeline lineno="973"><highlight class="normal"></highlight></codeline>
-<codeline lineno="974"><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline lineno="828"><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l</highlight><highlight class="stringliteral">&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
+<codeline lineno="829"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;</highlight><highlight class="normal">essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev</highlight><highlight class="stringliteral">&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
+<codeline lineno="830"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
+<codeline lineno="831"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
+<codeline lineno="832"><highlight class="stringliteral">-<sp/>ora,<sp/>tutti<sp/>i<sp/>feedback<sp/>in<sp/>tutte<sp/>le<sp/>azioni</highlight></codeline>
+<codeline lineno="833"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>collect<sp/>hint</highlight></codeline>
+<codeline lineno="834"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to</highlight></codeline>
+<codeline lineno="835"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to<sp/>center</highlight></codeline>
+<codeline lineno="836"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>replan</highlight></codeline>
+<codeline lineno="837"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo_rosplan_actions<sp/>(feedbacks<sp/>from<sp/>the<sp/>actions)&quot;</highlight></codeline>
+<codeline lineno="838"><highlight class="stringliteral">-<sp/>come<sp/>*ultima<sp/>fatica<sp/>per<sp/>oggi*<sp/>implementazione<sp/>dell&apos;</highlight><highlight class="normal">esecuzione<sp/>nella<sp/>pipeline<sp/>(<ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/>domani)</highlight></codeline>
+<codeline lineno="839"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(manca<sp/>solo<sp/>la<sp/>parte<sp/>riguardande<sp/>i<sp/>feedback)</highlight></codeline>
+<codeline lineno="840"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>micro<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/>per<sp/>capire<sp/>se<sp/>è<sp/>tutto<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>posto</highlight></codeline>
+<codeline lineno="841"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline lineno="842"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>1</highlight></codeline>
+<codeline lineno="843"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline lineno="844"><highlight class="normal"></highlight></codeline>
+<codeline lineno="845"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>2</highlight></codeline>
+<codeline lineno="846"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/><ref refid="classkb__interface" kindref="compound">kb_interface</ref></highlight></codeline>
+<codeline lineno="847"><highlight class="normal"></highlight></codeline>
+<codeline lineno="848"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>3<sp/>(not<sp/>with<sp/>simulated<sp/>actions)</highlight></codeline>
+<codeline lineno="849"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>rosrun<sp/>robocluedo_rosplan<sp/>rosplan_simulated_motion_system.py</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="850"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="851"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#<sp/>shell<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="852"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosrun<sp/>robocluedo_rosplan<sp/><ref refid="namespacerosplan__pipeline__manager" kindref="compound">rosplan_pipeline_manager</ref>.py</highlight></codeline>
+<codeline lineno="853"><highlight class="normal"></highlight></codeline>
+<codeline lineno="854"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="855"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline lineno="856"><highlight class="normal">-<sp/>**ISSUES**<sp/>che<sp/>non<sp/>potevo<sp/>notare<sp/>prima<sp/>di<sp/>avere<sp/>il<sp/>sistema<sp/>completo<sp/>(usando<sp/>solo<sp/>simulated<sp/>actions)</highlight></codeline>
+<codeline lineno="857"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(GRAVE)<sp/>la<sp/>sequenza<sp/>dei<sp/>landmark<sp/>porta<sp/>ad<sp/>un<sp/>problema<sp/>irrisolvibile,<sp/>vedi<sp/>la<sp/>combinazione<sp/>tra<sp/>i<sp/>predicati<sp/>at<sp/>e<sp/>explored<sp/>(probabilmente<sp/>è<sp/>un<sp/>problema<sp/>della<sp/>attuale<sp/>kb<sp/>interface<sp/>che<sp/>non<sp/>tiene<sp/>conto<sp/>di<sp/>questo<sp/>conflitto).<sp/>lo<sp/>scenario<sp/>di<sp/>utilizzo<sp/>dovrebbe<sp/>essere:<sp/>(landmarks)<sp/>0<sp/>1<sp/>1<sp/>1<sp/>...<sp/>1<sp/>2<sp/>0<sp/>1<sp/>...</highlight></codeline>
+<codeline lineno="858"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>la<sp/>pipeline<sp/>non<sp/>segnala<sp/>il<sp/>raggiungimento<sp/>del<sp/>goal<sp/>nel<sp/>messaggio...</highlight></codeline>
+<codeline lineno="859"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(minore)<sp/>il<sp/>log<sp/>nella<sp/>pipeline<sp/>non<sp/>segna<sp/>la<sp/>fine<sp/>del<sp/>dispatch</highlight></codeline>
+<codeline lineno="860"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>the<sp/>pipeline<sp/>manager<sp/>(feedback<sp/>management)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="861"><highlight class="normal"></highlight></codeline>
+<codeline lineno="862"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="863"><highlight class="normal"></highlight></codeline>
+<codeline lineno="864"><highlight class="normal">##<sp/>11/08/2022<sp/>--<sp/>ancora<sp/>su<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="865"><highlight class="normal"></highlight></codeline>
+<codeline lineno="866"><highlight class="normal">anzitutto,<sp/>vorrei<sp/>lavorare<sp/>sulle<sp/>issue<sp/>di<sp/>ieri:<sp/>il<sp/>fatto<sp/>che<sp/>la<sp/>sequenza<sp/>di<sp/>landmark<sp/>che<sp/>mi<sp/>aspetto<sp/>non<sp/>funzioni<sp/>come<sp/>si<sp/>deve<sp/>è<sp/>un<sp/>problema<sp/>grave<sp/>che<sp/>va<sp/>risolto<sp/>al<sp/>più<sp/>presto.<sp/></highlight></codeline>
+<codeline lineno="867"><highlight class="normal"></highlight></codeline>
+<codeline lineno="868"><highlight class="normal">-<sp/>un<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/>più<sp/>approfondito:</highlight></codeline>
+<codeline lineno="869"><highlight class="normal"></highlight></codeline>
+<codeline lineno="870"><highlight class="normal">```bash</highlight></codeline>
+<codeline lineno="871"><highlight class="normal">#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>1</highlight></codeline>
+<codeline lineno="872"><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline lineno="873"><highlight class="normal"></highlight></codeline>
+<codeline lineno="874"><highlight class="normal">#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>2</highlight></codeline>
+<codeline lineno="875"><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/><ref refid="classkb__interface" kindref="compound">kb_interface</ref></highlight></codeline>
+<codeline lineno="876"><highlight class="normal"></highlight></codeline>
+<codeline lineno="877"><highlight class="normal">#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>3</highlight></codeline>
+<codeline lineno="878"><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/><ref refid="namespacerosplan__pipeline__manager" kindref="compound">rosplan_pipeline_manager</ref>.py</highlight></codeline>
+<codeline lineno="879"><highlight class="normal"></highlight></codeline>
+<codeline lineno="880"><highlight class="normal">#<sp/><ref refid="namespaceconf_1a332f430461432dc465213f884a1e4967" kindref="member">shell</ref><sp/>4</highlight></codeline>
+<codeline lineno="881"><highlight class="normal">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2</highlight></codeline>
+<codeline lineno="882"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="883"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="884"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="885"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="886"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="887"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="888"><highlight class="normal"></highlight></codeline>
+<codeline lineno="889"><highlight class="normal">-<sp/>**ALTRO<sp/>ASPETTO<sp/>DA<sp/>AFFINARE**:<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>managi<sp/>non<sp/>servirà,<sp/>però<sp/>va<sp/>comunque<sp/>scritto<sp/>nel<sp/>messaggio<sp/>di<sp/>ritorno.</highlight></codeline>
+<codeline lineno="890"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(lo<sp/>faccio<sp/>adesso)</highlight></codeline>
+<codeline lineno="891"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/>...<sp/>e<sp/>ok!</highlight></codeline>
+<codeline lineno="892"><highlight class="normal">-<sp/>ora,<sp/>sostituisco<sp/>le<sp/>simulated<sp/>actions<sp/>con<sp/>le<sp/>mie<sp/>implementazioni</highlight></codeline>
+<codeline lineno="893"><highlight class="normal"></highlight></codeline>
+<codeline lineno="894"><highlight class="normal">```xml</highlight></codeline>
+<codeline lineno="895"><highlight class="normal">&lt;node<sp/>name=</highlight><highlight class="stringliteral">&quot;rosplan_interface_???&quot;</highlight><highlight class="normal"><sp/>pkg=</highlight><highlight class="stringliteral">&quot;robocluedo_rosplan&quot;</highlight><highlight class="normal"><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a09d0680988bbc4127cbfa7c02b57c0b8" kindref="member">type</ref>=</highlight><highlight class="stringliteral">&quot;node_???&quot;</highlight><highlight class="normal"><sp/>respawn=</highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal"><sp/>output=</highlight><highlight class="stringliteral">&quot;screen&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline lineno="896"><highlight class="normal"></highlight></codeline>
+<codeline lineno="897"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;knowledge_base&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=</highlight><highlight class="stringliteral">&quot;rosplan_knowledge_base&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="898"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;pddl_action_name&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>value=</highlight><highlight class="stringliteral">&quot;???&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="899"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;action_dispatch_topic&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;/rosplan_plan_dispatcher/action_dispatch&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="900"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;action_feedback_topic&quot;</highlight><highlight class="normal"><sp/>value=</highlight><highlight class="stringliteral">&quot;/rosplan_plan_dispatcher/action_feedback&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="901"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="902"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;action_duration&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/>value=</highlight><highlight class="stringliteral">&quot;0.99&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="903"><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;param<sp/>name=</highlight><highlight class="stringliteral">&quot;action_probability&quot;</highlight><highlight class="normal"><sp/><sp/><sp/><sp/>value=</highlight><highlight class="stringliteral">&quot;1.0&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline lineno="904"><highlight class="normal"></highlight></codeline>
+<codeline lineno="905"><highlight class="normal">&lt;/node&gt;</highlight></codeline>
+<codeline lineno="906"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="907"><highlight class="normal"></highlight></codeline>
+<codeline lineno="908"><highlight class="normal">-<sp/>e<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a4a216636640adc20fe063a6b1956bf5a" kindref="member">test</ref><sp/>delle<sp/>actions<sp/>reali</highlight></codeline>
+<codeline lineno="909"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*mi<sp/>sono<sp/>dimenticato<sp/>di<sp/>compilare<sp/>move_to_center!*</highlight></codeline>
+<codeline lineno="910"><highlight class="normal"></highlight></codeline>
+<codeline lineno="911"><highlight class="normal">```bash</highlight></codeline>
+<codeline lineno="912"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>1</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="913"><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
+<codeline lineno="914"><highlight class="normal"></highlight></codeline>
+<codeline lineno="915"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="916"><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/><ref refid="classkb__interface" kindref="compound">kb_interface</ref></highlight></codeline>
+<codeline lineno="917"><highlight class="normal"></highlight></codeline>
+<codeline lineno="918"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="919"><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/><ref refid="namespacerosplan__simulated__motion__system" kindref="compound">rosplan_simulated_motion_system</ref>.py</highlight></codeline>
+<codeline lineno="920"><highlight class="normal"></highlight></codeline>
+<codeline lineno="921"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>4</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="922"><highlight class="normal">rosrun<sp/>robocluedo_rosplan<sp/><ref refid="namespacerosplan__pipeline__manager" kindref="compound">rosplan_pipeline_manager</ref>.py</highlight></codeline>
+<codeline lineno="923"><highlight class="normal"></highlight></codeline>
+<codeline lineno="924"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>5</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="925"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/><sp/><sp/>landmarks:<sp/>0<sp/>1<sp/>1<sp/>1<sp/>2<sp/>0<sp/>1<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="926"><highlight class="normal"></highlight></codeline>
+<codeline lineno="927"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="928"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="929"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="930"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="931"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="932"><highlight class="normal"></highlight></codeline>
+<codeline lineno="933"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>ERRORE<sp/>problema<sp/>non<sp/>risolvibile<sp/>(correttamente<sp/>segnalato<sp/>dal<sp/>pipeline<sp/>manager)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="934"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="935"><highlight class="normal"></highlight></codeline>
+<codeline lineno="936"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>problema<sp/>risolvibile</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="937"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>0}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="938"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="939"><highlight class="normal">rosservice<sp/><ref refid="rosplan-kb_8md_8txt_1ae9bb71e9fc9e25014334af4ccd7161e0" kindref="member">call</ref><sp/>/robocluedo/pipeline_manager<sp/></highlight><highlight class="stringliteral">&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="940"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="941"><highlight class="normal"></highlight></codeline>
+<codeline lineno="942"><highlight class="normal">-<sp/>(alla<sp/>fine<sp/>la<sp/>issue<sp/>di<sp/>ieri<sp/>era<sp/>...<sp/>semplice<sp/>sonno)</highlight></codeline>
+<codeline lineno="943"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>robocluedo<sp/>rosplan<sp/>actions<sp/>(launch<sp/>file)&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="944"><highlight class="normal"></highlight></codeline>
+<codeline lineno="945"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="946"><highlight class="normal"></highlight></codeline>
+<codeline lineno="947"><highlight class="normal">con<sp/>ROSPlan<sp/>per<sp/>il<sp/>momento<sp/>dovrei<sp/>aver<sp/>finito.<sp/>passiamo<sp/>ora<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>lavorare<sp/>al<sp/>movement<sp/>controller.<sp/>IDEE:</highlight></codeline>
+<codeline lineno="948"><highlight class="normal"></highlight></codeline>
+<codeline lineno="949"><highlight class="normal">-<sp/><sp/>dato<sp/>che<sp/>sulla<sp/>macchina<sp/>virtuale<sp/>ci<sp/>sono<sp/>così<sp/>tanti<sp/>modi<sp/>di<sp/>fare<sp/>navigation<sp/>col<sp/>robot,<sp/>vorrei<sp/>creare<sp/>un</highlight><highlight class="stringliteral">&apos;interfaccia<sp/>per<sp/>usarli<sp/>tutti,<sp/>a<sp/>scelta</highlight></codeline>
+<codeline lineno="950"><highlight class="stringliteral">-<sp/>il<sp/>progetto<sp/>attuale<sp/>per<sp/>il<sp/>momento<sp/>*non<sp/>includerà<sp/>move_base*<sp/>per<sp/>il<sp/>semplice<sp/>fatto<sp/>che<sp/>in<sp/>questo<sp/>contesto<sp/>non<sp/>è<sp/>richiesta<sp/>la<sp/>navigazione<sp/>indoor</highlight></codeline>
+<codeline lineno="951"><highlight class="stringliteral">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>moveIt,<sp/>credo<sp/>riciclerò<sp/>tutto<sp/>dal<sp/>vecchio<sp/>progetto<sp/>...<sp/>oppure<sp/>sarebbe<sp/>carino<sp/>usare<sp/>tf<sp/>per<sp/>gestire<sp/>meglio<sp/>la<sp/>posizione<sp/>dell&apos;</highlight><highlight class="normal">end<sp/>effector,<sp/>in<sp/>modo<sp/>che<sp/>vada<sp/>proprio<sp/>vicino<sp/>al<sp/>marker<sp/>(questo<sp/>mi<sp/>darebbe<sp/>l</highlight><highlight class="stringliteral">&apos;opportuunità<sp/>di<sp/>approfondire<sp/>tf2<sp/>e<sp/>simili)</highlight></codeline>
+<codeline lineno="952"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="953"><highlight class="stringliteral">lavoro<sp/>sul<sp/>movement<sp/>controller,<sp/>anzitutto<sp/>il<sp/>modello<sp/>del<sp/>robot:</highlight></codeline>
+<codeline lineno="954"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="955"><highlight class="stringliteral">-<sp/>**IMPORTAZIONE<sp/>PACKAGE**<sp/>erl2<sp/>(lo<sp/>starter<sp/>kit)<sp/>dal<sp/>vecchio<sp/>progetto</highlight></codeline>
+<codeline lineno="956"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(importazione<sp/>in<sp/>una<sp/>cartella<sp/>separata<sp/>chiamata<sp/>`robocluedo_dependencies`,<sp/>in<sp/>vista<sp/>di<sp/>importare<sp/>anche<sp/>openCV<sp/>e<sp/>simili)</highlight></codeline>
+<codeline lineno="957"><highlight class="stringliteral">-<sp/>compila?<sp/>compila,<sp/>*e<sp/>vede<sp/>correttamente<sp/>il<sp/>pakcage<sp/>sotto<sp/>la<sp/>cartella<sp/>dependencies*</highlight></codeline>
+<codeline lineno="958"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;robocluedo<sp/>dependencies&quot;</highlight></codeline>
+<codeline lineno="959"><highlight class="stringliteral">-<sp/>documentazione<sp/>dello<sp/>starter<sp/>kit<sp/>(dal<sp/>precedente<sp/>assignment)</highlight></codeline>
+<codeline lineno="960"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>*(mi<sp/>sono<sp/>appena<sp/>reso<sp/>conto<sp/>che<sp/>tale<sp/>documentazione<sp/>...<sp/>non<sp/>esiste)*</highlight></codeline>
+<codeline lineno="961"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>del<sp/>nodo<sp/>&quot;simulation&quot;<sp/>con<sp/>UML<sp/>incluso</highlight></codeline>
+<codeline lineno="962"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="963"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="964"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="965"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="966"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="967"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="968"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="969"><highlight class="stringliteral">TODO</highlight></codeline>
+<codeline lineno="970"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="971"><highlight class="stringliteral">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="972"><highlight class="stringliteral">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="973"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
+<codeline lineno="974"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="975"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;</highlight><highlight class="normal">azione<sp/>move-to</highlight></codeline>
+<codeline lineno="976"><highlight class="normal"></highlight></codeline>
+<codeline lineno="977"><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a72b7badb1a65b571e3bc144937a5ddd7" kindref="member">PDDL</ref><sp/>c</highlight><highlight class="stringliteral">&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline lineno="978"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline lineno="979"><highlight class="stringliteral">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
+<codeline lineno="980"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
+<codeline lineno="981"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline lineno="982"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
+<codeline lineno="983"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="984"><highlight class="stringliteral">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline lineno="985"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline lineno="986"><highlight class="stringliteral">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
+<codeline lineno="987"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="988"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="989"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline lineno="990"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="991"><highlight class="stringliteral">NOTE</highlight></codeline>
+<codeline lineno="992"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="993"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/_docs/dev-log.md.txt"/>
   </compounddef>

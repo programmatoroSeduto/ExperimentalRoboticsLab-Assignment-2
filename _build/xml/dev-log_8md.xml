@@ -965,6 +965,18 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(importazione<sp/>in<sp/>una<sp/>cartella<sp/>separata<sp/>chiamata<sp/>`robocluedo_dependencies`,<sp/>in<sp/>vista<sp/>di<sp/>importare<sp/>anche<sp/>openCV<sp/>e<sp/>simili)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>compila?<sp/>compila,<sp/>*e<sp/>vede<sp/>correttamente<sp/>il<sp/>pakcage<sp/>sotto<sp/>la<sp/>cartella<sp/>dependencies*</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;robocluedo<sp/>dependencies&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>dello<sp/>starter<sp/>kit<sp/>(dal<sp/>precedente<sp/>assignment)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*(mi<sp/>sono<sp/>appena<sp/>reso<sp/>conto<sp/>che<sp/>tale<sp/>documentazione<sp/>...<sp/>non<sp/>esiste)*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>del<sp/>nodo<sp/>&quot;simulation&quot;<sp/>con<sp/>UML<sp/>incluso</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(c&apos;è<sp/>voluto<sp/>più<sp/>tempo<sp/>del<sp/>previsto<sp/>...)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>importazione<sp/>del<sp/>modello<sp/>del<sp/>robot<sp/>dal<sp/>precedente<sp/>package<sp/>(solo<sp/>URDF<sp/>per<sp/>ora...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>nuova<sp/>cartella<sp/>`robocluedo_dependencies/robocluedo_urdf_model`<sp/>con<sp/>tutti<sp/>gli<sp/>strumenti<sp/>di<sp/>sviluppo<sp/>del<sp/>caso</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>con<sp/>solito<sp/>environment<sp/>standard<sp/>(al<sp/>terzo<sp/>progetto<sp/>ce<sp/>la<sp/>facciamo...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>documentazione<sp/>(un<sp/>male<sp/>necessario)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*il<sp/>precedente<sp/>modello<sp/>è<sp/>troppo<sp/>disordinato<sp/>...*<sp/>meglio<sp/>mettere<sp/>in<sp/>ordine,<sp/>iniziando<sp/>col<sp/>separare<sp/>i<sp/>componenti<sp/>di<sp/>Gazebo<sp/>(e<sp/>altri<sp/>lavori)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>solo<sp/>scomposto<sp/>il<sp/>modello,<sp/>dovrebbe<sp/>continuare<sp/>a<sp/>funzionare...<sp/>e<sp/>funziona<sp/>infatti<sp/>(meno<sp/>male)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>torniamo<sp/>sulla<sp/>documentazione<sp/>(per<sp/>ora<sp/>molto<sp/>minimal)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(first<sp/>setup,<sp/>xacro<sp/>model)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -989,6 +1001,8 @@
 <codeline><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline></codeline>

@@ -868,6 +868,24 @@
 </para>
 </listitem><listitem><para>compila? compila, <emphasis>e vede correttamente il pakcage sotto la cartella dependencies</emphasis></para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;robocluedo dependencies&quot;</para>
+</listitem><listitem><para>documentazione dello starter kit (dal precedente assignment)<itemizedlist>
+<listitem><para>*(mi sono appena reso conto che tale documentazione ... non esiste)*</para>
+</listitem><listitem><para>documentazione del nodo &quot;simulation&quot; con UML incluso<itemizedlist>
+<listitem><para>(c&apos;è voluto più tempo del previsto ...)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>importazione del modello del robot dal precedente package (solo URDF per ora...)<itemizedlist>
+<listitem><para>nuova cartella <computeroutput>robocluedo_dependencies/robocluedo_urdf_model</computeroutput> con tutti gli strumenti di sviluppo del caso</para>
+</listitem><listitem><para>con solito environment standard (al terzo progetto ce la facciamo...)</para>
+</listitem><listitem><para>e documentazione (un male necessario)</para>
+</listitem><listitem><para><emphasis>il precedente modello è troppo disordinato ...</emphasis> meglio mettere in ordine, iniziando col separare i componenti di Gazebo (e altri lavori)</para>
+</listitem><listitem><para>ho solo scomposto il modello, dovrebbe continuare a funzionare... e funziona infatti (meno male)</para>
+</listitem><listitem><para>e torniamo sulla documentazione (per ora molto minimal)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (first setup, xacro model)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
@@ -887,6 +905,7 @@
 <listitem><para>correggere i landmark, oppure eliminare direttamente la sezione</para>
 </listitem></itemizedlist>
 </para>
+</listitem><listitem><para>specificare negli UML, nel tipo di topic/servizio, <emphasis>anche il formato del tipo</emphasis>, ad esempio se è *.msg* o anche *.srv*</para>
 </listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
 </listitem></itemizedlist>
 </para>

@@ -132,7 +132,7 @@
 <codeline lineno="123"><highlight class="normal"><sp/><sp/>${catkin_INCLUDE_DIRS}</highlight></codeline>
 <codeline lineno="124"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
-<codeline lineno="126"><highlight class="normal">##<sp/>Declare<sp/>a<sp/>C++<sp/>library</highlight></codeline>
+<codeline lineno="126"><highlight class="normal">##<sp/>Declare<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>C++<sp/>library</highlight></codeline>
 <codeline lineno="127"><highlight class="normal">#<sp/>add_library(${PROJECT_NAME}</highlight></codeline>
 <codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>src/${PROJECT_NAME}/erl2.cpp</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="129"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>)</highlight><highlight class="normal"></highlight></codeline>
@@ -157,7 +157,7 @@
 <codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>same<sp/>as<sp/>for<sp/>the<sp/>library<sp/>above</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal">add_dependencies(simulation<sp/>${${PROJECT_NAME}_EXPORTED_TARGETS}<sp/>${catkin_EXPORTED_TARGETS})</highlight></codeline>
 <codeline lineno="150"><highlight class="normal"></highlight></codeline>
-<codeline lineno="151"><highlight class="normal">##<sp/>Specify<sp/>libraries<sp/>to<sp/>link<sp/>a<sp/>library<sp/>or<sp/>executable<sp/>target<sp/>against</highlight></codeline>
+<codeline lineno="151"><highlight class="normal">##<sp/>Specify<sp/>libraries<sp/>to<sp/>link<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>library<sp/>or<sp/>executable<sp/>target<sp/>against</highlight></codeline>
 <codeline lineno="152"><highlight class="normal"><sp/>target_link_libraries(simulation</highlight></codeline>
 <codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/>${catkin_LIBRARIES}</highlight></codeline>
 <codeline lineno="154"><highlight class="normal"><sp/>)</highlight></codeline>
@@ -166,7 +166,7 @@
 <codeline lineno="157"><highlight class="normal">##<sp/>Install<sp/>##</highlight></codeline>
 <codeline lineno="158"><highlight class="normal">#############</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="160"><highlight class="normal">#<sp/>all<sp/>install<sp/>targets<sp/>should<sp/>use<sp/>catkin<sp/>DESTINATION<sp/>variables</highlight></codeline>
+<codeline lineno="160"><highlight class="normal">#<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a236b1ef97e62e6ad334f9b644c237d28" kindref="member">all</ref><sp/>install<sp/>targets<sp/>should<sp/>use<sp/>catkin<sp/>DESTINATION<sp/>variables</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">#<sp/>See<sp/>http:</highlight><highlight class="comment">//ros.org/doc/api/catkin/html/adv_user_guide/variables.html</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
 <codeline lineno="163"><highlight class="normal">##<sp/>Mark<sp/>executable<sp/>scripts<sp/>(Python<sp/>etc.)<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>installation</highlight></codeline>

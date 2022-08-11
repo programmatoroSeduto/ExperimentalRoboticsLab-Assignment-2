@@ -623,6 +623,7 @@
         </inbodydescription>
         <location file="robocluedo_armor/include/armor_tools/armor_tools.h" line="294" column="6" bodyfile="robocluedo_armor/src/armor_tools/armor_tools.cpp" bodystart="260" bodyend="279"/>
         <references refid="armor__tools_8h_1af4f289b8ad162b609975620166e3d407" compoundref="armor__tools_8h" startline="46">SS</references>
+        <references refid="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" compoundref="erl2-oracle-user-manual_8md_8txt" startline="127">r</references>
         <referencedby refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" compoundref="armor__tools_8cpp" startline="360" endline="380">SendCommand</referencedby>
         <referencedby refid="class_armor_tools_1ac7f632ed614b226cbc2b2fa352989643" compoundref="armor__tools_8cpp" startline="413" endline="418">PrintLastReq</referencedby>
       </memberdef>
@@ -654,6 +655,7 @@
         </inbodydescription>
         <location file="robocluedo_armor/include/armor_tools/armor_tools.h" line="304" column="6" bodyfile="robocluedo_armor/src/armor_tools/armor_tools.cpp" bodystart="284" bodyend="306"/>
         <references refid="armor__tools_8h_1af4f289b8ad162b609975620166e3d407" compoundref="armor__tools_8h" startline="46">SS</references>
+        <references refid="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" compoundref="erl2-oracle-user-manual_8md_8txt" startline="127">r</references>
         <references refid="armor__tools_8h_1a7a571e6f0c662a683b2741f0e4cd4c26" compoundref="armor__tools_8h" startline="47">SSS</references>
         <referencedby refid="class_armor_tools_1ae1764835bfe65fabcb07757b0bb43f83" compoundref="armor__tools_8cpp" startline="403" endline="408">PrintLastRes</referencedby>
       </memberdef>

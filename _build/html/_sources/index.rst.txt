@@ -31,6 +31,14 @@ RCL -- the RoboCLuedo Project - part 2
 
 .. toctree::
    :titlesonly:
+   :caption: Dependencies Documentation
+   :glob:
+   
+   ./robocluedo_dependencies/_docs/*
+
+
+.. toctree::
+   :titlesonly:
    :caption: Other Documents
    :glob:
    

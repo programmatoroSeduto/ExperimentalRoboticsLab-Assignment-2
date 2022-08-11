@@ -62,6 +62,11 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">Dependencies Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_dependencies/_docs/erl2-oracle-user-manual.html">Oracle (for the ERL project no.2) – User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.html">the RoboCLuedo Project no.2 – robot URDF model – User Manual</a></li>
+</ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="catkin-notes.html">Notes about Catkin</a></li>
@@ -1219,6 +1224,27 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </li>
 <li><p>compila? compila, <em>e vede correttamente il pakcage sotto la cartella dependencies</em></p></li>
 <li><p><strong>COMMIT</strong> : “robocluedo dependencies”</p></li>
+<li><p>documentazione dello starter kit (dal precedente assignment)</p>
+<ul>
+<li><p><em>(mi sono appena reso conto che tale documentazione … non esiste)</em></p></li>
+<li><p>documentazione del nodo “simulation” con UML incluso</p>
+<ul>
+<li><p>(c’è voluto più tempo del previsto …)</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>importazione del modello del robot dal precedente package (solo URDF per ora…)</p>
+<ul>
+<li><p>nuova cartella <code class="docutils literal notranslate"><span class="pre">robocluedo_dependencies/robocluedo_urdf_model</span></code> con tutti gli strumenti di sviluppo del caso</p></li>
+<li><p>con solito environment standard (al terzo progetto ce la facciamo…)</p></li>
+<li><p>e documentazione (un male necessario)</p></li>
+<li><p><em>il precedente modello è troppo disordinato …</em> meglio mettere in ordine, iniziando col separare i componenti di Gazebo (e altri lavori)</p></li>
+<li><p>ho solo scomposto il modello, dovrebbe continuare a funzionare… e funziona infatti (meno male)</p></li>
+<li><p>e torniamo sulla documentazione (per ora molto minimal)</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on robot model (first setup, xacro model)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
@@ -1238,6 +1264,7 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 <li><p>correggere i landmark, oppure eliminare direttamente la sezione</p></li>
 </ul>
 </li>
+<li><p>specificare negli UML, nel tipo di topic/servizio, <em>anche il formato del tipo</em>, ad esempio se è <em>.msg</em> o anche <em>.srv</em></p></li>
 <li><p>autenticazione SSH sul Docker di lavoro</p></li>
 </ul>
 <p>NOTE</p>

@@ -152,7 +152,7 @@
 <codeline lineno="143"><highlight class="normal"><sp/><sp/>${catkin_INCLUDE_DIRS}</highlight></codeline>
 <codeline lineno="144"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="146"><highlight class="normal">##<sp/>Declare<sp/>a<sp/>C++<sp/>library</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">##<sp/>Declare<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>C++<sp/>library</highlight></codeline>
 <codeline lineno="147"><highlight class="normal">#<sp/>add_library(${PROJECT_NAME}</highlight></codeline>
 <codeline lineno="148"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/><sp/><sp/>src/${PROJECT_NAME}/robocluedo_rosplan_msgs.cpp</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="149"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>)</highlight><highlight class="normal"></highlight></codeline>
