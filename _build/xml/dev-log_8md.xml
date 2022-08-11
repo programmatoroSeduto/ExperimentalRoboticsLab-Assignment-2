@@ -834,6 +834,10 @@
 <codeline><highlight class="normal">-<sp/>feedback<sp/>&quot;hw<sp/>manipulation<sp/>failure&quot;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...e<sp/>tutti<sp/>gli<sp/>altri<sp/>tipi<sp/>di<sp/>feedback</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>compila?<sp/>compila</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>ora,<sp/>tutti<sp/>i<sp/>feedback<sp/>in<sp/>tutte<sp/>le<sp/>azioni</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>collect<sp/>hint</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>move<sp/>to</highlight></codeline>
@@ -947,9 +951,22 @@
 <codeline><highlight class="normal">-<sp/>(alla<sp/>fine<sp/>la<sp/>issue<sp/>di<sp/>ieri<sp/>era<sp/>...<sp/>semplice<sp/>sonno)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robocluedo<sp/>rosplan<sp/>actions<sp/>(launch<sp/>file)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">con<sp/>ROSPlan<sp/>per<sp/>il<sp/>momento<sp/>dovrei<sp/>aver<sp/>finito.<sp/>passiamo<sp/>ora<sp/>a<sp/>lavorare<sp/>al<sp/>movement<sp/>controller.<sp/>IDEE:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/><sp/>dato<sp/>che<sp/>sulla<sp/>macchina<sp/>virtuale<sp/>ci<sp/>sono<sp/>così<sp/>tanti<sp/>modi<sp/>di<sp/>fare<sp/>navigation<sp/>col<sp/>robot,<sp/>vorrei<sp/>creare<sp/>un&apos;interfaccia<sp/>per<sp/>usarli<sp/>tutti,<sp/>a<sp/>scelta</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>progetto<sp/>attuale<sp/>per<sp/>il<sp/>momento<sp/>*non<sp/>includerà<sp/>move_base*<sp/>per<sp/>il<sp/>semplice<sp/>fatto<sp/>che<sp/>in<sp/>questo<sp/>contesto<sp/>non<sp/>è<sp/>richiesta<sp/>la<sp/>navigazione<sp/>indoor</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>moveIt,<sp/>credo<sp/>riciclerò<sp/>tutto<sp/>dal<sp/>vecchio<sp/>progetto<sp/>...<sp/>oppure<sp/>sarebbe<sp/>carino<sp/>usare<sp/>tf<sp/>per<sp/>gestire<sp/>meglio<sp/>la<sp/>posizione<sp/>dell&apos;end<sp/>effector,<sp/>in<sp/>modo<sp/>che<sp/>vada<sp/>proprio<sp/>vicino<sp/>al<sp/>marker<sp/>(questo<sp/>mi<sp/>darebbe<sp/>l&apos;opportuunità<sp/>di<sp/>approfondire<sp/>tf2<sp/>e<sp/>simili)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">lavoro<sp/>sul<sp/>movement<sp/>controller,<sp/>anzitutto<sp/>il<sp/>modello<sp/>del<sp/>robot:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**IMPORTAZIONE<sp/>PACKAGE**<sp/>erl2<sp/>(lo<sp/>starter<sp/>kit)<sp/>dal<sp/>vecchio<sp/>progetto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(importazione<sp/>in<sp/>una<sp/>cartella<sp/>separata<sp/>chiamata<sp/>`robocluedo_dependencies`,<sp/>in<sp/>vista<sp/>di<sp/>importare<sp/>anche<sp/>openCV<sp/>e<sp/>simili)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>compila?<sp/>compila,<sp/>*e<sp/>vede<sp/>correttamente<sp/>il<sp/>pakcage<sp/>sotto<sp/>la<sp/>cartella<sp/>dependencies*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;robocluedo<sp/>dependencies&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -957,11 +974,8 @@
 <codeline></codeline>
 <codeline><highlight class="normal">TODO</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>discutere<sp/>l&apos;utilità<sp/>del<sp/>landmark<sp/>zero...<sp/>è<sp/>davvero<sp/>così<sp/>utile<sp/>avere<sp/>un&apos;azione<sp/>che<sp/>faccia<sp/>fare<sp/>replan?</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**gestire<sp/>meglio<sp/>l&apos;invio<sp/>dei<sp/>feedback**.<sp/>CI<sp/>sono<sp/>vari<sp/>problemi:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>dev&apos;essere<sp/>inviato<sp/>*solo<sp/>quando<sp/>si<sp/>presenta<sp/>un<sp/>problema*<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>dev&apos;essere<sp/>pronto<sp/>a<sp/>riceverlo</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>va<sp/>inviato<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>un<sp/>feedback<sp/>alla<sp/>volta</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>feedback<sp/>di<sp/>successo<sp/>non<sp/>esiste,<sp/>è<sp/>inutile</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>

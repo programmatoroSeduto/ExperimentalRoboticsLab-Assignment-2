@@ -825,6 +825,10 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 - feedback "hw manipulation failure"
 	- ...e tutti gli altri tipi di feedback
 - compila? compila
+- **gestire meglio l'invio dei feedback**. CI sono vari problemi:
+	- il feedback dev'essere inviato *solo quando si presenta un problema* e il pipeline manager dev'essere pronto a riceverlo
+	- va inviato solo ed esclusivamente un feedback alla volta
+	- il feedback di successo non esiste, è inutile
 - ora, tutti i feedback in tutte le azioni
 	- in collect hint
 	- in move to
@@ -938,9 +942,22 @@ rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem
 - (alla fine la issue di ieri era ... semplice sonno)
 - **COMMIT** : "working on robocluedo rosplan actions (launch file)"
 
+---
 
-	
-	
+con ROSPlan per il momento dovrei aver finito. passiamo ora a lavorare al movement controller. IDEE:
+
+-  dato che sulla macchina virtuale ci sono così tanti modi di fare navigation col robot, vorrei creare un'interfaccia per usarli tutti, a scelta
+- il progetto attuale per il momento *non includerà move_base* per il semplice fatto che in questo contesto non è richiesta la navigazione indoor
+- per quanto riguarda moveIt, credo riciclerò tutto dal vecchio progetto ... oppure sarebbe carino usare tf per gestire meglio la posizione dell'end effector, in modo che vada proprio vicino al marker (questo mi darebbe l'opportuunità di approfondire tf2 e simili)
+
+lavoro sul movement controller, anzitutto il modello del robot:
+
+- **IMPORTAZIONE PACKAGE** erl2 (lo starter kit) dal vecchio progetto
+	- (importazione in una cartella separata chiamata `robocluedo_dependencies`, in vista di importare anche openCV e simili)
+- compila? compila, *e vede correttamente il pakcage sotto la cartella dependencies*
+- **COMMIT** : "robocluedo dependencies"
+
+
 
 
 
@@ -948,11 +965,8 @@ rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem
 
 TODO
 
-- discutere l'utilità del landmark zero... è davvero così utile avere un'azione che faccia fare replan?
-- **gestire meglio l'invio dei feedback**. CI sono vari problemi:
-	- il feedback dev'essere inviato *solo quando si presenta un problema* e il pipeline manager dev'essere pronto a riceverlo
-	- va inviato solo ed esclusivamente un feedback alla volta
-	- il feedback di successo non esiste, è inutile
+- documentazione del package ROSPlan
+- UML finale per ROSPlan
 - *module testing* su kb_tools
 
 - implementazione precisa dell'azione move-to

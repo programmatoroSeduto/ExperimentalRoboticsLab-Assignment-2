@@ -1067,6 +1067,13 @@ unsolvable.
 </ul>
 </li>
 <li><p>compila? compila</p></li>
+<li><p><strong>gestire meglio l’invio dei feedback</strong>. CI sono vari problemi:</p>
+<ul class="simple">
+<li><p>il feedback dev’essere inviato <em>solo quando si presenta un problema</em> e il pipeline manager dev’essere pronto a riceverlo</p></li>
+<li><p>va inviato solo ed esclusivamente un feedback alla volta</p></li>
+<li><p>il feedback di successo non esiste, è inutile</p></li>
+</ul>
+</li>
 <li><p>ora, tutti i feedback in tutte le azioni</p>
 <ul class="simple">
 <li><p>in collect hint</p></li>
@@ -1196,16 +1203,27 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 <li><p>(alla fine la issue di ieri era … semplice sonno)</p></li>
 <li><p><strong>COMMIT</strong> : “working on robocluedo rosplan actions (launch file)”</p></li>
 </ul>
-<p>TODO</p>
+<hr class="docutils" />
+<p>con ROSPlan per il momento dovrei aver finito. passiamo ora a lavorare al movement controller. IDEE:</p>
 <ul class="simple">
-<li><p>discutere l’utilità del landmark zero… è davvero così utile avere un’azione che faccia fare replan?</p></li>
-<li><p><strong>gestire meglio l’invio dei feedback</strong>. CI sono vari problemi:</p>
+<li><p>dato che sulla macchina virtuale ci sono così tanti modi di fare navigation col robot, vorrei creare un’interfaccia per usarli tutti, a scelta</p></li>
+<li><p>il progetto attuale per il momento <em>non includerà move_base</em> per il semplice fatto che in questo contesto non è richiesta la navigazione indoor</p></li>
+<li><p>per quanto riguarda moveIt, credo riciclerò tutto dal vecchio progetto … oppure sarebbe carino usare tf per gestire meglio la posizione dell’end effector, in modo che vada proprio vicino al marker (questo mi darebbe l’opportuunità di approfondire tf2 e simili)</p></li>
+</ul>
+<p>lavoro sul movement controller, anzitutto il modello del robot:</p>
+<ul class="simple">
+<li><p><strong>IMPORTAZIONE PACKAGE</strong> erl2 (lo starter kit) dal vecchio progetto</p>
 <ul>
-<li><p>il feedback dev’essere inviato <em>solo quando si presenta un problema</em> e il pipeline manager dev’essere pronto a riceverlo</p></li>
-<li><p>va inviato solo ed esclusivamente un feedback alla volta</p></li>
-<li><p>il feedback di successo non esiste, è inutile</p></li>
+<li><p>(importazione in una cartella separata chiamata <code class="docutils literal notranslate"><span class="pre">robocluedo_dependencies</span></code>, in vista di importare anche openCV e simili)</p></li>
 </ul>
 </li>
+<li><p>compila? compila, <em>e vede correttamente il pakcage sotto la cartella dependencies</em></p></li>
+<li><p><strong>COMMIT</strong> : “robocluedo dependencies”</p></li>
+</ul>
+<p>TODO</p>
+<ul class="simple">
+<li><p>documentazione del package ROSPlan</p></li>
+<li><p>UML finale per ROSPlan</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
 <li><p>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c’è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</p></li>

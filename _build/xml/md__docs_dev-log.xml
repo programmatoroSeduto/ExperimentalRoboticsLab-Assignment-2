@@ -714,6 +714,12 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>compila? compila</para>
+</listitem><listitem><para><bold>gestire meglio l&apos;invio dei feedback</bold>. CI sono vari problemi:<itemizedlist>
+<listitem><para>il feedback dev&apos;essere inviato <emphasis>solo quando si presenta un problema</emphasis> e il pipeline manager dev&apos;essere pronto a riceverlo</para>
+</listitem><listitem><para>va inviato solo ed esclusivamente un feedback alla volta</para>
+</listitem><listitem><para>il feedback di successo non esiste, è inutile</para>
+</listitem></itemizedlist>
+</para>
 </listitem><listitem><para>ora, tutti i feedback in tutte le azioni<itemizedlist>
 <listitem><para>in collect hint</para>
 </listitem><listitem><para>in move to</para>
@@ -845,15 +851,29 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robocluedo rosplan actions (launch file)&quot;</para>
 </listitem></itemizedlist>
 </para>
-<para>TODO</para>
+<para><hruler/>
+</para>
+<para>con ROSPlan per il momento dovrei aver finito. passiamo ora a lavorare al movement controller. IDEE:</para>
 <para><itemizedlist>
-<listitem><para>discutere l&apos;utilità del landmark zero... è davvero così utile avere un&apos;azione che faccia fare replan?</para>
-</listitem><listitem><para><bold>gestire meglio l&apos;invio dei feedback</bold>. CI sono vari problemi:<itemizedlist>
-<listitem><para>il feedback dev&apos;essere inviato <emphasis>solo quando si presenta un problema</emphasis> e il pipeline manager dev&apos;essere pronto a riceverlo</para>
-</listitem><listitem><para>va inviato solo ed esclusivamente un feedback alla volta</para>
-</listitem><listitem><para>il feedback di successo non esiste, è inutile</para>
+<listitem><para>dato che sulla macchina virtuale ci sono così tanti modi di fare navigation col robot, vorrei creare un&apos;interfaccia per usarli tutti, a scelta</para>
+</listitem><listitem><para>il progetto attuale per il momento <emphasis>non includerà move_base</emphasis> per il semplice fatto che in questo contesto non è richiesta la navigazione indoor</para>
+</listitem><listitem><para>per quanto riguarda moveIt, credo riciclerò tutto dal vecchio progetto ... oppure sarebbe carino usare tf per gestire meglio la posizione dell&apos;end effector, in modo che vada proprio vicino al marker (questo mi darebbe l&apos;opportuunità di approfondire tf2 e simili)</para>
 </listitem></itemizedlist>
 </para>
+<para>lavoro sul movement controller, anzitutto il modello del robot:</para>
+<para><itemizedlist>
+<listitem><para><bold>IMPORTAZIONE PACKAGE</bold> erl2 (lo starter kit) dal vecchio progetto<itemizedlist>
+<listitem><para>(importazione in una cartella separata chiamata <computeroutput>robocluedo_dependencies</computeroutput>, in vista di importare anche openCV e simili)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>compila? compila, <emphasis>e vede correttamente il pakcage sotto la cartella dependencies</emphasis></para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;robocluedo dependencies&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para>TODO</para>
+<para><itemizedlist>
+<listitem><para>documentazione del package ROSPlan</para>
+</listitem><listitem><para>UML finale per ROSPlan</para>
 </listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
 </listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
 </listitem><listitem><para>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c&apos;è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</para>
