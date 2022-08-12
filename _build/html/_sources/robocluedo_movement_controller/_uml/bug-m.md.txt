@@ -59,7 +59,7 @@ NODE_BUG_M "pub" --> TOPIC_VEL
 note on link: geometry_msgs/Twist.msg
 
 () "/bug_m_signal" as TOPIC_BUG_M_SIGNAL
-NODE_BUG_M "pub" --> TOPIC_BUG_M_SIGNAL
+NODE_BUG_M "cl" <-- TOPIC_BUG_M_SIGNAL
 note on link: std_srvs/Empty.srv
 
 () "/go_to_point_switch" as SRV_GOTO_SWITCH
@@ -86,7 +86,7 @@ note on link: std_srvs/SetBool.srv
 it requires another node listening for the odom channel and checking when to deactivate the service
 
 - set `des_pos_x`, `des_pos_y` and `des_yaw` into the paramater server
-- activate the service with a request to `/go_to_point_switch` of type `std_srvs/SetBool` (flag `SetBool.Request.data=True`)
+- activate the service with a request to `/bug_m_switch` of type `std_srvs/SetBool` (flag `SetBool.Request.data=True`)
 - ... wait until the robot is near enough to the point
 - turn off the node (flag `SetBool.Request.data=False`)
 
@@ -95,7 +95,7 @@ it requires another node listening for the odom channel and checking when to dea
 the node can signal another node when the final position hasn't been reached. 
 
 - set `des_pos_x`, `des_pos_y` and `des_yaw` into the paramater server
-- activate the service with a request to `/go_to_point_switch` of type `std_srvs/SetBool` (flag `SetBool.Request.data=True`)
+- activate the service with a request to `/bug_m_switch` of type `std_srvs/SetBool` (flag `SetBool.Request.data=True`)
 - open a client with `/bug_m_signal` of type `std_srvs/Empty`
 - ... wait ...
 - when the robot is near to the target point, the node bug_m calls the service

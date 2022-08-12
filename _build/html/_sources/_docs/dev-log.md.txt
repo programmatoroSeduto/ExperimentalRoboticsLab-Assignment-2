@@ -1102,6 +1102,34 @@ rosrun robocluedo_movement_controller bug_m.py
 	- piccola modifica ai launch file del robot per supportare anche i percorsi dei world files
 - **COMMIT** : "working on robot model (gazebo fix, documentation)"
 
+---
+
+il robot potrebbe avere anche diversi sistemi di navigation, perciò serve un'interfaccia che tenga conto del particolare funzionamento dell'algoritmo di motion planning attualmente in uso, e che eventualmente permetta di cambiare l'algoritmo. 
+
+- anzitutto, mi serviranno delle nuove interfacce
+	- un service per position e orientation del robot
+	- un service che permetta di scegliere quale algoritmo usare
+- **NUOVO NODO** : (c++) navigation_manager.cpp
+	- per l'implementazione di questa classe vorrei un sistema modulare, nel senso che scrivo a parte il codice, poi il navigation controller se lo prende e lo esegue; vorrei che tutte le implementazioni condividessero la stessa interfaccia. Il problema è che questo complicherebbe molto di più il lavoro, perciò ricorrerò ad un polimorfismo "dubbio" per il momento, in vista di ristrutturarlo più avanti
+	- (sperando di non essere caduto in qualche stupido pitfall del C++ com'è successo l'ultima volta col simple bridge)
+	- prima di fare qualunque cosa, proviamo se almeno compila ... 
+	- (*mai mischiare reference con pointers...* per il momento meglio i soli semplici pointers, amiamo il rischio da queste parti)
+	- interfaccia ROS per la selezione dell'algoritmo
+	- compila? compila.
+- (ora, iniziamo ad implementare qualche algoritmo)
+- iniziamo da bug_m
+	- definizione della classe
+	- interfacce ROS del controller per comunicare con bug_m
+	- prima di compiare, voglio essere sicuro che tutti i servizi siano *disattivati* all'avvio del controller, quindi piccola modifica a bug_m per forzare la situazione
+	- compila? compila.
+- **COMMIT** : "working on navigation (nav manager first version and first debug, yet not tested)"
+
+
+
+
+
+
+
 
 
 
@@ -1134,3 +1162,12 @@ TODO
 NOTE
 
 - la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.
+
+
+
+
+## Esempi fallati
+
+è bene tenere traccia anche degli errori...
+
+...

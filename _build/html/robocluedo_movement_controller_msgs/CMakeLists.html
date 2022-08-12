@@ -127,7 +127,8 @@ moveit_msgs
 nav_msgs
 std_msgs
 std_srvs
-message_generation</p>
+message_generation
+message_runtime</p>
 </div></blockquote>
 <p>)</p>
 <p>## System dependencies are found with CMake’s conventions
@@ -158,17 +159,20 @@ message_generation</p>
 ##   * uncomment the generate_messages entry below
 ##   * add every package in MSG_DEP_SET to generate_messages(DEPENDENCIES …)</p>
 <p>## Generate messages in the ‘msg’ folder
-# add_message_files(
-#   FILES
-#   Message1.msg
-#   Message2.msg
-# )</p>
+add_message_files(</p>
+<blockquote>
+<div><p>FILES
+Pose2D.msg</p>
+</div></blockquote>
+<p>)</p>
 <p>## Generate services in the ‘srv’ folder
-# add_service_files(
-#   FILES
-#   Service1.srv
-#   Service2.srv
-# )</p>
+add_service_files(</p>
+<blockquote>
+<div><p>FILES
+Algorithm.srv
+NavigationService.srv</p>
+</div></blockquote>
+<p>)</p>
 <p>## Generate actions in the ‘action’ folder
 # add_action_files(
 #   FILES
@@ -176,10 +180,15 @@ message_generation</p>
 #   Action2.action
 # )</p>
 <p>## Generate added messages and services with any dependencies listed here
-# generate_messages(
-#   DEPENDENCIES
-#   geometry_msgs#   moveit_msgs#   nav_msgs#   std_msgs
-# )</p>
+generate_messages(</p>
+<blockquote>
+<div><p>DEPENDENCIES
+geometry_msgs
+moveit_msgs
+nav_msgs
+std_msgs</p>
+</div></blockquote>
+<p>)</p>
 </div>
 <div class="section" id="declare-ros-dynamic-reconfigure-parameters">
 <h1>## Declare ROS dynamic reconfigure parameters ##<a class="headerlink" href="#declare-ros-dynamic-reconfigure-parameters" title="Permalink to this heading"></a></h1>

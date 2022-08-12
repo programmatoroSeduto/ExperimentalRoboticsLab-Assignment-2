@@ -1060,6 +1060,35 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (gazebo fix, documentation)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>il robot potrebbe avere anche diversi sistemi di navigation, perciò serve un&apos;interfaccia che tenga conto del particolare funzionamento dell&apos;algoritmo di motion planning attualmente in uso, e che eventualmente permetta di cambiare l&apos;algoritmo.</para>
+<para><itemizedlist>
+<listitem><para>anzitutto, mi serviranno delle nuove interfacce<itemizedlist>
+<listitem><para>un service per position e orientation del robot</para>
+</listitem><listitem><para>un service che permetta di scegliere quale algoritmo usare</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>NUOVO NODO</bold> : (c++) <ref refid="navigation__manager_8cpp" kindref="compound">navigation_manager.cpp</ref><itemizedlist>
+<listitem><para>per l&apos;implementazione di questa classe vorrei un sistema modulare, nel senso che scrivo a parte il codice, poi il navigation controller se lo prende e lo esegue; vorrei che tutte le implementazioni condividessero la stessa interfaccia. Il problema è che questo complicherebbe molto di più il lavoro, perciò ricorrerò ad un polimorfismo &quot;dubbio&quot; per il momento, in vista di ristrutturarlo più avanti</para>
+</listitem><listitem><para>(sperando di non essere caduto in qualche stupido pitfall del C++ com&apos;è successo l&apos;ultima volta col simple bridge)</para>
+</listitem><listitem><para>prima di fare qualunque cosa, proviamo se almeno compila ...</para>
+</listitem><listitem><para>(<emphasis>mai mischiare reference con pointers...</emphasis> per il momento meglio i soli semplici pointers, amiamo il rischio da queste parti)</para>
+</listitem><listitem><para>interfaccia ROS per la selezione dell&apos;algoritmo</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(ora, iniziamo ad implementare qualche algoritmo)</para>
+</listitem><listitem><para>iniziamo da <ref refid="namespacebug__m" kindref="compound">bug_m</ref><itemizedlist>
+<listitem><para>definizione della classe</para>
+</listitem><listitem><para>interfacce ROS del controller per comunicare con <ref refid="namespacebug__m" kindref="compound">bug_m</ref></para>
+</listitem><listitem><para>prima di compiare, voglio essere sicuro che tutti i servizi siano <emphasis>disattivati</emphasis> all&apos;avvio del controller, quindi piccola modifica a <ref refid="namespacebug__m" kindref="compound">bug_m</ref> per forzare la situazione</para>
+</listitem><listitem><para>compila? compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (nav manager first version and first debug, yet not tested)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
@@ -1085,9 +1114,14 @@
 </para>
 <para>NOTE</para>
 <para><itemizedlist>
-<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio. </para>
+<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</para>
 </listitem></itemizedlist>
 </para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md61">
+<title>Esempi fallati</title>
+<para>è bene tenere traccia anche degli errori...</para>
+<para>... </para>
 </sect2>
 </sect1>
     </detaileddescription>

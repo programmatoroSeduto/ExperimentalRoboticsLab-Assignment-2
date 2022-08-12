@@ -121,9 +121,14 @@ def normalize_angle(angle):
 
 def bug_switch(req):
 	global active_
+	global srv_client_wall_follower_, srv_client_go_to_point_, srv_client_head_orientation_
+	
 	active_ = req.data
 	if not active_:
 		change_state(2)
+		srv_client_go_to_point_(False)
+		srv_client_wall_follower_(False)
+		srv_client_head_orientation_(False)
 	
 	res = SetBoolResponse()
 	res.success = True

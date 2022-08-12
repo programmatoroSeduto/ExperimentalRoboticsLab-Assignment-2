@@ -1111,6 +1111,34 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>piccola<sp/>modifica<sp/>ai<sp/>launch<sp/>file<sp/>del<sp/>robot<sp/>per<sp/>supportare<sp/>anche<sp/>i<sp/>percorsi<sp/>dei<sp/>world<sp/>files</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(gazebo<sp/>fix,<sp/>documentation)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">il<sp/>robot<sp/>potrebbe<sp/>avere<sp/>anche<sp/>diversi<sp/>sistemi<sp/>di<sp/>navigation,<sp/>perciò<sp/>serve<sp/>un&apos;interfaccia<sp/>che<sp/>tenga<sp/>conto<sp/>del<sp/>particolare<sp/>funzionamento<sp/>dell&apos;algoritmo<sp/>di<sp/>motion<sp/>planning<sp/>attualmente<sp/>in<sp/>uso,<sp/>e<sp/>che<sp/>eventualmente<sp/>permetta<sp/>di<sp/>cambiare<sp/>l&apos;algoritmo.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>anzitutto,<sp/>mi<sp/>serviranno<sp/>delle<sp/>nuove<sp/>interfacce</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un<sp/>service<sp/>per<sp/>position<sp/>e<sp/>orientation<sp/>del<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un<sp/>service<sp/>che<sp/>permetta<sp/>di<sp/>scegliere<sp/>quale<sp/>algoritmo<sp/>usare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>(c++)<sp/>navigation_manager.cpp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>l&apos;implementazione<sp/>di<sp/>questa<sp/>classe<sp/>vorrei<sp/>un<sp/>sistema<sp/>modulare,<sp/>nel<sp/>senso<sp/>che<sp/>scrivo<sp/>a<sp/>parte<sp/>il<sp/>codice,<sp/>poi<sp/>il<sp/>navigation<sp/>controller<sp/>se<sp/>lo<sp/>prende<sp/>e<sp/>lo<sp/>esegue;<sp/>vorrei<sp/>che<sp/>tutte<sp/>le<sp/>implementazioni<sp/>condividessero<sp/>la<sp/>stessa<sp/>interfaccia.<sp/>Il<sp/>problema<sp/>è<sp/>che<sp/>questo<sp/>complicherebbe<sp/>molto<sp/>di<sp/>più<sp/>il<sp/>lavoro,<sp/>perciò<sp/>ricorrerò<sp/>ad<sp/>un<sp/>polimorfismo<sp/>&quot;dubbio&quot;<sp/>per<sp/>il<sp/>momento,<sp/>in<sp/>vista<sp/>di<sp/>ristrutturarlo<sp/>più<sp/>avanti</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(sperando<sp/>di<sp/>non<sp/>essere<sp/>caduto<sp/>in<sp/>qualche<sp/>stupido<sp/>pitfall<sp/>del<sp/>C++<sp/>com&apos;è<sp/>successo<sp/>l&apos;ultima<sp/>volta<sp/>col<sp/>simple<sp/>bridge)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>fare<sp/>qualunque<sp/>cosa,<sp/>proviamo<sp/>se<sp/>almeno<sp/>compila<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(*mai<sp/>mischiare<sp/>reference<sp/>con<sp/>pointers...*<sp/>per<sp/>il<sp/>momento<sp/>meglio<sp/>i<sp/>soli<sp/>semplici<sp/>pointers,<sp/>amiamo<sp/>il<sp/>rischio<sp/>da<sp/>queste<sp/>parti)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>interfaccia<sp/>ROS<sp/>per<sp/>la<sp/>selezione<sp/>dell&apos;algoritmo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(ora,<sp/>iniziamo<sp/>ad<sp/>implementare<sp/>qualche<sp/>algoritmo)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>iniziamo<sp/>da<sp/>bug_m</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>definizione<sp/>della<sp/>classe</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>interfacce<sp/>ROS<sp/>del<sp/>controller<sp/>per<sp/>comunicare<sp/>con<sp/>bug_m</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>compiare,<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>tutti<sp/>i<sp/>servizi<sp/>siano<sp/>*disattivati*<sp/>all&apos;avvio<sp/>del<sp/>controller,<sp/>quindi<sp/>piccola<sp/>modifica<sp/>a<sp/>bug_m<sp/>per<sp/>forzare<sp/>la<sp/>situazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(nav<sp/>manager<sp/>first<sp/>version<sp/>and<sp/>first<sp/>debug,<sp/>yet<sp/>not<sp/>tested)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1143,6 +1171,15 @@
 <codeline><highlight class="normal">NOTE</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Esempi<sp/>fallati</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">è<sp/>bene<sp/>tenere<sp/>traccia<sp/>anche<sp/>degli<sp/>errori...</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">...</highlight></codeline>
     </programlisting>
     <location file="_docs/dev-log.md"/>
   </compounddef>

@@ -68,7 +68,7 @@
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>geometry_msgs/Twist.msg</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/bug_m_signal&quot;<sp/>as<sp/>TOPIC_BUG_M_SIGNAL</highlight></codeline>
-<codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;pub&quot;<sp/>--&gt;<sp/>TOPIC_BUG_M_SIGNAL</highlight></codeline>
+<codeline><highlight class="normal">NODE_BUG_M<sp/>&quot;cl&quot;<sp/>&lt;--<sp/>TOPIC_BUG_M_SIGNAL</highlight></codeline>
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/Empty.srv</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/go_to_point_switch&quot;<sp/>as<sp/>SRV_GOTO_SWITCH</highlight></codeline>
@@ -95,7 +95,7 @@
 <codeline><highlight class="normal">it<sp/>requires<sp/>another<sp/>node<sp/>listening<sp/>for<sp/>the<sp/>odom<sp/>channel<sp/>and<sp/>checking<sp/>when<sp/>to<sp/>deactivate<sp/>the<sp/>service</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>set<sp/>`des_pos_x`,<sp/>`des_pos_y`<sp/>and<sp/>`des_yaw`<sp/>into<sp/>the<sp/>paramater<sp/>server</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>activate<sp/>the<sp/>service<sp/>with<sp/>a<sp/>request<sp/>to<sp/>`/go_to_point_switch`<sp/>of<sp/>type<sp/>`std_srvs/SetBool`<sp/>(flag<sp/>`SetBool.Request.data=True`)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>activate<sp/>the<sp/>service<sp/>with<sp/>a<sp/>request<sp/>to<sp/>`/bug_m_switch`<sp/>of<sp/>type<sp/>`std_srvs/SetBool`<sp/>(flag<sp/>`SetBool.Request.data=True`)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>...<sp/>wait<sp/>until<sp/>the<sp/>robot<sp/>is<sp/>near<sp/>enough<sp/>to<sp/>the<sp/>point</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>turn<sp/>off<sp/>the<sp/>node<sp/>(flag<sp/>`SetBool.Request.data=False`)</highlight></codeline>
 <codeline></codeline>
@@ -104,7 +104,7 @@
 <codeline><highlight class="normal">the<sp/>node<sp/>can<sp/>signal<sp/>another<sp/>node<sp/>when<sp/>the<sp/>final<sp/>position<sp/>hasn&apos;t<sp/>been<sp/>reached.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>set<sp/>`des_pos_x`,<sp/>`des_pos_y`<sp/>and<sp/>`des_yaw`<sp/>into<sp/>the<sp/>paramater<sp/>server</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>activate<sp/>the<sp/>service<sp/>with<sp/>a<sp/>request<sp/>to<sp/>`/go_to_point_switch`<sp/>of<sp/>type<sp/>`std_srvs/SetBool`<sp/>(flag<sp/>`SetBool.Request.data=True`)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>activate<sp/>the<sp/>service<sp/>with<sp/>a<sp/>request<sp/>to<sp/>`/bug_m_switch`<sp/>of<sp/>type<sp/>`std_srvs/SetBool`<sp/>(flag<sp/>`SetBool.Request.data=True`)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>open<sp/>a<sp/>client<sp/>with<sp/>`/bug_m_signal`<sp/>of<sp/>type<sp/>`std_srvs/Empty`</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>...<sp/>wait<sp/>...</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>when<sp/>the<sp/>robot<sp/>is<sp/>near<sp/>to<sp/>the<sp/>target<sp/>point,<sp/>the<sp/>node<sp/>bug_m<sp/>calls<sp/>the<sp/>service</highlight></codeline>

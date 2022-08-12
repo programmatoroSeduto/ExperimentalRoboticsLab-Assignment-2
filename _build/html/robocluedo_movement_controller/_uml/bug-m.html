@@ -158,8 +158,8 @@
 <div class="section" id="schema">
 <h2>SCHEMA<a class="headerlink" href="#schema" title="Permalink to this heading"></a></h2>
 <p class="plantuml">
-<object data="../../_images/plantuml-a5ab2aa3445f8bf104055fa106f66627b071fbcd.svg" type="image/svg+xml" style="width:2017px;height:650px;background:#FFFFFF;">
-<img src="../../_images/plantuml-a5ab2aa3445f8bf104055fa106f66627b071fbcd.png" alt="&#64;startuml
+<object data="../../_images/plantuml-3bb3317d48391621610f86eeec5f7fc550e6ce1c.svg" type="image/svg+xml" style="width:2017px;height:650px;background:#FFFFFF;">
+<img src="../../_images/plantuml-3bb3317d48391621610f86eeec5f7fc550e6ce1c.png" alt="&#64;startuml
 
 ''' INFOS
 title NODE bug_m
@@ -195,7 +195,7 @@ NODE_BUG_M &quot;pub&quot; --&gt; TOPIC_VEL
 note on link: geometry_msgs/Twist.msg
 
 () &quot;/bug_m_signal&quot; as TOPIC_BUG_M_SIGNAL
-NODE_BUG_M &quot;pub&quot; --&gt; TOPIC_BUG_M_SIGNAL
+NODE_BUG_M &quot;cl&quot; &lt;-- TOPIC_BUG_M_SIGNAL
 note on link: std_srvs/Empty.srv
 
 () &quot;/go_to_point_switch&quot; as SRV_GOTO_SWITCH
@@ -223,7 +223,7 @@ note on link: std_srvs/SetBool.srv
 <p>it requires another node listening for the odom channel and checking when to deactivate the service</p>
 <ul class="simple">
 <li><p>set <code class="docutils literal notranslate"><span class="pre">des_pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">des_pos_y</span></code> and <code class="docutils literal notranslate"><span class="pre">des_yaw</span></code> into the paramater server</p></li>
-<li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/go_to_point_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
+<li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/bug_m_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
 <li><p>… wait until the robot is near enough to the point</p></li>
 <li><p>turn off the node (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=False</span></code>)</p></li>
 </ul>
@@ -233,7 +233,7 @@ note on link: std_srvs/SetBool.srv
 <p>the node can signal another node when the final position hasn’t been reached.</p>
 <ul class="simple">
 <li><p>set <code class="docutils literal notranslate"><span class="pre">des_pos_x</span></code>, <code class="docutils literal notranslate"><span class="pre">des_pos_y</span></code> and <code class="docutils literal notranslate"><span class="pre">des_yaw</span></code> into the paramater server</p></li>
-<li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/go_to_point_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
+<li><p>activate the service with a request to <code class="docutils literal notranslate"><span class="pre">/bug_m_switch</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/SetBool</span></code> (flag <code class="docutils literal notranslate"><span class="pre">SetBool.Request.data=True</span></code>)</p></li>
 <li><p>open a client with <code class="docutils literal notranslate"><span class="pre">/bug_m_signal</span></code> of type <code class="docutils literal notranslate"><span class="pre">std_srvs/Empty</span></code></p></li>
 <li><p>… wait …</p></li>
 <li><p>when the robot is near to the target point, the node bug_m calls the service</p>

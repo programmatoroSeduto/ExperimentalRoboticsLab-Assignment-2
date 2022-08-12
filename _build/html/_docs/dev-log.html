@@ -127,6 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#esempi-fallati">Esempi fallati</a></li>
 </ul>
 </li>
 </ul>
@@ -1458,6 +1459,36 @@ rosrun robocluedo_movement_controller bug_m.py
 </li>
 <li><p><strong>COMMIT</strong> : “working on robot model (gazebo fix, documentation)”</p></li>
 </ul>
+<hr class="docutils" />
+<p>il robot potrebbe avere anche diversi sistemi di navigation, perciò serve un’interfaccia che tenga conto del particolare funzionamento dell’algoritmo di motion planning attualmente in uso, e che eventualmente permetta di cambiare l’algoritmo.</p>
+<ul class="simple">
+<li><p>anzitutto, mi serviranno delle nuove interfacce</p>
+<ul>
+<li><p>un service per position e orientation del robot</p></li>
+<li><p>un service che permetta di scegliere quale algoritmo usare</p></li>
+</ul>
+</li>
+<li><p><strong>NUOVO NODO</strong> : (c++) navigation_manager.cpp</p>
+<ul>
+<li><p>per l’implementazione di questa classe vorrei un sistema modulare, nel senso che scrivo a parte il codice, poi il navigation controller se lo prende e lo esegue; vorrei che tutte le implementazioni condividessero la stessa interfaccia. Il problema è che questo complicherebbe molto di più il lavoro, perciò ricorrerò ad un polimorfismo “dubbio” per il momento, in vista di ristrutturarlo più avanti</p></li>
+<li><p>(sperando di non essere caduto in qualche stupido pitfall del C++ com’è successo l’ultima volta col simple bridge)</p></li>
+<li><p>prima di fare qualunque cosa, proviamo se almeno compila …</p></li>
+<li><p>(<em>mai mischiare reference con pointers…</em> per il momento meglio i soli semplici pointers, amiamo il rischio da queste parti)</p></li>
+<li><p>interfaccia ROS per la selezione dell’algoritmo</p></li>
+<li><p>compila? compila.</p></li>
+</ul>
+</li>
+<li><p>(ora, iniziamo ad implementare qualche algoritmo)</p></li>
+<li><p>iniziamo da bug_m</p>
+<ul>
+<li><p>definizione della classe</p></li>
+<li><p>interfacce ROS del controller per comunicare con bug_m</p></li>
+<li><p>prima di compiare, voglio essere sicuro che tutti i servizi siano <em>disattivati</em> all’avvio del controller, quindi piccola modifica a bug_m per forzare la situazione</p></li>
+<li><p>compila? compila.</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on navigation (nav manager first version and first debug, yet not tested)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
 <li><p>documentazione del package ROSPlan</p></li>
@@ -1485,6 +1516,11 @@ rosrun robocluedo_movement_controller bug_m.py
 <ul class="simple">
 <li><p>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</p></li>
 </ul>
+</div>
+<div class="section" id="esempi-fallati">
+<h2>Esempi fallati<a class="headerlink" href="#esempi-fallati" title="Permalink to this heading"></a></h2>
+<p>è bene tenere traccia anche degli errori…</p>
+<p>…</p>
 </div>
 </div>
 
