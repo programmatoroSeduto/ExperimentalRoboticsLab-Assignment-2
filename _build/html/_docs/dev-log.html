@@ -1639,6 +1639,30 @@ rosservice call /bug_switch <span class="s2">&quot;data: false&quot;</span>
 </li>
 <li><p><strong>COMMIT</strong> : “working on navigation (debugging, now it works, laser issue)”</p></li>
 </ul>
+<hr class="docutils" />
+<p>assumendo che tutto funzioni per il verso giusto … passiamo all’implementazione della parte moveit:</p>
+<ul class="simple">
+<li><p>innanzitutto, un movement controller per moveit già ce l’ho, riciclo</p>
+<ul>
+<li><p>serve definire l’interfaccia</p></li>
+<li><p>implementazione del nodo</p></li>
+<li><p>cmake e .. compila</p></li>
+</ul>
+</li>
+<li><p>test, giusto per capire se funziona</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_robot demo_gazebo.launch <span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># shell 2</span>
+rosrun robocluedo_movement_controller manipulation_controller <span class="m">2</span>&gt;/dev/null
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>funziona, ma c’è qualche problemino col controller, regolo il parametro p dei controller, vediamo se cambia qualcosa</p></li>
+<li><p>HA FUNZIONATO! benissimo!</p></li>
+<li><p><strong>COMMIT</strong> : “working on manipulation (manip controller, arm tuning)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
 <li><p>documentazione del package ROSPlan</p></li>

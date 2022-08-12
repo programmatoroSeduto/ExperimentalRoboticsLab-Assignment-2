@@ -61,6 +61,7 @@ add_service_files(
   FILES
   Algorithm.srv
   NavigationService.srv
+  ManipulatorPosition.srv
 )
 
 ## Generate actions in the 'action' folder

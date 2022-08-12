@@ -165,6 +165,10 @@ add_executable( navigation_manager src/navigation_manager.cpp )
 add_dependencies( navigation_manager ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( navigation_manager ${catkin_LIBRARIES} )
 
+add_executable( manipulation_controller src/manipulation_controller.cpp )
+add_dependencies( manipulation_controller ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( manipulation_controller ${catkin_LIBRARIES} )
+
 #############
 ## Install ##
 #############

@@ -1269,6 +1269,29 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**E<sp/>ADESSO<sp/>FUNZIONA**</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(debugging,<sp/>now<sp/>it<sp/>works,<sp/>laser<sp/>issue)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">assumendo<sp/>che<sp/>tutto<sp/>funzioni<sp/>per<sp/>il<sp/>verso<sp/>giusto<sp/>...<sp/>passiamo<sp/>all&apos;implementazione<sp/>della<sp/>parte<sp/>moveit:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>innanzitutto,<sp/>un<sp/>movement<sp/>controller<sp/>per<sp/>moveit<sp/>già<sp/>ce<sp/>l&apos;ho,<sp/>riciclo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>serve<sp/>definire<sp/>l&apos;interfaccia</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>del<sp/>nodo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake<sp/>e<sp/>..<sp/>compila</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>test,<sp/>giusto<sp/>per<sp/>capire<sp/>se<sp/>funziona</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>manipulation_controller<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>funziona,<sp/>ma<sp/>c&apos;è<sp/>qualche<sp/>problemino<sp/>col<sp/>controller,<sp/>regolo<sp/>il<sp/>parametro<sp/>p<sp/>dei<sp/>controller,<sp/>vediamo<sp/>se<sp/>cambia<sp/>qualcosa</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>HA<sp/>FUNZIONATO!<sp/>benissimo!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>manipulation<sp/>(manip<sp/>controller,<sp/>arm<sp/>tuning)&quot;</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

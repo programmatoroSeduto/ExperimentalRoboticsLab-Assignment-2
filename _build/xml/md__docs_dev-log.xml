@@ -1231,6 +1231,31 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (debugging, now it works, laser issue)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>assumendo che tutto funzioni per il verso giusto ... passiamo all&apos;implementazione della parte moveit:</para>
+<para><itemizedlist>
+<listitem><para>innanzitutto, un movement controller per moveit già ce l&apos;ho, riciclo<itemizedlist>
+<listitem><para>serve definire l&apos;interfaccia</para>
+</listitem><listitem><para>implementazione del nodo</para>
+</listitem><listitem><para>cmake e .. compila</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test, giusto per capire se funziona</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>manipulation_controller<sp/>2&gt;/dev/null</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>funziona, ma c&apos;è qualche problemino col controller, regolo il parametro p dei controller, vediamo se cambia qualcosa</para>
+</listitem><listitem><para>HA FUNZIONATO! benissimo!</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on manipulation (manip controller, arm tuning)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
@@ -1260,7 +1285,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md62">
+<sect2 id="md__docs_dev-log_1autotoc_md63">
 <title>Esempi fallati</title>
 <para>è bene tenere traccia anche degli errori...</para>
 <para>... </para>

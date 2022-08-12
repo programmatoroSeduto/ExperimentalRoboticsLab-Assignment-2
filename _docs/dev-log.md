@@ -1260,6 +1260,29 @@ rosservice call /bug_switch "data: false"
 	- **E ADESSO FUNZIONA**
 - **COMMIT** : "working on navigation (debugging, now it works, laser issue)"
 
+---
+
+assumendo che tutto funzioni per il verso giusto ... passiamo all'implementazione della parte moveit:
+
+- innanzitutto, un movement controller per moveit già ce l'ho, riciclo
+	- serve definire l'interfaccia
+	- implementazione del nodo
+	- cmake e .. compila
+- test, giusto per capire se funziona
+
+```bash
+# shell 1
+roslaunch robocluedo_robot demo_gazebo.launch 2>/dev/null
+
+# shell 2
+rosrun robocluedo_movement_controller manipulation_controller 2>/dev/null
+
+```
+
+- funziona, ma c'è qualche problemino col controller, regolo il parametro p dei controller, vediamo se cambia qualcosa
+- HA FUNZIONATO! benissimo!
+- **COMMIT** : "working on manipulation (manip controller, arm tuning)"
+
 
 
 
