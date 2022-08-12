@@ -1304,6 +1304,17 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 	- cmake e compila ... compila!
 - **COMMIT** : "working on mission manager (navigation unit, first debugging but yet not runned)"
 
+---
+
+*e perchè non concludere la nottata in bellezza?* Iniziamo subito ad occuparci del (temibilissimo) mission manager, *quello vero*, che sarà un nodo scritto in C++ che fungerà da centro di tutta l'architettura. 
+
+- **NUOVO NODO** : (c++) mission_manager
+	- primo template e design del nodo
+	- *devo fare gli schemi mancanti per aRMOR... che p...* li faccio ora subito e non ci pensiamo più
+	- e torniamo a lavorare sull'interfaccia...
+	- (è stata una cosa lunga...)
+	- compila? (dopo qualche colpo di sranga) compila.
+- **COMMIT** : "working on mission manager (design of the main node)"
 
 
 
@@ -1315,7 +1326,8 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 
 
 
-TODO
+
+## TODO
 
 - documentazione del package ROSPlan
 - UML finale per ROSPlan
@@ -1325,6 +1337,12 @@ TODO
 - implementazione precisa dell'azione move-to
 - implementazione del launch di un particolare file di configurazione per rviz
 
+- rifare gli schemi di armor! 
+- aggiornare schema feedback manager
+- aggiustare le toctree in giro per le pagine
+- creare una "rubrica" generale di topic e servizi dell'architettura
+- e creare uno standard per gli UML in ROS, o qualcosa che possa essere replicato
+- **vanno fatti ancora i temporal diagrams!** e i diagrammi riguardanti l'architettura generale
 - in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
 - aggiungere le pagine di documentazione del codice di Sphinx!
 - aggiornare i template delle actions in questo file
@@ -1336,10 +1354,10 @@ TODO
 	- correggere i landmark, oppure eliminare direttamente la sezione
 - specificare negli UML, nel tipo di topic/servizio, *anche il formato del tipo*, ad esempio se è *.msg* o anche *.srv*
 
-
 - autenticazione SSH sul Docker di lavoro
 
-NOTE
+
+### NOTE
 
 - la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.
 

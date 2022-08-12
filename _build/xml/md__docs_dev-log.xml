@@ -1279,7 +1279,24 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (navigation unit, first debugging but yet not runned)&quot;</para>
 </listitem></itemizedlist>
 </para>
-<para>TODO</para>
+<para><hruler/>
+</para>
+<para><emphasis>e perchè non concludere la nottata in bellezza?</emphasis> Iniziamo subito ad occuparci del (temibilissimo) mission manager, <emphasis>quello vero</emphasis>, che sarà un nodo scritto in C++ che fungerà da centro di tutta l&apos;architettura.</para>
+<para><itemizedlist>
+<listitem><para><bold>NUOVO NODO</bold> : (c++) mission_manager<itemizedlist>
+<listitem><para>primo template e design del nodo</para>
+</listitem><listitem><para><emphasis>devo fare gli schemi mancanti per aRMOR... che p...</emphasis> li faccio ora subito e non ci pensiamo più</para>
+</listitem><listitem><para>e torniamo a lavorare sull&apos;interfaccia...</para>
+</listitem><listitem><para>(è stata una cosa lunga...)</para>
+</listitem><listitem><para>compila? (dopo qualche colpo di sranga) compila.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (design of the main node)&quot;</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md65">
+<title>TODO</title>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
 </listitem><listitem><para>UML finale per ROSPlan</para>
@@ -1287,6 +1304,12 @@
 </listitem><listitem><para>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</para>
 </listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
 </listitem><listitem><para>implementazione del launch di un particolare file di configurazione per rviz</para>
+</listitem><listitem><para>rifare gli schemi di armor!</para>
+</listitem><listitem><para>aggiornare schema feedback manager</para>
+</listitem><listitem><para>aggiustare le toctree in giro per le pagine</para>
+</listitem><listitem><para>creare una &quot;rubrica&quot; generale di topic e servizi dell&apos;architettura</para>
+</listitem><listitem><para>e creare uno standard per gli UML in ROS, o qualcosa che possa essere replicato</para>
+</listitem><listitem><para><bold>vanno fatti ancora i temporal diagrams!</bold> e i diagrammi riguardanti l&apos;architettura generale</para>
 </listitem><listitem><para>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c&apos;è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</para>
 </listitem><listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
 </listitem><listitem><para>aggiornare i template delle actions in questo file</para>
@@ -1302,13 +1325,15 @@
 </listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
 </listitem></itemizedlist>
 </para>
-<para>NOTE</para>
+<sect3 id="md__docs_dev-log_1autotoc_md66">
+<title>NOTE</title>
 <para><itemizedlist>
 <listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</para>
 </listitem></itemizedlist>
 </para>
+</sect3>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md64">
+<sect2 id="md__docs_dev-log_1autotoc_md67">
 <title>Esempi fallati</title>
 <para>è bene tenere traccia anche degli errori...</para>
 <para>... </para>

@@ -1313,6 +1313,17 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake<sp/>e<sp/>compila<sp/>...<sp/>compila!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(navigation<sp/>unit,<sp/>first<sp/>debugging<sp/>but<sp/>yet<sp/>not<sp/>runned)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*e<sp/>perchè<sp/>non<sp/>concludere<sp/>la<sp/>nottata<sp/>in<sp/>bellezza?*<sp/>Iniziamo<sp/>subito<sp/>ad<sp/>occuparci<sp/>del<sp/>(temibilissimo)<sp/>mission<sp/>manager,<sp/>*quello<sp/>vero*,<sp/>che<sp/>sarà<sp/>un<sp/>nodo<sp/>scritto<sp/>in<sp/>C++<sp/>che<sp/>fungerà<sp/>da<sp/>centro<sp/>di<sp/>tutta<sp/>l&apos;architettura.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>(c++)<sp/>mission_manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>primo<sp/>template<sp/>e<sp/>design<sp/>del<sp/>nodo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*devo<sp/>fare<sp/>gli<sp/>schemi<sp/>mancanti<sp/>per<sp/>aRMOR...<sp/>che<sp/>p...*<sp/>li<sp/>faccio<sp/>ora<sp/>subito<sp/>e<sp/>non<sp/>ci<sp/>pensiamo<sp/>più</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>torniamo<sp/>a<sp/>lavorare<sp/>sull&apos;interfaccia...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(è<sp/>stata<sp/>una<sp/>cosa<sp/>lunga...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>(dopo<sp/>qualche<sp/>colpo<sp/>di<sp/>sranga)<sp/>compila.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(design<sp/>of<sp/>the<sp/>main<sp/>node)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1324,7 +1335,8 @@
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">TODO</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>TODO</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
@@ -1334,6 +1346,12 @@
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>rifare<sp/>gli<sp/>schemi<sp/>di<sp/>armor!<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>schema<sp/>feedback<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiustare<sp/>le<sp/>toctree<sp/>in<sp/>giro<sp/>per<sp/>le<sp/>pagine</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>creare<sp/>una<sp/>&quot;rubrica&quot;<sp/>generale<sp/>di<sp/>topic<sp/>e<sp/>servizi<sp/>dell&apos;architettura</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>creare<sp/>uno<sp/>standard<sp/>per<sp/>gli<sp/>UML<sp/>in<sp/>ROS,<sp/>o<sp/>qualcosa<sp/>che<sp/>possa<sp/>essere<sp/>replicato</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**vanno<sp/>fatti<sp/>ancora<sp/>i<sp/>temporal<sp/>diagrams!**<sp/>e<sp/>i<sp/>diagrammi<sp/>riguardanti<sp/>l&apos;architettura<sp/>generale</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
@@ -1345,10 +1363,10 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
 <codeline></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">NOTE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>NOTE</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
 <codeline></codeline>

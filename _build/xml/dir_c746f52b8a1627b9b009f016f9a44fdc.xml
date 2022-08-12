@@ -3,6 +3,7 @@
   <compounddef id="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir">
     <compoundname>robocluedo_mission_manager/src</compoundname>
     <innerfile refid="manipulation__unit_8cpp">manipulation_unit.cpp</innerfile>
+    <innerfile refid="mission__manager_8cpp">mission_manager.cpp</innerfile>
     <innerfile refid="navigation__unit_8cpp">navigation_unit.cpp</innerfile>
     <briefdescription>
     </briefdescription>

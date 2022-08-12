@@ -1,0 +1,321 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="classnode__mission__manager" kind="class" language="C++" prot="public">
+    <compoundname>node_mission_manager</compoundname>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classnode__mission__manager_1ae80c55f44c63fb7cf826fe154234032b" prot="private" static="no" mutable="no">
+        <type>ros::NodeHandle</type>
+        <definition>ros::NodeHandle node_mission_manager::nh</definition>
+        <argsstring></argsstring>
+        <name>nh</name>
+        <briefdescription>
+<para>the node handle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="273" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="273" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a68390e83274eee5e56e2285b9aa93731" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_rosplan_pipeline</definition>
+        <argsstring></argsstring>
+        <name>cl_rosplan_pipeline</name>
+        <briefdescription>
+<para>client rosplan pipeline manager </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="276" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="276" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a591487ef8cb9d2b26e37cd6e55fc0878" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_armor_add</definition>
+        <argsstring></argsstring>
+        <name>cl_armor_add</name>
+        <briefdescription>
+<para>client for armor add hint </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="279" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="279" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a8bab762c14e78ed38de8e1f9eff2e2cb" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_armor_find</definition>
+        <argsstring></argsstring>
+        <name>cl_armor_find</name>
+        <briefdescription>
+<para>client for armor find consistent hypotheses </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="282" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="282" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1aa089f474c485d065ed483df68cf2fdfc" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_armor_del</definition>
+        <argsstring></argsstring>
+        <name>cl_armor_del</name>
+        <briefdescription>
+<para>client for armor discard hypotheses </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="285" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="285" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a6332261f4037f289d557de2a39825751" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_armor_backup</definition>
+        <argsstring></argsstring>
+        <name>cl_armor_backup</name>
+        <briefdescription>
+<para>client for armo backup request </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="288" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="288" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a37c4b9d24b5427b42591df5c81d0a120" prot="private" static="no" mutable="no">
+        <type>ros::ServiceClient</type>
+        <definition>ros::ServiceClient node_mission_manager::cl_oracle_solution</definition>
+        <argsstring></argsstring>
+        <name>cl_oracle_solution</name>
+        <briefdescription>
+<para>client for requiring the solution to the oracle </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="291" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="291" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a6d83dfd8579fc3bfb624158297d9e59e" prot="private" static="no" mutable="no">
+        <type>ros::Subscriber</type>
+        <definition>ros::Subscriber node_mission_manager::sub_oracle_hint</definition>
+        <argsstring></argsstring>
+        <name>sub_oracle_hint</name>
+        <briefdescription>
+<para>subscription oracle hints </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="294" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="294" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classnode__mission__manager_1a866bb75bf2609733dd3cb3d4ca2f2381" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int node_mission_manager::mission_status</definition>
+        <argsstring></argsstring>
+        <name>mission_status</name>
+        <initializer>= <ref refid="mission__manager_8cpp_1a2ce63008cc07bc6a6893f29a282a7830" kindref="member">MISSION_STATUS_REPLAN</ref></initializer>
+        <briefdescription>
+<para>state of the mission </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="297" column="5" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="297" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classnode__mission__manager_1aad994f8fbf26d35e540ae1f6476143b0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>node_mission_manager::node_mission_manager</definition>
+        <argsstring>()</argsstring>
+        <name>node_mission_manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>node class constructor </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="170" column="1" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="170" bodyend="192"/>
+        <references refid="mission__manager_8cpp_1a497eb2fcadf2e7f5380b65d6edc24bfa" compoundref="mission__manager_8cpp" startline="35">SERVICE_ROSPLAN_PIPELINE</references>
+        <references refid="mission__manager_8cpp_1a0b75b3a0b29b223aa6317a043386d4b7" compoundref="mission__manager_8cpp" startline="92">SERVICE_ARMOR_ADD</references>
+        <references refid="mission__manager_8cpp_1ae7d7101314e5beb85bb693ff3accc67d" compoundref="mission__manager_8cpp" startline="110">SERVICE_ARMOR_FIND</references>
+        <references refid="mission__manager_8cpp_1a0981d5507d2883f2bea4d7d80b55aa42" compoundref="mission__manager_8cpp" startline="122">SERVICE_ARMOR_DEL</references>
+        <references refid="mission__manager_8cpp_1afe289e29c3fd9b68631c14b258790100" compoundref="mission__manager_8cpp" startline="133">SERVICE_ARMOR_BACKUP</references>
+        <references refid="mission__manager_8cpp_1aa2b57d2ee6e8903abdb592bf5345b706" compoundref="mission__manager_8cpp" startline="140">SERVICE_ORACLE_SOLUTION</references>
+        <references refid="mission__manager_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="mission__manager_8cpp" startline="18">TLOG</references>
+        <references refid="mission__manager_8cpp_1a07769807eae9ad352141589f3e6fcb6b" compoundref="mission__manager_8cpp" startline="146">TOPIC_ORACLE_HINT</references>
+        <references refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" compoundref="mission__manager_8cpp" startline="255" endline="260">cbk_oracle_hint</references>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void node_mission_manager::spin</definition>
+        <argsstring>()</argsstring>
+        <name>spin</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>node working cycle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="195" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="195" bodyend="230"/>
+        <references refid="mission__manager_8cpp_1a2ce63008cc07bc6a6893f29a282a7830" compoundref="mission__manager_8cpp" startline="158">MISSION_STATUS_REPLAN</references>
+        <references refid="mission__manager_8cpp_1ab09398cdd7a42f5405fae795bc106db5" compoundref="mission__manager_8cpp" startline="159">MISSION_STATUS_COLLECT</references>
+        <references refid="mission__manager_8cpp_1a929085a001cea3d1edb3a22d907fa302" compoundref="mission__manager_8cpp" startline="162">MISSION_STATUS_ASK_ONTOLOGY</references>
+        <references refid="mission__manager_8cpp_1a463f713aa5573b0d056e6c0922377ba8" compoundref="mission__manager_8cpp" startline="160">MISSION_STATUS_SOLVE</references>
+        <references refid="mission__manager_8cpp_1a153fe0ac6e7bea9120a086a44783de17" compoundref="mission__manager_8cpp" startline="161">MISSION_STATUS_ASK_ORACLE</references>
+        <references refid="mission__manager_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="mission__manager_8cpp" startline="19">TWARN</references>
+        <referencedby refid="mission__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="mission__manager_8cpp" startline="325" endline="341">main</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1a097ae71661bcbd145de3ea634096ebfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void node_mission_manager::change_mission_status</definition>
+        <argsstring>(int status)</argsstring>
+        <name>change_mission_status</name>
+        <param>
+          <type>int</type>
+          <declname>status</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>change progress state of the mission </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="233" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="233" bodyend="236"/>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1af850dd72093513bd09a7284ce140ec93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool node_mission_manager::make_plan</definition>
+        <argsstring>(int landmark)</argsstring>
+        <name>make_plan</name>
+        <param>
+          <type>int</type>
+          <declname>landmark</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>make a plan ready to be executed </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="239" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="239" bodyend="242"/>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1a1e9aa29559306442d33fbc3362707d7e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void node_mission_manager::execute_plan</definition>
+        <argsstring>()</argsstring>
+        <name>execute_plan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>execute the plan </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="245" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="245" bodyend="252"/>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void node_mission_manager::cbk_oracle_hint</definition>
+        <argsstring>(const erl2::ErlOracle::ConstPtr &amp;hint)</argsstring>
+        <name>cbk_oracle_hint</name>
+        <param>
+          <type>const erl2::ErlOracle::ConstPtr &amp;</type>
+          <declname>hint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>receive a hint from the Oracle </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="255" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="255" bodyend="260"/>
+        <referencedby refid="classnode__mission__manager_1aad994f8fbf26d35e540ae1f6476143b0" compoundref="mission__manager_8cpp" startline="170" endline="192">node_mission_manager</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool node_mission_manager::is_valid_hint</definition>
+        <argsstring>(const erl2::ErlOracle::ConstPtr &amp;hint)</argsstring>
+        <name>is_valid_hint</name>
+        <param>
+          <type>const erl2::ErlOracle::ConstPtr &amp;</type>
+          <declname>hint</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>check wether the hint is valid or not </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="263" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="263" bodyend="268"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classnode__mission__manager_1a767743411d4ca1ee6c7d7e510949220a" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T</type>
+          </param>
+        </templateparamlist>
+        <type>bool</type>
+        <definition>bool node_mission_manager::open_client</definition>
+        <argsstring>(std::string cl_name, ros::ServiceClient &amp;cl_handle)</argsstring>
+        <name>open_client</name>
+        <param>
+          <type>std::string</type>
+          <declname>cl_name</declname>
+        </param>
+        <param>
+          <type>ros::ServiceClient &amp;</type>
+          <declname>cl_handle</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>open a client </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="301" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="301" bodyend="313"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="166" column="1" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="165" bodyend="314"/>
+    <listofallmembers>
+      <member refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>cbk_oracle_hint</name></member>
+      <member refid="classnode__mission__manager_1a097ae71661bcbd145de3ea634096ebfa" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>change_mission_status</name></member>
+      <member refid="classnode__mission__manager_1a591487ef8cb9d2b26e37cd6e55fc0878" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_armor_add</name></member>
+      <member refid="classnode__mission__manager_1a6332261f4037f289d557de2a39825751" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_armor_backup</name></member>
+      <member refid="classnode__mission__manager_1aa089f474c485d065ed483df68cf2fdfc" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_armor_del</name></member>
+      <member refid="classnode__mission__manager_1a8bab762c14e78ed38de8e1f9eff2e2cb" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_armor_find</name></member>
+      <member refid="classnode__mission__manager_1a37c4b9d24b5427b42591df5c81d0a120" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_oracle_solution</name></member>
+      <member refid="classnode__mission__manager_1a68390e83274eee5e56e2285b9aa93731" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_rosplan_pipeline</name></member>
+      <member refid="classnode__mission__manager_1a1e9aa29559306442d33fbc3362707d7e" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>execute_plan</name></member>
+      <member refid="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>is_valid_hint</name></member>
+      <member refid="classnode__mission__manager_1af850dd72093513bd09a7284ce140ec93" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>make_plan</name></member>
+      <member refid="classnode__mission__manager_1a866bb75bf2609733dd3cb3d4ca2f2381" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>mission_status</name></member>
+      <member refid="classnode__mission__manager_1ae80c55f44c63fb7cf826fe154234032b" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>nh</name></member>
+      <member refid="classnode__mission__manager_1aad994f8fbf26d35e540ae1f6476143b0" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>node_mission_manager</name></member>
+      <member refid="classnode__mission__manager_1a767743411d4ca1ee6c7d7e510949220a" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>open_client</name></member>
+      <member refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>spin</name></member>
+      <member refid="classnode__mission__manager_1a6d83dfd8579fc3bfb624158297d9e59e" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>sub_oracle_hint</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

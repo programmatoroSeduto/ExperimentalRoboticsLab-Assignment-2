@@ -17,6 +17,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   sensor_msgs
   std_msgs
+  erl2
 )
 
 ## System dependencies are found with CMake's conventions
@@ -163,6 +164,10 @@ target_link_libraries( manipulation_unit ${catkin_LIBRARIES} )
 add_executable( navigation_unit src/navigation_unit.cpp )
 add_dependencies( navigation_unit ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( navigation_unit ${catkin_LIBRARIES} )
+
+add_executable( mission_manager src/mission_manager.cpp )
+add_dependencies( mission_manager ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( mission_manager ${catkin_LIBRARIES} )
 
 #############
 ## Install ##

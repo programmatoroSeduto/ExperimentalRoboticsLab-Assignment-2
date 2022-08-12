@@ -127,6 +127,10 @@
 <li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#note">NOTE</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#esempi-fallati">Esempi fallati</a></li>
 </ul>
 </li>
@@ -1690,7 +1694,23 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 </li>
 <li><p><strong>COMMIT</strong> : “working on mission manager (navigation unit, first debugging but yet not runned)”</p></li>
 </ul>
-<p>TODO</p>
+<hr class="docutils" />
+<p><em>e perchè non concludere la nottata in bellezza?</em> Iniziamo subito ad occuparci del (temibilissimo) mission manager, <em>quello vero</em>, che sarà un nodo scritto in C++ che fungerà da centro di tutta l’architettura.</p>
+<ul class="simple">
+<li><p><strong>NUOVO NODO</strong> : (c++) mission_manager</p>
+<ul>
+<li><p>primo template e design del nodo</p></li>
+<li><p><em>devo fare gli schemi mancanti per aRMOR… che p…</em> li faccio ora subito e non ci pensiamo più</p></li>
+<li><p>e torniamo a lavorare sull’interfaccia…</p></li>
+<li><p>(è stata una cosa lunga…)</p></li>
+<li><p>compila? (dopo qualche colpo di sranga) compila.</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on mission manager (design of the main node)”</p></li>
+</ul>
+</div>
+<div class="section" id="todo">
+<h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>documentazione del package ROSPlan</p></li>
 <li><p>UML finale per ROSPlan</p></li>
@@ -1698,6 +1718,12 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
 <li><p>implementazione del launch di un particolare file di configurazione per rviz</p></li>
+<li><p>rifare gli schemi di armor!</p></li>
+<li><p>aggiornare schema feedback manager</p></li>
+<li><p>aggiustare le toctree in giro per le pagine</p></li>
+<li><p>creare una “rubrica” generale di topic e servizi dell’architettura</p></li>
+<li><p>e creare uno standard per gli UML in ROS, o qualcosa che possa essere replicato</p></li>
+<li><p><strong>vanno fatti ancora i temporal diagrams!</strong> e i diagrammi riguardanti l’architettura generale</p></li>
 <li><p>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c’è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</p></li>
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
 <li><p>aggiornare i template delle actions in questo file</p></li>
@@ -1713,10 +1739,12 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>specificare negli UML, nel tipo di topic/servizio, <em>anche il formato del tipo</em>, ad esempio se è <em>.msg</em> o anche <em>.srv</em></p></li>
 <li><p>autenticazione SSH sul Docker di lavoro</p></li>
 </ul>
-<p>NOTE</p>
+<div class="section" id="note">
+<h3>NOTE<a class="headerlink" href="#note" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</p></li>
 </ul>
+</div>
 </div>
 <div class="section" id="esempi-fallati">
 <h2>Esempi fallati<a class="headerlink" href="#esempi-fallati" title="Permalink to this heading"></a></h2>

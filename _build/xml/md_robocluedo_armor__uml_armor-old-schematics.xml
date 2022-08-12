@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="md_robocluedo_armor__uml_armor-old-schematics" kind="page">
+    <compoundname>md_robocluedo_armor__uml_armor-old-schematics</compoundname>
+    <title>aRMOR UML CLASS – old schematics</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">./armor-old-schematics.md</highlight></codeline>
+</programlisting></para>
+<para>see the first part of the project.</para>
+<sect1 id="md_robocluedo_armor__uml_armor-old-schematics_1autotoc_md108">
+<title>comonent schema</title>
+<para><image type="html" name="UML_components_cluedo_armor_interface.png" inline="yes"></image>
+</para>
+<para>here&apos;s the updated UML of the component:</para>
+<para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>package<sp/>robocluedo_armor</highlight></codeline>
+<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
+<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;aRMOR<sp/>interface&quot;<sp/>&lt;&lt;RCL&gt;&gt;<sp/>as<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;aRMOR<sp/>service&quot;<sp/>&lt;&lt;aRMOR&gt;&gt;<sp/>as<sp/>NODE_ARMOR</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INTERFACES</highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/add_hint&quot;<sp/>as<sp/>SRV_ARMOR_ADD</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR_ADD<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/AddHint.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/find_consistent_h&quot;<sp/>as<sp/>SRV_ARMOR_FIND</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR_FIND<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/FindConsistentHypotheses.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/wrong_hypothesis&quot;<sp/>as<sp/>SRV_ARMOR_DEL</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR_DEL<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/DiscardHypothesis.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/backup&quot;<sp/>as<sp/>SRV_ARMOR_BACKUP</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR_BACKUP<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/Trigger.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/armor_interface_srv&quot;<sp/>as<sp/>SRV_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">SRV_ARMOR<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_ARMOR</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+</programlisting></para>
+</sect1>
+<sect1 id="md_robocluedo_armor__uml_armor-old-schematics_1autotoc_md109">
+<title>the old arch schema</title>
+<para>here&apos;s how the component were linked to the previous version of the architecture.</para>
+<para><image type="html" name="UML_components_arch_sketch.png" inline="yes"></image>
+ </para>
+</sect1>
+    </detaileddescription>
+  </compounddef>
+</doxygen>

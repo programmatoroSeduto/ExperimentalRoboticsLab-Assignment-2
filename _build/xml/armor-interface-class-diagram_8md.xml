@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>UML<sp/>CLASS<sp/>--<sp/>robocluedo<sp/>armor</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>aRMOR<sp/>UML<sp/>CLASS<sp/>--<sp/>robocluedo<sp/>armor</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{uml}<sp/></highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>

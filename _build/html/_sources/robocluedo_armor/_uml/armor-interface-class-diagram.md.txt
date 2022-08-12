@@ -1,5 +1,5 @@
 
-# UML CLASS -- robocluedo armor
+# aRMOR UML CLASS -- robocluedo armor
 
 ```{uml} 
 @startuml
