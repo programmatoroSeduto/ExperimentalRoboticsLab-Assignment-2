@@ -9,6 +9,7 @@ the node uses other nodes exploiting the laser sensors
 '''
 
 import rospy
+import os
 import time
 # import ros message
 from geometry_msgs.msg import Point
@@ -149,12 +150,29 @@ def main():
 	sub_laser = rospy.Subscriber('/scan', LaserScan, clbk_laser)
 	sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
 	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-	switch_srv = rospy.Service('/bug_switch', SetBool, bug_switch)
-
+	
 	srv_client_go_to_point_ = rospy.ServiceProxy('/go_to_point_switch', SetBool)
+	if( srv_client_go_to_point_ == None ):
+		rospy.logwarn("(bug_m) srv_client_go_to_point_ == None")
+		return
+	
 	srv_client_wall_follower_ = rospy.ServiceProxy('/wall_follower_switch', SetBool)
-	srv_client_user_interface_ = rospy.ServiceProxy('/bug_m_signal', Empty)
+	if( srv_client_wall_follower_ == None ):
+		rospy.logwarn("(bug_m) srv_client_wall_follower_ == None")
+		return
+	
 	srv_client_head_orientation_ = rospy.ServiceProxy('/head_orient_switch', SetBool)
+	if( srv_client_head_orientation_ == None ):
+		rospy.logwarn("(bug_m) srv_client_head_orientation_ == None")
+		return
+	
+	switch_srv = rospy.Service('/bug_switch', SetBool, bug_switch)
+	try:
+		rospy.wait_for_service('/bug_m_signal', timeout=60)
+		srv_client_user_interface_ = rospy.ServiceProxy('/bug_m_signal', Empty)
+	except rospy.ROSException as e:
+		rospy.logwarn("(bug_m) unable to contact to the provider server for /bug_switch")
+		return
 
 	# initialize going to the point
 	change_state(0)

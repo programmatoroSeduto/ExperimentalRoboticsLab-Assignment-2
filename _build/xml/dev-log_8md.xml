@@ -1132,6 +1132,25 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>compiare,<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>tutti<sp/>i<sp/>servizi<sp/>siano<sp/>*disattivati*<sp/>all&apos;avvio<sp/>del<sp/>controller,<sp/>quindi<sp/>piccola<sp/>modifica<sp/>a<sp/>bug_m<sp/>per<sp/>forzare<sp/>la<sp/>situazione</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(nav<sp/>manager<sp/>first<sp/>version<sp/>and<sp/>first<sp/>debug,<sp/>yet<sp/>not<sp/>tested)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>direi<sp/>che<sp/>prima<sp/>di<sp/>andare<sp/>avanti<sp/>bisogna<sp/>per<sp/>forza<sp/>fare<sp/>del<sp/>testing,<sp/>molto<sp/>semplice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**DIFETTO**<sp/>ci<sp/>sono<sp/>degli<sp/>strani<sp/>output<sp/>da<sp/>wall<sp/>follow,<sp/>pensavo<sp/>di<sp/>averli<sp/>tolti<sp/>tutti</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>in<sp/>bug_m<sp/>bisogna<sp/>aspettare<sp/>che<sp/>qualcuno<sp/>fornisca<sp/>il<sp/>servizio<sp/>per<sp/>la<sp/>user<sp/>interface</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>casino<sp/>apocalittico<sp/>sui<sp/>servizi<sp/>di<sp/>bug_m<sp/>...<sp/>ci<sp/>starò<sp/>un<sp/>po&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(il<sp/>problema<sp/>con<sp/>python<sp/>si<sp/>è<sp/>risolto<sp/>magicamente<sp/>...<sp/>si<sp/>era<sp/>piantato<sp/>...<sp/>ecco<sp/>perchè<sp/>detesto<sp/>usare<sp/>py<sp/>per<sp/>questo<sp/>genere<sp/>di<sp/>lavori)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>SCHEEEEEERZONE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>il<sp/>nodo<sp/>c++<sp/>non<sp/>è<sp/>in<sp/>grado<sp/>di<sp/>gestire<sp/>due<sp/>service<sp/>se<sp/>non<sp/>ha<sp/>abbastanza<sp/>thread<sp/>...<sp/>async<sp/>spinner</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(debugging...<sp/>there&apos;s<sp/>a<sp/>problem<sp/>with<sp/>go_to_point<sp/>and<sp/>bug_m)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>navigation_manager</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

@@ -1123,6 +1123,25 @@ il robot potrebbe avere anche diversi sistemi di navigation, perciò serve un'in
 	- prima di compiare, voglio essere sicuro che tutti i servizi siano *disattivati* all'avvio del controller, quindi piccola modifica a bug_m per forzare la situazione
 	- compila? compila.
 - **COMMIT** : "working on navigation (nav manager first version and first debug, yet not tested)"
+- direi che prima di andare avanti bisogna per forza fare del testing, molto semplice
+	- **DIFETTO** ci sono degli strani output da wall follow, pensavo di averli tolti tutti
+	- **ISSUE** in bug_m bisogna aspettare che qualcuno fornisca il servizio per la user interface
+	- **ISSUE** casino apocalittico sui servizi di bug_m ... ci starò un po'
+	- (il problema con python si è risolto magicamente ... si era piantato ... ecco perchè detesto usare py per questo genere di lavori)
+		- SCHEEEEEERZONE
+	- **ISSUE** il nodo c++ non è in grado di gestire due service se non ha abbastanza thread ... async spinner
+- **COMMIT** : "working on navigation (debugging... there's a problem with go_to_point and bug_m)"
+
+```bash
+# shell 1
+roslaunch robocluedo_robot gazebo.launch 2>/dev/null
+
+# shell 2
+roslaunch robocluedo_movement_controller navigation_system.launch
+
+# shell 3
+rosrun robocluedo_movement_controller navigation_manager
+```
 
 
 

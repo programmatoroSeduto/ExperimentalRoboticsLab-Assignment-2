@@ -1087,8 +1087,29 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (nav manager first version and first debug, yet not tested)&quot;</para>
+</listitem><listitem><para>direi che prima di andare avanti bisogna per forza fare del testing, molto semplice<itemizedlist>
+<listitem><para><bold>DIFETTO</bold> ci sono degli strani output da wall follow, pensavo di averli tolti tutti</para>
+</listitem><listitem><para><bold>ISSUE</bold> in <ref refid="namespacebug__m" kindref="compound">bug_m</ref> bisogna aspettare che qualcuno fornisca il servizio per la user interface</para>
+</listitem><listitem><para><bold>ISSUE</bold> casino apocalittico sui servizi di <ref refid="namespacebug__m" kindref="compound">bug_m</ref> ... ci starò un po&apos;</para>
+</listitem><listitem><para>(il problema con python si è risolto magicamente ... si era piantato ... ecco perchè detesto usare py per questo genere di lavori)<itemizedlist>
+<listitem><para>SCHEEEEEERZONE</para>
 </listitem></itemizedlist>
 </para>
+</listitem><listitem><para><bold>ISSUE</bold> il nodo c++ non è in grado di gestire due service se non ha abbastanza thread ... async spinner</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (debugging... there&apos;s a problem with go_to_point and bug_m)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>navigation_manager</highlight></codeline>
+</programlisting></para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>

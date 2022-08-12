@@ -140,7 +140,7 @@ public:
 			// open the client /bug_switch : std_srvs/SetBool
 			TLOG( "Opening client " << LOGSQUARE( SERVICE_BUGM_SWITCH ) << "..." );
 			cl_bug_switch = nh.serviceClient<std_srvs::SetBool>( SERVICE_BUGM_SWITCH );
-			if( cl_bug_switch.waitForExistence( ros::Duration( 60 ) ) )
+			if( !cl_bug_switch.waitForExistence( ros::Duration( 60 ) ) )
 			{
 				TERR( "unable to contact the server " << SERVICE_BUGM_SWITCH << " - timeout expired (60s) " );
 				return false;
@@ -486,6 +486,9 @@ int main( int argc, char* argv[] )
 	
 	ros::NodeHandle nh;
 	
+	ros::AsyncSpinner spinner(5);
+	spinner.start( );
+	
 	TLOG( "starting ... " );
 	class_navigation_manager nav;
 	
@@ -498,7 +501,7 @@ int main( int argc, char* argv[] )
 	nav.switch_controller( 0 );
 	
 	TLOG( "ready" );
-	ros::spin( );
+	ros::waitForShutdown( );
 	
 	return 0;
 }
