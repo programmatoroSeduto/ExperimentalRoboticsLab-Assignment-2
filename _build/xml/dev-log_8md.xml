@@ -1292,6 +1292,22 @@
 <codeline><highlight class="normal">-<sp/>HA<sp/>FUNZIONATO!<sp/>benissimo!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>manipulation<sp/>(manip<sp/>controller,<sp/>arm<sp/>tuning)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">e<sp/>il<sp/>movement<sp/>controller<sp/>è<sp/>finito,<sp/>o<sp/>almeno<sp/>la<sp/>prima<sp/>versione.<sp/>Adesso<sp/>possiamo<sp/>iniziare<sp/>a<sp/>pensare<sp/>al<sp/>mission<sp/>manager.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>PACKAGE**<sp/>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```bash</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>catkin_create_pkg<sp/>robocluedo_mission_manager<sp/>rospy<sp/>roscpp<sp/>robocluedo_rosplan_msgs<sp/>robocluedo_movement_controller_msgs<sp/>robocluedo_armor_msgs<sp/>std_msgs<sp/>geometry_msgs<sp/>sensor_msgs<sp/>nav_msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>prima<sp/>documentazione<sp/>del<sp/>package<sp/>(vuota)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>iniziamo<sp/>dalla<sp/>parte<sp/>più<sp/>&quot;semplice&quot;:<sp/>movimento<sp/>e<sp/>comandi<sp/>del<sp/>braccio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>manipulation<sp/>unit</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">*per<sp/>oggi<sp/>basta<sp/>così*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(manipulation<sp/>unit<sp/>first<sp/>setup)&quot;</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

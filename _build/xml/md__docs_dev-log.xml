@@ -1256,6 +1256,21 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on manipulation (manip controller, arm tuning)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>e il movement controller è finito, o almeno la prima versione. Adesso possiamo iniziare a pensare al mission manager.</para>
+<para><itemizedlist>
+<listitem><para><bold>NUOVO PACKAGE</bold> : ```bash catkin_create_pkg robocluedo_mission_manager rospy roscpp robocluedo_rosplan_msgs robocluedo_movement_controller_msgs robocluedo_armor_msgs std_msgs geometry_msgs sensor_msgs nav_msgs ```</para>
+</listitem><listitem><para>e prima documentazione del package (vuota)</para>
+</listitem><listitem><para>iniziamo dalla parte più &quot;semplice&quot;: movimento e comandi del braccio</para>
+</listitem><listitem><para><bold>NUOVO NODO</bold> : manipulation unit</para>
+</listitem></itemizedlist>
+</para>
+<para><emphasis>per oggi basta così</emphasis></para>
+<para><itemizedlist>
+<listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (manipulation unit first setup)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
@@ -1285,7 +1300,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md63">
+<sect2 id="md__docs_dev-log_1autotoc_md64">
 <title>Esempi fallati</title>
 <para>è bene tenere traccia anche degli errori...</para>
 <para>... </para>

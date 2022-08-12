@@ -1283,6 +1283,22 @@ rosrun robocluedo_movement_controller manipulation_controller 2>/dev/null
 - HA FUNZIONATO! benissimo!
 - **COMMIT** : "working on manipulation (manip controller, arm tuning)"
 
+---
+
+e il movement controller è finito, o almeno la prima versione. Adesso possiamo iniziare a pensare al mission manager.
+
+- **NUOVO PACKAGE** :
+	```bash
+	catkin_create_pkg robocluedo_mission_manager rospy roscpp robocluedo_rosplan_msgs robocluedo_movement_controller_msgs robocluedo_armor_msgs std_msgs geometry_msgs sensor_msgs nav_msgs
+	```
+- e prima documentazione del package (vuota)
+- iniziamo dalla parte più "semplice": movimento e comandi del braccio
+- **NUOVO NODO** : manipulation unit
+
+*per oggi basta così*
+
+- **COMMIT** : "working on mission manager (manipulation unit first setup)"
+
 
 
 

@@ -150,6 +150,16 @@
     <member refid="classnode__manipulation__controller_1a0085010f7824d1b9fd528b516413d9b6" kind="function"><name>spin</name></member>
     <member refid="classnode__manipulation__controller_1a034c08e17c4eb53c99ab50159bbeec2b" kind="function"><name>cbk_manip</name></member>
   </compound>
+  <compound refid="classnode__manipulation__unit" kind="class"><name>node_manipulation_unit</name>
+    <member refid="classnode__manipulation__unit_1a0307919aeb2ba02a4b44c9a287ff8ab2" kind="variable"><name>nh</name></member>
+    <member refid="classnode__manipulation__unit_1a0e64187af9962c6415a7bd51f31b33c3" kind="variable"><name>srv_roboplan_manip</name></member>
+    <member refid="classnode__manipulation__unit_1a586f7512e45d6ffc0e87090a125b6056" kind="variable"><name>cl_manip</name></member>
+    <member refid="classnode__manipulation__unit_1aa56cb61dac7f3270ca379827de41666e" kind="function"><name>node_manipulation_unit</name></member>
+    <member refid="classnode__manipulation__unit_1a10a18deee7bcb8de1be692c182ef49a8" kind="function"><name>spin</name></member>
+    <member refid="classnode__manipulation__unit_1a37f00dc10e07df7751c043b457d80e3e" kind="function"><name>cbk_roboplan_manip</name></member>
+  </compound>
+  <compound refid="classnove__manipulation__unit" kind="class"><name>nove_manipulation_unit</name>
+  </compound>
   <compound refid="classpredicate__instance" kind="class"><name>predicate_instance</name>
     <member refid="classpredicate__instance_1ada909861d7429830f3139bf987db8681" kind="variable"><name>name</name></member>
     <member refid="classpredicate__instance_1a7a7e2240007a0747cb330d781b59a8c0" kind="variable"><name>params</name></member>
@@ -423,6 +433,8 @@
   </compound>
   <compound refid="robocluedo__dependencies_2worlds_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
+  <compound refid="robocluedo__mission__manager_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
+  </compound>
   <compound refid="robocluedo__module__testing_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
   </compound>
   <compound refid="robocluedo__movement__controller_2_c_make_lists_8txt" kind="file"><name>CMakeLists.txt</name>
@@ -519,6 +531,18 @@
     <member refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" kind="function"><name>oracleService</name></member>
     <member refid="simulation_8cpp_1a876a1245db85a2bb87c08ae086f1eafa" kind="function"><name>oracleCallback</name></member>
     <member refid="simulation_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="manipulation__unit_8cpp" kind="file"><name>manipulation_unit.cpp</name>
+    <member refid="manipulation__unit_8cpp_1a8cc8d559acdd2f74085b20977182d5b7" kind="define"><name>NODE_NAME</name></member>
+    <member refid="manipulation__unit_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" kind="define"><name>LOGSQUARE</name></member>
+    <member refid="manipulation__unit_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kind="define"><name>OUTLABEL</name></member>
+    <member refid="manipulation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" kind="define"><name>TLOG</name></member>
+    <member refid="manipulation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" kind="define"><name>TWARN</name></member>
+    <member refid="manipulation__unit_8cpp_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
+    <member refid="manipulation__unit_8cpp_1a1ffaa7bfaff984375908b5c2eb156714" kind="define"><name>SERVICE_ROBOPLAN_MANIP</name></member>
+    <member refid="manipulation__unit_8cpp_1ad4c51c23cd787eed92cb27695d54fa3b" kind="define"><name>SERVICE_MANIP</name></member>
+    <member refid="manipulation__unit_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
+    <member refid="manipulation__unit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
   <compound refid="test__armor_8cpp" kind="file"><name>test_armor.cpp</name>
     <member refid="test__armor_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kind="define"><name>ONTOLOGY_PARAM</name></member>
@@ -790,13 +814,13 @@
   </compound>
   <compound refid="dir_2fa2ed979a7f6a67d6f5371dd454464f" kind="dir"><name>_ext</name>
   </compound>
-  <compound refid="dir_44d758c2bba68cef1a4747afec28b347" kind="dir"><name>robocluedo_movement_controller/_uml</name>
-  </compound>
   <compound refid="dir_94539ea0841c6d2e0d7ac25c028db2e8" kind="dir"><name>robocluedo_armor/_uml</name>
   </compound>
-  <compound refid="dir_1fcca81b52f889fab1c5f049bd5dad05" kind="dir"><name>robocluedo_rosplan/_uml</name>
+  <compound refid="dir_44d758c2bba68cef1a4747afec28b347" kind="dir"><name>robocluedo_movement_controller/_uml</name>
   </compound>
   <compound refid="dir_654c8e957ef41f3280730cd2bcdfb950" kind="dir"><name>_uml</name>
+  </compound>
+  <compound refid="dir_1fcca81b52f889fab1c5f049bd5dad05" kind="dir"><name>robocluedo_rosplan/_uml</name>
   </compound>
   <compound refid="dir_ced2130ae9b425a73d1f0cd1bbe23d60" kind="dir"><name>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name</name>
   </compound>
@@ -834,6 +858,8 @@
   </compound>
   <compound refid="dir_3b1a7ac9f8fae5ec9cf32f4d52cbfc20" kind="dir"><name>robocluedo_dependencies</name>
   </compound>
+  <compound refid="dir_96755d0a0c084ece6cd5082aa4527753" kind="dir"><name>robocluedo_mission_manager</name>
+  </compound>
   <compound refid="dir_0c7c9d8ce38b319ef680cfddfa679c53" kind="dir"><name>robocluedo_module_testing</name>
   </compound>
   <compound refid="dir_2de61fade426475b4d13155ac01722a8" kind="dir"><name>robocluedo_movement_controller</name>
@@ -860,13 +886,15 @@
   </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
   </compound>
-  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
+  <compound refid="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir"><name>robocluedo_mission_manager/src</name>
   </compound>
   <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
   </compound>
-  <compound refid="dir_7cdcca042c9ec2187b25f38298e09291" kind="dir"><name>robocluedo_movement_controller/src</name>
+  <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
   <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
+  </compound>
+  <compound refid="dir_7cdcca042c9ec2187b25f38298e09291" kind="dir"><name>robocluedo_movement_controller/src</name>
   </compound>
   <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
   </compound>
