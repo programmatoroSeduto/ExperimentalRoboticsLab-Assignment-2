@@ -1141,7 +1141,124 @@ roslaunch robocluedo_movement_controller navigation_system.launch
 
 # shell 3
 rosrun robocluedo_movement_controller navigation_manager
+
+#shell 4
+rosservice call /navigation_manager/set_algorithm "algorithm: 0
+enabled: false"
+
+rosservice call /navigation_manager/navigation "target:
+  x: 1.5
+  y: 2.0
+  yaw: 1.0
+force_enable: false" 
+
+rosservice call /navigation_manager/set_algorithm "algorithm: 0
+enabled: true"
+
+rosservice call /navigation_manager/navigation "target:
+  x: 1.5
+  y: 2.0
+  yaw: 1.0
+force_enable: false" 
+
 ```
+
+---
+
+c'è un problema piuttosto fastidioso col service go to point che non riesco a capire (al solitio l'unico modo per debuggare il codice python è ... eseguirlo, con tutte le grane del caso). A quanto ne so potrebbe anche essere un typo.
+
+- il problema potrebbe essere in go to point ... voglio provarlo da solo
+	- no, go to point funziona bene ...
+- allora il problema potrebbe essere in bug_m
+
+l'errore in questione me lo segno qui:
+
+lato bug_m:
+
+```text
+process[go_to_point_service_m-1]: started with pid [3888]
+process[wall_follow_service_m-2]: started with pid [3889]
+process[head_orientation-3]: started with pid [3890]
+process[bug_m-4]: started with pid [3891]
+Wall follower - [2] - follow the wall
+[ERROR] [1660306330.473755, 452.647000]: Error processing request: 'NoneType' object is not callable
+Traceback (most recent call last): 
+   File "/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py", line 633, in _handle_request
+    response = convert_return_to_response(self.handler(request), self.response_class)
+   File "/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py", line 129, in bug_switch
+    change_state(2)
+   File "/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py", line 109, in change_state
+    srv_client_user_interface_() 
+TypeError: 'NoneType' object is not callable
+Yaw error: [0.03443149860346817]
+Position error: [0.2979991913211027]
+
+```
+
+lato navigation manager:
+
+```text
+[ INFO] [1660306330.440827200]: [navigation_manager] starting ... 
+[ INFO] [1660306330.443291200]: [navigation_manager] Advertising service [/navigation_manager/set_algorithm] ...
+[ INFO] [1660306330.445242500]: [navigation_manager] Advertising service [/navigation_manager/set_algorithm] ... OK
+[ INFO] [1660306330.445294500]: [navigation_manager] Advertising service [/navigation_manager/navigation] ...
+[ INFO] [1660306330.447810400]: [navigation_manager] Advertising service [/navigation_manager/navigation] ... OK
+[ INFO] [1660306330.447872900]: [navigation_manager] Opening client [/bug_switch] ...
+[ INFO] [1660306330.448978900]: [navigation_manager] Opening client [/bug_switch] ... OK
+[ INFO] [1660306330.449069900]: [navigation_manager] advertising service [/bug_m_signal] ...
+[ INFO] [1660306330.450628400]: [navigation_manager] advertising service [/bug_m_signal] ... OK
+[ERROR] [1660306330.475950600]: Service call failed: service [/bug_switch] responded with an error: error processing request: 'NoneType' object is not callable
+[ INFO] [1660306330.476083500]: [navigation_manager] ready
+
+```
+
+- guardando meglio l'errore potrei aver risolto ... 
+	- prova ... nada, sempre lo stesso errore (però adesso almeno ce n'è uno solo che si ripete, e non cambia ogni volta)
+	- l'errore `TypeError: 'NoneType' object is not callable` significa che il client non viene aperto, perchè la funzione in effetti vede la variabile correttamente
+	- il servizio incriminato è sicuramente `/bug_m_signal`
+	- come viene aperto in cpp?
+	- il problema si è risolto aggiungendo un'attesa, evidentemente python è un po' più lento, e questo genera problemi di sincronizzazione
+- ok, ora il problema è risolto ... però adesso *il robot non si muove*
+	- c'è un problema col nodo cpp
+	- lo switch di bug_m pare non funzionare...
+	- c'è un problema con l'apertura dei servizi in Python...
+	- proviamo aggiungendo qualche timeout... 
+	- **BECCATO!** In effetti bug_switch non funziona come si deve, la chiamata non ha effetto
+	- vediamo se riesco a capire qualcosa con qualche log in più
+
+```bash
+# shell 1
+roslaunch robocluedo_robot gazebo.launch 2>/dev/null
+
+# shell 2
+roslaunch robocluedo_movement_controller navigation_system.launch
+
+# shell 3
+rosparam set des_pos_x 2.0
+rosparam set des_pos_y -2.0
+rosparam set des_yaw 2.3
+rosservice call /bug_switch "data: true" 
+sleep 15
+rosservice call /bug_switch "data: false" 
+rosparam set des_pos_x -2.0
+rosparam set des_pos_y 2.1
+rosparam set des_yaw 0.47
+rosservice call /bug_switch "data: true" 
+sleep 15
+rosservice call /bug_switch "data: false" 
+
+```
+
+- il servizio arriva, l'informazione arriva corretta, ma il nodo non si attiva
+- **C'E' UN PROBLEMA COL LASER!** assolutamente insospettabile... ecco perchè ci stavo girando così tanto attorno
+	- in effetti il robot pubblica il laser su '/m2wr/laser/scan' e non su '/scan'
+	- anche in vista di usare move_base meglio usare direttamente '/scan'
+- e proviamo di nuovo ... **E FUNZIONA** almeno solo la parte riguardante python
+	- c'era un errore nel nuovo stato 3, una cosa che non avevo notato prima, anche se nulla di serio
+- ora la parte python pare funzioni
+- adesso, proviamo la parte cpp
+	- **E ADESSO FUNZIONA**
+- **COMMIT** : "working on navigation (debugging, now it works, laser issue)"
 
 
 

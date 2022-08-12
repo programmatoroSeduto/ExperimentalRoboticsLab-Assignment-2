@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="452" column="17" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="447" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="453" column="17" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="448" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classclass__navigation__manager_1a3c4a636d8b5209456d6c103062b04b8a" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="classnavigation__controller" kindref="compound">navigation_controller</ref> * &gt;</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="455" column="13" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="455" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="456" column="13" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="456" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classclass__navigation__manager_1ad6b0ba4f9e7c07ccb7930fc7a98e6856" prot="private" static="no" mutable="no">
         <type><ref refid="classnavigation__controller" kindref="compound">navigation_controller</ref> *</type>
@@ -44,7 +44,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="458" column="23" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="458" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="459" column="23" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="459" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classclass__navigation__manager_1a661d9a990505367816b256c79643c79d" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -59,7 +59,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="461" column="13" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="461" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="462" column="13" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="462" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classclass__navigation__manager_1ab03c573f772dfc0f3582938d97ed4bb8" prot="private" static="no" mutable="no">
         <type>ros::ServiceServer</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="464" column="20" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="464" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="465" column="20" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="465" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classclass__navigation__manager_1a3ef41bef2f65679a63a636f9c3359d80" prot="private" static="no" mutable="no">
         <type>ros::ServiceServer</type>
@@ -87,7 +87,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="467" column="20" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="467" bodyend="-1"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="468" column="20" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="468" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -103,13 +103,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="268" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="268" bodyend="279"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="269" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="269" bodyend="280"/>
         <references refid="navigation__manager_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__manager_8cpp" startline="22">TLOG</references>
         <references refid="navigation__manager_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" compoundref="navigation__manager_8cpp" startline="20">LOGSQUARE</references>
         <references refid="navigation__manager_8cpp_1a5160cb2daa1573cc08cd9c0a0400b484" compoundref="navigation__manager_8cpp" startline="39">SERVICE_SET_ALGORITHM</references>
-        <references refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="372" endline="403">cbk_set_algorithm</references>
+        <references refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="373" endline="404">cbk_set_algorithm</references>
         <references refid="navigation__manager_8cpp_1a86668a6e04783029932ae15d276f52a3" compoundref="navigation__manager_8cpp" startline="40">SERVICE_NAVIGATION</references>
-        <references refid="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" compoundref="navigation__manager_8cpp" startline="406" endline="447">cbk_navigation</references>
+        <references refid="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" compoundref="navigation__manager_8cpp" startline="407" endline="448">cbk_navigation</references>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1a8d4bcb8a98dae6df481e4daa1e8a3f63" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type></type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="282" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="282" bodyend="285"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="283" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="283" bodyend="286"/>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1a8908d9ea148da8215a0cdc189f2546e9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>int</type>
@@ -155,10 +155,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="296" column="5" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="296" bodyend="308"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="297" column="5" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="297" bodyend="309"/>
         <references refid="classnavigation__controller_1a04cc1e88a2e1b7be5d3798451054d5f1" compoundref="navigation__manager_8cpp" startline="90" endline="94">navigation_controller::disable</references>
         <references refid="classnavigation__controller_1a88fcab5cae4bf6e40f450425346d3c55" compoundref="navigation__manager_8cpp" startline="58">navigation_controller::nav_code</references>
-        <referencedby refid="navigation__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__manager_8cpp" startline="482" endline="507">main</referencedby>
+        <referencedby refid="navigation__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__manager_8cpp" startline="483" endline="508">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1a0e3da10f29486044c2c9e723d1784a69" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -188,11 +188,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="317" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="317" bodyend="347"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="318" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="318" bodyend="348"/>
         <references refid="navigation__manager_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" compoundref="navigation__manager_8cpp" startline="36">SS</references>
         <references refid="navigation__manager_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" compoundref="navigation__manager_8cpp" startline="37">SSS</references>
         <references refid="classnavigation__controller_1a04cc1e88a2e1b7be5d3798451054d5f1" compoundref="navigation__manager_8cpp" startline="90" endline="94">navigation_controller::disable</references>
-        <referencedby refid="navigation__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__manager_8cpp" startline="482" endline="507">main</referencedby>
+        <referencedby refid="navigation__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__manager_8cpp" startline="483" endline="508">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1ac0a8dd3af206c82fa5fcd45bec8b84b4" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -210,10 +210,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="350" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="350" bodyend="363"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="351" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="351" bodyend="364"/>
         <references refid="classnavigation__controller_1aa1ea5e031bbfbbb3982c53dfcec95050" compoundref="navigation__manager_8cpp" startline="75" endline="79">navigation_controller::enable</references>
         <references refid="classnavigation__controller_1a04cc1e88a2e1b7be5d3798451054d5f1" compoundref="navigation__manager_8cpp" startline="90" endline="94">navigation_controller::disable</references>
-        <referencedby refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="372" endline="403">cbk_set_algorithm</referencedby>
+        <referencedby refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="373" endline="404">cbk_set_algorithm</referencedby>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1ab611833b473ff61e0c9174b7dec8e453" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -227,7 +227,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="366" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="366" bodyend="369"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="367" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="367" bodyend="370"/>
         <references refid="classnavigation__controller_1a2a92e3cfb66a690adcefa0cbdfa117f2" compoundref="navigation__manager_8cpp" startline="97" endline="97">navigation_controller::is_enabled</references>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -250,12 +250,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="372" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="372" bodyend="403"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="373" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="373" bodyend="404"/>
         <references refid="navigation__manager_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" compoundref="navigation__manager_8cpp" startline="36">SS</references>
         <references refid="navigation__manager_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" compoundref="navigation__manager_8cpp" startline="37">SSS</references>
         <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
-        <references refid="classclass__navigation__manager_1ac0a8dd3af206c82fa5fcd45bec8b84b4" compoundref="navigation__manager_8cpp" startline="350" endline="363">set_status</references>
-        <referencedby refid="classclass__navigation__manager_1ae271731df0d61f4553a403b62567e7a6" compoundref="navigation__manager_8cpp" startline="268" endline="279">class_navigation_manager</referencedby>
+        <references refid="classclass__navigation__manager_1ac0a8dd3af206c82fa5fcd45bec8b84b4" compoundref="navigation__manager_8cpp" startline="351" endline="364">set_status</references>
+        <referencedby refid="classclass__navigation__manager_1ae271731df0d61f4553a403b62567e7a6" compoundref="navigation__manager_8cpp" startline="269" endline="280">class_navigation_manager</referencedby>
       </memberdef>
       <memberdef kind="function" id="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -277,12 +277,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="406" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="406" bodyend="447"/>
+        <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="407" column="6" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="407" bodyend="448"/>
         <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
         <references refid="classnavigation__controller_1a2a92e3cfb66a690adcefa0cbdfa117f2" compoundref="navigation__manager_8cpp" startline="97" endline="97">navigation_controller::is_enabled</references>
         <references refid="classnavigation__controller_1aa1ea5e031bbfbbb3982c53dfcec95050" compoundref="navigation__manager_8cpp" startline="75" endline="79">navigation_controller::enable</references>
         <references refid="classnavigation__controller_1a5071b1592ee63758454b16e6f15452e6" compoundref="navigation__manager_8cpp" startline="82" endline="87">navigation_controller::perform_navigation</references>
-        <referencedby refid="classclass__navigation__manager_1ae271731df0d61f4553a403b62567e7a6" compoundref="navigation__manager_8cpp" startline="268" endline="279">class_navigation_manager</referencedby>
+        <referencedby refid="classclass__navigation__manager_1ae271731df0d61f4553a403b62567e7a6" compoundref="navigation__manager_8cpp" startline="269" endline="280">class_navigation_manager</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -290,7 +290,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="264" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="263" bodyend="468"/>
+    <location file="robocluedo_movement_controller/src/navigation_manager.cpp" line="265" column="1" bodyfile="robocluedo_movement_controller/src/navigation_manager.cpp" bodystart="264" bodyend="469"/>
     <listofallmembers>
       <member refid="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" prot="public" virt="non-virtual"><scope>class_navigation_manager</scope><name>cbk_navigation</name></member>
       <member refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" prot="public" virt="non-virtual"><scope>class_navigation_manager</scope><name>cbk_set_algorithm</name></member>

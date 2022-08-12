@@ -1511,8 +1511,134 @@ roslaunch robocluedo_movement_controller navigation_system.launch
 
 <span class="c1"># shell 3</span>
 rosrun robocluedo_movement_controller navigation_manager
+
+<span class="c1">#shell 4</span>
+rosservice call /navigation_manager/set_algorithm <span class="s2">&quot;algorithm: 0</span>
+<span class="s2">enabled: false&quot;</span>
+
+rosservice call /navigation_manager/navigation <span class="s2">&quot;target:</span>
+<span class="s2">  x: 1.5</span>
+<span class="s2">  y: 2.0</span>
+<span class="s2">  yaw: 1.0</span>
+<span class="s2">force_enable: false&quot;</span> 
+
+rosservice call /navigation_manager/set_algorithm <span class="s2">&quot;algorithm: 0</span>
+<span class="s2">enabled: true&quot;</span>
+
+rosservice call /navigation_manager/navigation <span class="s2">&quot;target:</span>
+<span class="s2">  x: 1.5</span>
+<span class="s2">  y: 2.0</span>
+<span class="s2">  yaw: 1.0</span>
+<span class="s2">force_enable: false&quot;</span> 
 </pre></div>
 </div>
+<hr class="docutils" />
+<p>c’è un problema piuttosto fastidioso col service go to point che non riesco a capire (al solitio l’unico modo per debuggare il codice python è … eseguirlo, con tutte le grane del caso). A quanto ne so potrebbe anche essere un typo.</p>
+<ul class="simple">
+<li><p>il problema potrebbe essere in go to point … voglio provarlo da solo</p>
+<ul>
+<li><p>no, go to point funziona bene …</p></li>
+</ul>
+</li>
+<li><p>allora il problema potrebbe essere in bug_m</p></li>
+</ul>
+<p>l’errore in questione me lo segno qui:</p>
+<p>lato bug_m:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>process[go_to_point_service_m-1]: started with pid [3888]
+process[wall_follow_service_m-2]: started with pid [3889]
+process[head_orientation-3]: started with pid [3890]
+process[bug_m-4]: started with pid [3891]
+Wall follower - [2] - follow the wall
+[ERROR] [1660306330.473755, 452.647000]: Error processing request: &#39;NoneType&#39; object is not callable
+Traceback (most recent call last): 
+   File &quot;/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py&quot;, line 633, in _handle_request
+    response = convert_return_to_response(self.handler(request), self.response_class)
+   File &quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;, line 129, in bug_switch
+    change_state(2)
+   File &quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;, line 109, in change_state
+    srv_client_user_interface_() 
+TypeError: &#39;NoneType&#39; object is not callable
+Yaw error: [0.03443149860346817]
+Position error: [0.2979991913211027]
+</pre></div>
+</div>
+<p>lato navigation manager:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ INFO] [1660306330.440827200]: [navigation_manager] starting ... 
+[ INFO] [1660306330.443291200]: [navigation_manager] Advertising service [/navigation_manager/set_algorithm] ...
+[ INFO] [1660306330.445242500]: [navigation_manager] Advertising service [/navigation_manager/set_algorithm] ... OK
+[ INFO] [1660306330.445294500]: [navigation_manager] Advertising service [/navigation_manager/navigation] ...
+[ INFO] [1660306330.447810400]: [navigation_manager] Advertising service [/navigation_manager/navigation] ... OK
+[ INFO] [1660306330.447872900]: [navigation_manager] Opening client [/bug_switch] ...
+[ INFO] [1660306330.448978900]: [navigation_manager] Opening client [/bug_switch] ... OK
+[ INFO] [1660306330.449069900]: [navigation_manager] advertising service [/bug_m_signal] ...
+[ INFO] [1660306330.450628400]: [navigation_manager] advertising service [/bug_m_signal] ... OK
+[ERROR] [1660306330.475950600]: Service call failed: service [/bug_switch] responded with an error: error processing request: &#39;NoneType&#39; object is not callable
+[ INFO] [1660306330.476083500]: [navigation_manager] ready
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>guardando meglio l’errore potrei aver risolto …</p>
+<ul>
+<li><p>prova … nada, sempre lo stesso errore (però adesso almeno ce n’è uno solo che si ripete, e non cambia ogni volta)</p></li>
+<li><p>l’errore <code class="docutils literal notranslate"><span class="pre">TypeError:</span> <span class="pre">'NoneType'</span> <span class="pre">object</span> <span class="pre">is</span> <span class="pre">not</span> <span class="pre">callable</span></code> significa che il client non viene aperto, perchè la funzione in effetti vede la variabile correttamente</p></li>
+<li><p>il servizio incriminato è sicuramente <code class="docutils literal notranslate"><span class="pre">/bug_m_signal</span></code></p></li>
+<li><p>come viene aperto in cpp?</p></li>
+<li><p>il problema si è risolto aggiungendo un’attesa, evidentemente python è un po’ più lento, e questo genera problemi di sincronizzazione</p></li>
+</ul>
+</li>
+<li><p>ok, ora il problema è risolto … però adesso <em>il robot non si muove</em></p>
+<ul>
+<li><p>c’è un problema col nodo cpp</p></li>
+<li><p>lo switch di bug_m pare non funzionare…</p></li>
+<li><p>c’è un problema con l’apertura dei servizi in Python…</p></li>
+<li><p>proviamo aggiungendo qualche timeout…</p></li>
+<li><p><strong>BECCATO!</strong> In effetti bug_switch non funziona come si deve, la chiamata non ha effetto</p></li>
+<li><p>vediamo se riesco a capire qualcosa con qualche log in più</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_robot gazebo.launch <span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># shell 2</span>
+roslaunch robocluedo_movement_controller navigation_system.launch
+
+<span class="c1"># shell 3</span>
+rosparam <span class="nb">set</span> des_pos_x <span class="m">2</span>.0
+rosparam <span class="nb">set</span> des_pos_y -2.0
+rosparam <span class="nb">set</span> des_yaw <span class="m">2</span>.3
+rosservice call /bug_switch <span class="s2">&quot;data: true&quot;</span> 
+sleep <span class="m">15</span>
+rosservice call /bug_switch <span class="s2">&quot;data: false&quot;</span> 
+rosparam <span class="nb">set</span> des_pos_x -2.0
+rosparam <span class="nb">set</span> des_pos_y <span class="m">2</span>.1
+rosparam <span class="nb">set</span> des_yaw <span class="m">0</span>.47
+rosservice call /bug_switch <span class="s2">&quot;data: true&quot;</span> 
+sleep <span class="m">15</span>
+rosservice call /bug_switch <span class="s2">&quot;data: false&quot;</span> 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>il servizio arriva, l’informazione arriva corretta, ma il nodo non si attiva</p></li>
+<li><p><strong>C’E’ UN PROBLEMA COL LASER!</strong> assolutamente insospettabile… ecco perchè ci stavo girando così tanto attorno</p>
+<ul>
+<li><p>in effetti il robot pubblica il laser su ‘/m2wr/laser/scan’ e non su ‘/scan’</p></li>
+<li><p>anche in vista di usare move_base meglio usare direttamente ‘/scan’</p></li>
+</ul>
+</li>
+<li><p>e proviamo di nuovo … <strong>E FUNZIONA</strong> almeno solo la parte riguardante python</p>
+<ul>
+<li><p>c’era un errore nel nuovo stato 3, una cosa che non avevo notato prima, anche se nulla di serio</p></li>
+</ul>
+</li>
+<li><p>ora la parte python pare funzioni</p></li>
+<li><p>adesso, proviamo la parte cpp</p>
+<ul>
+<li><p><strong>E ADESSO FUNZIONA</strong></p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on navigation (debugging, now it works, laser issue)”</p></li>
+</ul>
 <p>TODO</p>
 <ul class="simple">
 <li><p>documentazione del package ROSPlan</p></li>

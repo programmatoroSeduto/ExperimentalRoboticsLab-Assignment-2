@@ -339,9 +339,9 @@
         <referencedby refid="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" compoundref="rosplan-kb_8md_8txt" startline="253" endline="261">if</referencedby>
         <referencedby refid="class_armor_tools_1a34d27d93c2faec3d3de3ba24d08f436b" compoundref="armor__tools_8cpp" startline="385" endline="389">ArmorTools::GetLastRes</referencedby>
         <referencedby refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" compoundref="simulation_8cpp" startline="37" endline="41">oracleService</referencedby>
-        <referencedby refid="classnav__bug__m_1a9d40a065e7d0271add1afa94fee6fade" compoundref="navigation__manager_8cpp" startline="166" endline="202">nav_bug_m::perform_navigation</referencedby>
-        <referencedby refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="372" endline="403">class_navigation_manager::cbk_set_algorithm</referencedby>
-        <referencedby refid="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" compoundref="navigation__manager_8cpp" startline="406" endline="447">class_navigation_manager::cbk_navigation</referencedby>
+        <referencedby refid="classnav__bug__m_1a9d40a065e7d0271add1afa94fee6fade" compoundref="navigation__manager_8cpp" startline="167" endline="203">nav_bug_m::perform_navigation</referencedby>
+        <referencedby refid="classclass__navigation__manager_1a67db56090eef62327094b8e8e04cd987" compoundref="navigation__manager_8cpp" startline="373" endline="404">class_navigation_manager::cbk_set_algorithm</referencedby>
+        <referencedby refid="classclass__navigation__manager_1a257df23d80f741f8681bc27cfb63b523" compoundref="navigation__manager_8cpp" startline="407" endline="448">class_navigation_manager::cbk_navigation</referencedby>
         <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="191" endline="272">kb_interface::cbk_update_goal</referencedby>
         <referencedby refid="classkb__tools_1ac39559c5414b4254d13d61fca5c3f6a5" compoundref="kb__tools_8cpp" startline="239" endline="248">kb_tools::keyvalue2map</referencedby>
       </memberdef>
@@ -530,8 +530,8 @@ std::map&lt;std::string, std::string&gt; params
         <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="131" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="131" bodyend="135"/>
         <references refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c">TERR</references>
         <references refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" compoundref="kb__tools_8h" startline="31">TIMEOUT_QUERY</references>
-        <referencedby refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="117" endline="122">bug_m.normalize_angle</referencedby>
-        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="141" endline="248">bug_m.main</referencedby>
+        <referencedby refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="124" endline="129">bug_m.normalize_angle</referencedby>
+        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="149" endline="273">bug_m.main</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a9016b8d25737fe805f75d9db52ff4680" compoundref="go__to__point__service__m_8py" startline="93" endline="98">go_to_point_service_m.normalize_angle</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a22f1876bd87959557a463d43fa521ad3" compoundref="go__to__point__service__m_8py" startline="147" endline="156">go_to_point_service_m.done</referencedby>
         <referencedby refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="88" endline="95">head_orientation.normalize_angle</referencedby>

@@ -137,9 +137,15 @@ def main():
 	
 	rospy.init_node('head_orientation')
 	
+	rospy.loginfo("(head_orientation) starting...")
+	rospy.sleep(rospy.Duration(2))
+	
 	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 	sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
 	srv = rospy.Service('/head_orient_switch', SetBool, head_orient_switch)
+	
+	rospy.sleep(rospy.Duration(2))
+	rospy.loginfo("(head_orientation) ready")
 	
 	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():

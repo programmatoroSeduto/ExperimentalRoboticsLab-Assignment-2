@@ -486,7 +486,8 @@
         </noise>
       </ray>
       <plugin filename="libgazebo_ros_laser.so" name="gazebo_ros_head_hokuyo_controller">
-        <topicName>m2wr/laser/scan</topicName>
+        <!-- <topicName>m2wr/laser/scan</topicName> -->
+        <topicName>/scan</topicName>
         <frameName>laser</frameName>
       </plugin>
     </sensor>

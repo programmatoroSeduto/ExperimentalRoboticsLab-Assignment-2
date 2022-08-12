@@ -1109,7 +1109,128 @@
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>navigation_manager</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;algorithm:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal">enabled:<sp/>false&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;target:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>x:<sp/>1.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>y:<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">force_enable:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;algorithm:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal">enabled:<sp/>true&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;target:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>x:<sp/>1.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>y:<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">force_enable:<sp/>false&quot;<sp/></highlight></codeline>
 </programlisting></para>
+<para><hruler/>
+</para>
+<para>c&apos;è un problema piuttosto fastidioso col service go to point che non riesco a capire (al solitio l&apos;unico modo per debuggare il codice python è ... eseguirlo, con tutte le grane del caso). A quanto ne so potrebbe anche essere un typo.</para>
+<para><itemizedlist>
+<listitem><para>il problema potrebbe essere in go to point ... voglio provarlo da solo<itemizedlist>
+<listitem><para>no, go to point funziona bene ...</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>allora il problema potrebbe essere in <ref refid="namespacebug__m" kindref="compound">bug_m</ref></para>
+</listitem></itemizedlist>
+</para>
+<para>l&apos;errore in questione me lo segno qui:</para>
+<para>lato <ref refid="namespacebug__m" kindref="compound">bug_m</ref>:</para>
+<para><programlisting filename=".text"><codeline><highlight class="normal">process[go_to_point_service_m-1]:<sp/>started<sp/>with<sp/>pid<sp/>[3888]</highlight></codeline>
+<codeline><highlight class="normal">process[wall_follow_service_m-2]:<sp/>started<sp/>with<sp/>pid<sp/>[3889]</highlight></codeline>
+<codeline><highlight class="normal">process[head_orientation-3]:<sp/>started<sp/>with<sp/>pid<sp/>[3890]</highlight></codeline>
+<codeline><highlight class="normal">process[bug_m-4]:<sp/>started<sp/>with<sp/>pid<sp/>[3891]</highlight></codeline>
+<codeline><highlight class="normal">Wall<sp/>follower<sp/>-<sp/>[2]<sp/>-<sp/>follow<sp/>the<sp/>wall</highlight></codeline>
+<codeline><highlight class="normal">[ERROR]<sp/>[1660306330.473755,<sp/>452.647000]:<sp/>Error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">Traceback<sp/>(most<sp/>recent<sp/>call<sp/>last):<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py&quot;,<sp/>line<sp/>633,<sp/>in<sp/>_handle_request</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>convert_return_to_response(self.handler(request),<sp/>self.response_class)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;,<sp/>line<sp/>129,<sp/>in<sp/>bug_switch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>change_state(2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;,<sp/>line<sp/>109,<sp/>in<sp/>change_state</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>srv_client_user_interface_()<sp/></highlight></codeline>
+<codeline><highlight class="normal">TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">Yaw<sp/>error:<sp/>[0.03443149860346817]</highlight></codeline>
+<codeline><highlight class="normal">Position<sp/>error:<sp/>[0.2979991913211027]</highlight></codeline>
+</programlisting></para>
+<para>lato navigation manager:</para>
+<para><programlisting filename=".text"><codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.440827200]:<sp/>[navigation_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.443291200]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.445242500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.445294500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.447810400]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.447872900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.448978900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.449069900]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.450628400]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[ERROR]<sp/>[1660306330.475950600]:<sp/>Service<sp/>call<sp/>failed:<sp/>service<sp/>[/bug_switch]<sp/>responded<sp/>with<sp/>an<sp/>error:<sp/>error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.476083500]:<sp/>[navigation_manager]<sp/>ready</highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>guardando meglio l&apos;errore potrei aver risolto ...<itemizedlist>
+<listitem><para>prova ... nada, sempre lo stesso errore (però adesso almeno ce n&apos;è uno solo che si ripete, e non cambia ogni volta)</para>
+</listitem><listitem><para>l&apos;errore <lsquo/>TypeError: &apos;NoneType<rsquo/> object is not callable<computeroutput>significa che il client non viene aperto, perchè la funzione in effetti vede la variabile correttamente</computeroutput></para>
+</listitem><listitem><para><computeroutput>il servizio incriminato è sicuramente</computeroutput>/bug_m_signal`</para>
+</listitem><listitem><para>come viene aperto in cpp?</para>
+</listitem><listitem><para>il problema si è risolto aggiungendo un&apos;attesa, evidentemente python è un po&apos; più lento, e questo genera problemi di sincronizzazione</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ok, ora il problema è risolto ... però adesso <emphasis>il robot non si muove</emphasis><itemizedlist>
+<listitem><para>c&apos;è un problema col nodo cpp</para>
+</listitem><listitem><para>lo switch di <ref refid="namespacebug__m" kindref="compound">bug_m</ref> pare non funzionare...</para>
+</listitem><listitem><para>c&apos;è un problema con l&apos;apertura dei servizi in Python...</para>
+</listitem><listitem><para>proviamo aggiungendo qualche timeout...</para>
+</listitem><listitem><para><bold>BECCATO!</bold> In effetti bug_switch non funziona come si deve, la chiamata non ha effetto</para>
+</listitem><listitem><para>vediamo se riesco a capire qualcosa con qualche log in più</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_x<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_y<sp/>-2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_yaw<sp/>2.3</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>true&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_x<sp/>-2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_y<sp/>2.1</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_yaw<sp/>0.47</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>true&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
+</programlisting></para>
+<para><itemizedlist>
+<listitem><para>il servizio arriva, l&apos;informazione arriva corretta, ma il nodo non si attiva</para>
+</listitem><listitem><para><bold>C&apos;E&apos; UN PROBLEMA COL LASER!</bold> assolutamente insospettabile... ecco perchè ci stavo girando così tanto attorno<itemizedlist>
+<listitem><para>in effetti il robot pubblica il laser su &apos;/m2wr/laser/scan&apos; e non su &apos;/scan&apos;</para>
+</listitem><listitem><para>anche in vista di usare move_base meglio usare direttamente &apos;/scan&apos;</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e proviamo di nuovo ... <bold>E FUNZIONA</bold> almeno solo la parte riguardante python<itemizedlist>
+<listitem><para>c&apos;era un errore nel nuovo stato 3, una cosa che non avevo notato prima, anche se nulla di serio</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ora la parte python pare funzioni</para>
+</listitem><listitem><para>adesso, proviamo la parte cpp<itemizedlist>
+<listitem><para><bold>E ADESSO FUNZIONA</bold></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (debugging, now it works, laser issue)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para>TODO</para>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
@@ -1139,7 +1260,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md61">
+<sect2 id="md__docs_dev-log_1autotoc_md62">
 <title>Esempi fallati</title>
 <para>è bene tenere traccia anche degli errori...</para>
 <para>... </para>

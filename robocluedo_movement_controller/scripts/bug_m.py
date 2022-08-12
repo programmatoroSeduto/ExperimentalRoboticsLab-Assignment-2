@@ -80,6 +80,7 @@ def clbk_laser(msg):
 def change_state(state):
 	global state_, state_desc_
 	global srv_client_wall_follower_, srv_client_go_to_point_, srv_client_head_orientation_
+	global srv_client_user_interface_
 	
 	state_ = state
 	
@@ -106,7 +107,13 @@ def change_state(state):
 		twist_msg.angular.z = 0
 		pub.publish(twist_msg)
 		
-		srv_client_user_interface_()
+		if (srv_client_user_interface_ == None):
+			srv_client_user_interface_ = rospy.ServiceProxy('/bug_m_signal', Empty)
+		if srv_client_user_interface_ != None:
+			try:
+				srv_client_user_interface_()
+			except rospy.ServiceException:
+				srv_client_user_interface_ = None
 		
 	elif state == 3:
 		srv_client_go_to_point_(False)
@@ -125,13 +132,14 @@ def bug_switch(req):
 	global srv_client_wall_follower_, srv_client_go_to_point_, srv_client_head_orientation_
 	
 	active_ = req.data
-	if not active_:
-		change_state(2)
-		srv_client_go_to_point_(False)
-		srv_client_wall_follower_(False)
-		srv_client_head_orientation_(False)
 	
-	res = SetBoolResponse()
+	if not active_:
+		rospy.loginfo("(bug_m) OFF")
+		change_state(2)
+	else:
+		rospy.loginfo("(bug_m) ON ")
+	
+	res = SetBoolResponse( )
 	res.success = True
 	res.message = 'Done!'
 	
@@ -139,13 +147,16 @@ def bug_switch(req):
 
 
 def main():
-	global regions_, position_, desired_position_, state_, yaw_, yaw_error_allowed_
+	global regions_, position_, desired_position_, yaw_, yaw_error_allowed_
 	global srv_client_go_to_point_, srv_client_wall_follower_, srv_client_user_interface_, srv_client_head_orientation_
 	global pub
 	global desired_yaw_, yaw_precision_, yaw_precision_2_
-	global active_
+	global active_, state_
 
 	rospy.init_node('bug0')
+	
+	rospy.loginfo("(bug_m) starting...")
+	rospy.sleep(rospy.Duration(2))
 
 	sub_laser = rospy.Subscriber('/scan', LaserScan, clbk_laser)
 	sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
@@ -167,22 +178,38 @@ def main():
 		return
 	
 	switch_srv = rospy.Service('/bug_switch', SetBool, bug_switch)
+	'''
 	try:
 		rospy.wait_for_service('/bug_m_signal', timeout=60)
 		srv_client_user_interface_ = rospy.ServiceProxy('/bug_m_signal', Empty)
+		if( srv_client_user_interface_ == None ):
+			rospy.logwarn("(bug_m) srv_client_user_interface_ == None")
+			return
 	except rospy.ROSException as e:
 		rospy.logwarn("(bug_m) unable to contact to the provider server for /bug_switch")
 		return
-
+	'''
+	srv_client_user_interface_ = rospy.ServiceProxy('/bug_m_signal', Empty)
+	
+	rospy.sleep(rospy.Duration(2))
+	rospy.loginfo("(bug_m) ready")
+	
 	# initialize going to the point
-	change_state(0)
+	change_state(2)
 
 	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():
 		if regions_ == None:
+			# rospy.loginfo(f"(bug_m) regions is none!")
 			continue
 		
-		if active_:
+		rate.sleep( )
+		if not active_:
+			# rospy.loginfo(f"(bug_m) is off")
+			continue
+		else:
+			# rospy.loginfo(f"(bug_m) state {state_}")
+			
 			if state_ == 0:
 				''' 
 				go_to_point -- ON
@@ -240,10 +267,8 @@ def main():
 				head orient -- ON
 				'''
 				err_yaw = normalize_angle(desired_yaw_ - yaw_)
-				if(err_yaw > yaw_precision_2_):
-					change_state(3)
-
-		rate.sleep()
+				if(err_yaw <= yaw_precision_2_):
+					change_state(2)
 
 
 if __name__ == "__main__":

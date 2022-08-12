@@ -1150,7 +1150,124 @@
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_movement_controller<sp/>navigation_manager</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#shell<sp/>4</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;algorithm:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal">enabled:<sp/>false&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;target:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>x:<sp/>1.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>y:<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">force_enable:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;algorithm:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal">enabled:<sp/>true&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;target:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>x:<sp/>1.5</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>y:<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">force_enable:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">c&apos;è<sp/>un<sp/>problema<sp/>piuttosto<sp/>fastidioso<sp/>col<sp/>service<sp/>go<sp/>to<sp/>point<sp/>che<sp/>non<sp/>riesco<sp/>a<sp/>capire<sp/>(al<sp/>solitio<sp/>l&apos;unico<sp/>modo<sp/>per<sp/>debuggare<sp/>il<sp/>codice<sp/>python<sp/>è<sp/>...<sp/>eseguirlo,<sp/>con<sp/>tutte<sp/>le<sp/>grane<sp/>del<sp/>caso).<sp/>A<sp/>quanto<sp/>ne<sp/>so<sp/>potrebbe<sp/>anche<sp/>essere<sp/>un<sp/>typo.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>problema<sp/>potrebbe<sp/>essere<sp/>in<sp/>go<sp/>to<sp/>point<sp/>...<sp/>voglio<sp/>provarlo<sp/>da<sp/>solo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>no,<sp/>go<sp/>to<sp/>point<sp/>funziona<sp/>bene<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>allora<sp/>il<sp/>problema<sp/>potrebbe<sp/>essere<sp/>in<sp/>bug_m</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">l&apos;errore<sp/>in<sp/>questione<sp/>me<sp/>lo<sp/>segno<sp/>qui:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">lato<sp/>bug_m:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">process[go_to_point_service_m-1]:<sp/>started<sp/>with<sp/>pid<sp/>[3888]</highlight></codeline>
+<codeline><highlight class="normal">process[wall_follow_service_m-2]:<sp/>started<sp/>with<sp/>pid<sp/>[3889]</highlight></codeline>
+<codeline><highlight class="normal">process[head_orientation-3]:<sp/>started<sp/>with<sp/>pid<sp/>[3890]</highlight></codeline>
+<codeline><highlight class="normal">process[bug_m-4]:<sp/>started<sp/>with<sp/>pid<sp/>[3891]</highlight></codeline>
+<codeline><highlight class="normal">Wall<sp/>follower<sp/>-<sp/>[2]<sp/>-<sp/>follow<sp/>the<sp/>wall</highlight></codeline>
+<codeline><highlight class="normal">[ERROR]<sp/>[1660306330.473755,<sp/>452.647000]:<sp/>Error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">Traceback<sp/>(most<sp/>recent<sp/>call<sp/>last):<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py&quot;,<sp/>line<sp/>633,<sp/>in<sp/>_handle_request</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>convert_return_to_response(self.handler(request),<sp/>self.response_class)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;,<sp/>line<sp/>129,<sp/>in<sp/>bug_switch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>change_state(2)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>File<sp/>&quot;/root/ros_ws/src/erl2-new/robocluedo_movement_controller/scripts/bug_m.py&quot;,<sp/>line<sp/>109,<sp/>in<sp/>change_state</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>srv_client_user_interface_()<sp/></highlight></codeline>
+<codeline><highlight class="normal">TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">Yaw<sp/>error:<sp/>[0.03443149860346817]</highlight></codeline>
+<codeline><highlight class="normal">Position<sp/>error:<sp/>[0.2979991913211027]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">lato<sp/>navigation<sp/>manager:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.440827200]:<sp/>[navigation_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.443291200]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.445242500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.445294500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.447810400]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.447872900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.448978900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.449069900]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.450628400]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[ERROR]<sp/>[1660306330.475950600]:<sp/>Service<sp/>call<sp/>failed:<sp/>service<sp/>[/bug_switch]<sp/>responded<sp/>with<sp/>an<sp/>error:<sp/>error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660306330.476083500]:<sp/>[navigation_manager]<sp/>ready</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>guardando<sp/>meglio<sp/>l&apos;errore<sp/>potrei<sp/>aver<sp/>risolto<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>...<sp/>nada,<sp/>sempre<sp/>lo<sp/>stesso<sp/>errore<sp/>(però<sp/>adesso<sp/>almeno<sp/>ce<sp/>n&apos;è<sp/>uno<sp/>solo<sp/>che<sp/>si<sp/>ripete,<sp/>e<sp/>non<sp/>cambia<sp/>ogni<sp/>volta)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>l&apos;errore<sp/>`TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable`<sp/>significa<sp/>che<sp/>il<sp/>client<sp/>non<sp/>viene<sp/>aperto,<sp/>perchè<sp/>la<sp/>funzione<sp/>in<sp/>effetti<sp/>vede<sp/>la<sp/>variabile<sp/>correttamente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>servizio<sp/>incriminato<sp/>è<sp/>sicuramente<sp/>`/bug_m_signal`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>come<sp/>viene<sp/>aperto<sp/>in<sp/>cpp?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>problema<sp/>si<sp/>è<sp/>risolto<sp/>aggiungendo<sp/>un&apos;attesa,<sp/>evidentemente<sp/>python<sp/>è<sp/>un<sp/>po&apos;<sp/>più<sp/>lento,<sp/>e<sp/>questo<sp/>genera<sp/>problemi<sp/>di<sp/>sincronizzazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ok,<sp/>ora<sp/>il<sp/>problema<sp/>è<sp/>risolto<sp/>...<sp/>però<sp/>adesso<sp/>*il<sp/>robot<sp/>non<sp/>si<sp/>muove*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>un<sp/>problema<sp/>col<sp/>nodo<sp/>cpp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>lo<sp/>switch<sp/>di<sp/>bug_m<sp/>pare<sp/>non<sp/>funzionare...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>un<sp/>problema<sp/>con<sp/>l&apos;apertura<sp/>dei<sp/>servizi<sp/>in<sp/>Python...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>aggiungendo<sp/>qualche<sp/>timeout...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**BECCATO!**<sp/>In<sp/>effetti<sp/>bug_switch<sp/>non<sp/>funziona<sp/>come<sp/>si<sp/>deve,<sp/>la<sp/>chiamata<sp/>non<sp/>ha<sp/>effetto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>vediamo<sp/>se<sp/>riesco<sp/>a<sp/>capire<sp/>qualcosa<sp/>con<sp/>qualche<sp/>log<sp/>in<sp/>più</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_x<sp/>2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_y<sp/>-2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_yaw<sp/>2.3</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>true&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_x<sp/>-2.0</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_pos_y<sp/>2.1</highlight></codeline>
+<codeline><highlight class="normal">rosparam<sp/>set<sp/>des_yaw<sp/>0.47</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>true&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
+<codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>servizio<sp/>arriva,<sp/>l&apos;informazione<sp/>arriva<sp/>corretta,<sp/>ma<sp/>il<sp/>nodo<sp/>non<sp/>si<sp/>attiva</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**C&apos;E&apos;<sp/>UN<sp/>PROBLEMA<sp/>COL<sp/>LASER!**<sp/>assolutamente<sp/>insospettabile...<sp/>ecco<sp/>perchè<sp/>ci<sp/>stavo<sp/>girando<sp/>così<sp/>tanto<sp/>attorno</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>effetti<sp/>il<sp/>robot<sp/>pubblica<sp/>il<sp/>laser<sp/>su<sp/>&apos;/m2wr/laser/scan&apos;<sp/>e<sp/>non<sp/>su<sp/>&apos;/scan&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>in<sp/>vista<sp/>di<sp/>usare<sp/>move_base<sp/>meglio<sp/>usare<sp/>direttamente<sp/>&apos;/scan&apos;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>proviamo<sp/>di<sp/>nuovo<sp/>...<sp/>**E<sp/>FUNZIONA**<sp/>almeno<sp/>solo<sp/>la<sp/>parte<sp/>riguardante<sp/>python</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;era<sp/>un<sp/>errore<sp/>nel<sp/>nuovo<sp/>stato<sp/>3,<sp/>una<sp/>cosa<sp/>che<sp/>non<sp/>avevo<sp/>notato<sp/>prima,<sp/>anche<sp/>se<sp/>nulla<sp/>di<sp/>serio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora<sp/>la<sp/>parte<sp/>python<sp/>pare<sp/>funzioni</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>adesso,<sp/>proviamo<sp/>la<sp/>parte<sp/>cpp</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**E<sp/>ADESSO<sp/>FUNZIONA**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(debugging,<sp/>now<sp/>it<sp/>works,<sp/>laser<sp/>issue)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

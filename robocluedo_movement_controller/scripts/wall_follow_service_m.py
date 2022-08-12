@@ -55,7 +55,7 @@ def clbk_laser(msg):
 def change_state(state):
 	global state_, state_dict_
 	if state is not state_:
-		print ('Wall follower - [%s] - %s' % (state, state_dict_[state]))
+		# print ('Wall follower - [%s] - %s' % (state, state_dict_[state]))
 		state_ = state
 
 
@@ -122,15 +122,19 @@ def follow_the_wall():
 
 
 def main():
-	global pub_, active_
+	global pub_, active_, state_
 
-	rospy.init_node('reading_laser')
+	rospy.init_node('wall_follow_service_m')
+	
+	rospy.loginfo("(wall follow) starting")
+	rospy.sleep(rospy.Duration(2))
 
 	pub_ = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
-
 	sub = rospy.Subscriber('/scan', LaserScan, clbk_laser)
-
-	srv = rospy.Service('wall_follower_switch', SetBool, wall_follower_switch)
+	srv = rospy.Service('/wall_follower_switch', SetBool, wall_follower_switch)
+	
+	rospy.sleep(rospy.Duration(2))
+	rospy.loginfo("(wall follow) ready")
 
 	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():

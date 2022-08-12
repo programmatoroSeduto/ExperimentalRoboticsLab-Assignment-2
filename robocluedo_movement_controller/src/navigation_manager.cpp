@@ -152,6 +152,7 @@ public:
 			cl_bug_signal = nh.advertiseService( SERVICE_BUGM_SIGNAL, &nav_bug_m::cbk_bug_signal, this );
 			TLOG( "advertising service " << LOGSQUARE( SERVICE_BUGM_SIGNAL ) << "... OK" );
 			
+			(ros::Duration(2)).sleep();
 			channels_enabled = true;
 		}
 		
@@ -211,7 +212,7 @@ public:
 	/** service for the signal from the bug_m node */
 	bool cbk_bug_signal( std_srvs::Empty::Request& req, std_srvs::Empty::Response& res )
 	{
-		if(!signal) signal=true;
+		signal=true;
 		return true;
 	}
 
@@ -249,7 +250,7 @@ private:
 		ros::Rate r( 20 );
 		do
 			r.sleep( );
-		while( !this->signal );
+		while( !this->signal && ros::ok( ) );
 	}
 };
 
@@ -486,7 +487,7 @@ int main( int argc, char* argv[] )
 	
 	ros::NodeHandle nh;
 	
-	ros::AsyncSpinner spinner(5);
+	ros::AsyncSpinner spinner(3);
 	spinner.start( );
 	
 	TLOG( "starting ... " );

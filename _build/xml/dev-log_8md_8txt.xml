@@ -1215,65 +1215,189 @@
 <codeline lineno="1124"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline lineno="1125"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>navigation<sp/>(nav<sp/>manager<sp/>first<sp/>version<sp/>and<sp/>first<sp/>debug,<sp/>yet<sp/>not<sp/>tested)&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1126"><highlight class="normal">-<sp/>direi<sp/>che<sp/>prima<sp/>di<sp/>andare<sp/>avanti<sp/>bisogna<sp/>per<sp/>forza<sp/>fare<sp/>del<sp/>testing,<sp/>molto<sp/>semplice</highlight></codeline>
-<codeline lineno="1127"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1128"><highlight class="normal">```bash</highlight></codeline>
-<codeline lineno="1129"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>1</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1130"><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/</highlight><highlight class="keyword">null</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1131"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1132"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>2</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1133"><highlight class="normal">roslaunch<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref><sp/>navigation_system.launch</highlight></codeline>
-<codeline lineno="1134"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1135"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>shell<sp/>3</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="1136"><highlight class="normal">rosrun<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref><sp/>navigation_manager</highlight></codeline>
-<codeline lineno="1137"><highlight class="normal">```</highlight></codeline>
-<codeline lineno="1138"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1139"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1140"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1141"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1142"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1143"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1144"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1145"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1146"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1147"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1148"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1149"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1150"><highlight class="normal">TODO</highlight></codeline>
-<codeline lineno="1151"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1152"><highlight class="normal">-<sp/>documentazione<sp/>del<sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">ROSPlan</highlight></codeline>
-<codeline lineno="1153"><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
-<codeline lineno="1154"><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
-<codeline lineno="1155"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1156"><highlight class="normal">-<sp/>modificare<sp/>uno<sp/>dei<sp/>nodi<sp/>del<sp/>navigation<sp/>per<sp/>raggiungere<sp/>una<sp/>certa<sp/>orientazione<sp/>al<sp/>termine<sp/>del<sp/>moto,<sp/>oltre<sp/>che<sp/>una<sp/>certa<sp/>posizione</highlight></codeline>
-<codeline lineno="1157"><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
-<codeline lineno="1158"><highlight class="normal">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
-<codeline lineno="1159"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1160"><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
-<codeline lineno="1161"><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
-<codeline lineno="1162"><highlight class="normal">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
-<codeline lineno="1163"><highlight class="normal">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline lineno="1164"><highlight class="normal">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
-<codeline lineno="1165"><highlight class="normal">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;senza<sp/>sbattersi<sp/>troppo&quot;</highlight></codeline>
-<codeline lineno="1166"><highlight class="normal">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
-<codeline lineno="1167"><highlight class="normal">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
-<codeline lineno="1168"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
-<codeline lineno="1169"><highlight class="normal">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
-<codeline lineno="1170"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1171"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1172"><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
-<codeline lineno="1173"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1174"><highlight class="normal">NOTE</highlight></codeline>
-<codeline lineno="1175"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1176"><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
-<codeline lineno="1177"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1178"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1179"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1180"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1181"><highlight class="normal">##<sp/>Esempi<sp/>fallati</highlight></codeline>
-<codeline lineno="1182"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1183"><highlight class="normal">è<sp/>bene<sp/>tenere<sp/>traccia<sp/>anche<sp/>degli<sp/>errori...</highlight></codeline>
-<codeline lineno="1184"><highlight class="normal"></highlight></codeline>
-<codeline lineno="1185"><highlight class="normal">...</highlight></codeline>
+<codeline lineno="1127"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**DIFETTO**<sp/>ci<sp/>sono<sp/>degli<sp/>strani<sp/>output<sp/>da<sp/>wall<sp/>follow,<sp/>pensavo<sp/>di<sp/>averli<sp/>tolti<sp/>tutti</highlight></codeline>
+<codeline lineno="1128"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>in<sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref><sp/>bisogna<sp/>aspettare<sp/>che<sp/>qualcuno<sp/>fornisca<sp/>il<sp/>servizio<sp/>per<sp/>la<sp/>user<sp/>interface</highlight></codeline>
+<codeline lineno="1129"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>casino<sp/>apocalittico<sp/>sui<sp/>servizi<sp/>di<sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref><sp/>...<sp/>ci<sp/>starò<sp/>un<sp/>po</highlight><highlight class="stringliteral">&apos;</highlight></codeline>
+<codeline lineno="1130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>(il<sp/>problema<sp/>con<sp/>python<sp/>si<sp/>è<sp/>risolto<sp/>magicamente<sp/>...<sp/>si<sp/>era<sp/>piantato<sp/>...<sp/>ecco<sp/>perchè<sp/>detesto<sp/>usare<sp/>py<sp/>per<sp/>questo<sp/>genere<sp/>di<sp/>lavori)</highlight></codeline>
+<codeline lineno="1131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>SCHEEEEEERZONE</highlight></codeline>
+<codeline lineno="1132"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>il<sp/>nodo<sp/>c++<sp/>non<sp/>è<sp/>in<sp/>grado<sp/>di<sp/>gestire<sp/>due<sp/>service<sp/>se<sp/>non<sp/>ha<sp/>abbastanza<sp/>thread<sp/>...<sp/>async<sp/>spinner</highlight></codeline>
+<codeline lineno="1133"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(debugging...<sp/>there&apos;</highlight><highlight class="normal">s<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>problem<sp/>with<sp/>go_to_point<sp/>and<sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref>)</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="1134"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1135"><highlight class="stringliteral">```bash</highlight></codeline>
+<codeline lineno="1136"><highlight class="stringliteral">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline lineno="1137"><highlight class="stringliteral">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline lineno="1138"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1139"><highlight class="stringliteral">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline lineno="1140"><highlight class="stringliteral">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline lineno="1141"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1142"><highlight class="stringliteral">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline lineno="1143"><highlight class="stringliteral">rosrun<sp/>robocluedo_movement_controller<sp/>navigation_manager</highlight></codeline>
+<codeline lineno="1144"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1145"><highlight class="stringliteral">#shell<sp/>4</highlight></codeline>
+<codeline lineno="1146"><highlight class="stringliteral">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;</highlight><highlight class="normal">algorithm:<sp/>0</highlight></codeline>
+<codeline lineno="1147"><highlight class="normal">enabled:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="1148"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1149"><highlight class="stringliteral">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;</highlight><highlight class="normal"><ref refid="bug-m_8md_8txt_1a121c428f444654781668f2553bd7dd47" kindref="member">target</ref>:</highlight></codeline>
+<codeline lineno="1150"><highlight class="normal"><sp/><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a16754163197eb074b61db8a8c354ccaf" kindref="member">x</ref>:<sp/>1.5</highlight></codeline>
+<codeline lineno="1151"><highlight class="normal"><sp/><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a2f82cd5f2a14b7605818ee4df8fef0fe" kindref="member">y</ref>:<sp/>2.0</highlight></codeline>
+<codeline lineno="1152"><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline lineno="1153"><highlight class="normal">force_enable:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1154"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1155"><highlight class="stringliteral">rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;</highlight><highlight class="normal">algorithm:<sp/>0</highlight></codeline>
+<codeline lineno="1156"><highlight class="normal">enabled:<sp/></highlight><highlight class="keyword">true</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="1157"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1158"><highlight class="stringliteral">rosservice<sp/>call<sp/>/navigation_manager/navigation<sp/>&quot;</highlight><highlight class="normal"><ref refid="bug-m_8md_8txt_1a121c428f444654781668f2553bd7dd47" kindref="member">target</ref>:</highlight></codeline>
+<codeline lineno="1159"><highlight class="normal"><sp/><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a16754163197eb074b61db8a8c354ccaf" kindref="member">x</ref>:<sp/>1.5</highlight></codeline>
+<codeline lineno="1160"><highlight class="normal"><sp/><sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a2f82cd5f2a14b7605818ee4df8fef0fe" kindref="member">y</ref>:<sp/>2.0</highlight></codeline>
+<codeline lineno="1161"><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
+<codeline lineno="1162"><highlight class="normal">force_enable:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1163"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1164"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="1165"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1166"><highlight class="stringliteral">---</highlight></codeline>
+<codeline lineno="1167"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1168"><highlight class="stringliteral">c&apos;è<sp/>un<sp/>problema<sp/>piuttosto<sp/>fastidioso<sp/>col<sp/>service<sp/>go<sp/>to<sp/>point<sp/>che<sp/>non<sp/>riesco<sp/>a<sp/>capire<sp/>(al<sp/>solitio<sp/>l&apos;unico<sp/>modo<sp/>per<sp/>debuggare<sp/>il<sp/>codice<sp/>python<sp/>è<sp/>...<sp/>eseguirlo,<sp/>con<sp/>tutte<sp/>le<sp/>grane<sp/>del<sp/>caso).<sp/>A<sp/>quanto<sp/>ne<sp/>so<sp/>potrebbe<sp/>anche<sp/>essere<sp/>un<sp/>typo.</highlight></codeline>
+<codeline lineno="1169"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1170"><highlight class="stringliteral">-<sp/>il<sp/>problema<sp/>potrebbe<sp/>essere<sp/>in<sp/>go<sp/>to<sp/>point<sp/>...<sp/>voglio<sp/>provarlo<sp/>da<sp/>solo</highlight></codeline>
+<codeline lineno="1171"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>no,<sp/>go<sp/>to<sp/>point<sp/>funziona<sp/>bene<sp/>...</highlight></codeline>
+<codeline lineno="1172"><highlight class="stringliteral">-<sp/>allora<sp/>il<sp/>problema<sp/>potrebbe<sp/>essere<sp/>in<sp/>bug_m</highlight></codeline>
+<codeline lineno="1173"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1174"><highlight class="stringliteral">l&apos;errore<sp/>in<sp/>questione<sp/>me<sp/>lo<sp/>segno<sp/>qui:</highlight></codeline>
+<codeline lineno="1175"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1176"><highlight class="stringliteral">lato<sp/>bug_m:</highlight></codeline>
+<codeline lineno="1177"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1178"><highlight class="stringliteral">```text</highlight></codeline>
+<codeline lineno="1179"><highlight class="stringliteral">process[go_to_point_service_m-1]:<sp/>started<sp/>with<sp/>pid<sp/>[3888]</highlight></codeline>
+<codeline lineno="1180"><highlight class="stringliteral">process[wall_follow_service_m-2]:<sp/>started<sp/>with<sp/>pid<sp/>[3889]</highlight></codeline>
+<codeline lineno="1181"><highlight class="stringliteral">process[head_orientation-3]:<sp/>started<sp/>with<sp/>pid<sp/>[3890]</highlight></codeline>
+<codeline lineno="1182"><highlight class="stringliteral">process[bug_m-4]:<sp/>started<sp/>with<sp/>pid<sp/>[3891]</highlight></codeline>
+<codeline lineno="1183"><highlight class="stringliteral">Wall<sp/>follower<sp/>-<sp/>[2]<sp/>-<sp/>follow<sp/>the<sp/>wall</highlight></codeline>
+<codeline lineno="1184"><highlight class="stringliteral">[ERROR]<sp/>[1660306330.473755,<sp/>452.647000]:<sp/>Error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline lineno="1185"><highlight class="stringliteral">Traceback<sp/>(most<sp/>recent<sp/>call<sp/>last):<sp/></highlight></codeline>
+<codeline lineno="1186"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>633,<sp/>in<sp/>_handle_request</highlight></codeline>
+<codeline lineno="1187"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>convert_return_to_response(self.handler(request),<sp/>self.response_class)</highlight></codeline>
+<codeline lineno="1188"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/<ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref>/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>129,<sp/>in<sp/>bug_switch</highlight></codeline>
+<codeline lineno="1189"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>change_state(2)</highlight></codeline>
+<codeline lineno="1190"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/<ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref>/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>109,<sp/>in<sp/>change_state</highlight></codeline>
+<codeline lineno="1191"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>srv_client_user_interface_()<sp/></highlight></codeline>
+<codeline lineno="1192"><highlight class="stringliteral">TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline lineno="1193"><highlight class="stringliteral">Yaw<sp/>error:<sp/>[0.03443149860346817]</highlight></codeline>
+<codeline lineno="1194"><highlight class="stringliteral">Position<sp/>error:<sp/>[0.2979991913211027]</highlight></codeline>
+<codeline lineno="1195"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1196"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="1197"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1198"><highlight class="stringliteral">lato<sp/>navigation<sp/>manager:</highlight></codeline>
+<codeline lineno="1199"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1200"><highlight class="stringliteral">```text</highlight></codeline>
+<codeline lineno="1201"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.440827200]:<sp/>[navigation_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline lineno="1202"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.443291200]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...</highlight></codeline>
+<codeline lineno="1203"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.445242500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>...<sp/>OK</highlight></codeline>
+<codeline lineno="1204"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.445294500]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...</highlight></codeline>
+<codeline lineno="1205"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.447810400]:<sp/>[navigation_manager]<sp/>Advertising<sp/>service<sp/>[/navigation_manager/navigation]<sp/>...<sp/>OK</highlight></codeline>
+<codeline lineno="1206"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.447872900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...</highlight></codeline>
+<codeline lineno="1207"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.448978900]:<sp/>[navigation_manager]<sp/>Opening<sp/>client<sp/>[/bug_switch]<sp/>...<sp/>OK</highlight></codeline>
+<codeline lineno="1208"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.449069900]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...</highlight></codeline>
+<codeline lineno="1209"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.450628400]:<sp/>[navigation_manager]<sp/>advertising<sp/>service<sp/>[/bug_m_signal]<sp/>...<sp/>OK</highlight></codeline>
+<codeline lineno="1210"><highlight class="stringliteral">[ERROR]<sp/>[1660306330.475950600]:<sp/>Service<sp/>call<sp/>failed:<sp/>service<sp/>[/bug_switch]<sp/>responded<sp/>with<sp/>an<sp/>error:<sp/>error<sp/>processing<sp/>request:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
+<codeline lineno="1211"><highlight class="stringliteral">[<sp/>INFO]<sp/>[1660306330.476083500]:<sp/>[navigation_manager]<sp/>ready</highlight></codeline>
+<codeline lineno="1212"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1213"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="1214"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1215"><highlight class="stringliteral">-<sp/>guardando<sp/>meglio<sp/>l&apos;errore<sp/>potrei<sp/>aver<sp/>risolto<sp/>...<sp/></highlight></codeline>
+<codeline lineno="1216"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>...<sp/>nada,<sp/>sempre<sp/>lo<sp/>stesso<sp/>errore<sp/>(però<sp/>adesso<sp/>almeno<sp/>ce<sp/>n&apos;è<sp/>uno<sp/>solo<sp/>che<sp/>si<sp/>ripete,<sp/>e<sp/>non<sp/>cambia<sp/>ogni<sp/>volta)</highlight></codeline>
+<codeline lineno="1217"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>l&apos;errore<sp/>`TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable`<sp/>significa<sp/>che<sp/>il<sp/>client<sp/>non<sp/>viene<sp/>aperto,<sp/>perchè<sp/>la<sp/>funzione<sp/>in<sp/>effetti<sp/>vede<sp/>la<sp/>variabile<sp/>correttamente</highlight></codeline>
+<codeline lineno="1218"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>servizio<sp/>incriminato<sp/>è<sp/>sicuramente<sp/>`/bug_m_signal`</highlight></codeline>
+<codeline lineno="1219"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>come<sp/>viene<sp/>aperto<sp/>in<sp/>cpp?</highlight></codeline>
+<codeline lineno="1220"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>problema<sp/>si<sp/>è<sp/>risolto<sp/>aggiungendo<sp/>un&apos;attesa,<sp/>evidentemente<sp/>python<sp/>è<sp/>un<sp/>po&apos;<sp/>più<sp/>lento,<sp/>e<sp/>questo<sp/>genera<sp/>problemi<sp/>di<sp/>sincronizzazione</highlight></codeline>
+<codeline lineno="1221"><highlight class="stringliteral">-<sp/>ok,<sp/>ora<sp/>il<sp/>problema<sp/>è<sp/>risolto<sp/>...<sp/>però<sp/>adesso<sp/>*il<sp/>robot<sp/>non<sp/>si<sp/>muove*</highlight></codeline>
+<codeline lineno="1222"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>un<sp/>problema<sp/>col<sp/>nodo<sp/>cpp</highlight></codeline>
+<codeline lineno="1223"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>lo<sp/>switch<sp/>di<sp/>bug_m<sp/>pare<sp/>non<sp/>funzionare...</highlight></codeline>
+<codeline lineno="1224"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>un<sp/>problema<sp/>con<sp/>l&apos;apertura<sp/>dei<sp/>servizi<sp/>in<sp/>Python...</highlight></codeline>
+<codeline lineno="1225"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>aggiungendo<sp/>qualche<sp/>timeout...<sp/></highlight></codeline>
+<codeline lineno="1226"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>**BECCATO!**<sp/>In<sp/>effetti<sp/>bug_switch<sp/>non<sp/>funziona<sp/>come<sp/>si<sp/>deve,<sp/>la<sp/>chiamata<sp/>non<sp/>ha<sp/>effetto</highlight></codeline>
+<codeline lineno="1227"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>vediamo<sp/>se<sp/>riesco<sp/>a<sp/>capire<sp/>qualcosa<sp/>con<sp/>qualche<sp/>log<sp/>in<sp/>più</highlight></codeline>
+<codeline lineno="1228"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1229"><highlight class="stringliteral">```bash</highlight></codeline>
+<codeline lineno="1230"><highlight class="stringliteral">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline lineno="1231"><highlight class="stringliteral">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline lineno="1232"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1233"><highlight class="stringliteral">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline lineno="1234"><highlight class="stringliteral">roslaunch<sp/>robocluedo_movement_controller<sp/>navigation_system.launch</highlight></codeline>
+<codeline lineno="1235"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1236"><highlight class="stringliteral">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline lineno="1237"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_pos_x<sp/>2.0</highlight></codeline>
+<codeline lineno="1238"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_pos_y<sp/>-2.0</highlight></codeline>
+<codeline lineno="1239"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_yaw<sp/>2.3</highlight></codeline>
+<codeline lineno="1240"><highlight class="stringliteral">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;</highlight><highlight class="normal">data:<sp/></highlight><highlight class="keyword">true</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1241"><highlight class="stringliteral">sleep<sp/>15</highlight></codeline>
+<codeline lineno="1242"><highlight class="stringliteral">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;</highlight><highlight class="normal">data:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1243"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_pos_x<sp/>-2.0</highlight></codeline>
+<codeline lineno="1244"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_pos_y<sp/>2.1</highlight></codeline>
+<codeline lineno="1245"><highlight class="stringliteral">rosparam<sp/>set<sp/>des_yaw<sp/>0.47</highlight></codeline>
+<codeline lineno="1246"><highlight class="stringliteral">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;</highlight><highlight class="normal">data:<sp/></highlight><highlight class="keyword">true</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1247"><highlight class="stringliteral">sleep<sp/>15</highlight></codeline>
+<codeline lineno="1248"><highlight class="stringliteral">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;</highlight><highlight class="normal">data:<sp/></highlight><highlight class="keyword">false</highlight><highlight class="stringliteral">&quot;<sp/></highlight></codeline>
+<codeline lineno="1249"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1250"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="1251"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1252"><highlight class="stringliteral">-<sp/>il<sp/>servizio<sp/>arriva,<sp/>l&apos;informazione<sp/>arriva<sp/>corretta,<sp/>ma<sp/>il<sp/>nodo<sp/>non<sp/>si<sp/>attiva</highlight></codeline>
+<codeline lineno="1253"><highlight class="stringliteral">-<sp/>**C&apos;E&apos;<sp/>UN<sp/>PROBLEMA<sp/>COL<sp/>LASER!**<sp/>assolutamente<sp/>insospettabile...<sp/>ecco<sp/>perchè<sp/>ci<sp/>stavo<sp/>girando<sp/>così<sp/>tanto<sp/>attorno</highlight></codeline>
+<codeline lineno="1254"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>effetti<sp/>il<sp/>robot<sp/>pubblica<sp/>il<sp/>laser<sp/>su<sp/>&apos;/m2wr/laser/scan&apos;<sp/>e<sp/>non<sp/>su<sp/>&apos;/scan&apos;</highlight></codeline>
+<codeline lineno="1255"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>in<sp/>vista<sp/>di<sp/>usare<sp/>move_base<sp/>meglio<sp/>usare<sp/>direttamente<sp/>&apos;/scan&apos;</highlight></codeline>
+<codeline lineno="1256"><highlight class="stringliteral">-<sp/>e<sp/>proviamo<sp/>di<sp/>nuovo<sp/>...<sp/>**E<sp/>FUNZIONA**<sp/>almeno<sp/>solo<sp/>la<sp/>parte<sp/>riguardante<sp/>python</highlight></codeline>
+<codeline lineno="1257"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>c&apos;era<sp/>un<sp/>errore<sp/>nel<sp/>nuovo<sp/>stato<sp/>3,<sp/>una<sp/>cosa<sp/>che<sp/>non<sp/>avevo<sp/>notato<sp/>prima,<sp/>anche<sp/>se<sp/>nulla<sp/>di<sp/>serio</highlight></codeline>
+<codeline lineno="1258"><highlight class="stringliteral">-<sp/>ora<sp/>la<sp/>parte<sp/>python<sp/>pare<sp/>funzioni</highlight></codeline>
+<codeline lineno="1259"><highlight class="stringliteral">-<sp/>adesso,<sp/>proviamo<sp/>la<sp/>parte<sp/>cpp</highlight></codeline>
+<codeline lineno="1260"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>**E<sp/>ADESSO<sp/>FUNZIONA**</highlight></codeline>
+<codeline lineno="1261"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1262"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1263"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1264"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1265"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1266"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1267"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1268"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1269"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1270"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1271"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1272"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1273"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1274"><highlight class="stringliteral">TODO</highlight></codeline>
+<codeline lineno="1275"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1276"><highlight class="stringliteral">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="1277"><highlight class="stringliteral">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="1278"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
+<codeline lineno="1279"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1280"><highlight class="stringliteral">-<sp/>modificare<sp/>uno<sp/>dei<sp/>nodi<sp/>del<sp/>navigation<sp/>per<sp/>raggiungere<sp/>una<sp/>certa<sp/>orientazione<sp/>al<sp/>termine<sp/>del<sp/>moto,<sp/>oltre<sp/>che<sp/>una<sp/>certa<sp/>posizione</highlight></codeline>
+<codeline lineno="1281"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
+<codeline lineno="1282"><highlight class="stringliteral">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
+<codeline lineno="1283"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1284"><highlight class="stringliteral">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline lineno="1285"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline lineno="1286"><highlight class="stringliteral">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
+<codeline lineno="1287"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
+<codeline lineno="1288"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline lineno="1289"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;</highlight><highlight class="normal">senza<sp/>sbattersi<sp/>troppo</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="1290"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="1291"><highlight class="stringliteral">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline lineno="1292"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline lineno="1293"><highlight class="stringliteral">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
+<codeline lineno="1294"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1295"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1296"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
+<codeline lineno="1297"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1298"><highlight class="stringliteral">NOTE</highlight></codeline>
+<codeline lineno="1299"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1300"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline lineno="1301"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1302"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1303"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1304"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1305"><highlight class="stringliteral">##<sp/>Esempi<sp/>fallati</highlight></codeline>
+<codeline lineno="1306"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1307"><highlight class="stringliteral">è<sp/>bene<sp/>tenere<sp/>traccia<sp/>anche<sp/>degli<sp/>errori...</highlight></codeline>
+<codeline lineno="1308"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="1309"><highlight class="stringliteral">...</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/_docs/dev-log.md.txt"/>
   </compounddef>

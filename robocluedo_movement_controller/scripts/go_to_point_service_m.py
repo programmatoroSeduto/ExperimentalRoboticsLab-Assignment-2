@@ -155,13 +155,21 @@ def done(des_pos):
 
 
 def main():
-	global pub, active_, desired_position_
+	global pub, active_, desired_position_, state_
 
 	rospy.init_node('go_to_point')
+	
+	rospy.loginfo("(go to point) starting...")
+	rospy.sleep(rospy.Duration(2))
 
 	pub = rospy.Publisher('/cmd_vel', Twist, queue_size=1)
 	sub_odom = rospy.Subscriber('/odom', Odometry, clbk_odom)
 	srv = rospy.Service('go_to_point_switch', SetBool, go_to_point_switch)
+	
+	rospy.sleep(rospy.Duration(2))
+	rospy.loginfo("(go to point) ready")
+	
+	state_ = 2
 
 	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():
