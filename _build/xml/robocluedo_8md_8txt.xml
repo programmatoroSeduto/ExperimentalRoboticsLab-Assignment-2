@@ -55,11 +55,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="9" column="25" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="9" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1aa6f626203c740423c9dfcbbe727f90b4" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad4__</definition>
+        <definition>__pad3__</definition>
         <argsstring></argsstring>
-        <name>__pad4__</name>
+        <name>__pad3__</name>
         <initializer>=== PDDL1.1 ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -69,11 +69,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="13" column="70" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="301" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a445d93e639c02494afbdc5126d1d9f8a" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad5__</definition>
+        <definition>__pad4__</definition>
         <argsstring></argsstring>
-        <name>__pad5__</name>
+        <name>__pad4__</name>
         <initializer>=== PDDL2.1 ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -122,11 +122,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="355" column="13" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="356" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1ad918d72d2eac09be60a9fc8847fe31a2" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1a445d93e639c02494afbdc5126d1d9f8a" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad6__</definition>
+        <definition>__pad5__</definition>
         <argsstring></argsstring>
-        <name>__pad6__</name>
+        <name>__pad5__</name>
         <initializer>=== SYSTEM INIT ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -136,11 +136,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="355" column="13" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="366" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a33068e38fda059166af20232a02d2b55" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1ad918d72d2eac09be60a9fc8847fe31a2" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad7__</definition>
+        <definition>__pad6__</definition>
         <argsstring></argsstring>
-        <name>__pad7__</name>
+        <name>__pad6__</name>
         <initializer>=== NAVIGATION SYSTEM ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -176,11 +176,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="406" column="5" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="406" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1a33068e38fda059166af20232a02d2b55" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad8__</definition>
+        <definition>__pad7__</definition>
         <argsstring></argsstring>
-        <name>__pad8__</name>
+        <name>__pad7__</name>
         <initializer>=== MANIPULATOR ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -203,11 +203,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="465" column="2" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="466" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a80ad40e6270e9de09a3b433c64722d87" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad9__</definition>
+        <definition>__pad8__</definition>
         <argsstring></argsstring>
-        <name>__pad9__</name>
+        <name>__pad8__</name>
         <initializer>=== HINT ACQUISITION ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -230,11 +230,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="528" column="2" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="529" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a5502557ae70bf9183ef91e013c7f1441" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1a80ad40e6270e9de09a3b433c64722d87" prot="public" static="no" mutable="no">
         <type></type>
-        <definition>__pad10__</definition>
+        <definition>__pad9__</definition>
         <argsstring></argsstring>
-        <name>__pad10__</name>
+        <name>__pad9__</name>
         <initializer>=== MYSTERY SOLUTION ===</initializer>
         <briefdescription>
         </briefdescription>
@@ -270,11 +270,11 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" line="782" column="9" bodyfile="_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old/robocluedo.md.txt" bodystart="783" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="robocluedo_8md_8txt_1a50fe554b33989255593c1a948b7e8484" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="robocluedo_8md_8txt_1aabe3d657e0dd0dacc4b38dfe8a08b2a1" prot="public" static="no" mutable="no">
         <type>Cost</type>
-        <definition>Cost __pad11__</definition>
+        <definition>Cost __pad10__</definition>
         <argsstring></argsstring>
-        <name>__pad11__</name>
+        <name>__pad10__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -872,7 +872,7 @@
 <codeline lineno="298"><highlight class="normal">(define<sp/>(domain<sp/>robocluedo)</highlight></codeline>
 <codeline lineno="299"><highlight class="normal"></highlight></codeline>
 <codeline lineno="300"><highlight class="normal">(:<ref refid="pddl-and-rosplan_8md_8txt_1a35f38f55b0f5028e1ef34550a520e94c" kindref="member">requirements</ref><sp/></highlight></codeline>
-<codeline lineno="301" refid="robocluedo_8md_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL1.1<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="301" refid="robocluedo_8md_8txt_1aa6f626203c740423c9dfcbbe727f90b4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL1.1<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="302"><highlight class="normal"><sp/><sp/><sp/><sp/>:strips<sp/></highlight></codeline>
 <codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/>:typing<sp/></highlight></codeline>
 <codeline lineno="304"><highlight class="normal"><sp/><sp/><sp/><sp/>:equality<sp/></highlight></codeline>
@@ -881,7 +881,7 @@
 <codeline lineno="307"><highlight class="normal"><sp/><sp/><sp/><sp/>:conditional-effects</highlight></codeline>
 <codeline lineno="308"><highlight class="normal"><sp/><sp/><sp/><sp/>:quantified-preconditions</highlight></codeline>
 <codeline lineno="309"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="310" refid="robocluedo_8md_8txt_1a445d93e639c02494afbdc5126d1d9f8a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL2.1<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="310" refid="robocluedo_8md_8txt_1aa126f02bcfcec342fb72926c73b4aeb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>;;<sp/>===<sp/>PDDL2.1<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="311"><highlight class="normal"><sp/><sp/><sp/><sp/>:numeric-fluents</highlight></codeline>
 <codeline lineno="312"><highlight class="normal"><sp/><sp/><sp/><sp/>:durative-actions</highlight></codeline>
 <codeline lineno="313"><highlight class="normal">)</highlight></codeline>
@@ -937,7 +937,7 @@
 <codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/>(solution-quality<sp/>)</highlight></codeline>
 <codeline lineno="364"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="365"><highlight class="normal"></highlight></codeline>
-<codeline lineno="366" refid="robocluedo_8md_8txt_1ad918d72d2eac09be60a9fc8847fe31a2" refkind="member"><highlight class="normal">;;<sp/>===<sp/>SYSTEM<sp/>INIT<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="366" refid="robocluedo_8md_8txt_1a445d93e639c02494afbdc5126d1d9f8a" refkind="member"><highlight class="normal">;;<sp/>===<sp/>SYSTEM<sp/>INIT<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="367"><highlight class="normal"></highlight></codeline>
 <codeline lineno="368"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>init-planning-<ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref></highlight></codeline>
 <codeline lineno="369"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>)</highlight></codeline>
@@ -952,7 +952,7 @@
 <codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="379"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="380"><highlight class="normal"></highlight></codeline>
-<codeline lineno="381" refid="robocluedo_8md_8txt_1a33068e38fda059166af20232a02d2b55" refkind="member"><highlight class="normal">;;<sp/>===<sp/>NAVIGATION<sp/>SYSTEM<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="381" refid="robocluedo_8md_8txt_1ad918d72d2eac09be60a9fc8847fe31a2" refkind="member"><highlight class="normal">;;<sp/>===<sp/>NAVIGATION<sp/>SYSTEM<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="382"><highlight class="normal"></highlight></codeline>
 <codeline lineno="383"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>move-to</highlight></codeline>
 <codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?from<sp/>?to<sp/>-<sp/><ref refid="robocluedo_8md_8txt_1a7aba1e24c16aba42dcb6663e79329adb" kindref="member">waypoint</ref><sp/>)</highlight></codeline>
@@ -1018,7 +1018,7 @@
 <codeline lineno="444"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="445"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="446"><highlight class="normal"></highlight></codeline>
-<codeline lineno="447" refid="robocluedo_8md_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" refkind="member"><highlight class="normal">;;<sp/>===<sp/>MANIPULATOR<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="447" refid="robocluedo_8md_8txt_1a33068e38fda059166af20232a02d2b55" refkind="member"><highlight class="normal">;;<sp/>===<sp/>MANIPULATOR<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="448"><highlight class="normal"></highlight></codeline>
 <codeline lineno="449"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/><ref refid="robocluedo_8md_8txt_1ae4ac016f329ef9b54367ba9850e5b63e" kindref="member">manipulator</ref>-near-marker</highlight></codeline>
 <codeline lineno="450"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?wp<sp/>-<sp/><ref refid="robocluedo_8md_8txt_1a7aba1e24c16aba42dcb6663e79329adb" kindref="member">waypoint</ref><sp/>)</highlight></codeline>
@@ -1082,7 +1082,7 @@
 <codeline lineno="508"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="509"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="510"><highlight class="normal"></highlight></codeline>
-<codeline lineno="511" refid="robocluedo_8md_8txt_1a80ad40e6270e9de09a3b433c64722d87" refkind="member"><highlight class="normal">;;<sp/>===<sp/>HINT<sp/>ACQUISITION<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="511" refid="robocluedo_8md_8txt_1a5cfbf631ddc94882ec4e9aefed44a536" refkind="member"><highlight class="normal">;;<sp/>===<sp/>HINT<sp/>ACQUISITION<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"></highlight></codeline>
 <codeline lineno="513"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>signal-info-acquisition</highlight></codeline>
 <codeline lineno="514"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?wp<sp/>-<sp/><ref refid="robocluedo_8md_8txt_1a7aba1e24c16aba42dcb6663e79329adb" kindref="member">waypoint</ref><sp/>)</highlight></codeline>
@@ -1171,7 +1171,7 @@
 <codeline lineno="597"><highlight class="normal"><sp/><sp/><sp/><sp/>)</highlight></codeline>
 <codeline lineno="598"><highlight class="normal">)</highlight></codeline>
 <codeline lineno="599"><highlight class="normal"></highlight></codeline>
-<codeline lineno="600" refid="robocluedo_8md_8txt_1a5502557ae70bf9183ef91e013c7f1441" refkind="member"><highlight class="normal">;;<sp/>===<sp/>MYSTERY<sp/>SOLUTION<sp/>===<sp/>;;</highlight></codeline>
+<codeline lineno="600" refid="robocluedo_8md_8txt_1a80ad40e6270e9de09a3b433c64722d87" refkind="member"><highlight class="normal">;;<sp/>===<sp/>MYSTERY<sp/>SOLUTION<sp/>===<sp/>;;</highlight></codeline>
 <codeline lineno="601"><highlight class="normal"></highlight></codeline>
 <codeline lineno="602"><highlight class="normal">(:durative-<ref refid="erl2-oracle-user-manual_8md_8txt_1ad19e937b95338aa53d1657ddbbd1f86a" kindref="member">action</ref><sp/>bright-bulb-over-head</highlight></codeline>
 <codeline lineno="603"><highlight class="normal"><sp/><sp/><sp/><sp/>:parameters<sp/>(<sp/>?wp<sp/>-<sp/><ref refid="robocluedo_8md_8txt_1a7aba1e24c16aba42dcb6663e79329adb" kindref="member">waypoint</ref><sp/>)</highlight></codeline>
@@ -1355,7 +1355,7 @@
 <codeline lineno="781" refid="robocluedo_8md_8txt_1ac282053202160b7f9e5a6b4192b296d2" refkind="member"><highlight class="normal"><ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>(3.000<sp/>|<sp/>1.000)<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>(2.000<sp/>|<sp/>20.019)<ref refid="erl2-oracle-user-manual_8md_8txt_1a9e32a79e1fd44a43bcbc5ab3cf66b552" kindref="member">b</ref><sp/>(1.000<sp/>|<sp/>21.020);;;;<sp/>Solution<sp/><ref refid="robocluedo_8md_8txt_1ac282053202160b7f9e5a6b4192b296d2" kindref="member">Found</ref></highlight></codeline>
 <codeline lineno="782"><highlight class="normal">;<sp/>States<sp/><ref refid="robocluedo_8md_8txt_1a89b71aee8518d9fd4f51bcc05cb6ef55" kindref="member">evaluated</ref>:<sp/>1109</highlight></codeline>
 <codeline lineno="783" refid="robocluedo_8md_8txt_1a89b71aee8518d9fd4f51bcc05cb6ef55" refkind="member"><highlight class="normal">;<sp/>Cost:<sp/>0.000</highlight></codeline>
-<codeline lineno="784" refid="robocluedo_8md_8txt_1a50fe554b33989255593c1a948b7e8484" refkind="member"><highlight class="normal">;<sp/>Time<sp/>0.63</highlight></codeline>
+<codeline lineno="784" refid="robocluedo_8md_8txt_1aabe3d657e0dd0dacc4b38dfe8a08b2a1" refkind="member"><highlight class="normal">;<sp/>Time<sp/>0.63</highlight></codeline>
 <codeline lineno="785"><highlight class="normal">0.000:<sp/>(init-planning-<ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref>)<sp/><sp/>[1.000]</highlight></codeline>
 <codeline lineno="786"><highlight class="normal">1.001:<sp/>(move-to<sp/>center<sp/>w1)<sp/><sp/>[1.000]</highlight></codeline>
 <codeline lineno="787"><highlight class="normal">2.002:<sp/>(signal-info-acquisition<sp/>w1)<sp/><sp/>[1.000]</highlight></codeline>

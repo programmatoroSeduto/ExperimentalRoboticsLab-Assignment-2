@@ -1,6 +1,10 @@
 
 # RoboCLuedo -- Development Log
 
+```{toctree}
+./dev-log.md
+```
+
 [plantUML online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)
 
 template:
@@ -647,7 +651,7 @@ sperando che il nodo  appena implementato funzioni a dovere senza sorprese, andi
 
 ---
 
-## 10/08/2021 -- ancora su rosplan
+## 10/08/2021 -- rosplan pipeline manager -- planning e replanning
 
 torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l'istanza del problema. 
 
@@ -861,7 +865,7 @@ meglio iniziare a strutturare le implementazioni delle azioni PDDL:
 
 ---
 
-## 11/08/2022 -- ancora su ROSPlan
+## 11/08/2022 -- implementazione rosplan action -- navigation system -- improving the robot model
 
 anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto. 
 
@@ -1085,6 +1089,18 @@ rosrun robocluedo_movement_controller bug_m.py
 	- *anche questa funziona!* e allora sai che c'è? gli tolgo la castor adesso
 	- già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)
 - come temevo ho fatto casino: devo rifare il pacchetto moveit...
+	- (dopo un'ora di bestemmie piuttosto forti...)
+- **COMMIT** : "working on robot model (improving the stability of the robot)"
+
+---
+
+## 12/08/2022 -- ancora sul movement controller
+
+- anzitutto, i lavori noiosi:
+	- aggiornamento delle immagini nella doumentazione
+	- aggiornamento dei file yaml salvati nella documentazione del robot
+	- piccola modifica ai launch file del robot per supportare anche i percorsi dei world files
+- **COMMIT** : "working on robot model (gazebo fix, documentation)"
 
 
 
@@ -1099,7 +1115,7 @@ TODO
 
 - modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione
 - implementazione precisa dell'azione move-to
-- nel package moveit, anzichè trovare l'URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world
+- implementazione del launch di un particolare file di configurazione per rviz
 
 - in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c'è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi
 - aggiungere le pagine di documentazione del codice di Sphinx!

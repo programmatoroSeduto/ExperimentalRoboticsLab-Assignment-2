@@ -985,7 +985,7 @@
 </xrefdescription></xrefsect></para>
 <para><xrefsect id="todo_1_todo000004"><xreftitle>Todo</xreftitle><xrefdescription><para>the interface actually can load the ontology only from file. It could be a good idea to have tools also for loading it from another source. </para>
 </xrefdescription></xrefsect></para>
-<para><simplesect kind="see"><para><ref refid="class_armor_cluedo" kindref="compound">ArmorCluedo</ref> an applciation of <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> interface </para>
+<para><simplesect kind="see"><para><ref refid="class_armor_cluedo" kindref="compound">ArmorCluedo</ref> an applciation of <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> interface </para>
 </simplesect>
 <simplesect kind="see"><para><ulink url="https://github.com/EmaroLab/armor/blob/master/README.MD">the official aRMOR documentation</ulink> </para>
 </simplesect>

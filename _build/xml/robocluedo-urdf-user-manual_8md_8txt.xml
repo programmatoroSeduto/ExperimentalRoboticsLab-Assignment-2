@@ -52,7 +52,7 @@
         <location file="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" line="19" column="36" bodyfile="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" bodystart="19" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="robocluedo-urdf-user-manual_8md_8txt_1a1ab57726202f94a2b01946ca36c9a243" prot="public" static="no" mutable="no">
-        <type>everything <ref refid="new-robocluedo_8md_8txt_1a6bfcb0dd409077d5e73360aca5679140" kindref="member">inside</ref> <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> <ref refid="plant-uml-reference_8md_8txt_1a7c8a5b255f267eb876c077b45f50a013" kindref="member">file</ref></type>
+        <type>everything <ref refid="new-robocluedo_8md_8txt_1a6bfcb0dd409077d5e73360aca5679140" kindref="member">inside</ref> <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> <ref refid="plant-uml-reference_8md_8txt_1a7c8a5b255f267eb876c077b45f50a013" kindref="member">file</ref></type>
         <definition>everything inside this file robocluedo_sensing</definition>
         <argsstring></argsstring>
         <name>robocluedo_sensing</name>
@@ -65,7 +65,7 @@
         <location file="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" line="20" column="2" bodyfile="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" bodystart="21" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="robocluedo-urdf-user-manual_8md_8txt_1abaae948d21665fa739f554014a2b4a28" prot="public" static="no" mutable="no">
-        <type>everything <ref refid="new-robocluedo_8md_8txt_1a6bfcb0dd409077d5e73360aca5679140" kindref="member">inside</ref> <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> <ref refid="plant-uml-reference_8md_8txt_1a7c8a5b255f267eb876c077b45f50a013" kindref="member">file</ref> without <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> sensing part</type>
+        <type>everything <ref refid="new-robocluedo_8md_8txt_1a6bfcb0dd409077d5e73360aca5679140" kindref="member">inside</ref> <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> <ref refid="plant-uml-reference_8md_8txt_1a7c8a5b255f267eb876c077b45f50a013" kindref="member">file</ref> without <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> sensing part</type>
         <definition>everything inside this file without the sensing part robocluedo_transmission</definition>
         <argsstring></argsstring>
         <name>robocluedo_transmission</name>
@@ -155,6 +155,19 @@
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" line="69" column="1" bodyfile="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" bodystart="87" bodyend="-1"/>
       </memberdef>
+      <memberdef kind="variable" id="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" prot="public" static="no" mutable="no">
+        <type><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> URDF and its schematic will be located into <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="pddl-and-rosplan_8md_8txt_1af62be03a2aa29d629988b5adbae5c36f" kindref="member">folder</ref> <ref refid="robocluedo-urdf-user-manual_8md_8txt_1aa0d7be0426ddcdc9e7cc22747d861eb3" kindref="member">model</ref> with names robocluedo_urdf urdf <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> URDF and robocluedo_urdf pdf <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> schematic <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> output should be like <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> use <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a7d1bfe3625e53613487d868f05694676" kindref="member">setup</ref> assistant to generate <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> package Inside <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> robocluedo_robot bash roslaunch moveit_setup_assistant <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a7d1bfe3625e53613487d868f05694676" kindref="member">setup</ref> assistant launch <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> code generated by <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a7d1bfe3625e53613487d868f05694676" kindref="member">setup</ref> assistant won t work at <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> beginning Here are <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> we need to comment line In config ros_controllers let s modify <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> gain of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> proportional controllers In config joint_limits <ref refid="robocluedo-urdf-user-manual_8md_8txt_1af252bf7363a2266f86c80aa289fcb39c" kindref="member">yaml</ref> let s set to <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> scaling factor <ref refid="robocluedo-urdf-user-manual_8md_8txt_1af252bf7363a2266f86c80aa289fcb39c" kindref="member">yaml</ref> similar to</type>
+        <definition>the URDF and its schematic will be located into the folder model with names robocluedo_urdf urdf for the URDF and robocluedo_urdf pdf for the schematic the output should be like the use the setup assistant to generate the package Inside the robocluedo_robot bash roslaunch moveit_setup_assistant setup assistant launch the code generated by the setup assistant won t work at the beginning Here are the we need to comment line In config ros_controllers let s modify the gain of the proportional controllers In config joint_limits yaml let s set to the scaling factor yaml similar to this</definition>
+        <argsstring></argsstring>
+        <name>this</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" line="216" column="13" bodyfile="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt" bodystart="216" bodyend="-1"/>
+      </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
@@ -231,7 +244,7 @@
 <codeline lineno="68"><highlight class="stringliteral">#<sp/>Simulation<sp/>settings<sp/>for<sp/>using<sp/>moveit_sim_controllers</highlight></codeline>
 <codeline lineno="69"><highlight class="stringliteral">moveit_sim_hw_interface:</highlight></codeline>
 <codeline lineno="70"><highlight class="stringliteral"><sp/><sp/>joint_model_group:<sp/>arm_group</highlight></codeline>
-<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/>joint_model_group_pose:<sp/>arm_home</highlight></codeline>
+<codeline lineno="71"><highlight class="stringliteral"><sp/><sp/>joint_model_group_pose:<sp/>extended</highlight></codeline>
 <codeline lineno="72"><highlight class="stringliteral">#<sp/>Settings<sp/>for<sp/>ros_control_boilerplate<sp/>control<sp/>loop</highlight></codeline>
 <codeline lineno="73"><highlight class="stringliteral">generic_hw_control_loop:</highlight></codeline>
 <codeline lineno="74"><highlight class="stringliteral"><sp/><sp/>loop_hz:<sp/>300</highlight></codeline>
@@ -243,8 +256,8 @@
 <codeline lineno="80"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
 <codeline lineno="81"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
 <codeline lineno="82"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
-<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>left_grip_joint</highlight></codeline>
-<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>right_grip_joint</highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>joint_a_left_wheel</highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>joint_a_right_wheel</highlight></codeline>
 <codeline lineno="85"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>joint_left_wheel</highlight></codeline>
 <codeline lineno="86"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>joint_right_wheel</highlight></codeline>
 <codeline lineno="87" refid="robocluedo-urdf-user-manual_8md_8txt_1a9f694c7f3418f80b23954e051f5fea70" refkind="member"><highlight class="stringliteral"><sp/><sp/>sim_control_mode:<sp/>1<sp/><sp/>#<sp/>0:<sp/>position,<sp/>1:<sp/>velocity</highlight></codeline>
@@ -263,102 +276,153 @@
 <codeline lineno="100"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
 <codeline lineno="101"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
 <codeline lineno="102"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
-<codeline lineno="103"><highlight class="stringliteral"><sp/><sp/>-<sp/>name:<sp/>ee_group_controller</highlight></codeline>
-<codeline lineno="104"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>action_ns:<sp/>follow_joint_trajectory</highlight></codeline>
-<codeline lineno="105"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>default:<sp/>True</highlight></codeline>
-<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>type:<sp/>FollowJointTrajectory</highlight></codeline>
-<codeline lineno="107"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>joints:</highlight></codeline>
-<codeline lineno="108"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
-<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>left_grip_joint</highlight></codeline>
-<codeline lineno="110"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>right_grip_joint</highlight></codeline>
-<codeline lineno="111"><highlight class="stringliteral">arm_group_controller:</highlight></codeline>
-<codeline lineno="112"><highlight class="stringliteral"><sp/><sp/>type:<sp/>effort_controllers/JointTrajectoryController</highlight></codeline>
-<codeline lineno="113"><highlight class="stringliteral"><sp/><sp/>joints:</highlight></codeline>
-<codeline lineno="114"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_01</highlight></codeline>
-<codeline lineno="115"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
-<codeline lineno="116"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
-<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
-<codeline lineno="118"><highlight class="stringliteral"><sp/><sp/>gains:</highlight></codeline>
-<codeline lineno="119"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_01:</highlight></codeline>
-<codeline lineno="120"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
-<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
-<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
-<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
-<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_02:</highlight></codeline>
-<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
-<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
-<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
-<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
-<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_03:</highlight></codeline>
-<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
-<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
-<codeline lineno="132"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
-<codeline lineno="133"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
-<codeline lineno="134"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_04:</highlight></codeline>
-<codeline lineno="135"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
-<codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
-<codeline lineno="137"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
-<codeline lineno="138"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
-<codeline lineno="139"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="140"><highlight class="stringliteral">```</highlight></codeline>
-<codeline lineno="141"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="142"><highlight class="stringliteral">###<sp/>file<sp/>joint_limits.yaml</highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral">arm_group_controller:</highlight></codeline>
+<codeline lineno="104"><highlight class="stringliteral"><sp/><sp/>type:<sp/>effort_controllers/JointTrajectoryController</highlight></codeline>
+<codeline lineno="105"><highlight class="stringliteral"><sp/><sp/>joints:</highlight></codeline>
+<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_01</highlight></codeline>
+<codeline lineno="107"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
+<codeline lineno="108"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
+<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline lineno="110"><highlight class="stringliteral"><sp/><sp/>gains:</highlight></codeline>
+<codeline lineno="111"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_01:</highlight></codeline>
+<codeline lineno="112"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline lineno="116"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_02:</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline lineno="119"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline lineno="120"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_03:</highlight></codeline>
+<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>arm_joint_04:</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="132"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="133"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="134"><highlight class="stringliteral">###<sp/>file<sp/>joint_limits.yaml</highlight></codeline>
+<codeline lineno="135"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="136"><highlight class="stringliteral">```yaml</highlight></codeline>
+<codeline lineno="137"><highlight class="stringliteral">#<sp/>joint_limits.yaml<sp/>allows<sp/>the<sp/>dynamics<sp/>properties<sp/>specified<sp/>in<sp/>the<sp/>URDF<sp/>to<sp/>be<sp/>overwritten<sp/>or<sp/>augmented<sp/>as<sp/>needed</highlight></codeline>
+<codeline lineno="138"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="139"><highlight class="stringliteral">#<sp/>For<sp/>beginners,<sp/>we<sp/>downscale<sp/>velocity<sp/>and<sp/>acceleration<sp/>limits.</highlight></codeline>
+<codeline lineno="140"><highlight class="stringliteral">#<sp/>You<sp/>can<sp/>always<sp/>specify<sp/>higher<sp/>scaling<sp/>factors<sp/>(&lt;=<sp/>1.0)<sp/>in<sp/>your<sp/>motion<sp/>requests.<sp/><sp/>#<sp/>Increase<sp/>the<sp/>values<sp/>below<sp/>to<sp/>1.0<sp/>to<sp/>always<sp/>move<sp/>at<sp/>maximum<sp/>speed.</highlight></codeline>
+<codeline lineno="141"><highlight class="stringliteral">default_velocity_scaling_factor:<sp/>1</highlight></codeline>
+<codeline lineno="142"><highlight class="stringliteral">default_acceleration_scaling_factor:<sp/>1</highlight></codeline>
 <codeline lineno="143"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="144"><highlight class="stringliteral">```yaml</highlight></codeline>
-<codeline lineno="145"><highlight class="stringliteral">#<sp/>joint_limits.yaml<sp/>allows<sp/>the<sp/>dynamics<sp/>properties<sp/>specified<sp/>in<sp/>the<sp/>URDF<sp/>to<sp/>be<sp/>overwritten<sp/>or<sp/>augmented<sp/>as<sp/>needed</highlight></codeline>
-<codeline lineno="146"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="147"><highlight class="stringliteral">#<sp/>For<sp/>beginners,<sp/>we<sp/>downscale<sp/>velocity<sp/>and<sp/>acceleration<sp/>limits.</highlight></codeline>
-<codeline lineno="148"><highlight class="stringliteral">#<sp/>You<sp/>can<sp/>always<sp/>specify<sp/>higher<sp/>scaling<sp/>factors<sp/>(&lt;=<sp/>1.0)<sp/>in<sp/>your<sp/>motion<sp/>requests.<sp/><sp/>#<sp/>Increase<sp/>the<sp/>values<sp/>below<sp/>to<sp/>1.0<sp/>to<sp/>always<sp/>move<sp/>at<sp/>maximum<sp/>speed.</highlight></codeline>
-<codeline lineno="149"><highlight class="stringliteral">default_velocity_scaling_factor:<sp/>1</highlight></codeline>
-<codeline lineno="150"><highlight class="stringliteral">default_acceleration_scaling_factor:<sp/>1</highlight></codeline>
-<codeline lineno="151"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="152"><highlight class="stringliteral">#<sp/>Specific<sp/>joint<sp/>properties<sp/>can<sp/>be<sp/>changed<sp/>with<sp/>the<sp/>keys<sp/>[max_position,<sp/>min_position,<sp/>max_velocity,<sp/>max_acceleration]</highlight></codeline>
-<codeline lineno="153"><highlight class="stringliteral">#<sp/>Joint<sp/>limits<sp/>can<sp/>be<sp/>turned<sp/>off<sp/>with<sp/>[has_velocity_limits,<sp/>has_acceleration_limits]</highlight></codeline>
-<codeline lineno="154"><highlight class="stringliteral">joint_limits:</highlight></codeline>
-<codeline lineno="155"><highlight class="stringliteral"><sp/><sp/>arm_joint_01:</highlight></codeline>
-<codeline lineno="156"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="157"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
-<codeline lineno="158"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="159"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="160"><highlight class="stringliteral"><sp/><sp/>arm_joint_02:</highlight></codeline>
-<codeline lineno="161"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="162"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
-<codeline lineno="163"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="164"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="165"><highlight class="stringliteral"><sp/><sp/>arm_joint_03:</highlight></codeline>
-<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="167"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
-<codeline lineno="168"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="169"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="170"><highlight class="stringliteral"><sp/><sp/>arm_joint_04:</highlight></codeline>
-<codeline lineno="171"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="172"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.5</highlight></codeline>
-<codeline lineno="173"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="174"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="175"><highlight class="stringliteral"><sp/><sp/>left_grip_joint:</highlight></codeline>
-<codeline lineno="176"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="177"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>6.5</highlight></codeline>
-<codeline lineno="178"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="179"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="180"><highlight class="stringliteral"><sp/><sp/>right_grip_joint:</highlight></codeline>
-<codeline lineno="181"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
-<codeline lineno="182"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>6.5</highlight></codeline>
-<codeline lineno="183"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
-<codeline lineno="184"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
-<codeline lineno="185"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="186"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="144"><highlight class="stringliteral">#<sp/>Specific<sp/>joint<sp/>properties<sp/>can<sp/>be<sp/>changed<sp/>with<sp/>the<sp/>keys<sp/>[max_position,<sp/>min_position,<sp/>max_velocity,<sp/>max_acceleration]</highlight></codeline>
+<codeline lineno="145"><highlight class="stringliteral">#<sp/>Joint<sp/>limits<sp/>can<sp/>be<sp/>turned<sp/>off<sp/>with<sp/>[has_velocity_limits,<sp/>has_acceleration_limits]</highlight></codeline>
+<codeline lineno="146"><highlight class="stringliteral">joint_limits:</highlight></codeline>
+<codeline lineno="147"><highlight class="stringliteral"><sp/><sp/>arm_joint_01:</highlight></codeline>
+<codeline lineno="148"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline lineno="149"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline lineno="150"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline lineno="151"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline lineno="152"><highlight class="stringliteral"><sp/><sp/>arm_joint_02:</highlight></codeline>
+<codeline lineno="153"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline lineno="154"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline lineno="155"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline lineno="156"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline lineno="157"><highlight class="stringliteral"><sp/><sp/>arm_joint_03:</highlight></codeline>
+<codeline lineno="158"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline lineno="159"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.2</highlight></codeline>
+<codeline lineno="160"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline lineno="161"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline lineno="162"><highlight class="stringliteral"><sp/><sp/>arm_joint_04:</highlight></codeline>
+<codeline lineno="163"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_velocity_limits:<sp/>true</highlight></codeline>
+<codeline lineno="164"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_velocity:<sp/>0.5</highlight></codeline>
+<codeline lineno="165"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>has_acceleration_limits:<sp/>false</highlight></codeline>
+<codeline lineno="166"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
+<codeline lineno="167"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="168"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="169"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="170"><highlight class="stringliteral">###<sp/>world<sp/>files</highlight></codeline>
+<codeline lineno="171"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="172"><highlight class="stringliteral">apply<sp/>this<sp/>code<sp/>into<sp/>the<sp/>file<sp/>**gazebo.launch**<sp/>:<sp/></highlight></codeline>
+<codeline lineno="173"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="174"><highlight class="stringliteral">```xml</highlight></codeline>
+<codeline lineno="175"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="176"><highlight class="stringliteral">&lt;!--<sp/>world<sp/>file<sp/>--&gt;</highlight></codeline>
+<codeline lineno="177"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_name&quot;<sp/>default=&quot;square_room.world&quot;/&gt;</highlight></codeline>
+<codeline lineno="178"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_path&quot;<sp/>default=&quot;$(find<sp/>worlds)&quot;/&gt;</highlight></codeline>
+<codeline lineno="179"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>default=&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="180"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="181"><highlight class="stringliteral">&lt;!--<sp/>startup<sp/>simulated<sp/>world<sp/>--&gt;</highlight></codeline>
+<codeline lineno="182"><highlight class="stringliteral">&lt;include<sp/>file=&quot;$(find<sp/>gazebo_ros)/launch/empty_world.launch&quot;&gt;</highlight></codeline>
+<codeline lineno="183"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>value=&quot;$(arg<sp/>paused)&quot;/&gt;</highlight></codeline>
+<codeline lineno="184"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;gui&quot;<sp/>value=&quot;$(arg<sp/>gazebo_gui)&quot;/&gt;</highlight></codeline>
+<codeline lineno="185"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;world_name&quot;<sp/>value=&quot;$(arg<sp/>world_file_path)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="186"><highlight class="stringliteral">&lt;/include&gt;</highlight></codeline>
 <codeline lineno="187"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="188"><highlight class="stringliteral">##<sp/>HOW<sp/>TO<sp/>test<sp/>the<sp/>model<sp/>with<sp/>Gazebo</highlight></codeline>
+<codeline lineno="188"><highlight class="stringliteral">```</highlight></codeline>
 <codeline lineno="189"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="190"><highlight class="stringliteral">launch<sp/>this:</highlight></codeline>
+<codeline lineno="190"><highlight class="stringliteral">and<sp/>apply<sp/>this<sp/>fix<sp/>in<sp/>the<sp/>**demo_gazebo.launch**<sp/>:<sp/></highlight></codeline>
 <codeline lineno="191"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="192"><highlight class="stringliteral">```bash</highlight></codeline>
-<codeline lineno="193"><highlight class="stringliteral">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
-<codeline lineno="194"><highlight class="stringliteral">```</highlight></codeline>
-<codeline lineno="195"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="196"><highlight class="stringliteral">it<sp/>should<sp/>appear<sp/>the<sp/>robot,<sp/>similar<sp/>to<sp/>this:</highlight></codeline>
-<codeline lineno="197"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="198"><highlight class="stringliteral">![robot](robocluedo_robot.png)</highlight></codeline>
+<codeline lineno="192"><highlight class="stringliteral">```xml</highlight></codeline>
+<codeline lineno="193"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_path&quot;<sp/>default=&quot;$(find<sp/>worlds)&quot;/&gt;</highlight></codeline>
+<codeline lineno="194"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_name&quot;<sp/>default=&quot;square_room.world&quot;/&gt;</highlight></codeline>
+<codeline lineno="195"><highlight class="stringliteral">&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>default=&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="196"><highlight class="stringliteral"><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="stringliteral">&lt;!--<sp/>launch<sp/>the<sp/>gazebo<sp/>simulator<sp/>and<sp/>spawn<sp/>the<sp/>robot<sp/>--&gt;</highlight></codeline>
+<codeline lineno="198"><highlight class="stringliteral">&lt;include<sp/>file=&quot;$(find<sp/>robocluedo_robot)/launch/gazebo.launch&quot;<sp/>&gt;</highlight></codeline>
+<codeline lineno="199"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>value=&quot;$(arg<sp/>paused)&quot;/&gt;</highlight></codeline>
+<codeline lineno="200"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;gazebo_gui&quot;<sp/>value=&quot;$(arg<sp/>gazebo_gui)&quot;/&gt;</highlight></codeline>
+<codeline lineno="201"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;urdf_path&quot;<sp/>value=&quot;$(arg<sp/>urdf_path)&quot;/&gt;</highlight></codeline>
+<codeline lineno="202"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;world_name&quot;<sp/>value=&quot;$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="203"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;world_path&quot;<sp/>value=&quot;$(arg<sp/>world_path)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="204"><highlight class="stringliteral"><sp/><sp/>&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>value=&quot;$(arg<sp/>world_file_path)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline lineno="205"><highlight class="stringliteral">&lt;/include&gt;</highlight></codeline>
+<codeline lineno="206"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="207"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="208"><highlight class="stringliteral">##<sp/>HOW<sp/>TO<sp/>test<sp/>the<sp/>model<sp/>with<sp/>Gazebo</highlight></codeline>
+<codeline lineno="209"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="210"><highlight class="stringliteral">launch<sp/>this:</highlight></codeline>
+<codeline lineno="211"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="212"><highlight class="stringliteral">```bash</highlight></codeline>
+<codeline lineno="213"><highlight class="stringliteral">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
+<codeline lineno="214"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="215"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="216" refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" refkind="member"><highlight class="stringliteral">it<sp/>should<sp/>appear<sp/>the<sp/>robot,<sp/>similar<sp/>to<sp/>this:</highlight></codeline>
+<codeline lineno="217"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="218"><highlight class="stringliteral">![robot](robot_gazebo.png)</highlight></codeline>
+<codeline lineno="219"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="220"><highlight class="stringliteral">![robot](robot_rviz.png)</highlight></codeline>
+<codeline lineno="221"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="222"><highlight class="stringliteral">###<sp/>HOW<sp/>TO<sp/>Launch<sp/>the<sp/>simulation<sp/>with<sp/>other<sp/>worlds<sp/>file</highlight></codeline>
+<codeline lineno="223"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="224"><highlight class="stringliteral">the<sp/>package<sp/>takes<sp/>the<sp/>world<sp/>files<sp/>from<sp/>the<sp/>package<sp/>*worlds*<sp/>located<sp/>into<sp/>the<sp/>*robocluedo_depedencied*<sp/>folder.<sp/>The<sp/>default<sp/>world<sp/>file<sp/>is<sp/>*square_room.world*.<sp/></highlight></codeline>
+<codeline lineno="225"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="226"><highlight class="stringliteral">here&apos;</highlight><highlight class="normal">s<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>syntax<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>command:</highlight></codeline>
+<codeline lineno="227"><highlight class="normal"></highlight></codeline>
+<codeline lineno="228"><highlight class="normal">```bash</highlight></codeline>
+<codeline lineno="229"><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>world_name:=indoor.world</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="231"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"></highlight></codeline>
+<codeline lineno="233"><highlight class="normal">###<sp/>HOW<sp/>TO<sp/>launch<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>world<sp/>*outside<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>package<sp/>worlds*</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal">in<sp/>case<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>world<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a87d4206cf656099b1bad5d7d4b9b802f" kindref="member">file</ref><sp/>is<sp/>not<sp/>included<sp/>in<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>*worlds*<sp/>package,<sp/>you<sp/>have<sp/>two<sp/>possibilities.</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="237"><highlight class="normal"><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>first<sp/>one<sp/>is<sp/>to<sp/>specify<sp/>both<sp/>path<sp/>and<sp/>name<sp/>in<sp/><ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref><sp/>way:</highlight></codeline>
+<codeline lineno="238"><highlight class="normal"></highlight></codeline>
+<codeline lineno="239"><highlight class="normal">```bash</highlight></codeline>
+<codeline lineno="240"><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>world_name:=indoor.world<sp/>world_file:=/root/ros_ws/src/erl2-new/robocluedo_dependencies/worlds</highlight></codeline>
+<codeline lineno="241"><highlight class="normal"></highlight></codeline>
+<codeline lineno="242"><highlight class="normal">```</highlight></codeline>
+<codeline lineno="243"><highlight class="normal"></highlight></codeline>
+<codeline lineno="244"><highlight class="normal"><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>second<sp/>one<sp/>is<sp/>to<sp/>directly<sp/>specify<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>path<sp/>with<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>variable<sp/>`world_file_path`:</highlight></codeline>
+<codeline lineno="245"><highlight class="normal"></highlight></codeline>
+<codeline lineno="246"><highlight class="normal">```bash</highlight></codeline>
+<codeline lineno="247"><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>world_file_path:=/root/ros_ws/src/erl2-new/robocluedo_dependencies/worlds/indoor.world</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"></highlight></codeline>
+<codeline lineno="249"><highlight class="normal">```</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.md.txt"/>
   </compounddef>

@@ -6,6 +6,8 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">./dev-log.md</highlight></codeline>
+</programlisting></para>
 <para><ulink url="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</ulink></para>
 <para>template:</para>
 <para><programlisting><codeline><highlight class="normal">##<sp/>data</highlight></codeline>
@@ -546,7 +548,7 @@
 <para><hruler/>
 </para>
 <sect2 id="md__docs_dev-log_1autotoc_md41">
-<title>10/08/2021 – ancora su rosplan</title>
+<title>10/08/2021 – rosplan pipeline manager – planning e replanning</title>
 <para>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l&apos;istanza del problema.</para>
 <para><itemizedlist>
 <listitem><para><emphasis>soluzione del problema</emphasis> usando il planner<itemizedlist>
@@ -766,7 +768,7 @@
 <para><hruler/>
 </para>
 <sect2 id="md__docs_dev-log_1autotoc_md54">
-<title>11/08/2022 – ancora su ROSPlan</title>
+<title>11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</title>
 <para>anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto.</para>
 <para><itemizedlist>
 <listitem><para>un test più approfondito:</para>
@@ -1036,7 +1038,26 @@
 </listitem><listitem><para>già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para>come temevo ho fatto casino: devo rifare il pacchetto moveit...</para>
+</listitem><listitem><para>come temevo ho fatto casino: devo rifare il pacchetto moveit...<itemizedlist>
+<listitem><para>(dopo un&apos;ora di bestemmie piuttosto forti...)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (improving the stability of the robot)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md59">
+<title>12/08/2022 – ancora sul movement controller</title>
+<para><itemizedlist>
+<listitem><para>anzitutto, i lavori noiosi:<itemizedlist>
+<listitem><para>aggiornamento delle immagini nella doumentazione</para>
+</listitem><listitem><para>aggiornamento dei file yaml salvati nella documentazione del robot</para>
+</listitem><listitem><para>piccola modifica ai launch file del robot per supportare anche i percorsi dei world files</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model (gazebo fix, documentation)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>
@@ -1046,7 +1067,7 @@
 </listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
 </listitem><listitem><para>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</para>
 </listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
-</listitem><listitem><para>nel package moveit, anzichè trovare l&apos;URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world</para>
+</listitem><listitem><para>implementazione del launch di un particolare file di configurazione per rviz</para>
 </listitem><listitem><para>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c&apos;è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</para>
 </listitem><listitem><para>aggiungere le pagine di documentazione del codice di Sphinx!</para>
 </listitem><listitem><para>aggiornare i template delle actions in questo file</para>

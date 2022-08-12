@@ -74,7 +74,9 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="catkin-notes.html">Notes about Catkin</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">RoboCLuedo – Development Log</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RoboCLuedo – Development Log</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
 <li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rest-directives.html">ReStructured Directives – practical documentation</a></li>
@@ -117,6 +119,18 @@
              
   <div class="section" id="robocluedo-development-log">
 <h1>RoboCLuedo – Development Log<a class="headerlink" href="#robocluedo-development-log" title="Permalink to this heading"></a></h1>
+<div class="toctree-wrapper compound">
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RoboCLuedo – Development Log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup-della-documentazione-e-project-refactoring">08/08/2022 – setup della documentazione e project refactoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modello-pddl-e-rosplan-package">09/08/2022 – modello PDDL e ROSPlan package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
+</ul>
+</li>
+</ul>
+</div>
 <p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</a></p>
 <p>template:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>## data
@@ -856,8 +870,8 @@ rosservice call /rosplan_problem_interface/problem_generation_server
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="ancora-su-rosplan">
-<h2>10/08/2021 – ancora su rosplan<a class="headerlink" href="#ancora-su-rosplan" title="Permalink to this heading"></a></h2>
+<div class="section" id="rosplan-pipeline-manager-planning-e-replanning">
+<h2>10/08/2021 – rosplan pipeline manager – planning e replanning<a class="headerlink" href="#rosplan-pipeline-manager-planning-e-replanning" title="Permalink to this heading"></a></h2>
 <p>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l’istanza del problema.</p>
 <ul>
 <li><p><em>soluzione del problema</em> usando il planner</p>
@@ -1125,8 +1139,8 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="id1">
-<h2>11/08/2022 – ancora su ROSPlan<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
+<div class="section" id="implementazione-rosplan-action-navigation-system-improving-the-robot-model">
+<h2>11/08/2022 – implementazione rosplan action – navigation system – improving the robot model<a class="headerlink" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model" title="Permalink to this heading"></a></h2>
 <p>anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto.</p>
 <ul class="simple">
 <li><p>un test più approfondito:</p></li>
@@ -1423,7 +1437,26 @@ rosrun robocluedo_movement_controller bug_m.py
 <li><p>già che siamo in vena di aggiornamenti, voglio provare a mettere a posto il gripper (o eliminarlo direttamente?)</p></li>
 </ul>
 </li>
-<li><p>come temevo ho fatto casino: devo rifare il pacchetto moveit…</p></li>
+<li><p>come temevo ho fatto casino: devo rifare il pacchetto moveit…</p>
+<ul>
+<li><p>(dopo un’ora di bestemmie piuttosto forti…)</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on robot model (improving the stability of the robot)”</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="ancora-sul-movement-controller">
+<h2>12/08/2022 – ancora sul movement controller<a class="headerlink" href="#ancora-sul-movement-controller" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>anzitutto, i lavori noiosi:</p>
+<ul>
+<li><p>aggiornamento delle immagini nella doumentazione</p></li>
+<li><p>aggiornamento dei file yaml salvati nella documentazione del robot</p></li>
+<li><p>piccola modifica ai launch file del robot per supportare anche i percorsi dei world files</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on robot model (gazebo fix, documentation)”</p></li>
 </ul>
 <p>TODO</p>
 <ul class="simple">
@@ -1432,7 +1465,7 @@ rosrun robocluedo_movement_controller bug_m.py
 <li><p><em>module testing</em> su kb_tools</p></li>
 <li><p>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
-<li><p>nel package moveit, anzichè trovare l’URDF col path assoluto, converrebbe usare lo stesso trucchetto usato per i file world</p></li>
+<li><p>implementazione del launch di un particolare file di configurazione per rviz</p></li>
 <li><p>in tutti gli UML dei componenti delle implementazioni delle azioni PDDL c’è una parte comune di feedback: scrivila una volta per tutte e copia-incolla in tutti i diagrammi</p></li>
 <li><p>aggiungere le pagine di documentazione del codice di Sphinx!</p></li>
 <li><p>aggiornare i template delle actions in questo file</p></li>

@@ -58,9 +58,11 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robocluedo_movement_controller/index.html">PKG DOCS – robocluedo_movement_controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robocluedo_movement_controller_msgs/index.html">PKG DOCS – robocluedo_movement_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Dependencies Documentation</span></p>
 <ul class="current">
@@ -80,6 +82,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/run-the-project.html">How to Run this Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/test-the-project.html">How to Test the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/twist-keyboard.html">HOW TO – twist keyboard</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
 <ul>
@@ -124,9 +127,14 @@
 <li class="toctree-l2"><a class="reference internal" href="#how-to-generate-the-package-with-moveit">HOW TO generate the package with Moveit</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#file-ros-controllers-yaml">file ros_controllers.yaml</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#file-joint-limits-yaml">file joint_limits.yaml</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gazebo-world-files-fix">Gazebo world files fix</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#how-to-test-the-model-with-gazebo">HOW TO test the model with Gazebo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-test-the-model-with-gazebo">HOW TO test the model with Gazebo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-launch-the-simulation-with-other-worlds-file">HOW TO Launch the simulation with other worlds file</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-launch-a-world-outside-the-package-worlds">HOW TO launch a world <em>outside the package worlds</em></a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -193,7 +201,7 @@ Created file robocluedo_robot.pdf
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulation settings for using moveit_sim_controllers</span>
 <span class="nt">moveit_sim_hw_interface</span><span class="p">:</span>
   <span class="nt">joint_model_group</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">arm_group</span>
-  <span class="nt">joint_model_group_pose</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">arm_home</span>
+  <span class="nt">joint_model_group_pose</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">extended</span>
 <span class="c1"># Settings for ros_control_boilerplate control loop</span>
 <span class="nt">generic_hw_control_loop</span><span class="p">:</span>
   <span class="nt">loop_hz</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">300</span>
@@ -205,8 +213,8 @@ Created file robocluedo_robot.pdf
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_02</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_03</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_04</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">left_grip_joint</span>
-    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">right_grip_joint</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">joint_a_left_wheel</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">joint_a_right_wheel</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">joint_left_wheel</span>
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">joint_right_wheel</span>
   <span class="nt">sim_control_mode</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>  <span class="c1"># 0: position, 1: velocity</span>
@@ -225,14 +233,6 @@ Created file robocluedo_robot.pdf
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_02</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_03</span>
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_04</span>
-  <span class="p p-Indicator">-</span> <span class="nt">name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">ee_group_controller</span>
-    <span class="nt">action_ns</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">follow_joint_trajectory</span>
-    <span class="nt">default</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">True</span>
-    <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">FollowJointTrajectory</span>
-    <span class="nt">joints</span><span class="p">:</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">arm_joint_04</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">left_grip_joint</span>
-      <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">right_grip_joint</span>
 <span class="nt">arm_group_controller</span><span class="p">:</span>
   <span class="nt">type</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">effort_controllers/JointTrajectoryController</span>
   <span class="nt">joints</span><span class="p">:</span>
@@ -296,16 +296,40 @@ Created file robocluedo_robot.pdf
     <span class="nt">max_velocity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0.5</span>
     <span class="nt">has_acceleration_limits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
     <span class="nt">max_acceleration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-  <span class="nt">left_grip_joint</span><span class="p">:</span>
-    <span class="nt">has_velocity_limits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">max_velocity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6.5</span>
-    <span class="nt">has_acceleration_limits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">max_acceleration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
-  <span class="nt">right_grip_joint</span><span class="p">:</span>
-    <span class="nt">has_velocity_limits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
-    <span class="nt">max_velocity</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">6.5</span>
-    <span class="nt">has_acceleration_limits</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
-    <span class="nt">max_acceleration</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">0</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="gazebo-world-files-fix">
+<h3>Gazebo world files fix<a class="headerlink" href="#gazebo-world-files-fix" title="Permalink to this heading"></a></h3>
+<p>apply this code into the file <strong>gazebo.launch</strong> :</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span>  
+<span class="c">&lt;!-- world file --&gt;</span>
+<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_name&quot;</span> <span class="na">default=</span><span class="s">&quot;square_room.world&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_path&quot;</span> <span class="na">default=</span><span class="s">&quot;$(find worlds)&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_file_path&quot;</span> <span class="na">default=</span><span class="s">&quot;$(arg world_path)/$(arg world_name)&quot;</span> <span class="nt">/&gt;</span>
+
+<span class="c">&lt;!-- startup simulated world --&gt;</span>
+<span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find gazebo_ros)/launch/empty_world.launch&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;paused&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg paused)&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;gui&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg gazebo_gui)&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_name&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg world_file_path)&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/include&gt;</span>
+</pre></div>
+</div>
+<p>and apply this fix in the <strong>demo_gazebo.launch</strong> :</p>
+<div class="highlight-xml notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_path&quot;</span> <span class="na">default=</span><span class="s">&quot;$(find worlds)&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_name&quot;</span> <span class="na">default=</span><span class="s">&quot;square_room.world&quot;</span><span class="nt">/&gt;</span>
+<span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_file_path&quot;</span> <span class="na">default=</span><span class="s">&quot;$(arg world_path)/$(arg world_name)&quot;</span> <span class="nt">/&gt;</span>
+  
+<span class="c">&lt;!-- launch the gazebo simulator and spawn the robot --&gt;</span>
+<span class="nt">&lt;include</span> <span class="na">file=</span><span class="s">&quot;$(find robocluedo_robot)/launch/gazebo.launch&quot;</span> <span class="nt">&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;paused&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg paused)&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;gazebo_gui&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg gazebo_gui)&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;urdf_path&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg urdf_path)&quot;</span><span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_name&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg world_name)&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_path&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg world_path)&quot;</span> <span class="nt">/&gt;</span>
+  <span class="nt">&lt;arg</span> <span class="na">name=</span><span class="s">&quot;world_file_path&quot;</span> <span class="na">value=</span><span class="s">&quot;$(arg world_file_path)&quot;</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/include&gt;</span>
 </pre></div>
 </div>
 </div>
@@ -317,7 +341,28 @@ Created file robocluedo_robot.pdf
 </pre></div>
 </div>
 <p>it should appear the robot, similar to this:</p>
-<p><img alt="robot" src="../../_images/robocluedo_robot.png" /></p>
+<p><img alt="robot" src="../../_images/robot_gazebo.png" /></p>
+<p><img alt="robot" src="../../_images/robot_rviz.png" /></p>
+<div class="section" id="how-to-launch-the-simulation-with-other-worlds-file">
+<h3>HOW TO Launch the simulation with other worlds file<a class="headerlink" href="#how-to-launch-the-simulation-with-other-worlds-file" title="Permalink to this heading"></a></h3>
+<p>the package takes the world files from the package <em>worlds</em> located into the <em>robocluedo_depedencied</em> folder. The default world file is <em>square_room.world</em>.</p>
+<p>here’s the syntax of the command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch robocluedo_robot gazebo.launch world_name:<span class="o">=</span>indoor.world
+</pre></div>
+</div>
+</div>
+<div class="section" id="how-to-launch-a-world-outside-the-package-worlds">
+<h3>HOW TO launch a world <em>outside the package worlds</em><a class="headerlink" href="#how-to-launch-a-world-outside-the-package-worlds" title="Permalink to this heading"></a></h3>
+<p>in case the world file is not included in the <em>worlds</em> package, you have two possibilities.</p>
+<p>the first one is to specify both path and name in this way:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch robocluedo_robot demo_gazebo.launch world_name:<span class="o">=</span>indoor.world world_file:<span class="o">=</span>/root/ros_ws/src/erl2-new/robocluedo_dependencies/worlds
+</pre></div>
+</div>
+<p>the second one is to directly specify the path with the variable <code class="docutils literal notranslate"><span class="pre">world_file_path</span></code>:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>roslaunch robocluedo_robot demo_gazebo.launch world_file_path:<span class="o">=</span>/root/ros_ws/src/erl2-new/robocluedo_dependencies/worlds/indoor.world
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 

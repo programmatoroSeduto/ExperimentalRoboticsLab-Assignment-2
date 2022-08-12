@@ -10,7 +10,7 @@
         <name>robocluedo_movement_controller</name>
         <initializer>==========================================
 
-<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> package enables <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> robot to move <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1a65c640a9873635f4a6674738d6670fed" kindref="member">manipulator</ref> and to navigate into <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1addc63bf7b58a728e484bbfd7df61bb1d" kindref="member">environment</ref></initializer>
+<ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> package enables <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> robot to move <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1a65c640a9873635f4a6674738d6670fed" kindref="member">manipulator</ref> and to navigate into <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1addc63bf7b58a728e484bbfd7df61bb1d" kindref="member">environment</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

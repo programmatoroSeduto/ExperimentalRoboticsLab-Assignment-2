@@ -368,11 +368,11 @@ std::map&lt;std::string, std::string&gt; params
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="262" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="263" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a761661cd32d2f140d3c49910771f38bb" prot="public" static="no" mutable="no">
         <type>libraries</type>
-        <definition>libraries __pad2__</definition>
+        <definition>libraries __pad1__</definition>
         <argsstring></argsstring>
-        <name>__pad2__</name>
+        <name>__pad1__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -480,11 +480,11 @@ std::map&lt;std::string, std::string&gt; params
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="381" column="10" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="381" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1ae4dc45eb4f996e8ade9ef3856f337fb4" prot="public" static="no" mutable="no">
+      <memberdef kind="variable" id="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" prot="public" static="no" mutable="no">
         <type>libraries</type>
-        <definition>libraries __pad3__</definition>
+        <definition>libraries __pad2__</definition>
         <argsstring></argsstring>
-        <name>__pad3__</name>
+        <name>__pad2__</name>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
@@ -514,7 +514,7 @@ std::map&lt;std::string, std::string&gt; params
         <argsstring>(!this-&gt;cl_query.waitForExistence(ros::Duration(TIMEOUT_QUERY)))</argsstring>
         <name>if</name>
         <param>
-          <type>!<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;cl_query.</type>
+          <type>!<ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref>-&gt;cl_query.</type>
           <declname>waitForExistence</declname>
           <array>ros::Duration(TIMEOUT_QUERY)</array>
         </param>
@@ -645,7 +645,7 @@ std::map&lt;std::string, std::string&gt; params
         <argsstring>(!this-&gt;cl_kb_update.waitForExistence(ros::Duration(TIMEOUT_KB_UPDATE)))</argsstring>
         <name>if</name>
         <param>
-          <type>!<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref>-&gt;cl_kb_update.</type>
+          <type>!<ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref>-&gt;cl_kb_update.</type>
           <declname>waitForExistence</declname>
           <array>ros::Duration(TIMEOUT_KB_UPDATE)</array>
         </param>
@@ -1001,7 +1001,7 @@ std::map&lt;std::string, std::string&gt; params
 <codeline lineno="301"><highlight class="normal"></highlight></codeline>
 <codeline lineno="302"><highlight class="normal">```c++</highlight></codeline>
 <codeline lineno="303"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SERVICE_KB_UPDATE<sp/>&quot;/rosplan_knowledge_base/update&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="304" refid="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" refkind="member"><highlight class="normal">ros::ServiceClient<sp/><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref><sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>);</highlight></codeline>
+<codeline lineno="304" refid="rosplan-kb_8md_8txt_1a761661cd32d2f140d3c49910771f38bb" refkind="member"><highlight class="normal">ros::ServiceClient<sp/><ref refid="rosplan-kb_8md_8txt_1a884973389e044088e9fc538130577c80" kindref="member">cl_kb_update</ref><sp/>=<sp/>nh.serviceClient&lt;rosplan_knowledge_msgs::KnowledgeUpdateService&gt;(<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/>);</highlight></codeline>
 <codeline lineno="305"><highlight class="normal">```</highlight></codeline>
 <codeline lineno="306"><highlight class="normal"></highlight></codeline>
 <codeline lineno="307"><highlight class="normal"><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>more<sp/>detailed<sp/>way<sp/>to<sp/>open<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref>:</highlight></codeline>
@@ -1108,7 +1108,7 @@ std::map&lt;std::string, std::string&gt; params
 <codeline lineno="408"><highlight class="normal"></highlight></codeline>
 <codeline lineno="409"><highlight class="normal"><ref refid="erl2-oracle-user-manual_8md_8txt_1a613aec3cea90947774335a408726fd2e" kindref="member">message</ref><sp/>**rosplan_knowledge_msgs/KnowledgeUpdate**<sp/>(see<sp/>above)</highlight></codeline>
 <codeline lineno="410"><highlight class="normal"></highlight></codeline>
-<codeline lineno="411" refid="rosplan-kb_8md_8txt_1ae4dc45eb4f996e8ade9ef3856f337fb4" refkind="member"><highlight class="normal">in<sp/>order<sp/>to<sp/>make<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>,<sp/>open<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>client<sp/>with<sp/>`/rosplan_knowledge_base/<ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>`<sp/>of<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a09d0680988bbc4127cbfa7c02b57c0b8" kindref="member">type</ref><sp/>`rosplan_knowledge_msgs::KnowledgeUpdate`</highlight></codeline>
+<codeline lineno="411" refid="rosplan-kb_8md_8txt_1a5d633af2cf187943087d2f7a4b366875" refkind="member"><highlight class="normal">in<sp/>order<sp/>to<sp/>make<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/><ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>,<sp/>open<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>client<sp/>with<sp/>`/rosplan_knowledge_base/<ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref>`<sp/>of<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1a09d0680988bbc4127cbfa7c02b57c0b8" kindref="member">type</ref><sp/>`rosplan_knowledge_msgs::KnowledgeUpdate`</highlight></codeline>
 <codeline lineno="412"><highlight class="normal"></highlight></codeline>
 <codeline lineno="413"><highlight class="normal">```c++</highlight></codeline>
 <codeline lineno="414" refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" refkind="member"><highlight class="normal">#define<sp/><ref refid="rosplan-kb_8md_8txt_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" kindref="member">SERVICE_KB_UPDATE</ref><sp/></highlight><highlight class="stringliteral">&quot;/rosplan_knowledge_base/update&quot;</highlight><highlight class="normal"></highlight></codeline>

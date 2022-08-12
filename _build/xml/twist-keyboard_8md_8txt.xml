@@ -4,7 +4,7 @@
     <compoundname>twist-keyboard.md.txt</compoundname>
       <sectiondef kind="var">
       <memberdef kind="variable" id="twist-keyboard_8md_8txt_1a534c4666a8bae8dec5d0c2e50c332795" prot="public" static="no" mutable="no">
-        <type>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> help of <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref></type>
+        <type>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> help of <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref></type>
         <definition>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s the help of this utility</definition>
         <argsstring></argsstring>
         <name>utility</name>
@@ -19,7 +19,7 @@
       </sectiondef>
       <sectiondef kind="func">
       <memberdef kind="function" id="twist-keyboard_8md_8txt_1adfc9aab92fe800079c9707729e8057dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
-        <type>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> help of <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> For Holonomic</type>
+        <type>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> help of <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> For Holonomic</type>
         <definition>bash sudo apt get install ros noetic teleop twist keyboard bash rosrun teleop_twist_keyboard teleop_twist_keyboard py here s the help of this For Holonomic mode</definition>
         <argsstring>(strafing)</argsstring>
         <name>mode</name>

@@ -4,7 +4,7 @@
     <compoundname>README.md.txt</compoundname>
       <sectiondef kind="var">
       <memberdef kind="variable" id="_r_e_a_d_m_e_8md_8txt_1a94cdcf68452f98d58c54cc3fdf431167" prot="public" static="no" mutable="no">
-        <type>what is <ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1ae4c7b3c2635ea792a3092cc6c8456e78" kindref="member">this</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref> tree aims of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref> how to install <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref></type>
+        <type>what is <ref refid="robocluedo-urdf-user-manual_8md_8txt_1a22870bf92aa401ba106bafa9bf2752ba" kindref="member">this</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref> tree aims of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref> how to install <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="blocksworld_8rst_8txt_1a6676ee1c2d2af97d56517edbd39d72e3" kindref="member">project</ref></type>
         <definition>what is this project tree aims of the project how to install the project dependencies</definition>
         <argsstring></argsstring>
         <name>dependencies</name>
@@ -48,7 +48,7 @@
 <codeline lineno="24"><highlight class="normal">-<sp/>TROUBLESHOOTING</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>sicuro<sp/>la<sp/>roba<sp/>su<sp/>tutti<sp/>i<sp/>problemi<sp/>del<sp/>Docker<sp/>del<sp/>corso</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...</highlight></codeline>
-<codeline lineno="27"><highlight class="normal">-<sp/>discussione<sp/>del<sp/><ref refid="dev-log_8md_8txt_1a540c4cc7b9b94eea49009256dbcce06c" kindref="member">progetto</ref></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">-<sp/>discussione<sp/>del<sp/>progetto</highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(sarebbe<sp/>meglio<sp/>fare<sp/>questo<sp/>lavoro<sp/>nella<sp/>documentazione<sp/>Sphinx?)</highlight></codeline>
 <codeline lineno="29"><highlight class="normal">-<sp/>authors<sp/>and<sp/>contacts<sp/></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(questa<sp/>è<sp/>facile...)</highlight></codeline>

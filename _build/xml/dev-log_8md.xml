@@ -10,6 +10,10 @@
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>RoboCLuedo<sp/>--<sp/>Development<sp/>Log</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">```{toctree}</highlight></codeline>
+<codeline><highlight class="normal">./dev-log.md</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">[plantUML<sp/>online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">template:</highlight></codeline>
@@ -656,7 +660,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>10/08/2021<sp/>--<sp/>ancora<sp/>su<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>10/08/2021<sp/>--<sp/>rosplan<sp/>pipeline<sp/>manager<sp/>--<sp/>planning<sp/>e<sp/>replanning</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">torniamo<sp/>a<sp/>lavorare<sp/>sul<sp/>pipeline<sp/>manager,<sp/>una<sp/>funzionalità<sp/>per<sp/>volta.<sp/>Ieri:<sp/>l&apos;istanza<sp/>del<sp/>problema.<sp/></highlight></codeline>
 <codeline></codeline>
@@ -870,7 +874,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>11/08/2022<sp/>--<sp/>ancora<sp/>su<sp/>ROSPlan</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>11/08/2022<sp/>--<sp/>implementazione<sp/>rosplan<sp/>action<sp/>--<sp/>navigation<sp/>system<sp/>--<sp/>improving<sp/>the<sp/>robot<sp/>model</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">anzitutto,<sp/>vorrei<sp/>lavorare<sp/>sulle<sp/>issue<sp/>di<sp/>ieri:<sp/>il<sp/>fatto<sp/>che<sp/>la<sp/>sequenza<sp/>di<sp/>landmark<sp/>che<sp/>mi<sp/>aspetto<sp/>non<sp/>funzioni<sp/>come<sp/>si<sp/>deve<sp/>è<sp/>un<sp/>problema<sp/>grave<sp/>che<sp/>va<sp/>risolto<sp/>al<sp/>più<sp/>presto.<sp/></highlight></codeline>
 <codeline></codeline>
@@ -1094,6 +1098,18 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*anche<sp/>questa<sp/>funziona!*<sp/>e<sp/>allora<sp/>sai<sp/>che<sp/>c&apos;è?<sp/>gli<sp/>tolgo<sp/>la<sp/>castor<sp/>adesso</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>già<sp/>che<sp/>siamo<sp/>in<sp/>vena<sp/>di<sp/>aggiornamenti,<sp/>voglio<sp/>provare<sp/>a<sp/>mettere<sp/>a<sp/>posto<sp/>il<sp/>gripper<sp/>(o<sp/>eliminarlo<sp/>direttamente?)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>come<sp/>temevo<sp/>ho<sp/>fatto<sp/>casino:<sp/>devo<sp/>rifare<sp/>il<sp/>pacchetto<sp/>moveit...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(dopo<sp/>un&apos;ora<sp/>di<sp/>bestemmie<sp/>piuttosto<sp/>forti...)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(improving<sp/>the<sp/>stability<sp/>of<sp/>the<sp/>robot)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>12/08/2022<sp/>--<sp/>ancora<sp/>sul<sp/>movement<sp/>controller</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>anzitutto,<sp/>i<sp/>lavori<sp/>noiosi:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>delle<sp/>immagini<sp/>nella<sp/>doumentazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>dei<sp/>file<sp/>yaml<sp/>salvati<sp/>nella<sp/>documentazione<sp/>del<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>piccola<sp/>modifica<sp/>ai<sp/>launch<sp/>file<sp/>del<sp/>robot<sp/>per<sp/>supportare<sp/>anche<sp/>i<sp/>percorsi<sp/>dei<sp/>world<sp/>files</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>(gazebo<sp/>fix,<sp/>documentation)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1108,7 +1124,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>modificare<sp/>uno<sp/>dei<sp/>nodi<sp/>del<sp/>navigation<sp/>per<sp/>raggiungere<sp/>una<sp/>certa<sp/>orientazione<sp/>al<sp/>termine<sp/>del<sp/>moto,<sp/>oltre<sp/>che<sp/>una<sp/>certa<sp/>posizione</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>nel<sp/>package<sp/>moveit,<sp/>anzichè<sp/>trovare<sp/>l&apos;URDF<sp/>col<sp/>path<sp/>assoluto,<sp/>converrebbe<sp/>usare<sp/>lo<sp/>stesso<sp/>trucchetto<sp/>usato<sp/>per<sp/>i<sp/>file<sp/>world</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
