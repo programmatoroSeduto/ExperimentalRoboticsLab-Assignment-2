@@ -81,7 +81,7 @@ master_doc = 'index'
 # how to interpret the files
 source_suffix = {
     '.rst': 'restructuredtext',
-    '.txt': 'restructuredtext',
+    # '.txt': 'restructuredtext',
     '.md': 'markdown',
 }
 

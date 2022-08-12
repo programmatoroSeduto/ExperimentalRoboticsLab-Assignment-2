@@ -156,7 +156,7 @@
     <member refid="classnode__manipulation__unit_1a586f7512e45d6ffc0e87090a125b6056" kind="variable"><name>cl_manip</name></member>
     <member refid="classnode__manipulation__unit_1aa56cb61dac7f3270ca379827de41666e" kind="function"><name>node_manipulation_unit</name></member>
     <member refid="classnode__manipulation__unit_1a10a18deee7bcb8de1be692c182ef49a8" kind="function"><name>spin</name></member>
-    <member refid="classnode__manipulation__unit_1a37f00dc10e07df7751c043b457d80e3e" kind="function"><name>cbk_roboplan_manip</name></member>
+    <member refid="classnode__manipulation__unit_1a7334affee4fac593614b7c98b56f48b1" kind="function"><name>cbk_roboplan_manip</name></member>
   </compound>
   <compound refid="classnove__manipulation__unit" kind="class"><name>nove_manipulation_unit</name>
   </compound>
@@ -541,6 +541,11 @@
     <member refid="manipulation__unit_8cpp_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
     <member refid="manipulation__unit_8cpp_1a1ffaa7bfaff984375908b5c2eb156714" kind="define"><name>SERVICE_ROBOPLAN_MANIP</name></member>
     <member refid="manipulation__unit_8cpp_1ad4c51c23cd787eed92cb27695d54fa3b" kind="define"><name>SERVICE_MANIP</name></member>
+    <member refid="manipulation__unit_8cpp_1a1f285fd20a5c25b9c992b9a6161f75ab" kind="define"><name>POSE_HOME</name></member>
+    <member refid="manipulation__unit_8cpp_1a1a91a5c6eb5f9d956907ef99a55fde46" kind="define"><name>POSE_EXTENDED</name></member>
+    <member refid="manipulation__unit_8cpp_1af3cf1ad007e09eff2b8209586939a3a6" kind="define"><name>POSE_LOW</name></member>
+    <member refid="manipulation__unit_8cpp_1a0c261af135c0942669dbb3861532e2b1" kind="define"><name>POSE_FRONT_LOW</name></member>
+    <member refid="manipulation__unit_8cpp_1a667ed3e8e9a6a9689a6c0228ef1fc062" kind="define"><name>POSE_FRONT_HIGH</name></member>
     <member refid="manipulation__unit_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
     <member refid="manipulation__unit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>

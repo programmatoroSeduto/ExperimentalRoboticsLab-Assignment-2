@@ -91,7 +91,7 @@
 <codeline lineno="81"><highlight class="normal"></highlight><highlight class="comment">#<sp/>how<sp/>to<sp/>interpret<sp/>the<sp/>files</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="82" refid="namespaceconf_1a8f403b478ab86c8b7663d82045f21741" refkind="member"><highlight class="normal">source_suffix<sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;.rst&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;restructuredtext&apos;</highlight><highlight class="normal">,</highlight></codeline>
-<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;.txt&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;restructuredtext&apos;</highlight><highlight class="normal">,</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>&apos;.txt&apos;:<sp/>&apos;restructuredtext&apos;,</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&apos;.md&apos;</highlight><highlight class="normal">:<sp/></highlight><highlight class="stringliteral">&apos;markdown&apos;</highlight><highlight class="normal">,</highlight></codeline>
 <codeline lineno="86"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="87"><highlight class="normal"></highlight></codeline>

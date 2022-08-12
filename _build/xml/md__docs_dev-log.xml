@@ -1264,11 +1264,12 @@
 </listitem><listitem><para>e prima documentazione del package (vuota)</para>
 </listitem><listitem><para>iniziamo dalla parte più &quot;semplice&quot;: movimento e comandi del braccio</para>
 </listitem><listitem><para><bold>NUOVO NODO</bold> : manipulation unit</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (manipulation unit first setup)&quot;</para>
+</listitem><listitem><para>implementazione easy-pisy lemon sequeezy della manipulaton unit<itemizedlist>
+<listitem><para>cmake e test ... funge,funge</para>
 </listitem></itemizedlist>
 </para>
-<para><emphasis>per oggi basta così</emphasis></para>
-<para><itemizedlist>
-<listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (manipulation unit first setup)&quot;</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (end manipulation unit)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

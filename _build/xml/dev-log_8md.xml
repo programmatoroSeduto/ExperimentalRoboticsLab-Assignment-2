@@ -1303,10 +1303,10 @@
 <codeline><highlight class="normal">-<sp/>e<sp/>prima<sp/>documentazione<sp/>del<sp/>package<sp/>(vuota)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>iniziamo<sp/>dalla<sp/>parte<sp/>più<sp/>&quot;semplice&quot;:<sp/>movimento<sp/>e<sp/>comandi<sp/>del<sp/>braccio</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>manipulation<sp/>unit</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">*per<sp/>oggi<sp/>basta<sp/>così*</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(manipulation<sp/>unit<sp/>first<sp/>setup)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>implementazione<sp/>easy-pisy<sp/>lemon<sp/>sequeezy<sp/>della<sp/>manipulaton<sp/>unit</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake<sp/>e<sp/>test<sp/>...<sp/>funge,funge</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(end<sp/>manipulation<sp/>unit)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

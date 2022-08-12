@@ -1294,10 +1294,10 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 - e prima documentazione del package (vuota)
 - iniziamo dalla parte più "semplice": movimento e comandi del braccio
 - **NUOVO NODO** : manipulation unit
-
-*per oggi basta così*
-
 - **COMMIT** : "working on mission manager (manipulation unit first setup)"
+- implementazione easy-pisy lemon sequeezy della manipulaton unit
+	- cmake e test ... funge,funge
+- **COMMIT** : "working on mission manager (end manipulation unit)"
 
 
 

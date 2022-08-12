@@ -169,7 +169,7 @@
         <name>source_suffix</name>
         <initializer>=  {
     &apos;.rst&apos;: &apos;restructuredtext&apos;,
-    &apos;.txt&apos;: &apos;restructuredtext&apos;,
+    # &apos;.txt&apos;: &apos;restructuredtext&apos;,
     &apos;.md&apos;: &apos;markdown&apos;,
 }</initializer>
         <briefdescription>

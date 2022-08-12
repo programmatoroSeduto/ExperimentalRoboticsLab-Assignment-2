@@ -28,10 +28,16 @@
 #include <signal.h>
 
 // rosplan manipulation command
-#define SERVICE_ROBOPLAN_MANIP "/robocluedo/navigation_command"
+#define SERVICE_ROBOPLAN_MANIP "/robocluedo/manipulator_command"
 
 // manipulation controller service
 #define SERVICE_MANIP "/tip_pos"
+
+#define POSE_HOME 0
+#define POSE_EXTENDED 1
+#define POSE_LOW 2
+#define POSE_FRONT_LOW 3
+#define POSE_FRONT_HIGH 4
 
 /********************************************//**
  *  
@@ -86,10 +92,28 @@ public:
 	 * 
 	 ***********************************************/
 	bool cbk_roboplan_manip( 
-		robocluedo_rosplan_interface_msgs::ManipulationCommand::Request& req, 
-		robocluedo_rosplan_interface_msgs::ManipulationCommand::Response& res )
+		robocluedo_rosplan_msgs::ManipulationCommand::Request& req, 
+		robocluedo_rosplan_msgs::ManipulationCommand::Response& res )
 	{
-		TLOG( "received request" << (req.home_position? " -- home position" : "") );
+		TLOG( "received a request" << (req.home_position? " -- home position" : "") );
+		
+		// pass the request to the manipulation controller
+		robocluedo_movement_controller_msgs::ManipulatorPosition cmd;
+		cmd.request.command = ( req.home_position? POSE_HOME : POSE_FRONT_HIGH );
+		
+		if( !this->cl_manip.call( cmd ) )
+		{
+			TWARN( "unable to make a service request to SRV "<< SERVICE_MANIP << " -- failed calling service " 
+				<< LOGSQUARE( SERVICE_MANIP ) 
+				<< (!cl_manip.exists( ) ? " -- it seems not opened" : "") );
+			
+			res.success = false;
+			return true;
+		}
+		
+		res.success = cmd.response.success;
+		if( !cmd.response.success )
+			TWARN( "manipulator command FAILED -- explaination: " << cmd.response.details );
 		
 		return true;
 	}
