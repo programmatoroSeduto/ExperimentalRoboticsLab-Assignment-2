@@ -1307,6 +1307,11 @@
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>easy-pisy<sp/>lemon<sp/>sequeezy<sp/>della<sp/>manipulaton<sp/>unit</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake<sp/>e<sp/>test<sp/>...<sp/>funge,funge</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(end<sp/>manipulation<sp/>unit)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**NUOVO<sp/>NODO**<sp/>:<sp/>navigation<sp/>unit<sp/>(prima<sp/>o<sp/>poi<sp/>sarebbe<sp/>giunto<sp/>questo<sp/>momento)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>template<sp/>nodo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>implementazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>cmake<sp/>e<sp/>compila<sp/>...<sp/>compila!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(navigation<sp/>unit,<sp/>first<sp/>debugging<sp/>but<sp/>yet<sp/>not<sp/>runned)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

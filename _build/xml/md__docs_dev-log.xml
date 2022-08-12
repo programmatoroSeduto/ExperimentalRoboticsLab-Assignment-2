@@ -1270,6 +1270,13 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (end manipulation unit)&quot;</para>
+</listitem><listitem><para><bold>NUOVO NODO</bold> : navigation unit (prima o poi sarebbe giunto questo momento)<itemizedlist>
+<listitem><para>template nodo</para>
+</listitem><listitem><para>e implementazione</para>
+</listitem><listitem><para>cmake e compila ... compila!</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (navigation unit, first debugging but yet not runned)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para>TODO</para>

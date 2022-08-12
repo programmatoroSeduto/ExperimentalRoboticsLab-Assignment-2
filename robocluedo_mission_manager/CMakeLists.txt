@@ -160,6 +160,10 @@ add_executable( manipulation_unit src/manipulation_unit.cpp )
 add_dependencies( manipulation_unit ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
 target_link_libraries( manipulation_unit ${catkin_LIBRARIES} )
 
+add_executable( navigation_unit src/navigation_unit.cpp )
+add_dependencies( navigation_unit ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS} )
+target_link_libraries( navigation_unit ${catkin_LIBRARIES} )
+
 #############
 ## Install ##
 #############

@@ -1298,6 +1298,11 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 - implementazione easy-pisy lemon sequeezy della manipulaton unit
 	- cmake e test ... funge,funge
 - **COMMIT** : "working on mission manager (end manipulation unit)"
+- **NUOVO NODO** : navigation unit (prima o poi sarebbe giunto questo momento)
+	- template nodo
+	- e implementazione
+	- cmake e compila ... compila!
+- **COMMIT** : "working on mission manager (navigation unit, first debugging but yet not runned)"
 
 
 

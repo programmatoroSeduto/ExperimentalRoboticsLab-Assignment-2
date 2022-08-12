@@ -142,17 +142,15 @@ int main( int argc, char* argv[] )
 {
 	ros::init( argc, argv, NODE_NAME, ros::init_options::NoSigintHandler );
 	signal( SIGINT, shut_msg );
+	
 	ros::AsyncSpinner spinner( 4 );
 	spinner.start( );
-	ros::NodeHandle nh;
 	
 	TLOG( "starting ... " );
-	
 	node_manipulation_unit node;
 	
 	TLOG( "ready" );
-	
-	( node ).spin( );
+	node.spin( );
 	
 	return 0;
 }
