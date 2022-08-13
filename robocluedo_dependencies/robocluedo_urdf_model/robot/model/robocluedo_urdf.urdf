@@ -227,7 +227,7 @@
     </visual>
   </link>
   <joint name="joint_a_right_wheel" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.2 0.15 0"/>
+    <origin rpy="0 0 0" xyz="-0.12 0.15 0"/>
     <child link="link_a_right_wheel"/>
     <parent link="base_link"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>
@@ -235,7 +235,7 @@
     <joint_properties damping="1.0" friction="1.0"/>
   </joint>
   <joint name="joint_a_left_wheel" type="continuous">
-    <origin rpy="0 0 0" xyz="-0.2 -0.15 0"/>
+    <origin rpy="0 0 0" xyz="-0.12 -0.15 0"/>
     <child link="link_a_left_wheel"/>
     <parent link="base_link"/>
     <axis rpy="0 0 0" xyz="0 1 0"/>

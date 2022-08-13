@@ -1594,6 +1594,39 @@
 <codeline><highlight class="normal">-<sp/>**COME<sp/>LOGICA<sp/>IL<sp/>ROBOT<sp/>FUNZIONA**</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;testing<sp/>(very<sp/>near<sp/>to<sp/>the<sp/>final<sp/>tests)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">posso<sp/>farmi<sp/>venire<sp/>un&apos;idea<sp/>per<sp/>la<sp/>navigazione...<sp/>dopotutto<sp/>ho<sp/>i<sp/>sensori<sp/>laser<sp/>a<sp/>disposizione:<sp/>quanto<sp/>meno<sp/>posso<sp/>comandare<sp/>al<sp/>robot<sp/>di<sp/>&quot;non<sp/>avvicinarsi<sp/>troppo&quot;<sp/>as<sp/>un<sp/>ostacolo,<sp/>anche<sp/>se<sp/>però<sp/>questo<sp/>ha<sp/>comunque<sp/>i<sp/>suoi<sp/>rischi.<sp/>Dovrei<sp/>provare<sp/>a<sp/>sperimentare<sp/>col<sp/>sensore<sp/>laser:<sp/>l&apos;idea<sp/>sarebbe<sp/>di<sp/>creare<sp/>un<sp/>altro<sp/>behaviour,<sp/>che<sp/>*prenda<sp/>il<sp/>controllo<sp/>della<sp/>situazione*<sp/>(sto<sp/>pensando<sp/>ad<sp/>un<sp/>servizio)<sp/>e<sp/>allontani<sp/>il<sp/>robot<sp/>da<sp/>eventuali<sp/>situazioni<sp/>tipo<sp/>quella<sp/>in<sp/>cui<sp/>rimane<sp/>incastrato.<sp/>Sinceramente<sp/>avrei<sp/>preferito<sp/>*evitare*<sp/>a<sp/>questo<sp/>punto<sp/>di<sp/>fare<sp/>altri<sp/>lavori<sp/>di<sp/>implementazione<sp/>...<sp/>ma<sp/>alla<sp/>fine,<sp/>se<sp/>posso<sp/>migliorare<sp/>il<sp/>progetto<sp/>senza<sp/>stravolgerlo<sp/>troppo,<sp/>va<sp/>bene<sp/>così.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">brain<sp/>storming:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>problema<sp/>prima<sp/>è<sp/>sort<sp/>quando<sp/>il<sp/>robot<sp/>è<sp/>arrivato<sp/>*troppo<sp/>vicino*<sp/>al<sp/>muro:<sp/>si<sp/>è<sp/>inchiodato<sp/>sul<sp/>muro,<sp/>e<sp/>ha<sp/>iniziato<sp/>a<sp/>premerci<sp/>sopra<sp/>per<sp/>girare,<sp/>causando<sp/>un<sp/>allineamento<sp/>completo<sp/>contro<sp/>il<sp/>muro<sp/>che<sp/>poi<sp/>lo<sp/>ha<sp/>fatto<sp/>incastrare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*se<sp/>il<sp/>robot<sp/>avesse<sp/>guardato<sp/>in<sp/>quel<sp/>momento<sp/>il<sp/>sensore<sp/>laser*<sp/>avrebbe<sp/>capito<sp/>che<sp/>la<sp/>cosa<sp/>migliore<sp/>sarebbe<sp/>stata<sp/>*andare<sp/>in<sp/>retromarcia<sp/>per<sp/>guadagnare<sp/>spazio<sp/>di<sp/>manovra*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>wall<sp/>following<sp/>è<sp/>sicuramente<sp/>da<sp/>evitare<sp/>in<sp/>questo<sp/>contesto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>robot<sp/>deve<sp/>inoltre<sp/>capire<sp/>quando<sp/>sta<sp/>perdendo<sp/>la<sp/>posizione.<sp/>capita<sp/>spesso<sp/>che,<sp/>durante<sp/>la<sp/>rotazione,<sp/>il<sp/>robot<sp/>tenda<sp/>ad<sp/>allontanarsi<sp/>dalla<sp/>posizione<sp/>iniziale.<sp/>se<sp/>durante<sp/>questa<sp/>anomalia<sp/>il<sp/>robot<sp/>si<sp/>fosse<sp/>segnato<sp/>la<sp/>posizione<sp/>iniziale,<sp/>e<sp/>avesse<sp/>continuamente<sp/>controllato<sp/>la<sp/>distanza<sp/>dal<sp/>target,<sp/>questo<sp/>non<sp/>sarebbe<sp/>successo<sp/>perchè<sp/>il<sp/>robot<sp/>avrebbe<sp/>capito<sp/>che<sp/>stava<sp/>perdendo<sp/>controllabilità,<sp/>si<sp/>sarebbe<sp/>fermato<sp/>e<sp/>avrebbe<sp/>ripreso<sp/>a<sp/>muoversi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>sicuramente<sp/>un<sp/>tuning<sp/>migliore<sp/>dei<sp/>controlli<sp/>serve,<sp/>e<sp/>serve<sp/>anche<sp/>secondo<sp/>me<sp/>*fissare<sp/>delle<sp/>velocità<sp/>precise*,<sp/>discretizzare<sp/>le<sp/>velocità<sp/>piuttosto<sp/>che<sp/>mantenerle<sp/>continue</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>modello<sp/>sicuramente<sp/>si<sp/>può<sp/>migliorare.<sp/>avvicinando<sp/>le<sp/>ruote<sp/>ad<sp/>esempio<sp/>si<sp/>riuscirebbe<sp/>a<sp/>fare<sp/>meno<sp/>forza<sp/>durante<sp/>le<sp/>fasi<sp/>di<sp/>rotazione</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">e<sp/>iniziamo<sp/>a<sp/>lavorarci<sp/>su</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>anzitutto,<sp/>le<sp/>ruote<sp/>(sperando<sp/>che<sp/>questo<sp/>già<sp/>da<sp/>solo<sp/>migliori<sp/>qualcosa)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un<sp/>piccolo<sp/>test<sp/>per<sp/>capire<sp/>se<sp/>effettivamente<sp/>c&apos;è<sp/>miglioramento</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>INCREDIBILE!<sp/>HA<sp/>FUNZIONATO!<sp/>stavo<sp/>già<sp/>iniziando<sp/>a<sp/>temere<sp/>il<sp/>peggio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>c&apos;è<sp/>ancora<sp/>qualche<sp/>problema<sp/>quando<sp/>si<sp/>tenta<sp/>di<sp/>raggiungere<sp/>un&apos;orientazione<sp/>di<sp/>3.14,<sp/>non<sp/>saprei<sp/>perchè,<sp/>però<sp/>per<sp/>le<sp/>altre<sp/>orientazioni<sp/>tutto<sp/>funziona<sp/>come<sp/>dovrebbe</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>a<sp/>questo<sp/>punto,<sp/>potrei<sp/>anche<sp/>solo<sp/>aggiungere<sp/>una<sp/>nuova<sp/>azione<sp/>all&apos;attuale<sp/>go_to_point<sp/>per<sp/>indietreggiare<sp/>piuttosto<sp/>che<sp/>rifare<sp/>da<sp/>capo<sp/>l&apos;intero<sp/>algoritmo<sp/>di<sp/>motion<sp/>planning,<sp/>MOLTO<sp/>MEGLIO</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiunta<sp/>dello<sp/>stato<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*ma<sp/>go<sp/>to<sp/>point<sp/>non<sp/>ha<sp/>il<sp/>laser...*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(una<sp/>soluzione<sp/>anche<sp/>solo<sp/>vagamente<sp/>decente?<sp/>*e<sp/>no,<sp/>non<sp/>voglio<sp/>implementare<sp/>un<sp/>nuovo<sp/>behaviour<sp/>per<sp/>una<sp/>cosa<sp/>così<sp/>stupida*)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>cosa<sp/>migliore<sp/>è<sp/>usare<sp/>bug_m<sp/>,<sp/>anche<sp/>se<sp/>come<sp/>soluzione<sp/>è<sp/>un<sp/>po&apos;<sp/>sporca<sp/>...<sp/>*ma<sp/>va<sp/>bene<sp/>lo<sp/>stesso*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>allora,<sp/>implementazione<sp/>in<sp/>bug_m<sp/>sia!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prova<sp/>...<sp/>e<sp/>ho<sp/>fatto<sp/>un<sp/>casino,<sp/>sotili<sp/>incubi<sp/>logici<sp/>in<sp/>cui<sp/>solo<sp/>io<sp/>riesco<sp/>ad<sp/>infilarmi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>dopo<sp/>essermi<sp/>fatto<sp/>venire<sp/>l&apos;emicrania<sp/>per<sp/>un<sp/>po&apos;,<sp/>*ora<sp/>funziona*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>in<sp/>realtà,<sp/>guardando<sp/>il<sp/>risultato<sp/>che<sp/>ho<sp/>ottenuto<sp/>con<sp/>poche<sp/>semplici<sp/>mosse,<sp/>mi<sp/>sembra<sp/>veramente<sp/>intuile<sp/>stare<sp/>a<sp/>reimplementare<sp/>l&apos;universo.<sp/>un<sp/>grosso,<sp/>grasso<sp/>,*va<sp/>bene<sp/>così*.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>and<sp/>navigation<sp/>(stability<sp/>and<sp/>behavioural<sp/>improvements)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

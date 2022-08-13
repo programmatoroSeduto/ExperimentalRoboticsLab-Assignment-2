@@ -1585,6 +1585,39 @@ e adesso siamo giunti al momento di *provare la comunicazione tra i component*. 
 - **COME LOGICA IL ROBOT FUNZIONA**
 - **COMMIT**: "testing (very near to the final tests)"
 
+---
+
+posso farmi venire un'idea per la navigazione... dopotutto ho i sensori laser a disposizione: quanto meno posso comandare al robot di "non avvicinarsi troppo" as un ostacolo, anche se però questo ha comunque i suoi rischi. Dovrei provare a sperimentare col sensore laser: l'idea sarebbe di creare un altro behaviour, che *prenda il controllo della situazione* (sto pensando ad un servizio) e allontani il robot da eventuali situazioni tipo quella in cui rimane incastrato. Sinceramente avrei preferito *evitare* a questo punto di fare altri lavori di implementazione ... ma alla fine, se posso migliorare il progetto senza stravolgerlo troppo, va bene così. 
+
+brain storming:
+
+- il problema prima è sort quando il robot è arrivato *troppo vicino* al muro: si è inchiodato sul muro, e ha iniziato a premerci sopra per girare, causando un allineamento completo contro il muro che poi lo ha fatto incastrare
+- *se il robot avesse guardato in quel momento il sensore laser* avrebbe capito che la cosa migliore sarebbe stata *andare in retromarcia per guadagnare spazio di manovra*
+- il wall following è sicuramente da evitare in questo contesto
+- il robot deve inoltre capire quando sta perdendo la posizione. capita spesso che, durante la rotazione, il robot tenda ad allontanarsi dalla posizione iniziale. se durante questa anomalia il robot si fosse segnato la posizione iniziale, e avesse continuamente controllato la distanza dal target, questo non sarebbe successo perchè il robot avrebbe capito che stava perdendo controllabilità, si sarebbe fermato e avrebbe ripreso a muoversi
+- sicuramente un tuning migliore dei controlli serve, e serve anche secondo me *fissare delle velocità precise*, discretizzare le velocità piuttosto che mantenerle continue
+- il modello sicuramente si può migliorare. avvicinando le ruote ad esempio si riuscirebbe a fare meno forza durante le fasi di rotazione
+
+e iniziamo a lavorarci su
+
+- anzitutto, le ruote (sperando che questo già da solo migliori qualcosa)
+	- un piccolo test per capire se effettivamente c'è miglioramento
+	- INCREDIBILE! HA FUNZIONATO! stavo già iniziando a temere il peggio
+- **LIMITAZIONE** c'è ancora qualche problema quando si tenta di raggiungere un'orientazione di 3.14, non saprei perchè, però per le altre orientazioni tutto funziona come dovrebbe
+- a questo punto, potrei anche solo aggiungere una nuova azione all'attuale go_to_point per indietreggiare piuttosto che rifare da capo l'intero algoritmo di motion planning, MOLTO MEGLIO
+	- aggiunta dello stato 
+	- *ma go to point non ha il laser...*
+	- (una soluzione anche solo vagamente decente? *e no, non voglio implementare un nuovo behaviour per una cosa così stupida*)
+	- la cosa migliore è usare bug_m , anche se come soluzione è un po' sporca ... *ma va bene lo stesso*
+	- e allora, implementazione in bug_m sia!
+	- prova ... e ho fatto un casino, sotili incubi logici in cui solo io riesco ad infilarmi
+	- dopo essermi fatto venire l'emicrania per un po', *ora funziona*
+- in realtà, guardando il risultato che ho ottenuto con poche semplici mosse, mi sembra veramente intuile stare a reimplementare l'universo. un grosso, grasso ,*va bene così*.
+- **COMMIT** : "working on robot model and navigation (stability and behavioural improvements)"
+
+
+
+
 
 
 

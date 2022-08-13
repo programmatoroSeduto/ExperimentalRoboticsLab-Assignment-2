@@ -115,10 +115,15 @@ def change_state(state):
 			except rospy.ServiceException:
 				srv_client_user_interface_ = None
 		
-	elif state == 3:
+	elif state_ == 3:
 		srv_client_go_to_point_(False)
 		srv_client_wall_follower_(False)
 		srv_client_head_orientation_(True)
+	
+	elif state_ == 4:
+		srv_client_go_to_point_(False)
+		srv_client_wall_follower_(False)
+		srv_client_head_orientation_(False)
 
 
 def normalize_angle(angle):
@@ -210,16 +215,26 @@ def main():
 		else:
 			# rospy.loginfo(f"(bug_m) state {state_}")
 			
+			desired_position_.x = rospy.get_param('des_pos_x')
+			desired_position_.y = rospy.get_param('des_pos_y')
+			desired_yaw_ = rospy.get_param('des_yaw')
+			err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
+			print( f"err_pos={err_pos}" )
+			err_yaw = normalize_angle(desired_yaw_ - yaw_)
+			print( f"err_yaw={err_yaw}" )
+			print( f"front region = {regions_['front']}" )
+			
 			if state_ == 0:
 				''' 
 				go_to_point -- ON
 				wall_follow -- OFF
 				head orient -- OFF
 				'''
+				print("(bug_m) go to point")
 				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
+				
 				if(err_pos < 0.3):
 					change_state(3)
-
 				elif regions_['front'] < 0.2:
 					change_state(1)
 
@@ -229,6 +244,7 @@ def main():
 				wall_follow -- ON
 				head orient -- OFF
 				'''
+				print("(bug_m) wall follow")
 				desired_yaw = math.atan2(desired_position_.y - position_.y, desired_position_.x - position_.x)
 				err_yaw = normalize_angle(desired_yaw - yaw_)
 				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
@@ -244,35 +260,62 @@ def main():
 				wall_follow -- OFF
 				head orient -- OFF
 				'''
-				desired_position_.x = rospy.get_param('des_pos_x')
-				desired_position_.y = rospy.get_param('des_pos_y')
-				desired_yaw_ = rospy.get_param('des_yaw')
+				print("(bug_m) end")
 				
 				# se il robot ha già raggiunto il target, rimarrà fermo
 				# altrimenti inizierà a muoversi
 				# (l'approccio non è molto efficace coi piccoli movimenti)
 				
-				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
-				err_yaw = normalize_angle(desired_yaw_ - yaw_)
-				
-				print("stop")
-				
 				if(err_pos > 0.35):
-					change_state(0)
+					if regions_['front'] < 0.4:
+						change_state(4)
+					else:
+						change_state(0)
+				
 				elif(err_yaw > yaw_precision_2_):
-					change_state(3)
+					if regions_['front'] < 0.4:
+						change_state(4)
+					else:
+						change_state(3)
 			
 			elif state_ == 3:
 				'''
 				go_to_point -- OFF
 				wall_follow -- OFF
 				head orient -- ON
+				
+				change yaw
 				'''
-				desired_yaw_ = rospy.get_param('des_yaw')
-				err_yaw = normalize_angle(desired_yaw_ - yaw_)
-				print( "yaw err= ", err_yaw )
-				if(err_yaw <= yaw_precision_2_):
+				print("(bug_m) change yaw")
+				
+				if(err_pos > 0.35):
+					if regions_['front'] < 0.4:
+						change_state(0)
+					else:
+						change_state(3)
+				elif(err_yaw <= yaw_precision_2_):
 					change_state(2)
+			
+			elif state_ == 4:
+				'''
+				go_to_point -- OFF
+				wall_follow -- OFF
+				head orient -- OFF
+				
+				go backwards
+				'''
+				print("(bug_m) go back")
+				
+				tw = Twist( )
+				tw.linear.x = -0.08
+				
+				pub.publish(tw)
+				
+				if regions_['front'] > 0.4:
+					if(err_pos > 0.35):
+						change_state(0)
+					else:
+						change_state(3)
 
 
 if __name__ == "__main__":

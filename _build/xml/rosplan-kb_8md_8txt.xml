@@ -534,8 +534,8 @@ std::map&lt;std::string, std::string&gt; params
         <location file="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" line="131" column="1" bodyfile="_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt" bodystart="131" bodyend="135"/>
         <references refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c">TERR</references>
         <references refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" compoundref="kb__tools_8h" startline="31">TIMEOUT_QUERY</references>
-        <referencedby refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="124" endline="129">bug_m.normalize_angle</referencedby>
-        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="149" endline="277">bug_m.main</referencedby>
+        <referencedby refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="129" endline="134">bug_m.normalize_angle</referencedby>
+        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="154" endline="320">bug_m.main</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a9016b8d25737fe805f75d9db52ff4680" compoundref="go__to__point__service__m_8py" startline="93" endline="98">go_to_point_service_m.normalize_angle</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a22f1876bd87959557a463d43fa521ad3" compoundref="go__to__point__service__m_8py" startline="147" endline="156">go_to_point_service_m.done</referencedby>
         <referencedby refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="88" endline="95">head_orientation.normalize_angle</referencedby>
