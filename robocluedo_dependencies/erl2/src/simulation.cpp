@@ -9,8 +9,8 @@
 #include <time.h>
 #include <vector>
 
-// #define DIST_THRESH 0.25
-#define DIST_THRESH 0.5
+#define DIST_THRESH 0.25
+// #define DIST_THRESH 0.5
 
 ros::Publisher oracle_pub;
 

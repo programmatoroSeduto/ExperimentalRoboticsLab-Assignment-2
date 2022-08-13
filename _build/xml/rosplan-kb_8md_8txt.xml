@@ -338,7 +338,7 @@
         <referencedby refid="rosplan-kb_8md_8txt_1a700da20a7769024b57c989761c6fd0ec" compoundref="rosplan-kb_8md_8txt" startline="253" endline="261">if</referencedby>
         <referencedby refid="class_armor_tools_1a34d27d93c2faec3d3de3ba24d08f436b" compoundref="armor__tools_8cpp" startline="385" endline="389">ArmorTools::GetLastRes</referencedby>
         <referencedby refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" compoundref="simulation_8cpp" startline="40" endline="44">oracleService</referencedby>
-        <referencedby refid="classnode__manipulation__unit_1a7334affee4fac593614b7c98b56f48b1" compoundref="manipulation__unit_8cpp" startline="94" endline="119">node_manipulation_unit::cbk_roboplan_manip</referencedby>
+        <referencedby refid="classnode__manipulation__unit_1a7334affee4fac593614b7c98b56f48b1" compoundref="manipulation__unit_8cpp" startline="108" endline="143">node_manipulation_unit::cbk_roboplan_manip</referencedby>
         <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="123" endline="526">node_mission_manager::spin</referencedby>
         <referencedby refid="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" compoundref="navigation__unit_8cpp" startline="94" endline="168">node_navigation_unit::cbk_navigation</referencedby>
         <referencedby refid="classnode__manipulation__controller_1a034c08e17c4eb53c99ab50159bbeec2b" compoundref="manipulation__controller_8cpp" startline="70" endline="132">node_manipulation_controller::cbk_manip</referencedby>
@@ -535,7 +535,7 @@ std::map&lt;std::string, std::string&gt; params
         <references refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c">TERR</references>
         <references refid="kb__tools_8h_1a779e0704b7854956198cc3883c7f215e" compoundref="kb__tools_8h" startline="31">TIMEOUT_QUERY</references>
         <referencedby refid="namespacebug__m_1a6547c5ebcd1d3aa3e104a5b573e47862" compoundref="bug__m_8py" startline="129" endline="134">bug_m.normalize_angle</referencedby>
-        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="154" endline="320">bug_m.main</referencedby>
+        <referencedby refid="namespacebug__m_1a357589ad533151302b9fa9a893833382" compoundref="bug__m_8py" startline="154" endline="322">bug_m.main</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a9016b8d25737fe805f75d9db52ff4680" compoundref="go__to__point__service__m_8py" startline="93" endline="98">go_to_point_service_m.normalize_angle</referencedby>
         <referencedby refid="namespacego__to__point__service__m_1a22f1876bd87959557a463d43fa521ad3" compoundref="go__to__point__service__m_8py" startline="147" endline="156">go_to_point_service_m.done</referencedby>
         <referencedby refid="namespacehead__orientation_1aa3493ab7ad2a0bfaf5fc2d19182a5502" compoundref="head__orientation_8py" startline="88" endline="95">head_orientation.normalize_angle</referencedby>

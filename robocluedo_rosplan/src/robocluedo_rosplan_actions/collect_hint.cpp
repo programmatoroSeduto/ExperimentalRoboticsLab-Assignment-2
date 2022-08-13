@@ -97,6 +97,7 @@ bool RP_rcl_collect_hint::concreteCallback( const rosplan_dispatch_msgs::ActionD
 	
 	{
 	robocluedo_rosplan_msgs::ManipulationCommand cmd;
+	cmd.request.waypoint = wp;
 	
 	// manipulator near the marker
 	ROS_INFO_STREAM("["<<action_name<<"] "<<"manipulator PHASE 1");
@@ -131,6 +132,7 @@ bool RP_rcl_collect_hint::concreteCallback( const rosplan_dispatch_msgs::ActionD
 	
 	{
 	robocluedo_rosplan_msgs::ManipulationCommand cmd;
+	cmd.request.waypoint = wp;
 	
 	// manipulator at home position
 	ROS_INFO_STREAM("["<<action_name<<"] "<<"manipulator PHASE 2");

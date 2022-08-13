@@ -235,8 +235,10 @@ def main():
 				
 				if(err_pos < 0.3):
 					change_state(3)
+				'''
 				elif regions_['front'] < 0.2:
 					change_state(1)
+				'''
 
 			elif state_ == 1:
 				''' 
@@ -290,9 +292,9 @@ def main():
 				
 				if(err_pos > 0.35):
 					if regions_['front'] < 0.4:
-						change_state(0)
+						change_state(4)
 					else:
-						change_state(3)
+						change_state(0)
 				elif(err_yaw <= yaw_precision_2_):
 					change_state(2)
 			

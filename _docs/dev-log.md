@@ -1615,6 +1615,33 @@ e iniziamo a lavorarci su
 - in realtà, guardando il risultato che ho ottenuto con poche semplici mosse, mi sembra veramente intuile stare a reimplementare l'universo. un grosso, grasso ,*va bene così*.
 - **COMMIT** : "working on robot model and navigation (stability and behavioural improvements)"
 
+---
+
+direi che siamo arrivati all'ultimo grande test: *il mission manager*, e tutta l'ensemble allegramente riunita
+
+- prima di procedere però, voglio provare ancora la ricezione degli hints dall'oracolo, *stavolta usando il raggio di 0.25 originale del nodo.* se c'ho visto bene, con le migliorie che ho fatto funziona anche così. 
+- **ISSUE** manca il riferimento al centro nella unit... risolto
+- ancora una prova... 
+	- devo provare a farlo avvicinare di più il robot, sperando di non cadere in comportamenti instabili come negli esempi precedenti
+- **ISSUE** ancora un problema col landmark 2: il robot non va in centro, ma si limita ad andare verso unwaypoint a caso, dopodichè il programma termina, *e non so perchè*
+	- (il sonno sta iniziando ad avere la meglio) **ma se non compili ciccio, ma come pretendi che il sistema prenda la modifica?**
+	- capito, compilo e riproviamo
+- **LIMITAZIONE** ci sono marker alti, e marker bassi ... bisogna distinguere tra i due tipi
+- risolviamo qualche limitazione
+	- più vicino ai markers! passiamo ad un 97.5% di vicinanza al marker
+	- e distinzione tra marker alti e marker bassi
+	- *ma prima devo definire un subscriber del tutto analogo a quello della nav unit ...* 
+	- *e inoltre ... ho appena scoperto che rosplan non mi invia il marker ...*
+	- proviamo a compilare .. a spranghe, compila
+	- voglio rivedere velocemente le poses nel pacchetto moveit, alzare la high e alzare leggermente la low
+- e test ... 
+	- ogni tanto si attiva il wall follow a caso ... devo eliminarlo, altrimenti non se ne esce più
+	- e infatti senza il wall follower il robot va molto meglio. ancora non sono convintissimo della macchina a stati, ma va bene così per il momento
+- (mi sarei aspettato di fare prima)
+- per il momento, l'aiutino sull'oracolo teniamolo: 0.25 è davvero troppo stretto. 
+	- dovrei rifare il manipulation controller ... poi, un altro giorno
+- 
+
 
 
 
@@ -1694,18 +1721,4 @@ problemi, limitazioni, difetti:
 
 - rapido aumento della complessità di implementazione del sistema
 
-### scrittura del mission manager (e metodo di lavoro in generale)
 
-ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.
-
-- voglio essere sicuro che non accada qualcosa di storto nell'aprire o usare un protocollo di comunicazione
-- il codice dev'essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile
-- il codice in generale dev'essere più informativo possibile e dare un log che consenta di ricostruire l'accaduto quanto più in dettaglio possibile
-- preferisco *evitare python* perchè l'unico modo per debuggarlo è ... provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, *e non porta a strani NoneTypes imprevisti*
-- scrivere *il mio stesso codice pensando che esso possa non funzionare come si deve*, ad esempio per un bug difficile da scovare
-
-insomma: *evitare situazioni impreviste* nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.
-
-c'è un altro motivo per preferire un approccio super sicuro alla paranoia: *l'aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione*. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima *e dopo* la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E' qualcosa che frena l'invenzione, frena l'immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.
-
-morale della favola: *fallo bene una volta sola piuttosto che male 100 volte*. 

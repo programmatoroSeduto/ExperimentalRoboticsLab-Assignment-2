@@ -43,7 +43,7 @@
 // i.e. use the bug_m motion planning algorithm
 #define NAV_ALGO_BUG_M 0
 
-#define SCALING_FACTOR 0.9
+#define SCALING_FACTOR 0.975
 
 class node_navigation_unit
 {
@@ -173,15 +173,19 @@ public:
 		TLOG( "reading markers ... " );
 		
 		// read the markers
-		int i = 1;
+		int i = 0;
+		float max_h = 0.f;
 		for( const visualization_msgs::Marker& mrk : data->markers )
 		{
-			std::string marker_name = SS("wp") + SSS(i);
+			std::string marker_name = SS("wp") + SSS(i+1);
 			
 			robocluedo_movement_controller_msgs::Pose2D markerpose;
 			
 			markerpose.x = mrk.pose.position.x * SCALING_FACTOR;
 			markerpose.y = mrk.pose.position.y * SCALING_FACTOR;
+			
+			if( mrk.pose.position.z > max_h )
+				max_h = mrk.pose.position.z;
 			
 			markerpose.yaw = atan2( markerpose.y, markerpose.x ); // atan2 from -pi to pi
 			if( markerpose.yaw > 3.135 )
@@ -193,6 +197,23 @@ public:
 			
 			++i;
 			TLOG( "received (" << i << ") marker with data (x=" << markerpose.x << ", y=" << markerpose.y << ", yaw= " << markerpose.yaw << ")" );
+		}
+		
+		i = 0;
+		for( const visualization_msgs::Marker& mrk : data->markers )
+		{
+			std::string marker_name = SS("wp") + SSS(i+1);
+			waypoint_heigth[marker_name] = ( mrk.pose.position.z >= max_h );
+		}
+			
+		
+		// even add the center
+		{
+			robocluedo_movement_controller_msgs::Pose2D markerpose;
+			markerpose.x = 0.0;
+			markerpose.y = 0.0;
+			markerpose.yaw = 0.0;
+			waypoints["center"] = markerpose;
 		}
 		
 		// unsubscribe
@@ -221,6 +242,9 @@ private:
 	
 	/// positions of the waypoints
 	std::map<std::string, robocluedo_movement_controller_msgs::Pose2D> waypoints;
+	
+	/// heigth of the markers
+	std::map<std::string, bool> waypoint_heigth;
 	
 	/// signal fro the markers listener
 	bool found_markers = false;

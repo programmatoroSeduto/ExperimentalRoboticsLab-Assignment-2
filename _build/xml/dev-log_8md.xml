@@ -1624,6 +1624,33 @@
 <codeline><highlight class="normal">-<sp/>in<sp/>realtà,<sp/>guardando<sp/>il<sp/>risultato<sp/>che<sp/>ho<sp/>ottenuto<sp/>con<sp/>poche<sp/>semplici<sp/>mosse,<sp/>mi<sp/>sembra<sp/>veramente<sp/>intuile<sp/>stare<sp/>a<sp/>reimplementare<sp/>l&apos;universo.<sp/>un<sp/>grosso,<sp/>grasso<sp/>,*va<sp/>bene<sp/>così*.</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>robot<sp/>model<sp/>and<sp/>navigation<sp/>(stability<sp/>and<sp/>behavioural<sp/>improvements)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">direi<sp/>che<sp/>siamo<sp/>arrivati<sp/>all&apos;ultimo<sp/>grande<sp/>test:<sp/>*il<sp/>mission<sp/>manager*,<sp/>e<sp/>tutta<sp/>l&apos;ensemble<sp/>allegramente<sp/>riunita</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>procedere<sp/>però,<sp/>voglio<sp/>provare<sp/>ancora<sp/>la<sp/>ricezione<sp/>degli<sp/>hints<sp/>dall&apos;oracolo,<sp/>*stavolta<sp/>usando<sp/>il<sp/>raggio<sp/>di<sp/>0.25<sp/>originale<sp/>del<sp/>nodo.*<sp/>se<sp/>c&apos;ho<sp/>visto<sp/>bene,<sp/>con<sp/>le<sp/>migliorie<sp/>che<sp/>ho<sp/>fatto<sp/>funziona<sp/>anche<sp/>così.<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>manca<sp/>il<sp/>riferimento<sp/>al<sp/>centro<sp/>nella<sp/>unit...<sp/>risolto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ancora<sp/>una<sp/>prova...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>devo<sp/>provare<sp/>a<sp/>farlo<sp/>avvicinare<sp/>di<sp/>più<sp/>il<sp/>robot,<sp/>sperando<sp/>di<sp/>non<sp/>cadere<sp/>in<sp/>comportamenti<sp/>instabili<sp/>come<sp/>negli<sp/>esempi<sp/>precedenti</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>ancora<sp/>un<sp/>problema<sp/>col<sp/>landmark<sp/>2:<sp/>il<sp/>robot<sp/>non<sp/>va<sp/>in<sp/>centro,<sp/>ma<sp/>si<sp/>limita<sp/>ad<sp/>andare<sp/>verso<sp/>unwaypoint<sp/>a<sp/>caso,<sp/>dopodichè<sp/>il<sp/>programma<sp/>termina,<sp/>*e<sp/>non<sp/>so<sp/>perchè*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(il<sp/>sonno<sp/>sta<sp/>iniziando<sp/>ad<sp/>avere<sp/>la<sp/>meglio)<sp/>**ma<sp/>se<sp/>non<sp/>compili<sp/>ciccio,<sp/>ma<sp/>come<sp/>pretendi<sp/>che<sp/>il<sp/>sistema<sp/>prenda<sp/>la<sp/>modifica?**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>capito,<sp/>compilo<sp/>e<sp/>riproviamo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>ci<sp/>sono<sp/>marker<sp/>alti,<sp/>e<sp/>marker<sp/>bassi<sp/>...<sp/>bisogna<sp/>distinguere<sp/>tra<sp/>i<sp/>due<sp/>tipi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>risolviamo<sp/>qualche<sp/>limitazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>più<sp/>vicino<sp/>ai<sp/>markers!<sp/>passiamo<sp/>ad<sp/>un<sp/>97.5%<sp/>di<sp/>vicinanza<sp/>al<sp/>marker</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>distinzione<sp/>tra<sp/>marker<sp/>alti<sp/>e<sp/>marker<sp/>bassi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*ma<sp/>prima<sp/>devo<sp/>definire<sp/>un<sp/>subscriber<sp/>del<sp/>tutto<sp/>analogo<sp/>a<sp/>quello<sp/>della<sp/>nav<sp/>unit<sp/>...*<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*e<sp/>inoltre<sp/>...<sp/>ho<sp/>appena<sp/>scoperto<sp/>che<sp/>rosplan<sp/>non<sp/>mi<sp/>invia<sp/>il<sp/>marker<sp/>...*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>a<sp/>compilare<sp/>..<sp/>a<sp/>spranghe,<sp/>compila</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>voglio<sp/>rivedere<sp/>velocemente<sp/>le<sp/>poses<sp/>nel<sp/>pacchetto<sp/>moveit,<sp/>alzare<sp/>la<sp/>high<sp/>e<sp/>alzare<sp/>leggermente<sp/>la<sp/>low</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>test<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ogni<sp/>tanto<sp/>si<sp/>attiva<sp/>il<sp/>wall<sp/>follow<sp/>a<sp/>caso<sp/>...<sp/>devo<sp/>eliminarlo,<sp/>altrimenti<sp/>non<sp/>se<sp/>ne<sp/>esce<sp/>più</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>infatti<sp/>senza<sp/>il<sp/>wall<sp/>follower<sp/>il<sp/>robot<sp/>va<sp/>molto<sp/>meglio.<sp/>ancora<sp/>non<sp/>sono<sp/>convintissimo<sp/>della<sp/>macchina<sp/>a<sp/>stati,<sp/>ma<sp/>va<sp/>bene<sp/>così<sp/>per<sp/>il<sp/>momento</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(mi<sp/>sarei<sp/>aspettato<sp/>di<sp/>fare<sp/>prima)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>il<sp/>momento,<sp/>l&apos;aiutino<sp/>sull&apos;oracolo<sp/>teniamolo:<sp/>0.25<sp/>è<sp/>davvero<sp/>troppo<sp/>stretto.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>dovrei<sp/>rifare<sp/>il<sp/>manipulation<sp/>controller<sp/>...<sp/>poi,<sp/>un<sp/>altro<sp/>giorno</highlight></codeline>
+<codeline><highlight class="normal">-<sp/></highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1703,21 +1730,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>rapido<sp/>aumento<sp/>della<sp/>complessità<sp/>di<sp/>implementazione<sp/>del<sp/>sistema</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>scrittura<sp/>del<sp/>mission<sp/>manager<sp/>(e<sp/>metodo<sp/>di<sp/>lavoro<sp/>in<sp/>generale)</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">ho<sp/>un<sp/>modo<sp/>di<sp/>scrivere<sp/>il<sp/>codice<sp/>che<sp/>tende<sp/>a<sp/>tenere<sp/>conto<sp/>di<sp/>tutti<sp/>gli<sp/>errori<sp/>che<sp/>possono<sp/>accadere.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>non<sp/>accada<sp/>qualcosa<sp/>di<sp/>storto<sp/>nell&apos;aprire<sp/>o<sp/>usare<sp/>un<sp/>protocollo<sp/>di<sp/>comunicazione</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>il<sp/>codice<sp/>dev&apos;essere<sp/>in<sp/>grado<sp/>il<sp/>più<sp/>possibile<sp/>di<sp/>reagire<sp/>a<sp/>qualunque<sp/>potenziale<sp/>imprevisto,<sp/>per<sp/>quanto<sp/>possibile</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>il<sp/>codice<sp/>in<sp/>generale<sp/>dev&apos;essere<sp/>più<sp/>informativo<sp/>possibile<sp/>e<sp/>dare<sp/>un<sp/>log<sp/>che<sp/>consenta<sp/>di<sp/>ricostruire<sp/>l&apos;accaduto<sp/>quanto<sp/>più<sp/>in<sp/>dettaglio<sp/>possibile</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>preferisco<sp/>*evitare<sp/>python*<sp/>perchè<sp/>l&apos;unico<sp/>modo<sp/>per<sp/>debuggarlo<sp/>è<sp/>...<sp/>provarlo,<sp/>il<sp/>che<sp/>crea<sp/>errori<sp/>a<sp/>runtime,<sp/>difficilissimi<sp/>da<sp/>identificare<sp/>anche<sp/>in<sp/>presenza<sp/>di<sp/>un<sp/>sistema<sp/>di<sp/>logging<sp/>quanto<sp/>ben<sp/>fatto<sp/>a<sp/>piacere;<sp/>C++<sp/>consente<sp/>di<sp/>individuare<sp/>eventuali<sp/>errori<sp/>di<sp/>logica<sp/>già<sp/>in<sp/>fase<sp/>di<sp/>compilazione,<sp/>*e<sp/>non<sp/>porta<sp/>a<sp/>strani<sp/>NoneTypes<sp/>imprevisti*</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>scrivere<sp/>*il<sp/>mio<sp/>stesso<sp/>codice<sp/>pensando<sp/>che<sp/>esso<sp/>possa<sp/>non<sp/>funzionare<sp/>come<sp/>si<sp/>deve*,<sp/>ad<sp/>esempio<sp/>per<sp/>un<sp/>bug<sp/>difficile<sp/>da<sp/>scovare</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">insomma:<sp/>*evitare<sp/>situazioni<sp/>impreviste*<sp/>nella<sp/>prova<sp/>del<sp/>codice.<sp/>La<sp/>maggior<sp/>parte<sp/>del<sp/>tempo<sp/>la<sp/>passo<sp/>a<sp/>scrivere<sp/>codice<sp/>e<sp/>documentare,<sp/>perciò<sp/>vorrei<sp/>che,<sp/>dopo<sp/>ore<sp/>di<sp/>spremuta<sp/>di<sp/>cervello,<sp/>quanto<sp/>meno<sp/>la<sp/>situazione<sp/>in<sp/>fase<sp/>di<sp/>test<sp/>fosse<sp/>più<sp/>chiara<sp/>possibile,<sp/>e<sp/>se<sp/>possibile<sp/>che<sp/>funzioni<sp/>anche<sp/>a<sp/>primo<sp/>colpo.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">c&apos;è<sp/>un<sp/>altro<sp/>motivo<sp/>per<sp/>preferire<sp/>un<sp/>approccio<sp/>super<sp/>sicuro<sp/>alla<sp/>paranoia:<sp/>*l&apos;aspetto<sp/>scientifico<sp/>pratico<sp/>del<sp/>progetto<sp/>è<sp/>mooooolto<sp/>più<sp/>importante<sp/>del<sp/>(noiosissimo)<sp/>lavoro<sp/>di<sp/>implementazione*.<sp/>Se<sp/>voglio<sp/>inventare<sp/>un<sp/>sistema<sp/>di<sp/>navigazione,<sp/>devo<sp/>essere<sp/>sicuro<sp/>della<sp/>sua<sp/>logica<sp/>prima<sp/>*e<sp/>dopo*<sp/>la<sp/>fase<sp/>di<sp/>implementazione,<sp/>e<sp/>non<sp/>voglio<sp/>perdere<sp/>il<sp/>mio<sp/>tenpo<sp/>prezioso<sp/>appresso<sp/>a<sp/>cose<sp/>che<sp/>non<sp/>funzionano<sp/>per<sp/>motivi<sp/>casuali.<sp/>E&apos;<sp/>qualcosa<sp/>che<sp/>frena<sp/>l&apos;invenzione,<sp/>frena<sp/>l&apos;immaginazione,<sp/>ma<sp/>soprattutto<sp/>rende<sp/>questo<sp/>lavoro<sp/>molto<sp/>meno<sp/>divertente<sp/>di<sp/>quanto<sp/>potrebbe<sp/>esserlo.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">morale<sp/>della<sp/>favola:<sp/>*fallo<sp/>bene<sp/>una<sp/>volta<sp/>sola<sp/>piuttosto<sp/>che<sp/>male<sp/>100<sp/>volte*.<sp/></highlight></codeline>
     </programlisting>
     <location file="_docs/dev-log.md"/>
   </compounddef>

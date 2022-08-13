@@ -132,7 +132,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#vantaggi-e-svantaggi-dell-approccio-per-landmarks">vantaggi (e svantaggi) dell’approccio per landmarks</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale">scrittura del mission manager (e metodo di lavoro in generale)</a></li>
 </ul>
 </li>
 </ul>
@@ -2082,6 +2081,47 @@ TLOG( &quot;opening client &quot; &lt;&lt; SERVICE_SET_ALGORITHM &lt;&lt; &quot;
 <li><p>in realtà, guardando il risultato che ho ottenuto con poche semplici mosse, mi sembra veramente intuile stare a reimplementare l’universo. un grosso, grasso ,<em>va bene così</em>.</p></li>
 <li><p><strong>COMMIT</strong> : “working on robot model and navigation (stability and behavioural improvements)”</p></li>
 </ul>
+<hr class="docutils" />
+<p>direi che siamo arrivati all’ultimo grande test: <em>il mission manager</em>, e tutta l’ensemble allegramente riunita</p>
+<ul class="simple">
+<li><p>prima di procedere però, voglio provare ancora la ricezione degli hints dall’oracolo, <em>stavolta usando il raggio di 0.25 originale del nodo.</em> se c’ho visto bene, con le migliorie che ho fatto funziona anche così.</p></li>
+<li><p><strong>ISSUE</strong> manca il riferimento al centro nella unit… risolto</p></li>
+<li><p>ancora una prova…</p>
+<ul>
+<li><p>devo provare a farlo avvicinare di più il robot, sperando di non cadere in comportamenti instabili come negli esempi precedenti</p></li>
+</ul>
+</li>
+<li><p><strong>ISSUE</strong> ancora un problema col landmark 2: il robot non va in centro, ma si limita ad andare verso unwaypoint a caso, dopodichè il programma termina, <em>e non so perchè</em></p>
+<ul>
+<li><p>(il sonno sta iniziando ad avere la meglio) <strong>ma se non compili ciccio, ma come pretendi che il sistema prenda la modifica?</strong></p></li>
+<li><p>capito, compilo e riproviamo</p></li>
+</ul>
+</li>
+<li><p><strong>LIMITAZIONE</strong> ci sono marker alti, e marker bassi … bisogna distinguere tra i due tipi</p></li>
+<li><p>risolviamo qualche limitazione</p>
+<ul>
+<li><p>più vicino ai markers! passiamo ad un 97.5% di vicinanza al marker</p></li>
+<li><p>e distinzione tra marker alti e marker bassi</p></li>
+<li><p><em>ma prima devo definire un subscriber del tutto analogo a quello della nav unit …</em></p></li>
+<li><p><em>e inoltre … ho appena scoperto che rosplan non mi invia il marker …</em></p></li>
+<li><p>proviamo a compilare .. a spranghe, compila</p></li>
+<li><p>voglio rivedere velocemente le poses nel pacchetto moveit, alzare la high e alzare leggermente la low</p></li>
+</ul>
+</li>
+<li><p>e test …</p>
+<ul>
+<li><p>ogni tanto si attiva il wall follow a caso … devo eliminarlo, altrimenti non se ne esce più</p></li>
+<li><p>e infatti senza il wall follower il robot va molto meglio. ancora non sono convintissimo della macchina a stati, ma va bene così per il momento</p></li>
+</ul>
+</li>
+<li><p>(mi sarei aspettato di fare prima)</p></li>
+<li><p>per il momento, l’aiutino sull’oracolo teniamolo: 0.25 è davvero troppo stretto.</p>
+<ul>
+<li><p>dovrei rifare il manipulation controller … poi, un altro giorno</p></li>
+</ul>
+</li>
+<li></li>
+</ul>
 </div>
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
@@ -2147,20 +2187,6 @@ TLOG( &quot;opening client &quot; &lt;&lt; SERVICE_SET_ALGORITHM &lt;&lt; &quot;
 <ul class="simple">
 <li><p>rapido aumento della complessità di implementazione del sistema</p></li>
 </ul>
-</div>
-<div class="section" id="scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale">
-<h3>scrittura del mission manager (e metodo di lavoro in generale)<a class="headerlink" href="#scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale" title="Permalink to this heading"></a></h3>
-<p>ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.</p>
-<ul class="simple">
-<li><p>voglio essere sicuro che non accada qualcosa di storto nell’aprire o usare un protocollo di comunicazione</p></li>
-<li><p>il codice dev’essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile</p></li>
-<li><p>il codice in generale dev’essere più informativo possibile e dare un log che consenta di ricostruire l’accaduto quanto più in dettaglio possibile</p></li>
-<li><p>preferisco <em>evitare python</em> perchè l’unico modo per debuggarlo è … provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, <em>e non porta a strani NoneTypes imprevisti</em></p></li>
-<li><p>scrivere <em>il mio stesso codice pensando che esso possa non funzionare come si deve</em>, ad esempio per un bug difficile da scovare</p></li>
-</ul>
-<p>insomma: <em>evitare situazioni impreviste</em> nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.</p>
-<p>c’è un altro motivo per preferire un approccio super sicuro alla paranoia: <em>l’aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione</em>. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima <em>e dopo</em> la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E’ qualcosa che frena l’invenzione, frena l’immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.</p>
-<p>morale della favola: <em>fallo bene una volta sola piuttosto che male 100 volte</em>.</p>
 </div>
 </div>
 </div>

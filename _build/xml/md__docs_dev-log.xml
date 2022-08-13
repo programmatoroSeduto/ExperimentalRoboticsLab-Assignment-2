@@ -1559,8 +1559,45 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on robot model and navigation (stability and behavioural improvements)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>direi che siamo arrivati all&apos;ultimo grande test: <emphasis>il mission manager</emphasis>, e tutta l&apos;ensemble allegramente riunita</para>
+<para><itemizedlist>
+<listitem><para>prima di procedere però, voglio provare ancora la ricezione degli hints dall&apos;oracolo, <emphasis>stavolta usando il raggio di 0.25 originale del nodo.</emphasis> se c&apos;ho visto bene, con le migliorie che ho fatto funziona anche così.</para>
+</listitem><listitem><para><bold>ISSUE</bold> manca il riferimento al centro nella unit... risolto</para>
+</listitem><listitem><para>ancora una prova...<itemizedlist>
+<listitem><para>devo provare a farlo avvicinare di più il robot, sperando di non cadere in comportamenti instabili come negli esempi precedenti</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ISSUE</bold> ancora un problema col landmark 2: il robot non va in centro, ma si limita ad andare verso unwaypoint a caso, dopodichè il programma termina, <emphasis>e non so perchè</emphasis><itemizedlist>
+<listitem><para>(il sonno sta iniziando ad avere la meglio) <bold>ma se non compili ciccio, ma come pretendi che il sistema prenda la modifica?</bold></para>
+</listitem><listitem><para>capito, compilo e riproviamo</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>LIMITAZIONE</bold> ci sono marker alti, e marker bassi ... bisogna distinguere tra i due tipi</para>
+</listitem><listitem><para>risolviamo qualche limitazione<itemizedlist>
+<listitem><para>più vicino ai markers! passiamo ad un 97.5% di vicinanza al marker</para>
+</listitem><listitem><para>e distinzione tra marker alti e marker bassi</para>
+</listitem><listitem><para><emphasis>ma prima devo definire un subscriber del tutto analogo a quello della nav unit ...</emphasis></para>
+</listitem><listitem><para><emphasis>e inoltre ... ho appena scoperto che rosplan non mi invia il marker ...</emphasis></para>
+</listitem><listitem><para>proviamo a compilare .. a spranghe, compila</para>
+</listitem><listitem><para>voglio rivedere velocemente le poses nel pacchetto moveit, alzare la high e alzare leggermente la low</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e test ...<itemizedlist>
+<listitem><para>ogni tanto si attiva il wall follow a caso ... devo eliminarlo, altrimenti non se ne esce più</para>
+</listitem><listitem><para>e infatti senza il wall follower il robot va molto meglio. ancora non sono convintissimo della macchina a stati, ma va bene così per il momento</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(mi sarei aspettato di fare prima)</para>
+</listitem><listitem><para>per il momento, l&apos;aiutino sull&apos;oracolo teniamolo: 0.25 è davvero troppo stretto.<itemizedlist>
+<listitem><para>dovrei rifare il manipulation controller ... poi, un altro giorno</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem></listitem></itemizedlist>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md71">
+<sect2 id="md__docs_dev-log_1autotoc_md72">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -1598,9 +1635,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md72">
+<sect2 id="md__docs_dev-log_1autotoc_md73">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md73">
+<sect3 id="md__docs_dev-log_1autotoc_md74">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -1612,7 +1649,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md74">
+<sect3 id="md__docs_dev-log_1autotoc_md75">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>
@@ -1624,24 +1661,9 @@
 </para>
 <para>problemi, limitazioni, difetti:</para>
 <para><itemizedlist>
-<listitem><para>rapido aumento della complessità di implementazione del sistema</para>
+<listitem><para>rapido aumento della complessità di implementazione del sistema </para>
 </listitem></itemizedlist>
 </para>
-</sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md75">
-<title>scrittura del mission manager (e metodo di lavoro in generale)</title>
-<para>ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.</para>
-<para><itemizedlist>
-<listitem><para>voglio essere sicuro che non accada qualcosa di storto nell&apos;aprire o usare un protocollo di comunicazione</para>
-</listitem><listitem><para>il codice dev&apos;essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile</para>
-</listitem><listitem><para>il codice in generale dev&apos;essere più informativo possibile e dare un log che consenta di ricostruire l&apos;accaduto quanto più in dettaglio possibile</para>
-</listitem><listitem><para>preferisco <emphasis>evitare python</emphasis> perchè l&apos;unico modo per debuggarlo è ... provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, <emphasis>e non porta a strani NoneTypes imprevisti</emphasis></para>
-</listitem><listitem><para>scrivere <emphasis>il mio stesso codice pensando che esso possa non funzionare come si deve</emphasis>, ad esempio per un bug difficile da scovare</para>
-</listitem></itemizedlist>
-</para>
-<para>insomma: <emphasis>evitare situazioni impreviste</emphasis> nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.</para>
-<para>c&apos;è un altro motivo per preferire un approccio super sicuro alla paranoia: <emphasis>l&apos;aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione</emphasis>. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima <emphasis>e dopo</emphasis> la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E&apos; qualcosa che frena l&apos;invenzione, frena l&apos;immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.</para>
-<para>morale della favola: <emphasis>fallo bene una volta sola piuttosto che male 100 volte</emphasis>. </para>
 </sect3>
 </sect2>
 </sect1>

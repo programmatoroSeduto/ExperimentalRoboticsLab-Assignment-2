@@ -154,9 +154,14 @@
     <member refid="classnode__manipulation__unit_1a0307919aeb2ba02a4b44c9a287ff8ab2" kind="variable"><name>nh</name></member>
     <member refid="classnode__manipulation__unit_1a0e64187af9962c6415a7bd51f31b33c3" kind="variable"><name>srv_roboplan_manip</name></member>
     <member refid="classnode__manipulation__unit_1a586f7512e45d6ffc0e87090a125b6056" kind="variable"><name>cl_manip</name></member>
+    <member refid="classnode__manipulation__unit_1ad108c2122ced40b643aeef36d87d80a1" kind="variable"><name>sub_markers</name></member>
+    <member refid="classnode__manipulation__unit_1a722e13baf2f5d40cd10b3dc77b209d98" kind="variable"><name>found_markers</name></member>
+    <member refid="classnode__manipulation__unit_1a8c7e91083d21e3b76c0b19e11e5dff3d" kind="variable"><name>waypoints</name></member>
+    <member refid="classnode__manipulation__unit_1ae9a673454d49286adc26752225bc7391" kind="variable"><name>waypoint_heigth</name></member>
     <member refid="classnode__manipulation__unit_1aa56cb61dac7f3270ca379827de41666e" kind="function"><name>node_manipulation_unit</name></member>
     <member refid="classnode__manipulation__unit_1a10a18deee7bcb8de1be692c182ef49a8" kind="function"><name>spin</name></member>
     <member refid="classnode__manipulation__unit_1a7334affee4fac593614b7c98b56f48b1" kind="function"><name>cbk_roboplan_manip</name></member>
+    <member refid="classnode__manipulation__unit_1acc8dace053bce583b55a7109326042e6" kind="function"><name>cbk_markers</name></member>
   </compound>
   <compound refid="classnode__mission__manager" kind="class"><name>node_mission_manager</name>
     <member refid="classnode__mission__manager_1ae80c55f44c63fb7cf826fe154234032b" kind="variable"><name>nh</name></member>
@@ -187,6 +192,7 @@
     <member refid="classnode__navigation__unit_1aa5e354f55a42e37aa8eef7d35b09eba5" kind="variable"><name>sub_markers</name></member>
     <member refid="classnode__navigation__unit_1a5421a6d62f316d7618613b36418ce105" kind="variable"><name>cl_nav_algorithm</name></member>
     <member refid="classnode__navigation__unit_1a6474c507095194da8b48d5dba5aa0ecf" kind="variable"><name>waypoints</name></member>
+    <member refid="classnode__navigation__unit_1a70d0814f60cb07f37b352401dac6600d" kind="variable"><name>waypoint_heigth</name></member>
     <member refid="classnode__navigation__unit_1a34ee76415ed7a4d90eaaeadba49f1f9b" kind="variable"><name>found_markers</name></member>
     <member refid="classnode__navigation__unit_1a38301d6d3ac11c8752d78d6a88cc4c97" kind="variable"><name>mpl_enabled</name></member>
     <member refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" kind="function"><name>node_navigation_unit</name></member>
@@ -844,8 +850,11 @@
     <member refid="manipulation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" kind="define"><name>TLOG</name></member>
     <member refid="manipulation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" kind="define"><name>TWARN</name></member>
     <member refid="manipulation__unit_8cpp_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
+    <member refid="manipulation__unit_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" kind="define"><name>SS</name></member>
+    <member refid="manipulation__unit_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" kind="define"><name>SSS</name></member>
     <member refid="manipulation__unit_8cpp_1a1ffaa7bfaff984375908b5c2eb156714" kind="define"><name>SERVICE_ROBOPLAN_MANIP</name></member>
     <member refid="manipulation__unit_8cpp_1ad4c51c23cd787eed92cb27695d54fa3b" kind="define"><name>SERVICE_MANIP</name></member>
+    <member refid="manipulation__unit_8cpp_1a735ccfd0415c3273be69843313f0030e" kind="define"><name>TOPIC_MARMERS</name></member>
     <member refid="manipulation__unit_8cpp_1a1f285fd20a5c25b9c992b9a6161f75ab" kind="define"><name>POSE_HOME</name></member>
     <member refid="manipulation__unit_8cpp_1a1a91a5c6eb5f9d956907ef99a55fde46" kind="define"><name>POSE_EXTENDED</name></member>
     <member refid="manipulation__unit_8cpp_1af3cf1ad007e09eff2b8209586939a3a6" kind="define"><name>POSE_LOW</name></member>
