@@ -709,7 +709,26 @@ sleep <span class="m">2</span>
 </div>
 <div class="section" id="testing-rosplan-plus-real-motion-controller">
 <h2>TESTING rosplan plus real motion controller<a class="headerlink" href="#testing-rosplan-plus-real-motion-controller" title="Permalink to this heading"></a></h2>
-<p>…</p>
+<p>it is the same last test of robocluedo ROSPlan, but this time using the real movement controller.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_mission_manager run_components.launch <span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># shell 2</span>
+rostopic <span class="nb">echo</span> /oracle_hint
+
+<span class="c1"># shell 2</span>
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}&quot;</span>
+
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 0}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 1}&quot;</span> 
+rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}&quot;</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="testing-oracle-plus-movement-controller">
 <h2>TESTING Oracle plus movement controller<a class="headerlink" href="#testing-oracle-plus-movement-controller" title="Permalink to this heading"></a></h2>

@@ -1480,7 +1480,110 @@ il progetto completo adesso c'è! i prossimi passi? module testing, e infine tes
 	- manca solo il manipulator, per cui secondo me ho già un test bello pronto
 - **COMMIT** : "module testing (rosplan, navigation, manipulation)"
 
+---
 
+e adesso siamo giunti al momento di *provare la comunicazione tra i component*. Prima di provare il mission manager per intero voglio essere assolutamente certo che tutto quello che c'è attorno al mission manager funzioni, in modo da poter isolare il problema più facilmente.
+
+- (proseguiamo col module testing)
+- rosplan più controller!
+- ... ok, avevo sottovalutato la situazione: *serve un launch file globale* altrimenti devo lanciare una ricca costellazione ... di shell, e non ne ho voglia
+- test ... ma niente
+	
+	questo errore è un autentico mistero ... 
+	
+	```text
+	root@3b17871017fd:~/ros_ws/src/erl2-new# rosrun robocluedo_mission_manager navigation_unit
+	[ INFO] [1660407077.831806900]: [navigation_unit] starting ... 
+	[ INFO] [1660407077.839691200]: [navigation_unit] sub topic /visualization_marker ... 
+	[ INFO] [1660407077.842722600]: [navigation_unit] sub topic /visualization_marker ...  OK
+	[ INFO] [1660407077.842797900]: [navigation_unit] advertising service /robocluedo/navigation_command ... 
+	[ INFO] [1660407077.843474100]: [navigation_unit] advertising service /robocluedo/navigation_command ... OK
+	[ INFO] [1660407077.843544000]: [navigation_unit] opening client /navigation_manager/navigation ... 
+	[ INFO] [1660407077.844301900]: [navigation_unit] opening client /navigation_manager/navigation ... OK
+	[ INFO] [1660407077.844362200]: [navigation_unit] opening client /navigation_manager/set_algorithm ... 
+	[ INFO] [1660407077.845099500]: [navigation_unit] opening client /navigation_manager/set_algorithm ... OK
+	[ INFO] [1660407077.845175600]: [navigation_unit] ready
+	[ INFO] [1660407111.381570100, 178.948000000]: [navigation_unit] received a request (wp=)wp1
+	[ INFO] [1660407111.381646300, 178.949000000]: [navigation_unit] enabling motion planning algorithm...
+	[ERROR] [1660407111.381688800, 178.949000000]: Call to service [/navigation_manager/set_algorithm] with md5sum [0e1a5befb7c98ef5415a7d22fbb30177] does not match md5sum when the handle was created ([6e1d2f861340c9704c6bdc4be6b7a162])
+	[ WARN] [1660407111.381745700, 178.949000000]: [navigation_unit] WARNING: unable to contact the service to enable the navigation algorithm.
+
+	```
+	
+	il problema (se ho capito bene) significa che la navigation unit non riesce a contattare il navigation manager (almeno il servizio riguardante l'algoritmo) ... però il servizio pare essere stato correttamente attivato, quindi non ha molto senso. 
+
+- provo a riavviare i componenti e a vedere se il servizio viene definito
+	- la stessa chiamata da console ha successo, quindi dev'esserci qualcosa che non va col nome del servizio, o insomma con la definizione del servizio nella navigation unit
+
+		```text
+		root@3b17871017fd:~/ros_ws# rosservice list | grep algo
+		/navigation_manager/set_algorithm
+		root@3b17871017fd:~/ros_ws# rosservice info /navigation_manager/set_algorithm 
+		Node: /navigation_manager
+		URI: rosrpc://3b17871017fd:55987
+		Type: robocluedo_movement_controller_msgs/Algorithm
+		Args: algorithm enabled
+		root@3b17871017fd:~/ros_ws# rosservice call /navigation_manager/set_algorithm 
+		Usage: rosservice call /service [args...]
+
+		rosservice: error: Please specify service arguments
+		root@3b17871017fd:~/ros_ws# rosservice call /navigation_manager/set_algorithm "algorithm: 0
+		enabled: true" 
+		success: True
+		details: ''
+		root@3b17871017fd:~/ros_ws# 
+		```
+	- **BECCATO!** Il problema stava proprio nella definizione, in particolare il tipo di messaggio con cui è stato definito il servizio: dovrebbe essere `Algorithm`
+		
+		```text
+		// client navigation algorithm
+		TLOG( "opening client " << SERVICE_SET_ALGORITHM << " ... " );
+		cl_nav_algorithm = nh.serviceClient<robocluedo_rosplan_msgs::NavigationCommand>( SERVICE_SET_ALGORITHM );
+		if( !cl_nav_algorithm.waitForExistence( ros::Duration(60) ) )
+		{
+			TERR( "unable to contact the server " << SERVICE_SET_ALGORITHM << " - timeout expired (60s) " );
+			return;
+		}
+		TLOG( "opening client " << SERVICE_SET_ALGORITHM << " ... OK" );
+		```
+		
+		e c'era anche un altro errore: da un'altra parte chiamavo `cl_nav_algorithm` anzichè `cl_nav`, ma essendo la definizione del servizio errata, per il compilatore non c'era problema.
+	
+	- (sonno fortissimo mentre scrivevo 'sta roba, c'erano un sacco di altri errori stupidissimi)
+
+- eeee proviamo di nuovo, stesso test (diamine, era riba già collaudata) ... 
+- **ISSUE** i marker sono messi in posizioni irraggiungibili dal robot (questa è la parte corretta) ...
+	- ... ma *il robot non dovrebbe andare proprio così vicino* ... come si risolve questa cosa *senza implementare un qualcosa di troppo customizzato?*
+	- temo non ci sia altra scelta: devo scalare la posizione all'interno del nodo bridge... non mi piace molto
+- e proviamo ancora
+- **ISSUE** angolo sbagliato, e coordinate decisamente troppo lontane dal punto (maaa dormivo quando ho scritto quella roba? *probabile*)
+	- potrei aver sottovalutato la questione. Per avere un approccio migliore, almeno in questa situazione, e data la pessima controlalbilità del robot, potrei pensare ad un movimento di avvicinamento al marker in 3 fasi: avvicinamento del 75% (mi piazzo di fronte al marker), avvicinamento *rettilineo* al 90%, e dopo il movimento col manipolatore, allontanamento in retro al 75%
+	- il problema è che il robot attuale *non supporta la retro...*
+- almeno le units funzionano bene dai. ora è solo un problema di geometria, che a quanto pare sto canando di brutto per qualche ragione. 
+	- **ILLUMINAZIONE GENIALE** : ho invertito le coordinate dell'arcotangente ... morto dal ridere
+- e riproviamo ... 
+	- **ISSUE** tutti i feedback manager sono UNKNOWN ... devo essermi dimenticato di regolarli
+	- *e invece no* ... ok, questo è assurdo
+- **ISSUE** il robot si avvicina ... ma non abbastanza a quanto pare
+	- anzitutto voglio vedere se il sistema funziona, quindi giochicchiamo con l'oracolo
+	- il sistema di invio funzionare funziona
+	- non mi piace fare modifiche all'oracolo, anche se piccola non mi piace ... perciò vorrei trovare un sistema alternativo per non dover stravoltere tutto l'URDF e nel contempo farlo funzionare
+	- posso provare a far venire il robot più vicino al marker, dopotutto ad ogni avvicinamento ho notato che è raro che il robot arrivi esattamente al target: rimane sempre un po' più indietro rispetto all'allineamento tra il punto di partenza e il target
+	- (se riuscissi a raggiungere la threshold del prof *senza barare* sarei felicissimo)
+- in un futuro auspicabilmente non troppo lontano poi vorrei capire questo da moveit:
+	```text
+	[ INFO] [1660412162.088435300, 130.624000000]: Completed trajectory execution with status ABORTED ...
+	[ INFO] [1660412162.091503800, 130.627000000]: ABORTED: Solution found but controller failed during execution
+	```
+- **LIMITAZIONE** 3.14 è ingegneristicamente parlando *zero radianti ...*
+- **LIMITAZIONE** penso che il wall following in questo contesto sia praticamente inutile. dovrei implementare un controller che non includa il wall follower, solo il go to point
+- **LIMITAZIONE** si attiva il wall follow perchè *il sensore laser va a colpire le ruote!*
+- ehi ha funzionato! *male, ma è già qualcosa*
+- **LIMITAZIONE** il modello del robot fa proprio ... schifo, e anche il controllo non è proprio tutto questo gran chè. l'architettura funziona bene, ma fatica veramente troppo ad andare avanti
+	- ci sono volte in cui il robot va contro il muro di lungo, si incastra e non riesce ad uscirne. posso pensare a qualche sistema per evitare che questo accada? oppure ... forse meglio modificare il modello?
+- il robot funziona *leggermente meglio* se evito di andare troppo vicino al marker, al 90% ci sta, si può fare
+- **COME LOGICA IL ROBOT FUNZIONA**
+- **COMMIT**: "testing (very near to the final tests)"
 
 
 

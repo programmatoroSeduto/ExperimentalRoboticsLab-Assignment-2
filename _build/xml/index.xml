@@ -814,6 +814,7 @@
   <compound refid="worlds-user-manual_8md" kind="file"><name>worlds-user-manual.md</name>
   </compound>
   <compound refid="simulation_8cpp" kind="file"><name>simulation.cpp</name>
+    <member refid="simulation_8cpp_1aef9f565da4dc86e1cbb3381618fdb45b" kind="define"><name>DIST_THRESH</name></member>
     <member refid="simulation_8cpp_1a32812fe000700d7aa8988d74e59471c7" kind="variable"><name>oracle_pub</name></member>
     <member refid="simulation_8cpp_1a36b0204cd96e3dc326a2adfa3d1dceda" kind="variable"><name>markx</name></member>
     <member refid="simulation_8cpp_1a0bc4146f286fe42bd5e8fa1e53826447" kind="variable"><name>marky</name></member>
@@ -894,6 +895,7 @@
     <member refid="navigation__unit_8cpp_1a86668a6e04783029932ae15d276f52a3" kind="define"><name>SERVICE_NAVIGATION</name></member>
     <member refid="navigation__unit_8cpp_1a735ccfd0415c3273be69843313f0030e" kind="define"><name>TOPIC_MARMERS</name></member>
     <member refid="navigation__unit_8cpp_1a256d3c2a228d8927d1052be67b95c0c6" kind="define"><name>NAV_ALGO_BUG_M</name></member>
+    <member refid="navigation__unit_8cpp_1a1dfc2df4edf95f828461ec28a276d36c" kind="define"><name>SCALING_FACTOR</name></member>
     <member refid="navigation__unit_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
     <member refid="navigation__unit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>

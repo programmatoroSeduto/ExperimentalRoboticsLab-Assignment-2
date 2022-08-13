@@ -203,8 +203,8 @@ rostopic echo /rosplan_parsing_interface/complete_plan -n 1
 	<param name="action_probability"	value="1.0" />
 </node>
 
-<node pkg="robocluedo_rosplan" name="kb_interface" type="kb_interface" />
+<node pkg="robocluedo_rosplan" name="kb_interface" type="kb_interface" required="true" output="screen" />
 <!-- <node pkg="robocluedo_rosplan" name="rosplan_simulated_motion_system." type="rosplan_simulated_motion_system.py" /> -->
-<node pkg="robocluedo_rosplan" name="rosplan_pipeline_manager" type="rosplan_pipeline_manager.py" />
+<node pkg="robocluedo_rosplan" name="rosplan_pipeline_manager" type="rosplan_pipeline_manager.py" required="true" output="screen" />
 
 </launch>

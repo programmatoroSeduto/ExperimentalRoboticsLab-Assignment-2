@@ -9,6 +9,9 @@
 #include <time.h>
 #include <vector>
 
+// #define DIST_THRESH 0.25
+#define DIST_THRESH 0.5
+
 ros::Publisher oracle_pub;
 
 double markx[4];
@@ -45,7 +48,7 @@ void oracleCallback(const gazebo_msgs::LinkStates::ConstPtr& msg)
    for(int i=0; i< msg->name.size(); i++){
 	   if (msg->name[i].find("cluedo_link")!= std::string::npos){
 		   for(int j=0; j<4;j++){
-				if ((distfromtarget(msg->pose[i].position.x, msg->pose[i].position.y, msg->pose[i].position.z, markx[j],marky[j],markz[j])<0.25) && ((lastmarkx !=markx[j]) || (lastmarky != marky[j]))){
+				if ((distfromtarget(msg->pose[i].position.x, msg->pose[i].position.y, msg->pose[i].position.z, markx[j],marky[j],markz[j])<DIST_THRESH) && ((lastmarkx !=markx[j]) || (lastmarky != marky[j]))){
 				erl2::ErlOracle oracle_msg;
 				oracle_msg.ID = rand() % 6;
 				if(rand()%4==1){

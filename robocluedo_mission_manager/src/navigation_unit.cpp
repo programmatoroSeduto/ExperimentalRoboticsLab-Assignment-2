@@ -11,7 +11,7 @@
 * 
 ***********************************************/
 
-#define NODE_NAME "manipualtion_unit"
+#define NODE_NAME "navigation_unit"
 
 #define LOGSQUARE( str )  "[" << str << "] "
 #define OUTLABEL          LOGSQUARE( NODE_NAME )
@@ -43,6 +43,8 @@
 // i.e. use the bug_m motion planning algorithm
 #define NAV_ALGO_BUG_M 0
 
+#define SCALING_FACTOR 0.9
+
 class node_navigation_unit
 {
 public:
@@ -62,7 +64,7 @@ public:
 		
 		// client navigation controller
 		TLOG( "opening client " << SERVICE_NAVIGATION << " ... " );
-		cl_nav = nh.serviceClient<robocluedo_rosplan_msgs::NavigationCommand>( SERVICE_NAVIGATION );
+		cl_nav = nh.serviceClient<robocluedo_movement_controller_msgs::NavigationService>( SERVICE_NAVIGATION );
 		if( !cl_nav.waitForExistence( ros::Duration(60) ) )
 		{
 			TERR( "unable to contact the server " << SERVICE_NAVIGATION << " - timeout expired (60s) " );
@@ -72,7 +74,7 @@ public:
 		
 		// client navigation algorithm
 		TLOG( "opening client " << SERVICE_SET_ALGORITHM << " ... " );
-		cl_nav_algorithm = nh.serviceClient<robocluedo_rosplan_msgs::NavigationCommand>( SERVICE_SET_ALGORITHM );
+		cl_nav_algorithm = nh.serviceClient<robocluedo_movement_controller_msgs::Algorithm>( SERVICE_SET_ALGORITHM );
 		if( !cl_nav_algorithm.waitForExistence( ros::Duration(60) ) )
 		{
 			TERR( "unable to contact the server " << SERVICE_SET_ALGORITHM << " - timeout expired (60s) " );
@@ -148,7 +150,7 @@ public:
 		cmd.request.target = waypoints[req.waypoint];
 		TLOG("waypoint with coordinates (" << cmd.request.target.x << ", " << cmd.request.target.y << ", " << cmd.request.target.yaw << ")");
 		
-		if( !cl_nav_algorithm.call( cmd ) )
+		if( !cl_nav.call( cmd ) )
 		{
 			TWARN( "unable to contact the navigation service" );
 			
@@ -168,6 +170,8 @@ public:
 	/** "one-shot" listener for the markers from the Oracle */
 	void cbk_markers( const visualization_msgs::MarkerArray::ConstPtr& data )
 	{
+		TLOG( "reading markers ... " );
+		
 		// read the markers
 		int i = 1;
 		for( const visualization_msgs::Marker& mrk : data->markers )
@@ -175,13 +179,20 @@ public:
 			std::string marker_name = SS("wp") + SSS(i);
 			
 			robocluedo_movement_controller_msgs::Pose2D markerpose;
-			markerpose.x = mrk.pose.position.x;
-			markerpose.y = mrk.pose.position.y;
-			markerpose.yaw = atan2( markerpose.x, markerpose.y );
+			
+			markerpose.x = mrk.pose.position.x * SCALING_FACTOR;
+			markerpose.y = mrk.pose.position.y * SCALING_FACTOR;
+			
+			markerpose.yaw = atan2( markerpose.y, markerpose.x ); // atan2 from -pi to pi
+			if( markerpose.yaw > 3.135 )
+				markerpose.yaw = 3.135; 
+			else if( markerpose.yaw < -3.135 )
+				markerpose.yaw = 3.135;
 			
 			waypoints[marker_name] = markerpose;
 			
 			++i;
+			TLOG( "received (" << i << ") marker with data (x=" << markerpose.x << ", y=" << markerpose.y << ", yaw= " << markerpose.yaw << ")" );
 		}
 		
 		// unsubscribe

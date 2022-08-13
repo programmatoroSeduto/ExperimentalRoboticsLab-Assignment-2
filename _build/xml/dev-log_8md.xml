@@ -1489,7 +1489,110 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>manca<sp/>solo<sp/>il<sp/>manipulator,<sp/>per<sp/>cui<sp/>secondo<sp/>me<sp/>ho<sp/>già<sp/>un<sp/>test<sp/>bello<sp/>pronto</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;module<sp/>testing<sp/>(rosplan,<sp/>navigation,<sp/>manipulation)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">e<sp/>adesso<sp/>siamo<sp/>giunti<sp/>al<sp/>momento<sp/>di<sp/>*provare<sp/>la<sp/>comunicazione<sp/>tra<sp/>i<sp/>component*.<sp/>Prima<sp/>di<sp/>provare<sp/>il<sp/>mission<sp/>manager<sp/>per<sp/>intero<sp/>voglio<sp/>essere<sp/>assolutamente<sp/>certo<sp/>che<sp/>tutto<sp/>quello<sp/>che<sp/>c&apos;è<sp/>attorno<sp/>al<sp/>mission<sp/>manager<sp/>funzioni,<sp/>in<sp/>modo<sp/>da<sp/>poter<sp/>isolare<sp/>il<sp/>problema<sp/>più<sp/>facilmente.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(proseguiamo<sp/>col<sp/>module<sp/>testing)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>rosplan<sp/>più<sp/>controller!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>...<sp/>ok,<sp/>avevo<sp/>sottovalutato<sp/>la<sp/>situazione:<sp/>*serve<sp/>un<sp/>launch<sp/>file<sp/>globale*<sp/>altrimenti<sp/>devo<sp/>lanciare<sp/>una<sp/>ricca<sp/>costellazione<sp/>...<sp/>di<sp/>shell,<sp/>e<sp/>non<sp/>ne<sp/>ho<sp/>voglia</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>test<sp/>...<sp/>ma<sp/>niente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>questo<sp/>errore<sp/>è<sp/>un<sp/>autentico<sp/>mistero<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new#<sp/>rosrun<sp/>robocluedo_mission_manager<sp/>navigation_unit</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.831806900]:<sp/>[navigation_unit]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.839691200]:<sp/>[navigation_unit]<sp/>sub<sp/>topic<sp/>/visualization_marker<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.842722600]:<sp/>[navigation_unit]<sp/>sub<sp/>topic<sp/>/visualization_marker<sp/>...<sp/><sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.842797900]:<sp/>[navigation_unit]<sp/>advertising<sp/>service<sp/>/robocluedo/navigation_command<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.843474100]:<sp/>[navigation_unit]<sp/>advertising<sp/>service<sp/>/robocluedo/navigation_command<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.843544000]:<sp/>[navigation_unit]<sp/>opening<sp/>client<sp/>/navigation_manager/navigation<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.844301900]:<sp/>[navigation_unit]<sp/>opening<sp/>client<sp/>/navigation_manager/navigation<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.844362200]:<sp/>[navigation_unit]<sp/>opening<sp/>client<sp/>/navigation_manager/set_algorithm<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.845099500]:<sp/>[navigation_unit]<sp/>opening<sp/>client<sp/>/navigation_manager/set_algorithm<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407077.845175600]:<sp/>[navigation_unit]<sp/>ready</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407111.381570100,<sp/>178.948000000]:<sp/>[navigation_unit]<sp/>received<sp/>a<sp/>request<sp/>(wp=)wp1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660407111.381646300,<sp/>178.949000000]:<sp/>[navigation_unit]<sp/>enabling<sp/>motion<sp/>planning<sp/>algorithm...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[ERROR]<sp/>[1660407111.381688800,<sp/>178.949000000]:<sp/>Call<sp/>to<sp/>service<sp/>[/navigation_manager/set_algorithm]<sp/>with<sp/>md5sum<sp/>[0e1a5befb7c98ef5415a7d22fbb30177]<sp/>does<sp/>not<sp/>match<sp/>md5sum<sp/>when<sp/>the<sp/>handle<sp/>was<sp/>created<sp/>([6e1d2f861340c9704c6bdc4be6b7a162])</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>WARN]<sp/>[1660407111.381745700,<sp/>178.949000000]:<sp/>[navigation_unit]<sp/>WARNING:<sp/>unable<sp/>to<sp/>contact<sp/>the<sp/>service<sp/>to<sp/>enable<sp/>the<sp/>navigation<sp/>algorithm.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>il<sp/>problema<sp/>(se<sp/>ho<sp/>capito<sp/>bene)<sp/>significa<sp/>che<sp/>la<sp/>navigation<sp/>unit<sp/>non<sp/>riesce<sp/>a<sp/>contattare<sp/>il<sp/>navigation<sp/>manager<sp/>(almeno<sp/>il<sp/>servizio<sp/>riguardante<sp/>l&apos;algoritmo)<sp/>...<sp/>però<sp/>il<sp/>servizio<sp/>pare<sp/>essere<sp/>stato<sp/>correttamente<sp/>attivato,<sp/>quindi<sp/>non<sp/>ha<sp/>molto<sp/>senso.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>provo<sp/>a<sp/>riavviare<sp/>i<sp/>componenti<sp/>e<sp/>a<sp/>vedere<sp/>se<sp/>il<sp/>servizio<sp/>viene<sp/>definito</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>stessa<sp/>chiamata<sp/>da<sp/>console<sp/>ha<sp/>successo,<sp/>quindi<sp/>dev&apos;esserci<sp/>qualcosa<sp/>che<sp/>non<sp/>va<sp/>col<sp/>nome<sp/>del<sp/>servizio,<sp/>o<sp/>insomma<sp/>con<sp/>la<sp/>definizione<sp/>del<sp/>servizio<sp/>nella<sp/>navigation<sp/>unit</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws#<sp/>rosservice<sp/>list<sp/>|<sp/>grep<sp/>algo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>/navigation_manager/set_algorithm</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws#<sp/>rosservice<sp/>info<sp/>/navigation_manager/set_algorithm<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Node:<sp/>/navigation_manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>URI:<sp/>rosrpc://3b17871017fd:55987</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Type:<sp/>robocluedo_movement_controller_msgs/Algorithm</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Args:<sp/>algorithm<sp/>enabled</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws#<sp/>rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Usage:<sp/>rosservice<sp/>call<sp/>/service<sp/>[args...]</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rosservice:<sp/>error:<sp/>Please<sp/>specify<sp/>service<sp/>arguments</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws#<sp/>rosservice<sp/>call<sp/>/navigation_manager/set_algorithm<sp/>&quot;algorithm:<sp/>0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>enabled:<sp/>true&quot;<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success:<sp/>True</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>details:<sp/>&apos;&apos;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws#<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**BECCATO!**<sp/>Il<sp/>problema<sp/>stava<sp/>proprio<sp/>nella<sp/>definizione,<sp/>in<sp/>particolare<sp/>il<sp/>tipo<sp/>di<sp/>messaggio<sp/>con<sp/>cui<sp/>è<sp/>stato<sp/>definito<sp/>il<sp/>servizio:<sp/>dovrebbe<sp/>essere<sp/>`Algorithm`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>client<sp/>navigation<sp/>algorithm</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TLOG(<sp/>&quot;opening<sp/>client<sp/>&quot;<sp/>&lt;&lt;<sp/>SERVICE_SET_ALGORITHM<sp/>&lt;&lt;<sp/>&quot;<sp/>...<sp/>&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cl_nav_algorithm<sp/>=<sp/>nh.serviceClient&lt;robocluedo_rosplan_msgs::NavigationCommand&gt;(<sp/>SERVICE_SET_ALGORITHM<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>!cl_nav_algorithm.waitForExistence(<sp/>ros::Duration(60)<sp/>)<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TERR(<sp/>&quot;unable<sp/>to<sp/>contact<sp/>the<sp/>server<sp/>&quot;<sp/>&lt;&lt;<sp/>SERVICE_SET_ALGORITHM<sp/>&lt;&lt;<sp/>&quot;<sp/>-<sp/>timeout<sp/>expired<sp/>(60s)<sp/>&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>TLOG(<sp/>&quot;opening<sp/>client<sp/>&quot;<sp/>&lt;&lt;<sp/>SERVICE_SET_ALGORITHM<sp/>&lt;&lt;<sp/>&quot;<sp/>...<sp/>OK&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>e<sp/>c&apos;era<sp/>anche<sp/>un<sp/>altro<sp/>errore:<sp/>da<sp/>un&apos;altra<sp/>parte<sp/>chiamavo<sp/>`cl_nav_algorithm`<sp/>anzichè<sp/>`cl_nav`,<sp/>ma<sp/>essendo<sp/>la<sp/>definizione<sp/>del<sp/>servizio<sp/>errata,<sp/>per<sp/>il<sp/>compilatore<sp/>non<sp/>c&apos;era<sp/>problema.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(sonno<sp/>fortissimo<sp/>mentre<sp/>scrivevo<sp/>&apos;sta<sp/>roba,<sp/>c&apos;erano<sp/>un<sp/>sacco<sp/>di<sp/>altri<sp/>errori<sp/>stupidissimi)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>eeee<sp/>proviamo<sp/>di<sp/>nuovo,<sp/>stesso<sp/>test<sp/>(diamine,<sp/>era<sp/>riba<sp/>già<sp/>collaudata)<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>i<sp/>marker<sp/>sono<sp/>messi<sp/>in<sp/>posizioni<sp/>irraggiungibili<sp/>dal<sp/>robot<sp/>(questa<sp/>è<sp/>la<sp/>parte<sp/>corretta)<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>ma<sp/>*il<sp/>robot<sp/>non<sp/>dovrebbe<sp/>andare<sp/>proprio<sp/>così<sp/>vicino*<sp/>...<sp/>come<sp/>si<sp/>risolve<sp/>questa<sp/>cosa<sp/>*senza<sp/>implementare<sp/>un<sp/>qualcosa<sp/>di<sp/>troppo<sp/>customizzato?*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>temo<sp/>non<sp/>ci<sp/>sia<sp/>altra<sp/>scelta:<sp/>devo<sp/>scalare<sp/>la<sp/>posizione<sp/>all&apos;interno<sp/>del<sp/>nodo<sp/>bridge...<sp/>non<sp/>mi<sp/>piace<sp/>molto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>proviamo<sp/>ancora</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>angolo<sp/>sbagliato,<sp/>e<sp/>coordinate<sp/>decisamente<sp/>troppo<sp/>lontane<sp/>dal<sp/>punto<sp/>(maaa<sp/>dormivo<sp/>quando<sp/>ho<sp/>scritto<sp/>quella<sp/>roba?<sp/>*probabile*)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>potrei<sp/>aver<sp/>sottovalutato<sp/>la<sp/>questione.<sp/>Per<sp/>avere<sp/>un<sp/>approccio<sp/>migliore,<sp/>almeno<sp/>in<sp/>questa<sp/>situazione,<sp/>e<sp/>data<sp/>la<sp/>pessima<sp/>controlalbilità<sp/>del<sp/>robot,<sp/>potrei<sp/>pensare<sp/>ad<sp/>un<sp/>movimento<sp/>di<sp/>avvicinamento<sp/>al<sp/>marker<sp/>in<sp/>3<sp/>fasi:<sp/>avvicinamento<sp/>del<sp/>75%<sp/>(mi<sp/>piazzo<sp/>di<sp/>fronte<sp/>al<sp/>marker),<sp/>avvicinamento<sp/>*rettilineo*<sp/>al<sp/>90%,<sp/>e<sp/>dopo<sp/>il<sp/>movimento<sp/>col<sp/>manipolatore,<sp/>allontanamento<sp/>in<sp/>retro<sp/>al<sp/>75%</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>problema<sp/>è<sp/>che<sp/>il<sp/>robot<sp/>attuale<sp/>*non<sp/>supporta<sp/>la<sp/>retro...*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>almeno<sp/>le<sp/>units<sp/>funzionano<sp/>bene<sp/>dai.<sp/>ora<sp/>è<sp/>solo<sp/>un<sp/>problema<sp/>di<sp/>geometria,<sp/>che<sp/>a<sp/>quanto<sp/>pare<sp/>sto<sp/>canando<sp/>di<sp/>brutto<sp/>per<sp/>qualche<sp/>ragione.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ILLUMINAZIONE<sp/>GENIALE**<sp/>:<sp/>ho<sp/>invertito<sp/>le<sp/>coordinate<sp/>dell&apos;arcotangente<sp/>...<sp/>morto<sp/>dal<sp/>ridere</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>riproviamo<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>tutti<sp/>i<sp/>feedback<sp/>manager<sp/>sono<sp/>UNKNOWN<sp/>...<sp/>devo<sp/>essermi<sp/>dimenticato<sp/>di<sp/>regolarli</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*e<sp/>invece<sp/>no*<sp/>...<sp/>ok,<sp/>questo<sp/>è<sp/>assurdo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>il<sp/>robot<sp/>si<sp/>avvicina<sp/>...<sp/>ma<sp/>non<sp/>abbastanza<sp/>a<sp/>quanto<sp/>pare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anzitutto<sp/>voglio<sp/>vedere<sp/>se<sp/>il<sp/>sistema<sp/>funziona,<sp/>quindi<sp/>giochicchiamo<sp/>con<sp/>l&apos;oracolo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>sistema<sp/>di<sp/>invio<sp/>funzionare<sp/>funziona</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>non<sp/>mi<sp/>piace<sp/>fare<sp/>modifiche<sp/>all&apos;oracolo,<sp/>anche<sp/>se<sp/>piccola<sp/>non<sp/>mi<sp/>piace<sp/>...<sp/>perciò<sp/>vorrei<sp/>trovare<sp/>un<sp/>sistema<sp/>alternativo<sp/>per<sp/>non<sp/>dover<sp/>stravoltere<sp/>tutto<sp/>l&apos;URDF<sp/>e<sp/>nel<sp/>contempo<sp/>farlo<sp/>funzionare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>provare<sp/>a<sp/>far<sp/>venire<sp/>il<sp/>robot<sp/>più<sp/>vicino<sp/>al<sp/>marker,<sp/>dopotutto<sp/>ad<sp/>ogni<sp/>avvicinamento<sp/>ho<sp/>notato<sp/>che<sp/>è<sp/>raro<sp/>che<sp/>il<sp/>robot<sp/>arrivi<sp/>esattamente<sp/>al<sp/>target:<sp/>rimane<sp/>sempre<sp/>un<sp/>po&apos;<sp/>più<sp/>indietro<sp/>rispetto<sp/>all&apos;allineamento<sp/>tra<sp/>il<sp/>punto<sp/>di<sp/>partenza<sp/>e<sp/>il<sp/>target</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(se<sp/>riuscissi<sp/>a<sp/>raggiungere<sp/>la<sp/>threshold<sp/>del<sp/>prof<sp/>*senza<sp/>barare*<sp/>sarei<sp/>felicissimo)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>in<sp/>un<sp/>futuro<sp/>auspicabilmente<sp/>non<sp/>troppo<sp/>lontano<sp/>poi<sp/>vorrei<sp/>capire<sp/>questo<sp/>da<sp/>moveit:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660412162.088435300,<sp/>130.624000000]:<sp/>Completed<sp/>trajectory<sp/>execution<sp/>with<sp/>status<sp/>ABORTED<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660412162.091503800,<sp/>130.627000000]:<sp/>ABORTED:<sp/>Solution<sp/>found<sp/>but<sp/>controller<sp/>failed<sp/>during<sp/>execution</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>3.14<sp/>è<sp/>ingegneristicamente<sp/>parlando<sp/>*zero<sp/>radianti<sp/>...*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>penso<sp/>che<sp/>il<sp/>wall<sp/>following<sp/>in<sp/>questo<sp/>contesto<sp/>sia<sp/>praticamente<sp/>inutile.<sp/>dovrei<sp/>implementare<sp/>un<sp/>controller<sp/>che<sp/>non<sp/>includa<sp/>il<sp/>wall<sp/>follower,<sp/>solo<sp/>il<sp/>go<sp/>to<sp/>point</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>si<sp/>attiva<sp/>il<sp/>wall<sp/>follow<sp/>perchè<sp/>*il<sp/>sensore<sp/>laser<sp/>va<sp/>a<sp/>colpire<sp/>le<sp/>ruote!*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ehi<sp/>ha<sp/>funzionato!<sp/>*male,<sp/>ma<sp/>è<sp/>già<sp/>qualcosa*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>il<sp/>modello<sp/>del<sp/>robot<sp/>fa<sp/>proprio<sp/>...<sp/>schifo,<sp/>e<sp/>anche<sp/>il<sp/>controllo<sp/>non<sp/>è<sp/>proprio<sp/>tutto<sp/>questo<sp/>gran<sp/>chè.<sp/>l&apos;architettura<sp/>funziona<sp/>bene,<sp/>ma<sp/>fatica<sp/>veramente<sp/>troppo<sp/>ad<sp/>andare<sp/>avanti</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ci<sp/>sono<sp/>volte<sp/>in<sp/>cui<sp/>il<sp/>robot<sp/>va<sp/>contro<sp/>il<sp/>muro<sp/>di<sp/>lungo,<sp/>si<sp/>incastra<sp/>e<sp/>non<sp/>riesce<sp/>ad<sp/>uscirne.<sp/>posso<sp/>pensare<sp/>a<sp/>qualche<sp/>sistema<sp/>per<sp/>evitare<sp/>che<sp/>questo<sp/>accada?<sp/>oppure<sp/>...<sp/>forse<sp/>meglio<sp/>modificare<sp/>il<sp/>modello?</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>robot<sp/>funziona<sp/>*leggermente<sp/>meglio*<sp/>se<sp/>evito<sp/>di<sp/>andare<sp/>troppo<sp/>vicino<sp/>al<sp/>marker,<sp/>al<sp/>90%<sp/>ci<sp/>sta,<sp/>si<sp/>può<sp/>fare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COME<sp/>LOGICA<sp/>IL<sp/>ROBOT<sp/>FUNZIONA**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;testing<sp/>(very<sp/>near<sp/>to<sp/>the<sp/>final<sp/>tests)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
