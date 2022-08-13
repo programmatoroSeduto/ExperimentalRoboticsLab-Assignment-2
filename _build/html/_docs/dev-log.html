@@ -127,6 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-manager">13/08/2022 – mission manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#note">NOTE</a></li>
 </ul>
@@ -136,7 +137,11 @@
 </li>
 </ul>
 </div>
-<p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</a></p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</a></p></li>
+<li><p><a class="reference external" href="https://www.planttext.com/">un altro editor motlo carino per PlantText</a></p></li>
+<li><p><a class="reference external" href="https://www.onlinegdb.com/online_c++_compiler">onlineGDB</a></p></li>
+</ul>
 <p>template:</p>
 <div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>## data
 
@@ -1707,6 +1712,72 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 </ul>
 </li>
 <li><p><strong>COMMIT</strong> : “working on mission manager (design of the main node)”</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="mission-manager">
+<h2>13/08/2022 – mission manager<a class="headerlink" href="#mission-manager" title="Permalink to this heading"></a></h2>
+<p>implementazione del nodo main dell’architettura (fatto questo si passa al testing e si impacchetta tutto)</p>
+<ul>
+<li><p>implementazione</p></li>
+<li><p>non ricordo come funzionassero i servizi di aRMOR e quale fosse la semantica dei messaggi di aRMOR interface… mi tocca documentarli</p></li>
+<li><p><strong>LIMITAZIONE</strong> in aRMOR questa volta: nella add hint l’ID è un numero intero, e la cosa mi sta bene, ma in tutti gli altri metodi l’ID è in realtà una stringa, e anzi, tutte le volte la ontology utilizza la stringa, e non l’intero, per identificare l’ipotesi.</p>
+<ul class="simple">
+<li><p><em>è il momento di imparare a parsare stringhe in C++</em> (can’t wait for it)</p></li>
+</ul>
+</li>
+<li><p>giusto un mini programmino di prova: (più che altro per sondare le mie caopacità dinamitarde)</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;unistd.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;ID13398&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="kt">size_t</span><span class="w"> </span><span class="n">pos_init</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">id</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="s">&quot;ID&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;pos=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">pos_init</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// std::size_t pos_end = pos_init + 2;</span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(str) ID=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="n">pos_init</span><span class="o">+</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="c1">// int id_int = atoi(id.substr(pos_init+2).c_str());</span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">id_int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">atoi</span><span class="p">(</span><span class="n">id</span><span class="p">.</span><span class="n">substr</span><span class="p">(</span><span class="mi">2</span><span class="p">).</span><span class="n">c_str</span><span class="p">());</span><span class="w"></span>
+<span class="w">  </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;(int) ID=&quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">id_int</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span>
+<span class="w">  </span><span class="cm">/*OUTPUT</span>
+<span class="cm">  </span>
+<span class="cm">  pos=0</span>
+<span class="cm">  (str) ID=13398</span>
+<span class="cm">  (int) ID=13398</span>
+<span class="cm">  </span>
+<span class="cm">  */</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+<li><p>posso fare il parsing direttamente dalla parte del nodo che usa aRMOR piuttosto che fare tutto in aRMOR. <em>è perfettamente sensato che aRMOR usi stringhe anzichè identificatori interi</em> a meno di non voler  modificare l’ontologia. basta assicurarsi che gli identificatori abbiano <em>sempre</em> una data struttura</p></li>
+<li><p>a quanto pare aRMOR interface attualmente forza l’identificatore a essere strutturato come <em>HP<id></em>, ad esempio “HP6” o “HP41”, vedi implementazione di AddHint …</p>
+<ul class="simple">
+<li><p>… e direi, <em>a scanso di equivoci</em> di lasciare tutto così</p></li>
+<li><p>casomai posso solo aggiungere un checking (attualmente mancante) sulla <em>positività dell’ID fornito nel messaggio</em>.</p>
+<ul>
+<li><p>lo aggiungo ora</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>e terminiamo la documentazione</p></li>
+<li><p>ma aspetta: <em>se tanto non posso modificare i nomi delle ipotesi, che senso ha fornire la stringa?</em> a questo punto direi che posso modificare direttamente le interfacce per gli identificatori interi, e fine. senza complicare ulteriormente la mia esistenza con ulteriori non necessarie convenzioni sui nomi…</p>
+<ul class="simple">
+<li><p>AddHint (tra l’altro Aelem non veniva nemmeno usato qui…)</p></li>
+<li><p>find hint</p></li>
+<li><p>discard hint</p></li>
+<li><p>prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? … E COMPILA SIGNORI</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “working on armor interface (forcing hidden naming convention)”</p></li>
 </ul>
 </div>
 <div class="section" id="todo">

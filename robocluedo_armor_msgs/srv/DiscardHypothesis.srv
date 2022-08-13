@@ -1,6 +1,6 @@
 ## file 'DiscardHypothesis.srv'
 
-string hypothesisTag
+int32 ID
 
 ---
 

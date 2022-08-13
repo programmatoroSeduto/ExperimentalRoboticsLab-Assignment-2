@@ -251,20 +251,47 @@ public:
 		
 	}
 	
+/*
+## file 'AddHint.srv'
+# it represents a hint of the type -> (Aelem, Belem):property
+
+# the numeric ID of the hint
+int32 hypID
+
+# fields of the property
+string property
+string Aelem
+string Belem
+
+---
+
+bool success
+*/
+	
 	/** receive a hint from the Oracle */
 	void cbk_oracle_hint( const erl2::ErlOracle::ConstPtr& hint )
 	{
-		// store it into the ontology
-		
-		
+		// check validity
+		if(is_valid_hint( hint ))
+		{
+			// store it into the ontology
+			robocluedo_armor_msgs::AddHint addh;
+			addh.request.hypID = hint->ID;
+			// addh.request.
+			// addh.request.
+		}
 	}
 	
 	/** check wether the hint is valid or not */
 	bool is_valid_hint( const erl2::ErlOracle::ConstPtr& hint )
 	{
-		// ... perform all the checkings ...
-		
-		return true;
+		return (
+			(hint->ID >= 0) &&
+			(hint->key != "") &&
+			(hint->value != "") &&
+			(hint->key != "-1") &&
+			(hint->value != "-1")
+		);
 	}
 	
 private:

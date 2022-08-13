@@ -20,45 +20,6 @@
 <codeline></codeline>
 <codeline><highlight class="normal">![UML<sp/>aRMOR<sp/>node](UML_components_cluedo_armor_interface.png)</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">here&apos;s<sp/>the<sp/>updated<sp/>UML<sp/>of<sp/>the<sp/>component:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{uml}<sp/></highlight></codeline>
-<codeline><highlight class="normal">@startuml</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
-<codeline><highlight class="normal">title<sp/>package<sp/>robocluedo_armor</highlight></codeline>
-<codeline><highlight class="normal">skinparam<sp/>Padding<sp/>8</highlight></codeline>
-<codeline><highlight class="normal">allow_mixing</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;aRMOR<sp/>interface&quot;<sp/>&lt;&lt;RCL&gt;&gt;<sp/>as<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;aRMOR<sp/>service&quot;<sp/>&lt;&lt;aRMOR&gt;&gt;<sp/>as<sp/>NODE_ARMOR</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INTERFACES</highlight></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/add_hint&quot;<sp/>as<sp/>SRV_ARMOR_ADD</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR_ADD<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/AddHint.srv</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/find_consistent_h&quot;<sp/>as<sp/>SRV_ARMOR_FIND</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR_FIND<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/FindConsistentHypotheses.srv</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/wrong_hypothesis&quot;<sp/>as<sp/>SRV_ARMOR_DEL</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR_DEL<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>robocluedo_armor_msgs/DiscardHypothesis.srv</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/cluedo_armor/backup&quot;<sp/>as<sp/>SRV_ARMOR_BACKUP</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR_BACKUP<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>std_srvs/Trigger.srv</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">()<sp/>&quot;/armor_interface_srv&quot;<sp/>as<sp/>SRV_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>NODE_RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">SRV_ARMOR<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_ARMOR</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">##<sp/>the<sp/>old<sp/>arch<sp/>schema</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">here&apos;s<sp/>how<sp/>the<sp/>component<sp/>were<sp/>linked<sp/>to<sp/>the<sp/>previous<sp/>version<sp/>of<sp/>the<sp/>architecture.<sp/></highlight></codeline>

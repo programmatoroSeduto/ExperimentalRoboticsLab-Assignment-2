@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="273" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="273" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="300" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a68390e83274eee5e56e2285b9aa93731" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="276" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="276" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="303" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="303" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a591487ef8cb9d2b26e37cd6e55fc0878" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="279" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="279" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="306" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="306" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a8bab762c14e78ed38de8e1f9eff2e2cb" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="282" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="282" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="309" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1aa089f474c485d065ed483df68cf2fdfc" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="285" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="285" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="312" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="312" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a6332261f4037f289d557de2a39825751" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="288" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="288" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="315" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="315" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a37c4b9d24b5427b42591df5c81d0a120" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="291" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="291" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="318" column="20" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="318" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a6d83dfd8579fc3bfb624158297d9e59e" prot="private" static="no" mutable="no">
         <type>ros::Subscriber</type>
@@ -113,7 +113,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="294" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="294" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="321" column="17" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="321" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__mission__manager_1a866bb75bf2609733dd3cb3d4ca2f2381" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -128,7 +128,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="297" column="5" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="297" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="324" column="5" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="324" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -153,7 +153,7 @@
         <references refid="mission__manager_8cpp_1aa2b57d2ee6e8903abdb592bf5345b706" compoundref="mission__manager_8cpp" startline="140">SERVICE_ORACLE_SOLUTION</references>
         <references refid="mission__manager_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="mission__manager_8cpp" startline="18">TLOG</references>
         <references refid="mission__manager_8cpp_1a07769807eae9ad352141589f3e6fcb6b" compoundref="mission__manager_8cpp" startline="146">TOPIC_ORACLE_HINT</references>
-        <references refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" compoundref="mission__manager_8cpp" startline="255" endline="260">cbk_oracle_hint</references>
+        <references refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" compoundref="mission__manager_8cpp" startline="272" endline="283">cbk_oracle_hint</references>
       </memberdef>
       <memberdef kind="function" id="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -174,7 +174,7 @@
         <references refid="mission__manager_8cpp_1a463f713aa5573b0d056e6c0922377ba8" compoundref="mission__manager_8cpp" startline="160">MISSION_STATUS_SOLVE</references>
         <references refid="mission__manager_8cpp_1a153fe0ac6e7bea9120a086a44783de17" compoundref="mission__manager_8cpp" startline="161">MISSION_STATUS_ASK_ORACLE</references>
         <references refid="mission__manager_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="mission__manager_8cpp" startline="19">TWARN</references>
-        <referencedby refid="mission__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="mission__manager_8cpp" startline="325" endline="341">main</referencedby>
+        <referencedby refid="mission__manager_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="mission__manager_8cpp" startline="352" endline="368">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__mission__manager_1a097ae71661bcbd145de3ea634096ebfa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -193,6 +193,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="233" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="233" bodyend="236"/>
+        <references refid="new-robocluedo_8md_8txt_1a974453c72d02ca4ef12472826ac86b4a">status</references>
       </memberdef>
       <memberdef kind="function" id="classnode__mission__manager_1af850dd72093513bd09a7284ce140ec93" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -242,7 +243,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="255" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="255" bodyend="260"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="272" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="272" bodyend="283"/>
+        <references refid="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" compoundref="mission__manager_8cpp" startline="286" endline="295">is_valid_hint</references>
         <referencedby refid="classnode__mission__manager_1aad994f8fbf26d35e540ae1f6476143b0" compoundref="mission__manager_8cpp" startline="170" endline="192">node_mission_manager</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
@@ -261,7 +263,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="263" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="263" bodyend="268"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="286" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="286" bodyend="295"/>
+        <referencedby refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" compoundref="mission__manager_8cpp" startline="272" endline="283">cbk_oracle_hint</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -290,14 +293,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="301" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="301" bodyend="313"/>
+        <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="328" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="328" bodyend="340"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="166" column="1" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="165" bodyend="314"/>
+    <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="166" column="1" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="165" bodyend="341"/>
     <listofallmembers>
       <member refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>cbk_oracle_hint</name></member>
       <member refid="classnode__mission__manager_1a097ae71661bcbd145de3ea634096ebfa" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>change_mission_status</name></member>

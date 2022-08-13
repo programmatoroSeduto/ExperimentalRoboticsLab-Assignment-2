@@ -5,7 +5,10 @@
 ./dev-log.md
 ```
 
-[plantUML online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)
+- [plantUML online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)
+- [un altro editor motlo carino per PlantText](https://www.planttext.com/)
+- [onlineGDB](https://www.onlinegdb.com/online_c++_compiler)
+
 
 template:
 
@@ -1316,6 +1319,61 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 	- compila? (dopo qualche colpo di sranga) compila.
 - **COMMIT** : "working on mission manager (design of the main node)"
 
+---
+
+## 13/08/2022 -- mission manager
+
+implementazione del nodo main dell'architettura (fatto questo si passa al testing e si impacchetta tutto)
+
+- implementazione
+- non ricordo come funzionassero i servizi di aRMOR e quale fosse la semantica dei messaggi di aRMOR interface... mi tocca documentarli
+- **LIMITAZIONE** in aRMOR questa volta: nella add hint l'ID è un numero intero, e la cosa mi sta bene, ma in tutti gli altri metodi l'ID è in realtà una stringa, e anzi, tutte le volte la ontology utilizza la stringa, e non l'intero, per identificare l'ipotesi. 
+	- *è il momento di imparare a parsare stringhe in C++* (can't wait for it)
+- giusto un mini programmino di prova: (più che altro per sondare le mie caopacità dinamitarde)
+
+	```c++
+	#include <iostream>
+	#include <string>
+	#include <stdlib.h>
+	#include <unistd.h>
+
+	int main()
+	{
+	  std::string id = "ID13398";
+	  
+	  std::size_t pos_init = id.find("ID");
+	  std::cout << "pos=" << pos_init << std::endl;
+	  // std::size_t pos_end = pos_init + 2;
+	  std::cout << "(str) ID=" << id.substr(pos_init+2) << std::endl;
+	  // int id_int = atoi(id.substr(pos_init+2).c_str());
+	  int id_int = atoi(id.substr(2).c_str());
+	  std::cout << "(int) ID=" << id_int << std::endl;
+	  
+	  return 0;
+	  
+	  /*OUTPUT
+	  
+	  pos=0
+	  (str) ID=13398
+	  (int) ID=13398
+	  
+	  */
+	}
+
+	```
+
+- posso fare il parsing direttamente dalla parte del nodo che usa aRMOR piuttosto che fare tutto in aRMOR. *è perfettamente sensato che aRMOR usi stringhe anzichè identificatori interi* a meno di non voler  modificare l'ontologia. basta assicurarsi che gli identificatori abbiano *sempre* una data struttura
+- a quanto pare aRMOR interface attualmente forza l'identificatore a essere strutturato come *HP<id>*, ad esempio "HP6" o "HP41", vedi implementazione di AddHint ...
+	- ... e direi, *a scanso di equivoci* di lasciare tutto così
+	- casomai posso solo aggiungere un checking (attualmente mancante) sulla *positività dell'ID fornito nel messaggio*. 
+		- lo aggiungo ora
+- e terminiamo la documentazione
+- ma aspetta: *se tanto non posso modificare i nomi delle ipotesi, che senso ha fornire la stringa?* a questo punto direi che posso modificare direttamente le interfacce per gli identificatori interi, e fine. senza complicare ulteriormente la mia esistenza con ulteriori non necessarie convenzioni sui nomi...
+	- AddHint (tra l'altro Aelem non veniva nemmeno usato qui...)
+	- find hint 
+	- discard hint
+	- prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? ... E COMPILA SIGNORI
+- **COMMIT** : "working on armor interface (forcing hidden naming convention)"
 
 
 

@@ -30,7 +30,7 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="PKG DOCS – robocluedo_rosplan" href="../../robocluedo_rosplan/index.html" />
+    <link rel="next" title="DOCS – aRMOR interface" href="armor-services.html" />
     <link rel="prev" title="aRMOR UML CLASS – robocluedo armor" href="armor-interface-class-diagram.html" /> 
 </head>
 
@@ -62,6 +62,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="#">aRMOR UML CLASS – old schematics</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="armor-services.html">DOCS – aRMOR interface</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
@@ -137,45 +138,6 @@
 <div class="section" id="comonent-schema">
 <h2>comonent schema<a class="headerlink" href="#comonent-schema" title="Permalink to this heading"></a></h2>
 <p><img alt="UML aRMOR node" src="../../_images/UML_components_cluedo_armor_interface.png" /></p>
-<p>here’s the updated UML of the component:</p>
-<p class="plantuml">
-<object data="../../_images/plantuml-d1b59005b2f325f9bb04b516c9727c36da2dc806.svg" type="image/svg+xml" style="width:1567px;height:323px;background:#FFFFFF;">
-<img src="../../_images/plantuml-d1b59005b2f325f9bb04b516c9727c36da2dc806.png" alt="&#64;startuml
-
-''' INFOS
-title package robocluedo_armor
-skinparam Padding 8
-allow_mixing
-
-''' COMPONENTS
-component &quot;aRMOR interface&quot; &lt;&lt;RCL&gt;&gt; as NODE_RCL_ARMOR
-component &quot;aRMOR service&quot; &lt;&lt;aRMOR&gt;&gt; as NODE_ARMOR
-
-''' INTERFACES
-() &quot;/cluedo_armor/add_hint&quot; as SRV_ARMOR_ADD
-SRV_ARMOR_ADD &lt;-- &quot;srv&quot; NODE_RCL_ARMOR
-note on link: robocluedo_armor_msgs/AddHint.srv
-
-() &quot;/cluedo_armor/find_consistent_h&quot; as SRV_ARMOR_FIND
-SRV_ARMOR_FIND &lt;-- &quot;srv&quot; NODE_RCL_ARMOR
-note on link: robocluedo_armor_msgs/FindConsistentHypotheses.srv
-
-() &quot;/cluedo_armor/wrong_hypothesis&quot; as SRV_ARMOR_DEL
-SRV_ARMOR_DEL &lt;-- &quot;srv&quot; NODE_RCL_ARMOR
-note on link: robocluedo_armor_msgs/DiscardHypothesis.srv
-
-() &quot;/cluedo_armor/backup&quot; as SRV_ARMOR_BACKUP
-SRV_ARMOR_BACKUP &lt;-- &quot;srv&quot; NODE_RCL_ARMOR
-note on link: std_srvs/Trigger.srv
-
-() &quot;/armor_interface_srv&quot; as SRV_ARMOR
-SRV_ARMOR --&gt; &quot;cl&quot; NODE_RCL_ARMOR
-SRV_ARMOR &lt;-- &quot;srv&quot; NODE_ARMOR
-
-
-&#64;enduml"/>
-
-</object></p>
 </div>
 <div class="section" id="the-old-arch-schema">
 <h2>the old arch schema<a class="headerlink" href="#the-old-arch-schema" title="Permalink to this heading"></a></h2>
@@ -189,7 +151,7 @@ SRV_ARMOR &lt;-- &quot;srv&quot; NODE_ARMOR
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="armor-interface-class-diagram.html" class="btn btn-neutral float-left" title="aRMOR UML CLASS – robocluedo armor" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../../robocluedo_rosplan/index.html" class="btn btn-neutral float-right" title="PKG DOCS – robocluedo_rosplan" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="armor-services.html" class="btn btn-neutral float-right" title="DOCS – aRMOR interface" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

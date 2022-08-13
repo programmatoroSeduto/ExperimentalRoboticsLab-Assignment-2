@@ -8,7 +8,12 @@
     <detaileddescription>
 <para><programlisting filename=".toctree"><codeline><highlight class="normal">./dev-log.md</highlight></codeline>
 </programlisting></para>
-<para><ulink url="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</ulink></para>
+<para><itemizedlist>
+<listitem><para><ulink url="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</ulink></para>
+</listitem><listitem><para><ulink url="https://www.planttext.com/">un altro editor motlo carino per PlantText</ulink></para>
+</listitem><listitem><para><ulink url="https://www.onlinegdb.com/online_c++_compiler">onlineGDB</ulink></para>
+</listitem></itemizedlist>
+</para>
 <para>template:</para>
 <para><programlisting><codeline><highlight class="normal">##<sp/>data</highlight></codeline>
 <codeline></codeline>
@@ -1294,8 +1299,50 @@
 </listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (design of the main node)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md65">
+<sect2 id="md__docs_dev-log_1autotoc_md66">
+<title>13/08/2022 – mission manager</title>
+<para>implementazione del nodo main dell&apos;architettura (fatto questo si passa al testing e si impacchetta tutto)</para>
+<para><itemizedlist>
+<listitem><para>implementazione</para>
+</listitem><listitem><para>non ricordo come funzionassero i servizi di aRMOR e quale fosse la semantica dei messaggi di aRMOR interface... mi tocca documentarli</para>
+</listitem><listitem><para><bold>LIMITAZIONE</bold> in aRMOR questa volta: nella add hint l&apos;ID è un numero intero, e la cosa mi sta bene, ma in tutti gli altri metodi l&apos;ID è in realtà una stringa, e anzi, tutte le volte la ontology utilizza la stringa, e non l&apos;intero, per identificare l&apos;ipotesi.<itemizedlist>
+<listitem><para><emphasis>è il momento di imparare a parsare stringhe in C++</emphasis> (can&apos;t wait for it)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>giusto un mini programmino di prova: (più che altro per sondare le mie caopacità dinamitarde)</para>
+<para>```c++ #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt;</para>
+<para>int <ref refid="example__armor__cluedo__1_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref> { std::string id = &quot;ID13398&quot;;</para>
+<para>std::size_t pos_init = id.find(&quot;ID&quot;); std::cout &lt;&lt; &quot;pos=&quot; &lt;&lt; pos_init &lt;&lt; std::endl; // std::size_t pos_end = pos_init + 2; std::cout &lt;&lt; &quot;(str) ID=&quot; &lt;&lt; id.substr(pos_init+2) &lt;&lt; std::endl; // int id_int = atoi(id.substr(pos_init+2).c_str()); int id_int = atoi(id.substr(2).c_str()); std::cout &lt;&lt; &quot;(int) ID=&quot; &lt;&lt; id_int &lt;&lt; std::endl;</para>
+<para>return 0;</para>
+<para>/*OUTPUT</para>
+<para>pos=0 (str) ID=13398 (int) ID=13398</para>
+<para>*/ }</para>
+<para>```</para>
+</listitem><listitem><para>posso fare il parsing direttamente dalla parte del nodo che usa aRMOR piuttosto che fare tutto in aRMOR. <emphasis>è perfettamente sensato che aRMOR usi stringhe anzichè identificatori interi</emphasis> a meno di non voler modificare l&apos;ontologia. basta assicurarsi che gli identificatori abbiano <emphasis>sempre</emphasis> una data struttura</para>
+</listitem><listitem><para>a quanto pare aRMOR interface attualmente forza l&apos;identificatore a essere strutturato come <emphasis>HP&lt;id&gt;</emphasis>, ad esempio &quot;HP6&quot; o &quot;HP41&quot;, vedi implementazione di AddHint ...<itemizedlist>
+<listitem><para>... e direi, <emphasis>a scanso di equivoci</emphasis> di lasciare tutto così</para>
+</listitem><listitem><para>casomai posso solo aggiungere un checking (attualmente mancante) sulla <emphasis>positività dell&apos;ID fornito nel messaggio</emphasis>.<itemizedlist>
+<listitem><para>lo aggiungo ora</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e terminiamo la documentazione</para>
+</listitem><listitem><para>ma aspetta: <emphasis>se tanto non posso modificare i nomi delle ipotesi, che senso ha fornire la stringa?</emphasis> a questo punto direi che posso modificare direttamente le interfacce per gli identificatori interi, e fine. senza complicare ulteriormente la mia esistenza con ulteriori non necessarie convenzioni sui nomi...<itemizedlist>
+<listitem><para>AddHint (tra l&apos;altro Aelem non veniva nemmeno usato qui...)</para>
+</listitem><listitem><para>find hint</para>
+</listitem><listitem><para>discard hint</para>
+</listitem><listitem><para>prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? ... E COMPILA SIGNORI</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on armor interface (forcing hidden naming convention)&quot;</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md67">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>documentazione del package ROSPlan</para>
@@ -1325,7 +1372,7 @@
 </listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
 </listitem></itemizedlist>
 </para>
-<sect3 id="md__docs_dev-log_1autotoc_md66">
+<sect3 id="md__docs_dev-log_1autotoc_md68">
 <title>NOTE</title>
 <para><itemizedlist>
 <listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</para>
@@ -1333,7 +1380,7 @@
 </para>
 </sect3>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md67">
+<sect2 id="md__docs_dev-log_1autotoc_md69">
 <title>Esempi fallati</title>
 <para>è bene tenere traccia anche degli errori...</para>
 <para>... </para>

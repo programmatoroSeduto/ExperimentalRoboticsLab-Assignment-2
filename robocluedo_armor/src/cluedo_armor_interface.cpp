@@ -60,6 +60,9 @@
  * </ul>
  * 
  ***********************************************/
+ 
+#include <stdlib.h>
+#include <unistd.h>
 
 #include "ros/ros.h"
 #include "armor_tools/armor_tools.h"
@@ -175,9 +178,32 @@ bool ServiceAddHint( robocluedo_armor_msgs::AddHint::Request& hint, robocluedo_a
 {
 	OUTLOG( "called service " << SERVICE_INTERFACE_ADD_HINT );
 	
+	// check for the validity of the hint
+	if( hint.hypID < 0 )
+	{
+		OUTLOG( "ERROR: not a valid hypothesis ID (got " << hint.hypID << ")" );
+		
+		success.success = false;
+		return true;
+	}
+	if( 
+		(hint.property == "") || 
+		// (hint.Aelem == "") || 
+		(hint.Belem == "")
+	)
+	{
+		OUTLOG( "ERROR: not a valid hint (received empty fields)" );
+		
+		success.success = false;
+		return true;
+	}
+	
 	// check for the existence of the given hypothesis ID (in case, create it)
+	/*
 	std::string hypname = "";
 	hypname += SS("HP") + SSS( hint.hypID );
+	*/
+	std::string hypname = SS("HP") + SSS( hint.hypID );
 	if( !armor->ExistsIndiv( hypname ) )
 		armor->AddIndiv( hypname, "HYPOTHESIS", false );
 	
@@ -192,9 +218,9 @@ bool ServiceAddHint( robocluedo_armor_msgs::AddHint::Request& hint, robocluedo_a
 			armor->AddIndiv( hint.Belem, "WEAPON" );
 		else
 		{
-			OUTLOG( "ERROR: not a valid hint property." );
-			success.success = false;
+			OUTLOG( "ERROR: not a valid hint property (received " << hint.property << ")" );
 			
+			success.success = false;
 			return true;
 		}
 	}
@@ -255,6 +281,14 @@ bool ServiceFindConsistentHypotheses( robocluedo_armor_msgs::FindConsistentHypot
 		h.where = armor->GetValuedOfIndiv( "where", hptag )[0];
 		h.what = armor->GetValuedOfIndiv( "what", hptag )[0];
 		
+		if( (h.tag.find("HP") == std::string::npos) || (h.tag.find("HP") != (std::size_t) 0) )
+		{
+			OUTLOG( "ERROR: can't get the ID of the registered hypothesis with h.tag=" << h.tag );
+			h.ID = -1;
+		}
+		else
+			h.ID = atoi(hptag.substr(2).c_str());
+		
 		hyplist.hyp.push_back( h );
 	}
 	
@@ -280,8 +314,17 @@ bool DiscardHypothesis( robocluedo_armor_msgs::DiscardHypothesis::Request& tag, 
 {
 	OUTLOG( "called service " << SERVICE_INTERFACE_WRONG_HYPOTHESIS );
 	
+	if( tag.ID < 0 )
+	{
+		OUTLOG( "ERROR: received a negative ID!" );
+		
+		success.success = false;
+		return true;
+	}
+	
 	// remove the hypothesis from the database
-	success.success = armor->RemoveHypothesis( tag.hypothesisTag );
+	std::string hypothesisTag = SS("HP") + SSS( tag.ID );
+	success.success = armor->RemoveHypothesis( hypothesisTag );
 	
 	return true;
 }

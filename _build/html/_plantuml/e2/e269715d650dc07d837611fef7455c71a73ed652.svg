@@ -10,8 +10,8 @@ reverse link SRV_ARMOR_ADD to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_ADD_NODE_RC
 reverse link SRV_ARMOR_FIND to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_FIND_NODE_RCL_ARMOR"><path codeLine="17" d="M410.27,81.7369 C408.72,107.4069 409.36,163.5269 440.5,193.2969 C486.54,237.2969 661.71,256.8369 768.89,264.8369 " fill="none" id="SRV_ARMOR_FIND-backto-NODE_RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="410.64,76.4569,406.0072,85.1481,410.2827,81.4441,413.9867,85.7197,410.64,76.4569" style="stroke:#181818;stroke-width:1.0;"/><path d="M445.5,147.2969 L445.5,188.2969 L838.5,188.2969 L838.5,157.2969 L828.5,147.2969 L445.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M828.5,147.2969 L828.5,157.2969 L838.5,157.2969 L828.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="356" x="459.5" y="172.3638">robocluedo_armor_msgs/FindConsistentHypotheses.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="733.9956" y="285.6548">srv</text></g><!--MD5=[585414b7d0d5af5f6ee9434af1287889]
 reverse link SRV_ARMOR_DEL to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_DEL_NODE_RCL_ARMOR"><path codeLine="21" d="M853.78,81.8769 C853.04,96.7169 851.93,121.1869 851.5,142.2969 C851.04,164.9569 851.06,170.6369 851.5,193.2969 C851.69,202.9969 852.02,213.3869 852.38,223.2869 " fill="none" id="SRV_ARMOR_DEL-backto-NODE_RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="854.06,76.5069,849.6017,85.2889,853.8025,81.5002,857.5911,85.701,854.06,76.5069" style="stroke:#181818;stroke-width:1.0;"/><path d="M856.5,147.2969 L856.5,188.2969 L1198.5,188.2969 L1198.5,157.2969 L1188.5,147.2969 L856.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1188.5,147.2969 L1188.5,157.2969 L1198.5,157.2969 L1188.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="305" x="870.5" y="172.3638">robocluedo_armor_msgs/DiscardHypothesis.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="822.8662" y="204.3151">srv</text></g><!--MD5=[8cc748b0308c37013ac8d10c857ad750]
 reverse link SRV_ARMOR_BACKUP to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_BACKUP_NODE_RCL_ARMOR"><path codeLine="25" d="M1246.46,81.7469 C1245.62,107.4569 1239.94,163.6269 1207.5,193.2969 C1169.04,228.4769 1031.66,250.2269 940.06,261.1569 " fill="none" id="SRV_ARMOR_BACKUP-backto-NODE_RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1246.58,76.4669,1242.3754,85.3731,1246.4657,81.4656,1250.3733,85.5559,1246.58,76.4669" style="stroke:#181818;stroke-width:1.0;"/><path d="M1242.5,147.2969 L1242.5,188.2969 L1403.5,188.2969 L1403.5,157.2969 L1393.5,147.2969 L1242.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><path d="M1393.5,147.2969 L1393.5,157.2969 L1403.5,157.2969 L1393.5,147.2969 " fill="#FEFFDD" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="1256.5" y="172.3638">std_srvs/Trigger.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="955.9505" y="248.3196">srv</text></g><!--MD5=[9a1d3ecef55cb65046248eec2a2cb2e5]
-link SRV_ARMOR to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_NODE_RCL_ARMOR"><path codeLine="29" d="M1469.69,76.3669 C1466.94,99.0169 1455.86,163.4269 1416.5,193.2969 C1344.28,248.0969 1085.2,263.6469 945.43,268.0569 " fill="none" id="SRV_ARMOR-to-NODE_RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="940.1,268.2169,949.2215,271.9314,945.0975,268.0594,948.9695,263.9353,940.1,268.2169" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="955.9572" y="289.3348">cl</text></g><!--MD5=[4c1feac5b019ac9a7ae0e575e87fed1f]
-reverse link SRV_ARMOR to NODE_ARMOR--><g id="link_SRV_ARMOR_NODE_ARMOR"><path codeLine="30" d="M1471.22,81.5569 C1472.77,109.8069 1476.44,177.1069 1478.95,223.0869 " fill="none" id="SRV_ARMOR-backto-NODE_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1470.94,76.4469,1467.4352,85.651,1471.2118,81.4395,1475.4233,85.2161,1470.94,76.4469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="1449.3811" y="204.0895">srv</text></g><!--MD5=[5f87ac8637bb969527c156b6fb027448]
+link SRV_ARMOR to NODE_RCL_ARMOR--><g id="link_SRV_ARMOR_NODE_RCL_ARMOR"><path codeLine="29" d="M1469.69,76.3669 C1466.94,99.0169 1455.86,163.4269 1416.5,193.2969 C1344.28,248.0969 1085.2,263.6469 945.43,268.0569 " fill="none" id="SRV_ARMOR-to-NODE_RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="940.1,268.2169,949.2215,271.9314,945.0975,268.0594,948.9695,263.9353,940.1,268.2169" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="955.9572" y="289.3348">cl</text></g><!--MD5=[4c1feac5b019ac9a7ae0e575e87fed1f]
+reverse link SRV_ARMOR to NODE_ARMOR--><g id="link_SRV_ARMOR_NODE_ARMOR"><path codeLine="30" d="M1471.22,81.5569 C1472.77,109.8069 1476.44,177.1069 1478.95,223.0869 " fill="none" id="SRV_ARMOR-backto-NODE_ARMOR" style="stroke:#181818;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#181818" points="1470.94,76.4469,1467.4352,85.651,1471.2118,81.4395,1475.4233,85.2161,1470.94,76.4469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="1449.3811" y="204.0895">srv</text></g><!--MD5=[adbf53da14f5812f0287d298b50182b6]
 @startuml
 
 ''' INFOS
@@ -41,9 +41,12 @@ SRV_ARMOR_BACKUP <- - "srv" NODE_RCL_ARMOR
 note on link: std_srvs/Trigger.srv
 
 () "/armor_interface_srv" as SRV_ARMOR
-SRV_ARMOR - -> "cl" NODE_RCL_ARMOR
-SRV_ARMOR <- - "srv" NODE_ARMOR
+SRV_ARMOR ..> "cl" NODE_RCL_ARMOR
+SRV_ARMOR <.. "srv" NODE_ARMOR
 
+/' 
+service `` of type ``
+'/
 
 @enduml
 
@@ -73,8 +76,8 @@ SRV_ARMOR_BACKUP <- - "srv" NODE_RCL_ARMOR
 note on link: std_srvs/Trigger.srv
 
 () "/armor_interface_srv" as SRV_ARMOR
-SRV_ARMOR - -> "cl" NODE_RCL_ARMOR
-SRV_ARMOR <- - "srv" NODE_ARMOR
+SRV_ARMOR ..> "cl" NODE_RCL_ARMOR
+SRV_ARMOR <.. "srv" NODE_ARMOR
 
 
 @enduml
