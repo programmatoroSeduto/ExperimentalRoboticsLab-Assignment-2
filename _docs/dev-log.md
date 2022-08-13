@@ -1374,6 +1374,25 @@ implementazione del nodo main dell'architettura (fatto questo si passa al testin
 	- discard hint
 	- prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? ... E COMPILA SIGNORI
 - **COMMIT** : "working on armor interface (forcing hidden naming convention)"
+	- **HO FATTO CASINO CON GIT** e ora devo risolvere...
+	- casino coi large files ... ho dovuto fare backup, `git reset --hard <commit>` e aggiornamento, c'era un commit che continuava a "voler essere" caricato su git
+- proviamo a compilare di nuovo, *non si sa mai* ... e anche questa volta ce l'abbiamo fatta
+- dopo questa (tutt'altro che veloce) divagazione, torniamo sulla portata principale di oggi
+	- implementazione dell'acquisizione dell'hint
+- e passiamo agli stati
+	- anzitutto, il protocollo per determinare un fault
+	- anzi, meglio fare un po' di design per commenti per adesso, identificando le parti più semplici
+- e adesso, implementazione precisa stato per stato (sarà una cosa lunga e dolorosa...)
+	- implementazione di MISSION_STATUS_REPLAN
+		- ma prima, un po' di delirio coi messaggi per la rosplan pipeline...
+	- (ROBA BRUTTA)
+	- implementazione di MISSION_STATUS_COLLECT
+		- al secondo passaggio fortunatamente inizio ad avere più codice su cui lavorare ... e parecchio materiale già pronto, dovrei andare più veloce
+	- (ROBA BRUTTISSIMA)
+	- implementazione di MISSION_STATUS_ASK_ONTOLOGY
+	- ... (e tutte le altre)
+- e fine! (almeno, senza provare a compilare)
+- **COMMIT** : "working on mission manager (painful, endless implementation of the main mission manager)"
 
 
 
@@ -1390,11 +1409,14 @@ implementazione del nodo main dell'architettura (fatto questo si passa al testin
 - documentazione del package ROSPlan
 - UML finale per ROSPlan
 - *module testing* su kb_tools
+- evita di muovere il braccio robotico se sai che la posture richiesta è uguale a quella attuale, *memorizza la posture attuale* (puoi tracciarla...)
+- pensare bene al module testing, e in particolare correggere i module testing di armor (potrebbero non funzionare più per via delle ultime modifiche ai servizi)
+- *un tantino in più di scena nell'indagine?* (intanto deve funzionare...)
 
-- modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione
 - implementazione precisa dell'azione move-to
 - implementazione del launch di un particolare file di configurazione per rviz
 
+- la pagina di documentazione del codice andrebbe messa in una cartella chiamata code_documentation (inutile dire che ogni package ha le sue, e non si deve mischiare nulla)
 - rifare gli schemi di armor! 
 - aggiornare schema feedback manager
 - aggiustare le toctree in giro per le pagine
@@ -1415,15 +1437,46 @@ implementazione del nodo main dell'architettura (fatto questo si passa al testin
 - autenticazione SSH sul Docker di lavoro
 
 
-### NOTE
+## NOTE
 
-- la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.
+### una nota su rosplan e il mission manager
 
+il principio è questo:
 
+- *il mission manager* si occupa del progresso della missione ad alto livello
+- *ROSPlan* si preoccupa della singola azione da eseguire, *nel dettaglio dello stato delle cose*. 
 
+Quindi il comportamento del robot è distribuito su due livelli: il primo è quello "generico" del mission manager, che si occupa anche di fare da mediatore *tra due componenti architetturali diversi* (armor e rosplan), e il secondo quello specifico che si preoccupa di gestire i dettagli delle varie azioni da compiere. 
 
-## Esempi fallati
+in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell'area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più. 
 
-è bene tenere traccia anche degli errori...
+più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi. 
 
-...
+### vantaggi (e svantaggi) dell'approccio per landmarks
+
+motivazioni per cui ho scelto un planning su due livelli e l'approccio dei landmarks:
+
+- maggiore flessibilità in caso di modifica dell'architettura
+- il planner PDDL non deve fare un'intera pianificazione statica, perciò è più veloce nel risolvere il plan
+- fare un planning statico dell'intera situazione è semplicemente assurdo, se pensiamo a tutti i problemi imprevisti che possono sorgere
+- vedere il comportamento del sistema su due livelli permette di astrarre in maniera più conveniente
+
+problemi, limitazioni, difetti:
+
+- rapido aumento della complessità di implementazione del sistema
+
+### scrittura del mission manager (e metodo di lavoro in generale)
+
+ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.
+
+- voglio essere sicuro che non accada qualcosa di storto nell'aprire o usare un protocollo di comunicazione
+- il codice dev'essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile
+- il codice in generale dev'essere più informativo possibile e dare un log che consenta di ricostruire l'accaduto quanto più in dettaglio possibile
+- preferisco *evitare python* perchè l'unico modo per debuggarlo è ... provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, *e non porta a strani NoneTypes imprevisti*
+- scrivere *il mio stesso codice pensando che esso possa non funzionare come si deve*, ad esempio per un bug difficile da scovare
+
+insomma: *evitare situazioni impreviste* nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.
+
+c'è un altro motivo per preferire un approccio super sicuro alla paranoia: *l'aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione*. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima *e dopo* la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E' qualcosa che frena l'invenzione, frena l'immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.
+
+morale della favola: *fallo bene una volta sola piuttosto che male 100 volte*. 

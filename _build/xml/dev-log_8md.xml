@@ -1383,6 +1383,25 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>discard<sp/>hint</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>riprendere<sp/>a<sp/>fare<sp/>qualunque<sp/>altra<sp/>cosa<sp/>direi<sp/>che<sp/>posso<sp/>provare<sp/>a<sp/>compilare,<sp/>no?<sp/>compia?<sp/>...<sp/>E<sp/>COMPILA<sp/>SIGNORI</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>armor<sp/>interface<sp/>(forcing<sp/>hidden<sp/>naming<sp/>convention)&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**HO<sp/>FATTO<sp/>CASINO<sp/>CON<sp/>GIT**<sp/>e<sp/>ora<sp/>devo<sp/>risolvere...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>casino<sp/>coi<sp/>large<sp/>files<sp/>...<sp/>ho<sp/>dovuto<sp/>fare<sp/>backup,<sp/>`git<sp/>reset<sp/>--hard<sp/>&lt;commit&gt;`<sp/>e<sp/>aggiornamento,<sp/>c&apos;era<sp/>un<sp/>commit<sp/>che<sp/>continuava<sp/>a<sp/>&quot;voler<sp/>essere&quot;<sp/>caricato<sp/>su<sp/>git</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>proviamo<sp/>a<sp/>compilare<sp/>di<sp/>nuovo,<sp/>*non<sp/>si<sp/>sa<sp/>mai*<sp/>...<sp/>e<sp/>anche<sp/>questa<sp/>volta<sp/>ce<sp/>l&apos;abbiamo<sp/>fatta</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>dopo<sp/>questa<sp/>(tutt&apos;altro<sp/>che<sp/>veloce)<sp/>divagazione,<sp/>torniamo<sp/>sulla<sp/>portata<sp/>principale<sp/>di<sp/>oggi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>dell&apos;acquisizione<sp/>dell&apos;hint</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>passiamo<sp/>agli<sp/>stati</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anzitutto,<sp/>il<sp/>protocollo<sp/>per<sp/>determinare<sp/>un<sp/>fault</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anzi,<sp/>meglio<sp/>fare<sp/>un<sp/>po&apos;<sp/>di<sp/>design<sp/>per<sp/>commenti<sp/>per<sp/>adesso,<sp/>identificando<sp/>le<sp/>parti<sp/>più<sp/>semplici</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>adesso,<sp/>implementazione<sp/>precisa<sp/>stato<sp/>per<sp/>stato<sp/>(sarà<sp/>una<sp/>cosa<sp/>lunga<sp/>e<sp/>dolorosa...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>di<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ma<sp/>prima,<sp/>un<sp/>po&apos;<sp/>di<sp/>delirio<sp/>coi<sp/>messaggi<sp/>per<sp/>la<sp/>rosplan<sp/>pipeline...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(ROBA<sp/>BRUTTA)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>di<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>al<sp/>secondo<sp/>passaggio<sp/>fortunatamente<sp/>inizio<sp/>ad<sp/>avere<sp/>più<sp/>codice<sp/>su<sp/>cui<sp/>lavorare<sp/>...<sp/>e<sp/>parecchio<sp/>materiale<sp/>già<sp/>pronto,<sp/>dovrei<sp/>andare<sp/>più<sp/>veloce</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(ROBA<sp/>BRUTTISSIMA)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>implementazione<sp/>di<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(e<sp/>tutte<sp/>le<sp/>altre)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>fine!<sp/>(almeno,<sp/>senza<sp/>provare<sp/>a<sp/>compilare)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(painful,<sp/>endless<sp/>implementation<sp/>of<sp/>the<sp/>main<sp/>mission<sp/>manager)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1399,11 +1418,14 @@
 <codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>evita<sp/>di<sp/>muovere<sp/>il<sp/>braccio<sp/>robotico<sp/>se<sp/>sai<sp/>che<sp/>la<sp/>posture<sp/>richiesta<sp/>è<sp/>uguale<sp/>a<sp/>quella<sp/>attuale,<sp/>*memorizza<sp/>la<sp/>posture<sp/>attuale*<sp/>(puoi<sp/>tracciarla...)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>pensare<sp/>bene<sp/>al<sp/>module<sp/>testing,<sp/>e<sp/>in<sp/>particolare<sp/>correggere<sp/>i<sp/>module<sp/>testing<sp/>di<sp/>armor<sp/>(potrebbero<sp/>non<sp/>funzionare<sp/>più<sp/>per<sp/>via<sp/>delle<sp/>ultime<sp/>modifiche<sp/>ai<sp/>servizi)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*un<sp/>tantino<sp/>in<sp/>più<sp/>di<sp/>scena<sp/>nell&apos;indagine?*<sp/>(intanto<sp/>deve<sp/>funzionare...)</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>modificare<sp/>uno<sp/>dei<sp/>nodi<sp/>del<sp/>navigation<sp/>per<sp/>raggiungere<sp/>una<sp/>certa<sp/>orientazione<sp/>al<sp/>termine<sp/>del<sp/>moto,<sp/>oltre<sp/>che<sp/>una<sp/>certa<sp/>posizione</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>andrebbe<sp/>messa<sp/>in<sp/>una<sp/>cartella<sp/>chiamata<sp/>code_documentation<sp/>(inutile<sp/>dire<sp/>che<sp/>ogni<sp/>package<sp/>ha<sp/>le<sp/>sue,<sp/>e<sp/>non<sp/>si<sp/>deve<sp/>mischiare<sp/>nulla)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>rifare<sp/>gli<sp/>schemi<sp/>di<sp/>armor!<sp/></highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiornare<sp/>schema<sp/>feedback<sp/>manager</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>aggiustare<sp/>le<sp/>toctree<sp/>in<sp/>giro<sp/>per<sp/>le<sp/>pagine</highlight></codeline>
@@ -1424,18 +1446,49 @@
 <codeline><highlight class="normal">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>NOTE</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>NOTE</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>la<sp/>pagina<sp/>di<sp/>documentaizone<sp/>del<sp/>codice<sp/>va<sp/>assieme<sp/>al<sp/>codice,<sp/>invece<sp/>che<sp/>in<sp/>una<sp/>cartella<sp/>separata;<sp/>penso<sp/>sia<sp/>meglio.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>una<sp/>nota<sp/>su<sp/>rosplan<sp/>e<sp/>il<sp/>mission<sp/>manager</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">il<sp/>principio<sp/>è<sp/>questo:</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>*il<sp/>mission<sp/>manager*<sp/>si<sp/>occupa<sp/>del<sp/>progresso<sp/>della<sp/>missione<sp/>ad<sp/>alto<sp/>livello</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*ROSPlan*<sp/>si<sp/>preoccupa<sp/>della<sp/>singola<sp/>azione<sp/>da<sp/>eseguire,<sp/>*nel<sp/>dettaglio<sp/>dello<sp/>stato<sp/>delle<sp/>cose*.<sp/></highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">Quindi<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>è<sp/>distribuito<sp/>su<sp/>due<sp/>livelli:<sp/>il<sp/>primo<sp/>è<sp/>quello<sp/>&quot;generico&quot;<sp/>del<sp/>mission<sp/>manager,<sp/>che<sp/>si<sp/>occupa<sp/>anche<sp/>di<sp/>fare<sp/>da<sp/>mediatore<sp/>*tra<sp/>due<sp/>componenti<sp/>architetturali<sp/>diversi*<sp/>(armor<sp/>e<sp/>rosplan),<sp/>e<sp/>il<sp/>secondo<sp/>quello<sp/>specifico<sp/>che<sp/>si<sp/>preoccupa<sp/>di<sp/>gestire<sp/>i<sp/>dettagli<sp/>delle<sp/>varie<sp/>azioni<sp/>da<sp/>compiere.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Esempi<sp/>fallati</highlight></codeline>
+<codeline><highlight class="normal">in<sp/>questo<sp/>caso<sp/>la<sp/>sequenza<sp/>delle<sp/>azioni<sp/>non<sp/>è<sp/>molto<sp/>complessa,<sp/>però<sp/>in<sp/>futuro<sp/>potrebbe<sp/>esserla.<sp/>ad<sp/>esempio,<sp/>il<sp/>landmark<sp/>COLLECT,<sp/>che<sp/>attualmente<sp/>comprende<sp/>una<sp/>sequenza<sp/>di<sp/>3<sp/>azioni<sp/>(più<sp/>la<sp/>scelta<sp/>di<sp/>dove<sp/>andare<sp/>in<sp/>base<sp/>alla<sp/>mappa<sp/>topologica<sp/>dell&apos;area<sp/>...<sp/>ok,<sp/>non<sp/>così<sp/>semplice)<sp/>potrebbe,<sp/>in<sp/>futuro,<sp/>comprenderne<sp/>di<sp/>più:<sp/>ad<sp/>esempio,<sp/>comprendere<sp/>movimenti<sp/>espliciti<sp/>del<sp/>manipolatore<sp/>in<sp/>base<sp/>al<sp/>tipo<sp/>di<sp/>hint<sp/>da<sp/>raccogliere,<sp/>determinate<sp/>operazioni<sp/>di<sp/>sensing<sp/>durante<sp/>la<sp/>raccolta,<sp/>e<sp/>molto<sp/>di<sp/>più.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">è<sp/>bene<sp/>tenere<sp/>traccia<sp/>anche<sp/>degli<sp/>errori...</highlight></codeline>
+<codeline><highlight class="normal">più<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>evolve<sp/>in<sp/>complessità,<sp/>più<sp/>è<sp/>necessaria<sp/>una<sp/>separazione<sp/>tra<sp/>diversi<sp/>modi<sp/>di<sp/>vedere<sp/>il<sp/>da<sp/>farsi.<sp/>più<sp/>di<sp/>due<sp/>livelli<sp/>però<sp/>...<sp/>non<sp/>so<sp/>quanto<sp/>convenga.<sp/>2<sp/>è<sp/>la<sp/>scelta<sp/>più<sp/>logica<sp/>ed<sp/>efficace<sp/>per<sp/>la<sp/>maggioranza<sp/>dei<sp/>casi.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">...</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>vantaggi<sp/>(e<sp/>svantaggi)<sp/>dell&apos;approccio<sp/>per<sp/>landmarks</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">motivazioni<sp/>per<sp/>cui<sp/>ho<sp/>scelto<sp/>un<sp/>planning<sp/>su<sp/>due<sp/>livelli<sp/>e<sp/>l&apos;approccio<sp/>dei<sp/>landmarks:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>maggiore<sp/>flessibilità<sp/>in<sp/>caso<sp/>di<sp/>modifica<sp/>dell&apos;architettura</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>planner<sp/>PDDL<sp/>non<sp/>deve<sp/>fare<sp/>un&apos;intera<sp/>pianificazione<sp/>statica,<sp/>perciò<sp/>è<sp/>più<sp/>veloce<sp/>nel<sp/>risolvere<sp/>il<sp/>plan</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>fare<sp/>un<sp/>planning<sp/>statico<sp/>dell&apos;intera<sp/>situazione<sp/>è<sp/>semplicemente<sp/>assurdo,<sp/>se<sp/>pensiamo<sp/>a<sp/>tutti<sp/>i<sp/>problemi<sp/>imprevisti<sp/>che<sp/>possono<sp/>sorgere</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>vedere<sp/>il<sp/>comportamento<sp/>del<sp/>sistema<sp/>su<sp/>due<sp/>livelli<sp/>permette<sp/>di<sp/>astrarre<sp/>in<sp/>maniera<sp/>più<sp/>conveniente</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">problemi,<sp/>limitazioni,<sp/>difetti:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>rapido<sp/>aumento<sp/>della<sp/>complessità<sp/>di<sp/>implementazione<sp/>del<sp/>sistema</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>scrittura<sp/>del<sp/>mission<sp/>manager<sp/>(e<sp/>metodo<sp/>di<sp/>lavoro<sp/>in<sp/>generale)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ho<sp/>un<sp/>modo<sp/>di<sp/>scrivere<sp/>il<sp/>codice<sp/>che<sp/>tende<sp/>a<sp/>tenere<sp/>conto<sp/>di<sp/>tutti<sp/>gli<sp/>errori<sp/>che<sp/>possono<sp/>accadere.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>non<sp/>accada<sp/>qualcosa<sp/>di<sp/>storto<sp/>nell&apos;aprire<sp/>o<sp/>usare<sp/>un<sp/>protocollo<sp/>di<sp/>comunicazione</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>codice<sp/>dev&apos;essere<sp/>in<sp/>grado<sp/>il<sp/>più<sp/>possibile<sp/>di<sp/>reagire<sp/>a<sp/>qualunque<sp/>potenziale<sp/>imprevisto,<sp/>per<sp/>quanto<sp/>possibile</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>codice<sp/>in<sp/>generale<sp/>dev&apos;essere<sp/>più<sp/>informativo<sp/>possibile<sp/>e<sp/>dare<sp/>un<sp/>log<sp/>che<sp/>consenta<sp/>di<sp/>ricostruire<sp/>l&apos;accaduto<sp/>quanto<sp/>più<sp/>in<sp/>dettaglio<sp/>possibile</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>preferisco<sp/>*evitare<sp/>python*<sp/>perchè<sp/>l&apos;unico<sp/>modo<sp/>per<sp/>debuggarlo<sp/>è<sp/>...<sp/>provarlo,<sp/>il<sp/>che<sp/>crea<sp/>errori<sp/>a<sp/>runtime,<sp/>difficilissimi<sp/>da<sp/>identificare<sp/>anche<sp/>in<sp/>presenza<sp/>di<sp/>un<sp/>sistema<sp/>di<sp/>logging<sp/>quanto<sp/>ben<sp/>fatto<sp/>a<sp/>piacere;<sp/>C++<sp/>consente<sp/>di<sp/>individuare<sp/>eventuali<sp/>errori<sp/>di<sp/>logica<sp/>già<sp/>in<sp/>fase<sp/>di<sp/>compilazione,<sp/>*e<sp/>non<sp/>porta<sp/>a<sp/>strani<sp/>NoneTypes<sp/>imprevisti*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>scrivere<sp/>*il<sp/>mio<sp/>stesso<sp/>codice<sp/>pensando<sp/>che<sp/>esso<sp/>possa<sp/>non<sp/>funzionare<sp/>come<sp/>si<sp/>deve*,<sp/>ad<sp/>esempio<sp/>per<sp/>un<sp/>bug<sp/>difficile<sp/>da<sp/>scovare</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">insomma:<sp/>*evitare<sp/>situazioni<sp/>impreviste*<sp/>nella<sp/>prova<sp/>del<sp/>codice.<sp/>La<sp/>maggior<sp/>parte<sp/>del<sp/>tempo<sp/>la<sp/>passo<sp/>a<sp/>scrivere<sp/>codice<sp/>e<sp/>documentare,<sp/>perciò<sp/>vorrei<sp/>che,<sp/>dopo<sp/>ore<sp/>di<sp/>spremuta<sp/>di<sp/>cervello,<sp/>quanto<sp/>meno<sp/>la<sp/>situazione<sp/>in<sp/>fase<sp/>di<sp/>test<sp/>fosse<sp/>più<sp/>chiara<sp/>possibile,<sp/>e<sp/>se<sp/>possibile<sp/>che<sp/>funzioni<sp/>anche<sp/>a<sp/>primo<sp/>colpo.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">c&apos;è<sp/>un<sp/>altro<sp/>motivo<sp/>per<sp/>preferire<sp/>un<sp/>approccio<sp/>super<sp/>sicuro<sp/>alla<sp/>paranoia:<sp/>*l&apos;aspetto<sp/>scientifico<sp/>pratico<sp/>del<sp/>progetto<sp/>è<sp/>mooooolto<sp/>più<sp/>importante<sp/>del<sp/>(noiosissimo)<sp/>lavoro<sp/>di<sp/>implementazione*.<sp/>Se<sp/>voglio<sp/>inventare<sp/>un<sp/>sistema<sp/>di<sp/>navigazione,<sp/>devo<sp/>essere<sp/>sicuro<sp/>della<sp/>sua<sp/>logica<sp/>prima<sp/>*e<sp/>dopo*<sp/>la<sp/>fase<sp/>di<sp/>implementazione,<sp/>e<sp/>non<sp/>voglio<sp/>perdere<sp/>il<sp/>mio<sp/>tenpo<sp/>prezioso<sp/>appresso<sp/>a<sp/>cose<sp/>che<sp/>non<sp/>funzionano<sp/>per<sp/>motivi<sp/>casuali.<sp/>E&apos;<sp/>qualcosa<sp/>che<sp/>frena<sp/>l&apos;invenzione,<sp/>frena<sp/>l&apos;immaginazione,<sp/>ma<sp/>soprattutto<sp/>rende<sp/>questo<sp/>lavoro<sp/>molto<sp/>meno<sp/>divertente<sp/>di<sp/>quanto<sp/>potrebbe<sp/>esserlo.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">morale<sp/>della<sp/>favola:<sp/>*fallo<sp/>bene<sp/>una<sp/>volta<sp/>sola<sp/>piuttosto<sp/>che<sp/>male<sp/>100<sp/>volte*.<sp/></highlight></codeline>
     </programlisting>
     <location file="_docs/dev-log.md"/>
   </compounddef>

@@ -128,11 +128,13 @@
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-manager">13/08/2022 – mission manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#note">NOTE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vantaggi-e-svantaggi-dell-approccio-per-landmarks">vantaggi (e svantaggi) dell’approccio per landmarks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale">scrittura del mission manager (e metodo di lavoro in generale)</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#esempi-fallati">Esempi fallati</a></li>
 </ul>
 </li>
 </ul>
@@ -1777,7 +1779,44 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? … E COMPILA SIGNORI</p></li>
 </ul>
 </li>
-<li><p><strong>COMMIT</strong> : “working on armor interface (forcing hidden naming convention)”</p></li>
+<li><p><strong>COMMIT</strong> : “working on armor interface (forcing hidden naming convention)”</p>
+<ul class="simple">
+<li><p><strong>HO FATTO CASINO CON GIT</strong> e ora devo risolvere…</p></li>
+<li><p>casino coi large files … ho dovuto fare backup, <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">reset</span> <span class="pre">--hard</span> <span class="pre">&lt;commit&gt;</span></code> e aggiornamento, c’era un commit che continuava a “voler essere” caricato su git</p></li>
+</ul>
+</li>
+<li><p>proviamo a compilare di nuovo, <em>non si sa mai</em> … e anche questa volta ce l’abbiamo fatta</p></li>
+<li><p>dopo questa (tutt’altro che veloce) divagazione, torniamo sulla portata principale di oggi</p>
+<ul class="simple">
+<li><p>implementazione dell’acquisizione dell’hint</p></li>
+</ul>
+</li>
+<li><p>e passiamo agli stati</p>
+<ul class="simple">
+<li><p>anzitutto, il protocollo per determinare un fault</p></li>
+<li><p>anzi, meglio fare un po’ di design per commenti per adesso, identificando le parti più semplici</p></li>
+</ul>
+</li>
+<li><p>e adesso, implementazione precisa stato per stato (sarà una cosa lunga e dolorosa…)</p>
+<ul class="simple">
+<li><p>implementazione di MISSION_STATUS_REPLAN</p>
+<ul>
+<li><p>ma prima, un po’ di delirio coi messaggi per la rosplan pipeline…</p></li>
+</ul>
+</li>
+<li><p>(ROBA BRUTTA)</p></li>
+<li><p>implementazione di MISSION_STATUS_COLLECT</p>
+<ul>
+<li><p>al secondo passaggio fortunatamente inizio ad avere più codice su cui lavorare … e parecchio materiale già pronto, dovrei andare più veloce</p></li>
+</ul>
+</li>
+<li><p>(ROBA BRUTTISSIMA)</p></li>
+<li><p>implementazione di MISSION_STATUS_ASK_ONTOLOGY</p></li>
+<li><p>… (e tutte le altre)</p></li>
+</ul>
+</li>
+<li><p>e fine! (almeno, senza provare a compilare)</p></li>
+<li><p><strong>COMMIT</strong> : “working on mission manager (painful, endless implementation of the main mission manager)”</p></li>
 </ul>
 </div>
 <div class="section" id="todo">
@@ -1786,9 +1825,12 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>documentazione del package ROSPlan</p></li>
 <li><p>UML finale per ROSPlan</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
-<li><p>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</p></li>
+<li><p>evita di muovere il braccio robotico se sai che la posture richiesta è uguale a quella attuale, <em>memorizza la posture attuale</em> (puoi tracciarla…)</p></li>
+<li><p>pensare bene al module testing, e in particolare correggere i module testing di armor (potrebbero non funzionare più per via delle ultime modifiche ai servizi)</p></li>
+<li><p><em>un tantino in più di scena nell’indagine?</em> (intanto deve funzionare…)</p></li>
 <li><p>implementazione precisa dell’azione move-to</p></li>
 <li><p>implementazione del launch di un particolare file di configurazione per rviz</p></li>
+<li><p>la pagina di documentazione del codice andrebbe messa in una cartella chiamata code_documentation (inutile dire che ogni package ha le sue, e non si deve mischiare nulla)</p></li>
 <li><p>rifare gli schemi di armor!</p></li>
 <li><p>aggiornare schema feedback manager</p></li>
 <li><p>aggiustare le toctree in giro per le pagine</p></li>
@@ -1810,17 +1852,48 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>specificare negli UML, nel tipo di topic/servizio, <em>anche il formato del tipo</em>, ad esempio se è <em>.msg</em> o anche <em>.srv</em></p></li>
 <li><p>autenticazione SSH sul Docker di lavoro</p></li>
 </ul>
+</div>
 <div class="section" id="note">
-<h3>NOTE<a class="headerlink" href="#note" title="Permalink to this heading"></a></h3>
+<h2>NOTE<a class="headerlink" href="#note" title="Permalink to this heading"></a></h2>
+<div class="section" id="una-nota-su-rosplan-e-il-mission-manager">
+<h3>una nota su rosplan e il mission manager<a class="headerlink" href="#una-nota-su-rosplan-e-il-mission-manager" title="Permalink to this heading"></a></h3>
+<p>il principio è questo:</p>
 <ul class="simple">
-<li><p>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</p></li>
+<li><p><em>il mission manager</em> si occupa del progresso della missione ad alto livello</p></li>
+<li><p><em>ROSPlan</em> si preoccupa della singola azione da eseguire, <em>nel dettaglio dello stato delle cose</em>.</p></li>
+</ul>
+<p>Quindi il comportamento del robot è distribuito su due livelli: il primo è quello “generico” del mission manager, che si occupa anche di fare da mediatore <em>tra due componenti architetturali diversi</em> (armor e rosplan), e il secondo quello specifico che si preoccupa di gestire i dettagli delle varie azioni da compiere.</p>
+<p>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell’area … ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</p>
+<p>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però … non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</p>
+</div>
+<div class="section" id="vantaggi-e-svantaggi-dell-approccio-per-landmarks">
+<h3>vantaggi (e svantaggi) dell’approccio per landmarks<a class="headerlink" href="#vantaggi-e-svantaggi-dell-approccio-per-landmarks" title="Permalink to this heading"></a></h3>
+<p>motivazioni per cui ho scelto un planning su due livelli e l’approccio dei landmarks:</p>
+<ul class="simple">
+<li><p>maggiore flessibilità in caso di modifica dell’architettura</p></li>
+<li><p>il planner PDDL non deve fare un’intera pianificazione statica, perciò è più veloce nel risolvere il plan</p></li>
+<li><p>fare un planning statico dell’intera situazione è semplicemente assurdo, se pensiamo a tutti i problemi imprevisti che possono sorgere</p></li>
+<li><p>vedere il comportamento del sistema su due livelli permette di astrarre in maniera più conveniente</p></li>
+</ul>
+<p>problemi, limitazioni, difetti:</p>
+<ul class="simple">
+<li><p>rapido aumento della complessità di implementazione del sistema</p></li>
 </ul>
 </div>
+<div class="section" id="scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale">
+<h3>scrittura del mission manager (e metodo di lavoro in generale)<a class="headerlink" href="#scrittura-del-mission-manager-e-metodo-di-lavoro-in-generale" title="Permalink to this heading"></a></h3>
+<p>ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.</p>
+<ul class="simple">
+<li><p>voglio essere sicuro che non accada qualcosa di storto nell’aprire o usare un protocollo di comunicazione</p></li>
+<li><p>il codice dev’essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile</p></li>
+<li><p>il codice in generale dev’essere più informativo possibile e dare un log che consenta di ricostruire l’accaduto quanto più in dettaglio possibile</p></li>
+<li><p>preferisco <em>evitare python</em> perchè l’unico modo per debuggarlo è … provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, <em>e non porta a strani NoneTypes imprevisti</em></p></li>
+<li><p>scrivere <em>il mio stesso codice pensando che esso possa non funzionare come si deve</em>, ad esempio per un bug difficile da scovare</p></li>
+</ul>
+<p>insomma: <em>evitare situazioni impreviste</em> nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.</p>
+<p>c’è un altro motivo per preferire un approccio super sicuro alla paranoia: <em>l’aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione</em>. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima <em>e dopo</em> la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E’ qualcosa che frena l’invenzione, frena l’immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.</p>
+<p>morale della favola: <em>fallo bene una volta sola piuttosto che male 100 volte</em>.</p>
 </div>
-<div class="section" id="esempi-fallati">
-<h2>Esempi fallati<a class="headerlink" href="#esempi-fallati" title="Permalink to this heading"></a></h2>
-<p>è bene tenere traccia anche degli errori…</p>
-<p>…</p>
 </div>
 </div>
 

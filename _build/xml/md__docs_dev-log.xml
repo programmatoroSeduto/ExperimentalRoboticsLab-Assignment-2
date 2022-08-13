@@ -1338,7 +1338,38 @@
 </listitem><listitem><para>prima di riprendere a fare qualunque altra cosa direi che posso provare a compilare, no? compia? ... E COMPILA SIGNORI</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on armor interface (forcing hidden naming convention)&quot;</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on armor interface (forcing hidden naming convention)&quot;<itemizedlist>
+<listitem><para><bold>HO FATTO CASINO CON GIT</bold> e ora devo risolvere...</para>
+</listitem><listitem><para>casino coi large files ... ho dovuto fare backup, <computeroutput>git reset --hard &lt;commit&gt;</computeroutput> e aggiornamento, c&apos;era un commit che continuava a &quot;voler essere&quot; caricato su git</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>proviamo a compilare di nuovo, <emphasis>non si sa mai</emphasis> ... e anche questa volta ce l&apos;abbiamo fatta</para>
+</listitem><listitem><para>dopo questa (tutt&apos;altro che veloce) divagazione, torniamo sulla portata principale di oggi<itemizedlist>
+<listitem><para>implementazione dell&apos;acquisizione dell&apos;hint</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e passiamo agli stati<itemizedlist>
+<listitem><para>anzitutto, il protocollo per determinare un fault</para>
+</listitem><listitem><para>anzi, meglio fare un po&apos; di design per commenti per adesso, identificando le parti più semplici</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e adesso, implementazione precisa stato per stato (sarà una cosa lunga e dolorosa...)<itemizedlist>
+<listitem><para>implementazione di MISSION_STATUS_REPLAN<itemizedlist>
+<listitem><para>ma prima, un po&apos; di delirio coi messaggi per la rosplan pipeline...</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(ROBA BRUTTA)</para>
+</listitem><listitem><para>implementazione di MISSION_STATUS_COLLECT<itemizedlist>
+<listitem><para>al secondo passaggio fortunatamente inizio ad avere più codice su cui lavorare ... e parecchio materiale già pronto, dovrei andare più veloce</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(ROBA BRUTTISSIMA)</para>
+</listitem><listitem><para>implementazione di MISSION_STATUS_ASK_ONTOLOGY</para>
+</listitem><listitem><para>... (e tutte le altre)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e fine! (almeno, senza provare a compilare)</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (painful, endless implementation of the main mission manager)&quot;</para>
 </listitem></itemizedlist>
 </para>
 </sect2>
@@ -1348,9 +1379,12 @@
 <listitem><para>documentazione del package ROSPlan</para>
 </listitem><listitem><para>UML finale per ROSPlan</para>
 </listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
-</listitem><listitem><para>modificare uno dei nodi del navigation per raggiungere una certa orientazione al termine del moto, oltre che una certa posizione</para>
+</listitem><listitem><para>evita di muovere il braccio robotico se sai che la posture richiesta è uguale a quella attuale, <emphasis>memorizza la posture attuale</emphasis> (puoi tracciarla...)</para>
+</listitem><listitem><para>pensare bene al module testing, e in particolare correggere i module testing di armor (potrebbero non funzionare più per via delle ultime modifiche ai servizi)</para>
+</listitem><listitem><para><emphasis>un tantino in più di scena nell&apos;indagine?</emphasis> (intanto deve funzionare...)</para>
 </listitem><listitem><para>implementazione precisa dell&apos;azione move-to</para>
 </listitem><listitem><para>implementazione del launch di un particolare file di configurazione per rviz</para>
+</listitem><listitem><para>la pagina di documentazione del codice andrebbe messa in una cartella chiamata code_documentation (inutile dire che ogni package ha le sue, e non si deve mischiare nulla)</para>
 </listitem><listitem><para>rifare gli schemi di armor!</para>
 </listitem><listitem><para>aggiornare schema feedback manager</para>
 </listitem><listitem><para>aggiustare le toctree in giro per le pagine</para>
@@ -1372,18 +1406,52 @@
 </listitem><listitem><para>autenticazione SSH sul Docker di lavoro</para>
 </listitem></itemizedlist>
 </para>
-<sect3 id="md__docs_dev-log_1autotoc_md68">
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md68">
 <title>NOTE</title>
+<sect3 id="md__docs_dev-log_1autotoc_md69">
+<title>una nota su rosplan e il mission manager</title>
+<para>il principio è questo:</para>
 <para><itemizedlist>
-<listitem><para>la pagina di documentaizone del codice va assieme al codice, invece che in una cartella separata; penso sia meglio.</para>
+<listitem><para><emphasis>il mission manager</emphasis> si occupa del progresso della missione ad alto livello</para>
+</listitem><listitem><para><emphasis>ROSPlan</emphasis> si preoccupa della singola azione da eseguire, <emphasis>nel dettaglio dello stato delle cose</emphasis>.</para>
+</listitem></itemizedlist>
+</para>
+<para>Quindi il comportamento del robot è distribuito su due livelli: il primo è quello &quot;generico&quot; del mission manager, che si occupa anche di fare da mediatore <emphasis>tra due componenti architetturali diversi</emphasis> (armor e rosplan), e il secondo quello specifico che si preoccupa di gestire i dettagli delle varie azioni da compiere.</para>
+<para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
+<para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
+</sect3>
+<sect3 id="md__docs_dev-log_1autotoc_md70">
+<title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
+<para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
+<para><itemizedlist>
+<listitem><para>maggiore flessibilità in caso di modifica dell&apos;architettura</para>
+</listitem><listitem><para>il planner PDDL non deve fare un&apos;intera pianificazione statica, perciò è più veloce nel risolvere il plan</para>
+</listitem><listitem><para>fare un planning statico dell&apos;intera situazione è semplicemente assurdo, se pensiamo a tutti i problemi imprevisti che possono sorgere</para>
+</listitem><listitem><para>vedere il comportamento del sistema su due livelli permette di astrarre in maniera più conveniente</para>
+</listitem></itemizedlist>
+</para>
+<para>problemi, limitazioni, difetti:</para>
+<para><itemizedlist>
+<listitem><para>rapido aumento della complessità di implementazione del sistema</para>
 </listitem></itemizedlist>
 </para>
 </sect3>
-</sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md69">
-<title>Esempi fallati</title>
-<para>è bene tenere traccia anche degli errori...</para>
-<para>... </para>
+<sect3 id="md__docs_dev-log_1autotoc_md71">
+<title>scrittura del mission manager (e metodo di lavoro in generale)</title>
+<para>ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.</para>
+<para><itemizedlist>
+<listitem><para>voglio essere sicuro che non accada qualcosa di storto nell&apos;aprire o usare un protocollo di comunicazione</para>
+</listitem><listitem><para>il codice dev&apos;essere in grado il più possibile di reagire a qualunque potenziale imprevisto, per quanto possibile</para>
+</listitem><listitem><para>il codice in generale dev&apos;essere più informativo possibile e dare un log che consenta di ricostruire l&apos;accaduto quanto più in dettaglio possibile</para>
+</listitem><listitem><para>preferisco <emphasis>evitare python</emphasis> perchè l&apos;unico modo per debuggarlo è ... provarlo, il che crea errori a runtime, difficilissimi da identificare anche in presenza di un sistema di logging quanto ben fatto a piacere; C++ consente di individuare eventuali errori di logica già in fase di compilazione, <emphasis>e non porta a strani NoneTypes imprevisti</emphasis></para>
+</listitem><listitem><para>scrivere <emphasis>il mio stesso codice pensando che esso possa non funzionare come si deve</emphasis>, ad esempio per un bug difficile da scovare</para>
+</listitem></itemizedlist>
+</para>
+<para>insomma: <emphasis>evitare situazioni impreviste</emphasis> nella prova del codice. La maggior parte del tempo la passo a scrivere codice e documentare, perciò vorrei che, dopo ore di spremuta di cervello, quanto meno la situazione in fase di test fosse più chiara possibile, e se possibile che funzioni anche a primo colpo.</para>
+<para>c&apos;è un altro motivo per preferire un approccio super sicuro alla paranoia: <emphasis>l&apos;aspetto scientifico pratico del progetto è mooooolto più importante del (noiosissimo) lavoro di implementazione</emphasis>. Se voglio inventare un sistema di navigazione, devo essere sicuro della sua logica prima <emphasis>e dopo</emphasis> la fase di implementazione, e non voglio perdere il mio tenpo prezioso appresso a cose che non funzionano per motivi casuali. E&apos; qualcosa che frena l&apos;invenzione, frena l&apos;immaginazione, ma soprattutto rende questo lavoro molto meno divertente di quanto potrebbe esserlo.</para>
+<para>morale della favola: <emphasis>fallo bene una volta sola piuttosto che male 100 volte</emphasis>. </para>
+</sect3>
 </sect2>
 </sect1>
     </detaileddescription>
