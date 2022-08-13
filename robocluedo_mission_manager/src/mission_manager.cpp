@@ -170,7 +170,7 @@ public:
 				}
 				
 				// execute the plan
-				robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response res = execute_plan( );
+				res = execute_plan( );
 				
 				// check the outcome of the operation
 				if( !res.success )
@@ -247,7 +247,7 @@ public:
 				}
 				
 				// execute the plan
-				robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response res = execute_plan( );
+				res = execute_plan( );
 				
 				// check the outcome of the operation
 				if( !res.success )
@@ -259,9 +259,9 @@ public:
 					{
 						if( res.feedback.failure )
 						{
-							if( res.hw_failure )
+							if( res.feedback.hw_failure )
 							{
-								if( res.failure_nav_system )
+								if( res.feedback.failure_nav_system )
 									TWARN( "unable to perform navigation (hw navigation problem)" );
 								else
 									TWARN( "unable to perform manipulation (hw manipulation problem)" );
@@ -320,7 +320,7 @@ public:
 				{
 					TLOG( "(from the ontology) found " << find_req.response.hyp.size( ) << "consistent hypotheses" );
 					ready_to_solve = true;
-					last_hyp = hyp[0]; // take the first returned
+					last_hyp = find_req.response.hyp[0]; // take the first returned
 				}
 				else
 				{
@@ -379,7 +379,7 @@ public:
 				}
 				
 				// execute the plan
-				robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response res = execute_plan( );
+				res = execute_plan( );
 				
 				// inspect the error if any
 				if( !res.success )
@@ -398,7 +398,7 @@ public:
 					{
 						if( res.feedback.failure )
 						{
-							if( res.hw_failure )
+							if( res.feedback.hw_failure )
 								TWARN( "unable to perform navigation (hw navigation problem" << (res.feedback.failure_manipulation ? ", strange: failure_manipulation=true" : "") << ")" );
 							else
 								TWARN( "unable to dispatch the plan! (hw_failure=false but failure=true ... maybe a problem with services inside robocluedo ROSPlan?)" );
@@ -436,7 +436,7 @@ public:
 			break;
 			case MISSION_STATUS_ASK_ORACLE: // oracle, armor
 			{
-				TLOG( "status: " << "MISSION_STATUS_"ASK_ORACLE );
+				TLOG( "status: " << "MISSION_STATUS_ASK_ORACLE" );
 				
 				// ask the Oracle for the solution of the mystery
 				erl2::Oracle solution;
@@ -468,7 +468,7 @@ public:
 					
 					// mark the hint as wrong
 					robocluedo_armor_msgs::DiscardHypothesis discard_note;
-					discard_note.request.ID = last_hyp;
+					discard_note.request.ID = last_hyp.ID;
 					
 					if( !cl_armor_del.call( discard_note ) )
 					{
@@ -477,7 +477,7 @@ public:
 					else
 					{
 						std_srvs::Trigger backup_cmd;
-						if( !cl_armor_backup( backup_cmd ) || !backup_cmd.response.success )
+						if( !cl_armor_backup.call( backup_cmd ) || !backup_cmd.response.success )
 						{
 							TWARN( "ontologybackup failed (retrying later ...)" );
 						}
@@ -534,7 +534,7 @@ public:
 		if( !cl_rosplan_pipeline.call( cmd ) )
 		{
 			TWARN( "unable to make a plan! client calling failed" );
-			set_standard_response( cmd.response.success, true );
+			set_standard_response( cmd, true );
 		}
 		
 		return cmd.response;
@@ -549,7 +549,7 @@ public:
 		if( !cl_rosplan_pipeline.call( cmd ) )
 		{
 			TWARN( "unable to execute the plan! client calling failed" );
-			set_standard_response( cmd.response.success, true );
+			set_standard_response( cmd, true );
 		}
 		
 		return cmd.response;
@@ -576,9 +576,9 @@ public:
 				return;
 			}
 			
-			if( !hint.response.success )
+			if( !addh.response.success )
 			{
-				TWARN( "(cbk_oracle_hint, add hint) aRMOR interface responded with success=false" );
+				TWARN( "(cbk_oracle_hint, add hint) aRMOR interface replied with success=false" );
 				return;
 			}
 			
@@ -605,18 +605,18 @@ public:
 	{
 		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd;
 		
-		set_request( cmd, true, true, false, false );
+		set_request( cmd, true, true, false, false, landmark );
 		set_standard_response( cmd, false );
 		
 		return cmd;
 	}
 	
 	/** make a planning request without loading and solving */
-	robocluedo_rosplan_msgs::RosplanPipelineManagerService create_exec_request( int landmark )
+	robocluedo_rosplan_msgs::RosplanPipelineManagerService create_exec_request( int landmark = -1 )
 	{
 		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd;
 		
-		set_request( cmd, false, false, true, true );
+		set_request( cmd, false, false, true, true, landmark );
 		set_standard_response( cmd, false );
 		
 		return cmd;
@@ -649,7 +649,7 @@ public:
 	void set_request( robocluedo_rosplan_msgs::RosplanPipelineManagerService& cmd, 
 		bool load, bool solve, bool parse, bool exec, int landmark )
 	{
-		cmd.landmark = landmark;
+		cmd.request.landmark = landmark;
 		
 		cmd.request.load_problem = load;
 		cmd.request.solve_problem = solve;

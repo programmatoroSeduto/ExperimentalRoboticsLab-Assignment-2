@@ -223,7 +223,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="544" column="66" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="544" bodyend="556"/>
-        <references refid="classnode__mission__manager_1ada44841e62825a8030f557dfabe7a472" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</references>
+        <references refid="classnode__mission__manager_1a43a9e09ce2f7b8a1aa7d3604177791c0" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</references>
         <references refid="mission__manager_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="mission__manager_8cpp" startline="19">TWARN</references>
         <references refid="classnode__mission__manager_1a70e397271e6aa260c8953714cb425abc" compoundref="mission__manager_8cpp" startline="626" endline="646">set_standard_response</references>
         <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="123" endline="526">spin</referencedby>
@@ -290,14 +290,15 @@
         <references refid="classnode__mission__manager_1a70e397271e6aa260c8953714cb425abc" compoundref="mission__manager_8cpp" startline="626" endline="646">set_standard_response</references>
         <referencedby refid="classnode__mission__manager_1ac968210cc999a221c57e610812618456" compoundref="mission__manager_8cpp" startline="529" endline="541">make_plan</referencedby>
       </memberdef>
-      <memberdef kind="function" id="classnode__mission__manager_1ada44841e62825a8030f557dfabe7a472" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+      <memberdef kind="function" id="classnode__mission__manager_1a43a9e09ce2f7b8a1aa7d3604177791c0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>robocluedo_rosplan_msgs::RosplanPipelineManagerService</type>
         <definition>robocluedo_rosplan_msgs::RosplanPipelineManagerService node_mission_manager::create_exec_request</definition>
-        <argsstring>(int landmark)</argsstring>
+        <argsstring>(int landmark=-1)</argsstring>
         <name>create_exec_request</name>
         <param>
           <type>int</type>
           <declname>landmark</declname>
+          <defval>-1</defval>
         </param>
         <briefdescription>
         </briefdescription>
@@ -336,7 +337,7 @@
         <referencedby refid="classnode__mission__manager_1ac968210cc999a221c57e610812618456" compoundref="mission__manager_8cpp" startline="529" endline="541">make_plan</referencedby>
         <referencedby refid="classnode__mission__manager_1a870659028e964f382ac57b2c3c3993a0" compoundref="mission__manager_8cpp" startline="544" endline="556">execute_plan</referencedby>
         <referencedby refid="classnode__mission__manager_1aad923693ed0d555dbf95e3a7a73f91b7" compoundref="mission__manager_8cpp" startline="604" endline="612">create_planning_request</referencedby>
-        <referencedby refid="classnode__mission__manager_1ada44841e62825a8030f557dfabe7a472" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</referencedby>
+        <referencedby refid="classnode__mission__manager_1a43a9e09ce2f7b8a1aa7d3604177791c0" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__mission__manager_1a7f426607b21ebfade0a55c30ebd55647" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -376,7 +377,7 @@
         </inbodydescription>
         <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="649" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="649" bodyend="658"/>
         <referencedby refid="classnode__mission__manager_1aad923693ed0d555dbf95e3a7a73f91b7" compoundref="mission__manager_8cpp" startline="604" endline="612">create_planning_request</referencedby>
-        <referencedby refid="classnode__mission__manager_1ada44841e62825a8030f557dfabe7a472" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</referencedby>
+        <referencedby refid="classnode__mission__manager_1a43a9e09ce2f7b8a1aa7d3604177791c0" compoundref="mission__manager_8cpp" startline="615" endline="623">create_exec_request</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -421,7 +422,7 @@
       <member refid="classnode__mission__manager_1a8bab762c14e78ed38de8e1f9eff2e2cb" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_armor_find</name></member>
       <member refid="classnode__mission__manager_1a37c4b9d24b5427b42591df5c81d0a120" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_oracle_solution</name></member>
       <member refid="classnode__mission__manager_1a68390e83274eee5e56e2285b9aa93731" prot="private" virt="non-virtual"><scope>node_mission_manager</scope><name>cl_rosplan_pipeline</name></member>
-      <member refid="classnode__mission__manager_1ada44841e62825a8030f557dfabe7a472" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>create_exec_request</name></member>
+      <member refid="classnode__mission__manager_1a43a9e09ce2f7b8a1aa7d3604177791c0" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>create_exec_request</name></member>
       <member refid="classnode__mission__manager_1aad923693ed0d555dbf95e3a7a73f91b7" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>create_planning_request</name></member>
       <member refid="classnode__mission__manager_1a870659028e964f382ac57b2c3c3993a0" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>execute_plan</name></member>
       <member refid="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" prot="public" virt="non-virtual"><scope>node_mission_manager</scope><name>is_valid_hint</name></member>

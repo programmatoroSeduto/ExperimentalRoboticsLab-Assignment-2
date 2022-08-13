@@ -1394,7 +1394,14 @@ implementazione del nodo main dell'architettura (fatto questo si passa al testin
 - e fine! (almeno, senza provare a compilare)
 - **COMMIT** : "working on mission manager (painful, endless implementation of the main mission manager)"
 
+---
 
+e ora la parte ... migliore? *il debugging dell'ecomostro*
+
+- vediamo se riusciamo a farlo compilare ... (domenica libera? magari!)
+- (posso dire che mi aspettavo di peggio? non sono tantissimi, sono sollevato)
+- **ammazzando selvaggiamente** gli ultimi errori
+- 
 
 
 
