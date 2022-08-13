@@ -1594,7 +1594,15 @@
 <listitem><para>dovrei rifare il manipulation controller ... poi, un altro giorno</para>
 </listitem></itemizedlist>
 </para>
-</listitem><listitem></listitem></itemizedlist>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on navigation (solving issued and limitations)&quot;</para>
+</listitem><listitem><para>e ovviamnete cosa manca? un bel launch di aRMOR ... bello</para>
+</listitem><listitem><para>a questo punto passiamo direttamente al test completo: il test parziale è un casino, e poi tanto prima o poi avrei dovuto farlo<itemizedlist>
+<listitem><para>iniziato bene ... poi il programma è letteralmente inciampato su se stesso. era altamente improbabile che andasse bene a primo colpo.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><emphasis>domani ci si pensa</emphasis>, adesso a mezzanotte mi si incrociano gli occhi.</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;first complete test (not working)&quot;</para>
+</listitem></itemizedlist>
 </para>
 </sect2>
 <sect2 id="md__docs_dev-log_1autotoc_md72">

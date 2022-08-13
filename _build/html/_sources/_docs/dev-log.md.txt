@@ -1640,7 +1640,14 @@ direi che siamo arrivati all'ultimo grande test: *il mission manager*, e tutta l
 - (mi sarei aspettato di fare prima)
 - per il momento, l'aiutino sull'oracolo teniamolo: 0.25 è davvero troppo stretto. 
 	- dovrei rifare il manipulation controller ... poi, un altro giorno
-- 
+- **COMMIT** : "working on navigation (solving issued and limitations)"
+- e ovviamnete cosa manca? un bel launch di aRMOR ... bello
+- a questo punto passiamo direttamente al test completo: il test parziale è un casino, e poi tanto prima o poi avrei dovuto farlo
+	- iniziato bene ... poi il programma è letteralmente inciampato su se stesso. era altamente improbabile che andasse bene a primo colpo. 
+
+- *domani ci si pensa*, adesso a mezzanotte mi si incrociano gli occhi.
+
+- **COMMIT**: "first complete test (not working)"
 
 
 

@@ -550,8 +550,16 @@
 </programlisting></para>
 </sect1>
 <sect1 id="md__docs_test-the-project_1autotoc_md118">
-<title>TESTING Oracle plus movement controller</title>
-<para>...</para>
+<title>ROSPlan and aRMOR</title>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_mission_manager<sp/>run_components.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_armor<sp/>run.launch</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+</programlisting></para>
 </sect1>
 <sect1 id="md__docs_test-the-project_1autotoc_md119">
 <title>final testings</title>

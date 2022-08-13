@@ -1649,7 +1649,14 @@
 <codeline><highlight class="normal">-<sp/>(mi<sp/>sarei<sp/>aspettato<sp/>di<sp/>fare<sp/>prima)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>per<sp/>il<sp/>momento,<sp/>l&apos;aiutino<sp/>sull&apos;oracolo<sp/>teniamolo:<sp/>0.25<sp/>è<sp/>davvero<sp/>troppo<sp/>stretto.<sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>dovrei<sp/>rifare<sp/>il<sp/>manipulation<sp/>controller<sp/>...<sp/>poi,<sp/>un<sp/>altro<sp/>giorno</highlight></codeline>
-<codeline><highlight class="normal">-<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>navigation<sp/>(solving<sp/>issued<sp/>and<sp/>limitations)&quot;</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>ovviamnete<sp/>cosa<sp/>manca?<sp/>un<sp/>bel<sp/>launch<sp/>di<sp/>aRMOR<sp/>...<sp/>bello</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>a<sp/>questo<sp/>punto<sp/>passiamo<sp/>direttamente<sp/>al<sp/>test<sp/>completo:<sp/>il<sp/>test<sp/>parziale<sp/>è<sp/>un<sp/>casino,<sp/>e<sp/>poi<sp/>tanto<sp/>prima<sp/>o<sp/>poi<sp/>avrei<sp/>dovuto<sp/>farlo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>iniziato<sp/>bene<sp/>...<sp/>poi<sp/>il<sp/>programma<sp/>è<sp/>letteralmente<sp/>inciampato<sp/>su<sp/>se<sp/>stesso.<sp/>era<sp/>altamente<sp/>improbabile<sp/>che<sp/>andasse<sp/>bene<sp/>a<sp/>primo<sp/>colpo.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>*domani<sp/>ci<sp/>si<sp/>pensa*,<sp/>adesso<sp/>a<sp/>mezzanotte<sp/>mi<sp/>si<sp/>incrociano<sp/>gli<sp/>occhi.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;first<sp/>complete<sp/>test<sp/>(not<sp/>working)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

@@ -153,7 +153,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-rosplan-plus-real-motion-controller">TESTING rosplan plus real motion controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#testing-oracle-plus-movement-controller">TESTING Oracle plus movement controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rosplan-and-armor">ROSPlan and aRMOR</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#final-testings">final testings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests-outputs">TESTS OUTPUTS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#armor-only">armor only</a></li>
@@ -730,9 +730,18 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </pre></div>
 </div>
 </div>
-<div class="section" id="testing-oracle-plus-movement-controller">
-<h2>TESTING Oracle plus movement controller<a class="headerlink" href="#testing-oracle-plus-movement-controller" title="Permalink to this heading"></a></h2>
-<p>…</p>
+<div class="section" id="rosplan-and-armor">
+<h2>ROSPlan and aRMOR<a class="headerlink" href="#rosplan-and-armor" title="Permalink to this heading"></a></h2>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_mission_manager run_components.launch <span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># shell 2</span>
+roslaunch robocluedo_armor run.launch
+
+<span class="c1"># shell 3</span>
+rosrun robocluedo_mission_manager mission_manager
+</pre></div>
+</div>
 </div>
 <div class="section" id="final-testings">
 <h2>final testings<a class="headerlink" href="#final-testings" title="Permalink to this heading"></a></h2>

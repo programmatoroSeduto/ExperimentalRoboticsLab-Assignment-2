@@ -613,9 +613,18 @@ rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem
 
 ```
 
-## TESTING Oracle plus movement controller
+## ROSPlan and aRMOR
 
-...
+```bash
+# shell 1
+roslaunch robocluedo_mission_manager run_components.launch 2>/dev/null
+
+# shell 2
+roslaunch robocluedo_armor run.launch
+
+# shell 3
+rosrun robocluedo_mission_manager mission_manager
+```
 
 ## final testings
 
