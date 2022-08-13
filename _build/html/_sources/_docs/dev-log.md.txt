@@ -1321,7 +1321,7 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 
 ---
 
-## 13/08/2022 -- mission manager
+## 13/08/2022 -- mission manager -- module testing
 
 implementazione del nodo main dell'architettura (fatto questo si passa al testing e si impacchetta tutto)
 
@@ -1401,7 +1401,89 @@ e ora la parte ... migliore? *il debugging dell'ecomostro*
 - vediamo se riusciamo a farlo compilare ... (domenica libera? magari!)
 - (posso dire che mi aspettavo di peggio? non sono tantissimi, sono sollevato)
 - **ammazzando selvaggiamente** gli ultimi errori
-- 
+- (molto soddisfatto, e fortuna che ho pensato di implementarlo in C++ ... l'avessi fatto in python sarei diventato pazzo da manicomio)
+- **COMMIT** : "working on mission manager (first debugging of the mission_manager node)"
+
+---
+
+il progetto completo adesso c'è! i prossimi passi? module testing, e infine test finale dell'intero progetto. (quella domenica libera potrebbe non essere solo un sogno ... a meno di non aver combinato un casino apocalittico)
+
+- prima di tutto, a posto la documentazione su come eseguire il progetto e come testarlo (ci sono due documenti fatti apposta per questo)
+	- inizio già ad elencarmi i test da fare
+- test per aRMOR
+	- armor puro -- module testing
+	- test armor tools
+		- ho dovuto aggiornarlo leggermente: non c'era nulla di errato, solo però c'erano i due test di armortools e armorcluedo nello stesso file; ora sono divisi
+		- *e meglio scrivere gli output dei test in fondo al file...* altrimenti presto non ci si capirà nulla
+		- l'ultima query mi da un'eccezione java nella ontology, pare che esista un oggetto null, ma non saprei perchè
+		- controllando le query sembra tutto a posto, non ce lo metto io di sicuro quell'oggetto
+		- (non penso che ci sia qualcosa di strano, però non mi convince ... è anche vero però che il test è molto vecchio)
+		- scrissi questa cosa nel test:
+		
+			```text
+			* classe più profonda di un individual (caso bastardo, probabilmente bug)
+			* 	"QUERY", "CLASS", "IND", "HP3", "true"
+			* 	HYPOTHESIS
+			```
+			
+			quindi questo comando non funzionava già prima. tutto a posto: o ho trovato un workaround per farlo funzionare comunque, o ho proprio dribblato la questione. In ogni caso, devo aver sicuramente risolto in passato il problema. Attualmente, basta commentare la riga incriminata e siamo tutti contenti.
+		
+		- giusto per la cronaca, l'errore è questo:
+
+			```text
+			 13/08/22_12:31:13,855 -> Class OWLReferencesInterface : [[ !!! ERROR !!! ]]Cannot get the OWL name of a null OWL object
+			Exception in thread "pool-1-thread-22" java.lang.IllegalArgumentException
+				at com.google.common.base.Preconditions.checkArgument(Preconditions.java:108)
+				at org.ros.internal.message.field.PrimitiveFieldType$14.serialize(PrimitiveFieldType.java:574)
+				at org.ros.internal.message.field.ListField.serialize(ListField.java:62)
+				at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)
+				at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)
+				at org.ros.internal.message.field.MessageFieldType.serialize(MessageFieldType.java:92)
+				at org.ros.internal.message.field.ValueField.serialize(ValueField.java:62)
+				at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)
+				at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)
+				at org.ros.internal.node.service.ServiceRequestHandler.handleRequest(ServiceRequestHandler.java:66)
+				at org.ros.internal.node.service.ServiceRequestHandler.access$100(ServiceRequestHandler.java:38)
+				at org.ros.internal.node.service.ServiceRequestHandler$1.run(ServiceRequestHandler.java:99)
+				at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+				at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+				at java.lang.Thread.run(Thread.java:748)
+			```
+		
+	- test armor cluedo
+- test su robocluedo rosplan
+	- anzitutto voglio spostare il nodo py che simula le interfacce nel module testing
+	- test PDDL (non si sa mai...)
+		- *fortunatamente* il modello è ok
+	- simple rosplan
+	- knowledge base interface (vedi diario di implementazione ... visto a cosa serve tenere dei diari?)
+	- pipeline manager (anche qui dai diari)
+	- tutto senza roslaunch
+		- "piccolo" problema con un manifest che non andava bene ... risolto (c'ho messo più del previsto...)
+	- a questo punto direi che possiamo scriverlo 'sto launch finale, no?
+	- e test finale
+- (boh pare funzionare tutto a dovere .-.. ci fidiamo?)
+- test sul package del robot
+	- urdf
+	- robot
+- ora, i test sulla navigation (e qui sono piuttosto curioso)
+	- go to point
+	- head orientation
+	- wall follow
+		- **ISSUE** il wall follow non si disattiva ... a vedere il comportamento del robot pare che non riesca a pubblicare la posizione dopo che è stato disattivato, ma il ciclo rimane in funzionamento, cosa strana 
+		- tutto risolto: c'era un bug nella disattivazione (dal nodo originale)
+	- e ora, quello che tutti stavamo aspettando! bug_m!
+	- ora il nav controller
+		- **ISSUE** : credo ci sia un problema con il controllo della yaw da parte del controller: certe volte va, altre no, e non mi è chiaro il perchè. 
+		- ho notato che il robot manda il segnale *prima di aggiustare la yaw*, e sapendo come ho strutturato gli stati, è presto detto il perchè
+		- avevo ragione, c'era un passaggio di stato poco pensato. problema *risolto*
+	- manca solo il manipulator, per cui secondo me ho già un test bello pronto
+- **COMMIT** : "module testing (rosplan, navigation, manipulation)"
+
+
+
+
+
 
 
 
@@ -1413,6 +1495,10 @@ e ora la parte ... migliore? *il debugging dell'ecomostro*
 
 ## TODO
 
+- ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio
+- vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation
+- aumentare la mobilità del robot spostando le ruote "passive" più verso il centro del veicolo
+- navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)
 - documentazione del package ROSPlan
 - UML finale per ROSPlan
 - *module testing* su kb_tools

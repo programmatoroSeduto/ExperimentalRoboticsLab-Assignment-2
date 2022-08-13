@@ -41,6 +41,8 @@ RCL -- the RoboCLuedo Project - part 2
    
    ./robocluedo_dependencies/_docs/*
 
+..Module Testing <./robocluedo_dependencies/_docs/test-the-project.md>
+
 
 .. toctree::
    :titlesonly:

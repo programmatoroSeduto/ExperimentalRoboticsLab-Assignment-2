@@ -61,6 +61,6 @@
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.loginfo(</highlight><highlight class="stringliteral">&quot;(rosplan_simulated_motion_system)<sp/>ready&quot;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>rospy.spin()</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py"/>
+    <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py"/>
   </compounddef>
 </doxygen>

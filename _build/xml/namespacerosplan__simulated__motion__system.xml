@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" line="8" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" bodystart="8" bodyend="14"/>
+        <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" line="8" column="1" bodyfile="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" bodystart="8" bodyend="14"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__simulated__motion__system_1a0f12af47de380a544ae698c737bcab28" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -39,7 +39,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" line="15" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" bodystart="15" bodyend="24"/>
+        <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" line="15" column="1" bodyfile="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" bodystart="15" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -66,7 +66,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" line="25" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" bodystart="25" bodyend="36"/>
+        <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" line="25" column="1" bodyfile="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" bodystart="25" bodyend="36"/>
         <referencedby refid="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" compoundref="rosplan__simulated__motion__system_8py" startline="37" endline="42">shut_msg</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacerosplan__simulated__motion__system_1af5fd428b9d93362e270153ffb36f1d76" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" line="37" column="1" bodyfile="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" bodystart="37" bodyend="42"/>
+        <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" line="37" column="1" bodyfile="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" bodystart="37" bodyend="42"/>
         <references refid="namespacerosplan__simulated__motion__system_1ac71378f71c951dfce8118c36abea4d7f" compoundref="rosplan__simulated__motion__system_8py" startline="25" endline="36">open_srv</references>
       </memberdef>
       </sectiondef>
@@ -90,6 +90,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="robocluedo_rosplan/scripts/rosplan_simulated_motion_system.py" line="1" column="1"/>
+    <location file="robocluedo_module_testing/scripts/rosplan_simulated_motion_system.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

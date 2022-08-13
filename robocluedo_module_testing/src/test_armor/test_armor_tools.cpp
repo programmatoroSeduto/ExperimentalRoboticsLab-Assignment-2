@@ -166,7 +166,7 @@ void armorTestSession( ArmorTools& armor )
 	armor.SendCommand( "ADD", "IND", "CLASS", "Study", "PLACE" );
 	// armor.SendCommand( "DISJOINT", "IND", "", "Lounge", "Study" );
 	// armor.SendCommand( "DISJOINT", "IND", "", "Stadium", "Study" );
-	armor.SendCommand( "DISJOINT", "IND" "CLASS" );
+	armor.SendCommand( "DISJOINT", "IND", "CLASS" );
 	armor.PrintLastReq( ); armor.PrintLastRes( );
 	armor.SendCommand( "ADD", "OBJECTPROP", "IND", "where", "HP3", "Study" );
 	armor.UpdateOntology( );
@@ -199,9 +199,9 @@ void armorTestSession( ArmorTools& armor )
 	ROS_INFO_STREAM( OUTLABEL << "query tutte le classi a cui HP3 apartiene" );
 	armor.SendCommand( "QUERY", "CLASS", "IND", "HP3", "false" );
 	armor.PrintLastRes( );
-	ROS_INFO_STREAM( OUTLABEL << "query solo la classe piu' profonda" );
-	armor.SendCommand( "QUERY", "CLASS", "IND", "HP3", "true" );
-	armor.PrintLastRes( );
+	// ROS_INFO_STREAM( OUTLABEL << "query solo la classe piu' profonda" );
+	// armor.SendCommand( "QUERY", "CLASS", "IND", "HP3", "true" );
+	// armor.PrintLastRes( );
 	
 	ROS_INFO_STREAM( OUTLABEL << "salvataggio" );
 	armor.SendCommand( "SAVE", "INFERENCE", "", "/root/Desktop/ROBOCLUEDO_ONTOLOGY.owl" );
@@ -374,8 +374,14 @@ int main( int argc, char* argv[] )
 	}
 	ROS_INFO_STREAM( OUTLABEL << "Ontology found! " << LOGSQUARE( ontology_file_path ) );
 	
-	// armorTestSession( tools );
-	armorTestSession2( ontology_file_path );
+	ArmorTools tools( true );
+	if( !tools.ConnectAndLoad( ontology_file_path ) )
+	{
+		ROS_WARN_STREAM( OUTLABEL << "ERROR: unable to ConnectAndLoad() aRMOR tools" );
+		return 0;
+	}
+	armorTestSession( tools );
+	// armorTestSession2( ontology_file_path );
 	
 	ROS_INFO_STREAM( OUTLABEL << "THAT'S ALL FOLKS!" );
 	return 0;

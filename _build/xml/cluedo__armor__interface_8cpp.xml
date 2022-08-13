@@ -426,6 +426,7 @@
         <location file="robocluedo_armor/src/cluedo_armor_interface.cpp" line="177" column="6" bodyfile="robocluedo_armor/src/cluedo_armor_interface.cpp" bodystart="177" bodyend="237"/>
         <references refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" compoundref="cluedo__armor__interface_8cpp" startline="95">OUTLOG</references>
         <references refid="cluedo__armor__interface_8cpp_1a9e68b107365153366ec52986156f2595" compoundref="cluedo__armor__interface_8cpp" startline="87">SERVICE_INTERFACE_ADD_HINT</references>
+        <references refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" compoundref="rosplan-kb_8md_8txt" startline="370">success</references>
         <references refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" compoundref="cluedo__armor__interface_8cpp" startline="97">SS</references>
         <references refid="cluedo__armor__interface_8cpp_1a7a571e6f0c662a683b2741f0e4cd4c26" compoundref="cluedo__armor__interface_8cpp" startline="98">SSS</references>
       </memberdef>
@@ -466,7 +467,7 @@
 </parameterlist>
 <simplesect kind="see"><para>FindConsistentHypotheses.srv </para>
 </simplesect>
-<simplesect kind="see"><para>Hypothesis.msg one element of the output vector from the service </para>
+<simplesect kind="see"><para>Hypothesis.msg one element of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> output vector from <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> </para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -520,6 +521,7 @@
         <location file="robocluedo_armor/src/cluedo_armor_interface.cpp" line="313" column="6" bodyfile="robocluedo_armor/src/cluedo_armor_interface.cpp" bodystart="313" bodyend="330"/>
         <references refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" compoundref="cluedo__armor__interface_8cpp" startline="95">OUTLOG</references>
         <references refid="cluedo__armor__interface_8cpp_1a7abfca1c1aab551b07b78ca76440683a" compoundref="cluedo__armor__interface_8cpp" startline="89">SERVICE_INTERFACE_WRONG_HYPOTHESIS</references>
+        <references refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" compoundref="rosplan-kb_8md_8txt" startline="370">success</references>
         <references refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" compoundref="cluedo__armor__interface_8cpp" startline="97">SS</references>
         <references refid="cluedo__armor__interface_8cpp_1a7a571e6f0c662a683b2741f0e4cd4c26" compoundref="cluedo__armor__interface_8cpp" startline="98">SSS</references>
         <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="123" endline="526">node_mission_manager::spin</referencedby>
@@ -569,6 +571,7 @@
         <references refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" compoundref="cluedo__armor__interface_8cpp" startline="95">OUTLOG</references>
         <references refid="cluedo__armor__interface_8cpp_1acc185c28a4bd121102b73f42c59b6939" compoundref="cluedo__armor__interface_8cpp" startline="90">SERVICE_INTERFACE_SAVE_ONTOLOGY</references>
         <references refid="cluedo__armor__interface_8cpp_1a311d6790cb54f184fa8fa02120ebee44" compoundref="cluedo__armor__interface_8cpp" startline="93">PARAM_ONTOLOGY_BACKUP_PATH</references>
+        <references refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" compoundref="rosplan-kb_8md_8txt" startline="370">success</references>
         <references refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" compoundref="cluedo__armor__interface_8cpp" startline="97">SS</references>
       </memberdef>
       <memberdef kind="function" id="cluedo__armor__interface_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -752,7 +755,7 @@
 <codeline lineno="151"><highlight class="normal"></highlight></codeline>
 <codeline lineno="152"><highlight class="normal"></highlight></codeline>
 <codeline lineno="153"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
-<codeline lineno="177" refid="cluedo__armor__interface_8cpp_1a1731b015980e2fcecbe04f00efc6bf88" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a1731b015980e2fcecbe04f00efc6bf88" kindref="member">ServiceAddHint</ref>(<sp/>robocluedo_armor_msgs::AddHint::Request&amp;<sp/>hint,<sp/>robocluedo_armor_msgs::AddHint::Response&amp;<sp/>success<sp/>)</highlight></codeline>
+<codeline lineno="177" refid="cluedo__armor__interface_8cpp_1a1731b015980e2fcecbe04f00efc6bf88" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a1731b015980e2fcecbe04f00efc6bf88" kindref="member">ServiceAddHint</ref>(<sp/>robocluedo_armor_msgs::AddHint::Request&amp;<sp/>hint,<sp/>robocluedo_armor_msgs::AddHint::Response&amp;<sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref><sp/>)</highlight></codeline>
 <codeline lineno="178"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;called<sp/>service<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="cluedo__armor__interface_8cpp_1a9e68b107365153366ec52986156f2595" kindref="member">SERVICE_INTERFACE_ADD_HINT</ref><sp/>);</highlight></codeline>
 <codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -761,7 +764,7 @@
 <codeline lineno="183"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>not<sp/>a<sp/>valid<sp/>hypothesis<sp/>ID<sp/>(got<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hint.hypID<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="187"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="188"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/></highlight></codeline>
@@ -772,7 +775,7 @@
 <codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="195"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>not<sp/>a<sp/>valid<sp/>hint<sp/>(received<sp/>empty<sp/>fields)&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="196"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="197"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="198"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -798,7 +801,7 @@
 <codeline lineno="220"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>not<sp/>a<sp/>valid<sp/>hint<sp/>property<sp/>(received<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>hint.property<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;)&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="225"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="226"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
@@ -810,14 +813,14 @@
 <codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>perform<sp/>the<sp/>update</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/>armor-&gt;<ref refid="class_armor_tools_1a0ddf26f9a388377a36263344b1cbf39f" kindref="member">UpdateOntology</ref>(<sp/>);</highlight></codeline>
 <codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="237"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight></codeline>
 <codeline lineno="239"><highlight class="normal"></highlight></codeline>
 <codeline lineno="240"><highlight class="normal"></highlight></codeline>
 <codeline lineno="241"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
-<codeline lineno="255" refid="cluedo__armor__interface_8cpp_1a1baffdd7887e3aee5a33faf7752ed8f7" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a1baffdd7887e3aee5a33faf7752ed8f7" kindref="member">ServiceFindConsistentHypotheses</ref>(<sp/>robocluedo_armor_msgs::FindConsistentHypotheses::Request&amp;<sp/>empty,<sp/>robocluedo_armor_msgs::FindConsistentHypotheses::Response&amp;<sp/>hyplist<sp/>)</highlight></codeline>
+<codeline lineno="255" refid="cluedo__armor__interface_8cpp_1a1baffdd7887e3aee5a33faf7752ed8f7" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a1baffdd7887e3aee5a33faf7752ed8f7" kindref="member">ServiceFindConsistentHypotheses</ref>(<sp/>robocluedo_armor_msgs::FindConsistentHypotheses::Request&amp;<sp/><ref refid="pddl-and-rosplan_8md_8txt_1a480ea85a2a5ee7a715841aead85d175a" kindref="member">empty</ref>,<sp/>robocluedo_armor_msgs::FindConsistentHypotheses::Response&amp;<sp/>hyplist<sp/>)</highlight></codeline>
 <codeline lineno="256"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;called<sp/>service<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="cluedo__armor__interface_8cpp_1a43b5b7d093b3ed913fa91b74684ff821" kindref="member">SERVICE_INTERFACE_FIND_CONSISTENT_HYP</ref><sp/>);</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -838,7 +841,7 @@
 <codeline lineno="273"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="274"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>expand<sp/>the<sp/>list</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="275"><highlight class="normal"><sp/><sp/><sp/><sp/>hyplist.hyp<sp/>=<sp/>std::vector&lt;robocluedo_armor_msgs::Hypothesis&gt;(<sp/>);</highlight></codeline>
-<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/>robocluedo_armor_msgs::Hypothesis<sp/>h;</highlight></codeline>
+<codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="armor-services_8md_8txt_1a796a2ba2143f49caead4827fd89e5371" kindref="member">robocluedo_armor_msgs::Hypothesis</ref><sp/>h;</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/>std::string<sp/>hptag<sp/>:<sp/>list_to_return<sp/>)</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>h.tag<sp/>=<sp/>hptag;</highlight></codeline>
@@ -863,7 +866,7 @@
 <codeline lineno="298"><highlight class="normal"></highlight></codeline>
 <codeline lineno="299"><highlight class="normal"></highlight></codeline>
 <codeline lineno="300"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
-<codeline lineno="313" refid="cluedo__armor__interface_8cpp_1a9da26ecbc92f8ac7288574c3d05195b2" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a9da26ecbc92f8ac7288574c3d05195b2" kindref="member">DiscardHypothesis</ref>(<sp/>robocluedo_armor_msgs::DiscardHypothesis::Request&amp;<sp/>tag,<sp/>robocluedo_armor_msgs::DiscardHypothesis::Response&amp;<sp/>success<sp/>)</highlight></codeline>
+<codeline lineno="313" refid="cluedo__armor__interface_8cpp_1a9da26ecbc92f8ac7288574c3d05195b2" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a9da26ecbc92f8ac7288574c3d05195b2" kindref="member">DiscardHypothesis</ref>(<sp/>robocluedo_armor_msgs::DiscardHypothesis::Request&amp;<sp/>tag,<sp/>robocluedo_armor_msgs::DiscardHypothesis::Response&amp;<sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref><sp/>)</highlight></codeline>
 <codeline lineno="314"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="315"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;called<sp/>service<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="cluedo__armor__interface_8cpp_1a7abfca1c1aab551b07b78ca76440683a" kindref="member">SERVICE_INTERFACE_WRONG_HYPOTHESIS</ref><sp/>);</highlight></codeline>
 <codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -871,13 +874,13 @@
 <codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>received<sp/>a<sp/>negative<sp/>ID!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="321"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>remove<sp/>the<sp/>hypothesis<sp/>from<sp/>the<sp/>database</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>hypothesisTag<sp/>=<sp/><ref refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" kindref="member">SS</ref>(</highlight><highlight class="stringliteral">&quot;HP&quot;</highlight><highlight class="normal">)<sp/>+<sp/><ref refid="cluedo__armor__interface_8cpp_1a7a571e6f0c662a683b2741f0e4cd4c26" kindref="member">SSS</ref>(<sp/>tag.ID<sp/>);</highlight></codeline>
-<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/>armor-&gt;<ref refid="class_armor_cluedo_1a4ae659375e7a6d9564973718ece248e2" kindref="member">RemoveHypothesis</ref>(<sp/>hypothesisTag<sp/>);</highlight></codeline>
+<codeline lineno="327"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/>armor-&gt;<ref refid="class_armor_cluedo_1a4ae659375e7a6d9564973718ece248e2" kindref="member">RemoveHypothesis</ref>(<sp/>hypothesisTag<sp/>);</highlight></codeline>
 <codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="330"><highlight class="normal">}</highlight></codeline>
@@ -885,23 +888,23 @@
 <codeline lineno="332"><highlight class="normal"></highlight></codeline>
 <codeline lineno="333"><highlight class="normal"></highlight></codeline>
 <codeline lineno="334"><highlight class="normal"></highlight><highlight class="comment">/********************************************/</highlight></codeline>
-<codeline lineno="349" refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" kindref="member">ServiceBackupOntology</ref>(<sp/>std_srvs::Trigger::Request&amp;<sp/>emptyrequest,<sp/>std_srvs::Trigger::Response&amp;<sp/>success<sp/>)</highlight></codeline>
+<codeline lineno="349" refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" refkind="member"><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" kindref="member">ServiceBackupOntology</ref>(<sp/>std_srvs::Trigger::Request&amp;<sp/>emptyrequest,<sp/>std_srvs::Trigger::Response&amp;<sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref><sp/>)</highlight></codeline>
 <codeline lineno="350"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;called<sp/>service<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="cluedo__armor__interface_8cpp_1acc185c28a4bd121102b73f42c59b6939" kindref="member">SERVICE_INTERFACE_SAVE_ONTOLOGY</ref><sp/>);</highlight></codeline>
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!ros::param::has(<sp/><ref refid="cluedo__armor__interface_8cpp_1a311d6790cb54f184fa8fa02120ebee44" kindref="member">PARAM_ONTOLOGY_BACKUP_PATH</ref><sp/>)<sp/>)</highlight></codeline>
 <codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.message<sp/>=<sp/><ref refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" kindref="member">SS</ref>(<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>find<sp/>the<sp/>parameter&quot;</highlight><highlight class="normal"><sp/>)<sp/>+<sp/><ref refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" kindref="member">SS</ref>(<sp/><ref refid="cluedo__armor__interface_8cpp_1a311d6790cb54f184fa8fa02120ebee44" kindref="member">PARAM_ONTOLOGY_BACKUP_PATH</ref><sp/>);</highlight></codeline>
+<codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="356"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.message<sp/>=<sp/><ref refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" kindref="member">SS</ref>(<sp/></highlight><highlight class="stringliteral">&quot;unable<sp/>to<sp/>find<sp/>the<sp/>parameter&quot;</highlight><highlight class="normal"><sp/>)<sp/>+<sp/><ref refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" kindref="member">SS</ref>(<sp/><ref refid="cluedo__armor__interface_8cpp_1a311d6790cb54f184fa8fa02120ebee44" kindref="member">PARAM_ONTOLOGY_BACKUP_PATH</ref><sp/>);</highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>success.message<sp/>);</highlight></codeline>
+<codeline lineno="358"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.message<sp/>);</highlight></codeline>
 <codeline lineno="359"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="360"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="361"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="362"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>save_path;</highlight></codeline>
 <codeline lineno="363"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ros::param::get(<sp/><ref refid="cluedo__armor__interface_8cpp_1a311d6790cb54f184fa8fa02120ebee44" kindref="member">PARAM_ONTOLOGY_BACKUP_PATH</ref>,<sp/>save_path<sp/>);</highlight></codeline>
 <codeline lineno="364"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor-&gt;<ref refid="class_armor_tools_1ad26e4e69e7edcbde9789ca5301c6b4a5" kindref="member">SaveOntology</ref>(<sp/>save_path<sp/>);</highlight></codeline>
-<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="365"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" kindref="member">success</ref>.success<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="366"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="367"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="cluedo__armor__interface_8cpp_1a3cebd08e2e9a598e7cd779a51734719e" kindref="member">OUTLOG</ref>(<sp/></highlight><highlight class="stringliteral">&quot;Ontology<sp/>save<sp/>here<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>save_path<sp/>);</highlight></codeline>
 <codeline lineno="368"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>

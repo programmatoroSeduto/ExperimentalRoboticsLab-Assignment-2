@@ -219,7 +219,7 @@ target_link_libraries( node_move_to_center ${catkin_LIBRARIES} feedback_manager 
 ## in contrast to setup.py, you can choose the destination
 catkin_install_python(PROGRAMS
   scripts/rosplan_pipeline_manager.py
-  scripts/rosplan_simulated_motion_system.py
+#   scripts/rosplan_simulated_motion_system.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

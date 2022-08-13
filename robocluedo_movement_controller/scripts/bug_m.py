@@ -218,7 +218,7 @@ def main():
 				'''
 				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
 				if(err_pos < 0.3):
-					change_state(2)
+					change_state(3)
 
 				elif regions_['front'] < 0.2:
 					change_state(1)
@@ -234,7 +234,7 @@ def main():
 				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
 
 				if(err_pos < 0.3):
-					change_state(2)
+					change_state(3)
 				if regions_['front'] > 1 and math.fabs(err_yaw) < 0.05:
 					change_state(0)
 
@@ -255,6 +255,8 @@ def main():
 				err_pos = math.sqrt(pow(desired_position_.y - position_.y, 2) + pow(desired_position_.x - position_.x, 2))
 				err_yaw = normalize_angle(desired_yaw_ - yaw_)
 				
+				print("stop")
+				
 				if(err_pos > 0.35):
 					change_state(0)
 				elif(err_yaw > yaw_precision_2_):
@@ -266,7 +268,9 @@ def main():
 				wall_follow -- OFF
 				head orient -- ON
 				'''
+				desired_yaw_ = rospy.get_param('des_yaw')
 				err_yaw = normalize_angle(desired_yaw_ - yaw_)
+				print( "yaw err= ", err_yaw )
 				if(err_yaw <= yaw_precision_2_):
 					change_state(2)
 

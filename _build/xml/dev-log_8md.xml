@@ -1330,7 +1330,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>13/08/2022<sp/>--<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>13/08/2022<sp/>--<sp/>mission<sp/>manager<sp/>--<sp/>module<sp/>testing</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">implementazione<sp/>del<sp/>nodo<sp/>main<sp/>dell&apos;architettura<sp/>(fatto<sp/>questo<sp/>si<sp/>passa<sp/>al<sp/>testing<sp/>e<sp/>si<sp/>impacchetta<sp/>tutto)</highlight></codeline>
 <codeline></codeline>
@@ -1410,7 +1410,89 @@
 <codeline><highlight class="normal">-<sp/>vediamo<sp/>se<sp/>riusciamo<sp/>a<sp/>farlo<sp/>compilare<sp/>...<sp/>(domenica<sp/>libera?<sp/>magari!)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>(posso<sp/>dire<sp/>che<sp/>mi<sp/>aspettavo<sp/>di<sp/>peggio?<sp/>non<sp/>sono<sp/>tantissimi,<sp/>sono<sp/>sollevato)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**ammazzando<sp/>selvaggiamente**<sp/>gli<sp/>ultimi<sp/>errori</highlight></codeline>
-<codeline><highlight class="normal">-<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(molto<sp/>soddisfatto,<sp/>e<sp/>fortuna<sp/>che<sp/>ho<sp/>pensato<sp/>di<sp/>implementarlo<sp/>in<sp/>C++<sp/>...<sp/>l&apos;avessi<sp/>fatto<sp/>in<sp/>python<sp/>sarei<sp/>diventato<sp/>pazzo<sp/>da<sp/>manicomio)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;working<sp/>on<sp/>mission<sp/>manager<sp/>(first<sp/>debugging<sp/>of<sp/>the<sp/>mission_manager<sp/>node)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">il<sp/>progetto<sp/>completo<sp/>adesso<sp/>c&apos;è!<sp/>i<sp/>prossimi<sp/>passi?<sp/>module<sp/>testing,<sp/>e<sp/>infine<sp/>test<sp/>finale<sp/>dell&apos;intero<sp/>progetto.<sp/>(quella<sp/>domenica<sp/>libera<sp/>potrebbe<sp/>non<sp/>essere<sp/>solo<sp/>un<sp/>sogno<sp/>...<sp/>a<sp/>meno<sp/>di<sp/>non<sp/>aver<sp/>combinato<sp/>un<sp/>casino<sp/>apocalittico)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>di<sp/>tutto,<sp/>a<sp/>posto<sp/>la<sp/>documentazione<sp/>su<sp/>come<sp/>eseguire<sp/>il<sp/>progetto<sp/>e<sp/>come<sp/>testarlo<sp/>(ci<sp/>sono<sp/>due<sp/>documenti<sp/>fatti<sp/>apposta<sp/>per<sp/>questo)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>inizio<sp/>già<sp/>ad<sp/>elencarmi<sp/>i<sp/>test<sp/>da<sp/>fare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>test<sp/>per<sp/>aRMOR</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>armor<sp/>puro<sp/>--<sp/>module<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>armor<sp/>tools</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>dovuto<sp/>aggiornarlo<sp/>leggermente:<sp/>non<sp/>c&apos;era<sp/>nulla<sp/>di<sp/>errato,<sp/>solo<sp/>però<sp/>c&apos;erano<sp/>i<sp/>due<sp/>test<sp/>di<sp/>armortools<sp/>e<sp/>armorcluedo<sp/>nello<sp/>stesso<sp/>file;<sp/>ora<sp/>sono<sp/>divisi</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*e<sp/>meglio<sp/>scrivere<sp/>gli<sp/>output<sp/>dei<sp/>test<sp/>in<sp/>fondo<sp/>al<sp/>file...*<sp/>altrimenti<sp/>presto<sp/>non<sp/>ci<sp/>si<sp/>capirà<sp/>nulla</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>l&apos;ultima<sp/>query<sp/>mi<sp/>da<sp/>un&apos;eccezione<sp/>java<sp/>nella<sp/>ontology,<sp/>pare<sp/>che<sp/>esista<sp/>un<sp/>oggetto<sp/>null,<sp/>ma<sp/>non<sp/>saprei<sp/>perchè</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>controllando<sp/>le<sp/>query<sp/>sembra<sp/>tutto<sp/>a<sp/>posto,<sp/>non<sp/>ce<sp/>lo<sp/>metto<sp/>io<sp/>di<sp/>sicuro<sp/>quell&apos;oggetto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(non<sp/>penso<sp/>che<sp/>ci<sp/>sia<sp/>qualcosa<sp/>di<sp/>strano,<sp/>però<sp/>non<sp/>mi<sp/>convince<sp/>...<sp/>è<sp/>anche<sp/>vero<sp/>però<sp/>che<sp/>il<sp/>test<sp/>è<sp/>molto<sp/>vecchio)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>scrissi<sp/>questa<sp/>cosa<sp/>nel<sp/>test:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/>classe<sp/>più<sp/>profonda<sp/>di<sp/>un<sp/>individual<sp/>(caso<sp/>bastardo,<sp/>probabilmente<sp/>bug)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>&quot;QUERY&quot;,<sp/>&quot;CLASS&quot;,<sp/>&quot;IND&quot;,<sp/>&quot;HP3&quot;,<sp/>&quot;true&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>*<sp/><sp/><sp/>HYPOTHESIS</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>quindi<sp/>questo<sp/>comando<sp/>non<sp/>funzionava<sp/>già<sp/>prima.<sp/>tutto<sp/>a<sp/>posto:<sp/>o<sp/>ho<sp/>trovato<sp/>un<sp/>workaround<sp/>per<sp/>farlo<sp/>funzionare<sp/>comunque,<sp/>o<sp/>ho<sp/>proprio<sp/>dribblato<sp/>la<sp/>questione.<sp/>In<sp/>ogni<sp/>caso,<sp/>devo<sp/>aver<sp/>sicuramente<sp/>risolto<sp/>in<sp/>passato<sp/>il<sp/>problema.<sp/>Attualmente,<sp/>basta<sp/>commentare<sp/>la<sp/>riga<sp/>incriminata<sp/>e<sp/>siamo<sp/>tutti<sp/>contenti.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>per<sp/>la<sp/>cronaca,<sp/>l&apos;errore<sp/>è<sp/>questo:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>13/08/22_12:31:13,855<sp/>-&gt;<sp/>Class<sp/>OWLReferencesInterface<sp/>:<sp/>[[<sp/>!!!<sp/>ERROR<sp/>!!!<sp/>]]Cannot<sp/>get<sp/>the<sp/>OWL<sp/>name<sp/>of<sp/>a<sp/>null<sp/>OWL<sp/>object</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Exception<sp/>in<sp/>thread<sp/>&quot;pool-1-thread-22&quot;<sp/>java.lang.IllegalArgumentException</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>com.google.common.base.Preconditions.checkArgument(Preconditions.java:108)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.field.PrimitiveFieldType$14.serialize(PrimitiveFieldType.java:574)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.field.ListField.serialize(ListField.java:62)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.field.MessageFieldType.serialize(MessageFieldType.java:92)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.field.ValueField.serialize(ValueField.java:62)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.node.service.ServiceRequestHandler.handleRequest(ServiceRequestHandler.java:66)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.node.service.ServiceRequestHandler.access$100(ServiceRequestHandler.java:38)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>org.ros.internal.node.service.ServiceRequestHandler$1.run(ServiceRequestHandler.java:99)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>at<sp/>java.lang.Thread.run(Thread.java:748)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>armor<sp/>cluedo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>test<sp/>su<sp/>robocluedo<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>anzitutto<sp/>voglio<sp/>spostare<sp/>il<sp/>nodo<sp/>py<sp/>che<sp/>simula<sp/>le<sp/>interfacce<sp/>nel<sp/>module<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>test<sp/>PDDL<sp/>(non<sp/>si<sp/>sa<sp/>mai...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*fortunatamente*<sp/>il<sp/>modello<sp/>è<sp/>ok</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>simple<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>knowledge<sp/>base<sp/>interface<sp/>(vedi<sp/>diario<sp/>di<sp/>implementazione<sp/>...<sp/>visto<sp/>a<sp/>cosa<sp/>serve<sp/>tenere<sp/>dei<sp/>diari?)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>pipeline<sp/>manager<sp/>(anche<sp/>qui<sp/>dai<sp/>diari)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>tutto<sp/>senza<sp/>roslaunch</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>&quot;piccolo&quot;<sp/>problema<sp/>con<sp/>un<sp/>manifest<sp/>che<sp/>non<sp/>andava<sp/>bene<sp/>...<sp/>risolto<sp/>(c&apos;ho<sp/>messo<sp/>più<sp/>del<sp/>previsto...)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>a<sp/>questo<sp/>punto<sp/>direi<sp/>che<sp/>possiamo<sp/>scriverlo<sp/>&apos;sto<sp/>launch<sp/>finale,<sp/>no?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>test<sp/>finale</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(boh<sp/>pare<sp/>funzionare<sp/>tutto<sp/>a<sp/>dovere<sp/>.-..<sp/>ci<sp/>fidiamo?)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>test<sp/>sul<sp/>package<sp/>del<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>urdf</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ora,<sp/>i<sp/>test<sp/>sulla<sp/>navigation<sp/>(e<sp/>qui<sp/>sono<sp/>piuttosto<sp/>curioso)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>go<sp/>to<sp/>point</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>head<sp/>orientation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>wall<sp/>follow</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>il<sp/>wall<sp/>follow<sp/>non<sp/>si<sp/>disattiva<sp/>...<sp/>a<sp/>vedere<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>pare<sp/>che<sp/>non<sp/>riesca<sp/>a<sp/>pubblicare<sp/>la<sp/>posizione<sp/>dopo<sp/>che<sp/>è<sp/>stato<sp/>disattivato,<sp/>ma<sp/>il<sp/>ciclo<sp/>rimane<sp/>in<sp/>funzionamento,<sp/>cosa<sp/>strana<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>tutto<sp/>risolto:<sp/>c&apos;era<sp/>un<sp/>bug<sp/>nella<sp/>disattivazione<sp/>(dal<sp/>nodo<sp/>originale)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>ora,<sp/>quello<sp/>che<sp/>tutti<sp/>stavamo<sp/>aspettando!<sp/>bug_m!</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>il<sp/>nav<sp/>controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>:<sp/>credo<sp/>ci<sp/>sia<sp/>un<sp/>problema<sp/>con<sp/>il<sp/>controllo<sp/>della<sp/>yaw<sp/>da<sp/>parte<sp/>del<sp/>controller:<sp/>certe<sp/>volte<sp/>va,<sp/>altre<sp/>no,<sp/>e<sp/>non<sp/>mi<sp/>è<sp/>chiaro<sp/>il<sp/>perchè.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>notato<sp/>che<sp/>il<sp/>robot<sp/>manda<sp/>il<sp/>segnale<sp/>*prima<sp/>di<sp/>aggiustare<sp/>la<sp/>yaw*,<sp/>e<sp/>sapendo<sp/>come<sp/>ho<sp/>strutturato<sp/>gli<sp/>stati,<sp/>è<sp/>presto<sp/>detto<sp/>il<sp/>perchè</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>avevo<sp/>ragione,<sp/>c&apos;era<sp/>un<sp/>passaggio<sp/>di<sp/>stato<sp/>poco<sp/>pensato.<sp/>problema<sp/>*risolto*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>manca<sp/>solo<sp/>il<sp/>manipulator,<sp/>per<sp/>cui<sp/>secondo<sp/>me<sp/>ho<sp/>già<sp/>un<sp/>test<sp/>bello<sp/>pronto</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;module<sp/>testing<sp/>(rosplan,<sp/>navigation,<sp/>manipulation)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -1422,6 +1504,10 @@
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>TODO</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>ma<sp/>provando<sp/>con<sp/>un<sp/>controller<sp/>per<sp/>uno<sp/>skid<sp/>robot<sp/>cosa<sp/>succede?<sp/>magari<sp/>riesco<sp/>a<sp/>farlo<sp/>andare<sp/>meglio</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>vanno<sp/>aggiustati<sp/>i<sp/>guadagni<sp/>dei<sp/>go<sp/>to<sp/>point<sp/>e<sp/>align,<sp/>e<sp/>magari<sp/>introdurre<sp/>anche<sp/>una<sp/>saturation</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aumentare<sp/>la<sp/>mobilità<sp/>del<sp/>robot<sp/>spostando<sp/>le<sp/>ruote<sp/>&quot;passive&quot;<sp/>più<sp/>verso<sp/>il<sp/>centro<sp/>del<sp/>veicolo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>navigation<sp/>system:<sp/>creare<sp/>un<sp/>controller<sp/>che<sp/>gestisca<sp/>anche<sp/>il<sp/>braccio<sp/>durante<sp/>la<sp/>navigazione<sp/>(magari<sp/>abbassarlo<sp/>per<sp/>rendere<sp/>il<sp/>robot<sp/>più<sp/>stabile)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>

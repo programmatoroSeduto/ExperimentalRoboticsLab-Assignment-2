@@ -198,7 +198,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="42" column="6" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="42" bodyend="45"/>
-        <referencedby refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="test__armor__tools_8cpp" startline="357" endline="382">main</referencedby>
+        <referencedby refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="test__armor__tools_8cpp" startline="357" endline="388">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="test__armor__tools_8cpp_1a349df24894d6a8c020f02bf53b723769" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -222,6 +222,7 @@
         </inbodydescription>
         <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="49" column="6" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="49" bodyend="65"/>
         <references refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" compoundref="test__armor__tools_8cpp" startline="38">OUTLABEL</references>
+        <references refid="test-the-project_8md_8txt_1ae9880850b92fe7594f93a01193dc189d" compoundref="test-the-project_8md_8txt" startline="75">it</references>
       </memberdef>
       <memberdef kind="function" id="test__armor__tools_8cpp_1a86644574dffd07a880d40f455d113782" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -239,6 +240,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="142" column="6" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="142" bodyend="208"/>
+        <referencedby refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="test__armor__tools_8cpp" startline="357" endline="388">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="test__armor__tools_8cpp_1a78703009283c736ea377ca3a343cbd58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -256,7 +258,6 @@
         <inbodydescription>
         </inbodydescription>
         <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="212" column="6" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="212" bodyend="353"/>
-        <referencedby refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="test__armor__tools_8cpp" startline="357" endline="382">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -278,12 +279,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="357" column="5" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="357" bodyend="382"/>
+        <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" line="357" column="5" bodyfile="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp" bodystart="357" bodyend="388"/>
         <references refid="test__armor__tools_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" compoundref="test__armor__tools_8cpp" startline="33">ONTOLOGY_PARAM</references>
         <references refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" compoundref="test__armor__tools_8cpp" startline="38">OUTLABEL</references>
         <references refid="test__armor__tools_8cpp_1a425e0b3a1e6c60b7ed0330df24c67e66" compoundref="test__armor__tools_8cpp" startline="42" endline="45">fileExist</references>
-        <references refid="armor__tools_8h_1a36b268389a5b36ab752d1e59f1fa63f0" compoundref="armor__tools_8h" startline="49">LOGSQUARE</references>
-        <references refid="test__armor__tools_8cpp_1a78703009283c736ea377ca3a343cbd58" compoundref="test__armor__tools_8cpp" startline="212" endline="353">armorTestSession2</references>
+        <references refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0">LOGSQUARE</references>
+        <references refid="class_armor_tools_1ad98c8e33df5d1ef3e4c69051ac0dd7ab" compoundref="armor__tools_8cpp" startline="213" endline="226">ArmorTools::ConnectAndLoad</references>
+        <references refid="test__armor__tools_8cpp_1a86644574dffd07a880d40f455d113782" compoundref="test__armor__tools_8cpp" startline="142" endline="208">armorTestSession</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -298,6 +300,15 @@ This node performs a deep test on the interface <ref refid="class_armor_cluedo" 
 <para><simplesect kind="see"><para>test_armor_tools.launch</para>
 </simplesect>
 <xrefsect id="todo_1_todo000006"><xreftitle>Todo</xreftitle><xrefdescription><para>translate logs from italian to English and reorder</para>
+</xrefdescription></xrefsect></para>
+<para><simplesect kind="authors"><para>Francesco Ganci (S4143910) </para>
+</simplesect>
+<simplesect kind="version"><para>v1.0</para>
+</simplesect>
+This node performs a deep test on the interface <ref refid="class_armor_cluedo" kindref="compound">ArmorCluedo</ref>.</para>
+<para><simplesect kind="see"><para>test_armor_tools.launch</para>
+</simplesect>
+<xrefsect id="todo_1_todo000007"><xreftitle>Todo</xreftitle><xrefdescription><para>translate logs from italian to English and reorder</para>
 </xrefdescription></xrefsect></para>
     </detaileddescription>
     <programlisting>
@@ -346,9 +357,9 @@ This node performs a deep test on the interface <ref refid="class_armor_cluedo" 
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>idx<sp/>=<sp/>1;</highlight></codeline>
-<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/>it<sp/>=<sp/>list.begin();<sp/>it<sp/>!=<sp/>list.end(<sp/>);<sp/>++it<sp/>)</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(<sp/></highlight><highlight class="keyword">auto</highlight><highlight class="normal"><sp/><ref refid="test-the-project_8md_8txt_1ae9880850b92fe7594f93a01193dc189d" kindref="member">it</ref><sp/>=<sp/>list.begin();<sp/><ref refid="test-the-project_8md_8txt_1ae9880850b92fe7594f93a01193dc189d" kindref="member">it</ref><sp/>!=<sp/>list.end(<sp/>);<sp/>++<ref refid="test-the-project_8md_8txt_1ae9880850b92fe7594f93a01193dc189d" kindref="member">it</ref><sp/>)</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;numero<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>idx++<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>*it<sp/><sp/>);</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\t&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;numero<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>idx++<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>-&gt;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>*<ref refid="test-the-project_8md_8txt_1ae9880850b92fe7594f93a01193dc189d" kindref="member">it</ref><sp/><sp/>);</highlight></codeline>
 <codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="65"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="66"><highlight class="normal"></highlight></codeline>
@@ -454,7 +465,7 @@ This node performs a deep test on the interface <ref refid="class_armor_cluedo" 
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ADD&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Study&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;PLACE&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armor.SendCommand(<sp/>&quot;DISJOINT&quot;,<sp/>&quot;IND&quot;,<sp/>&quot;&quot;,<sp/>&quot;Lounge&quot;,<sp/>&quot;Study&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armor.SendCommand(<sp/>&quot;DISJOINT&quot;,<sp/>&quot;IND&quot;,<sp/>&quot;&quot;,<sp/>&quot;Stadium&quot;,<sp/>&quot;Study&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;DISJOINT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;DISJOINT&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1ac7f632ed614b226cbc2b2fa352989643" kindref="member">PrintLastReq</ref>(<sp/>);<sp/>armor.<ref refid="class_armor_tools_1ae1764835bfe65fabcb07757b0bb43f83" kindref="member">PrintLastRes</ref>(<sp/>);</highlight></codeline>
 <codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;ADD&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;OBJECTPROP&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;where&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HP3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;Study&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a0ddf26f9a388377a36263344b1cbf39f" kindref="member">UpdateOntology</ref>(<sp/>);</highlight></codeline>
@@ -487,9 +498,9 @@ This node performs a deep test on the interface <ref refid="class_armor_cluedo" 
 <codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;query<sp/>tutte<sp/>le<sp/>classi<sp/>a<sp/>cui<sp/>HP3<sp/>apartiene&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="200"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;QUERY&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HP3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="201"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1ae1764835bfe65fabcb07757b0bb43f83" kindref="member">PrintLastRes</ref>(<sp/>);</highlight></codeline>
-<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;query<sp/>solo<sp/>la<sp/>classe<sp/>piu&apos;<sp/>profonda&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;QUERY&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;CLASS&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;IND&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;HP3&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1ae1764835bfe65fabcb07757b0bb43f83" kindref="member">PrintLastRes</ref>(<sp/>);</highlight></codeline>
+<codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>ROS_INFO_STREAM(<sp/>OUTLABEL<sp/>&lt;&lt;<sp/>&quot;query<sp/>solo<sp/>la<sp/>classe<sp/>piu&apos;<sp/>profonda&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armor.SendCommand(<sp/>&quot;QUERY&quot;,<sp/>&quot;CLASS&quot;,<sp/>&quot;IND&quot;,<sp/>&quot;HP3&quot;,<sp/>&quot;true&quot;<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armor.PrintLastRes(<sp/>);</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="205"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="206"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;salvataggio&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="207"><highlight class="normal"><sp/><sp/><sp/><sp/>armor.<ref refid="class_armor_tools_1a6033ed90283ec6c78a2bc2b0106d0461" kindref="member">SendCommand</ref>(<sp/></highlight><highlight class="stringliteral">&quot;SAVE&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;INFERENCE&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;/root/Desktop/ROBOCLUEDO_ONTOLOGY.owl&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
@@ -660,14 +671,20 @@ This node performs a deep test on the interface <ref refid="class_armor_cluedo" 
 <codeline lineno="372"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>the<sp/>file<sp/>&apos;&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="test__armor__tools_8cpp_1a1488d09dc82faa87c57e8d9a79bbe1f1" kindref="member">ONTOLOGY_PARAM</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;&apos;<sp/>doesn&apos;t<sp/>exist.&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
 <codeline lineno="373"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="374"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Ontology<sp/>found!<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="armor__tools_8h_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/>ontology_file_path<sp/>)<sp/>);</highlight></codeline>
+<codeline lineno="375"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Ontology<sp/>found!<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="dev-log_8md_8txt_1a36b268389a5b36ab752d1e59f1fa63f0" kindref="member">LOGSQUARE</ref>(<sp/>ontology_file_path<sp/>)<sp/>);</highlight></codeline>
 <codeline lineno="376"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armorTestSession(<sp/>tools<sp/>);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__armor__tools_8cpp_1a78703009283c736ea377ca3a343cbd58" kindref="member">armorTestSession2</ref>(<sp/>ontology_file_path<sp/>);</highlight></codeline>
-<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;THAT&apos;S<sp/>ALL<sp/>FOLKS!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
-<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
-<codeline lineno="382"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="377"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_armor_tools" kindref="compound">ArmorTools</ref><sp/>tools(<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="378"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<sp/>!tools.<ref refid="class_armor_tools_1ad98c8e33df5d1ef3e4c69051ac0dd7ab" kindref="member">ConnectAndLoad</ref>(<sp/>ontology_file_path<sp/>)<sp/>)</highlight></codeline>
+<codeline lineno="379"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="380"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ROS_WARN_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;ERROR:<sp/>unable<sp/>to<sp/>ConnectAndLoad()<sp/>aRMOR<sp/>tools&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="381"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="test__armor__tools_8cpp_1a86644574dffd07a880d40f455d113782" kindref="member">armorTestSession</ref>(<sp/>tools<sp/>);</highlight></codeline>
+<codeline lineno="384"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>armorTestSession2(<sp/>ontology_file_path<sp/>);</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="386"><highlight class="normal"><sp/><sp/><sp/><sp/>ROS_INFO_STREAM(<sp/><ref refid="test__armor__tools_8cpp_1a83c0c69e3e513938dbd4e22b0dda7643" kindref="member">OUTLABEL</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;THAT&apos;S<sp/>ALL<sp/>FOLKS!&quot;</highlight><highlight class="normal"><sp/>);</highlight></codeline>
+<codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
+<codeline lineno="388"><highlight class="normal">}</highlight></codeline>
     </programlisting>
     <location file="robocluedo_module_testing/src/test_armor/test_armor_tools.cpp"/>
   </compounddef>

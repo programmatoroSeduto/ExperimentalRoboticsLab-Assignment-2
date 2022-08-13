@@ -1303,7 +1303,7 @@
 </para>
 </sect2>
 <sect2 id="md__docs_dev-log_1autotoc_md66">
-<title>13/08/2022 – mission manager</title>
+<title>13/08/2022 – mission manager – module testing</title>
 <para>implementazione del nodo main dell&apos;architettura (fatto questo si passa al testing e si impacchetta tutto)</para>
 <para><itemizedlist>
 <listitem><para>implementazione</para>
@@ -1379,13 +1379,94 @@
 <listitem><para>vediamo se riusciamo a farlo compilare ... (domenica libera? magari!)</para>
 </listitem><listitem><para>(posso dire che mi aspettavo di peggio? non sono tantissimi, sono sollevato)</para>
 </listitem><listitem><para><bold>ammazzando selvaggiamente</bold> gli ultimi errori</para>
-</listitem><listitem></listitem></itemizedlist>
+</listitem><listitem><para>(molto soddisfatto, e fortuna che ho pensato di implementarlo in C++ ... l&apos;avessi fatto in python sarei diventato pazzo da manicomio)</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;working on mission manager (first debugging of the mission_manager node)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>il progetto completo adesso c&apos;è! i prossimi passi? module testing, e infine test finale dell&apos;intero progetto. (quella domenica libera potrebbe non essere solo un sogno ... a meno di non aver combinato un casino apocalittico)</para>
+<para><itemizedlist>
+<listitem><para>prima di tutto, a posto la documentazione su come eseguire il progetto e come testarlo (ci sono due documenti fatti apposta per questo)<itemizedlist>
+<listitem><para>inizio già ad elencarmi i test da fare</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test per aRMOR<itemizedlist>
+<listitem><para>armor puro <ndash/> module testing</para>
+</listitem><listitem><para>test armor tools<itemizedlist>
+<listitem><para>ho dovuto aggiornarlo leggermente: non c&apos;era nulla di errato, solo però c&apos;erano i due test di armortools e armorcluedo nello stesso file; ora sono divisi</para>
+</listitem><listitem><para><emphasis>e meglio scrivere gli output dei test in fondo al file...</emphasis> altrimenti presto non ci si capirà nulla</para>
+</listitem><listitem><para>l&apos;ultima query mi da un&apos;eccezione java nella ontology, pare che esista un oggetto null, ma non saprei perchè</para>
+</listitem><listitem><para>controllando le query sembra tutto a posto, non ce lo metto io di sicuro quell&apos;oggetto</para>
+</listitem><listitem><para>(non penso che ci sia qualcosa di strano, però non mi convince ... è anche vero però che il test è molto vecchio)</para>
+</listitem><listitem><para>scrissi questa cosa nel test:</para>
+<para>```text<itemizedlist>
+<listitem><para>classe più profonda di un individual (caso bastardo, probabilmente bug)</para>
+</listitem><listitem><para>&quot;QUERY&quot;, &quot;CLASS&quot;, &quot;IND&quot;, &quot;HP3&quot;, &quot;true&quot;</para>
+</listitem><listitem><para>HYPOTHESIS ```</para>
+</listitem></itemizedlist>
+</para>
+<para>quindi questo comando non funzionava già prima. tutto a posto: o ho trovato un workaround per farlo funzionare comunque, o ho proprio dribblato la questione. In ogni caso, devo aver sicuramente risolto in passato il problema. Attualmente, basta commentare la riga incriminata e siamo tutti contenti.</para>
+</listitem><listitem><para>giusto per la cronaca, l&apos;errore è questo:</para>
+<para>```text 13/08/22_12:31:13,855 -&gt; Class OWLReferencesInterface : [[ !!! ERROR !!! ]]Cannot get the OWL name of a null OWL object Exception in thread &quot;pool-1-thread-22&quot; java.lang.IllegalArgumentException at com.google.common.base.Preconditions.checkArgument(Preconditions.java:108) at org.ros.internal.message.field.PrimitiveFieldType$14.serialize(PrimitiveFieldType.java:574) at org.ros.internal.message.field.ListField.serialize(ListField.java:62) at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32) at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26) at org.ros.internal.message.field.MessageFieldType.serialize(MessageFieldType.java:92) at org.ros.internal.message.field.ValueField.serialize(ValueField.java:62) at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32) at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26) at org.ros.internal.node.service.ServiceRequestHandler.handleRequest(ServiceRequestHandler.java:66) at org.ros.internal.node.service.ServiceRequestHandler.access$100(ServiceRequestHandler.java:38) at org.ros.internal.node.service.ServiceRequestHandler$1.run(ServiceRequestHandler.java:99) at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) at java.lang.Thread.run(Thread.java:748) ```</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test armor cluedo</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>test su robocluedo rosplan<itemizedlist>
+<listitem><para>anzitutto voglio spostare il nodo py che simula le interfacce nel module testing</para>
+</listitem><listitem><para>test PDDL (non si sa mai...)<itemizedlist>
+<listitem><para><emphasis>fortunatamente</emphasis> il modello è ok</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>simple rosplan</para>
+</listitem><listitem><para>knowledge base interface (vedi diario di implementazione ... visto a cosa serve tenere dei diari?)</para>
+</listitem><listitem><para>pipeline manager (anche qui dai diari)</para>
+</listitem><listitem><para>tutto senza roslaunch<itemizedlist>
+<listitem><para>&quot;piccolo&quot; problema con un manifest che non andava bene ... risolto (c&apos;ho messo più del previsto...)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>a questo punto direi che possiamo scriverlo &apos;sto launch finale, no?</para>
+</listitem><listitem><para>e test finale</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>(boh pare funzionare tutto a dovere .-.. ci fidiamo?)</para>
+</listitem><listitem><para>test sul package del robot<itemizedlist>
+<listitem><para>urdf</para>
+</listitem><listitem><para>robot</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ora, i test sulla navigation (e qui sono piuttosto curioso)<itemizedlist>
+<listitem><para>go to point</para>
+</listitem><listitem><para>head orientation</para>
+</listitem><listitem><para>wall follow<itemizedlist>
+<listitem><para><bold>ISSUE</bold> il wall follow non si disattiva ... a vedere il comportamento del robot pare che non riesca a pubblicare la posizione dopo che è stato disattivato, ma il ciclo rimane in funzionamento, cosa strana</para>
+</listitem><listitem><para>tutto risolto: c&apos;era un bug nella disattivazione (dal nodo originale)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e ora, quello che tutti stavamo aspettando! bug_m!</para>
+</listitem><listitem><para>ora il nav controller<itemizedlist>
+<listitem><para><bold>ISSUE</bold> : credo ci sia un problema con il controllo della yaw da parte del controller: certe volte va, altre no, e non mi è chiaro il perchè.</para>
+</listitem><listitem><para>ho notato che il robot manda il segnale <emphasis>prima di aggiustare la yaw</emphasis>, e sapendo come ho strutturato gli stati, è presto detto il perchè</para>
+</listitem><listitem><para>avevo ragione, c&apos;era un passaggio di stato poco pensato. problema <emphasis>risolto</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>manca solo il manipulator, per cui secondo me ho già un test bello pronto</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;module testing (rosplan, navigation, manipulation)&quot;</para>
+</listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md68">
+<sect2 id="md__docs_dev-log_1autotoc_md69">
 <title>TODO</title>
 <para><itemizedlist>
-<listitem><para>documentazione del package ROSPlan</para>
+<listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
+</listitem><listitem><para>vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation</para>
+</listitem><listitem><para>aumentare la mobilità del robot spostando le ruote &quot;passive&quot; più verso il centro del veicolo</para>
+</listitem><listitem><para>navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)</para>
+</listitem><listitem><para>documentazione del package ROSPlan</para>
 </listitem><listitem><para>UML finale per ROSPlan</para>
 </listitem><listitem><para><emphasis>module testing</emphasis> su <ref refid="classkb__tools" kindref="compound">kb_tools</ref></para>
 </listitem><listitem><para>evita di muovere il braccio robotico se sai che la posture richiesta è uguale a quella attuale, <emphasis>memorizza la posture attuale</emphasis> (puoi tracciarla...)</para>
@@ -1416,9 +1497,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md69">
+<sect2 id="md__docs_dev-log_1autotoc_md70">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md70">
+<sect3 id="md__docs_dev-log_1autotoc_md71">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -1430,7 +1511,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md71">
+<sect3 id="md__docs_dev-log_1autotoc_md72">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>
@@ -1446,7 +1527,7 @@
 </listitem></itemizedlist>
 </para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md72">
+<sect3 id="md__docs_dev-log_1autotoc_md73">
 <title>scrittura del mission manager (e metodo di lavoro in generale)</title>
 <para>ho un modo di scrivere il codice che tende a tenere conto di tutti gli errori che possono accadere.</para>
 <para><itemizedlist>

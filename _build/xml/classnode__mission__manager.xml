@@ -169,8 +169,10 @@
         </inbodydescription>
         <location file="robocluedo_mission_manager/src/mission_manager.cpp" line="123" column="6" bodyfile="robocluedo_mission_manager/src/mission_manager.cpp" bodystart="123" bodyend="526"/>
         <references refid="mission__manager_8cpp_1a14dd36508d648635f33bfe4c3506a879" compoundref="mission__manager_8cpp" startline="56">MAX_FAULT_COUNT</references>
+        <references refid="armor-services_8md_8txt_1a796a2ba2143f49caead4827fd89e5371" compoundref="armor-services_8md_8txt" startline="145">Hypothesis</references>
         <references refid="mission__manager_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="mission__manager_8cpp" startline="18">TLOG</references>
         <references refid="mission__manager_8cpp_1a2ce63008cc07bc6a6893f29a282a7830" compoundref="mission__manager_8cpp" startline="70">MISSION_STATUS_REPLAN</references>
+        <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
         <references refid="classnode__mission__manager_1ac968210cc999a221c57e610812618456" compoundref="mission__manager_8cpp" startline="529" endline="541">make_plan</references>
         <references refid="mission__manager_8cpp_1a5e91c75d46d09daa821765dd8ff29fc8" compoundref="mission__manager_8cpp" startline="61">LANDMARK_REPLAN</references>
         <references refid="mission__manager_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="mission__manager_8cpp" startline="19">TWARN</references>

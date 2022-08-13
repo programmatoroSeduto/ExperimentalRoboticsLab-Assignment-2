@@ -28,10 +28,14 @@ state_dict_ = {
 
 
 def wall_follower_switch(req):
-	global active_
+	global active_, pub_
 	active_ = req.data
-	if not active_:
-		change_state(2)
+	
+	if not req.data:
+		msg = Twist()
+		msg.linear.x = 0
+		msg.angular.z = 0
+		pub_.publish(msg)
 	
 	res = SetBoolResponse()
 	res.success = True
@@ -97,7 +101,7 @@ def take_action():
 	else:
 		state_description = 'unknown case'
 		rospy.loginfo(regions)
-	print(state_description)
+	# print(state_description)
 
 
 def find_wall():
@@ -139,6 +143,7 @@ def main():
 	rate = rospy.Rate(20)
 	while not rospy.is_shutdown():
 		if not active_:
+			# rospy.loginfo( "wall follow is OFF" )
 			rate.sleep()
 			continue
 		else:

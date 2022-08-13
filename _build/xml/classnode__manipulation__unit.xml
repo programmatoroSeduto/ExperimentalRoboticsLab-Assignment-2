@@ -129,6 +129,7 @@
         <references refid="manipulation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="manipulation__unit_8cpp" startline="19">TWARN</references>
         <references refid="manipulation__unit_8cpp_1ad4c51c23cd787eed92cb27695d54fa3b" compoundref="manipulation__unit_8cpp" startline="34">SERVICE_MANIP</references>
         <references refid="manipulation__unit_8cpp_1a36b268389a5b36ab752d1e59f1fa63f0" compoundref="manipulation__unit_8cpp" startline="16">LOGSQUARE</references>
+        <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
         <referencedby refid="classnode__manipulation__unit_1aa56cb61dac7f3270ca379827de41666e" compoundref="manipulation__unit_8cpp" startline="59" endline="75">node_manipulation_unit</referencedby>
       </memberdef>
       </sectiondef>

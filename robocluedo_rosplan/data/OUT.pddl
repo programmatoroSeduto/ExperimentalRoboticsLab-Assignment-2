@@ -14,7 +14,7 @@
     (not-is-center wp3)
     (not-is-center wp4)
 
-    (at wp1)
+    (at wp2)
 
     (passage center wp1)
     (passage wp1 center)
@@ -26,8 +26,8 @@
 
     (explored center)
     (explored wp1)
+    (explored wp2)
 
-    (not-explored wp2)
     (not-explored wp3)
     (not-explored wp4)
 
@@ -38,10 +38,10 @@
     (not-hint-ready)
 
     (hint-collected wp1)
+    (hint-collected wp2)
 
-    (not-hint-collected wp3)
     (not-hint-collected wp4)
-    (not-hint-collected wp2)
+    (not-hint-collected wp3)
 
 )
 (:goal (and

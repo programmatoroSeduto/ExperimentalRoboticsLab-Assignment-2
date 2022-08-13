@@ -71,9 +71,9 @@
         <argsstring></argsstring>
         <name>state_dict_</name>
         <initializer>=  {
-	0: &apos;find the wall&apos;,
+	0: &apos;find <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> wall&apos;,
 	1: &apos;turn left&apos;,
-	2: &apos;follow the wall&apos;,
+	2: &apos;follow <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> wall&apos;,
 }</initializer>
         <briefdescription>
         </briefdescription>
@@ -100,8 +100,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="30" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="30" bodyend="41"/>
-        <references refid="namespacewall__follow__service__m_1ad99900df1d3fa5dd0683d507b2253b17" compoundref="wall__follow__service__m_8py" startline="55" endline="61">change_state</references>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="30" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="30" bodyend="45"/>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1ab07be9226f1ee837e03f25d282336b09" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -118,8 +117,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="42" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="42" bodyend="54"/>
-        <references refid="namespacewall__follow__service__m_1a027e1db38933af0544136a5c84de5a83" compoundref="wall__follow__service__m_8py" startline="62" endline="102">take_action</references>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="46" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="46" bodyend="58"/>
+        <references refid="namespacewall__follow__service__m_1a027e1db38933af0544136a5c84de5a83" compoundref="wall__follow__service__m_8py" startline="66" endline="106">take_action</references>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1ad99900df1d3fa5dd0683d507b2253b17" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -136,9 +135,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="55" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="55" bodyend="61"/>
-        <referencedby refid="namespacewall__follow__service__m_1a8367ccc5f1456166406c0d577d019baf" compoundref="wall__follow__service__m_8py" startline="30" endline="41">wall_follower_switch</referencedby>
-        <referencedby refid="namespacewall__follow__service__m_1a027e1db38933af0544136a5c84de5a83" compoundref="wall__follow__service__m_8py" startline="62" endline="102">take_action</referencedby>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="59" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="59" bodyend="65"/>
+        <referencedby refid="namespacewall__follow__service__m_1a027e1db38933af0544136a5c84de5a83" compoundref="wall__follow__service__m_8py" startline="66" endline="106">take_action</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1a027e1db38933af0544136a5c84de5a83" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -151,9 +149,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="62" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="62" bodyend="102"/>
-        <references refid="namespacewall__follow__service__m_1ad99900df1d3fa5dd0683d507b2253b17" compoundref="wall__follow__service__m_8py" startline="55" endline="61">change_state</references>
-        <referencedby refid="namespacewall__follow__service__m_1ab07be9226f1ee837e03f25d282336b09" compoundref="wall__follow__service__m_8py" startline="42" endline="54">clbk_laser</referencedby>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="66" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="66" bodyend="106"/>
+        <references refid="namespacewall__follow__service__m_1ad99900df1d3fa5dd0683d507b2253b17" compoundref="wall__follow__service__m_8py" startline="59" endline="65">change_state</references>
+        <referencedby refid="namespacewall__follow__service__m_1ab07be9226f1ee837e03f25d282336b09" compoundref="wall__follow__service__m_8py" startline="46" endline="58">clbk_laser</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1ae65476bf2d8bd9007fda22eaea1ed2b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -166,8 +164,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="103" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="103" bodyend="109"/>
-        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="124" endline="159">main</referencedby>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="107" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="107" bodyend="113"/>
+        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="128" endline="164">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1aa4262b4e6e90a36c0226c9b90ee97d14" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -180,8 +178,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="110" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="110" bodyend="115"/>
-        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="124" endline="159">main</referencedby>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="114" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="114" bodyend="119"/>
+        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="128" endline="164">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1a2f9f1202ed1e75ee80471a9dff56fdbe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -194,8 +192,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="116" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="116" bodyend="123"/>
-        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="124" endline="159">main</referencedby>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="120" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="120" bodyend="127"/>
+        <referencedby refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" compoundref="wall__follow__service__m_8py" startline="128" endline="164">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
@@ -208,10 +206,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="124" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="124" bodyend="159"/>
-        <references refid="namespacewall__follow__service__m_1ae65476bf2d8bd9007fda22eaea1ed2b1" compoundref="wall__follow__service__m_8py" startline="103" endline="109">find_wall</references>
-        <references refid="namespacewall__follow__service__m_1aa4262b4e6e90a36c0226c9b90ee97d14" compoundref="wall__follow__service__m_8py" startline="110" endline="115">turn_left</references>
-        <references refid="namespacewall__follow__service__m_1a2f9f1202ed1e75ee80471a9dff56fdbe" compoundref="wall__follow__service__m_8py" startline="116" endline="123">follow_the_wall</references>
+        <location file="robocluedo_movement_controller/scripts/wall_follow_service_m.py" line="128" column="1" bodyfile="robocluedo_movement_controller/scripts/wall_follow_service_m.py" bodystart="128" bodyend="164"/>
+        <references refid="namespacewall__follow__service__m_1ae65476bf2d8bd9007fda22eaea1ed2b1" compoundref="wall__follow__service__m_8py" startline="107" endline="113">find_wall</references>
+        <references refid="namespacewall__follow__service__m_1aa4262b4e6e90a36c0226c9b90ee97d14" compoundref="wall__follow__service__m_8py" startline="114" endline="119">turn_left</references>
+        <references refid="namespacewall__follow__service__m_1a2f9f1202ed1e75ee80471a9dff56fdbe" compoundref="wall__follow__service__m_8py" startline="120" endline="127">follow_the_wall</references>
       </memberdef>
       </sectiondef>
     <briefdescription>

@@ -81,7 +81,7 @@
 <li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run-the-project.html">How to Run this Project</a></li>
-<li class="toctree-l1"><a class="reference internal" href="test-the-project.html">How to Test the Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="test-the-project.html">Testing the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="twist-keyboard.html">HOW TO – twist keyboard</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
@@ -127,7 +127,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mission-manager">13/08/2022 – mission manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-manager-module-testing">13/08/2022 – mission manager – module testing</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
@@ -1717,8 +1717,8 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="mission-manager">
-<h2>13/08/2022 – mission manager<a class="headerlink" href="#mission-manager" title="Permalink to this heading"></a></h2>
+<div class="section" id="mission-manager-module-testing">
+<h2>13/08/2022 – mission manager – module testing<a class="headerlink" href="#mission-manager-module-testing" title="Permalink to this heading"></a></h2>
 <p>implementazione del nodo main dell’architettura (fatto questo si passa al testing e si impacchetta tutto)</p>
 <ul>
 <li><p>implementazione</p></li>
@@ -1824,12 +1824,119 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 <li><p>vediamo se riusciamo a farlo compilare … (domenica libera? magari!)</p></li>
 <li><p>(posso dire che mi aspettavo di peggio? non sono tantissimi, sono sollevato)</p></li>
 <li><p><strong>ammazzando selvaggiamente</strong> gli ultimi errori</p></li>
-<li></li>
+<li><p>(molto soddisfatto, e fortuna che ho pensato di implementarlo in C++ … l’avessi fatto in python sarei diventato pazzo da manicomio)</p></li>
+<li><p><strong>COMMIT</strong> : “working on mission manager (first debugging of the mission_manager node)”</p></li>
+</ul>
+<hr class="docutils" />
+<p>il progetto completo adesso c’è! i prossimi passi? module testing, e infine test finale dell’intero progetto. (quella domenica libera potrebbe non essere solo un sogno … a meno di non aver combinato un casino apocalittico)</p>
+<ul>
+<li><p>prima di tutto, a posto la documentazione su come eseguire il progetto e come testarlo (ci sono due documenti fatti apposta per questo)</p>
+<ul class="simple">
+<li><p>inizio già ad elencarmi i test da fare</p></li>
+</ul>
+</li>
+<li><p>test per aRMOR</p>
+<ul>
+<li><p>armor puro – module testing</p></li>
+<li><p>test armor tools</p>
+<ul>
+<li><p>ho dovuto aggiornarlo leggermente: non c’era nulla di errato, solo però c’erano i due test di armortools e armorcluedo nello stesso file; ora sono divisi</p></li>
+<li><p><em>e meglio scrivere gli output dei test in fondo al file…</em> altrimenti presto non ci si capirà nulla</p></li>
+<li><p>l’ultima query mi da un’eccezione java nella ontology, pare che esista un oggetto null, ma non saprei perchè</p></li>
+<li><p>controllando le query sembra tutto a posto, non ce lo metto io di sicuro quell’oggetto</p></li>
+<li><p>(non penso che ci sia qualcosa di strano, però non mi convince … è anche vero però che il test è molto vecchio)</p></li>
+<li><p>scrissi questa cosa nel test:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>* classe più profonda di un individual (caso bastardo, probabilmente bug)
+* 	&quot;QUERY&quot;, &quot;CLASS&quot;, &quot;IND&quot;, &quot;HP3&quot;, &quot;true&quot;
+* 	HYPOTHESIS
+</pre></div>
+</div>
+<p>quindi questo comando non funzionava già prima. tutto a posto: o ho trovato un workaround per farlo funzionare comunque, o ho proprio dribblato la questione. In ogni caso, devo aver sicuramente risolto in passato il problema. Attualmente, basta commentare la riga incriminata e siamo tutti contenti.</p>
+</li>
+<li><p>giusto per la cronaca, l’errore è questo:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span> 13/08/22_12:31:13,855 -&gt; Class OWLReferencesInterface : [[ !!! ERROR !!! ]]Cannot get the OWL name of a null OWL object
+Exception in thread &quot;pool-1-thread-22&quot; java.lang.IllegalArgumentException
+	at com.google.common.base.Preconditions.checkArgument(Preconditions.java:108)
+	at org.ros.internal.message.field.PrimitiveFieldType$14.serialize(PrimitiveFieldType.java:574)
+	at org.ros.internal.message.field.ListField.serialize(ListField.java:62)
+	at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)
+	at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)
+	at org.ros.internal.message.field.MessageFieldType.serialize(MessageFieldType.java:92)
+	at org.ros.internal.message.field.ValueField.serialize(ValueField.java:62)
+	at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:32)
+	at org.ros.internal.message.DefaultMessageSerializer.serialize(DefaultMessageSerializer.java:26)
+	at org.ros.internal.node.service.ServiceRequestHandler.handleRequest(ServiceRequestHandler.java:66)
+	at org.ros.internal.node.service.ServiceRequestHandler.access$100(ServiceRequestHandler.java:38)
+	at org.ros.internal.node.service.ServiceRequestHandler$1.run(ServiceRequestHandler.java:99)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+	at java.lang.Thread.run(Thread.java:748)
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>test armor cluedo</p></li>
+</ul>
+</li>
+<li><p>test su robocluedo rosplan</p>
+<ul class="simple">
+<li><p>anzitutto voglio spostare il nodo py che simula le interfacce nel module testing</p></li>
+<li><p>test PDDL (non si sa mai…)</p>
+<ul>
+<li><p><em>fortunatamente</em> il modello è ok</p></li>
+</ul>
+</li>
+<li><p>simple rosplan</p></li>
+<li><p>knowledge base interface (vedi diario di implementazione … visto a cosa serve tenere dei diari?)</p></li>
+<li><p>pipeline manager (anche qui dai diari)</p></li>
+<li><p>tutto senza roslaunch</p>
+<ul>
+<li><p>“piccolo” problema con un manifest che non andava bene … risolto (c’ho messo più del previsto…)</p></li>
+</ul>
+</li>
+<li><p>a questo punto direi che possiamo scriverlo ‘sto launch finale, no?</p></li>
+<li><p>e test finale</p></li>
+</ul>
+</li>
+<li><p>(boh pare funzionare tutto a dovere .-.. ci fidiamo?)</p></li>
+<li><p>test sul package del robot</p>
+<ul class="simple">
+<li><p>urdf</p></li>
+<li><p>robot</p></li>
+</ul>
+</li>
+<li><p>ora, i test sulla navigation (e qui sono piuttosto curioso)</p>
+<ul class="simple">
+<li><p>go to point</p></li>
+<li><p>head orientation</p></li>
+<li><p>wall follow</p>
+<ul>
+<li><p><strong>ISSUE</strong> il wall follow non si disattiva … a vedere il comportamento del robot pare che non riesca a pubblicare la posizione dopo che è stato disattivato, ma il ciclo rimane in funzionamento, cosa strana</p></li>
+<li><p>tutto risolto: c’era un bug nella disattivazione (dal nodo originale)</p></li>
+</ul>
+</li>
+<li><p>e ora, quello che tutti stavamo aspettando! bug_m!</p></li>
+<li><p>ora il nav controller</p>
+<ul>
+<li><p><strong>ISSUE</strong> : credo ci sia un problema con il controllo della yaw da parte del controller: certe volte va, altre no, e non mi è chiaro il perchè.</p></li>
+<li><p>ho notato che il robot manda il segnale <em>prima di aggiustare la yaw</em>, e sapendo come ho strutturato gli stati, è presto detto il perchè</p></li>
+<li><p>avevo ragione, c’era un passaggio di stato poco pensato. problema <em>risolto</em></p></li>
+</ul>
+</li>
+<li><p>manca solo il manipulator, per cui secondo me ho già un test bello pronto</p></li>
+</ul>
+</li>
+<li><p><strong>COMMIT</strong> : “module testing (rosplan, navigation, manipulation)”</p></li>
 </ul>
 </div>
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <ul class="simple">
+<li><p>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</p></li>
+<li><p>vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation</p></li>
+<li><p>aumentare la mobilità del robot spostando le ruote “passive” più verso il centro del veicolo</p></li>
+<li><p>navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)</p></li>
 <li><p>documentazione del package ROSPlan</p></li>
 <li><p>UML finale per ROSPlan</p></li>
 <li><p><em>module testing</em> su kb_tools</p></li>
