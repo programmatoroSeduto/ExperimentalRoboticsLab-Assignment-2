@@ -2038,8 +2038,103 @@ root@3b17871017fd:~/ros_ws/src/erl2-new#
 	- **indovina un po' chi ha dimenticato di ricompilare? ARIDANGHETEEEEEE**
 - beh, a questo punto faccio una modifica all'oracolo giusto per fare i test più velocemente
 
-- **COMMIT** : "testing (mission manager debugging, erl oracle debug mode)"
+- **COMMIT** : "testing (mission manager debugging, erl oracle debug mode)" 
 
+---
+
+eeee ennesiam sessione di test:
+
+- (dopo aver aggiunto la modalità di sviluppo all'oracolo)
+- serve documentare nei test
+- *e ora*, indaghiamo (sul senso della vita)
+	- **COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**
+	- ho fatto un *mezzo* casino con l'oracolo, ma si risolve facilmente
+- visto come vanno le cose posso anche settare direttamente lo SCALING_FACTOR a 0.99
+
+- **EANDIAMO.**
+
+	```text
+	root@3b17871017fd:~/ros_ws/src/erl2-new# rosrun robocluedo_mission_manager mission_manager
+	[ INFO] [1660477923.310792700]: [robocluedo_mission_manager] starting ... 
+	[ INFO] [1660477923.338249500]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ...
+	[ INFO] [1660477923.340275700]: waitForService: Service [/robocluedo/pipeline_manager] has not been advertised, waiting...
+	[ INFO] [1660477937.913722200, 138.900000000]: waitForService: Service [/robocluedo/pipeline_manager] is now available.
+	[ INFO] [1660477937.913775000, 138.900000000]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ... OK
+	[ INFO] [1660477937.913804300, 138.900000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ...
+	[ INFO] [1660477937.915489500, 138.901000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ... OK
+	[ INFO] [1660477937.915635100, 138.901000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ...
+	[ INFO] [1660477937.916569100, 138.902000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ... OK
+	[ INFO] [1660477937.916651500, 138.902000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ...
+	[ INFO] [1660477937.917376500, 138.902000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ... OK
+	[ INFO] [1660477937.917413400, 138.902000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ...
+	[ INFO] [1660477937.918439600, 138.904000000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ... OK
+	[ INFO] [1660477937.918480900, 138.904000000]: [robocluedo_mission_manager] Opening client [/oracle_solution] ...
+	[ INFO] [1660477937.919124000, 138.906000000]: [robocluedo_mission_manager] Opening client [/oracle_solution] ... OK
+	[ INFO] [1660477937.919214500, 138.906000000]: [robocluedo_mission_manager] subscribing to /oracle_hint ... 
+	[ INFO] [1660477937.922416100, 138.909000000]: [robocluedo_mission_manager] subscribing to /oracle_hint ... OK
+	[ INFO] [1660477937.922479500, 138.909000000]: [robocluedo_mission_manager] ready
+	[ INFO] [1660477937.922499700, 138.909000000]: [robocluedo_mission_manager] mission manager STARTING WORKING CYCLE
+	[ INFO] [1660477937.922518700, 138.909000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+	[ INFO] [1660477943.840810200, 143.947000000]: [robocluedo_mission_manager] gotta catch 'em all! NA NA NA NA NA NA
+	[ INFO] [1660477943.840866700, 143.947000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478000.065528700, 191.676000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=who, value=missScarlett)
+	[ INFO] [1660478000.337667300, 191.893000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478015.775549300, 205.276000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478015.820921200, 205.316000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+	[ INFO] [1660478015.820994300, 205.316000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478064.410216300, 246.860000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=who, value=missScarlett)
+	[ INFO] [1660478064.495085900, 246.920000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478074.302948400, 255.592000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478074.337975300, 255.617000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+	[ INFO] [1660478074.338025600, 255.617000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478115.632459800, 291.042000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=who, value=missScarlett)
+	[ INFO] [1660478115.683327800, 291.083000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478130.942204600, 304.335000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478130.976974500, 304.349000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+	[ INFO] [1660478130.977089700, 304.349000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478181.943447500, 348.124000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=where, value=conservatory)
+	[ INFO] [1660478182.066006900, 348.211000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478192.309954000, 356.905000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478192.348465100, 356.941000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+	[ INFO] [1660478192.348579000, 356.941000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ WARN] [1660478192.701782900, 357.215000000]: [robocluedo_mission_manager] WARNING: landmark COLLECT no longer applicable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY
+	[ INFO] [1660478192.701833500, 357.215000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478192.729748300, 357.237000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) REPLANNING
+	[ INFO] [1660478192.729869700, 357.237000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+	[ INFO] [1660478198.633827100, 362.407000000]: [robocluedo_mission_manager] gotta catch 'em all! NA NA NA NA NA NA
+	[ INFO] [1660478198.633924300, 362.407000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478264.932059200, 419.078000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=where, value=conservatory)
+	[ INFO] [1660478265.044341400, 419.157000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478280.620287300, 432.618000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478280.649785900, 432.651000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+	[ INFO] [1660478280.649918600, 432.651000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+	[ INFO] [1660478329.181607100, 474.499000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=what, value=candlestick)
+	[ INFO] [1660478329.265570900, 474.543000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+	[ INFO] [1660478339.478846100, 483.301000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+	[ INFO] [1660478339.550077100, 483.357000000]: [robocluedo_mission_manager] (from the ontology) found consistent hypotheses : 1
+	[ INFO] [1660478339.550119700, 483.357000000]: [robocluedo_mission_manager] status: MISSION_STATUS_SOLVE
+	[ INFO] [1660478341.487364700, 484.998000000]: [robocluedo_mission_manager] plan not solvable (need intermediate replanning
+	[ INFO] [1660478341.487517600, 484.998000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+	[ INFO] [1660478347.442209500, 490.266000000]: [robocluedo_mission_manager] retrying landmark SOLVE after replanning
+	[ INFO] [1660478347.442323200, 490.266000000]: [robocluedo_mission_manager] status: MISSION_STATUS_SOLVE
+	[ INFO] [1660478446.738491300, 575.338000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ORACLE
+	[ INFO] [1660478446.744114100, 575.344000000]: [robocluedo_mission_manager] Narrator voice: 
+		(wispering) RoboCLuedo thinks that the solution is ID=0
+	[ INFO] [1660478446.744179800, 575.344000000]: [robocluedo_mission_manager] RoboCLuedo: 
+		WELL, missScarlett, DID YOU MURDER Dr. Black ? 
+
+			HUH?
+
+
+	[ INFO] [1660478446.744212400, 575.344000000]: [robocluedo_mission_manager] Oracle: 
+		ID=0 is the way
+	[ INFO] [1660478446.744237500, 575.344000000]: [robocluedo_mission_manager] gg ez
+	[ INFO] [1660478446.744257000, 575.344000000]: [robocluedo_mission_manager] ==== ID=0 | where[conservatory] what[candlestick] who[missScarlett] ====
+	```
+	
+	*suono di microfono che viene lasciato cadere per terra*.
+
+- **COMMIT** "happy commit!"
 
 
 

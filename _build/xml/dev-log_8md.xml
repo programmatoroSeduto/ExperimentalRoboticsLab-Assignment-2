@@ -2033,7 +2033,117 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>quando<sp/>la<sp/>pipeline<sp/>manager<sp/>solleva<sp/>un<sp/>problema,<sp/>la<sp/>kb_interface<sp/>dovrebbe<sp/>mettere<sp/>a<sp/>disposizione<sp/>dei<sp/>servizi<sp/>separati<sp/>per<sp/>aiutare<sp/>a<sp/>comprendere<sp/>il<sp/>problema.</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*attualmente<sp/>la<sp/>kb_interface<sp/>ha<sp/>solo<sp/>rilevanza<sp/>interna,<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>fa<sp/>tutto*,<sp/>dando<sp/>luogo<sp/>a<sp/>situazioni<sp/>ambigue<sp/>come<sp/>quella<sp/>che<sp/>ho<sp/>appena<sp/>visto.<sp/></highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>si<sp/>torna<sp/>a<sp/>provare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>la<sp/>prova<sp/>infinita<sp/>(senza<sp/>nulla<sp/>di<sp/>insolito)<sp/>...<sp/>meglio<sp/>riavviare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**ISSUE**<sp/>nessun<sp/>backup<sp/>dalla<sp/>ontology!<sp/>(me<sp/>lo<sp/>sono<sp/>dimenticato<sp/>onestamente)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>si<sp/>prova<sp/>ancora<sp/>(sperando<sp/>stavolta<sp/>di<sp/>ottenere<sp/>un&apos;ipotesi<sp/>consistente<sp/>in<sp/>tempi<sp/>ragionevoli,<sp/>così<sp/>provo<sp/>tutto<sp/>il<sp/>flow<sp/>una<sp/>volta<sp/>e<sp/>fine)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>alla<sp/>ASK_ORACLE<sp/>ci<sp/>siamo<sp/>arrivati!<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>però<sp/>adesso<sp/>va<sp/>in<sp/>ciclo<sp/>infinito<sp/>su<sp/>quello<sp/>stesso<sp/>stato<sp/>...<sp/>e<sp/>conoscendomi<sp/>so<sp/>*perfettamente*<sp/>perchè<sp/>(dannato<sp/>me<sp/>che<sp/>copio<sp/>incollo<sp/>selvaggiamente)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>totalmente<sp/>missato<sp/>lo<sp/>stato<sp/>successivo<sp/>...<sp/>bello</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>giusto<sp/>un&apos;occhiata<sp/>alla<sp/>ontology<sp/>dato<sp/>che<sp/>ci<sp/>siamo<sp/>fermati</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>sembra<sp/>ben<sp/>formata:<sp/>la<sp/>deduzione<sp/>era<sp/>corretta,<sp/>anche<sp/>se<sp/>non<sp/>era<sp/>soluzione<sp/>del<sp/>caso</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*e<sp/>proviamo<sp/>ancora*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>stesso<sp/>problema<sp/>di<sp/>prima<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**indovina<sp/>un<sp/>po&apos;<sp/>chi<sp/>ha<sp/>dimenticato<sp/>di<sp/>ricompilare?<sp/>ARIDANGHETEEEEEE**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>beh,<sp/>a<sp/>questo<sp/>punto<sp/>faccio<sp/>una<sp/>modifica<sp/>all&apos;oracolo<sp/>giusto<sp/>per<sp/>fare<sp/>i<sp/>test<sp/>più<sp/>velocemente</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;testing<sp/>(mission<sp/>manager<sp/>debugging,<sp/>erl<sp/>oracle<sp/>debug<sp/>mode)&quot;<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">eeee<sp/>ennesiam<sp/>sessione<sp/>di<sp/>test:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(dopo<sp/>aver<sp/>aggiunto<sp/>la<sp/>modalità<sp/>di<sp/>sviluppo<sp/>all&apos;oracolo)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>serve<sp/>documentare<sp/>nei<sp/>test</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*e<sp/>ora*,<sp/>indaghiamo<sp/>(sul<sp/>senso<sp/>della<sp/>vita)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>fatto<sp/>un<sp/>*mezzo*<sp/>casino<sp/>con<sp/>l&apos;oracolo,<sp/>ma<sp/>si<sp/>risolve<sp/>facilmente</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>visto<sp/>come<sp/>vanno<sp/>le<sp/>cose<sp/>posso<sp/>anche<sp/>settare<sp/>direttamente<sp/>lo<sp/>SCALING_FACTOR<sp/>a<sp/>0.99</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**EANDIAMO.**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```text</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>root@3b17871017fd:~/ros_ws/src/erl2-new#<sp/>rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477923.310792700]:<sp/>[robocluedo_mission_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477923.338249500]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477923.340275700]:<sp/>waitForService:<sp/>Service<sp/>[/robocluedo/pipeline_manager]<sp/>has<sp/>not<sp/>been<sp/>advertised,<sp/>waiting...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.913722200,<sp/>138.900000000]:<sp/>waitForService:<sp/>Service<sp/>[/robocluedo/pipeline_manager]<sp/>is<sp/>now<sp/>available.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.913775000,<sp/>138.900000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.913804300,<sp/>138.900000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.915489500,<sp/>138.901000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.915635100,<sp/>138.901000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.916569100,<sp/>138.902000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.916651500,<sp/>138.902000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.917376500,<sp/>138.902000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.917413400,<sp/>138.902000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.918439600,<sp/>138.904000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.918480900,<sp/>138.904000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.919124000,<sp/>138.906000000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.919214500,<sp/>138.906000000]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.922416100,<sp/>138.909000000]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.922479500,<sp/>138.909000000]:<sp/>[robocluedo_mission_manager]<sp/>ready</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.922499700,<sp/>138.909000000]:<sp/>[robocluedo_mission_manager]<sp/>mission<sp/>manager<sp/>STARTING<sp/>WORKING<sp/>CYCLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477937.922518700,<sp/>138.909000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477943.840810200,<sp/>143.947000000]:<sp/>[robocluedo_mission_manager]<sp/>gotta<sp/>catch<sp/>&apos;em<sp/>all!<sp/>NA<sp/>NA<sp/>NA<sp/>NA<sp/>NA<sp/>NA</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660477943.840866700,<sp/>143.947000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478000.065528700,<sp/>191.676000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=who,<sp/>value=missScarlett)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478000.337667300,<sp/>191.893000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478015.775549300,<sp/>205.276000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478015.820921200,<sp/>205.316000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478015.820994300,<sp/>205.316000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478064.410216300,<sp/>246.860000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=who,<sp/>value=missScarlett)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478064.495085900,<sp/>246.920000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478074.302948400,<sp/>255.592000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478074.337975300,<sp/>255.617000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478074.338025600,<sp/>255.617000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478115.632459800,<sp/>291.042000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=who,<sp/>value=missScarlett)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478115.683327800,<sp/>291.083000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478130.942204600,<sp/>304.335000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478130.976974500,<sp/>304.349000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478130.977089700,<sp/>304.349000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478181.943447500,<sp/>348.124000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=where,<sp/>value=conservatory)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478182.066006900,<sp/>348.211000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.309954000,<sp/>356.905000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.348465100,<sp/>356.941000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.348579000,<sp/>356.941000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>WARN]<sp/>[1660478192.701782900,<sp/>357.215000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>landmark<sp/>COLLECT<sp/>no<sp/>longer<sp/>applicable<sp/>(all<sp/>the<sp/>waypoints<sp/>have<sp/>been<sp/>explored)<sp/>TRYING<sp/>TO<sp/>directly<sp/>SOLVE<sp/>THE<sp/>MYSTERY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.701833500,<sp/>357.215000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.729748300,<sp/>357.237000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>REPLANNING</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478192.729869700,<sp/>357.237000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478198.633827100,<sp/>362.407000000]:<sp/>[robocluedo_mission_manager]<sp/>gotta<sp/>catch<sp/>&apos;em<sp/>all!<sp/>NA<sp/>NA<sp/>NA<sp/>NA<sp/>NA<sp/>NA</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478198.633924300,<sp/>362.407000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478264.932059200,<sp/>419.078000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=where,<sp/>value=conservatory)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478265.044341400,<sp/>419.157000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478280.620287300,<sp/>432.618000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478280.649785900,<sp/>432.651000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478280.649918600,<sp/>432.651000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478329.181607100,<sp/>474.499000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=what,<sp/>value=candlestick)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478329.265570900,<sp/>474.543000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478339.478846100,<sp/>483.301000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478339.550077100,<sp/>483.357000000]:<sp/>[robocluedo_mission_manager]<sp/>(from<sp/>the<sp/>ontology)<sp/>found<sp/>consistent<sp/>hypotheses<sp/>:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478339.550119700,<sp/>483.357000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_SOLVE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478341.487364700,<sp/>484.998000000]:<sp/>[robocluedo_mission_manager]<sp/>plan<sp/>not<sp/>solvable<sp/>(need<sp/>intermediate<sp/>replanning</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478341.487517600,<sp/>484.998000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478347.442209500,<sp/>490.266000000]:<sp/>[robocluedo_mission_manager]<sp/>retrying<sp/>landmark<sp/>SOLVE<sp/>after<sp/>replanning</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478347.442323200,<sp/>490.266000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_SOLVE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.738491300,<sp/>575.338000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ORACLE</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.744114100,<sp/>575.344000000]:<sp/>[robocluedo_mission_manager]<sp/>Narrator<sp/>voice:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>(wispering)<sp/>RoboCLuedo<sp/>thinks<sp/>that<sp/>the<sp/>solution<sp/>is<sp/>ID=0</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.744179800,<sp/>575.344000000]:<sp/>[robocluedo_mission_manager]<sp/>RoboCLuedo:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>WELL,<sp/>missScarlett,<sp/>DID<sp/>YOU<sp/>MURDER<sp/>Dr.<sp/>Black<sp/>?<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>HUH?</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.744212400,<sp/>575.344000000]:<sp/>[robocluedo_mission_manager]<sp/>Oracle:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>ID=0<sp/>is<sp/>the<sp/>way</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.744237500,<sp/>575.344000000]:<sp/>[robocluedo_mission_manager]<sp/>gg<sp/>ez</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>[<sp/>INFO]<sp/>[1660478446.744257000,<sp/>575.344000000]:<sp/>[robocluedo_mission_manager]<sp/>====<sp/>ID=0<sp/>|<sp/>where[conservatory]<sp/>what[candlestick]<sp/>who[missScarlett]<sp/>====</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>*suono<sp/>di<sp/>microfono<sp/>che<sp/>viene<sp/>lasciato<sp/>cadere<sp/>per<sp/>terra*.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>&quot;happy<sp/>commit!&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

@@ -153,12 +153,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-rosplan-plus-real-motion-controller">TESTING rosplan plus real motion controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rosplan-and-armor">ROSPlan and aRMOR</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#first-test-a-almost-final-test">first test (a almost-final test!)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#final-tests">Final Tests</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-test">first test</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#another-test">another test</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#final-testings">final testings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests-outputs">TESTS OUTPUTS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#armor-only">armor only</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#armor-with-armor-tools">armor with armor_tools</a></li>
@@ -734,10 +733,20 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </pre></div>
 </div>
 </div>
-<div class="section" id="rosplan-and-armor">
-<h2>ROSPlan and aRMOR<a class="headerlink" href="#rosplan-and-armor" title="Permalink to this heading"></a></h2>
-<div class="section" id="first-test-a-almost-final-test">
-<h3>first test (a almost-final test!)<a class="headerlink" href="#first-test-a-almost-final-test" title="Permalink to this heading"></a></h3>
+<div class="section" id="final-tests">
+<h2>Final Tests<a class="headerlink" href="#final-tests" title="Permalink to this heading"></a></h2>
+<p><strong>before running these tests</strong> :</p>
+<ul>
+<li><p>(optional) enable the macros <code class="docutils literal notranslate"><span class="pre">WAITKEY</span></code> in the <code class="docutils literal notranslate"><span class="pre">robocluedo_mission_manager/mission_manager.cpp</span></code> by setting <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">WAITKEY_ENABLED</span> <span class="pre">true</span></code></p>
+<p>the program will stop the execution at each important step</p>
+</li>
+<li><p>enable the development mode in the oracle located at <code class="docutils literal notranslate"><span class="pre">robocluedo_dependencied_erl2/src/simulation.cpp</span></code> : set <code class="docutils literal notranslate"><span class="pre">#define</span> <span class="pre">NOT_TESTING</span> <span class="pre">false</span></code></p>
+<p>this option says the Oracle to send just the elements of th winner message and not all the other items. keys are selected randomly from the fields of the winner ID.</p>
+</li>
+</ul>
+<div class="section" id="first-test">
+<h3>first test<a class="headerlink" href="#first-test" title="Permalink to this heading"></a></h3>
+<p>this test allows to see the output from aRMOR.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
 roslaunch robocluedo_mission_manager run_components.launch <span class="m">2</span>&gt;/dev/null
 
@@ -751,7 +760,8 @@ rosrun robocluedo_mission_manager mission_manager
 </div>
 <div class="section" id="another-test">
 <h3>another test<a class="headerlink" href="#another-test" title="Permalink to this heading"></a></h3>
-<p>this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately)</p>
+<p>this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately).</p>
+<p><em>this test corresponds to how to run the project.</em></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
 roslaunch robocluedo_mission_manager run_components_2.launch <span class="m">2</span>&gt;/dev/null
 
@@ -763,10 +773,6 @@ rosrun robocluedo_mission_manager mission_manager
 </pre></div>
 </div>
 </div>
-</div>
-<div class="section" id="final-testings">
-<h2>final testings<a class="headerlink" href="#final-testings" title="Permalink to this heading"></a></h2>
-<p>…</p>
 </div>
 <div class="section" id="tests-outputs">
 <h2>TESTS OUTPUTS<a class="headerlink" href="#tests-outputs" title="Permalink to this heading"></a></h2>

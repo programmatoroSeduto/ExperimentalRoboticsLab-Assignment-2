@@ -9,9 +9,17 @@
 #include <time.h>
 #include <vector>
 
-// #define DIST_THRESH 0.25
-#define DIST_THRESH 0.5
 #define NOT_TESTING false
+
+/*
+#if NOT_TESTING
+	#define DIST_THRESH 0.35
+#else
+	#define DIST_THRESH 0.5
+#endif
+*/
+
+#define DIST_THRESH 0.35
 
 ros::Publisher oracle_pub;
 
@@ -51,7 +59,10 @@ void oracleCallback(const gazebo_msgs::LinkStates::ConstPtr& msg)
 		   for(int j=0; j<4;j++){
 				if ((distfromtarget(msg->pose[i].position.x, msg->pose[i].position.y, msg->pose[i].position.z, markx[j],marky[j],markz[j])<DIST_THRESH) && ((lastmarkx !=markx[j]) || (lastmarky != marky[j]))){
 				erl2::ErlOracle oracle_msg;
-				oracle_msg.ID = rand() % 6;
+				if( NOT_TESTING )
+					oracle_msg.ID = rand() % 6;
+				else
+					oracle_msg.ID = winID;
 				if((rand()%4==1) && NOT_TESTING){
 					int a = rand()%5;
 					if(a==0){

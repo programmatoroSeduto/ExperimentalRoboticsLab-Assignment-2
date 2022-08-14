@@ -613,9 +613,21 @@ rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem
 
 ```
 
-## ROSPlan and aRMOR
+## Final Tests
 
-### first test (a almost-final test!)
+**before running these tests** : 
+
+- (optional) enable the macros `WAITKEY` in the `robocluedo_mission_manager/mission_manager.cpp` by setting `#define WAITKEY_ENABLED true`
+	
+	the program will stop the execution at each important step
+	
+- enable the development mode in the oracle located at `robocluedo_dependencied_erl2/src/simulation.cpp` : set `#define NOT_TESTING false`
+	
+	this option says the Oracle to send just the elements of th winner message and not all the other items. keys are selected randomly from the fields of the winner ID. 
+
+### first test
+
+this test allows to see the output from aRMOR.
 
 ```bash
 # shell 1
@@ -630,7 +642,9 @@ rosrun robocluedo_mission_manager mission_manager
 
 ### another test
 
-this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately)
+this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately).
+
+*this test corresponds to how to run the project.*
 
 ```bash
 # shell 1
@@ -642,10 +656,6 @@ roslaunch robocluedo_rosplan run.launch
 # shell 3
 rosrun robocluedo_mission_manager mission_manager
 ```
-
-## final testings
-
-...
 
 ## TESTS OUTPUTS
 

@@ -43,7 +43,7 @@
 // i.e. use the bug_m motion planning algorithm
 #define NAV_ALGO_BUG_M 0
 
-#define SCALING_FACTOR 0.975
+#define SCALING_FACTOR 0.99
 
 class node_navigation_unit
 {
