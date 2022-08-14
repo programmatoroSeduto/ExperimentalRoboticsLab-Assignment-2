@@ -131,7 +131,6 @@ note left of ORACLE.ORACLE_CALLBACK
         <inbodydescription>
         </inbodydescription>
         <location file="_build/html/_sources/robocluedo_dependencies/_docs/erl2-oracle-user-manual.md.txt" line="126" column="7" bodyfile="_build/html/_sources/robocluedo_dependencies/_docs/erl2-oracle-user-manual.md.txt" bodystart="126" bodyend="-1"/>
-        <referencedby refid="namespacerosplan__pipeline__manager_1a376ad3b14ddaec7bb3a285fc5f49473e" compoundref="rosplan__pipeline__manager_8py" startline="211" endline="414">rosplan_pipeline_manager.cbk_pipeline</referencedby>
       </memberdef>
       <memberdef kind="variable" id="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" prot="public" static="no" mutable="no">
         <type>marker color</type>

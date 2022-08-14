@@ -176,7 +176,7 @@
     <member refid="classnode__mission__manager_1aad994f8fbf26d35e540ae1f6476143b0" kind="function"><name>node_mission_manager</name></member>
     <member refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" kind="function"><name>spin</name></member>
     <member refid="classnode__mission__manager_1ac968210cc999a221c57e610812618456" kind="function"><name>make_plan</name></member>
-    <member refid="classnode__mission__manager_1a870659028e964f382ac57b2c3c3993a0" kind="function"><name>execute_plan</name></member>
+    <member refid="classnode__mission__manager_1a82c3de859737d4354f8e8b0bd8910c06" kind="function"><name>execute_plan</name></member>
     <member refid="classnode__mission__manager_1a2009dd0ef3eafac889a2d088bcff2ec4" kind="function"><name>cbk_oracle_hint</name></member>
     <member refid="classnode__mission__manager_1a4ffc224cc6e25730f1e633d8fd9aeeaf" kind="function"><name>is_valid_hint</name></member>
     <member refid="classnode__mission__manager_1aad923693ed0d555dbf95e3a7a73f91b7" kind="function"><name>create_planning_request</name></member>
@@ -435,6 +435,8 @@
     <member refid="dev-log_8md_8txt_1a4c242fea9a3b706e637163f8b0eed95c" kind="define"><name>TLOG</name></member>
     <member refid="dev-log_8md_8txt_1a723a84b8e4828b3ba1ad2ccf3e787643" kind="define"><name>TWARN</name></member>
     <member refid="dev-log_8md_8txt_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
+    <member refid="dev-log_8md_8txt_1a78d2d73e2e7d4f0d40720190efa53f77" kind="define"><name>WAITKEY_ENABLED</name></member>
+    <member refid="dev-log_8md_8txt_1a8a9bdfb2d1bf4dd388f35c1bfa853892" kind="define"><name>WAITKEY</name></member>
   </compound>
   <compound refid="how-to-setup-doxy-sphinx-ws_8md_8txt" kind="file"><name>how-to-setup-doxy-sphinx-ws.md.txt</name>
     <member refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a7d1bfe3625e53613487d868f05694676" kind="variable"><name>setup</name></member>
@@ -870,6 +872,8 @@
     <member refid="mission__manager_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" kind="define"><name>TLOG</name></member>
     <member refid="mission__manager_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" kind="define"><name>TWARN</name></member>
     <member refid="mission__manager_8cpp_1a59b71c836719259a2e9b1428ec35504c" kind="define"><name>TERR</name></member>
+    <member refid="mission__manager_8cpp_1a78d2d73e2e7d4f0d40720190efa53f77" kind="define"><name>WAITKEY_ENABLED</name></member>
+    <member refid="mission__manager_8cpp_1a8a9bdfb2d1bf4dd388f35c1bfa853892" kind="define"><name>WAITKEY</name></member>
     <member refid="mission__manager_8cpp_1a497eb2fcadf2e7f5380b65d6edc24bfa" kind="define"><name>SERVICE_ROSPLAN_PIPELINE</name></member>
     <member refid="mission__manager_8cpp_1a0b75b3a0b29b223aa6317a043386d4b7" kind="define"><name>SERVICE_ARMOR_ADD</name></member>
     <member refid="mission__manager_8cpp_1ae7d7101314e5beb85bb693ff3accc67d" kind="define"><name>SERVICE_ARMOR_FIND</name></member>

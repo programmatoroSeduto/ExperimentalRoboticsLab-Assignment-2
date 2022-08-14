@@ -305,34 +305,10 @@ Visualization Manager:
       Unreliable: false
       Value: false
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        arm_base_link:
-          Value: true
-        arm_link_01:
-          Value: true
-        arm_link_02:
-          Value: true
-        arm_link_03:
-          Value: true
-        base_link:
-          Value: true
-        cluedo_link:
-          Value: true
-        laser:
-          Value: true
-        link_a_left_wheel:
-          Value: true
-        link_a_right_wheel:
-          Value: true
-        link_left_wheel:
-          Value: true
-        link_right_wheel:
-          Value: true
-        odom:
-          Value: true
       Marker Alpha: 1
       Marker Scale: 1
       Name: TF
@@ -340,26 +316,9 @@ Visualization Manager:
       Show Axes: true
       Show Names: true
       Tree:
-        odom:
-          base_link:
-            arm_base_link:
-              arm_link_01:
-                arm_link_02:
-                  arm_link_03:
-                    cluedo_link:
-                      {}
-            laser:
-              {}
-            link_a_left_wheel:
-              {}
-            link_a_right_wheel:
-              {}
-            link_left_wheel:
-              {}
-            link_right_wheel:
-              {}
+        {}
       Update Interval: 0
-      Value: true
+      Value: false
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
@@ -384,17 +343,17 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: 0.11356700211763382
-        Y: 0.10592000186443329
-        Z: 2.2351800055275817e-07
+        X: 1.6481722593307495
+        Y: -1.041471004486084
+        Z: 1.1771921890613157e-06
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.12479671090841293
+      Pitch: 0.5697968006134033
       Target Frame: base_link
-      Yaw: 4.879945755004883
+      Yaw: 5.7049479484558105
     Saved: ~
 Window Geometry:
   Displays:

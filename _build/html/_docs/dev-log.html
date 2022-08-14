@@ -128,6 +128,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-manager-module-testing">13/08/2022 – mission manager – module testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prova-del-sistema-completo">14/08/2022 – prova del sistema completo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
@@ -2129,6 +2130,422 @@ TLOG( &quot;opening client &quot; &lt;&lt; SERVICE_SET_ALGORITHM &lt;&lt; &quot;
 </li>
 <li><p><em>domani ci si pensa</em>, adesso a mezzanotte mi si incrociano gli occhi.</p></li>
 <li><p><strong>COMMIT</strong>: “first complete test (not working)”</p></li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="prova-del-sistema-completo">
+<h2>14/08/2022 – prova del sistema completo<a class="headerlink" href="#prova-del-sistema-completo" title="Permalink to this heading"></a></h2>
+<p>debug del mission manager</p>
+<ul>
+<li><p>(andiamo per passi: uno stato alla volta, verificando che tutto proceda bene)</p></li>
+<li><p>inserisco una funzione che attenda l’input utente da console, una sorta di “breakpoint”</p>
+<ul>
+<li><p>vedi <a class="reference external" href="https://stackoverflow.com/questions/21257544/c-wait-for-user-input">stackoverflow</a> (ho cercato, magari esisteva un metodo più furbo … ma a quanto pare non è così)</p></li>
+<li><p>la macro:</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#define WAITKEY_ENABLED true</span>
+<span class="cp">#define WAITKEY { if( WAITKEY_ENABLED ) { std::cout &lt;&lt; &quot;press ENTER to continue ... &quot; ; sstd::cin.get( ) ; std::cout &lt;&lt; std::endl ; } }</span>
+</pre></div>
+</div>
+</li>
+<li><p>ne va messa una ad ogni ingresso di fase della missione, e una ad ogni statement <code class="docutils literal notranslate"><span class="pre">continue</span></code> o <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+<li><p>compila? direi di sì (ma bisogna vedere se funge)</p></li>
+</ul>
+</li>
+<li><p>e passiamo a testare</p>
+<ul class="simple">
+<li><p>il primissimo REPLAN funziona
+-MISSION_STATUS_COLLECT per qualche ragione lancia REPLAN invece che COLLECT … e dal codice non sembra affatto chiaro quale sia il problema, dato che il landmark viene settato correttamente</p>
+<ul>
+<li><p><strong>BECCATO!</strong> nella <code class="docutils literal notranslate"><span class="pre">make_plan()</span></code> usavo come landmark LA COSTANTE piuttosto che il valore del parametro … boh</p></li>
+</ul>
+</li>
+<li><p><strong>ISSUE</strong> per qualche ragione non riceve lo shutdown il nodo. dopo aver fatto ctrl+C il nodo rimane in “stopping…” ma non si chiude</p></li>
+<li><p>la COLLECT funge</p></li>
+<li><p>e la ASK pure a quanto pare</p></li>
+</ul>
+</li>
+<li><p>stava andando tutto bene, fin quando il robot non è arrivato al quarto landmark:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>root@3b17871017fd:~/ros_ws/src/erl2-new# rosrun robocluedo_mission_manager mission_manager
+[ INFO] [1660460418.195116500]: [robocluedo_mission_manager] starting ... 
+[ INFO] [1660460418.196407600]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ...
+[ INFO] [1660460418.197618500]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ... OK
+[ INFO] [1660460418.197674800]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ...
+[ INFO] [1660460418.198233900]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ... OK
+[ INFO] [1660460418.198291300]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ...
+[ INFO] [1660460418.198825800]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ... OK
+[ INFO] [1660460418.199101100]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ...
+[ INFO] [1660460418.199661000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ... OK
+[ INFO] [1660460418.199908500]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ...
+[ INFO] [1660460418.200465800]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ... OK
+[ INFO] [1660460418.200778500]: [robocluedo_mission_manager] Opening client [/oracle_solution] ...
+[ INFO] [1660460418.201464000]: [robocluedo_mission_manager] Opening client [/oracle_solution] ... OK
+[ INFO] [1660460418.201500800]: [robocluedo_mission_manager] subscribing to /oracle_hint ... 
+[ INFO] [1660460418.204203900]: [robocluedo_mission_manager] subscribing to /oracle_hint ... OK
+[ INFO] [1660460418.228821100]: [robocluedo_mission_manager] ready
+[ INFO] [1660460418.228863900]: [robocluedo_mission_manager] mission manager STARTING WORKING CYCLE
+press ENTER to continue ... 
+
+[ INFO] [1660460420.256930200, 145.951000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+press ENTER to continue ... 
+
+press ENTER to continue ... 
+
+[ INFO] [1660460432.031566100, 155.948000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ INFO] [1660460462.566825900, 181.214000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=0, key=who, value=missScarlett)
+[ INFO] [1660460462.846654800, 181.432000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+press ENTER to continue ... 
+
+[ INFO] [1660460493.867900700, 207.520000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+
+[ INFO] [1660460507.569821400, 219.268000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660460507.569901300, 219.268000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ INFO] [1660460551.924768000, 256.869000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=3, key=what, value=rope)
+[ INFO] [1660460552.174746000, 257.041000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+
+
+press ENTER to continue ... 
+[ INFO] [1660460577.442745800, 278.420000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+[ INFO] [1660460577.524677600, 278.500000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660460577.524750600, 278.500000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ INFO] [1660460614.284841800, 309.496000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=3, key=what, value=leadPipe)
+[ INFO] [1660460614.542821400, 309.706000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+press ENTER to continue ... 
+
+[ INFO] [1660460644.022687800, 334.679000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+
+[ INFO] [1660460646.470102900, 336.749000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660460646.470179600, 336.749000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ INFO] [1660460689.925096000, 373.548000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=4, key=who, value=-1)
+[ INFO] [1660460689.925142300, 373.548000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) NOT VALID hint, skip
+press ENTER to continue ... 
+
+[ INFO] [1660460717.820632200, 397.160000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+
+[ INFO] [1660460719.465309900, 398.545000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660460719.465353000, 398.545000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ WARN] [1660460724.006679600, 402.454000000]: [robocluedo_mission_manager] WARNING: unable to load the problem! RETRYING
+press ENTER to continue ... 
+
+[ WARN] [1660460741.215243700, 417.067000000]: [robocluedo_mission_manager] WARNING: status: MISSION_STATUS_COUNT_FAULT (remaining 9)
+press ENTER to continue ... 
+
+[ INFO] [1660460743.781805500, 419.283000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ WARN] [1660460748.547209900, 423.408000000]: [robocluedo_mission_manager] WARNING: unable to load the problem! RETRYING
+press ENTER to continue ... 
+
+[ WARN] [1660460778.918767200, 449.660000000]: [robocluedo_mission_manager] WARNING: status: MISSION_STATUS_COUNT_FAULT (remaining 8)
+press ENTER to continue ... 
+
+[ INFO] [1660460784.046885600, 454.064000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ WARN] [1660460786.128425500, 455.724000000]: [robocluedo_mission_manager] WARNING: unable to load the problem! RETRYING
+press ENTER to continue ... 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>c’è un output molto strano dal pipeline manager in questo caso:</p></li>
+</ul>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[INFO] [1660460723.687263, 402.195000]: (rosplan_pipeline_manager) problem interface -- loading problem ...
+&lt;class &#39;int&#39;&gt;
+[ INFO] [1660460723.912317100, 402.372000000]: KCL: (/rosplan_knowledge_base) Removing goal (hint-collected)
+[ INFO] [1660460723.923327800, 402.385000000]: KCL: (/rosplan_knowledge_base) Removing goal (at)
+[INFO] [1660460748.265953, 423.156000]: (rosplan_pipeline_manager) problem interface -- loading problem ...
+&lt;class &#39;int&#39;&gt;
+[INFO] [1660460785.780212, 455.469000]: (rosplan_pipeline_manager) problem interface -- loading problem ...
+&lt;class &#39;int&#39;&gt;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>(che python abbia colpito ancora?)</p></li>
+<li><p>il problema è che al mission manager arriva false al loading, il che mi sembra piuttosto strano perchè nulla cancella il file da caricare, e inoltre la lettura ha funzionato bene finora, quindi mi pare piuttosto improbabile che proprio quello non funzioni.</p></li>
+<li><p>penso più ad un problema di flags: il pipeline manager invia false quando dovrebbe inviare true sul load e false sul solve</p>
+<ul>
+<li><p>un’occhiata al pipeline manager…</p></li>
+<li><p>guardando il codice e guardando l’output mi pare stranissimo che il codice si pianti a quel punto … tempo che ci sia un altro fastidiosissimo errore Python alla callback, nascosto da <code class="docutils literal notranslate"><span class="pre">2&gt;/dev/null</span></code></p></li>
+<li><p>devo runnare rosplan in una bash a parte per poter osservare questo errore</p></li>
+</ul>
+</li>
+<li><p><strong>BECCATO!</strong> l’errore sta nella outcome al verificarsi di questa situazione</p></li>
+</ul>
+<p>outout ROSPlan: (vedi in particolare l’ultima riga)</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ INFO] [1660461899.384484700, 368.281000000]: KCL: (/rosplan_plan_dispatcher) Action [2] is 1660461558.747440 second(s) late
+[ INFO] [1660461899.387802700, 368.281000000]: KCL: (collect-hint) action received
+[ INFO] [1660461899.395119400, 368.290000000]: KCL: (/rosplan_knowledge_base) Removing Fact (not-hint-collected,0)
+[ INFO] [1660461899.395371600, 368.290000000]: KCL: (/rosplan_knowledge_base) Removing Fact (hint-ready,0)
+[ INFO] [1660461899.395691800, 368.289000000]: [collect_hint] (collect-hint ?wp4)
+[ INFO] [1660461899.395955200, 368.289000000]: [collect_hint] manipulator PHASE 1
+[ INFO] [1660461899.486790600, 368.360000000]: KCL: (/rosplan_plan_dispatcher) Feedback received [2, 1]
+[ INFO] [1660461899.486843400, 368.360000000]: KCL: (/rosplan_plan_dispatcher) Feedback received [2, 1]
+[ INFO] [1660461909.056033800, 376.331000000]: [collect_hint] manipulator WAITING
+[ INFO] [1660461911.484642900, 378.333000000]: [collect_hint] manipulator PHASE 2
+[ INFO] [1660461920.840904400, 386.340000000]: KCL: (collect-hint) action completed successfully
+[ INFO] [1660461920.850418500, 386.352000000]: KCL: (/rosplan_knowledge_base) Adding fact (hint-collected wp4, 0)
+[ INFO] [1660461920.850520100, 386.352000000]: KCL: (/rosplan_knowledge_base) Adding fact (not-hint-ready, 0)
+[ INFO] [1660461920.852806600, 386.356000000]: KCL: (/rosplan_plan_dispatcher) Feedback received [2, 2]
+[ INFO] [1660461920.993050300, 386.455000000]: KCL: (/rosplan_plan_dispatcher) Dispatch complete.
+[INFO] [1660461927.192263, 391.719000]: (rosplan_pipeline_manager) problem interface -- loading problem ...
+[ INFO] [1660461927.382111400, 391.884000000]: KCL: (/rosplan_knowledge_base) Removing goal (hint-collected)
+[ INFO] [1660461927.398705300, 391.894000000]: KCL: (/rosplan_knowledge_base) Removing goal (at)
+[WARN] [1660461927.484973, 391.963000]: (rosplan_pipeline_manager) unable to apply the landmark 1 (reason: landmark not applicable)
+</pre></div>
+</div>
+<p>output mission manager:</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>[ INFO] [1660461854.394579400, 330.383000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+
+[ INFO] [1660461856.196549900, 331.908000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660461856.196642700, 331.908000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ INFO] [1660461896.403702500, 365.783000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=2, key=who, value=missScarlett)
+[ INFO] [1660461896.560204400, 365.880000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+press ENTER to continue ... 
+
+[ INFO] [1660461924.169541900, 389.179000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+press ENTER to continue ... 
+
+[ INFO] [1660461925.436996600, 390.256000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+[ INFO] [1660461925.437071300, 390.256000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ WARN] [1660461927.486965400, 391.966000000]: [robocluedo_mission_manager] WARNING: unable to load the problem! RETRYING
+press ENTER to continue ... 
+
+[ WARN] [1660462017.573408400, 468.375000000]: [robocluedo_mission_manager] WARNING: status: MISSION_STATUS_COUNT_FAULT (remaining 9)
+press ENTER to continue ... 
+
+[ INFO] [1660462019.221448000, 469.797000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+press ENTER to continue ... 
+
+[ WARN] [1660462021.992463400, 472.069000000]: [robocluedo_mission_manager] WARNING: unable to load the problem! RETRYING
+press ENTER to continue ... 
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>questo significa che fortunatamente il problema sta nel mission manager (quindi è facile da risolvere … fiuuuu … )</p></li>
+<li><p>c’è una particolarità nel servizio rosplan pipeline manager: quando il landmark non è applicabile, il pipeline manager <em>non chiama comunque il planner</em>, ma dopo aver approvato la non applicabilità del landmark, ritorna che la load non può essere eseguita. quindi, nel landmark 1, questo non è un caso di errore, ma un caso che semplicemente modifica lo stato</p>
+<ul>
+<li><p><em>una domanda fastidiosa</em> : ma se quel false fosse riferito invece ad una <em>failure</em> del servizio? può succedere dopotutto</p>
+<ul>
+<li><p><em>bella domanda…</em></p></li>
+</ul>
+</li>
+<li><p>una soluzione può essere quella di aggiungere un flag che permetta di distinguere la non applicabilità del landmark dalla failure vera e propria</p>
+<ul>
+<li><p>aggiunta del campo al servizio</p></li>
+<li><p><em>modifica al pipeline manager</em> (occhio………)</p></li>
+<li><p>e modifica al mission manager per supportare il nuovo flag</p></li>
+<li><p>compilare compila</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>e si prova di nuovo</p>
+<ul>
+<li><p>voglio provare a togliere i waitkey e a vedere come va “a briglie sciolte”</p></li>
+<li><p><em>per il futuro</em> sarebbe meglio fare una modalità di debug che funzioni da parameter server piuttosto che definire dei parametri e dover ricompilare tutto ogni volta</p></li>
+<li><p><strong>E UNA E’ ANDATA!</strong></p></li>
+</ul>
+</li>
+<li><p>ora, c’è un problema con le ipotesi consistenti.</p></li>
+</ul>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>root@3b17871017fd:~/ros_ws/src/erl2-new# rosrun robocluedo_mission_manager mission_manager
+[ INFO] [1660464813.088098700]: [robocluedo_mission_manager] starting ... 
+[ INFO] [1660464813.090170500]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ...
+[ INFO] [1660464813.091644400]: [robocluedo_mission_manager] Opening client [/robocluedo/pipeline_manager] ... OK
+[ INFO] [1660464813.092038000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ...
+[ INFO] [1660464813.094735800]: [robocluedo_mission_manager] Opening client [/cluedo_armor/add_hint] ... OK
+[ INFO] [1660464813.095365700]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ...
+[ INFO] [1660464813.097256000]: [robocluedo_mission_manager] Opening client [/cluedo_armor/find_consistent_h] ... OK
+[ INFO] [1660464813.097323300]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ...
+[ INFO] [1660464813.098976400]: [robocluedo_mission_manager] Opening client [/cluedo_armor/wrong_hypothesis] ... OK
+[ INFO] [1660464813.099051400]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ...
+[ INFO] [1660464813.100113600]: [robocluedo_mission_manager] Opening client [/cluedo_armor/backup] ... OK
+[ INFO] [1660464813.100198100]: [robocluedo_mission_manager] Opening client [/oracle_solution] ...
+[ INFO] [1660464813.104764600]: [robocluedo_mission_manager] Opening client [/oracle_solution] ... OK
+[ INFO] [1660464813.104856800]: [robocluedo_mission_manager] subscribing to /oracle_hint ... 
+[ INFO] [1660464813.107836100]: [robocluedo_mission_manager] subscribing to /oracle_hint ... OK
+[ INFO] [1660464813.107976100]: [robocluedo_mission_manager] ready
+[ INFO] [1660464813.108064500]: [robocluedo_mission_manager] mission manager STARTING WORKING CYCLE
+
+[ INFO] [1660464813.108126700]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+
+[ INFO] [1660464819.133991300, 144.109000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660464882.251502800, 197.926000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=1, key=, value=revolver)
+[ INFO] [1660464882.251554600, 197.926000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) NOT VALID hint, skip
+[ INFO] [1660464906.749652000, 219.549000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660464906.875105900, 219.635000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+
+[ INFO] [1660464906.875148700, 219.635000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660464940.332236900, 248.285000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=2, key=what, value=rope)
+[ INFO] [1660464940.666278200, 248.518000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+[ INFO] [1660464965.108541000, 269.932000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660464965.190347900, 269.992000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+
+[ INFO] [1660464965.190460400, 269.992000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660464993.823901000, 294.687000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=5, key=who, value=mrsWhite)
+[ INFO] [1660464994.028262600, 294.833000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+[ INFO] [1660465021.162767200, 318.449000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660465021.240666700, 318.513000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+
+[ INFO] [1660465021.240766100, 318.513000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660465057.858384000, 349.682000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=5, key=what, value=revolver)
+[ INFO] [1660465058.093437000, 349.853000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+[ INFO] [1660465082.987075500, 371.376000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660465083.025977500, 371.416000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+
+[ INFO] [1660465083.026057500, 371.416000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ WARN] [1660465083.370297200, 371.676000000]: [robocluedo_mission_manager] WARNING: landmark COLLECT no longer applicable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY
+
+[ INFO] [1660465083.370458800, 371.678000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660465083.451198800, 371.717000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) REPLANNING
+
+[ INFO] [1660465083.451276500, 371.717000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+
+[ INFO] [1660465089.413400700, 376.855000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660465147.673380700, 426.049000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=5, key=when, value=-1)
+[ INFO] [1660465147.673434500, 426.049000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) NOT VALID hint, skip
+[ INFO] [1660465172.558713000, 447.613000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+[ INFO] [1660465172.659145500, 447.675000000]: [robocluedo_mission_manager] no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN
+
+[ INFO] [1660465172.659197000, 447.675000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+[ INFO] [1660465206.605444200, 476.502000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) received hint with content (ID=5, key=where, value=bathroom)
+[ INFO] [1660465206.803322900, 476.625000000]: [robocluedo_mission_manager] (cbk_oracle_hint, add hint) valid hint received and registered
+[ INFO] [1660465231.859765100, 498.152000000]: [robocluedo_mission_manager] status: MISSION_STATUS_ASK_ONTOLOGY
+
+
+[ INFO] [1660465231.957811700, 498.233000000]: [robocluedo_mission_manager] (from the ontology) found 1consistent hypotheses
+
+
+[ INFO] [1660465231.957864000, 498.233000000]: [robocluedo_mission_manager] status: MISSION_STATUS_SOLVE
+[ WARN] [1660465233.820674500, 499.839000000]: [robocluedo_mission_manager] WARNING: UNEXPECTED! Plan not solvable, can&#39;t find a solution (maybe a issue with the PDDL model?)
+[ WARN] [1660465233.820753800, 499.839000000]: [robocluedo_mission_manager] WARNING: status: MISSION_STATUS_COUNT_FAULT (remaining 9)
+
+
+[ INFO] [1660465233.820833900, 499.839000000]: [robocluedo_mission_manager] status: MISSION_STATUS_REPLAN
+[ INFO] [1660465239.883059400, 504.990000000]: [robocluedo_mission_manager] status: MISSION_STATUS_COLLECT
+^C[ INFO] [1660465358.404594600, 604.827000000]: [robocluedo_mission_manager] stopping... 
+root@3b17871017fd:~/ros_ws/src/erl2-new# 
+
+</pre></div>
+</div>
+<ul>
+<li><p><strong>ASPETTA UN ATTIMO! CHE COSA SAREBBE <code class="docutils literal notranslate"><span class="pre">when</span></code>???</strong></p>
+<ul>
+<li><p>maaaaa non l’avevo visto! non avevo notato il caso 4!</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">0</span><span class="p">){</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">key</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">1</span><span class="p">){</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">key</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="n">person</span><span class="p">[</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">6</span><span class="p">];</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">2</span><span class="p">){</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">key</span><span class="o">=</span><span class="s">&quot;&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="n">object</span><span class="p">[</span><span class="n">rand</span><span class="p">()</span><span class="o">%</span><span class="mi">6</span><span class="p">];</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">3</span><span class="p">){</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">key</span><span class="o">=</span><span class="s">&quot;when&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">==</span><span class="mi">4</span><span class="p">){</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">key</span><span class="o">=</span><span class="s">&quot;who&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="n">oracle_msg</span><span class="p">.</span><span class="n">value</span><span class="o">=</span><span class="s">&quot;-1&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+<li><p><strong>ISSUE</strong> occorre aggiungere un altro controllo di validità: la key dev’essere <em>esattamente</em> una tra who, where e what</p></li>
+<li><p>ok niente, incidentalmente avevo già pensato a questa eventualità, vedi implementazione attuale di add hint. anche fosse passato, non sarebbe stato accettato da aRMOR</p>
+<div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">property</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;where&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="n">armor</span><span class="o">-&gt;</span><span class="n">AddIndiv</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">Belem</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PLACE&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">property</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;who&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="n">armor</span><span class="o">-&gt;</span><span class="n">AddIndiv</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">Belem</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;PERSON&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">property</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="s">&quot;what&quot;</span><span class="w"> </span><span class="p">)</span><span class="w"></span>
+<span class="w">	</span><span class="n">armor</span><span class="o">-&gt;</span><span class="n">AddIndiv</span><span class="p">(</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">Belem</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;WEAPON&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="k">else</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">	</span><span class="n">OUTLOG</span><span class="p">(</span><span class="w"> </span><span class="s">&quot;ERROR: not a valid hint property (received &quot;</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">hint</span><span class="p">.</span><span class="n">property</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="w"> </span><span class="p">);</span><span class="w"></span>
+<span class="w">	</span>
+<span class="w">	</span><span class="n">success</span><span class="p">.</span><span class="n">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">false</span><span class="p">;</span><span class="w"></span>
+<span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="nb">true</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</li>
+</ul>
+</li>
+<li><p>devo capire adesso perchè a quel punto il plan non è risolvibile. pare esserci un problema quando il robot richiama la move to center per la seconda volta</p>
+<ul class="simple">
+<li><p>potrebbe essere un disguido con le preconditions di move to center?</p></li>
+<li><p><strong>BECCATO!</strong> ricordo che nell’esecuzione di prima (dannato me che ho chiuso la console senza annotare…) il robot è passato dal centro, quindi il centro era come se fosse stato già esplorato</p></li>
+<li><p>in quel caso, <em>bisogna richiamare il replan</em> e poi procedere con la soluzione</p></li>
+<li><p>riguardando il PDDL Potrei aver notato una falla grande quanto una casa nella parte del solve … il predicato <code class="docutils literal notranslate"><span class="pre">(not-hint-ready</span> <span class="pre">)</span></code> viene usato malissimo, in maniera proprio insensata. e nell’output del planner questi manca, così come il suo opposto <code class="docutils literal notranslate"><span class="pre">(hint-ready</span> <span class="pre">)</span></code></p>
+<ul>
+<li><p>nel problema iniziale c’è, quindi la kb interface evidentemente lo cancella o non tiene conto della sua presenza come dovrebbe, vero? …</p></li>
+<li><p>… <em>mi sbagliavo.</em></p></li>
+</ul>
+</li>
+<li><p><strong>ISSUE</strong> però avevo ragione su <code class="docutils literal notranslate"><span class="pre">(not-hint-ready</span> <span class="pre">)</span></code>, non mi piace come viene usato, e se c’ho visto bvene può anche essere eliminato e basta</p></li>
+</ul>
+</li>
+<li><p>il problema con la solve è di natura <em>topologica</em>.</p>
+<ul class="simple">
+<li><p>attualmente la mappa è costituito da un unico percorso (per ragioni di semplicità) centro -&gt; wp1 -&gt; wp1 -&gt; wp3 -&gt; wp4 &lt;-&gt; centro</p></li>
+<li><p>ogni volta che il robot usa la move-to verso un wp, il wp di arrivo viene marcato come explored</p></li>
+<li><p>nel caso precedente, il robot è partito da wp4 anzichè dal centro, ha chiamato la move-to-center, e poi la move-to su wp1 e poi su wp2 fin quando non ha trovato un’ipotesi consistente</p></li>
+<li><p>il sistema allora ha chiamato il landmark SOLVE per muovere il robot al centro</p></li>
+<li><p>qui il planner non è stato in grado di trovare una soluzione: non poteva chiamare move-to-center perchè non esiste un percorso che leghi wp2 al centro, quindi bisogna passare per altri punti, <strong>e la knowledge base interface mantiene il flag explored</strong> quindi wp4 risultava <em>explored</em>, e la move-to non consente di passare da un punto explored! <strong>ecco perchè plan unsolvable</strong></p></li>
+</ul>
+</li>
+<li><p>il problema si può risolvere facilmente facendo replanning prima di richiamare il solve, facile se hai un flag “readu_to_solve” nel codice del mission manager</p>
+<ul class="simple">
+<li><p>trovo sia più che lecito che la kb interface tratti in questa maniera i waypoints, altrimenti il robot ripeterebbe lo stesso movimento</p></li>
+<li><p>quello che non capisco però, e che non mi va bene, è che <em>la kb interface avrebbe dovuto controllare l’applicabilità dell’azione</em>, e il pipeline manager avrebbe dovuto controllare che il landmark fosse applicabile</p>
+<ul>
+<li><p>infatti non c’è alcun check nella kb interface a riguardo</p></li>
+</ul>
+</li>
+<li><p>altra domanda spinosa, <em>e come lo implementerei questo check?</em></p>
+<ul>
+<li><p>temo non ci sia alcun modo facile a dire il vero… cosa dovrei fare? verifico che esista un percorso tra wp2 e il centro? mi sembra assurdo, e complicherebbe inutilmente un nodo che già è un prodotto altamente custom nonostante gli sforzi per renderlo vagamanete generale</p></li>
+</ul>
+</li>
+<li><p>quindi <em>la soluzione migliore</em> (mio modesto parere) <em>è di cambiare reazione alla plan unsolvable</em> ordinando un replan</p></li>
+</ul>
+</li>
+<li><p>quindi,</p>
+<ul class="simple">
+<li><p>modifica mission manager per supportare il replan intermedio</p></li>
+</ul>
+</li>
+<li><p><strong>LIMITAZIONE</strong> bisognerebbe ristrutturare leggermente la kb interface in modo tale che riesca a gestire vari aspetti distinti del problema: ad esempio la topologia, distinta da la localizzazione, e tutto il resto. Se il compito della kb_interface è quello di <em>fornire servizi specializzati</em> al sistema, allora penso si possa fare molto di più.</p>
+<ul class="simple">
+<li><p>un altro difetto potrebbe essere mischiare troppo le cose tra pipeline manager e kb interface. la kb interface sarebbe meglio che fosse un nodo che esponga servizi <em>anche al di fuori del package</em>.</p></li>
+<li><p>unico compito del pipeline manager è quello di <em>gestire il flusso di esecuzione in base ai landmarks</em>, il che sicuramente coinvolge la kb_interface, <em>ma sempre nel pieno rispetto del compito iniziale</em>: la pipeline manager <em>non dovrebbe offrire servizi diversi dall’esecuzione di uno specifico landmark</em> e il fornire una prima spiegazione ad eventuali problemi che possono sorgere</p></li>
+<li><p>quando la pipeline manager solleva un problema, la kb_interface dovrebbe mettere a disposizione dei servizi separati per aiutare a comprendere il problema.</p></li>
+<li><p><em>attualmente la kb_interface ha solo rilevanza interna, e il pipeline manager fa tutto</em>, dando luogo a situazioni ambigue come quella che ho appena visto.</p></li>
+</ul>
+</li>
 </ul>
 </div>
 <div class="section" id="todo">

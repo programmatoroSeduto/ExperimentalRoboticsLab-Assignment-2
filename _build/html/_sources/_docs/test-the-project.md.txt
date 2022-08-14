@@ -615,12 +615,29 @@ rosservice call /robocluedo/pipeline_manager "{load_problem: true, solve_problem
 
 ## ROSPlan and aRMOR
 
+### first test (a almost-final test!)
+
 ```bash
 # shell 1
 roslaunch robocluedo_mission_manager run_components.launch 2>/dev/null
 
 # shell 2
 roslaunch robocluedo_armor run.launch
+
+# shell 3
+rosrun robocluedo_mission_manager mission_manager
+```
+
+### another test
+
+this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately)
+
+```bash
+# shell 1
+roslaunch robocluedo_mission_manager run_components_2.launch 2>/dev/null
+
+# shell 2
+roslaunch robocluedo_rosplan run.launch
 
 # shell 3
 rosrun robocluedo_mission_manager mission_manager

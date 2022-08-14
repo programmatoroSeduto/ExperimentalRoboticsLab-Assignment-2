@@ -1658,6 +1658,380 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;first<sp/>complete<sp/>test<sp/>(not<sp/>working)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>14/08/2022<sp/>--<sp/>prova<sp/>del<sp/>sistema<sp/>completo</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">debug<sp/>del<sp/>mission<sp/>manager</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(andiamo<sp/>per<sp/>passi:<sp/>uno<sp/>stato<sp/>alla<sp/>volta,<sp/>verificando<sp/>che<sp/>tutto<sp/>proceda<sp/>bene)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>inserisco<sp/>una<sp/>funzione<sp/>che<sp/>attenda<sp/>l&apos;input<sp/>utente<sp/>da<sp/>console,<sp/>una<sp/>sorta<sp/>di<sp/>&quot;breakpoint&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>vedi<sp/>[stackoverflow](https://stackoverflow.com/questions/21257544/c-wait-for-user-input)<sp/>(ho<sp/>cercato,<sp/>magari<sp/>esisteva<sp/>un<sp/>metodo<sp/>più<sp/>furbo<sp/>...<sp/>ma<sp/>a<sp/>quanto<sp/>pare<sp/>non<sp/>è<sp/>così)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>macro:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WAITKEY_ENABLED<sp/>true</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>#define<sp/>WAITKEY<sp/>{<sp/>if(<sp/>WAITKEY_ENABLED<sp/>)<sp/>{<sp/>std::cout<sp/>&lt;&lt;<sp/>&quot;press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/>&quot;<sp/>;<sp/>sstd::cin.get(<sp/>)<sp/>;<sp/>std::cout<sp/>&lt;&lt;<sp/>std::endl<sp/>;<sp/>}<sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ne<sp/>va<sp/>messa<sp/>una<sp/>ad<sp/>ogni<sp/>ingresso<sp/>di<sp/>fase<sp/>della<sp/>missione,<sp/>e<sp/>una<sp/>ad<sp/>ogni<sp/>statement<sp/>`continue`<sp/>o<sp/>`return`.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>direi<sp/>di<sp/>sì<sp/>(ma<sp/>bisogna<sp/>vedere<sp/>se<sp/>funge)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>passiamo<sp/>a<sp/>testare</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>primissimo<sp/>REPLAN<sp/>funziona</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-MISSION_STATUS_COLLECT<sp/>per<sp/>qualche<sp/>ragione<sp/>lancia<sp/>REPLAN<sp/>invece<sp/>che<sp/>COLLECT<sp/>...<sp/>e<sp/>dal<sp/>codice<sp/>non<sp/>sembra<sp/>affatto<sp/>chiaro<sp/>quale<sp/>sia<sp/>il<sp/>problema,<sp/>dato<sp/>che<sp/>il<sp/>landmark<sp/>viene<sp/>settato<sp/>correttamente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>**BECCATO!**<sp/>nella<sp/>`make_plan()`<sp/>usavo<sp/>come<sp/>landmark<sp/>LA<sp/>COSTANTE<sp/>piuttosto<sp/>che<sp/>il<sp/>valore<sp/>del<sp/>parametro<sp/>...<sp/>boh</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>per<sp/>qualche<sp/>ragione<sp/>non<sp/>riceve<sp/>lo<sp/>shutdown<sp/>il<sp/>nodo.<sp/>dopo<sp/>aver<sp/>fatto<sp/>ctrl+C<sp/>il<sp/>nodo<sp/>rimane<sp/>in<sp/>&quot;stopping...&quot;<sp/>ma<sp/>non<sp/>si<sp/>chiude</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>COLLECT<sp/>funge</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>la<sp/>ASK<sp/>pure<sp/>a<sp/>quanto<sp/>pare</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>stava<sp/>andando<sp/>tutto<sp/>bene,<sp/>fin<sp/>quando<sp/>il<sp/>robot<sp/>non<sp/>è<sp/>arrivato<sp/>al<sp/>quarto<sp/>landmark:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new#<sp/>rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.195116500]:<sp/>[robocluedo_mission_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.196407600]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.197618500]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.197674800]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.198233900]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.198291300]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.198825800]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.199101100]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.199661000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.199908500]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.200465800]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.200778500]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.201464000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.201500800]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.204203900]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.228821100]:<sp/>[robocluedo_mission_manager]<sp/>ready</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460418.228863900]:<sp/>[robocluedo_mission_manager]<sp/>mission<sp/>manager<sp/>STARTING<sp/>WORKING<sp/>CYCLE</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460420.256930200,<sp/>145.951000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460432.031566100,<sp/>155.948000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460462.566825900,<sp/>181.214000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=0,<sp/>key=who,<sp/>value=missScarlett)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460462.846654800,<sp/>181.432000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460493.867900700,<sp/>207.520000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460507.569821400,<sp/>219.268000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460507.569901300,<sp/>219.268000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460551.924768000,<sp/>256.869000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=3,<sp/>key=what,<sp/>value=rope)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460552.174746000,<sp/>257.041000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460577.442745800,<sp/>278.420000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460577.524677600,<sp/>278.500000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460577.524750600,<sp/>278.500000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460614.284841800,<sp/>309.496000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=3,<sp/>key=what,<sp/>value=leadPipe)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460614.542821400,<sp/>309.706000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460644.022687800,<sp/>334.679000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460646.470102900,<sp/>336.749000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460646.470179600,<sp/>336.749000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460689.925096000,<sp/>373.548000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=4,<sp/>key=who,<sp/>value=-1)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460689.925142300,<sp/>373.548000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>NOT<sp/>VALID<sp/>hint,<sp/>skip</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460717.820632200,<sp/>397.160000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460719.465309900,<sp/>398.545000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460719.465353000,<sp/>398.545000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660460724.006679600,<sp/>402.454000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>unable<sp/>to<sp/>load<sp/>the<sp/>problem!<sp/>RETRYING</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660460741.215243700,<sp/>417.067000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>status:<sp/>MISSION_STATUS_COUNT_FAULT<sp/>(remaining<sp/>9)</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460743.781805500,<sp/>419.283000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660460748.547209900,<sp/>423.408000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>unable<sp/>to<sp/>load<sp/>the<sp/>problem!<sp/>RETRYING</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660460778.918767200,<sp/>449.660000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>status:<sp/>MISSION_STATUS_COUNT_FAULT<sp/>(remaining<sp/>8)</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460784.046885600,<sp/>454.064000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660460786.128425500,<sp/>455.724000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>unable<sp/>to<sp/>load<sp/>the<sp/>problem!<sp/>RETRYING</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>c&apos;è<sp/>un<sp/>output<sp/>molto<sp/>strano<sp/>dal<sp/>pipeline<sp/>manager<sp/>in<sp/>questo<sp/>caso:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">[INFO]<sp/>[1660460723.687263,<sp/>402.195000]:<sp/>(rosplan_pipeline_manager)<sp/>problem<sp/>interface<sp/>--<sp/>loading<sp/>problem<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">&lt;class<sp/>&apos;int&apos;&gt;</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460723.912317100,<sp/>402.372000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>goal<sp/>(hint-collected)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660460723.923327800,<sp/>402.385000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>goal<sp/>(at)</highlight></codeline>
+<codeline><highlight class="normal">[INFO]<sp/>[1660460748.265953,<sp/>423.156000]:<sp/>(rosplan_pipeline_manager)<sp/>problem<sp/>interface<sp/>--<sp/>loading<sp/>problem<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">&lt;class<sp/>&apos;int&apos;&gt;</highlight></codeline>
+<codeline><highlight class="normal">[INFO]<sp/>[1660460785.780212,<sp/>455.469000]:<sp/>(rosplan_pipeline_manager)<sp/>problem<sp/>interface<sp/>--<sp/>loading<sp/>problem<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">&lt;class<sp/>&apos;int&apos;&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(che<sp/>python<sp/>abbia<sp/>colpito<sp/>ancora?)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>problema<sp/>è<sp/>che<sp/>al<sp/>mission<sp/>manager<sp/>arriva<sp/>false<sp/>al<sp/>loading,<sp/>il<sp/>che<sp/>mi<sp/>sembra<sp/>piuttosto<sp/>strano<sp/>perchè<sp/>nulla<sp/>cancella<sp/>il<sp/>file<sp/>da<sp/>caricare,<sp/>e<sp/>inoltre<sp/>la<sp/>lettura<sp/>ha<sp/>funzionato<sp/>bene<sp/>finora,<sp/>quindi<sp/>mi<sp/>pare<sp/>piuttosto<sp/>improbabile<sp/>che<sp/>proprio<sp/>quello<sp/>non<sp/>funzioni.<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>penso<sp/>più<sp/>ad<sp/>un<sp/>problema<sp/>di<sp/>flags:<sp/>il<sp/>pipeline<sp/>manager<sp/>invia<sp/>false<sp/>quando<sp/>dovrebbe<sp/>inviare<sp/>true<sp/>sul<sp/>load<sp/>e<sp/>false<sp/>sul<sp/>solve</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un&apos;occhiata<sp/>al<sp/>pipeline<sp/>manager...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>guardando<sp/>il<sp/>codice<sp/>e<sp/>guardando<sp/>l&apos;output<sp/>mi<sp/>pare<sp/>stranissimo<sp/>che<sp/>il<sp/>codice<sp/>si<sp/>pianti<sp/>a<sp/>quel<sp/>punto<sp/>...<sp/>tempo<sp/>che<sp/>ci<sp/>sia<sp/>un<sp/>altro<sp/>fastidiosissimo<sp/>errore<sp/>Python<sp/>alla<sp/>callback,<sp/>nascosto<sp/>da<sp/>`2&gt;/dev/null`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>devo<sp/>runnare<sp/>rosplan<sp/>in<sp/>una<sp/>bash<sp/>a<sp/>parte<sp/>per<sp/>poter<sp/>osservare<sp/>questo<sp/>errore</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**BECCATO!**<sp/>l&apos;errore<sp/>sta<sp/>nella<sp/>outcome<sp/>al<sp/>verificarsi<sp/>di<sp/>questa<sp/>situazione</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">outout<sp/>ROSPlan:<sp/>(vedi<sp/>in<sp/>particolare<sp/>l&apos;ultima<sp/>riga)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.384484700,<sp/>368.281000000]:<sp/>KCL:<sp/>(/rosplan_plan_dispatcher)<sp/>Action<sp/>[2]<sp/>is<sp/>1660461558.747440<sp/>second(s)<sp/>late</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.387802700,<sp/>368.281000000]:<sp/>KCL:<sp/>(collect-hint)<sp/>action<sp/>received</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.395119400,<sp/>368.290000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>Fact<sp/>(not-hint-collected,0)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.395371600,<sp/>368.290000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>Fact<sp/>(hint-ready,0)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.395691800,<sp/>368.289000000]:<sp/>[collect_hint]<sp/>(collect-hint<sp/>?wp4)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.395955200,<sp/>368.289000000]:<sp/>[collect_hint]<sp/>manipulator<sp/>PHASE<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.486790600,<sp/>368.360000000]:<sp/>KCL:<sp/>(/rosplan_plan_dispatcher)<sp/>Feedback<sp/>received<sp/>[2,<sp/>1]</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461899.486843400,<sp/>368.360000000]:<sp/>KCL:<sp/>(/rosplan_plan_dispatcher)<sp/>Feedback<sp/>received<sp/>[2,<sp/>1]</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461909.056033800,<sp/>376.331000000]:<sp/>[collect_hint]<sp/>manipulator<sp/>WAITING</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461911.484642900,<sp/>378.333000000]:<sp/>[collect_hint]<sp/>manipulator<sp/>PHASE<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461920.840904400,<sp/>386.340000000]:<sp/>KCL:<sp/>(collect-hint)<sp/>action<sp/>completed<sp/>successfully</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461920.850418500,<sp/>386.352000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Adding<sp/>fact<sp/>(hint-collected<sp/>wp4,<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461920.850520100,<sp/>386.352000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Adding<sp/>fact<sp/>(not-hint-ready,<sp/>0)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461920.852806600,<sp/>386.356000000]:<sp/>KCL:<sp/>(/rosplan_plan_dispatcher)<sp/>Feedback<sp/>received<sp/>[2,<sp/>2]</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461920.993050300,<sp/>386.455000000]:<sp/>KCL:<sp/>(/rosplan_plan_dispatcher)<sp/>Dispatch<sp/>complete.</highlight></codeline>
+<codeline><highlight class="normal">[INFO]<sp/>[1660461927.192263,<sp/>391.719000]:<sp/>(rosplan_pipeline_manager)<sp/>problem<sp/>interface<sp/>--<sp/>loading<sp/>problem<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461927.382111400,<sp/>391.884000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>goal<sp/>(hint-collected)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461927.398705300,<sp/>391.894000000]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Removing<sp/>goal<sp/>(at)</highlight></codeline>
+<codeline><highlight class="normal">[WARN]<sp/>[1660461927.484973,<sp/>391.963000]:<sp/>(rosplan_pipeline_manager)<sp/>unable<sp/>to<sp/>apply<sp/>the<sp/>landmark<sp/>1<sp/>(reason:<sp/>landmark<sp/>not<sp/>applicable)</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">output<sp/>mission<sp/>manager:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```text</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461854.394579400,<sp/>330.383000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461856.196549900,<sp/>331.908000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461856.196642700,<sp/>331.908000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461896.403702500,<sp/>365.783000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=2,<sp/>key=who,<sp/>value=missScarlett)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461896.560204400,<sp/>365.880000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461924.169541900,<sp/>389.179000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461925.436996600,<sp/>390.256000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660461925.437071300,<sp/>390.256000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660461927.486965400,<sp/>391.966000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>unable<sp/>to<sp/>load<sp/>the<sp/>problem!<sp/>RETRYING</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660462017.573408400,<sp/>468.375000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>status:<sp/>MISSION_STATUS_COUNT_FAULT<sp/>(remaining<sp/>9)</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660462019.221448000,<sp/>469.797000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660462021.992463400,<sp/>472.069000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>unable<sp/>to<sp/>load<sp/>the<sp/>problem!<sp/>RETRYING</highlight></codeline>
+<codeline><highlight class="normal">press<sp/>ENTER<sp/>to<sp/>continue<sp/>...<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>questo<sp/>significa<sp/>che<sp/>fortunatamente<sp/>il<sp/>problema<sp/>sta<sp/>nel<sp/>mission<sp/>manager<sp/>(quindi<sp/>è<sp/>facile<sp/>da<sp/>risolvere<sp/>...<sp/>fiuuuu<sp/>...<sp/>)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>c&apos;è<sp/>una<sp/>particolarità<sp/>nel<sp/>servizio<sp/>rosplan<sp/>pipeline<sp/>manager:<sp/>quando<sp/>il<sp/>landmark<sp/>non<sp/>è<sp/>applicabile,<sp/>il<sp/>pipeline<sp/>manager<sp/>*non<sp/>chiama<sp/>comunque<sp/>il<sp/>planner*,<sp/>ma<sp/>dopo<sp/>aver<sp/>approvato<sp/>la<sp/>non<sp/>applicabilità<sp/>del<sp/>landmark,<sp/>ritorna<sp/>che<sp/>la<sp/>load<sp/>non<sp/>può<sp/>essere<sp/>eseguita.<sp/>quindi,<sp/>nel<sp/>landmark<sp/>1,<sp/>questo<sp/>non<sp/>è<sp/>un<sp/>caso<sp/>di<sp/>errore,<sp/>ma<sp/>un<sp/>caso<sp/>che<sp/>semplicemente<sp/>modifica<sp/>lo<sp/>stato</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*una<sp/>domanda<sp/>fastidiosa*<sp/>:<sp/>ma<sp/>se<sp/>quel<sp/>false<sp/>fosse<sp/>riferito<sp/>invece<sp/>ad<sp/>una<sp/>*failure*<sp/>del<sp/>servizio?<sp/>può<sp/>succedere<sp/>dopotutto</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*bella<sp/>domanda...*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>una<sp/>soluzione<sp/>può<sp/>essere<sp/>quella<sp/>di<sp/>aggiungere<sp/>un<sp/>flag<sp/>che<sp/>permetta<sp/>di<sp/>distinguere<sp/>la<sp/>non<sp/>applicabilità<sp/>del<sp/>landmark<sp/>dalla<sp/>failure<sp/>vera<sp/>e<sp/>propria</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>aggiunta<sp/>del<sp/>campo<sp/>al<sp/>servizio</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*modifica<sp/>al<sp/>pipeline<sp/>manager*<sp/>(occhio.........)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e<sp/>modifica<sp/>al<sp/>mission<sp/>manager<sp/>per<sp/>supportare<sp/>il<sp/>nuovo<sp/>flag</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>compilare<sp/>compila</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>si<sp/>prova<sp/>di<sp/>nuovo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>voglio<sp/>provare<sp/>a<sp/>togliere<sp/>i<sp/>waitkey<sp/>e<sp/>a<sp/>vedere<sp/>come<sp/>va<sp/>&quot;a<sp/>briglie<sp/>sciolte&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*per<sp/>il<sp/>futuro*<sp/>sarebbe<sp/>meglio<sp/>fare<sp/>una<sp/>modalità<sp/>di<sp/>debug<sp/>che<sp/>funzioni<sp/>da<sp/>parameter<sp/>server<sp/>piuttosto<sp/>che<sp/>definire<sp/>dei<sp/>parametri<sp/>e<sp/>dover<sp/>ricompilare<sp/>tutto<sp/>ogni<sp/>volta</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**E<sp/>UNA<sp/>E&apos;<sp/>ANDATA!**<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>ora,<sp/>c&apos;è<sp/>un<sp/>problema<sp/>con<sp/>le<sp/>ipotesi<sp/>consistenti.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new#<sp/>rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.088098700]:<sp/>[robocluedo_mission_manager]<sp/>starting<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.090170500]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.091644400]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/robocluedo/pipeline_manager]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.092038000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.094735800]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/add_hint]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.095365700]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.097256000]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/find_consistent_h]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.097323300]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.098976400]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/wrong_hypothesis]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.099051400]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.100113600]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/cluedo_armor/backup]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.100198100]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.104764600]:<sp/>[robocluedo_mission_manager]<sp/>Opening<sp/>client<sp/>[/oracle_solution]<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.104856800]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.107836100]:<sp/>[robocluedo_mission_manager]<sp/>subscribing<sp/>to<sp/>/oracle_hint<sp/>...<sp/>OK</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.107976100]:<sp/>[robocluedo_mission_manager]<sp/>ready</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.108064500]:<sp/>[robocluedo_mission_manager]<sp/>mission<sp/>manager<sp/>STARTING<sp/>WORKING<sp/>CYCLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464813.108126700]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464819.133991300,<sp/>144.109000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464882.251502800,<sp/>197.926000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=1,<sp/>key=,<sp/>value=revolver)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464882.251554600,<sp/>197.926000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>NOT<sp/>VALID<sp/>hint,<sp/>skip</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464906.749652000,<sp/>219.549000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464906.875105900,<sp/>219.635000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464906.875148700,<sp/>219.635000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464940.332236900,<sp/>248.285000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=2,<sp/>key=what,<sp/>value=rope)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464940.666278200,<sp/>248.518000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464965.108541000,<sp/>269.932000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464965.190347900,<sp/>269.992000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464965.190460400,<sp/>269.992000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464993.823901000,<sp/>294.687000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=5,<sp/>key=who,<sp/>value=mrsWhite)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660464994.028262600,<sp/>294.833000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465021.162767200,<sp/>318.449000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465021.240666700,<sp/>318.513000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465021.240766100,<sp/>318.513000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465057.858384000,<sp/>349.682000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=5,<sp/>key=what,<sp/>value=revolver)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465058.093437000,<sp/>349.853000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465082.987075500,<sp/>371.376000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465083.025977500,<sp/>371.416000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465083.026057500,<sp/>371.416000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660465083.370297200,<sp/>371.676000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>landmark<sp/>COLLECT<sp/>no<sp/>longer<sp/>applicable<sp/>(all<sp/>the<sp/>waypoints<sp/>have<sp/>been<sp/>explored)<sp/>TRYING<sp/>TO<sp/>directly<sp/>SOLVE<sp/>THE<sp/>MYSTERY</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465083.370458800,<sp/>371.678000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465083.451198800,<sp/>371.717000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>REPLANNING</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465083.451276500,<sp/>371.717000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465089.413400700,<sp/>376.855000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465147.673380700,<sp/>426.049000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=5,<sp/>key=when,<sp/>value=-1)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465147.673434500,<sp/>426.049000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>NOT<sp/>VALID<sp/>hint,<sp/>skip</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465172.558713000,<sp/>447.613000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465172.659145500,<sp/>447.675000000]:<sp/>[robocluedo_mission_manager]<sp/>no<sp/>brilliant<sp/>ideas<sp/>from<sp/>the<sp/>RoboCLuedo<sp/>B.B.B.<sp/>(Big<sp/>Brain<sp/>Bruh)<sp/>COLLECTING<sp/>AGAIN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465172.659197000,<sp/>447.675000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465206.605444200,<sp/>476.502000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>received<sp/>hint<sp/>with<sp/>content<sp/>(ID=5,<sp/>key=where,<sp/>value=bathroom)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465206.803322900,<sp/>476.625000000]:<sp/>[robocluedo_mission_manager]<sp/>(cbk_oracle_hint,<sp/>add<sp/>hint)<sp/>valid<sp/>hint<sp/>received<sp/>and<sp/>registered</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465231.859765100,<sp/>498.152000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_ASK_ONTOLOGY</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465231.957811700,<sp/>498.233000000]:<sp/>[robocluedo_mission_manager]<sp/>(from<sp/>the<sp/>ontology)<sp/>found<sp/>1consistent<sp/>hypotheses</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465231.957864000,<sp/>498.233000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_SOLVE</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660465233.820674500,<sp/>499.839000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>UNEXPECTED!<sp/>Plan<sp/>not<sp/>solvable,<sp/>can&apos;t<sp/>find<sp/>a<sp/>solution<sp/>(maybe<sp/>a<sp/>issue<sp/>with<sp/>the<sp/>PDDL<sp/>model?)</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>WARN]<sp/>[1660465233.820753800,<sp/>499.839000000]:<sp/>[robocluedo_mission_manager]<sp/>WARNING:<sp/>status:<sp/>MISSION_STATUS_COUNT_FAULT<sp/>(remaining<sp/>9)</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465233.820833900,<sp/>499.839000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_REPLAN</highlight></codeline>
+<codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660465239.883059400,<sp/>504.990000000]:<sp/>[robocluedo_mission_manager]<sp/>status:<sp/>MISSION_STATUS_COLLECT</highlight></codeline>
+<codeline><highlight class="normal">^C[<sp/>INFO]<sp/>[1660465358.404594600,<sp/>604.827000000]:<sp/>[robocluedo_mission_manager]<sp/>stopping...<sp/></highlight></codeline>
+<codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new#<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**ASPETTA<sp/>UN<sp/>ATTIMO!<sp/>CHE<sp/>COSA<sp/>SAREBBE<sp/>`when`???**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>maaaaa<sp/>non<sp/>l&apos;avevo<sp/>visto!<sp/>non<sp/>avevo<sp/>notato<sp/>il<sp/>caso<sp/>4!</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(a==0){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.key<sp/>=<sp/>&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.value<sp/>=<sp/>&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a==1){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.key=&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.value=person[rand()%6];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a==2){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.key=&quot;&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.value=object[rand()%6];</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a==3){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.key=&quot;when&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.value=&quot;-1&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if<sp/>(a==4){</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.key=&quot;who&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>oracle_msg.value=&quot;-1&quot;;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>occorre<sp/>aggiungere<sp/>un<sp/>altro<sp/>controllo<sp/>di<sp/>validità:<sp/>la<sp/>key<sp/>dev&apos;essere<sp/>*esattamente*<sp/>una<sp/>tra<sp/>who,<sp/>where<sp/>e<sp/>what</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ok<sp/>niente,<sp/>incidentalmente<sp/>avevo<sp/>già<sp/>pensato<sp/>a<sp/>questa<sp/>eventualità,<sp/>vedi<sp/>implementazione<sp/>attuale<sp/>di<sp/>add<sp/>hint.<sp/>anche<sp/>fosse<sp/>passato,<sp/>non<sp/>sarebbe<sp/>stato<sp/>accettato<sp/>da<sp/>aRMOR</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```c++</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>if(<sp/>hint.property<sp/>==<sp/>&quot;where&quot;<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor-&gt;AddIndiv(<sp/>hint.Belem,<sp/>&quot;PLACE&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>hint.property<sp/>==<sp/>&quot;who&quot;<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor-&gt;AddIndiv(<sp/>hint.Belem,<sp/>&quot;PERSON&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else<sp/>if(<sp/>hint.property<sp/>==<sp/>&quot;what&quot;<sp/>)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>armor-&gt;AddIndiv(<sp/>hint.Belem,<sp/>&quot;WEAPON&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>else</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>OUTLOG(<sp/>&quot;ERROR:<sp/>not<sp/>a<sp/>valid<sp/>hint<sp/>property<sp/>(received<sp/>&quot;<sp/>&lt;&lt;<sp/>hint.property<sp/>&lt;&lt;<sp/>&quot;)&quot;<sp/>);</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>success.success<sp/>=<sp/>false;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>return<sp/>true;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>devo<sp/>capire<sp/>adesso<sp/>perchè<sp/>a<sp/>quel<sp/>punto<sp/>il<sp/>plan<sp/>non<sp/>è<sp/>risolvibile.<sp/>pare<sp/>esserci<sp/>un<sp/>problema<sp/>quando<sp/>il<sp/>robot<sp/>richiama<sp/>la<sp/>move<sp/>to<sp/>center<sp/>per<sp/>la<sp/>seconda<sp/>volta</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>potrebbe<sp/>essere<sp/>un<sp/>disguido<sp/>con<sp/>le<sp/>preconditions<sp/>di<sp/>move<sp/>to<sp/>center?</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**BECCATO!**<sp/>ricordo<sp/>che<sp/>nell&apos;esecuzione<sp/>di<sp/>prima<sp/>(dannato<sp/>me<sp/>che<sp/>ho<sp/>chiuso<sp/>la<sp/>console<sp/>senza<sp/>annotare...)<sp/>il<sp/>robot<sp/>è<sp/>passato<sp/>dal<sp/>centro,<sp/>quindi<sp/>il<sp/>centro<sp/>era<sp/>come<sp/>se<sp/>fosse<sp/>stato<sp/>già<sp/>esplorato</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>quel<sp/>caso,<sp/>*bisogna<sp/>richiamare<sp/>il<sp/>replan*<sp/>e<sp/>poi<sp/>procedere<sp/>con<sp/>la<sp/>soluzione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>riguardando<sp/>il<sp/>PDDL<sp/>Potrei<sp/>aver<sp/>notato<sp/>una<sp/>falla<sp/>grande<sp/>quanto<sp/>una<sp/>casa<sp/>nella<sp/>parte<sp/>del<sp/>solve<sp/>...<sp/>il<sp/>predicato<sp/>`(not-hint-ready<sp/>)`<sp/>viene<sp/>usato<sp/>malissimo,<sp/>in<sp/>maniera<sp/>proprio<sp/>insensata.<sp/>e<sp/>nell&apos;output<sp/>del<sp/>planner<sp/>questi<sp/>manca,<sp/>così<sp/>come<sp/>il<sp/>suo<sp/>opposto<sp/>`(hint-ready<sp/>)`</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>nel<sp/>problema<sp/>iniziale<sp/>c&apos;è,<sp/>quindi<sp/>la<sp/>kb<sp/>interface<sp/>evidentemente<sp/>lo<sp/>cancella<sp/>o<sp/>non<sp/>tiene<sp/>conto<sp/>della<sp/>sua<sp/>presenza<sp/>come<sp/>dovrebbe,<sp/>vero?<sp/>...<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>...<sp/>*mi<sp/>sbagliavo.*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ISSUE**<sp/>però<sp/>avevo<sp/>ragione<sp/>su<sp/>`(not-hint-ready<sp/>)`,<sp/>non<sp/>mi<sp/>piace<sp/>come<sp/>viene<sp/>usato,<sp/>e<sp/>se<sp/>c&apos;ho<sp/>visto<sp/>bvene<sp/>può<sp/>anche<sp/>essere<sp/>eliminato<sp/>e<sp/>basta</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>problema<sp/>con<sp/>la<sp/>solve<sp/>è<sp/>di<sp/>natura<sp/>*topologica*.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>attualmente<sp/>la<sp/>mappa<sp/>è<sp/>costituito<sp/>da<sp/>un<sp/>unico<sp/>percorso<sp/>(per<sp/>ragioni<sp/>di<sp/>semplicità)<sp/>centro<sp/>-&gt;<sp/>wp1<sp/>-&gt;<sp/>wp1<sp/>-&gt;<sp/>wp3<sp/>-&gt;<sp/>wp4<sp/>&lt;-&gt;<sp/>centro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ogni<sp/>volta<sp/>che<sp/>il<sp/>robot<sp/>usa<sp/>la<sp/>move-to<sp/>verso<sp/>un<sp/>wp,<sp/>il<sp/>wp<sp/>di<sp/>arrivo<sp/>viene<sp/>marcato<sp/>come<sp/>explored</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>nel<sp/>caso<sp/>precedente,<sp/>il<sp/>robot<sp/>è<sp/>partito<sp/>da<sp/>wp4<sp/>anzichè<sp/>dal<sp/>centro,<sp/>ha<sp/>chiamato<sp/>la<sp/>move-to-center,<sp/>e<sp/>poi<sp/>la<sp/>move-to<sp/>su<sp/>wp1<sp/>e<sp/>poi<sp/>su<sp/>wp2<sp/>fin<sp/>quando<sp/>non<sp/>ha<sp/>trovato<sp/>un&apos;ipotesi<sp/>consistente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>il<sp/>sistema<sp/>allora<sp/>ha<sp/>chiamato<sp/>il<sp/>landmark<sp/>SOLVE<sp/>per<sp/>muovere<sp/>il<sp/>robot<sp/>al<sp/>centro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>qui<sp/>il<sp/>planner<sp/>non<sp/>è<sp/>stato<sp/>in<sp/>grado<sp/>di<sp/>trovare<sp/>una<sp/>soluzione:<sp/>non<sp/>poteva<sp/>chiamare<sp/>move-to-center<sp/>perchè<sp/>non<sp/>esiste<sp/>un<sp/>percorso<sp/>che<sp/>leghi<sp/>wp2<sp/>al<sp/>centro,<sp/>quindi<sp/>bisogna<sp/>passare<sp/>per<sp/>altri<sp/>punti,<sp/>**e<sp/>la<sp/>knowledge<sp/>base<sp/>interface<sp/>mantiene<sp/>il<sp/>flag<sp/>explored**<sp/>quindi<sp/>wp4<sp/>risultava<sp/>*explored*,<sp/>e<sp/>la<sp/>move-to<sp/>non<sp/>consente<sp/>di<sp/>passare<sp/>da<sp/>un<sp/>punto<sp/>explored!<sp/>**ecco<sp/>perchè<sp/>plan<sp/>unsolvable**</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>problema<sp/>si<sp/>può<sp/>risolvere<sp/>facilmente<sp/>facendo<sp/>replanning<sp/>prima<sp/>di<sp/>richiamare<sp/>il<sp/>solve,<sp/>facile<sp/>se<sp/>hai<sp/>un<sp/>flag<sp/>&quot;readu_to_solve&quot;<sp/>nel<sp/>codice<sp/>del<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>trovo<sp/>sia<sp/>più<sp/>che<sp/>lecito<sp/>che<sp/>la<sp/>kb<sp/>interface<sp/>tratti<sp/>in<sp/>questa<sp/>maniera<sp/>i<sp/>waypoints,<sp/>altrimenti<sp/>il<sp/>robot<sp/>ripeterebbe<sp/>lo<sp/>stesso<sp/>movimento</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>quello<sp/>che<sp/>non<sp/>capisco<sp/>però,<sp/>e<sp/>che<sp/>non<sp/>mi<sp/>va<sp/>bene,<sp/>è<sp/>che<sp/>*la<sp/>kb<sp/>interface<sp/>avrebbe<sp/>dovuto<sp/>controllare<sp/>l&apos;applicabilità<sp/>dell&apos;azione*,<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>avrebbe<sp/>dovuto<sp/>controllare<sp/>che<sp/>il<sp/>landmark<sp/>fosse<sp/>applicabile</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>infatti<sp/>non<sp/>c&apos;è<sp/>alcun<sp/>check<sp/>nella<sp/>kb<sp/>interface<sp/>a<sp/>riguardo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>altra<sp/>domanda<sp/>spinosa,<sp/>*e<sp/>come<sp/>lo<sp/>implementerei<sp/>questo<sp/>check?*<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>temo<sp/>non<sp/>ci<sp/>sia<sp/>alcun<sp/>modo<sp/>facile<sp/>a<sp/>dire<sp/>il<sp/>vero...<sp/>cosa<sp/>dovrei<sp/>fare?<sp/>verifico<sp/>che<sp/>esista<sp/>un<sp/>percorso<sp/>tra<sp/>wp2<sp/>e<sp/>il<sp/>centro?<sp/>mi<sp/>sembra<sp/>assurdo,<sp/>e<sp/>complicherebbe<sp/>inutilmente<sp/>un<sp/>nodo<sp/>che<sp/>già<sp/>è<sp/>un<sp/>prodotto<sp/>altamente<sp/>custom<sp/>nonostante<sp/>gli<sp/>sforzi<sp/>per<sp/>renderlo<sp/>vagamanete<sp/>generale</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>quindi<sp/>*la<sp/>soluzione<sp/>migliore*<sp/>(mio<sp/>modesto<sp/>parere)<sp/>*è<sp/>di<sp/>cambiare<sp/>reazione<sp/>alla<sp/>plan<sp/>unsolvable*<sp/>ordinando<sp/>un<sp/>replan</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>quindi,</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>modifica<sp/>mission<sp/>manager<sp/>per<sp/>supportare<sp/>il<sp/>replan<sp/>intermedio</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>**LIMITAZIONE**<sp/>bisognerebbe<sp/>ristrutturare<sp/>leggermente<sp/>la<sp/>kb<sp/>interface<sp/>in<sp/>modo<sp/>tale<sp/>che<sp/>riesca<sp/>a<sp/>gestire<sp/>vari<sp/>aspetti<sp/>distinti<sp/>del<sp/>problema:<sp/>ad<sp/>esempio<sp/>la<sp/>topologia,<sp/>distinta<sp/>da<sp/>la<sp/>localizzazione,<sp/>e<sp/>tutto<sp/>il<sp/>resto.<sp/>Se<sp/>il<sp/>compito<sp/>della<sp/>kb_interface<sp/>è<sp/>quello<sp/>di<sp/>*fornire<sp/>servizi<sp/>specializzati*<sp/>al<sp/>sistema,<sp/>allora<sp/>penso<sp/>si<sp/>possa<sp/>fare<sp/>molto<sp/>di<sp/>più.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>un<sp/>altro<sp/>difetto<sp/>potrebbe<sp/>essere<sp/>mischiare<sp/>troppo<sp/>le<sp/>cose<sp/>tra<sp/>pipeline<sp/>manager<sp/>e<sp/>kb<sp/>interface.<sp/>la<sp/>kb<sp/>interface<sp/>sarebbe<sp/>meglio<sp/>che<sp/>fosse<sp/>un<sp/>nodo<sp/>che<sp/>esponga<sp/>servizi<sp/>*anche<sp/>al<sp/>di<sp/>fuori<sp/>del<sp/>package*.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>unico<sp/>compito<sp/>del<sp/>pipeline<sp/>manager<sp/>è<sp/>quello<sp/>di<sp/>*gestire<sp/>il<sp/>flusso<sp/>di<sp/>esecuzione<sp/>in<sp/>base<sp/>ai<sp/>landmarks*,<sp/>il<sp/>che<sp/>sicuramente<sp/>coinvolge<sp/>la<sp/>kb_interface,<sp/>*ma<sp/>sempre<sp/>nel<sp/>pieno<sp/>rispetto<sp/>del<sp/>compito<sp/>iniziale*:<sp/>la<sp/>pipeline<sp/>manager<sp/>*non<sp/>dovrebbe<sp/>offrire<sp/>servizi<sp/>diversi<sp/>dall&apos;esecuzione<sp/>di<sp/>uno<sp/>specifico<sp/>landmark*<sp/>e<sp/>il<sp/>fornire<sp/>una<sp/>prima<sp/>spiegazione<sp/>ad<sp/>eventuali<sp/>problemi<sp/>che<sp/>possono<sp/>sorgere</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>quando<sp/>la<sp/>pipeline<sp/>manager<sp/>solleva<sp/>un<sp/>problema,<sp/>la<sp/>kb_interface<sp/>dovrebbe<sp/>mettere<sp/>a<sp/>disposizione<sp/>dei<sp/>servizi<sp/>separati<sp/>per<sp/>aiutare<sp/>a<sp/>comprendere<sp/>il<sp/>problema.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*attualmente<sp/>la<sp/>kb_interface<sp/>ha<sp/>solo<sp/>rilevanza<sp/>interna,<sp/>e<sp/>il<sp/>pipeline<sp/>manager<sp/>fa<sp/>tutto*,<sp/>dando<sp/>luogo<sp/>a<sp/>situazioni<sp/>ambigue<sp/>come<sp/>quella<sp/>che<sp/>ho<sp/>appena<sp/>visto.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

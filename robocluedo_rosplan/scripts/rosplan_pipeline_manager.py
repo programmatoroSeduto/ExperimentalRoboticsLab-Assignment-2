@@ -234,6 +234,7 @@ def cbk_pipeline( req ):
 	res = RosplanPipelineManagerServiceResponse( )
 	res.success = True
 	res.success_load_problem = True
+	res.landmark_is_applicable = True
 	res.success_solve_problem = True
 	res.problem_not_solvable = False
 	res.success_parse_plan = True
@@ -257,13 +258,17 @@ def cbk_pipeline( req ):
 			# set the landmark into the ontology
 			newgoal = UpdateGoalRequest( )
 			newgoal.landmark = req.landmark
-			print(type(req.landmark))
+			# print(type(req.landmark))
 			newgoal_res = cl_update_goal( newgoal )
 			if not newgoal_res.success:
+				
 				if newgoal_res.applicable:
 					rospy.logwarn(f"({NODE_NAME}) unable to apply the landmark {req.landmark} (reason: UNKNOWN)")
+					
 				else:
 					rospy.logwarn(f"({NODE_NAME}) unable to apply the landmark {req.landmark} (reason: landmark not applicable)")
+					res.landmark_is_applicable = False
+				
 				res.success_load_problem = False
 				res.success = False
 				return res

@@ -339,7 +339,7 @@
         <referencedby refid="class_armor_tools_1a34d27d93c2faec3d3de3ba24d08f436b" compoundref="armor__tools_8cpp" startline="385" endline="389">ArmorTools::GetLastRes</referencedby>
         <referencedby refid="simulation_8cpp_1ae1a3f65d934a3c4a938e85d5071dfaa5" compoundref="simulation_8cpp" startline="40" endline="44">oracleService</referencedby>
         <referencedby refid="classnode__manipulation__unit_1a7334affee4fac593614b7c98b56f48b1" compoundref="manipulation__unit_8cpp" startline="108" endline="143">node_manipulation_unit::cbk_roboplan_manip</referencedby>
-        <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="123" endline="526">node_mission_manager::spin</referencedby>
+        <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="127" endline="612">node_mission_manager::spin</referencedby>
         <referencedby refid="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" compoundref="navigation__unit_8cpp" startline="94" endline="168">node_navigation_unit::cbk_navigation</referencedby>
         <referencedby refid="classnode__manipulation__controller_1a034c08e17c4eb53c99ab50159bbeec2b" compoundref="manipulation__controller_8cpp" startline="70" endline="132">node_manipulation_controller::cbk_manip</referencedby>
         <referencedby refid="classnav__bug__m_1a9d40a065e7d0271add1afa94fee6fade" compoundref="navigation__manager_8cpp" startline="167" endline="203">nav_bug_m::perform_navigation</referencedby>

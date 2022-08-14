@@ -153,7 +153,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#testing-rosplan-plus-real-motion-controller">TESTING rosplan plus real motion controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#rosplan-and-armor">ROSPlan and aRMOR</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rosplan-and-armor">ROSPlan and aRMOR</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#first-test-a-almost-final-test">first test (a almost-final test!)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#another-test">another test</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#final-testings">final testings</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#tests-outputs">TESTS OUTPUTS</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#armor-only">armor only</a></li>
@@ -732,6 +736,8 @@ rosservice call /robocluedo/pipeline_manager <span class="s2">&quot;{load_proble
 </div>
 <div class="section" id="rosplan-and-armor">
 <h2>ROSPlan and aRMOR<a class="headerlink" href="#rosplan-and-armor" title="Permalink to this heading"></a></h2>
+<div class="section" id="first-test-a-almost-final-test">
+<h3>first test (a almost-final test!)<a class="headerlink" href="#first-test-a-almost-final-test" title="Permalink to this heading"></a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
 roslaunch robocluedo_mission_manager run_components.launch <span class="m">2</span>&gt;/dev/null
 
@@ -741,6 +747,21 @@ roslaunch robocluedo_armor run.launch
 <span class="c1"># shell 3</span>
 rosrun robocluedo_mission_manager mission_manager
 </pre></div>
+</div>
+</div>
+<div class="section" id="another-test">
+<h3>another test<a class="headerlink" href="#another-test" title="Permalink to this heading"></a></h3>
+<p>this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately)</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># shell 1</span>
+roslaunch robocluedo_mission_manager run_components_2.launch <span class="m">2</span>&gt;/dev/null
+
+<span class="c1"># shell 2</span>
+roslaunch robocluedo_rosplan run.launch
+
+<span class="c1"># shell 3</span>
+rosrun robocluedo_mission_manager mission_manager
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="final-testings">

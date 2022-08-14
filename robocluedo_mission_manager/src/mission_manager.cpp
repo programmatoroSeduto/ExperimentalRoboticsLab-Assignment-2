@@ -32,6 +32,10 @@
 #include "erl2/ErlOracle.h"
 
 #include <map>
+#include <iostream>
+
+#define WAITKEY_ENABLED false
+#define WAITKEY { if( WAITKEY_ENABLED ) { std::cout << "press ENTER to continue ... " ; std::cin.get( ) ; std::cout << "go!" ; } }
 
 #define SERVICE_ROSPLAN_PIPELINE "/robocluedo/pipeline_manager"
 #define SERVICE_ARMOR_ADD "/cluedo_armor/add_hint"
@@ -134,15 +138,20 @@ public:
 		// status ready to solve
 		bool ready_to_solve = false;
 		
-		TLOG( "mission manager STARTING WORKING CYCLE" );
+		// the robot has no more waypoints to explore
+		bool last_waypoint = false;
 		
-		while( ros::ok() )
+		TLOG( "mission manager STARTING WORKING CYCLE" );
+		WAITKEY;
+		
+		while( ros::ok( ) )
 		{
 			switch( this->mission_status )
 			{
 			case MISSION_STATUS_REPLAN: // landmark
 			{
 				TLOG( "status: " << "MISSION_STATUS_REPLAN" );
+				WAITKEY;
 				
 				// make the plan with LANDMARK_REPLAN
 				robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response res = make_plan( LANDMARK_REPLAN );
@@ -166,11 +175,12 @@ public:
 					state_after_fault = MISSION_STATUS_REPLAN;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// execute the plan
-				res = execute_plan( );
+				res = execute_plan( LANDMARK_REPLAN );
 				
 				// check the outcome of the operation
 				if( !res.success )
@@ -186,6 +196,7 @@ public:
 					state_after_fault = MISSION_STATUS_REPLAN;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
@@ -197,18 +208,31 @@ public:
 					state_after_fault = MISSION_STATUS_REPLAN;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// next status (REPLAN success)
-				this->mission_status = MISSION_STATUS_COLLECT;
+				if( ready_to_solve )
+				{
+					TLOG( "retrying landmark SOLVE after replanning" );
+					this->mission_status = MISSION_STATUS_SOLVE;
+				}
+				else
+				{
+					TLOG( "gotta catch 'em all! NA NA NA NA NA NA" );
+					this->mission_status = MISSION_STATUS_COLLECT;
+				}
+				last_waypoint = false;
 				
+				WAITKEY;
 				continue;
 			}
 			break;
 			case MISSION_STATUS_COLLECT: // landmark
 			{
 				TLOG( "status: " << "MISSION_STATUS_COLLECT" );
+				WAITKEY;
 				
 				// make the plan with LANDMARK_COLLECT
 				robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response res = make_plan( LANDMARK_COLLECT );
@@ -219,9 +243,18 @@ public:
 					// inspect the type of failure
 					if( !res.success_load_problem )
 					{
-						TWARN( "unable to load the problem! RETRYING" );
-						state_after_fault = MISSION_STATUS_COLLECT;
-						this->mission_status = MISSION_STATUS_COUNT_FAULT;
+						if( res.landmark_is_applicable )
+						{
+							TWARN( "unable to load the problem! (service failure) RETRYING" );
+							state_after_fault = MISSION_STATUS_COLLECT;
+							this->mission_status = MISSION_STATUS_COUNT_FAULT;
+						}
+						else
+						{
+							TWARN( "landmark COLLECT no longer applicable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
+							this->mission_status = MISSION_STATUS_ASK_ONTOLOGY;
+							last_waypoint = true;
+						}
 					}
 					else if( !res.success_solve_problem )
 					{
@@ -230,6 +263,7 @@ public:
 							// each waypoint has been explored (in this case, skip a step)
 							TWARN( "Plan not solvable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
 							this->mission_status = MISSION_STATUS_ASK_ONTOLOGY;
+							last_waypoint = true;
 							
 						}
 						else
@@ -243,11 +277,12 @@ public:
 					else
 						TLOG( "error in calling the rosplan pipeline manager" );
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// execute the plan
-				res = execute_plan( );
+				res = execute_plan( LANDMARK_COLLECT );
 				
 				// check the outcome of the operation
 				if( !res.success )
@@ -278,6 +313,7 @@ public:
 					state_after_fault = MISSION_STATUS_COLLECT;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
@@ -289,44 +325,59 @@ public:
 					state_after_fault = MISSION_STATUS_REPLAN;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// next status
 				this->mission_status = MISSION_STATUS_ASK_ONTOLOGY;
 				
+				WAITKEY;
 				continue;
 			}
 			break;
 			case MISSION_STATUS_ASK_ONTOLOGY: // armor
 			{
 				TLOG( "status: " << "MISSION_STATUS_ASK_ONTOLOGY" );
+				WAITKEY;
 				
 				// ask the ontology for any complete hypothesis
 				robocluedo_armor_msgs::FindConsistentHypotheses find_req;
 				
 				if( !cl_armor_find.call( find_req ) )
 				{
-					TWARN( "unable to call aRMOR for finding hypotheses! REPEATING" );
+					TWARN( "unable to call aRMOR for finding hypotheses! RETRYING" );
 					
 					state_after_fault = MISSION_STATUS_ASK_ONTOLOGY;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// check the number of returned hints from the ontology
 				if( find_req.response.hyp.size( ) > 0 )
 				{
-					TLOG( "(from the ontology) found " << find_req.response.hyp.size( ) << "consistent hypotheses" );
+					TLOG( "(from the ontology) found consistent hypotheses : " << find_req.response.hyp.size( )  );
 					ready_to_solve = true;
 					last_hyp = find_req.response.hyp[0]; // take the first returned
+					this->mission_status = MISSION_STATUS_SOLVE;
 				}
 				else
 				{
-					TLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN" );
 					ready_to_solve = false;
-					this->mission_status = MISSION_STATUS_COLLECT;
+					
+					if(last_waypoint)
+					{
+						TLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) REPLANNING" );
+						this->mission_status = MISSION_STATUS_REPLAN;
+					}
+					
+					else
+					{
+						TLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN" );
+						this->mission_status = MISSION_STATUS_COLLECT;
+					}
 				}
 				
 				continue;
@@ -344,6 +395,7 @@ public:
 					ready_to_solve = false;
 					this->mission_status = MISSION_STATUS_COLLECT;
 					
+					WAITKEY;
 					continue;
 				}
 				
@@ -362,10 +414,29 @@ public:
 					}
 					else if( !res.success_solve_problem )
 					{
+						// here the problem could result unsolvable due to the topology of the environment
+						//    and the (correct) use of the predicate (explored ?wp)
+						//    (see development nodes)
+						// in this case, the best solution is to REPLAN then SOLVE
+						
 						if( res.problem_not_solvable )
-							TWARN( "UNEXPECTED! Plan not solvable, can't find a solution (maybe a issue with the PDDL model?)" ); 
+						{
+							// TWARN( "UNEXPECTED! Plan not solvable, can't find a solution (maybe a issue with the PDDL model?)" ); 
+							
+							// here the problem could result unsolvable due to the topology of the environment
+							//    and the (correct) use of the predicate (explored ?wp)
+							//    (see development log)
+							// in this case, the best solution is to REPLAN then SOLVE
+							
+							TLOG( "plan not solvable (need intermediate replanning" );
+							ready_to_solve = true; // just to be sure ...
+							this->mission_status = MISSION_STATUS_REPLAN;
+							
+							WAITKEY;
+							continue;
+						}
 						else
-							TWARN( "unable to solve the plan (unexplained, maybe a syntax error in the PDDL files?) REPLANNING" );
+							TWARN( "unable to solve the plan (unexplained, maybe service faults?) REPLANNING" );
 						
 						
 						ready_to_solve = false;
@@ -375,11 +446,12 @@ public:
 					else
 						TLOG( "error in calling the rosplan pipeline manager" );
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// execute the plan
-				res = execute_plan( );
+				res = execute_plan( LANDMARK_SOLVE );
 				
 				// inspect the error if any
 				if( !res.success )
@@ -392,6 +464,7 @@ public:
 						state_after_fault = MISSION_STATUS_SOLVE;
 						this->mission_status = MISSION_STATUS_COUNT_FAULT;
 						
+						WAITKEY;
 						continue;
 					}
 					else if( !res.success_execute_plan )
@@ -413,6 +486,7 @@ public:
 					state_after_fault = MISSION_STATUS_COLLECT;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
@@ -425,18 +499,21 @@ public:
 					state_after_fault = MISSION_STATUS_REPLAN;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// next mission status
 				this->mission_status = MISSION_STATUS_ASK_ORACLE;
 				
+				WAITKEY;
 				continue;
 			}
 			break;
 			case MISSION_STATUS_ASK_ORACLE: // oracle, armor
 			{
 				TLOG( "status: " << "MISSION_STATUS_ASK_ORACLE" );
+				WAITKEY;
 				
 				// ask the Oracle for the solution of the mystery
 				erl2::Oracle solution;
@@ -447,24 +524,27 @@ public:
 					state_after_fault = MISSION_STATUS_ASK_ORACLE;
 					this->mission_status = MISSION_STATUS_COUNT_FAULT;
 					
+					WAITKEY;
 					continue;
 				}
 				
 				// check the solution
 				TLOG( "Narrator voice: \n\t(wispering) RoboCLuedo thinks that the solution is ID=" << last_hyp.ID );
-				TLOG( "RoboCLuedo: \n\tWELL, >>" << last_hyp.who << "<< DID YOU MURDER Dr. Black ? \n\n\t\tHUH?\n\n" );
+				TLOG( "RoboCLuedo: \n\tWELL, " << last_hyp.who << ", DID YOU MURDER Dr. Black ? \n\n\t\tHUH?\n\n" );
+				TLOG( "Oracle: \n\tID=" << solution.response.ID  << " is the way" );
 				if( solution.response.ID == last_hyp.ID )
 				{
 					TLOG( "gg ez" );
-					TLOG( "==== where[" << last_hyp.where << "] what[" << last_hyp.what << "] who[" << last_hyp.who << "] ====" );
+					TLOG( "==== ID=" << last_hyp.ID << " | where[" << last_hyp.where << "] what[" << last_hyp.what << "] who[" << last_hyp.who << "] ====" );
 					
+					WAITKEY;
 					return;
 				}
 				else
 				{
-					TLOG( "Oracle: \n\tID=" << solution.response.ID );
-					TLOG( "" << last_hyp.who << ": \n\tNO, RoboCLuedo, \n\tI'm not the killer. \n\n\tWho killed Dr. Black is still there, in this room. \n\t\tWE MUST FIND THAT.\n" );
-					TLOG( "(just a hint: did you check the waiter?)" );
+					TLOG( "" << last_hyp.who << ": \n\tNO, RoboCLuedo, \n\tI'm not the killer. ");
+					TLOG( "RoboCLuedo:\n\tWho killed Dr. Black is still there, in this room.\n\t WE MUST FIND THAT." );
+					TLOG( "\t(where's the waiter?)" );
 					
 					// mark the hint as wrong
 					robocluedo_armor_msgs::DiscardHypothesis discard_note;
@@ -484,6 +564,9 @@ public:
 					}
 					
 					ready_to_solve = false;
+					this->mission_status = MISSION_STATUS_REPLAN;
+					
+					WAITKEY;
 					continue;
 				}
 			}
@@ -492,6 +575,7 @@ public:
 			{
 				--fault_count;
 				TWARN( "status: " << "MISSION_STATUS_COUNT_FAULT (remaining " << fault_count << ")" );
+				WAITKEY;
 				
 				if( fault_count <= 0 )
 				{
@@ -508,6 +592,7 @@ public:
 			case MISSION_STATUS_FAULT:
 			{
 				TERR( "status: " << "MISSION_STATUS_FAULT" );
+				WAITKEY;
 				
 				TERR( "mission failed : too much errors, counter was zero" );
 				return;
@@ -520,6 +605,9 @@ public:
 				state_after_fault = MISSION_STATUS_REPLAN;
 				
 				ready_to_solve = false;
+				
+				WAITKEY;
+				continue;
 			}
 			}
 		}
@@ -528,7 +616,7 @@ public:
 	/** make a plan ready to be executed (and call the service) */
 	robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response make_plan( int landmark )
 	{
-		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd = create_planning_request( LANDMARK_REPLAN );
+		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd = create_planning_request( landmark );
 		
 		// send the request and wait
 		if( !cl_rosplan_pipeline.call( cmd ) )
@@ -541,9 +629,9 @@ public:
 	}
 	
 	/** execute the plan */
-	robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response execute_plan( )
+	robocluedo_rosplan_msgs::RosplanPipelineManagerService::Response execute_plan( int landmark )
 	{
-		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd = create_exec_request( );
+		robocluedo_rosplan_msgs::RosplanPipelineManagerService cmd = create_exec_request( landmark );
 		
 		// send the request and wait
 		if( !cl_rosplan_pipeline.call( cmd ) )
@@ -583,6 +671,12 @@ public:
 			}
 			
 			TLOG( "(cbk_oracle_hint, add hint) valid hint received and registered" );
+			
+			std_srvs::Trigger backup_cmd;
+			if( !cl_armor_backup.call( backup_cmd ) || !backup_cmd.response.success )
+			{
+				TWARN( "ontologybackup failed (retrying later ...)" );
+			}
 		}
 		else
 			TLOG( "(cbk_oracle_hint, add hint) NOT VALID hint, skip" );
@@ -628,6 +722,7 @@ public:
 		cmd.response.success = !failure;
 		
 		cmd.response.success_load_problem = true;
+		cmd.response.landmark_is_applicable = true;
 		cmd.response.success_solve_problem = true;
 		cmd.response.success_parse_plan = true;
 		cmd.response.success_execute_plan = true;

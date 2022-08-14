@@ -33,6 +33,13 @@ bool success
 # loading phase success
 bool success_load_problem
 
+# landmark feasibility (true if not used)
+#    (success_load_problem=false) and (landmark_is_applicable=true) indicates a service failure
+#    (success_load_problem=false) and (landmark_is_applicable=false) landmark not applicable
+#    (success_load_problem=true) and (landmark_is_applicable=true) good!
+#    (success_load_problem=true) and (landmark_is_applicable=false) NO MEANING (it shouldn't happen)
+bool landmark_is_applicable
+
 # planner execution success
 bool success_solve_problem
 

@@ -524,7 +524,7 @@
         <references refid="rosplan-kb_8md_8txt_1a7960f9c558f9ee2c3d4a8fdea096fb56" compoundref="rosplan-kb_8md_8txt" startline="370">success</references>
         <references refid="cluedo__armor__interface_8cpp_1af4f289b8ad162b609975620166e3d407" compoundref="cluedo__armor__interface_8cpp" startline="97">SS</references>
         <references refid="cluedo__armor__interface_8cpp_1a7a571e6f0c662a683b2741f0e4cd4c26" compoundref="cluedo__armor__interface_8cpp" startline="98">SSS</references>
-        <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="123" endline="526">node_mission_manager::spin</referencedby>
+        <referencedby refid="classnode__mission__manager_1aa2d1e70fe39f8f16bf82bd29393ad3a2" compoundref="mission__manager_8cpp" startline="127" endline="612">node_mission_manager::spin</referencedby>
       </memberdef>
       <memberdef kind="function" id="cluedo__armor__interface_8cpp_1a66c612700258bd528a8d54035044b4ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
