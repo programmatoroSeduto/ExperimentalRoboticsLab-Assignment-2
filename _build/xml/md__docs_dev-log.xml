@@ -1314,7 +1314,7 @@
 </para>
 </listitem><listitem><para>giusto un mini programmino di prova: (più che altro per sondare le mie caopacità dinamitarde)</para>
 <para>```c++ #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt;</para>
-<para>int <ref refid="example__armor__cluedo__1_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref> { std::string id = &quot;ID13398&quot;;</para>
+<para>int <ref refid="examples__cluedo_8md_8txt_1a0055e76cf5ab9e6852445b755e20c0b6" kindref="member">main()</ref> { std::string id = &quot;ID13398&quot;;</para>
 <para>std::size_t pos_init = id.find(&quot;ID&quot;); std::cout &lt;&lt; &quot;pos=&quot; &lt;&lt; pos_init &lt;&lt; std::endl; // std::size_t pos_end = pos_init + 2; std::cout &lt;&lt; &quot;(str) ID=&quot; &lt;&lt; id.substr(pos_init+2) &lt;&lt; std::endl; // int id_int = atoi(id.substr(pos_init+2).c_str()); int id_int = atoi(id.substr(2).c_str()); std::cout &lt;&lt; &quot;(int) ID=&quot; &lt;&lt; id_int &lt;&lt; std::endl;</para>
 <para>return 0;</para>
 <para>/*OUTPUT</para>
@@ -2097,10 +2097,9 @@
 </listitem></itemizedlist>
 </para>
 <para><bold>topics</bold>:</para>
-<para><programlisting></programlisting></para>
-<para>``` <programlisting><codeline><highlight class="normal">**services:**</highlight></codeline>
+<para>`<computeroutput> </computeroutput>`  `<computeroutput>\</computeroutput> <programlisting><codeline><highlight class="normal">**services:**</highlight></codeline>
 </programlisting></para>
-<para>```  `<computeroutput> </computeroutput>`</para>
+<para>`<computeroutput>\</computeroutput>  <computeroutput>\` </computeroutput>`</para>
 <para><itemizedlist>
 <listitem><para>iniziamo dal package di aRMOR e armor msgs<itemizedlist>
 <listitem><para>documentazione delle interfacce</para>
@@ -2123,8 +2122,24 @@
 </listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (armor documentation)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>meglio fare quello che so di non dover andare a ritoccare nel terzo assignment: devo fare solo le cose su cui so che non ci metterò mai più mano</para>
+<para><itemizedlist>
+<listitem><para>robot urdf documentazione<itemizedlist>
+<listitem><para>...e invece direi che va bene, anche se il robot mostrato è ancora quello con le ruote più lontane dal centro</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>nello user manual di erl2 non si fa riferimento alle funzionalità di sviluppo<itemizedlist>
+<listitem><para>le aggiungo ora</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per quanto riguarda i file worlds, aspetterei il terzo progetto per fare qualunque modifica:ç ho tutti quei file world da provare ... lo farò poi</para>
+</listitem><listitem><para><bold>COMMIT</bold> <ndash/> &quot;deploy (dependencies documentation)&quot;</para>
+</listitem></itemizedlist>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md79">
+<sect2 id="md__docs_dev-log_1autotoc_md80">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -2161,9 +2176,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md80">
+<sect2 id="md__docs_dev-log_1autotoc_md81">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md81">
+<sect3 id="md__docs_dev-log_1autotoc_md82">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2175,7 +2190,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md82">
+<sect3 id="md__docs_dev-log_1autotoc_md83">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

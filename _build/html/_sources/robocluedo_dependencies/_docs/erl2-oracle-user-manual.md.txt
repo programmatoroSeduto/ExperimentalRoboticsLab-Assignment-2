@@ -191,3 +191,20 @@ place the *cluedo_link* near to the manipulator. Done that, thenode will receive
 first of all, the system should *infer* the solution *as integer ID*. 
 
 then, send a request to the service `/oracle_solution` of type `erl2/oracle.msg`.
+
+
+## Development settings
+
+the source code `simulation.cpp` exposes two important macros:
+
+- `NOT_TESTING` -- when set to `false`, the Oracle will publish only the hints referred to the `winID` i.e. the selected winner ID. 
+	
+	it allows to make quicker the testing phase, because you haven't unvalid hints from the Oracle, as well as several different IDs to manage.
+	
+	use this setting for testing only. the macro should be set to `true`. 
+	
+- `DIST_THRESH` -- the oracle sends a hint only when the `cleudo_link` of the robot has a distance from the marker which is lower than this value. 
+	
+	the default value is 0.25
+	
+	by increasing it, it's possible to receive a hint remaining a bit far from the marker, and over 0.35, to receive hints also when the robot simply passes in front of if

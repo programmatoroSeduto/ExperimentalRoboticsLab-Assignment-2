@@ -131,6 +131,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-receive-a-hint">HOW TO receive a hint</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-check-the-solution">HOW TO check the solution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#development-settings">Development settings</a></li>
 </ul>
 </li>
 </ul>
@@ -311,6 +312,20 @@ note on link: erl2/ErlOracle.msg
 <h2>HOW TO check the solution<a class="headerlink" href="#how-to-check-the-solution" title="Permalink to this heading"></a></h2>
 <p>first of all, the system should <em>infer</em> the solution <em>as integer ID</em>.</p>
 <p>then, send a request to the service <code class="docutils literal notranslate"><span class="pre">/oracle_solution</span></code> of type <code class="docutils literal notranslate"><span class="pre">erl2/oracle.msg</span></code>.</p>
+</div>
+<div class="section" id="development-settings">
+<h2>Development settings<a class="headerlink" href="#development-settings" title="Permalink to this heading"></a></h2>
+<p>the source code <code class="docutils literal notranslate"><span class="pre">simulation.cpp</span></code> exposes two important macros:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">NOT_TESTING</span></code> – when set to <code class="docutils literal notranslate"><span class="pre">false</span></code>, the Oracle will publish only the hints referred to the <code class="docutils literal notranslate"><span class="pre">winID</span></code> i.e. the selected winner ID.</p>
+<p>it allows to make quicker the testing phase, because you haven’t unvalid hints from the Oracle, as well as several different IDs to manage.</p>
+<p>use this setting for testing only. the macro should be set to <code class="docutils literal notranslate"><span class="pre">true</span></code>.</p>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DIST_THRESH</span></code> – the oracle sends a hint only when the <code class="docutils literal notranslate"><span class="pre">cleudo_link</span></code> of the robot has a distance from the marker which is lower than this value.</p>
+<p>the default value is 0.25</p>
+<p>by increasing it, it’s possible to receive a hint remaining a bit far from the marker, and over 0.35, to receive hints also when the robot simply passes in front of if</p>
+</li>
+</ul>
 </div>
 </div>
 

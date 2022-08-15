@@ -2216,7 +2216,7 @@
 <codeline><highlight class="normal">**topics**:</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">``\`</highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/???&quot;<sp/>as<sp/>TOPIC_???</highlight></codeline>
@@ -2225,13 +2225,13 @@
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>???/???.msg</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">``\`</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">**services:**</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">``\`</highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">()<sp/>&quot;/???&quot;<sp/>as<sp/>SRV_???</highlight></codeline>
@@ -2240,7 +2240,7 @@
 <codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>???/???.srv</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">``\`</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>iniziamo<sp/>dal<sp/>package<sp/>di<sp/>aRMOR<sp/>e<sp/>armor<sp/>msgs</highlight></codeline>
@@ -2256,6 +2256,17 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>anche<sp/>eliminare<sp/>i<sp/>file<sp/>contenenti<sp/>gli<sp/>items<sp/>(la<sp/>cartella<sp/>cluedo<sp/>items)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>e<sp/>con<sp/>aRMOR<sp/>abbiamo<sp/>chiuso!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(armor<sp/>documentation)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">meglio<sp/>fare<sp/>quello<sp/>che<sp/>so<sp/>di<sp/>non<sp/>dover<sp/>andare<sp/>a<sp/>ritoccare<sp/>nel<sp/>terzo<sp/>assignment:<sp/>devo<sp/>fare<sp/>solo<sp/>le<sp/>cose<sp/>su<sp/>cui<sp/>so<sp/>che<sp/>non<sp/>ci<sp/>metterò<sp/>mai<sp/>più<sp/>mano</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>robot<sp/>urdf<sp/>documentazione</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...e<sp/>invece<sp/>direi<sp/>che<sp/>va<sp/>bene,<sp/>anche<sp/>se<sp/>il<sp/>robot<sp/>mostrato<sp/>è<sp/>ancora<sp/>quello<sp/>con<sp/>le<sp/>ruote<sp/>più<sp/>lontane<sp/>dal<sp/>centro</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>nello<sp/>user<sp/>manual<sp/>di<sp/>erl2<sp/>non<sp/>si<sp/>fa<sp/>riferimento<sp/>alle<sp/>funzionalità<sp/>di<sp/>sviluppo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>le<sp/>aggiungo<sp/>ora</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>i<sp/>file<sp/>worlds,<sp/>aspetterei<sp/>il<sp/>terzo<sp/>progetto<sp/>per<sp/>fare<sp/>qualunque<sp/>modifica:ç<sp/>ho<sp/>tutti<sp/>quei<sp/>file<sp/>world<sp/>da<sp/>provare<sp/>...<sp/>lo<sp/>farò<sp/>poi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>--<sp/>&quot;deploy<sp/>(dependencies<sp/>documentation)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

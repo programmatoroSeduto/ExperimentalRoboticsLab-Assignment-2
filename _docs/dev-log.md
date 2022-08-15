@@ -2207,7 +2207,7 @@ ora, i diagrammi UML mancanti. direi di andare per package:
 **topics**:
 
 ```
-\```
+``\`
 @startuml
 	
 () "/???" as TOPIC_???
@@ -2216,13 +2216,13 @@ ora, i diagrammi UML mancanti. direi di andare per package:
 note on link: ???/???.msg
 	
 @enduml
-\```
+``\`
 ```
 
 **services:**
 
 ```
-\```
+``\`
 @startuml
 
 () "/???" as SRV_???
@@ -2231,7 +2231,7 @@ note on link: ???/???.msg
 note on link: ???/???.srv
 
 @enduml
-\```
+``\`
 ```
 
 - iniziamo dal package di aRMOR e armor msgs
@@ -2247,6 +2247,17 @@ note on link: ???/???.srv
 	- posso anche eliminare i file contenenti gli items (la cartella cluedo items)
 - e con aRMOR abbiamo chiuso!
 - **COMMIT**: "deployment (armor documentation)"
+
+---
+
+meglio fare quello che so di non dover andare a ritoccare nel terzo assignment: devo fare solo le cose su cui so che non ci metterò mai più mano
+
+- robot urdf documentazione
+	- ...e invece direi che va bene, anche se il robot mostrato è ancora quello con le ruote più lontane dal centro
+- nello user manual di erl2 non si fa riferimento alle funzionalità di sviluppo
+	- le aggiungo ora
+- per quanto riguarda i file worlds, aspetterei il terzo progetto per fare qualunque modifica:ç ho tutti quei file world da provare ... lo farò poi
+- **COMMIT** -- "deploy (dependencies documentation)"
 
 
 

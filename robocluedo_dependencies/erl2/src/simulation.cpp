@@ -10,6 +10,7 @@
 #include <vector>
 
 #define NOT_TESTING true
+#define DIST_THRESH 0.25
 
 /*
 #if NOT_TESTING
@@ -18,8 +19,6 @@
 	#define DIST_THRESH 0.5
 #endif
 */
-
-#define DIST_THRESH 0.25
 
 ros::Publisher oracle_pub;
 

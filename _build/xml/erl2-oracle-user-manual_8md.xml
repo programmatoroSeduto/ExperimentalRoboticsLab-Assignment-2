@@ -200,6 +200,23 @@
 <codeline><highlight class="normal">first<sp/>of<sp/>all,<sp/>the<sp/>system<sp/>should<sp/>*infer*<sp/>the<sp/>solution<sp/>*as<sp/>integer<sp/>ID*.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">then,<sp/>send<sp/>a<sp/>request<sp/>to<sp/>the<sp/>service<sp/>`/oracle_solution`<sp/>of<sp/>type<sp/>`erl2/oracle.msg`.</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Development<sp/>settings</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">the<sp/>source<sp/>code<sp/>`simulation.cpp`<sp/>exposes<sp/>two<sp/>important<sp/>macros:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>`NOT_TESTING`<sp/>--<sp/>when<sp/>set<sp/>to<sp/>`false`,<sp/>the<sp/>Oracle<sp/>will<sp/>publish<sp/>only<sp/>the<sp/>hints<sp/>referred<sp/>to<sp/>the<sp/>`winID`<sp/>i.e.<sp/>the<sp/>selected<sp/>winner<sp/>ID.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>it<sp/>allows<sp/>to<sp/>make<sp/>quicker<sp/>the<sp/>testing<sp/>phase,<sp/>because<sp/>you<sp/>haven&apos;t<sp/>unvalid<sp/>hints<sp/>from<sp/>the<sp/>Oracle,<sp/>as<sp/>well<sp/>as<sp/>several<sp/>different<sp/>IDs<sp/>to<sp/>manage.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>use<sp/>this<sp/>setting<sp/>for<sp/>testing<sp/>only.<sp/>the<sp/>macro<sp/>should<sp/>be<sp/>set<sp/>to<sp/>`true`.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>`DIST_THRESH`<sp/>--<sp/>the<sp/>oracle<sp/>sends<sp/>a<sp/>hint<sp/>only<sp/>when<sp/>the<sp/>`cleudo_link`<sp/>of<sp/>the<sp/>robot<sp/>has<sp/>a<sp/>distance<sp/>from<sp/>the<sp/>marker<sp/>which<sp/>is<sp/>lower<sp/>than<sp/>this<sp/>value.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>the<sp/>default<sp/>value<sp/>is<sp/>0.25</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>by<sp/>increasing<sp/>it,<sp/>it&apos;s<sp/>possible<sp/>to<sp/>receive<sp/>a<sp/>hint<sp/>remaining<sp/>a<sp/>bit<sp/>far<sp/>from<sp/>the<sp/>marker,<sp/>and<sp/>over<sp/>0.35,<sp/>to<sp/>receive<sp/>hints<sp/>also<sp/>when<sp/>the<sp/>robot<sp/>simply<sp/>passes<sp/>in<sp/>front<sp/>of<sp/>if</highlight></codeline>
     </programlisting>
     <location file="robocluedo_dependencies/_docs/erl2-oracle-user-manual.md"/>
   </compounddef>
