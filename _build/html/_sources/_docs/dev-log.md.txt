@@ -1321,7 +1321,7 @@ e il movement controller è finito, o almeno la prima versione. Adesso possiamo 
 
 ---
 
-## 13/08/2022 -- mission manager -- module testing
+## 13/08/2022 -- mission manager -- module testing -- test completo
 
 implementazione del nodo main dell'architettura (fatto questo si passa al testing e si impacchetta tutto)
 
@@ -2049,6 +2049,7 @@ eeee ennesiam sessione di test:
 - *e ora*, indaghiamo (sul senso della vita)
 	- **COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**
 	- ho fatto un *mezzo* casino con l'oracolo, ma si risolve facilmente
+	- **COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**
 - visto come vanno le cose posso anche settare direttamente lo SCALING_FACTOR a 0.99
 
 - **EANDIAMO.**
@@ -2136,6 +2137,75 @@ eeee ennesiam sessione di test:
 
 - **COMMIT** "happy commit!"
 
+---
+
+## 15/08/2022 -- ultime issues -- documentazione del codice e deploy
+
+anzitutto, un piccolo elenco di quello che devo fare per il deployment:
+
+- (OK) -- rimuovere eventuali modalità di backup da in giro per il codice
+	- erl2 simulation.cpp (casomai crea una versione alternativa del nodo)
+	- mission manager
+- revisione del codice
+	- (OK) -- migliorare il log dal mission manager
+	- ... (magari qualcosa segnato nel TODO?)
+	- ultima volta, il module testing (giusto per essere sicuri)
+- ultimi diagrammi UML 
+	- con un "dizionario" delle interfacce
+	- elimina i diagrammi sbagliati o troppo vecchi (da questo progetto esiste uno standard)
+	- ... (quali mancano?)
+	- ... (sequence diagrams?)
+- ultima prova *filmata* del sistema in funziona
+	- prima con la modalità di sviluppo nell'oracolo
+	- poi senza modalità di sviluppo
+- documentazione ausiliaria sui singoli progetti:
+	- sarebbe meglio iniziare mettendo a posto le toctree in giro per il codice
+	- armor
+	- rosplan
+	- robot
+	- movement controller
+	- mission manager
+- come runnare il progetto - versione definitiva
+	- launch rapido
+	- launch nodo per nodo (con descrizione del progetto)
+- documentazione del codice
+	- creazione delle cartelle source code con il codice dentro
+	- prima vedi che esce solo così
+	- poi correggi l'output
+- ultima revisione della documentazione del codice
+- scrittura del README
+	- struttura (classica) del readme
+	- e scrittura del contenuto (molto può essere rimandato alla documentazione)
+- e caricamento della documentazione su GitHub
+
+devo fare almeno parte di questo lavoro se voglio iniziare il terzo assignment, che consisterà in una leggera modifica di questo secondo assignment e nulla di più. 
+
+---
+
+andiamo col lavoro:
+
+- via tutte le modalità di sviluppo
+	- da simulation
+	- la threshold a 0.35 ieri funzionava bene ... se la abbassassi a 0.3? 
+		- proviamo
+		- *posso abbassarlo ancora*, stavolta a 0.25
+		- anche a 0.25 (la distanza *iniziale*) pare funzionare, e non dovrebbe missarne nessuno
+	- *direi di lasciare la distanza a 0.25 com'era all'inizio*
+- già che ci sono, rivedo i log dal mission manager
+	- *suspence*
+	- ora il nodo ha anche DEVELOP_PRINT_ENABLED che permette di stampare quei print che di norma non sarebbe utile stampare. 
+	- proviamo se funziona, giusto per accertarmi di non aver scritto castronerie
+	- funziona tutto a dovere. Ottimo.
+	- **COMMIT**: "deployment (logs more clear from the mission manager)"
+
+---
+
+
+
+
+
+
+
 
 
 
@@ -2151,7 +2221,6 @@ eeee ennesiam sessione di test:
 
 - ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio
 - vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation
-- aumentare la mobilità del robot spostando le ruote "passive" più verso il centro del veicolo
 - navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)
 - documentazione del package ROSPlan
 - UML finale per ROSPlan

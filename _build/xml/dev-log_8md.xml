@@ -1330,7 +1330,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>13/08/2022<sp/>--<sp/>mission<sp/>manager<sp/>--<sp/>module<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>13/08/2022<sp/>--<sp/>mission<sp/>manager<sp/>--<sp/>module<sp/>testing<sp/>--<sp/>test<sp/>completo</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">implementazione<sp/>del<sp/>nodo<sp/>main<sp/>dell&apos;architettura<sp/>(fatto<sp/>questo<sp/>si<sp/>passa<sp/>al<sp/>testing<sp/>e<sp/>si<sp/>impacchetta<sp/>tutto)</highlight></codeline>
 <codeline></codeline>
@@ -2058,6 +2058,7 @@
 <codeline><highlight class="normal">-<sp/>*e<sp/>ora*,<sp/>indaghiamo<sp/>(sul<sp/>senso<sp/>della<sp/>vita)</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ho<sp/>fatto<sp/>un<sp/>*mezzo*<sp/>casino<sp/>con<sp/>l&apos;oracolo,<sp/>ma<sp/>si<sp/>risolve<sp/>facilmente</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>visto<sp/>come<sp/>vanno<sp/>le<sp/>cose<sp/>posso<sp/>anche<sp/>settare<sp/>direttamente<sp/>lo<sp/>SCALING_FACTOR<sp/>a<sp/>0.99</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>**EANDIAMO.**</highlight></codeline>
@@ -2145,6 +2146,75 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>&quot;happy<sp/>commit!&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>15/08/2022<sp/>--<sp/>ultime<sp/>issues<sp/>--<sp/>documentazione<sp/>del<sp/>codice<sp/>e<sp/>deploy</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">anzitutto,<sp/>un<sp/>piccolo<sp/>elenco<sp/>di<sp/>quello<sp/>che<sp/>devo<sp/>fare<sp/>per<sp/>il<sp/>deployment:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>(OK)<sp/>--<sp/>rimuovere<sp/>eventuali<sp/>modalità<sp/>di<sp/>backup<sp/>da<sp/>in<sp/>giro<sp/>per<sp/>il<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>erl2<sp/>simulation.cpp<sp/>(casomai<sp/>crea<sp/>una<sp/>versione<sp/>alternativa<sp/>del<sp/>nodo)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>revisione<sp/>del<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(OK)<sp/>--<sp/>migliorare<sp/>il<sp/>log<sp/>dal<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(magari<sp/>qualcosa<sp/>segnato<sp/>nel<sp/>TODO?)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ultima<sp/>volta,<sp/>il<sp/>module<sp/>testing<sp/>(giusto<sp/>per<sp/>essere<sp/>sicuri)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ultimi<sp/>diagrammi<sp/>UML<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>con<sp/>un<sp/>&quot;dizionario&quot;<sp/>delle<sp/>interfacce</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>elimina<sp/>i<sp/>diagrammi<sp/>sbagliati<sp/>o<sp/>troppo<sp/>vecchi<sp/>(da<sp/>questo<sp/>progetto<sp/>esiste<sp/>uno<sp/>standard)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(quali<sp/>mancano?)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>(sequence<sp/>diagrams?)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ultima<sp/>prova<sp/>*filmata*<sp/>del<sp/>sistema<sp/>in<sp/>funziona</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>con<sp/>la<sp/>modalità<sp/>di<sp/>sviluppo<sp/>nell&apos;oracolo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>poi<sp/>senza<sp/>modalità<sp/>di<sp/>sviluppo</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>ausiliaria<sp/>sui<sp/>singoli<sp/>progetti:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>sarebbe<sp/>meglio<sp/>iniziare<sp/>mettendo<sp/>a<sp/>posto<sp/>le<sp/>toctree<sp/>in<sp/>giro<sp/>per<sp/>il<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>armor</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>movement<sp/>controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>come<sp/>runnare<sp/>il<sp/>progetto<sp/>-<sp/>versione<sp/>definitiva</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>launch<sp/>rapido</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>launch<sp/>nodo<sp/>per<sp/>nodo<sp/>(con<sp/>descrizione<sp/>del<sp/>progetto)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>creazione<sp/>delle<sp/>cartelle<sp/>source<sp/>code<sp/>con<sp/>il<sp/>codice<sp/>dentro</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>vedi<sp/>che<sp/>esce<sp/>solo<sp/>così</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>poi<sp/>correggi<sp/>l&apos;output</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ultima<sp/>revisione<sp/>della<sp/>documentazione<sp/>del<sp/>codice</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>scrittura<sp/>del<sp/>README</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>struttura<sp/>(classica)<sp/>del<sp/>readme</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>scrittura<sp/>del<sp/>contenuto<sp/>(molto<sp/>può<sp/>essere<sp/>rimandato<sp/>alla<sp/>documentazione)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>caricamento<sp/>della<sp/>documentazione<sp/>su<sp/>GitHub</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">devo<sp/>fare<sp/>almeno<sp/>parte<sp/>di<sp/>questo<sp/>lavoro<sp/>se<sp/>voglio<sp/>iniziare<sp/>il<sp/>terzo<sp/>assignment,<sp/>che<sp/>consisterà<sp/>in<sp/>una<sp/>leggera<sp/>modifica<sp/>di<sp/>questo<sp/>secondo<sp/>assignment<sp/>e<sp/>nulla<sp/>di<sp/>più.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">andiamo<sp/>col<sp/>lavoro:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>via<sp/>tutte<sp/>le<sp/>modalità<sp/>di<sp/>sviluppo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>da<sp/>simulation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>threshold<sp/>a<sp/>0.35<sp/>ieri<sp/>funzionava<sp/>bene<sp/>...<sp/>se<sp/>la<sp/>abbassassi<sp/>a<sp/>0.3?<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>proviamo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*posso<sp/>abbassarlo<sp/>ancora*,<sp/>stavolta<sp/>a<sp/>0.25</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>a<sp/>0.25<sp/>(la<sp/>distanza<sp/>*iniziale*)<sp/>pare<sp/>funzionare,<sp/>e<sp/>non<sp/>dovrebbe<sp/>missarne<sp/>nessuno</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*direi<sp/>di<sp/>lasciare<sp/>la<sp/>distanza<sp/>a<sp/>0.25<sp/>com&apos;era<sp/>all&apos;inizio*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>già<sp/>che<sp/>ci<sp/>sono,<sp/>rivedo<sp/>i<sp/>log<sp/>dal<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*suspence*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>il<sp/>nodo<sp/>ha<sp/>anche<sp/>DEVELOP_PRINT_ENABLED<sp/>che<sp/>permette<sp/>di<sp/>stampare<sp/>quei<sp/>print<sp/>che<sp/>di<sp/>norma<sp/>non<sp/>sarebbe<sp/>utile<sp/>stampare.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>proviamo<sp/>se<sp/>funziona,<sp/>giusto<sp/>per<sp/>accertarmi<sp/>di<sp/>non<sp/>aver<sp/>scritto<sp/>castronerie</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>funziona<sp/>tutto<sp/>a<sp/>dovere.<sp/>Ottimo.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(logs<sp/>more<sp/>clear<sp/>from<sp/>the<sp/>mission<sp/>manager)&quot;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
@@ -2160,7 +2230,6 @@
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>ma<sp/>provando<sp/>con<sp/>un<sp/>controller<sp/>per<sp/>uno<sp/>skid<sp/>robot<sp/>cosa<sp/>succede?<sp/>magari<sp/>riesco<sp/>a<sp/>farlo<sp/>andare<sp/>meglio</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>vanno<sp/>aggiustati<sp/>i<sp/>guadagni<sp/>dei<sp/>go<sp/>to<sp/>point<sp/>e<sp/>align,<sp/>e<sp/>magari<sp/>introdurre<sp/>anche<sp/>una<sp/>saturation</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aumentare<sp/>la<sp/>mobilità<sp/>del<sp/>robot<sp/>spostando<sp/>le<sp/>ruote<sp/>&quot;passive&quot;<sp/>più<sp/>verso<sp/>il<sp/>centro<sp/>del<sp/>veicolo</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>navigation<sp/>system:<sp/>creare<sp/>un<sp/>controller<sp/>che<sp/>gestisca<sp/>anche<sp/>il<sp/>braccio<sp/>durante<sp/>la<sp/>navigazione<sp/>(magari<sp/>abbassarlo<sp/>per<sp/>rendere<sp/>il<sp/>robot<sp/>più<sp/>stabile)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>

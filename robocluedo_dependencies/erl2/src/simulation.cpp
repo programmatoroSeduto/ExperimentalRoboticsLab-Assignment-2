@@ -9,7 +9,7 @@
 #include <time.h>
 #include <vector>
 
-#define NOT_TESTING false
+#define NOT_TESTING true
 
 /*
 #if NOT_TESTING
@@ -19,7 +19,7 @@
 #endif
 */
 
-#define DIST_THRESH 0.35
+#define DIST_THRESH 0.25
 
 ros::Publisher oracle_pub;
 

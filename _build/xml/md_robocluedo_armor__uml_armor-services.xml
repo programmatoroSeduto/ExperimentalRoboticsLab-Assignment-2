@@ -8,7 +8,7 @@
     <detaileddescription>
 <para><programlisting filename=".toctree"><codeline><highlight class="normal">./armor-services.md</highlight></codeline>
 </programlisting></para>
-<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md155">
+<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md159">
 <title>services schematics</title>
 <para>```{uml}  <programlisting><codeline><highlight class="normal">##<sp/>ADD<sp/>--<sp/>register<sp/>a<sp/>new<sp/>hint<sp/>into<sp/>the<sp/>Ontology</highlight></codeline>
 <codeline></codeline>
@@ -48,7 +48,7 @@
 <para><bold>very important: the node allows only these properties!</bold> it will raise an error if the property hasn&apos;t one of the abovementioned keys; remember to check the <computeroutput>success</computeroutput> flag of the message.</para>
 <para><bold>property names must be written in lowercase!</bold></para>
 </sect1>
-<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md156">
+<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md160">
 <title>FIND – ask for a consistent hint</title>
 <para>the service <computeroutput>/cluedo_armor/find_consistent_h</computeroutput> of type <computeroutput>robocluedo_armor_msgs/FindConsistentHypotheses</computeroutput> is what you need to ask the Ontology for a admissible solution.</para>
 <para>here&apos;s the service file employed by the service:</para>
@@ -97,7 +97,7 @@
 <codeline><highlight class="normal">string<sp/>what</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md157">
+<sect1 id="md_robocluedo_armor__uml_armor-services_1autotoc_md161">
 <title>DEL – discard a hypothesis</title>
 <para>use the service <computeroutput>/cluedo_armor/wrong_hypothesis</computeroutput> of type <computeroutput>robocluedo_armor_msgs/DiscardHypothesis</computeroutput>, whose structure is reported here below:</para>
 <para><programlisting filename=".yaml"><codeline><highlight class="normal">##<sp/>file<sp/>&apos;DiscardHypothesis.srv&apos;</highlight></codeline>

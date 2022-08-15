@@ -1303,7 +1303,7 @@
 </para>
 </sect2>
 <sect2 id="md__docs_dev-log_1autotoc_md66">
-<title>13/08/2022 – mission manager – module testing</title>
+<title>13/08/2022 – mission manager – module testing – test completo</title>
 <para>implementazione del nodo main dell&apos;architettura (fatto questo si passa al testing e si impacchetta tutto)</para>
 <para><itemizedlist>
 <listitem><para>implementazione</para>
@@ -1992,6 +1992,7 @@
 </listitem><listitem><para><emphasis>e ora</emphasis>, indaghiamo (sul senso della vita)<itemizedlist>
 <listitem><para><bold>COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bold></para>
 </listitem><listitem><para>ho fatto un <emphasis>mezzo</emphasis> casino con l&apos;oracolo, ma si risolve facilmente</para>
+</listitem><listitem><para><bold>COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bold></para>
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>visto come vanno le cose posso anche settare direttamente lo SCALING_FACTOR a 0.99</para>
@@ -2003,13 +2004,99 @@
 </listitem><listitem><para><bold>COMMIT</bold> &quot;happy commit!&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md75">
+<sect2 id="md__docs_dev-log_1autotoc_md76">
+<title>15/08/2022 – ultime issues – documentazione del codice e deploy</title>
+<para>anzitutto, un piccolo elenco di quello che devo fare per il deployment:</para>
+<para><itemizedlist>
+<listitem><para>(OK) <ndash/> rimuovere eventuali modalità di backup da in giro per il codice<itemizedlist>
+<listitem><para>erl2 <ref refid="simulation_8cpp" kindref="compound">simulation.cpp</ref> (casomai crea una versione alternativa del nodo)</para>
+</listitem><listitem><para>mission manager</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>revisione del codice<itemizedlist>
+<listitem><para>(OK) <ndash/> migliorare il log dal mission manager</para>
+</listitem><listitem><para>... (magari qualcosa segnato nel TODO?)</para>
+</listitem><listitem><para>ultima volta, il module testing (giusto per essere sicuri)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ultimi diagrammi UML<itemizedlist>
+<listitem><para>con un &quot;dizionario&quot; delle interfacce</para>
+</listitem><listitem><para>elimina i diagrammi sbagliati o troppo vecchi (da questo progetto esiste uno standard)</para>
+</listitem><listitem><para>... (quali mancano?)</para>
+</listitem><listitem><para>... (sequence diagrams?)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ultima prova <emphasis>filmata</emphasis> del sistema in funziona<itemizedlist>
+<listitem><para>prima con la modalità di sviluppo nell&apos;oracolo</para>
+</listitem><listitem><para>poi senza modalità di sviluppo</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>documentazione ausiliaria sui singoli progetti:<itemizedlist>
+<listitem><para>sarebbe meglio iniziare mettendo a posto le toctree in giro per il codice</para>
+</listitem><listitem><para>armor</para>
+</listitem><listitem><para>rosplan</para>
+</listitem><listitem><para>robot</para>
+</listitem><listitem><para>movement controller</para>
+</listitem><listitem><para>mission manager</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>come runnare il progetto - versione definitiva<itemizedlist>
+<listitem><para>launch rapido</para>
+</listitem><listitem><para>launch nodo per nodo (con descrizione del progetto)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>documentazione del codice<itemizedlist>
+<listitem><para>creazione delle cartelle source code con il codice dentro</para>
+</listitem><listitem><para>prima vedi che esce solo così</para>
+</listitem><listitem><para>poi correggi l&apos;output</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>ultima revisione della documentazione del codice</para>
+</listitem><listitem><para>scrittura del README<itemizedlist>
+<listitem><para>struttura (classica) del readme</para>
+</listitem><listitem><para>e scrittura del contenuto (molto può essere rimandato alla documentazione)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e caricamento della documentazione su GitHub</para>
+</listitem></itemizedlist>
+</para>
+<para>devo fare almeno parte di questo lavoro se voglio iniziare il terzo assignment, che consisterà in una leggera modifica di questo secondo assignment e nulla di più.</para>
+<para><hruler/>
+</para>
+<para>andiamo col lavoro:</para>
+<para><itemizedlist>
+<listitem><para>via tutte le modalità di sviluppo<itemizedlist>
+<listitem><para>da simulation</para>
+</listitem><listitem><para>la threshold a 0.35 ieri funzionava bene ... se la abbassassi a 0.3?<itemizedlist>
+<listitem><para>proviamo</para>
+</listitem><listitem><para><emphasis>posso abbassarlo ancora</emphasis>, stavolta a 0.25</para>
+</listitem><listitem><para>anche a 0.25 (la distanza <emphasis>iniziale</emphasis>) pare funzionare, e non dovrebbe missarne nessuno</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><emphasis>direi di lasciare la distanza a 0.25 com&apos;era all&apos;inizio</emphasis></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>già che ci sono, rivedo i log dal mission manager<itemizedlist>
+<listitem><para><emphasis>suspence</emphasis></para>
+</listitem><listitem><para>ora il nodo ha anche DEVELOP_PRINT_ENABLED che permette di stampare quei print che di norma non sarebbe utile stampare.</para>
+</listitem><listitem><para>proviamo se funziona, giusto per accertarmi di non aver scritto castronerie</para>
+</listitem><listitem><para>funziona tutto a dovere. Ottimo.</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (logs more clear from the mission manager)&quot;</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log_1autotoc_md79">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
 </listitem><listitem><para>vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation</para>
-</listitem><listitem><para>aumentare la mobilità del robot spostando le ruote &quot;passive&quot; più verso il centro del veicolo</para>
 </listitem><listitem><para>navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)</para>
 </listitem><listitem><para>documentazione del package ROSPlan</para>
 </listitem><listitem><para>UML finale per ROSPlan</para>
@@ -2042,9 +2129,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md76">
+<sect2 id="md__docs_dev-log_1autotoc_md80">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md77">
+<sect3 id="md__docs_dev-log_1autotoc_md81">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2056,7 +2143,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md78">
+<sect3 id="md__docs_dev-log_1autotoc_md82">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

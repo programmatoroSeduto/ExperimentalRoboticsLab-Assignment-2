@@ -11,10 +11,11 @@
 * 
 ***********************************************/
 
-#define NODE_NAME "robocluedo_mission_manager"
+#define NODE_NAME "RoboCLuedo"
 
 #define LOGSQUARE( str )  "[" << str << "] "
-#define OUTLABEL          LOGSQUARE( NODE_NAME )
+// #define OUTLABEL       LOGSQUARE( NODE_NAME )
+#define OUTLABEL		  NODE_NAME << ": "
 #define TLOG( msg )       ROS_INFO_STREAM( OUTLABEL << msg )
 #define TWARN( msg )      ROS_WARN_STREAM( OUTLABEL << "WARNING: " << msg )
 #define TERR( msg )       ROS_WARN_STREAM( OUTLABEL << "ERROR: " << msg )
@@ -36,6 +37,10 @@
 
 #define WAITKEY_ENABLED false
 #define WAITKEY { if( WAITKEY_ENABLED ) { std::cout << "press ENTER to continue ... " ; std::cin.get( ) ; std::cout << "go!" ; } }
+#define DEVELOP_PRINT_ENABLED false
+#define WTLOG( msg )  { if( DEVELOP_PRINT_ENABLED ) { ROS_INFO_STREAM( OUTLABEL << msg ); } }
+#define WTWARN( msg ) { if( DEVELOP_PRINT_ENABLED ) { ROS_WARN_STREAM( OUTLABEL << msg ); } }
+#define WTERR( msg )  { if( DEVELOP_PRINT_ENABLED ) { ROS_ERR_STREAM( OUTLABEL << msg ); } }
 
 #define SERVICE_ROSPLAN_PIPELINE "/robocluedo/pipeline_manager"
 #define SERVICE_ARMOR_ADD "/cluedo_armor/add_hint"
@@ -141,7 +146,8 @@ public:
 		// the robot has no more waypoints to explore
 		bool last_waypoint = false;
 		
-		TLOG( "mission manager STARTING WORKING CYCLE" );
+		WTLOG( "mission manager STARTING WORKING CYCLE" );
+		TLOG( "who killed Dr black?" );
 		WAITKEY;
 		
 		while( ros::ok( ) )
@@ -150,7 +156,7 @@ public:
 			{
 			case MISSION_STATUS_REPLAN: // landmark
 			{
-				TLOG( "status: " << "MISSION_STATUS_REPLAN" );
+				WTLOG( "status: " << "MISSION_STATUS_REPLAN" );
 				WAITKEY;
 				
 				// make the plan with LANDMARK_REPLAN
@@ -165,7 +171,7 @@ public:
 					else if( !res.success_solve_problem )
 					{
 						if( res.problem_not_solvable )
-							TWARN( "VERY UNEXPECTED! REPLAN PROBLEM NOT SOLVABLE!" ); // IT COULD NOT OCCUR! but eventually ...
+							TERR( "VERY UNEXPECTED! REPLAN PROBLEM NOT SOLVABLE!" ); // IT COULD NOT OCCUR! but eventually ...
 						else
 							TWARN( "unable to solve the plan (unexplained error, maybe from the planner popf?)" );
 					}
@@ -215,12 +221,12 @@ public:
 				// next status (REPLAN success)
 				if( ready_to_solve )
 				{
-					TLOG( "retrying landmark SOLVE after replanning" );
+					WTLOG( "retrying landmark SOLVE after replanning" );
 					this->mission_status = MISSION_STATUS_SOLVE;
 				}
 				else
 				{
-					TLOG( "gotta catch 'em all! NA NA NA NA NA NA" );
+					WTLOG( "gotta catch 'em all! NA NA NA NA NA NA" );
 					this->mission_status = MISSION_STATUS_COLLECT;
 				}
 				last_waypoint = false;
@@ -231,7 +237,7 @@ public:
 			break;
 			case MISSION_STATUS_COLLECT: // landmark
 			{
-				TLOG( "status: " << "MISSION_STATUS_COLLECT" );
+				WTLOG( "status: " << "MISSION_STATUS_COLLECT" );
 				WAITKEY;
 				
 				// make the plan with LANDMARK_COLLECT
@@ -251,7 +257,7 @@ public:
 						}
 						else
 						{
-							TWARN( "landmark COLLECT no longer applicable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
+							WTLOG( "landmark COLLECT no longer applicable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
 							this->mission_status = MISSION_STATUS_ASK_ONTOLOGY;
 							last_waypoint = true;
 						}
@@ -261,7 +267,7 @@ public:
 						if( res.problem_not_solvable )
 						{
 							// each waypoint has been explored (in this case, skip a step)
-							TWARN( "Plan not solvable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
+							TLOG( "Plan not solvable (all the waypoints have been explored) TRYING TO directly SOLVE THE MYSTERY" ); 
 							this->mission_status = MISSION_STATUS_ASK_ONTOLOGY;
 							last_waypoint = true;
 							
@@ -338,7 +344,7 @@ public:
 			break;
 			case MISSION_STATUS_ASK_ONTOLOGY: // armor
 			{
-				TLOG( "status: " << "MISSION_STATUS_ASK_ONTOLOGY" );
+				WTLOG( "status: " << "MISSION_STATUS_ASK_ONTOLOGY" );
 				WAITKEY;
 				
 				// ask the ontology for any complete hypothesis
@@ -356,9 +362,9 @@ public:
 				}
 				
 				// check the number of returned hints from the ontology
+				TLOG( "number of bright ideas until now : " << find_req.response.hyp.size( )  );
 				if( find_req.response.hyp.size( ) > 0 )
 				{
-					TLOG( "(from the ontology) found consistent hypotheses : " << find_req.response.hyp.size( )  );
 					ready_to_solve = true;
 					last_hyp = find_req.response.hyp[0]; // take the first returned
 					this->mission_status = MISSION_STATUS_SOLVE;
@@ -369,13 +375,13 @@ public:
 					
 					if(last_waypoint)
 					{
-						TLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) REPLANNING" );
+						WTLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) REPLANNING" );
 						this->mission_status = MISSION_STATUS_REPLAN;
 					}
 					
 					else
 					{
-						TLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN" );
+						WTLOG( "no brilliant ideas from the RoboCLuedo B.B.B. (Big Brain Bruh) COLLECTING AGAIN" );
 						this->mission_status = MISSION_STATUS_COLLECT;
 					}
 				}
@@ -385,12 +391,12 @@ public:
 			break;
 			case MISSION_STATUS_SOLVE: // landmark
 			{
-				TLOG( "status: " << "MISSION_STATUS_SOLVE" );
+				WTLOG( "status: " << "MISSION_STATUS_SOLVE" );
 				
 				// check ready to solve (just to be super sure)
 				if( !ready_to_solve )
 				{
-					TLOG( "HEYHEYHEY WHAT ARE YOU DOING HERE? NOT READY TO SOLVE! " );
+					TWARN( "HEYHEYHEY WHAT ARE YOU DOING HERE? NOT READY TO SOLVE! " );
 					
 					ready_to_solve = false;
 					this->mission_status = MISSION_STATUS_COLLECT;
@@ -428,7 +434,7 @@ public:
 							//    (see development log)
 							// in this case, the best solution is to REPLAN then SOLVE
 							
-							TLOG( "plan not solvable (need intermediate replanning" );
+							WTLOG( "plan not solvable (need intermediate replanning)" );
 							ready_to_solve = true; // just to be sure ...
 							this->mission_status = MISSION_STATUS_REPLAN;
 							
@@ -512,7 +518,7 @@ public:
 			break;
 			case MISSION_STATUS_ASK_ORACLE: // oracle, armor
 			{
-				TLOG( "status: " << "MISSION_STATUS_ASK_ORACLE" );
+				WTLOG( "status: " << "MISSION_STATUS_ASK_ORACLE" );
 				WAITKEY;
 				
 				// ask the Oracle for the solution of the mystery
@@ -529,22 +535,43 @@ public:
 				}
 				
 				// check the solution
-				TLOG( "Narrator voice: \n\t(wispering) RoboCLuedo thinks that the solution is ID=" << last_hyp.ID );
-				TLOG( "RoboCLuedo: \n\tWELL, " << last_hyp.who << ", DID YOU MURDER Dr. Black ? \n\n\t\tHUH?\n\n" );
-				TLOG( "Oracle: \n\tID=" << solution.response.ID  << " is the way" );
+				TLOG( "\n\tI see everybody here, in the " << last_hyp.where << ", to discover who is the killer. \n\tWell, I caught that." );
+				( ros::Duration( 1 ) ).sleep();
+				TLOG( "\n\tExactly, " << last_hyp.who << ", YOU ARE THE KILLER; right?" );
+				
+				// suspence
+				std::cout << "(suspence...)" << std::endl;
+				( ros::Duration( (rand()%4) +1 ) ).sleep();
+				
+				WTLOG( "from the Oracle: ID[" << solution.response.ID  << "]" );
 				if( solution.response.ID == last_hyp.ID )
 				{
-					TLOG( "gg ez" );
-					TLOG( "==== ID=" << last_hyp.ID << " | where[" << last_hyp.where << "] what[" << last_hyp.what << "] who[" << last_hyp.who << "] ====" );
+					std::cout << last_hyp.who << ": \n\t" << "YES RoboCLuedo, I killed Dr Black! With a " << last_hyp.what << " here! He deserved it! MUHAHAHAH" << std::endl;
+					( ros::Duration( 0.2 ) ).sleep();
+					TLOG( "\n\tPolice! Arrest the killer!" );
+					( ros::Duration( 0.1 ) ).sleep();
+					std::cout << last_hyp.who << ": \n\t" << "I will go back, RoboCLuedo! I gonna kill you all! MUHAHAH" << std::endl;
+					( ros::Duration( 0.5 ) ).sleep();
+					TLOG( "\n\tanother mystery solved thanks to my wit. " );
+					
+					( ros::Duration( 2 ) ).sleep();
+					
+					WTLOG( "==== ID=" << last_hyp.ID << " | where[" << last_hyp.where << "] what[" << last_hyp.what << "] who[" << last_hyp.who << "] ====" );
 					
 					WAITKEY;
 					return;
 				}
 				else
 				{
-					TLOG( "" << last_hyp.who << ": \n\tNO, RoboCLuedo, \n\tI'm not the killer. ");
-					TLOG( "RoboCLuedo:\n\tWho killed Dr. Black is still there, in this room.\n\t WE MUST FIND THAT." );
-					TLOG( "\t(where's the waiter?)" );
+					std::cout << last_hyp.who << ": \n\t" << "NO RoboCLuedo, I'm not the killer. " << std::endl;
+					( ros::Duration( 0.5 ) ).sleep();
+					std::cout << "OOOOOOOOOOOoooooouooooouuuuuuuuhhhhhh" << std::endl;
+					( ros::Duration( 2 ) ).sleep();
+					
+					TLOG( "\n\tUnderstood. \n\tWho killed Dr. Black is still there, in this room, in this house.\n\t WE MUST FIND THAT." );
+					( ros::Duration( 0.5 ) ).sleep();
+					std::cout << last_hyp.who << ": \n\t" << "hey, where did the majordomo go?" << std::endl;
+					( ros::Duration( 0.2 ) ).sleep();
 					
 					// mark the hint as wrong
 					robocluedo_armor_msgs::DiscardHypothesis discard_note;
@@ -559,7 +586,7 @@ public:
 						std_srvs::Trigger backup_cmd;
 						if( !cl_armor_backup.call( backup_cmd ) || !backup_cmd.response.success )
 						{
-							TWARN( "ontologybackup failed (retrying later ...)" );
+							WTWARN( "ontologybackup failed (retrying later ...)" );
 						}
 					}
 					
@@ -647,7 +674,7 @@ public:
 	/** receive a hint from the Oracle */
 	void cbk_oracle_hint( const erl2::ErlOracle::ConstPtr& hint )
 	{
-		TLOG( "(cbk_oracle_hint, add hint) received hint with content (ID=" << hint->ID << ", key=" << hint->key << ", value=" << hint->value << ")" );
+		TLOG( "A clue, RoboWatson! It says (ID=" << hint->ID << ", key=" << hint->key << ", value=" << hint->value << ")" );
 		
 		// check validity
 		if(is_valid_hint( hint ))
@@ -670,7 +697,10 @@ public:
 				return;
 			}
 			
-			TLOG( "(cbk_oracle_hint, add hint) valid hint received and registered" );
+			if( (rand()%2) > 0 )
+				TLOG( "Seems reasonable." );
+			else
+				std::cout << "\t(RoboWatson is taking notes...)" << std::endl;
 			
 			std_srvs::Trigger backup_cmd;
 			if( !cl_armor_backup.call( backup_cmd ) || !backup_cmd.response.success )
@@ -679,7 +709,7 @@ public:
 			}
 		}
 		else
-			TLOG( "(cbk_oracle_hint, add hint) NOT VALID hint, skip" );
+			TLOG( "It doesn't make sense." );
 	}
 	
 	/** check wether the hint is valid or not */
@@ -809,7 +839,7 @@ void shut_msg( int sig )
 
 int main( int argc, char* argv[] )
 {
-	ros::init( argc, argv, NODE_NAME, ros::init_options::NoSigintHandler );
+	ros::init( argc, argv, "robocluedo_mission_manager", ros::init_options::NoSigintHandler );
 	signal( SIGINT, shut_msg );
 	ros::NodeHandle nh;
 	

@@ -127,8 +127,9 @@
 <li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#mission-manager-module-testing">13/08/2022 – mission manager – module testing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-manager-module-testing-test-completo">13/08/2022 – mission manager – module testing – test completo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#prova-del-sistema-completo">14/08/2022 – prova del sistema completo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ultime-issues-documentazione-del-codice-e-deploy">15/08/2022 – ultime issues – documentazione del codice e deploy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#todo">TODO</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
@@ -1717,8 +1718,8 @@ rosrun robocluedo_movement_controller manipulation_controller <span class="m">2<
 </ul>
 </div>
 <hr class="docutils" />
-<div class="section" id="mission-manager-module-testing">
-<h2>13/08/2022 – mission manager – module testing<a class="headerlink" href="#mission-manager-module-testing" title="Permalink to this heading"></a></h2>
+<div class="section" id="mission-manager-module-testing-test-completo">
+<h2>13/08/2022 – mission manager – module testing – test completo<a class="headerlink" href="#mission-manager-module-testing-test-completo" title="Permalink to this heading"></a></h2>
 <p>implementazione del nodo main dell’architettura (fatto questo si passa al testing e si impacchetta tutto)</p>
 <ul>
 <li><p>implementazione</p></li>
@@ -2582,6 +2583,7 @@ root@3b17871017fd:~/ros_ws/src/erl2-new#
 <ul class="simple">
 <li><p><strong>COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</strong></p></li>
 <li><p>ho fatto un <em>mezzo</em> casino con l’oracolo, ma si risolve facilmente</p></li>
+<li><p><strong>COMPILAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</strong></p></li>
 </ul>
 </li>
 <li><p>visto come vanno le cose posso anche settare direttamente lo SCALING_FACTOR a 0.99</p></li>
@@ -2669,12 +2671,104 @@ root@3b17871017fd:~/ros_ws/src/erl2-new#
 <li><p><strong>COMMIT</strong> “happy commit!”</p></li>
 </ul>
 </div>
+<hr class="docutils" />
+<div class="section" id="ultime-issues-documentazione-del-codice-e-deploy">
+<h2>15/08/2022 – ultime issues – documentazione del codice e deploy<a class="headerlink" href="#ultime-issues-documentazione-del-codice-e-deploy" title="Permalink to this heading"></a></h2>
+<p>anzitutto, un piccolo elenco di quello che devo fare per il deployment:</p>
+<ul class="simple">
+<li><p>(OK) – rimuovere eventuali modalità di backup da in giro per il codice</p>
+<ul>
+<li><p>erl2 simulation.cpp (casomai crea una versione alternativa del nodo)</p></li>
+<li><p>mission manager</p></li>
+</ul>
+</li>
+<li><p>revisione del codice</p>
+<ul>
+<li><p>(OK) – migliorare il log dal mission manager</p></li>
+<li><p>… (magari qualcosa segnato nel TODO?)</p></li>
+<li><p>ultima volta, il module testing (giusto per essere sicuri)</p></li>
+</ul>
+</li>
+<li><p>ultimi diagrammi UML</p>
+<ul>
+<li><p>con un “dizionario” delle interfacce</p></li>
+<li><p>elimina i diagrammi sbagliati o troppo vecchi (da questo progetto esiste uno standard)</p></li>
+<li><p>… (quali mancano?)</p></li>
+<li><p>… (sequence diagrams?)</p></li>
+</ul>
+</li>
+<li><p>ultima prova <em>filmata</em> del sistema in funziona</p>
+<ul>
+<li><p>prima con la modalità di sviluppo nell’oracolo</p></li>
+<li><p>poi senza modalità di sviluppo</p></li>
+</ul>
+</li>
+<li><p>documentazione ausiliaria sui singoli progetti:</p>
+<ul>
+<li><p>sarebbe meglio iniziare mettendo a posto le toctree in giro per il codice</p></li>
+<li><p>armor</p></li>
+<li><p>rosplan</p></li>
+<li><p>robot</p></li>
+<li><p>movement controller</p></li>
+<li><p>mission manager</p></li>
+</ul>
+</li>
+<li><p>come runnare il progetto - versione definitiva</p>
+<ul>
+<li><p>launch rapido</p></li>
+<li><p>launch nodo per nodo (con descrizione del progetto)</p></li>
+</ul>
+</li>
+<li><p>documentazione del codice</p>
+<ul>
+<li><p>creazione delle cartelle source code con il codice dentro</p></li>
+<li><p>prima vedi che esce solo così</p></li>
+<li><p>poi correggi l’output</p></li>
+</ul>
+</li>
+<li><p>ultima revisione della documentazione del codice</p></li>
+<li><p>scrittura del README</p>
+<ul>
+<li><p>struttura (classica) del readme</p></li>
+<li><p>e scrittura del contenuto (molto può essere rimandato alla documentazione)</p></li>
+</ul>
+</li>
+<li><p>e caricamento della documentazione su GitHub</p></li>
+</ul>
+<p>devo fare almeno parte di questo lavoro se voglio iniziare il terzo assignment, che consisterà in una leggera modifica di questo secondo assignment e nulla di più.</p>
+<hr class="docutils" />
+<p>andiamo col lavoro:</p>
+<ul class="simple">
+<li><p>via tutte le modalità di sviluppo</p>
+<ul>
+<li><p>da simulation</p></li>
+<li><p>la threshold a 0.35 ieri funzionava bene … se la abbassassi a 0.3?</p>
+<ul>
+<li><p>proviamo</p></li>
+<li><p><em>posso abbassarlo ancora</em>, stavolta a 0.25</p></li>
+<li><p>anche a 0.25 (la distanza <em>iniziale</em>) pare funzionare, e non dovrebbe missarne nessuno</p></li>
+</ul>
+</li>
+<li><p><em>direi di lasciare la distanza a 0.25 com’era all’inizio</em></p></li>
+</ul>
+</li>
+<li><p>già che ci sono, rivedo i log dal mission manager</p>
+<ul>
+<li><p><em>suspence</em></p></li>
+<li><p>ora il nodo ha anche DEVELOP_PRINT_ENABLED che permette di stampare quei print che di norma non sarebbe utile stampare.</p></li>
+<li><p>proviamo se funziona, giusto per accertarmi di non aver scritto castronerie</p></li>
+<li><p>funziona tutto a dovere. Ottimo.</p></li>
+<li><p><strong>COMMIT</strong>: “deployment (logs more clear from the mission manager)”</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</p></li>
 <li><p>vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation</p></li>
-<li><p>aumentare la mobilità del robot spostando le ruote “passive” più verso il centro del veicolo</p></li>
 <li><p>navigation system: creare un controller che gestisca anche il braccio durante la navigazione (magari abbassarlo per rendere il robot più stabile)</p></li>
 <li><p>documentazione del package ROSPlan</p></li>
 <li><p>UML finale per ROSPlan</p></li>
