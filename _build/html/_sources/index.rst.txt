@@ -22,14 +22,16 @@ RCL -- the RoboCLuedo Project - part 2
    :caption: Packages Documentation
    :glob:
    
-   ./robocluedo_armor_msgs/index.rst
    ./robocluedo_armor/index.rst
+   ./robocluedo_armor_msgs/index.rst
    
    ./robocluedo_rosplan/index.rst
    ./robocluedo_rosplan_msgs/index.rst
    
    ./robocluedo_movement_controller/index.rst
    ./robocluedo_movement_controller_msgs/index.rst
+   
+   ./robocluedo_mission_manager/index.rst
    
    ./robocluedo_module_testing/index.rst
 

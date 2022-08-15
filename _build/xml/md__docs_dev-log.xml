@@ -2182,8 +2182,15 @@
 </listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (setup code docs)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>mi sono dimenticato il mission manager!</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (pkg mission manager docs setup)&quot;</para>
+</listitem></itemizedlist>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md82">
+<sect2 id="md__docs_dev-log_1autotoc_md83">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -2220,9 +2227,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md83">
+<sect2 id="md__docs_dev-log_1autotoc_md84">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md84">
+<sect3 id="md__docs_dev-log_1autotoc_md85">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2234,7 +2241,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md85">
+<sect3 id="md__docs_dev-log_1autotoc_md86">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

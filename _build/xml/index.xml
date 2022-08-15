@@ -622,7 +622,19 @@
   </compound>
   <compound refid="worlds-user-manual_8md_8txt" kind="file"><name>worlds-user-manual.md.txt</name>
   </compound>
+  <compound refid="manipulation__unit_8rst_8txt" kind="file"><name>manipulation_unit.rst.txt</name>
+  </compound>
+  <compound refid="mission__manager_8rst_8txt" kind="file"><name>mission_manager.rst.txt</name>
+  </compound>
+  <compound refid="nagivation__unit_8rst_8txt" kind="file"><name>nagivation_unit.rst.txt</name>
+  </compound>
   <compound refid="rosplan__simulated__motion__system_8rst_8txt" kind="file"><name>rosplan_simulated_motion_system.rst.txt</name>
+  </compound>
+  <compound refid="test__armor_8rst_8txt" kind="file"><name>test_armor.rst.txt</name>
+  </compound>
+  <compound refid="test__armor__cluedo_8rst_8txt" kind="file"><name>test_armor_cluedo.rst.txt</name>
+  </compound>
+  <compound refid="test__armor__tools_8rst_8txt" kind="file"><name>test_armor_tools.rst.txt</name>
   </compound>
   <compound refid="_n_o_2test-armor_8rst_8txt" kind="file"><name>test-armor.rst.txt</name>
   </compound>
@@ -1328,6 +1340,8 @@
   </compound>
   <compound refid="dir_0e6f9755100fc2a23cff7eab990140c6" kind="dir"><name>_build/html/_sources/robocluedo_armor/_code_reference</name>
   </compound>
+  <compound refid="dir_1d4ff328274c2379bba68fca868921ce" kind="dir"><name>_build/html/_sources/robocluedo_mission_manager/_code_reference</name>
+  </compound>
   <compound refid="dir_4d718603d8f61fba543a6e4e75286e46" kind="dir"><name>_build/html/_sources/robocluedo_module_testing/_code_reference</name>
   </compound>
   <compound refid="dir_045d57909f0810da1946dd6a11c0081b" kind="dir"><name>_build/html/_sources/robocluedo_movement_controller/_code_reference</name>
@@ -1366,9 +1380,9 @@
   </compound>
   <compound refid="dir_44d758c2bba68cef1a4747afec28b347" kind="dir"><name>robocluedo_movement_controller/_uml</name>
   </compound>
-  <compound refid="dir_6a6363af669b13abf77faa345548e85c" kind="dir"><name>_build/html/_sources/robocluedo_armor/_uml</name>
-  </compound>
   <compound refid="dir_1fcca81b52f889fab1c5f049bd5dad05" kind="dir"><name>robocluedo_rosplan/_uml</name>
+  </compound>
+  <compound refid="dir_6a6363af669b13abf77faa345548e85c" kind="dir"><name>_build/html/_sources/robocluedo_armor/_uml</name>
   </compound>
   <compound refid="dir_654c8e957ef41f3280730cd2bcdfb950" kind="dir"><name>_uml</name>
   </compound>
@@ -1376,9 +1390,9 @@
   </compound>
   <compound refid="dir_c7828b997c47c49db066caa641de4284" kind="dir"><name>_build/html/_sources/robocluedo_module_testing/_uml</name>
   </compound>
-  <compound refid="dir_902df433afe12a2cb35843f18d7abc39" kind="dir"><name>_build/html/_sources/robocluedo_movement_controller/_uml</name>
-  </compound>
   <compound refid="dir_d39b0442bb772aacf819816fff4c7bd3" kind="dir"><name>_build/html/_sources/_uml</name>
+  </compound>
+  <compound refid="dir_902df433afe12a2cb35843f18d7abc39" kind="dir"><name>_build/html/_sources/robocluedo_movement_controller/_uml</name>
   </compound>
   <compound refid="dir_9cd68c2547acfb69855b321ccefa8574" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/_uml</name>
   </compound>
@@ -1416,9 +1430,9 @@
   </compound>
   <compound refid="dir_0a3211769d1f963a81afb52d8724eb29" kind="dir"><name>_build/html/_sources/robocluedo_module_testing/_uml/NO</name>
   </compound>
-  <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
-  </compound>
   <compound refid="dir_7fd1181a89a56a8b2e96db9936551fb0" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl</name>
+  </compound>
+  <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
   </compound>
   <compound refid="dir_7253b836e217ee0f558595e38a19defa" kind="dir"><name>robocluedo_dependencies/protege</name>
   </compound>
@@ -1438,17 +1452,17 @@
   </compound>
   <compound refid="dir_96755d0a0c084ece6cd5082aa4527753" kind="dir"><name>robocluedo_mission_manager</name>
   </compound>
-  <compound refid="dir_7ace0c494f2656716c52bacac0d50c3f" kind="dir"><name>_build/html/_sources/robocluedo_module_testing</name>
-  </compound>
   <compound refid="dir_0c7c9d8ce38b319ef680cfddfa679c53" kind="dir"><name>robocluedo_module_testing</name>
+  </compound>
+  <compound refid="dir_7ace0c494f2656716c52bacac0d50c3f" kind="dir"><name>_build/html/_sources/robocluedo_module_testing</name>
   </compound>
   <compound refid="dir_07f6874c9caa7d9379a0aa740036b0fb" kind="dir"><name>_build/html/_sources/robocluedo_movement_controller</name>
   </compound>
   <compound refid="dir_2de61fade426475b4d13155ac01722a8" kind="dir"><name>robocluedo_movement_controller</name>
   </compound>
-  <compound refid="dir_722eb30ca9e2329f1eb92bbe01457ade" kind="dir"><name>robocluedo_movement_controller_msgs</name>
-  </compound>
   <compound refid="dir_28ad2caf141a50e2372e63437e5e60c6" kind="dir"><name>_build/html/_sources/robocluedo_movement_controller_msgs</name>
+  </compound>
+  <compound refid="dir_722eb30ca9e2329f1eb92bbe01457ade" kind="dir"><name>robocluedo_movement_controller_msgs</name>
   </compound>
   <compound refid="dir_0bcc7debfa214158000ea320167ae841" kind="dir"><name>_build/html/_sources/robocluedo_rosplan/pddl/robocluedo_old</name>
   </compound>
@@ -1456,23 +1470,23 @@
   </compound>
   <compound refid="dir_f65f2cb6d7026b6299d71273a55fa83c" kind="dir"><name>robocluedo_robot</name>
   </compound>
-  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
-  </compound>
   <compound refid="dir_491f45b8c84f891ab332eebbf76e03c9" kind="dir"><name>robocluedo_rosplan</name>
   </compound>
-  <compound refid="dir_de4a62721825576670555fae0e93d072" kind="dir"><name>robocluedo_rosplan/include/robocluedo_rosplan_actions</name>
+  <compound refid="dir_cf928de809e538173d01498ec1841ee9" kind="dir"><name>_build/html/_sources/robocluedo_rosplan</name>
   </compound>
   <compound refid="dir_7e75f3d459997a3bda519bea1280dc2e" kind="dir"><name>robocluedo_rosplan/src/robocluedo_rosplan_actions</name>
   </compound>
-  <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
+  <compound refid="dir_de4a62721825576670555fae0e93d072" kind="dir"><name>robocluedo_rosplan/include/robocluedo_rosplan_actions</name>
   </compound>
   <compound refid="dir_a7cfc6dd926d5e88bf72c732ed4cf86b" kind="dir"><name>_build/html/_sources/robocluedo_rosplan_msgs</name>
   </compound>
+  <compound refid="dir_4b545d03e0a23b48d762cf60f3577655" kind="dir"><name>robocluedo_rosplan_msgs</name>
+  </compound>
   <compound refid="dir_22862a0f699997d81529825bd9bf98f2" kind="dir"><name>robocluedo_dependencies/robocluedo_urdf_model</name>
   </compound>
-  <compound refid="dir_fa5ae3c756c3e4590e39154bd032dea4" kind="dir"><name>robocluedo_movement_controller/scripts</name>
-  </compound>
   <compound refid="dir_6b971339f4550cf15d3fade61b081d01" kind="dir"><name>robocluedo_module_testing/scripts</name>
+  </compound>
+  <compound refid="dir_fa5ae3c756c3e4590e39154bd032dea4" kind="dir"><name>robocluedo_movement_controller/scripts</name>
   </compound>
   <compound refid="dir_e1cd440dd794230a2b27c099159b1776" kind="dir"><name>robocluedo_rosplan/scripts</name>
   </compound>
@@ -1480,17 +1494,17 @@
   </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
   </compound>
-  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
+  <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
+  </compound>
+  <compound refid="dir_7cdcca042c9ec2187b25f38298e09291" kind="dir"><name>robocluedo_movement_controller/src</name>
+  </compound>
+  <compound refid="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir"><name>robocluedo_mission_manager/src</name>
   </compound>
   <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
   </compound>
   <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
-  <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
-  </compound>
-  <compound refid="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir"><name>robocluedo_mission_manager/src</name>
-  </compound>
-  <compound refid="dir_7cdcca042c9ec2187b25f38298e09291" kind="dir"><name>robocluedo_movement_controller/src</name>
+  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
   </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
   </compound>

@@ -2300,6 +2300,11 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>rosplan</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(setup<sp/>code<sp/>docs)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>mi<sp/>sono<sp/>dimenticato<sp/>il<sp/>mission<sp/>manager!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(pkg<sp/>mission<sp/>manager<sp/>docs<sp/>setup)&quot;</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

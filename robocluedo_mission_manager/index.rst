@@ -6,6 +6,27 @@ this is the center of the architecture for the robocluedo project.
 
 
 .. toctree::
+	:caption: User Documentation
+	:glob:
+	
+	./_docs/*
+
+
+.. toctree::
+	:caption: UML diagrams
+	:glob:
+	
+	./_uml/*
+
+
+.. toctree::
+	:caption: code reference
+	:glob:
+	
+	./_code_reference/*
+
+
+.. toctree::
 	:caption: Package Code Documentation
 	:glob:
 	
@@ -18,17 +39,3 @@ this is the center of the architecture for the robocluedo project.
 	:glob:
 	
 	./_examples/*
-
-
-.. toctree::
-	:caption: Other User Documentation
-	:glob:
-	
-	./_docs/*
-
-
-.. toctree::
-	:caption: UML diagrams
-	:glob:
-	
-	./_uml/*

@@ -2291,6 +2291,11 @@ dopo questo excursus che mi ha solo fatto venire il nervoso, andiamo avanti
 	- rosplan
 - **COMMIT**: "deployment (setup code docs)"
 
+--- 
+
+- mi sono dimenticato il mission manager!
+- **COMMIT**: "deployment (pkg mission manager docs setup)"
+
 
 
 
