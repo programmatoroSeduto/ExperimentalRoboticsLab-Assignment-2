@@ -2762,8 +2762,62 @@ root@3b17871017fd:~/ros_ws/src/erl2-new#
 </ul>
 </li>
 </ul>
-</div>
 <hr class="docutils" />
+<p>ora, i diagrammi UML mancanti. direi di andare per package:</p>
+<ul class="simple">
+<li><p>giusto per non doverli riscrivere tutte le volte, ecco qualche template per i servizi e i topic in UML: (avrei dovuto fare prima questo lavoro…)</p></li>
+</ul>
+<p><strong>topics</strong>:</p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>\```
+@startuml
+	
+() &quot;/???&quot; as TOPIC_???
+&#39;&#39;&#39; TOPIC_??? &lt;-- &quot;pub&quot; NODE_???
+&#39;&#39;&#39; TOPIC_??? --&gt; &quot;sub&quot; NODE_???
+note on link: ???/???.msg
+	
+@enduml
+\```
+</pre></div>
+</div>
+<p><strong>services:</strong></p>
+<div class="highlight-guess notranslate"><div class="highlight"><pre><span></span>\```
+@startuml
+
+() &quot;/???&quot; as SRV_???
+&#39;&#39;&#39; SRV_??? &lt;-- &quot;srv&quot; NODE_???
+&#39;&#39;&#39; SRV_??? --&gt; &quot;cl&quot; NODE_???
+note on link: ???/???.srv
+
+@enduml
+\```
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>iniziamo dal package di aRMOR e armor msgs</p>
+<ul>
+<li><p>documentazione delle interfacce</p></li>
+<li><p>ora c’è anche un giga UML per aRMOR, direi che siamo soddisfatti</p></li>
+<li><p>mancano gli esempi, che mi tocca riconvertire da Doxygen a Sphinx</p>
+<ul>
+<li><p>peccato però, lo stile di Doxygen mi piaceva abbastanza … graficamente orrendo, ma metteva i link belli sistemati in automatico</p></li>
+</ul>
+</li>
+<li><p>e serve anche un documento in cui trascrivere i comandi aRMOR dal module testing</p></li>
+<li><p>ora manca solo la documentazione del codice, che peraltro è già fatta: devo solo espanderla</p></li>
+<li><p>se non ricordo male, avevo scritto anche delle informazioni su come configurare il componente… al vecchio progetto!</p></li>
+</ul>
+</li>
+<li><p>mi sono accorto che nel package erano rimasti dei vecchi parametri … togliendoli non esploder aRMOR, vero?</p>
+<ul>
+<li><p>ok ha funzionato tutto, quindi quei parametri erano inutili qui</p></li>
+<li><p>posso anche eliminare i file contenenti gli items (la cartella cluedo items)</p></li>
+</ul>
+</li>
+<li><p>e con aRMOR abbiamo chiuso!</p></li>
+<li><p><strong>COMMIT</strong>: “deployment (armor documentation)”</p></li>
+</ul>
+</div>
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <ul class="simple">

@@ -2091,6 +2091,38 @@
 </para>
 <para><hruler/>
 </para>
+<para>ora, i diagrammi UML mancanti. direi di andare per package:</para>
+<para><itemizedlist>
+<listitem><para>giusto per non doverli riscrivere tutte le volte, ecco qualche template per i servizi e i topic in UML: (avrei dovuto fare prima questo lavoro...)</para>
+</listitem></itemizedlist>
+</para>
+<para><bold>topics</bold>:</para>
+<para><programlisting></programlisting></para>
+<para>``` <programlisting><codeline><highlight class="normal">**services:**</highlight></codeline>
+</programlisting></para>
+<para>```  `<computeroutput> </computeroutput>`</para>
+<para><itemizedlist>
+<listitem><para>iniziamo dal package di aRMOR e armor msgs<itemizedlist>
+<listitem><para>documentazione delle interfacce</para>
+</listitem><listitem><para>ora c&apos;è anche un giga UML per aRMOR, direi che siamo soddisfatti</para>
+</listitem><listitem><para>mancano gli esempi, che mi tocca riconvertire da Doxygen a Sphinx<itemizedlist>
+<listitem><para>peccato però, lo stile di Doxygen mi piaceva abbastanza ... graficamente orrendo, ma metteva i link belli sistemati in automatico</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e serve anche un documento in cui trascrivere i comandi aRMOR dal module testing</para>
+</listitem><listitem><para>ora manca solo la documentazione del codice, che peraltro è già fatta: devo solo espanderla</para>
+</listitem><listitem><para>se non ricordo male, avevo scritto anche delle informazioni su come configurare il componente... al vecchio progetto!</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>mi sono accorto che nel package erano rimasti dei vecchi parametri ... togliendoli non esploder aRMOR, vero?<itemizedlist>
+<listitem><para>ok ha funzionato tutto, quindi quei parametri erano inutili qui</para>
+</listitem><listitem><para>posso anche eliminare i file contenenti gli items (la cartella cluedo items)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e con aRMOR abbiamo chiuso!</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (armor documentation)&quot;</para>
+</listitem></itemizedlist>
+</para>
 </sect2>
 <sect2 id="md__docs_dev-log_1autotoc_md79">
 <title>TODO</title>

@@ -137,7 +137,6 @@
         <references refid="manipulation__controller_8cpp_1a05867d1976b01f30e107a897c81eab1b" compoundref="manipulation__controller_8cpp" startline="39">POSE_NAME_FRONT_LOW</references>
         <references refid="manipulation__controller_8cpp_1a667ed3e8e9a6a9689a6c0228ef1fc062" compoundref="manipulation__controller_8cpp" startline="34">POSE_FRONT_HIGH</references>
         <references refid="manipulation__controller_8cpp_1aed64b60baca3db44b4f6f1672b66aef3" compoundref="manipulation__controller_8cpp" startline="40">POSE_NAME_FRONT_HIGH</references>
-        <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
         <references refid="manipulation__controller_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" compoundref="manipulation__controller_8cpp" startline="23">SS</references>
         <references refid="manipulation__controller_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" compoundref="manipulation__controller_8cpp" startline="24">SSS</references>
         <references refid="manipulation__controller_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="manipulation__controller_8cpp" startline="6">TLOG</references>

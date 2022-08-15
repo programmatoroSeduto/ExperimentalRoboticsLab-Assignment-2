@@ -2209,7 +2209,53 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">ora,<sp/>i<sp/>diagrammi<sp/>UML<sp/>mancanti.<sp/>direi<sp/>di<sp/>andare<sp/>per<sp/>package:</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">-<sp/>giusto<sp/>per<sp/>non<sp/>doverli<sp/>riscrivere<sp/>tutte<sp/>le<sp/>volte,<sp/>ecco<sp/>qualche<sp/>template<sp/>per<sp/>i<sp/>servizi<sp/>e<sp/>i<sp/>topic<sp/>in<sp/>UML:<sp/>(avrei<sp/>dovuto<sp/>fare<sp/>prima<sp/>questo<sp/>lavoro...)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**topics**:</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/???&quot;<sp/>as<sp/>TOPIC_???</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>TOPIC_???<sp/>&lt;--<sp/>&quot;pub&quot;<sp/>NODE_???</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>TOPIC_???<sp/>--&gt;<sp/>&quot;sub&quot;<sp/>NODE_???</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>???/???.msg</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">**services:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">@startuml</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">()<sp/>&quot;/???&quot;<sp/>as<sp/>SRV_???</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>SRV_???<sp/>&lt;--<sp/>&quot;srv&quot;<sp/>NODE_???</highlight></codeline>
+<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>SRV_???<sp/>--&gt;<sp/>&quot;cl&quot;<sp/>NODE_???</highlight></codeline>
+<codeline><highlight class="normal">note<sp/>on<sp/>link:<sp/>???/???.srv</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">@enduml</highlight></codeline>
+<codeline><highlight class="normal">\```</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>iniziamo<sp/>dal<sp/>package<sp/>di<sp/>aRMOR<sp/>e<sp/>armor<sp/>msgs</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>delle<sp/>interfacce</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>c&apos;è<sp/>anche<sp/>un<sp/>giga<sp/>UML<sp/>per<sp/>aRMOR,<sp/>direi<sp/>che<sp/>siamo<sp/>soddisfatti</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mancano<sp/>gli<sp/>esempi,<sp/>che<sp/>mi<sp/>tocca<sp/>riconvertire<sp/>da<sp/>Doxygen<sp/>a<sp/>Sphinx</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>peccato<sp/>però,<sp/>lo<sp/>stile<sp/>di<sp/>Doxygen<sp/>mi<sp/>piaceva<sp/>abbastanza<sp/>...<sp/>graficamente<sp/>orrendo,<sp/>ma<sp/>metteva<sp/>i<sp/>link<sp/>belli<sp/>sistemati<sp/>in<sp/>automatico</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>serve<sp/>anche<sp/>un<sp/>documento<sp/>in<sp/>cui<sp/>trascrivere<sp/>i<sp/>comandi<sp/>aRMOR<sp/>dal<sp/>module<sp/>testing</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>manca<sp/>solo<sp/>la<sp/>documentazione<sp/>del<sp/>codice,<sp/>che<sp/>peraltro<sp/>è<sp/>già<sp/>fatta:<sp/>devo<sp/>solo<sp/>espanderla</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>se<sp/>non<sp/>ricordo<sp/>male,<sp/>avevo<sp/>scritto<sp/>anche<sp/>delle<sp/>informazioni<sp/>su<sp/>come<sp/>configurare<sp/>il<sp/>componente...<sp/>al<sp/>vecchio<sp/>progetto!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>mi<sp/>sono<sp/>accorto<sp/>che<sp/>nel<sp/>package<sp/>erano<sp/>rimasti<sp/>dei<sp/>vecchi<sp/>parametri<sp/>...<sp/>togliendoli<sp/>non<sp/>esploder<sp/>aRMOR,<sp/>vero?<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ok<sp/>ha<sp/>funzionato<sp/>tutto,<sp/>quindi<sp/>quei<sp/>parametri<sp/>erano<sp/>inutili<sp/>qui</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>anche<sp/>eliminare<sp/>i<sp/>file<sp/>contenenti<sp/>gli<sp/>items<sp/>(la<sp/>cartella<sp/>cluedo<sp/>items)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>e<sp/>con<sp/>aRMOR<sp/>abbiamo<sp/>chiuso!</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(armor<sp/>documentation)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

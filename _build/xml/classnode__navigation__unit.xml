@@ -194,8 +194,6 @@
         <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="18">TLOG</references>
         <references refid="navigation__unit_8cpp_1a256d3c2a228d8927d1052be67b95c0c6" compoundref="navigation__unit_8cpp" startline="44">NAV_ALGO_BUG_M</references>
         <references refid="navigation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="navigation__unit_8cpp" startline="19">TWARN</references>
-        <references refid="rosplan-kb_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="rosplan-kb_8md_8txt" startline="251">res</references>
-        <references refid="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" compoundref="erl2-oracle-user-manual_8md_8txt" startline="127">r</references>
         <referencedby refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" compoundref="navigation__unit_8cpp" startline="53" endline="84">node_navigation_unit</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__navigation__unit_1a38f8c50c557734f1b3e8f462f8a01cf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">

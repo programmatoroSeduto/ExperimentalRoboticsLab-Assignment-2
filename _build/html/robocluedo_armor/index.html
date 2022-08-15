@@ -30,7 +30,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="aRMOR UML CLASS – robocluedo armor" href="_uml/armor-interface-class-diagram.html" />
+    <link rel="next" title="aRMOR commands" href="_docs/armor-commands.html" />
     <link rel="prev" title="PKG DOCS – robocluedo_armor_msgs" href="../robocluedo_armor_msgs/index.html" /> 
 </head>
 
@@ -58,9 +58,19 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PKG DOCS – robocluedo armor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-interface-class-diagram.html">aRMOR UML CLASS – robocluedo armor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-commands.html">aRMOR commands</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-run.html">DOCS – how to run robocluedo armor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-use.html">DOCS – HOW TO use RoboCLuedo aRMOR interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_uml/armor-old-schematics.html">aRMOR UML CLASS – old schematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-services.html">DOCS – aRMOR interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-uml.html">UML – aRMOR elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-cluedo.html">CODE REFERENCE – class aRMOR CLuedo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-tools.html">CODE REFERENCE – class aRMOR Tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/cluedo-armor-interface.html">CODE REFERENCE – node CLuedo aRMOR interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html">ARMOR CLUEDO EXAMPLES – 1 – Working on Individuals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html#armor-cluedo-examples-2-working-with-properties">ARMOR CLUEDO EXAMPLES – 2 – Working with properties</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html#armor-tools-examples-3-reasoning-workflow">ARMOR TOOLS EXAMPLES – 3 – Reasoning Workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_tools.html">ARMOR TOOLS EXAMPLES – 1 – Essential usage of ArmorTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_tools.html#armor-tools-examples-2-the-quickest-way-to-use-armortools">ARMOR TOOLS EXAMPLES – 2 – The quickest way to use ArmorTools</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
@@ -123,26 +133,92 @@
   <div class="section" id="pkg-docs-robocluedo-armor">
 <h1>PKG DOCS – robocluedo armor<a class="headerlink" href="#pkg-docs-robocluedo-armor" title="Permalink to this heading"></a></h1>
 <p>this package contains nodes and libraries to communicate with the aRMOR ontology in a more convenient way.</p>
-<div class="toctree-wrapper compound">
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>see the official project on GitHub</strong> : <a class="reference external" href="https://github.com/EmaroLab/armor#armor">aRMOR on GitHub</a></p>
 </div>
 <div class="toctree-wrapper compound">
-</div>
-<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_docs/armor-commands.html">aRMOR commands</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/armor-how-to-run.html">DOCS – how to run robocluedo armor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-run.html#ontology-paths-configuration">Ontology paths configuration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-run.html#launch-file">launch file</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_docs/armor-how-to-run.html#expected-output">expected output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/armor-how-to-use.html">DOCS – HOW TO use RoboCLuedo aRMOR interface</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-use.html#services-schematics">services schematics</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-use.html#add-register-a-new-hint-into-the-ontology">ADD – register a new hint into the Ontology</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-use.html#find-ask-for-a-consistent-hint">FIND – ask for a consistent hint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/armor-how-to-use.html#del-discard-a-hypothesis">DEL – discard a hypothesis</a></li>
+</ul>
+</li>
+</ul>
 </div>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">UML diagrams</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_uml/armor-interface-class-diagram.html">aRMOR UML CLASS – robocluedo armor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_uml/armor-old-schematics.html">aRMOR UML CLASS – old schematics</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-old-schematics.html#comonent-schema">comonent schema</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-old-schematics.html#component-schema">component schema</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_uml/armor-old-schematics.html#the-old-arch-schema">the old arch schema</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_uml/armor-services.html">DOCS – aRMOR interface</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-services.html#services-schematics">services schematics</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-services.html#add-register-a-new-hint-into-the-ontology">ADD – register a new hint into the Ontology</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-services.html#find-ask-for-a-consistent-hint">FIND – ask for a consistent hint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_uml/armor-services.html#del-discard-a-hypothesis">DEL – discard a hypothesis</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_uml/armor-uml.html">UML – aRMOR elements</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-uml.html#armor-interface-services">aRMOR interface services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-uml.html#armor-services">aRMOR services</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-uml.html#armor-interfaces-structure">aRMOR interfaces structure</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="_uml/armor-uml.html#package-armor">package aRMOR</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_uml/armor-uml.html#armor-interface-component">aRMOR interface component</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="_uml/armor-uml.html#the-complete-schematic">THE COMPLETE SCHEMATIC</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">code reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/armor-cluedo.html">CODE REFERENCE – class aRMOR CLuedo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-cluedo.html#class-armor-cluedo-header">class aRMOR CLuedo – header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-cluedo.html#class-armor-cluedo-cpp-implementation">class aRMOR CLuedo – cpp implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/armor-tools.html">CODE REFERENCE – class aRMOR Tools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-tools.html#class-armor-tools-header">class aRMOR Tools – header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/armor-tools.html#class-armor-tools-cpp-implementation">class aRMOR Tools – cpp implementation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/cluedo-armor-interface.html">CODE REFERENCE – node CLuedo aRMOR interface</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Code Examples</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_examples/examples_cluedo.html">ARMOR CLUEDO EXAMPLES – 1 – Working on Individuals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html#working-on-individuals">Working on Individuals</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_examples/examples_cluedo.html#armor-cluedo-examples-2-working-with-properties">ARMOR CLUEDO EXAMPLES – 2 – Working with properties</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html#working-with-properties">Working with properties</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_examples/examples_cluedo.html#armor-tools-examples-3-reasoning-workflow">ARMOR TOOLS EXAMPLES – 3 – Reasoning Workflow</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_cluedo.html#reasoning-workflow">Reasoning Workflow</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_examples/examples_tools.html">ARMOR TOOLS EXAMPLES – 1 – Essential usage of ArmorTools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_tools.html#essential-usage-of-armortools">Essential usage of ArmorTools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_tools.html#a-more-advanced-example">a more advanced example</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="_examples/examples_tools.html#armor-tools-examples-2-the-quickest-way-to-use-armortools">ARMOR TOOLS EXAMPLES – 2 – The quickest way to use ArmorTools</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_examples/examples_tools.html#the-quickest-way-to-use-armortools">The quickest way to use ArmorTools</a></li>
 </ul>
 </li>
 </ul>
@@ -154,7 +230,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../robocluedo_armor_msgs/index.html" class="btn btn-neutral float-left" title="PKG DOCS – robocluedo_armor_msgs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="_uml/armor-interface-class-diagram.html" class="btn btn-neutral float-right" title="aRMOR UML CLASS – robocluedo armor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="_docs/armor-commands.html" class="btn btn-neutral float-right" title="aRMOR commands" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

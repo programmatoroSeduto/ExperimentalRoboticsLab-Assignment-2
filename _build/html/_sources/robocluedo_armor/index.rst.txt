@@ -4,20 +4,9 @@ PKG DOCS -- robocluedo armor
 
 this package contains nodes and libraries to communicate with the aRMOR ontology in a more convenient way. 
 
+.. note::
 
-.. toctree::
-	:caption: Package Code Documentation
-	:glob:
-	
-	./src/*
-	./scripts/*
-
-
-.. toctree::
-	:caption: Code Examples
-	:glob:
-	
-	./_examples/*
+	**see the official project on GitHub** : `aRMOR on GitHub <https://github.com/EmaroLab/armor#armor>`__
 
 
 .. toctree::
@@ -32,3 +21,25 @@ this package contains nodes and libraries to communicate with the aRMOR ontology
 	:glob:
 	
 	./_uml/*
+
+
+.. toctree::
+	:caption: code reference
+	:glob:
+	
+	./_code_reference/*
+
+
+.. toctree::
+	:caption: Package Code Documentation
+	:glob:
+	
+	./src/*
+	./scripts/*
+
+
+.. toctree::
+	:caption: Code Examples
+	:glob:
+	
+	./_examples/*

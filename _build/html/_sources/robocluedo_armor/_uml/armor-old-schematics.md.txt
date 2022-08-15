@@ -7,7 +7,7 @@
 
 see the first part of the project.
 
-## comonent schema
+## component schema
 
 ![UML aRMOR node](UML_components_cluedo_armor_interface.png)
 

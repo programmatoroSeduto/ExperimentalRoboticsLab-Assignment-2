@@ -46,6 +46,6 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_armor/_uml/armor-interface-class-diagram.md"/>
+    <location file="robocluedo_armor/_uml/NO/armor-interface-class-diagram.md"/>
   </compounddef>
 </doxygen>

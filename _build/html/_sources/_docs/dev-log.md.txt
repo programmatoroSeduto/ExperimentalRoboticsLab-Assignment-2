@@ -2200,7 +2200,53 @@ andiamo col lavoro:
 
 ---
 
+ora, i diagrammi UML mancanti. direi di andare per package:
 
+- giusto per non doverli riscrivere tutte le volte, ecco qualche template per i servizi e i topic in UML: (avrei dovuto fare prima questo lavoro...)
+
+**topics**:
+
+```
+\```
+@startuml
+	
+() "/???" as TOPIC_???
+''' TOPIC_??? <-- "pub" NODE_???
+''' TOPIC_??? --> "sub" NODE_???
+note on link: ???/???.msg
+	
+@enduml
+\```
+```
+
+**services:**
+
+```
+\```
+@startuml
+
+() "/???" as SRV_???
+''' SRV_??? <-- "srv" NODE_???
+''' SRV_??? --> "cl" NODE_???
+note on link: ???/???.srv
+
+@enduml
+\```
+```
+
+- iniziamo dal package di aRMOR e armor msgs
+	- documentazione delle interfacce
+	- ora c'è anche un giga UML per aRMOR, direi che siamo soddisfatti
+	- mancano gli esempi, che mi tocca riconvertire da Doxygen a Sphinx
+		- peccato però, lo stile di Doxygen mi piaceva abbastanza ... graficamente orrendo, ma metteva i link belli sistemati in automatico
+	- e serve anche un documento in cui trascrivere i comandi aRMOR dal module testing
+	- ora manca solo la documentazione del codice, che peraltro è già fatta: devo solo espanderla
+	- se non ricordo male, avevo scritto anche delle informazioni su come configurare il componente... al vecchio progetto!
+- mi sono accorto che nel package erano rimasti dei vecchi parametri ... togliendoli non esploder aRMOR, vero? 
+	- ok ha funzionato tutto, quindi quei parametri erano inutili qui
+	- posso anche eliminare i file contenenti gli items (la cartella cluedo items)
+- e con aRMOR abbiamo chiuso!
+- **COMMIT**: "deployment (armor documentation)"
 
 
 
