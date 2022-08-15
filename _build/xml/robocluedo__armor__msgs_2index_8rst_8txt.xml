@@ -19,6 +19,17 @@
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>./_docs</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="13"><highlight class="comment"></highlight></codeline>
+<codeline lineno="14"><highlight class="comment">Messages</highlight></codeline>
+<codeline lineno="15"><highlight class="comment">---------</highlight></codeline>
+<codeline lineno="16"><highlight class="comment"></highlight></codeline>
+<codeline lineno="17"><highlight class="comment">..<sp/>autoyaml::<sp/>Hypothesis.yml</highlight></codeline>
+<codeline lineno="18"><highlight class="comment"></highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight></codeline>
+<codeline lineno="20"><highlight class="comment">Services</highlight></codeline>
+<codeline lineno="21"><highlight class="comment">---------</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"></highlight></codeline>
+<codeline lineno="23"><highlight class="comment">..<sp/>autoyaml::<sp/>./robocluedo_armor_msgs/srv/AddHint.srv</highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/robocluedo_armor_msgs/index.rst.txt"/>
   </compounddef>

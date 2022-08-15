@@ -51,6 +51,7 @@ extensions = [
 	'breathe', 
 	'sphinx.ext.graphviz', 
 	'sphinxcontrib.plantuml',
+	# 'sphinxcontrib.autoyaml',
 	"sphinx_needs"
 ]
 
@@ -82,7 +83,7 @@ master_doc = 'index'
 source_suffix = {
     '.rst': 'restructuredtext',
     # '.txt': 'restructuredtext',
-    '.md': 'markdown',
+    '.md': 'markdown'
 }
 
 
@@ -120,3 +121,18 @@ breathe_default_members = ('members', 'undoc-members')
 plantuml = 'java -jar %s -verbose' % os.path.join(os.path.dirname(__file__), "_ext", "plantuml.jar")
 
 plantuml_output_format = 'svg'
+
+
+# -- Options for autoyaml ----------------------------------------------------
+
+# Look for YAML files relatively to this directory
+# autoyaml_root = '.'
+
+# Character(s) which start a documentation comment
+# autoyaml_doc_delimiter = '##'
+
+# Comment start character(s)
+# autoyaml_comment = '#'
+
+# Parse comments from nested structures n-levels deep
+# autoyaml_level = 1

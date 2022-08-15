@@ -81,6 +81,7 @@
 <li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run-the-project.html">How to Run this Project</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sphinx-yaml.html">YAML and Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="test-the-project.html">Testing the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="twist-keyboard.html">HOW TO – twist keyboard</a></li>
 </ul>
@@ -2833,7 +2834,33 @@ note on link: ???/???.srv
 <li><p>per quanto riguarda i file worlds, aspetterei il terzo progetto per fare qualunque modifica:ç ho tutti quei file world da provare … lo farò poi</p></li>
 <li><p><strong>COMMIT</strong> – “deploy (dependencies documentation)”</p></li>
 </ul>
+<hr class="docutils" />
+<p>il mio obiettivo è solo di <em>dare una ripulita</em> prima di iniziare ad implementare il prossimo assignment</p>
+<ul class="simple">
+<li><p>direi che la documentazione riferita ai pacchetti di messaggi … non serve, a meno di non trovare un modo per forzare Sphinx ad importarli nella documentazione, il che sarebbe veramente molto bello.</p>
+<ul>
+<li><p><em>la scomoda domanda: esiste un modo per importare i file .yaml come si fa per il codice?</em></p>
+<ul>
+<li><p>questo è interessante: <a class="reference external" href="http://wiki.ros.org/Sphinx">sphinx</a></p></li>
+<li><p>e anche questo: <a class="reference external" href="http://wiki.ros.org/rosdoc_lite">rosdoc</a></p></li>
+<li><p>anche questo sembra piuttosto interessante <a class="reference external" href="https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html">qui</a></p></li>
+</ul>
+</li>
+<li><p><strong>ma nulla di convincente finora</strong></p></li>
+<li><p>questo mi sembra la soluzione migliore: <a class="reference external" href="https://pypi.org/project/sphinxcontrib-yaml/">sphinxcontrob-yaml</a></p>
+<ul>
+<li><p>proviamolo, sembra interessante</p></li>
+<li><p>giusto un minimo di documentazione preliminare, che non guasta mai</p></li>
+<li><p><em>momento della verità…</em></p></li>
+<li><p>… e logicamente non funziona</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>per ora <em>mi arrendo</em> , ma solo <em>per ora</em></p></li>
+</ul>
 </div>
+<hr class="docutils" />
 <div class="section" id="todo">
 <h2>TODO<a class="headerlink" href="#todo" title="Permalink to this heading"></a></h2>
 <ul class="simple">

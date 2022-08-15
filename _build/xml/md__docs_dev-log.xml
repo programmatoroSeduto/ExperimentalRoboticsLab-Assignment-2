@@ -2138,8 +2138,34 @@
 </listitem><listitem><para><bold>COMMIT</bold> <ndash/> &quot;deploy (dependencies documentation)&quot;</para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
+<para>il mio obiettivo è solo di <emphasis>dare una ripulita</emphasis> prima di iniziare ad implementare il prossimo assignment</para>
+<para><itemizedlist>
+<listitem><para>direi che la documentazione riferita ai pacchetti di messaggi ... non serve, a meno di non trovare un modo per forzare Sphinx ad importarli nella documentazione, il che sarebbe veramente molto bello.<itemizedlist>
+<listitem><para><emphasis>la scomoda domanda: esiste un modo per importare i file .yaml come si fa per il codice?</emphasis><itemizedlist>
+<listitem><para>questo è interessante: <ulink url="http://wiki.ros.org/Sphinx">sphinx</ulink></para>
+</listitem><listitem><para>e anche questo: <ulink url="http://wiki.ros.org/rosdoc_lite">rosdoc</ulink></para>
+</listitem><listitem><para>anche questo sembra piuttosto interessante <ulink url="https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html">qui</ulink></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ma nulla di convincente finora</bold></para>
+</listitem><listitem><para>questo mi sembra la soluzione migliore: <ulink url="https://pypi.org/project/sphinxcontrib-yaml/">sphinxcontrob-yaml</ulink><itemizedlist>
+<listitem><para>proviamolo, sembra interessante</para>
+</listitem><listitem><para>giusto un minimo di documentazione preliminare, che non guasta mai</para>
+</listitem><listitem><para><emphasis>momento della verità...</emphasis></para>
+</listitem><listitem><para>... e logicamente non funziona</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per ora <emphasis>mi arrendo</emphasis> , ma solo <emphasis>per ora</emphasis></para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md80">
+<sect2 id="md__docs_dev-log_1autotoc_md82">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -2176,9 +2202,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log_1autotoc_md81">
+<sect2 id="md__docs_dev-log_1autotoc_md83">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log_1autotoc_md82">
+<sect3 id="md__docs_dev-log_1autotoc_md84">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2190,7 +2216,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log_1autotoc_md83">
+<sect3 id="md__docs_dev-log_1autotoc_md85">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

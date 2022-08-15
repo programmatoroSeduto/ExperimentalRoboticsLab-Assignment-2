@@ -451,6 +451,8 @@
   <compound refid="run-the-project_8md_8txt" kind="file"><name>run-the-project.md.txt</name>
     <member refid="run-the-project_8md_8txt_1aca5bbae5e7a216b2cfa5f1ebb86401ed" kind="variable"><name>well</name></member>
   </compound>
+  <compound refid="sphinx-yaml_8md_8txt" kind="file"><name>sphinx-yaml.md.txt</name>
+  </compound>
   <compound refid="test-the-project_8md_8txt" kind="file"><name>test-the-project.md.txt</name>
     <member refid="test-the-project_8md_8txt_1a55dd736f4f71cb873cf19cbad443bf12" kind="variable"><name>work</name></member>
     <member refid="test-the-project_8md_8txt_1ab9c30914b6e8a2a87c4305b70785cbfa" kind="variable"><name>test</name></member>
@@ -762,6 +764,8 @@
   <compound refid="rest-directives_8md" kind="file"><name>rest-directives.md</name>
   </compound>
   <compound refid="run-the-project_8md" kind="file"><name>run-the-project.md</name>
+  </compound>
+  <compound refid="sphinx-yaml_8md" kind="file"><name>sphinx-yaml.md</name>
   </compound>
   <compound refid="test-the-project_8md" kind="file"><name>test-the-project.md</name>
   </compound>
@@ -1220,6 +1224,8 @@
   <compound refid="md__docs_rest-directives" kind="page"><name>md__docs_rest-directives</name>
   </compound>
   <compound refid="md__docs_run-the-project" kind="page"><name>md__docs_run-the-project</name>
+  </compound>
+  <compound refid="md__docs_sphinx-yaml" kind="page"><name>md__docs_sphinx-yaml</name>
   </compound>
   <compound refid="md__docs_test-the-project" kind="page"><name>md__docs_test-the-project</name>
   </compound>

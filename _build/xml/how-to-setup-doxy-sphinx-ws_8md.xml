@@ -7,6 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
+<codeline></codeline>
 <codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>setup<sp/>a<sp/>Doxygen/Sphinx<sp/>workspace</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>1<sp/>--<sp/>setup<sp/>Sphinx</highlight></codeline>

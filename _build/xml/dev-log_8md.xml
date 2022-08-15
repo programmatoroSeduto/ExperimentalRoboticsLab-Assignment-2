@@ -2268,6 +2268,25 @@
 <codeline><highlight class="normal">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>i<sp/>file<sp/>worlds,<sp/>aspetterei<sp/>il<sp/>terzo<sp/>progetto<sp/>per<sp/>fare<sp/>qualunque<sp/>modifica:ç<sp/>ho<sp/>tutti<sp/>quei<sp/>file<sp/>world<sp/>da<sp/>provare<sp/>...<sp/>lo<sp/>farò<sp/>poi</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>--<sp/>&quot;deploy<sp/>(dependencies<sp/>documentation)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">il<sp/>mio<sp/>obiettivo<sp/>è<sp/>solo<sp/>di<sp/>*dare<sp/>una<sp/>ripulita*<sp/>prima<sp/>di<sp/>iniziare<sp/>ad<sp/>implementare<sp/>il<sp/>prossimo<sp/>assignment</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>direi<sp/>che<sp/>la<sp/>documentazione<sp/>riferita<sp/>ai<sp/>pacchetti<sp/>di<sp/>messaggi<sp/>...<sp/>non<sp/>serve,<sp/>a<sp/>meno<sp/>di<sp/>non<sp/>trovare<sp/>un<sp/>modo<sp/>per<sp/>forzare<sp/>Sphinx<sp/>ad<sp/>importarli<sp/>nella<sp/>documentazione,<sp/>il<sp/>che<sp/>sarebbe<sp/>veramente<sp/>molto<sp/>bello.<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*la<sp/>scomoda<sp/>domanda:<sp/>esiste<sp/>un<sp/>modo<sp/>per<sp/>importare<sp/>i<sp/>file<sp/>.yaml<sp/>come<sp/>si<sp/>fa<sp/>per<sp/>il<sp/>codice?*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>è<sp/>interessante:<sp/>[sphinx](http://wiki.ros.org/Sphinx)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e<sp/>anche<sp/>questo:<sp/>[rosdoc](http://wiki.ros.org/rosdoc_lite)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>questo<sp/>sembra<sp/>piuttosto<sp/>interessante<sp/>[qui](https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ma<sp/>nulla<sp/>di<sp/>convincente<sp/>finora**</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>mi<sp/>sembra<sp/>la<sp/>soluzione<sp/>migliore:<sp/>[sphinxcontrob-yaml](https://pypi.org/project/sphinxcontrib-yaml/)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>proviamolo,<sp/>sembra<sp/>interessante</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>minimo<sp/>di<sp/>documentazione<sp/>preliminare,<sp/>che<sp/>non<sp/>guasta<sp/>mai</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*momento<sp/>della<sp/>verità...*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>logicamente<sp/>non<sp/>funziona</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>per<sp/>ora<sp/>*mi<sp/>arrendo*<sp/>,<sp/>ma<sp/>solo<sp/>*per<sp/>ora*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---<sp/></highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

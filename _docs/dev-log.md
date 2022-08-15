@@ -2259,6 +2259,25 @@ meglio fare quello che so di non dover andare a ritoccare nel terzo assignment: 
 - per quanto riguarda i file worlds, aspetterei il terzo progetto per fare qualunque modifica:ç ho tutti quei file world da provare ... lo farò poi
 - **COMMIT** -- "deploy (dependencies documentation)"
 
+---
+
+il mio obiettivo è solo di *dare una ripulita* prima di iniziare ad implementare il prossimo assignment
+
+- direi che la documentazione riferita ai pacchetti di messaggi ... non serve, a meno di non trovare un modo per forzare Sphinx ad importarli nella documentazione, il che sarebbe veramente molto bello. 
+	- *la scomoda domanda: esiste un modo per importare i file .yaml come si fa per il codice?*
+		- questo è interessante: [sphinx](http://wiki.ros.org/Sphinx)
+		- e anche questo: [rosdoc](http://wiki.ros.org/rosdoc_lite)
+		- anche questo sembra piuttosto interessante [qui](https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html)
+	- **ma nulla di convincente finora**
+	- questo mi sembra la soluzione migliore: [sphinxcontrob-yaml](https://pypi.org/project/sphinxcontrib-yaml/)
+		- proviamolo, sembra interessante
+		- giusto un minimo di documentazione preliminare, che non guasta mai
+		- *momento della verità...*
+		- ... e logicamente non funziona
+- per ora *mi arrendo* , ma solo *per ora*
+
+--- 
+
 
 
 
