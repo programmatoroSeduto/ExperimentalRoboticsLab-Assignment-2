@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline lineno="1"><highlight class="normal"><ref refid="robocluedo__robot_2_c_make_lists_8txt_1ab54a2e80178aab1022aded8cfb50e8cb" kindref="member">cmake_minimum_required</ref>(VERSION<sp/>3.0.2)</highlight></codeline>
-<codeline lineno="2"><highlight class="normal"><ref refid="robocluedo-urdf-user-manual_8md_8txt_1af7740bd233f62bf7e16cd57319d7ada2" kindref="member">project</ref>(<ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref>)</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"><ref refid="robocluedo-urdf-user-manual_8md_8txt_1af7740bd233f62bf7e16cd57319d7ada2" kindref="member">project</ref>(robocluedo_movement_controller)</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>Compile<sp/>as<sp/>C++11,<sp/>supported<sp/>in<sp/>ROS<sp/>Kinetic<sp/>and<sp/>newer</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>add_compile_options(-std=c++11)</highlight><highlight class="normal"></highlight></codeline>
@@ -125,7 +125,7 @@
 <codeline lineno="116"><highlight class="normal"></highlight><highlight class="preprocessor">##<sp/>DEPENDS:<sp/>system<sp/>dependencies<sp/>of<sp/>this<sp/>project<sp/>that<sp/>dependent<sp/>projects<sp/>also<sp/>need</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="117"><highlight class="normal">catkin_package(</highlight></codeline>
 <codeline lineno="118"><highlight class="normal">#<sp/><sp/>INCLUDE_DIRS<sp/>include</highlight></codeline>
-<codeline lineno="119"><highlight class="normal">#<sp/><sp/>LIBRARIES<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref></highlight></codeline>
+<codeline lineno="119"><highlight class="normal">#<sp/><sp/>LIBRARIES<sp/>robocluedo_movement_controller</highlight></codeline>
 <codeline lineno="120"><highlight class="normal">#<sp/><sp/>CATKIN_DEPENDS<sp/>actionlib<sp/>actionlib_msgs<sp/>geometry_msgs<sp/>moveit_core<sp/>moveit_msgs<sp/>moveit_ros_perception<sp/>moveit_ros_planning<sp/>moveit_ros_planning_interface<sp/>nav_msgs<sp/>robocluedo_movement_controller_msgs<sp/>roscpp<sp/>rospy<sp/>std_msgs<sp/>std_srvs</highlight></codeline>
 <codeline lineno="121"><highlight class="normal">#<sp/><sp/>DEPENDS<sp/>system_lib</highlight></codeline>
 <codeline lineno="122"><highlight class="normal">)</highlight></codeline>

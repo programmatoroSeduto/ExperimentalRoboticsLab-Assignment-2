@@ -2160,9 +2160,27 @@
 </listitem></itemizedlist>
 </para>
 </listitem><listitem><para>per ora <emphasis>mi arrendo</emphasis> , ma solo <emphasis>per ora</emphasis></para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;deployment (testing autoyaml ... not working)&quot;</para>
 </listitem></itemizedlist>
 </para>
 <para><hruler/>
+</para>
+<para>dopo questo excursus che mi ha solo fatto venire il nervoso, andiamo avanti</para>
+<para><itemizedlist>
+<listitem><para>ultime cose coi package per i messaggi (sarebbe bello avere un modo per importare i file yaml dentro alla documentazione, così da poter documentare anche i messaggi senza dover fare dell&apos;orrendo copia incolla)</para>
+</listitem><listitem><para>ultima sistemata ai packages coi messaggi</para>
+</listitem><listitem><para>documentazione del codice per il module testing (veramente poca roba)<itemizedlist>
+<listitem><para>...avevo dimeticato che per i moduli python servisse il mocking...</para>
+</listitem><listitem><para>... in più devi aggiungere i percorsi a mano in sphinx</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>a questo punto per ora facciamo solo la generazione delle code reference<itemizedlist>
+<listitem><para>movement controller</para>
+</listitem><listitem><para>rosplan</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (setup code docs)&quot;</para>
+</listitem></itemizedlist>
 </para>
 </sect2>
 <sect2 id="md__docs_dev-log_1autotoc_md82">

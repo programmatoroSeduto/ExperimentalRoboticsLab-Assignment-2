@@ -2284,8 +2284,21 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*momento<sp/>della<sp/>verità...*</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>logicamente<sp/>non<sp/>funziona</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>per<sp/>ora<sp/>*mi<sp/>arrendo*<sp/>,<sp/>ma<sp/>solo<sp/>*per<sp/>ora*</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;deployment<sp/>(testing<sp/>autoyaml<sp/>...<sp/>not<sp/>working)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">---<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">dopo<sp/>questo<sp/>excursus<sp/>che<sp/>mi<sp/>ha<sp/>solo<sp/>fatto<sp/>venire<sp/>il<sp/>nervoso,<sp/>andiamo<sp/>avanti</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>ultime<sp/>cose<sp/>coi<sp/>package<sp/>per<sp/>i<sp/>messaggi<sp/>(sarebbe<sp/>bello<sp/>avere<sp/>un<sp/>modo<sp/>per<sp/>importare<sp/>i<sp/>file<sp/>yaml<sp/>dentro<sp/>alla<sp/>documentazione,<sp/>così<sp/>da<sp/>poter<sp/>documentare<sp/>anche<sp/>i<sp/>messaggi<sp/>senza<sp/>dover<sp/>fare<sp/>dell&apos;orrendo<sp/>copia<sp/>incolla)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>ultima<sp/>sistemata<sp/>ai<sp/>packages<sp/>coi<sp/>messaggi</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>il<sp/>module<sp/>testing<sp/>(veramente<sp/>poca<sp/>roba)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...avevo<sp/>dimeticato<sp/>che<sp/>per<sp/>i<sp/>moduli<sp/>python<sp/>servisse<sp/>il<sp/>mocking...</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>in<sp/>più<sp/>devi<sp/>aggiungere<sp/>i<sp/>percorsi<sp/>a<sp/>mano<sp/>in<sp/>sphinx</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>a<sp/>questo<sp/>punto<sp/>per<sp/>ora<sp/>facciamo<sp/>solo<sp/>la<sp/>generazione<sp/>delle<sp/>code<sp/>reference</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>movement<sp/>controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(setup<sp/>code<sp/>docs)&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

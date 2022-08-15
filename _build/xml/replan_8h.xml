@@ -7,7 +7,7 @@
     <includes local="yes">rosplan_action_interface/RPActionInterface.h</includes>
     <includes refid="feedback__manager_8h" local="yes">knowledge_base_tools/feedback_manager.h</includes>
     <includes local="yes">rosplan_dispatch_msgs/ActionDispatch.h</includes>
-    <includedby refid="replan_8cpp_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp</includedby>
+    <includedby refid="replan_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp</includedby>
     <includedby refid="replan__node_8cpp" local="yes">robocluedo_rosplan/src/robocluedo_rosplan_actions/replan_node.cpp</includedby>
     <incdepgraph>
       <node id="7">
@@ -82,8 +82,8 @@
         </childnode>
       </node>
       <node id="2">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp</label>
-        <link refid="replan_8cpp_8cpp"/>
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp</label>
+        <link refid="replan_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_k_c_l__rosplan_1_1_r_p__rcl__replan" prot="public">KCL_rosplan::RP_rcl_replan</innerclass>

@@ -1,7 +1,7 @@
 
 # YAML and Sphinx
 
-```{toctree}
+```{warning}
 unfortunately, not working.
 ```
 

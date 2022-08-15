@@ -80,7 +80,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="33" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp" bodystart="60" bodyend="77"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="33" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp" bodystart="60" bodyend="77"/>
         <references refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" compoundref="feedback__manager_8h" startline="46">action_feedback_manager::action_name</references>
         <references refid="action__name_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" compoundref="action__name_8h" startline="15">ROSPLAN_ACTION_NAME</references>
         <references refid="examples__tools_8md_8txt_1a706b8cd9925dea99a8c064f39110620d">ROS_INFO_STREAM</references>
@@ -98,7 +98,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="36" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp" bodystart="81" bodyend="84"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="36" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp" bodystart="81" bodyend="84"/>
       </memberdef>
       <memberdef kind="function" id="class_k_c_l__rosplan_1_1_r_p__rcl__replan_1a6574542a6a62bae28d6bf0d74b94c4d7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -116,7 +116,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp" bodystart="92" bodyend="108"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/replan.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp" bodystart="92" bodyend="108"/>
         <references refid="replan_8h_1ac62d611007560a363e737ed381abab60" compoundref="replan_8h" startline="23">SRV_REPLAN</references>
         <references refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" compoundref="feedback__manager_8cpp" startline="46" endline="50">action_feedback_manager::fb_failure</references>
       </memberdef>

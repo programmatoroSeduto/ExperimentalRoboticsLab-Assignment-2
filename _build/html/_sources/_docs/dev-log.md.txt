@@ -2275,8 +2275,21 @@ il mio obiettivo è solo di *dare una ripulita* prima di iniziare ad implementar
 		- *momento della verità...*
 		- ... e logicamente non funziona
 - per ora *mi arrendo* , ma solo *per ora*
+- **COMMIT** : "deployment (testing autoyaml ... not working)"
 
 --- 
+
+dopo questo excursus che mi ha solo fatto venire il nervoso, andiamo avanti
+
+- ultime cose coi package per i messaggi (sarebbe bello avere un modo per importare i file yaml dentro alla documentazione, così da poter documentare anche i messaggi senza dover fare dell'orrendo copia incolla)
+- ultima sistemata ai packages coi messaggi
+- documentazione del codice per il module testing (veramente poca roba)
+	- ...avevo dimeticato che per i moduli python servisse il mocking...
+	- ... in più devi aggiungere i percorsi a mano in sphinx
+- a questo punto per ora facciamo solo la generazione delle code reference
+	- movement controller
+	- rosplan
+- **COMMIT**: "deployment (setup code docs)"
 
 
 

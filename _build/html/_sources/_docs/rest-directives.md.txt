@@ -103,7 +103,7 @@ page title
 
 ```
 
-the page can be referred using both `:ref:<your-tag>` and `:any:<your-tag>`. 
+the page can be referred using both `:ref:<your-tag>` and `:any:<your-tag>`. **WITH BACKTICKS!**
 
 ## Add some code
 

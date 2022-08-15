@@ -1,5 +1,8 @@
 #! /usr/bin/env python
 
+''' find a wall, and follow it. the robot can only turn right. 
+'''
+
 import rospy
 from sensor_msgs.msg import LaserScan
 from geometry_msgs.msg import Twist

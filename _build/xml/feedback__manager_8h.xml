@@ -159,8 +159,8 @@
         </childnode>
       </node>
       <node id="15">
-        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp.cpp</label>
-        <link refid="replan_8cpp_8cpp"/>
+        <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/replan.cpp</label>
+        <link refid="replan_8cpp"/>
       </node>
       <node id="4">
         <label>robocluedo_rosplan/src/robocluedo_rosplan_actions/action_name/action_name_node.cpp</label>

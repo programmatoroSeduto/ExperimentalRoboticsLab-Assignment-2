@@ -1,8 +1,31 @@
 
+.. _pkg-robocluedo-movement-controller:
+
 PKG DOCS -- robocluedo_movement_controller
 ==========================================
 
 this package enables the robot to move the manipulator and to navigate into the environment, usign different methods. 
+
+
+.. toctree::
+	:caption: User Documentation
+	:glob:
+	
+	./_docs/*
+
+
+.. toctree::
+	:caption: UML diagrams
+	:glob:
+	
+	./_uml/*
+
+
+.. toctree::
+	:caption: code reference
+	:glob:
+	
+	./_code_reference/*
 
 
 .. toctree::
@@ -18,17 +41,3 @@ this package enables the robot to move the manipulator and to navigate into the 
 	:glob:
 	
 	./_examples/*
-
-
-.. toctree::
-	:caption: Other User Documentation
-	:glob:
-	
-	./_docs/*
-
-
-.. toctree::
-	:caption: UML diagrams
-	:glob:
-	
-	./_uml/*

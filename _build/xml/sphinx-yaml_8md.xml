@@ -10,7 +10,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>YAML<sp/>and<sp/>Sphinx</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">```{toctree}</highlight></codeline>
+<codeline><highlight class="normal">```{warning}</highlight></codeline>
 <codeline><highlight class="normal">unfortunately,<sp/>not<sp/>working.</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>

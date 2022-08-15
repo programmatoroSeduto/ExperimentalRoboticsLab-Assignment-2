@@ -1094,7 +1094,7 @@
 <codeline lineno="951"><highlight class="normal"></highlight></codeline>
 <codeline lineno="952"><highlight class="normal">---</highlight></codeline>
 <codeline lineno="953"><highlight class="normal"></highlight></codeline>
-<codeline lineno="954"><highlight class="normal">con<sp/>ROSPlan<sp/>per<sp/>il<sp/>momento<sp/>dovrei<sp/>aver<sp/>finito.<sp/>passiamo<sp/>ora<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>lavorare<sp/>al<sp/>movement<sp/>controller.<sp/>IDEE:</highlight></codeline>
+<codeline lineno="954"><highlight class="normal">con<sp/>ROSPlan<sp/>per<sp/>il<sp/>momento<sp/>dovrei<sp/>aver<sp/>finito.<sp/>passiamo<sp/>ora<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/>lavorare<sp/>al<sp/>movement<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1ad6eb65e53cb239a17becfede80b61d9e" kindref="member">controller</ref>.<sp/>IDEE:</highlight></codeline>
 <codeline lineno="955"><highlight class="normal"></highlight></codeline>
 <codeline lineno="956"><highlight class="normal">-<sp/><sp/>dato<sp/>che<sp/>sulla<sp/>macchina<sp/>virtuale<sp/>ci<sp/>sono<sp/>così<sp/>tanti<sp/>modi<sp/>di<sp/>fare<sp/>navigation<sp/>col<sp/>robot,<sp/>vorrei<sp/>creare<sp/>un</highlight><highlight class="stringliteral">&apos;interfaccia<sp/>per<sp/>usarli<sp/>tutti,<sp/>a<sp/>scelta</highlight></codeline>
 <codeline lineno="957"><highlight class="stringliteral">-<sp/>il<sp/>progetto<sp/>attuale<sp/>per<sp/>il<sp/>momento<sp/>*non<sp/>includerà<sp/>move_base*<sp/>per<sp/>il<sp/>semplice<sp/>fatto<sp/>che<sp/>in<sp/>questo<sp/>contesto<sp/>non<sp/>è<sp/>richiesta<sp/>la<sp/>navigazione<sp/>indoor</highlight></codeline>
@@ -1266,7 +1266,7 @@
 <codeline lineno="1123"><highlight class="stringliteral">-<sp/>iniziamo<sp/>da<sp/>bug_m</highlight></codeline>
 <codeline lineno="1124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>definizione<sp/>della<sp/>classe</highlight></codeline>
 <codeline lineno="1125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>interfacce<sp/>ROS<sp/>del<sp/>controller<sp/>per<sp/>comunicare<sp/>con<sp/>bug_m</highlight></codeline>
-<codeline lineno="1126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>compiare,<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>tutti<sp/>i<sp/>servizi<sp/>siano<sp/>*disattivati*<sp/>all&apos;</highlight><highlight class="normal">avvio<sp/>del<sp/>controller,<sp/>quindi<sp/>piccola<sp/>modifica<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref><sp/>per<sp/>forzare<sp/>la<sp/>situazione</highlight></codeline>
+<codeline lineno="1126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>prima<sp/>di<sp/>compiare,<sp/>voglio<sp/>essere<sp/>sicuro<sp/>che<sp/>tutti<sp/>i<sp/>servizi<sp/>siano<sp/>*disattivati*<sp/>all&apos;</highlight><highlight class="normal">avvio<sp/>del<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1ad6eb65e53cb239a17becfede80b61d9e" kindref="member">controller</ref>,<sp/>quindi<sp/>piccola<sp/>modifica<sp/><ref refid="erl2-oracle-user-manual_8md_8txt_1ad06afa07b0e26dd80f556e318c747644" kindref="member">a</ref><sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref><sp/>per<sp/>forzare<sp/>la<sp/>situazione</highlight></codeline>
 <codeline lineno="1127"><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>compila?<sp/>compila.</highlight></codeline>
 <codeline lineno="1128"><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/></highlight><highlight class="stringliteral">&quot;working<sp/>on<sp/>navigation<sp/>(nav<sp/>manager<sp/>first<sp/>version<sp/>and<sp/>first<sp/>debug,<sp/>yet<sp/>not<sp/>tested)&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="1129"><highlight class="normal">-<sp/>direi<sp/>che<sp/>prima<sp/>di<sp/>andare<sp/>avanti<sp/>bisogna<sp/>per<sp/>forza<sp/>fare<sp/>del<sp/>testing,<sp/>molto<sp/>semplice</highlight></codeline>
@@ -1331,9 +1331,9 @@
 <codeline lineno="1188"><highlight class="stringliteral">Traceback<sp/>(most<sp/>recent<sp/>call<sp/>last):<sp/></highlight></codeline>
 <codeline lineno="1189"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/opt/ros/noetic/lib/python3/dist-packages/rospy/impl/tcpros_service.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>633,<sp/>in<sp/>_handle_request</highlight></codeline>
 <codeline lineno="1190"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>response<sp/>=<sp/>convert_return_to_response(self.handler(request),<sp/>self.response_class)</highlight></codeline>
-<codeline lineno="1191"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/<ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref>/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>129,<sp/>in<sp/>bug_switch</highlight></codeline>
+<codeline lineno="1191"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/robocluedo_movement_controller/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>129,<sp/>in<sp/>bug_switch</highlight></codeline>
 <codeline lineno="1192"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>change_state(2)</highlight></codeline>
-<codeline lineno="1193"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/<ref refid="robocluedo__movement__controller_2index_8rst_8txt_1add492fd97d8e00fbefa83ec21bd0cb7f" kindref="member">robocluedo_movement_controller</ref>/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>109,<sp/>in<sp/>change_state</highlight></codeline>
+<codeline lineno="1193"><highlight class="stringliteral"><sp/><sp/><sp/>File<sp/>&quot;</highlight><highlight class="normal">/root/ros_ws/src/erl2-</highlight><highlight class="keyword">new</highlight><highlight class="normal">/robocluedo_movement_controller/scripts/<ref refid="namespacebug__m" kindref="compound">bug_m</ref>.py</highlight><highlight class="stringliteral">&quot;,<sp/>line<sp/>109,<sp/>in<sp/>change_state</highlight></codeline>
 <codeline lineno="1194"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>srv_client_user_interface_()<sp/></highlight></codeline>
 <codeline lineno="1195"><highlight class="stringliteral">TypeError:<sp/>&apos;NoneType&apos;<sp/>object<sp/>is<sp/>not<sp/>callable</highlight></codeline>
 <codeline lineno="1196"><highlight class="stringliteral">Yaw<sp/>error:<sp/>[0.03443149860346817]</highlight></codeline>
@@ -1427,7 +1427,7 @@
 <codeline lineno="1284"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="1285"><highlight class="stringliteral">-<sp/>funziona,<sp/>ma<sp/>c&apos;è<sp/>qualche<sp/>problemino<sp/>col<sp/>controller,<sp/>regolo<sp/>il<sp/>parametro<sp/>p<sp/>dei<sp/>controller,<sp/>vediamo<sp/>se<sp/>cambia<sp/>qualcosa</highlight></codeline>
 <codeline lineno="1286"><highlight class="stringliteral">-<sp/>HA<sp/>FUNZIONATO!<sp/>benissimo!</highlight></codeline>
-<codeline lineno="1287"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;</highlight><highlight class="normal">working<sp/>on<sp/>manipulation<sp/>(manip<sp/>controller,<sp/>arm<sp/>tuning)</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="1287"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;</highlight><highlight class="normal">working<sp/>on<sp/>manipulation<sp/>(manip<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1ad6eb65e53cb239a17becfede80b61d9e" kindref="member">controller</ref>,<sp/>arm<sp/>tuning)</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
 <codeline lineno="1288"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="1289"><highlight class="stringliteral">---</highlight></codeline>
 <codeline lineno="1290"><highlight class="stringliteral"></highlight></codeline>
@@ -2418,89 +2418,101 @@
 <codeline lineno="2275"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*momento<sp/>della<sp/>verità...*</highlight></codeline>
 <codeline lineno="2276"><highlight class="stringliteral"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>logicamente<sp/>non<sp/>funziona</highlight></codeline>
 <codeline lineno="2277"><highlight class="stringliteral">-<sp/>per<sp/>ora<sp/>*mi<sp/>arrendo*<sp/>,<sp/>ma<sp/>solo<sp/>*per<sp/>ora*</highlight></codeline>
-<codeline lineno="2278"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2279"><highlight class="stringliteral">---<sp/></highlight></codeline>
-<codeline lineno="2280"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2278"><highlight class="stringliteral">-<sp/>**COMMIT**<sp/>:<sp/>&quot;</highlight><highlight class="normal">deployment<sp/>(testing<sp/>autoyaml<sp/>...<sp/>not<sp/>working)</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="2279"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2280"><highlight class="stringliteral">---<sp/></highlight></codeline>
 <codeline lineno="2281"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2282"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2282"><highlight class="stringliteral">dopo<sp/>questo<sp/>excursus<sp/>che<sp/>mi<sp/>ha<sp/>solo<sp/>fatto<sp/>venire<sp/>il<sp/>nervoso,<sp/>andiamo<sp/>avanti</highlight></codeline>
 <codeline lineno="2283"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2284"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2285"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2286"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2287"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2288"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2289"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2290"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2291"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2284"><highlight class="stringliteral">-<sp/>ultime<sp/>cose<sp/>coi<sp/>package<sp/>per<sp/>i<sp/>messaggi<sp/>(sarebbe<sp/>bello<sp/>avere<sp/>un<sp/>modo<sp/>per<sp/>importare<sp/>i<sp/>file<sp/>yaml<sp/>dentro<sp/>alla<sp/>documentazione,<sp/>così<sp/>da<sp/>poter<sp/>documentare<sp/>anche<sp/>i<sp/>messaggi<sp/>senza<sp/>dover<sp/>fare<sp/>dell&apos;orrendo<sp/>copia<sp/>incolla)</highlight></codeline>
+<codeline lineno="2285"><highlight class="stringliteral">-<sp/>ultima<sp/>sistemata<sp/>ai<sp/>packages<sp/>coi<sp/>messaggi</highlight></codeline>
+<codeline lineno="2286"><highlight class="stringliteral">-<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>il<sp/>module<sp/>testing<sp/>(veramente<sp/>poca<sp/>roba)</highlight></codeline>
+<codeline lineno="2287"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>...avevo<sp/>dimeticato<sp/>che<sp/>per<sp/>i<sp/>moduli<sp/>python<sp/>servisse<sp/>il<sp/>mocking...</highlight></codeline>
+<codeline lineno="2288"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>in<sp/>più<sp/>devi<sp/>aggiungere<sp/>i<sp/>percorsi<sp/>a<sp/>mano<sp/>in<sp/>sphinx</highlight></codeline>
+<codeline lineno="2289"><highlight class="stringliteral">-<sp/>a<sp/>questo<sp/>punto<sp/>per<sp/>ora<sp/>facciamo<sp/>solo<sp/>la<sp/>generazione<sp/>delle<sp/>code<sp/>reference</highlight></codeline>
+<codeline lineno="2290"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>movement<sp/>controller</highlight></codeline>
+<codeline lineno="2291"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>rosplan</highlight></codeline>
 <codeline lineno="2292"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="2293"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="2294"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="2295"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2296"><highlight class="stringliteral">##<sp/>TODO</highlight></codeline>
+<codeline lineno="2296"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="2297"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2298"><highlight class="stringliteral">-<sp/>ma<sp/>provando<sp/>con<sp/>un<sp/>controller<sp/>per<sp/>uno<sp/>skid<sp/>robot<sp/>cosa<sp/>succede?<sp/>magari<sp/>riesco<sp/>a<sp/>farlo<sp/>andare<sp/>meglio</highlight></codeline>
-<codeline lineno="2299"><highlight class="stringliteral">-<sp/>vanno<sp/>aggiustati<sp/>i<sp/>guadagni<sp/>dei<sp/>go<sp/>to<sp/>point<sp/>e<sp/>align,<sp/>e<sp/>magari<sp/>introdurre<sp/>anche<sp/>una<sp/>saturation</highlight></codeline>
-<codeline lineno="2300"><highlight class="stringliteral">-<sp/>navigation<sp/>system:<sp/>creare<sp/>un<sp/>controller<sp/>che<sp/>gestisca<sp/>anche<sp/>il<sp/>braccio<sp/>durante<sp/>la<sp/>navigazione<sp/>(magari<sp/>abbassarlo<sp/>per<sp/>rendere<sp/>il<sp/>robot<sp/>più<sp/>stabile)</highlight></codeline>
-<codeline lineno="2301"><highlight class="stringliteral">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
-<codeline lineno="2302"><highlight class="stringliteral">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
-<codeline lineno="2303"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
-<codeline lineno="2304"><highlight class="stringliteral">-<sp/>evita<sp/>di<sp/>muovere<sp/>il<sp/>braccio<sp/>robotico<sp/>se<sp/>sai<sp/>che<sp/>la<sp/>posture<sp/>richiesta<sp/>è<sp/>uguale<sp/>a<sp/>quella<sp/>attuale,<sp/>*memorizza<sp/>la<sp/>posture<sp/>attuale*<sp/>(puoi<sp/>tracciarla...)</highlight></codeline>
-<codeline lineno="2305"><highlight class="stringliteral">-<sp/>pensare<sp/>bene<sp/>al<sp/>module<sp/>testing,<sp/>e<sp/>in<sp/>particolare<sp/>correggere<sp/>i<sp/>module<sp/>testing<sp/>di<sp/>armor<sp/>(potrebbero<sp/>non<sp/>funzionare<sp/>più<sp/>per<sp/>via<sp/>delle<sp/>ultime<sp/>modifiche<sp/>ai<sp/>servizi)</highlight></codeline>
-<codeline lineno="2306"><highlight class="stringliteral">-<sp/>*un<sp/>tantino<sp/>in<sp/>più<sp/>di<sp/>scena<sp/>nell&apos;indagine?*<sp/>(intanto<sp/>deve<sp/>funzionare...)</highlight></codeline>
+<codeline lineno="2298"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2299"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2300"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2301"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2302"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2303"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2304"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2305"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2306"><highlight class="stringliteral"></highlight></codeline>
 <codeline lineno="2307"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2308"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
-<codeline lineno="2309"><highlight class="stringliteral">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
-<codeline lineno="2310"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2311"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>andrebbe<sp/>messa<sp/>in<sp/>una<sp/>cartella<sp/>chiamata<sp/>code_documentation<sp/>(inutile<sp/>dire<sp/>che<sp/>ogni<sp/>package<sp/>ha<sp/>le<sp/>sue,<sp/>e<sp/>non<sp/>si<sp/>deve<sp/>mischiare<sp/>nulla)</highlight></codeline>
-<codeline lineno="2312"><highlight class="stringliteral">-<sp/>rifare<sp/>gli<sp/>schemi<sp/>di<sp/>armor!<sp/></highlight></codeline>
-<codeline lineno="2313"><highlight class="stringliteral">-<sp/>aggiornare<sp/>schema<sp/>feedback<sp/>manager</highlight></codeline>
-<codeline lineno="2314"><highlight class="stringliteral">-<sp/>aggiustare<sp/>le<sp/>toctree<sp/>in<sp/>giro<sp/>per<sp/>le<sp/>pagine</highlight></codeline>
-<codeline lineno="2315"><highlight class="stringliteral">-<sp/>creare<sp/>una<sp/>&quot;</highlight><highlight class="normal">rubrica</highlight><highlight class="stringliteral">&quot;<sp/>generale<sp/>di<sp/>topic<sp/>e<sp/>servizi<sp/>dell&apos;architettura</highlight></codeline>
-<codeline lineno="2316"><highlight class="stringliteral">-<sp/>e<sp/>creare<sp/>uno<sp/>standard<sp/>per<sp/>gli<sp/>UML<sp/>in<sp/>ROS,<sp/>o<sp/>qualcosa<sp/>che<sp/>possa<sp/>essere<sp/>replicato</highlight></codeline>
-<codeline lineno="2317"><highlight class="stringliteral">-<sp/>**vanno<sp/>fatti<sp/>ancora<sp/>i<sp/>temporal<sp/>diagrams!**<sp/>e<sp/>i<sp/>diagrammi<sp/>riguardanti<sp/>l&apos;architettura<sp/>generale</highlight></codeline>
-<codeline lineno="2318"><highlight class="stringliteral">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
-<codeline lineno="2319"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
-<codeline lineno="2320"><highlight class="stringliteral">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
-<codeline lineno="2321"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
-<codeline lineno="2322"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
-<codeline lineno="2323"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;</highlight><highlight class="normal">senza<sp/>sbattersi<sp/>troppo</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
-<codeline lineno="2324"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
-<codeline lineno="2325"><highlight class="stringliteral">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
-<codeline lineno="2326"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
-<codeline lineno="2327"><highlight class="stringliteral">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
-<codeline lineno="2328"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2329"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
-<codeline lineno="2330"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2331"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2332"><highlight class="stringliteral">##<sp/>NOTE</highlight></codeline>
-<codeline lineno="2333"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2334"><highlight class="stringliteral">###<sp/>una<sp/>nota<sp/>su<sp/>rosplan<sp/>e<sp/>il<sp/>mission<sp/>manager</highlight></codeline>
-<codeline lineno="2335"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2336"><highlight class="stringliteral">il<sp/>principio<sp/>è<sp/>questo:</highlight></codeline>
-<codeline lineno="2337"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2338"><highlight class="stringliteral">-<sp/>*il<sp/>mission<sp/>manager*<sp/>si<sp/>occupa<sp/>del<sp/>progresso<sp/>della<sp/>missione<sp/>ad<sp/>alto<sp/>livello</highlight></codeline>
-<codeline lineno="2339"><highlight class="stringliteral">-<sp/>*ROSPlan*<sp/>si<sp/>preoccupa<sp/>della<sp/>singola<sp/>azione<sp/>da<sp/>eseguire,<sp/>*nel<sp/>dettaglio<sp/>dello<sp/>stato<sp/>delle<sp/>cose*.<sp/></highlight></codeline>
+<codeline lineno="2308"><highlight class="stringliteral">##<sp/>TODO</highlight></codeline>
+<codeline lineno="2309"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2310"><highlight class="stringliteral">-<sp/>ma<sp/>provando<sp/>con<sp/>un<sp/>controller<sp/>per<sp/>uno<sp/>skid<sp/>robot<sp/>cosa<sp/>succede?<sp/>magari<sp/>riesco<sp/>a<sp/>farlo<sp/>andare<sp/>meglio</highlight></codeline>
+<codeline lineno="2311"><highlight class="stringliteral">-<sp/>vanno<sp/>aggiustati<sp/>i<sp/>guadagni<sp/>dei<sp/>go<sp/>to<sp/>point<sp/>e<sp/>align,<sp/>e<sp/>magari<sp/>introdurre<sp/>anche<sp/>una<sp/>saturation</highlight></codeline>
+<codeline lineno="2312"><highlight class="stringliteral">-<sp/>navigation<sp/>system:<sp/>creare<sp/>un<sp/>controller<sp/>che<sp/>gestisca<sp/>anche<sp/>il<sp/>braccio<sp/>durante<sp/>la<sp/>navigazione<sp/>(magari<sp/>abbassarlo<sp/>per<sp/>rendere<sp/>il<sp/>robot<sp/>più<sp/>stabile)</highlight></codeline>
+<codeline lineno="2313"><highlight class="stringliteral">-<sp/>documentazione<sp/>del<sp/>package<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="2314"><highlight class="stringliteral">-<sp/>UML<sp/>finale<sp/>per<sp/>ROSPlan</highlight></codeline>
+<codeline lineno="2315"><highlight class="stringliteral">-<sp/>*module<sp/>testing*<sp/>su<sp/>kb_tools</highlight></codeline>
+<codeline lineno="2316"><highlight class="stringliteral">-<sp/>evita<sp/>di<sp/>muovere<sp/>il<sp/>braccio<sp/>robotico<sp/>se<sp/>sai<sp/>che<sp/>la<sp/>posture<sp/>richiesta<sp/>è<sp/>uguale<sp/>a<sp/>quella<sp/>attuale,<sp/>*memorizza<sp/>la<sp/>posture<sp/>attuale*<sp/>(puoi<sp/>tracciarla...)</highlight></codeline>
+<codeline lineno="2317"><highlight class="stringliteral">-<sp/>pensare<sp/>bene<sp/>al<sp/>module<sp/>testing,<sp/>e<sp/>in<sp/>particolare<sp/>correggere<sp/>i<sp/>module<sp/>testing<sp/>di<sp/>armor<sp/>(potrebbero<sp/>non<sp/>funzionare<sp/>più<sp/>per<sp/>via<sp/>delle<sp/>ultime<sp/>modifiche<sp/>ai<sp/>servizi)</highlight></codeline>
+<codeline lineno="2318"><highlight class="stringliteral">-<sp/>*un<sp/>tantino<sp/>in<sp/>più<sp/>di<sp/>scena<sp/>nell&apos;indagine?*<sp/>(intanto<sp/>deve<sp/>funzionare...)</highlight></codeline>
+<codeline lineno="2319"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2320"><highlight class="stringliteral">-<sp/>implementazione<sp/>precisa<sp/>dell&apos;azione<sp/>move-to</highlight></codeline>
+<codeline lineno="2321"><highlight class="stringliteral">-<sp/>implementazione<sp/>del<sp/>launch<sp/>di<sp/>un<sp/>particolare<sp/>file<sp/>di<sp/>configurazione<sp/>per<sp/>rviz</highlight></codeline>
+<codeline lineno="2322"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2323"><highlight class="stringliteral">-<sp/>la<sp/>pagina<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>andrebbe<sp/>messa<sp/>in<sp/>una<sp/>cartella<sp/>chiamata<sp/>code_documentation<sp/>(inutile<sp/>dire<sp/>che<sp/>ogni<sp/>package<sp/>ha<sp/>le<sp/>sue,<sp/>e<sp/>non<sp/>si<sp/>deve<sp/>mischiare<sp/>nulla)</highlight></codeline>
+<codeline lineno="2324"><highlight class="stringliteral">-<sp/>rifare<sp/>gli<sp/>schemi<sp/>di<sp/>armor!<sp/></highlight></codeline>
+<codeline lineno="2325"><highlight class="stringliteral">-<sp/>aggiornare<sp/>schema<sp/>feedback<sp/>manager</highlight></codeline>
+<codeline lineno="2326"><highlight class="stringliteral">-<sp/>aggiustare<sp/>le<sp/>toctree<sp/>in<sp/>giro<sp/>per<sp/>le<sp/>pagine</highlight></codeline>
+<codeline lineno="2327"><highlight class="stringliteral">-<sp/>creare<sp/>una<sp/>&quot;</highlight><highlight class="normal">rubrica</highlight><highlight class="stringliteral">&quot;<sp/>generale<sp/>di<sp/>topic<sp/>e<sp/>servizi<sp/>dell&apos;architettura</highlight></codeline>
+<codeline lineno="2328"><highlight class="stringliteral">-<sp/>e<sp/>creare<sp/>uno<sp/>standard<sp/>per<sp/>gli<sp/>UML<sp/>in<sp/>ROS,<sp/>o<sp/>qualcosa<sp/>che<sp/>possa<sp/>essere<sp/>replicato</highlight></codeline>
+<codeline lineno="2329"><highlight class="stringliteral">-<sp/>**vanno<sp/>fatti<sp/>ancora<sp/>i<sp/>temporal<sp/>diagrams!**<sp/>e<sp/>i<sp/>diagrammi<sp/>riguardanti<sp/>l&apos;architettura<sp/>generale</highlight></codeline>
+<codeline lineno="2330"><highlight class="stringliteral">-<sp/>in<sp/>tutti<sp/>gli<sp/>UML<sp/>dei<sp/>componenti<sp/>delle<sp/>implementazioni<sp/>delle<sp/>azioni<sp/>PDDL<sp/>c&apos;è<sp/>una<sp/>parte<sp/>comune<sp/>di<sp/>feedback:<sp/>scrivila<sp/>una<sp/>volta<sp/>per<sp/>tutte<sp/>e<sp/>copia-incolla<sp/>in<sp/>tutti<sp/>i<sp/>diagrammi</highlight></codeline>
+<codeline lineno="2331"><highlight class="stringliteral">-<sp/>aggiungere<sp/>le<sp/>pagine<sp/>di<sp/>documentazione<sp/>del<sp/>codice<sp/>di<sp/>Sphinx!</highlight></codeline>
+<codeline lineno="2332"><highlight class="stringliteral">-<sp/>aggiornare<sp/>i<sp/>template<sp/>delle<sp/>actions<sp/>in<sp/>questo<sp/>file</highlight></codeline>
+<codeline lineno="2333"><highlight class="stringliteral">-<sp/>rimuovere<sp/>le<sp/>immagini<sp/>dalla<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>armor</highlight></codeline>
+<codeline lineno="2334"><highlight class="stringliteral">-<sp/>un<sp/>branch<sp/>per<sp/>la<sp/>documentazione<sp/>Sphinx</highlight></codeline>
+<codeline lineno="2335"><highlight class="stringliteral">-<sp/>e<sp/>uno<sp/>script<sp/>per<sp/>mettere<sp/>online<sp/>la<sp/>documentazione<sp/>sphinx<sp/>&quot;</highlight><highlight class="normal">senza<sp/>sbattersi<sp/>troppo</highlight><highlight class="stringliteral">&quot;</highlight></codeline>
+<codeline lineno="2336"><highlight class="stringliteral">-<sp/>approfondire<sp/>UML<sp/>armor</highlight></codeline>
+<codeline lineno="2337"><highlight class="stringliteral">-<sp/>aggiornare<sp/>il<sp/>file<sp/>di<sp/>descrizione<sp/>e<sp/>design<sp/>del<sp/>PDDL<sp/>con<sp/>il<sp/>codice<sp/>corretto</highlight></codeline>
+<codeline lineno="2338"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>-<sp/>correggere<sp/>i<sp/>landmark,<sp/>oppure<sp/>eliminare<sp/>direttamente<sp/>la<sp/>sezione</highlight></codeline>
+<codeline lineno="2339"><highlight class="stringliteral">-<sp/>specificare<sp/>negli<sp/>UML,<sp/>nel<sp/>tipo<sp/>di<sp/>topic/servizio,<sp/>*anche<sp/>il<sp/>formato<sp/>del<sp/>tipo*,<sp/>ad<sp/>esempio<sp/>se<sp/>è<sp/>*.msg*<sp/>o<sp/>anche<sp/>*.srv*</highlight></codeline>
 <codeline lineno="2340"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2341"><highlight class="stringliteral">Quindi<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>è<sp/>distribuito<sp/>su<sp/>due<sp/>livelli:<sp/>il<sp/>primo<sp/>è<sp/>quello<sp/>&quot;</highlight><highlight class="normal">generico</highlight><highlight class="stringliteral">&quot;<sp/>del<sp/>mission<sp/>manager,<sp/>che<sp/>si<sp/>occupa<sp/>anche<sp/>di<sp/>fare<sp/>da<sp/>mediatore<sp/>*tra<sp/>due<sp/>componenti<sp/>architetturali<sp/>diversi*<sp/>(armor<sp/>e<sp/>rosplan),<sp/>e<sp/>il<sp/>secondo<sp/>quello<sp/>specifico<sp/>che<sp/>si<sp/>preoccupa<sp/>di<sp/>gestire<sp/>i<sp/>dettagli<sp/>delle<sp/>varie<sp/>azioni<sp/>da<sp/>compiere.<sp/></highlight></codeline>
+<codeline lineno="2341"><highlight class="stringliteral">-<sp/>autenticazione<sp/>SSH<sp/>sul<sp/>Docker<sp/>di<sp/>lavoro</highlight></codeline>
 <codeline lineno="2342"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2343"><highlight class="stringliteral">in<sp/>questo<sp/>caso<sp/>la<sp/>sequenza<sp/>delle<sp/>azioni<sp/>non<sp/>è<sp/>molto<sp/>complessa,<sp/>però<sp/>in<sp/>futuro<sp/>potrebbe<sp/>esserla.<sp/>ad<sp/>esempio,<sp/>il<sp/>landmark<sp/>COLLECT,<sp/>che<sp/>attualmente<sp/>comprende<sp/>una<sp/>sequenza<sp/>di<sp/>3<sp/>azioni<sp/>(più<sp/>la<sp/>scelta<sp/>di<sp/>dove<sp/>andare<sp/>in<sp/>base<sp/>alla<sp/>mappa<sp/>topologica<sp/>dell&apos;area<sp/>...<sp/>ok,<sp/>non<sp/>così<sp/>semplice)<sp/>potrebbe,<sp/>in<sp/>futuro,<sp/>comprenderne<sp/>di<sp/>più:<sp/>ad<sp/>esempio,<sp/>comprendere<sp/>movimenti<sp/>espliciti<sp/>del<sp/>manipolatore<sp/>in<sp/>base<sp/>al<sp/>tipo<sp/>di<sp/>hint<sp/>da<sp/>raccogliere,<sp/>determinate<sp/>operazioni<sp/>di<sp/>sensing<sp/>durante<sp/>la<sp/>raccolta,<sp/>e<sp/>molto<sp/>di<sp/>più.<sp/></highlight></codeline>
-<codeline lineno="2344"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2345"><highlight class="stringliteral">più<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>evolve<sp/>in<sp/>complessità,<sp/>più<sp/>è<sp/>necessaria<sp/>una<sp/>separazione<sp/>tra<sp/>diversi<sp/>modi<sp/>di<sp/>vedere<sp/>il<sp/>da<sp/>farsi.<sp/>più<sp/>di<sp/>due<sp/>livelli<sp/>però<sp/>...<sp/>non<sp/>so<sp/>quanto<sp/>convenga.<sp/>2<sp/>è<sp/>la<sp/>scelta<sp/>più<sp/>logica<sp/>ed<sp/>efficace<sp/>per<sp/>la<sp/>maggioranza<sp/>dei<sp/>casi.<sp/></highlight></codeline>
-<codeline lineno="2346"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2347"><highlight class="stringliteral">###<sp/>vantaggi<sp/>(e<sp/>svantaggi)<sp/>dell&apos;approccio<sp/>per<sp/>landmarks</highlight></codeline>
-<codeline lineno="2348"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2349"><highlight class="stringliteral">motivazioni<sp/>per<sp/>cui<sp/>ho<sp/>scelto<sp/>un<sp/>planning<sp/>su<sp/>due<sp/>livelli<sp/>e<sp/>l&apos;approccio<sp/>dei<sp/>landmarks:</highlight></codeline>
-<codeline lineno="2350"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2351"><highlight class="stringliteral">-<sp/>maggiore<sp/>flessibilità<sp/>in<sp/>caso<sp/>di<sp/>modifica<sp/>dell&apos;architettura</highlight></codeline>
-<codeline lineno="2352"><highlight class="stringliteral">-<sp/>il<sp/>planner<sp/>PDDL<sp/>non<sp/>deve<sp/>fare<sp/>un&apos;intera<sp/>pianificazione<sp/>statica,<sp/>perciò<sp/>è<sp/>più<sp/>veloce<sp/>nel<sp/>risolvere<sp/>il<sp/>plan</highlight></codeline>
-<codeline lineno="2353"><highlight class="stringliteral">-<sp/>fare<sp/>un<sp/>planning<sp/>statico<sp/>dell&apos;intera<sp/>situazione<sp/>è<sp/>semplicemente<sp/>assurdo,<sp/>se<sp/>pensiamo<sp/>a<sp/>tutti<sp/>i<sp/>problemi<sp/>imprevisti<sp/>che<sp/>possono<sp/>sorgere</highlight></codeline>
-<codeline lineno="2354"><highlight class="stringliteral">-<sp/>vedere<sp/>il<sp/>comportamento<sp/>del<sp/>sistema<sp/>su<sp/>due<sp/>livelli<sp/>permette<sp/>di<sp/>astrarre<sp/>in<sp/>maniera<sp/>più<sp/>conveniente</highlight></codeline>
-<codeline lineno="2355"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2356"><highlight class="stringliteral">problemi,<sp/>limitazioni,<sp/>difetti:</highlight></codeline>
-<codeline lineno="2357"><highlight class="stringliteral"></highlight></codeline>
-<codeline lineno="2358"><highlight class="stringliteral">-<sp/>rapido<sp/>aumento<sp/>della<sp/>complessità<sp/>di<sp/>implementazione<sp/>del<sp/>sistema</highlight></codeline>
-<codeline lineno="2359"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2343"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2344"><highlight class="stringliteral">##<sp/>NOTE</highlight></codeline>
+<codeline lineno="2345"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2346"><highlight class="stringliteral">###<sp/>una<sp/>nota<sp/>su<sp/>rosplan<sp/>e<sp/>il<sp/>mission<sp/>manager</highlight></codeline>
+<codeline lineno="2347"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2348"><highlight class="stringliteral">il<sp/>principio<sp/>è<sp/>questo:</highlight></codeline>
+<codeline lineno="2349"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2350"><highlight class="stringliteral">-<sp/>*il<sp/>mission<sp/>manager*<sp/>si<sp/>occupa<sp/>del<sp/>progresso<sp/>della<sp/>missione<sp/>ad<sp/>alto<sp/>livello</highlight></codeline>
+<codeline lineno="2351"><highlight class="stringliteral">-<sp/>*ROSPlan*<sp/>si<sp/>preoccupa<sp/>della<sp/>singola<sp/>azione<sp/>da<sp/>eseguire,<sp/>*nel<sp/>dettaglio<sp/>dello<sp/>stato<sp/>delle<sp/>cose*.<sp/></highlight></codeline>
+<codeline lineno="2352"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2353"><highlight class="stringliteral">Quindi<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>è<sp/>distribuito<sp/>su<sp/>due<sp/>livelli:<sp/>il<sp/>primo<sp/>è<sp/>quello<sp/>&quot;</highlight><highlight class="normal">generico</highlight><highlight class="stringliteral">&quot;<sp/>del<sp/>mission<sp/>manager,<sp/>che<sp/>si<sp/>occupa<sp/>anche<sp/>di<sp/>fare<sp/>da<sp/>mediatore<sp/>*tra<sp/>due<sp/>componenti<sp/>architetturali<sp/>diversi*<sp/>(armor<sp/>e<sp/>rosplan),<sp/>e<sp/>il<sp/>secondo<sp/>quello<sp/>specifico<sp/>che<sp/>si<sp/>preoccupa<sp/>di<sp/>gestire<sp/>i<sp/>dettagli<sp/>delle<sp/>varie<sp/>azioni<sp/>da<sp/>compiere.<sp/></highlight></codeline>
+<codeline lineno="2354"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2355"><highlight class="stringliteral">in<sp/>questo<sp/>caso<sp/>la<sp/>sequenza<sp/>delle<sp/>azioni<sp/>non<sp/>è<sp/>molto<sp/>complessa,<sp/>però<sp/>in<sp/>futuro<sp/>potrebbe<sp/>esserla.<sp/>ad<sp/>esempio,<sp/>il<sp/>landmark<sp/>COLLECT,<sp/>che<sp/>attualmente<sp/>comprende<sp/>una<sp/>sequenza<sp/>di<sp/>3<sp/>azioni<sp/>(più<sp/>la<sp/>scelta<sp/>di<sp/>dove<sp/>andare<sp/>in<sp/>base<sp/>alla<sp/>mappa<sp/>topologica<sp/>dell&apos;area<sp/>...<sp/>ok,<sp/>non<sp/>così<sp/>semplice)<sp/>potrebbe,<sp/>in<sp/>futuro,<sp/>comprenderne<sp/>di<sp/>più:<sp/>ad<sp/>esempio,<sp/>comprendere<sp/>movimenti<sp/>espliciti<sp/>del<sp/>manipolatore<sp/>in<sp/>base<sp/>al<sp/>tipo<sp/>di<sp/>hint<sp/>da<sp/>raccogliere,<sp/>determinate<sp/>operazioni<sp/>di<sp/>sensing<sp/>durante<sp/>la<sp/>raccolta,<sp/>e<sp/>molto<sp/>di<sp/>più.<sp/></highlight></codeline>
+<codeline lineno="2356"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2357"><highlight class="stringliteral">più<sp/>il<sp/>comportamento<sp/>del<sp/>robot<sp/>evolve<sp/>in<sp/>complessità,<sp/>più<sp/>è<sp/>necessaria<sp/>una<sp/>separazione<sp/>tra<sp/>diversi<sp/>modi<sp/>di<sp/>vedere<sp/>il<sp/>da<sp/>farsi.<sp/>più<sp/>di<sp/>due<sp/>livelli<sp/>però<sp/>...<sp/>non<sp/>so<sp/>quanto<sp/>convenga.<sp/>2<sp/>è<sp/>la<sp/>scelta<sp/>più<sp/>logica<sp/>ed<sp/>efficace<sp/>per<sp/>la<sp/>maggioranza<sp/>dei<sp/>casi.<sp/></highlight></codeline>
+<codeline lineno="2358"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2359"><highlight class="stringliteral">###<sp/>vantaggi<sp/>(e<sp/>svantaggi)<sp/>dell&apos;approccio<sp/>per<sp/>landmarks</highlight></codeline>
 <codeline lineno="2360"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2361"><highlight class="stringliteral">motivazioni<sp/>per<sp/>cui<sp/>ho<sp/>scelto<sp/>un<sp/>planning<sp/>su<sp/>due<sp/>livelli<sp/>e<sp/>l&apos;approccio<sp/>dei<sp/>landmarks:</highlight></codeline>
+<codeline lineno="2362"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2363"><highlight class="stringliteral">-<sp/>maggiore<sp/>flessibilità<sp/>in<sp/>caso<sp/>di<sp/>modifica<sp/>dell&apos;architettura</highlight></codeline>
+<codeline lineno="2364"><highlight class="stringliteral">-<sp/>il<sp/>planner<sp/>PDDL<sp/>non<sp/>deve<sp/>fare<sp/>un&apos;intera<sp/>pianificazione<sp/>statica,<sp/>perciò<sp/>è<sp/>più<sp/>veloce<sp/>nel<sp/>risolvere<sp/>il<sp/>plan</highlight></codeline>
+<codeline lineno="2365"><highlight class="stringliteral">-<sp/>fare<sp/>un<sp/>planning<sp/>statico<sp/>dell&apos;intera<sp/>situazione<sp/>è<sp/>semplicemente<sp/>assurdo,<sp/>se<sp/>pensiamo<sp/>a<sp/>tutti<sp/>i<sp/>problemi<sp/>imprevisti<sp/>che<sp/>possono<sp/>sorgere</highlight></codeline>
+<codeline lineno="2366"><highlight class="stringliteral">-<sp/>vedere<sp/>il<sp/>comportamento<sp/>del<sp/>sistema<sp/>su<sp/>due<sp/>livelli<sp/>permette<sp/>di<sp/>astrarre<sp/>in<sp/>maniera<sp/>più<sp/>conveniente</highlight></codeline>
+<codeline lineno="2367"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2368"><highlight class="stringliteral">problemi,<sp/>limitazioni,<sp/>difetti:</highlight></codeline>
+<codeline lineno="2369"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2370"><highlight class="stringliteral">-<sp/>rapido<sp/>aumento<sp/>della<sp/>complessità<sp/>di<sp/>implementazione<sp/>del<sp/>sistema</highlight></codeline>
+<codeline lineno="2371"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="2372"><highlight class="stringliteral"></highlight></codeline>
     </programlisting>
     <location file="_build/html/_sources/_docs/dev-log.md.txt"/>
   </compounddef>

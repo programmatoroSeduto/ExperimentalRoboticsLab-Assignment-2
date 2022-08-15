@@ -90,7 +90,7 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>link<sp/>text<sp/>&lt;./path/link.format&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>...</highlight></codeline>
 </programlisting></para>
-<para>the page can be referred using both <computeroutput>:ref:&lt;your-tag&gt;</computeroutput> and <computeroutput>:any:&lt;your-tag&gt;</computeroutput>.</para>
+<para>the page can be referred using both <computeroutput>:ref:&lt;your-tag&gt;</computeroutput> and <computeroutput>:any:&lt;your-tag&gt;</computeroutput>. <bold>WITH BACKTICKS!</bold></para>
 </sect2>
 </sect1>
 <sect1 id="md__docs_rest-directives_1autotoc_md94">

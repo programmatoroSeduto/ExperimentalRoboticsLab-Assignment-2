@@ -5,7 +5,6 @@
     <innerfile refid="bug__m_8py">bug_m.py</innerfile>
     <innerfile refid="go__to__point__service__m_8py">go_to_point_service_m.py</innerfile>
     <innerfile refid="head__orientation_8py">head_orientation.py</innerfile>
-    <innerfile refid="laser__services_8py">laser_services.py</innerfile>
     <innerfile refid="wall__follow__service__m_8py">wall_follow_service_m.py</innerfile>
     <briefdescription>
     </briefdescription>

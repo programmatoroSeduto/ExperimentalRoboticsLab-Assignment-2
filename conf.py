@@ -15,6 +15,18 @@ import sys
 import subprocess
 
 sys.path.insert(0, os.path.abspath('.'))
+sys.path.insert(0, os.path.abspath('./robocluedo_armor'))
+sys.path.insert(0, os.path.abspath('./robocluedo_armor/scripts'))
+sys.path.insert(0, os.path.abspath('./robocluedo_armor_msgs'))
+sys.path.insert(0, os.path.abspath('./robocluedo_mission_manager'))
+sys.path.insert(0, os.path.abspath('./robocluedo_mission_manager/scripts'))
+sys.path.insert(0, os.path.abspath('./robocluedo_module_testing'))
+sys.path.insert(0, os.path.abspath('./robocluedo_module_testing/scripts'))
+sys.path.insert(0, os.path.abspath('./robocluedo_movement_controller'))
+sys.path.insert(0, os.path.abspath('./robocluedo_movement_controller/scripts'))
+sys.path.insert(0, os.path.abspath('./robocluedo_rosplan'))
+sys.path.insert(0, os.path.abspath('./robocluedo_rosplan/scripts'))
+sys.path.insert(0, os.path.abspath('./robocluedo_rosplan_msgs'))
 
 
 # -- Project information -----------------------------------------------------
@@ -62,6 +74,12 @@ templates_path = ['_templates']
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+
+
+# -- Options for autodoc -----------------------------------------------------
+
+# mock ros and other stuff
+autodoc_mock_imports = ["rospy"]
 
 
 # -- Options for HTML output -------------------------------------------------

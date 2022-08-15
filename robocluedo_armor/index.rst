@@ -1,4 +1,6 @@
 
+.. _pkg-robocluedo-armor:
+
 PKG DOCS -- robocluedo armor
 ==========================================
 
