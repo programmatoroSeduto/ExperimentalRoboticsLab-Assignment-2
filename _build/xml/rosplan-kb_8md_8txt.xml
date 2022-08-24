@@ -10,6 +10,15 @@
       <node id="5">
         <label>rosplan_knowledge_msgs/KnowledgeUpdateService.h</label>
       </node>
+      <node id="2">
+        <label>diagnostic_msgs/KeyValue.h</label>
+      </node>
+      <node id="4">
+        <label>rosplan_knowledge_msgs/KnowledgeQueryService.h</label>
+      </node>
+      <node id="3">
+        <label>rosplan_knowledge_msgs/KnowledgeItem.h</label>
+      </node>
       <node id="1">
         <label>_build/html/_sources/robocluedo_rosplan/_uml/rosplan-kb.md.txt</label>
         <link refid="rosplan-kb_8md_8txt"/>
@@ -21,15 +30,6 @@
         </childnode>
         <childnode refid="5" relation="include">
         </childnode>
-      </node>
-      <node id="2">
-        <label>diagnostic_msgs/KeyValue.h</label>
-      </node>
-      <node id="4">
-        <label>rosplan_knowledge_msgs/KnowledgeQueryService.h</label>
-      </node>
-      <node id="3">
-        <label>rosplan_knowledge_msgs/KnowledgeItem.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="define">

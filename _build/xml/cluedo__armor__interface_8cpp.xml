@@ -73,6 +73,45 @@
       <node id="4">
         <label>ros/ros.h</label>
       </node>
+      <node id="8">
+        <label>armor_msgs/ArmorDirectiveReq.h</label>
+      </node>
+      <node id="10">
+        <label>iostream</label>
+      </node>
+      <node id="16">
+        <label>std_srvs/Trigger.h</label>
+      </node>
+      <node id="6">
+        <label>armor_msgs/QueryItem.h</label>
+      </node>
+      <node id="5">
+        <label>armor_tools/armor_tools.h</label>
+        <link refid="armor__tools_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>robocluedo_armor_msgs/DiscardHypothesis.h</label>
+      </node>
       <node id="1">
         <label>robocluedo_armor/src/cluedo_armor_interface.cpp</label>
         <link refid="cluedo__armor__interface_8cpp"/>
@@ -114,45 +153,6 @@
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
-      </node>
-      <node id="8">
-        <label>armor_msgs/ArmorDirectiveReq.h</label>
-      </node>
-      <node id="5">
-        <label>armor_tools/armor_tools.h</label>
-        <link refid="armor__tools_8h"/>
-        <childnode refid="4" relation="include">
-        </childnode>
-        <childnode refid="6" relation="include">
-        </childnode>
-        <childnode refid="7" relation="include">
-        </childnode>
-        <childnode refid="8" relation="include">
-        </childnode>
-        <childnode refid="9" relation="include">
-        </childnode>
-        <childnode refid="10" relation="include">
-        </childnode>
-        <childnode refid="11" relation="include">
-        </childnode>
-        <childnode refid="12" relation="include">
-        </childnode>
-        <childnode refid="13" relation="include">
-        </childnode>
-        <childnode refid="14" relation="include">
-        </childnode>
-      </node>
-      <node id="10">
-        <label>iostream</label>
-      </node>
-      <node id="16">
-        <label>std_srvs/Trigger.h</label>
-      </node>
-      <node id="6">
-        <label>armor_msgs/QueryItem.h</label>
-      </node>
-      <node id="21">
-        <label>robocluedo_armor_msgs/DiscardHypothesis.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="define">

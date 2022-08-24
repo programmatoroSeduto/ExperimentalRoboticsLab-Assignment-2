@@ -47,6 +47,12 @@
       <node id="6">
         <label>armor_msgs/ArmorDirectiveReq.h</label>
       </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>armor_msgs/QueryItem.h</label>
+      </node>
       <node id="2">
         <label>armor_tools/armor_tools.h</label>
         <link refid="armor__tools_8h"/>
@@ -71,18 +77,8 @@
         <childnode refid="12" relation="include">
         </childnode>
       </node>
-      <node id="8">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>armor_msgs/QueryItem.h</label>
-      </node>
     </incdepgraph>
     <invincdepgraph>
-      <node id="2">
-        <label>robocluedo_armor/src/armor_tools/armor_cluedo.cpp</label>
-        <link refid="armor__cluedo_8cpp"/>
-      </node>
       <node id="1">
         <label>robocluedo_armor/include/armor_tools/armor_cluedo.h</label>
         <link refid="armor__cluedo_8h"/>
@@ -95,13 +91,17 @@
         <childnode refid="5" relation="include">
         </childnode>
       </node>
-      <node id="3">
-        <label>robocluedo_armor/src/cluedo_armor_interface.cpp</label>
-        <link refid="cluedo__armor__interface_8cpp"/>
+      <node id="2">
+        <label>robocluedo_armor/src/armor_tools/armor_cluedo.cpp</label>
+        <link refid="armor__cluedo_8cpp"/>
       </node>
       <node id="4">
         <label>robocluedo_module_testing/src/test_armor/test_armor_cluedo.cpp</label>
         <link refid="test__armor__cluedo_8cpp"/>
+      </node>
+      <node id="3">
+        <label>robocluedo_armor/src/cluedo_armor_interface.cpp</label>
+        <link refid="cluedo__armor__interface_8cpp"/>
       </node>
       <node id="5">
         <label>robocluedo_module_testing/src/test_armor/test_armor_tools.cpp</label>

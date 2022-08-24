@@ -9,9 +9,6 @@
     <includes local="yes">signal.h</includes>
     <includes local="no">string</includes>
     <incdepgraph>
-      <node id="3">
-        <label>moveit/move_group_interface/move_group_interface.h</label>
-      </node>
       <node id="1">
         <label>robocluedo_movement_controller/src/manipulation_controller.cpp</label>
         <link refid="manipulation__controller_8cpp"/>
@@ -27,6 +24,9 @@
         </childnode>
         <childnode refid="7" relation="include">
         </childnode>
+      </node>
+      <node id="3">
+        <label>moveit/move_group_interface/move_group_interface.h</label>
       </node>
       <node id="7">
         <label>string</label>

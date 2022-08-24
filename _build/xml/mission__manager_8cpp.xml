@@ -19,15 +19,6 @@
       <node id="5">
         <label>robocluedo_rosplan_msgs/ActionFeedback.h</label>
       </node>
-      <node id="13">
-        <label>map</label>
-      </node>
-      <node id="6">
-        <label>robocluedo_armor_msgs/AddHint.h</label>
-      </node>
-      <node id="12">
-        <label>erl2/ErlOracle.h</label>
-      </node>
       <node id="1">
         <label>robocluedo_mission_manager/src/mission_manager.cpp</label>
         <link refid="mission__manager_8cpp"/>
@@ -57,6 +48,15 @@
         </childnode>
         <childnode refid="14" relation="include">
         </childnode>
+      </node>
+      <node id="13">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>robocluedo_armor_msgs/AddHint.h</label>
+      </node>
+      <node id="12">
+        <label>erl2/ErlOracle.h</label>
       </node>
       <node id="9">
         <label>robocluedo_armor_msgs/Hypothesis.h</label>

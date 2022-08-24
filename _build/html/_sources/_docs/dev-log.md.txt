@@ -2296,6 +2296,42 @@ dopo questo excursus che mi ha solo fatto venire il nervoso, andiamo avanti
 - mi sono dimenticato il mission manager!
 - **COMMIT**: "deployment (pkg mission manager docs setup)"
 
+---
+
+## 23/08/2022 -- todo
+
+- riconfigurazione della workspace (prepariamoci a metterci una pietra sopra)
+- il progetto (fortunatamente) funziona ancora, dopo qualche piccolo problema iniziale con catkin, durato poco fortunatamente
+
+In piano è quello di prendere la documentazione da erl3 e riadattarla a erl2 per quanto possibile, modificando solo ed esclusivamente le parti realmente diverte tra i vari progetti, e copiando tutto il resto. 
+
+direttamente dal terzo assignment (fortunatamente concluso ... nightly)
+
+```{todo}
+**secondo assignment:**
+
+- introdurre uno script che permetta di lanciare tutti i componenti, proprio come fatto nel terzo assignment
+- (tenta di non fare troppi aggiornamenti inutili ... alla fin fine, il secondo assignment funziona bene così: inutile fare più del necessario)
+- importare la documentazione di aRMOR finale dal terzo assignment
+- la documentazione del package rosplan può essere riportata pari pari nell'assignment 2, perchè tanto è identica
+- documentazione di rosplan
+	- copiare per intero rosplan-arch.md
+	- c'è qualcosa di specifico da inserire in questo documento?
+- aggiornare la documentazione per il vecchio robot
+- documentazione mission manager
+	- per quanto riguarda la documentazione del mission manager main, la documentazione cambia di pochissimo
+		- casomai, indica quali differenze ci sono tra i due assignment
+	- la documentazione del manipulation manager cambia
+	- e anche quella della navigation unit (usa un algoritmo diverso)
+- elimina le cartelle inutilizzate su esempi e tutto il resto (se non servono, eliminale)
+- verificare che tutte le pagine ausiliarie abbiano la loro TOCtree interna, specie quando sono lunghe pagine
+
+```
+
+---
+
+
+
 
 
 

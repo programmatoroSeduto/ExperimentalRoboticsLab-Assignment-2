@@ -52,6 +52,12 @@
       <node id="6">
         <label>armor_msgs/ArmorDirectiveReq.h</label>
       </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>armor_msgs/QueryItem.h</label>
+      </node>
       <node id="3">
         <label>armor_tools/armor_tools.h</label>
         <link refid="armor__tools_8h"/>
@@ -75,12 +81,6 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-      </node>
-      <node id="8">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>armor_msgs/QueryItem.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="var">

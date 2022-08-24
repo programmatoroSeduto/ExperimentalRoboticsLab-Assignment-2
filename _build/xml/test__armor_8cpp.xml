@@ -29,6 +29,12 @@
       <node id="10">
         <label>map</label>
       </node>
+      <node id="12">
+        <label>fstream</label>
+      </node>
+      <node id="9">
+        <label>vector</label>
+      </node>
       <node id="1">
         <label>robocluedo_module_testing/src/test_armor/test_armor.cpp</label>
         <link refid="test__armor_8cpp"/>
@@ -55,17 +61,17 @@
         <childnode refid="9" relation="include">
         </childnode>
       </node>
-      <node id="12">
-        <label>fstream</label>
-      </node>
-      <node id="9">
-        <label>vector</label>
-      </node>
       <node id="2">
         <label>ros/ros.h</label>
       </node>
       <node id="6">
         <label>armor_msgs/ArmorDirectiveReq.h</label>
+      </node>
+      <node id="8">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>armor_msgs/QueryItem.h</label>
       </node>
       <node id="3">
         <label>armor_tools/armor_tools.h</label>
@@ -90,12 +96,6 @@
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
-      </node>
-      <node id="8">
-        <label>iostream</label>
-      </node>
-      <node id="4">
-        <label>armor_msgs/QueryItem.h</label>
       </node>
     </incdepgraph>
       <sectiondef kind="define">

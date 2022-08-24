@@ -2305,6 +2305,42 @@
 <codeline><highlight class="normal">-<sp/>mi<sp/>sono<sp/>dimenticato<sp/>il<sp/>mission<sp/>manager!</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(pkg<sp/>mission<sp/>manager<sp/>docs<sp/>setup)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>23/08/2022<sp/>--<sp/>todo</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>riconfigurazione<sp/>della<sp/>workspace<sp/>(prepariamoci<sp/>a<sp/>metterci<sp/>una<sp/>pietra<sp/>sopra)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>il<sp/>progetto<sp/>(fortunatamente)<sp/>funziona<sp/>ancora,<sp/>dopo<sp/>qualche<sp/>piccolo<sp/>problema<sp/>iniziale<sp/>con<sp/>catkin,<sp/>durato<sp/>poco<sp/>fortunatamente</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">In<sp/>piano<sp/>è<sp/>quello<sp/>di<sp/>prendere<sp/>la<sp/>documentazione<sp/>da<sp/>erl3<sp/>e<sp/>riadattarla<sp/>a<sp/>erl2<sp/>per<sp/>quanto<sp/>possibile,<sp/>modificando<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>le<sp/>parti<sp/>realmente<sp/>diverte<sp/>tra<sp/>i<sp/>vari<sp/>progetti,<sp/>e<sp/>copiando<sp/>tutto<sp/>il<sp/>resto.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">direttamente<sp/>dal<sp/>terzo<sp/>assignment<sp/>(fortunatamente<sp/>concluso<sp/>...<sp/>nightly)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```{todo}</highlight></codeline>
+<codeline><highlight class="normal">**secondo<sp/>assignment:**</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>introdurre<sp/>uno<sp/>script<sp/>che<sp/>permetta<sp/>di<sp/>lanciare<sp/>tutti<sp/>i<sp/>componenti,<sp/>proprio<sp/>come<sp/>fatto<sp/>nel<sp/>terzo<sp/>assignment</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>(tenta<sp/>di<sp/>non<sp/>fare<sp/>troppi<sp/>aggiornamenti<sp/>inutili<sp/>...<sp/>alla<sp/>fin<sp/>fine,<sp/>il<sp/>secondo<sp/>assignment<sp/>funziona<sp/>bene<sp/>così:<sp/>inutile<sp/>fare<sp/>più<sp/>del<sp/>necessario)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>importare<sp/>la<sp/>documentazione<sp/>di<sp/>aRMOR<sp/>finale<sp/>dal<sp/>terzo<sp/>assignment</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>la<sp/>documentazione<sp/>del<sp/>package<sp/>rosplan<sp/>può<sp/>essere<sp/>riportata<sp/>pari<sp/>pari<sp/>nell&apos;assignment<sp/>2,<sp/>perchè<sp/>tanto<sp/>è<sp/>identica</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>di<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>copiare<sp/>per<sp/>intero<sp/>rosplan-arch.md</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>qualcosa<sp/>di<sp/>specifico<sp/>da<sp/>inserire<sp/>in<sp/>questo<sp/>documento?</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>aggiornare<sp/>la<sp/>documentazione<sp/>per<sp/>il<sp/>vecchio<sp/>robot</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>documentazione<sp/>mission<sp/>manager</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>quanto<sp/>riguarda<sp/>la<sp/>documentazione<sp/>del<sp/>mission<sp/>manager<sp/>main,<sp/>la<sp/>documentazione<sp/>cambia<sp/>di<sp/>pochissimo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>casomai,<sp/>indica<sp/>quali<sp/>differenze<sp/>ci<sp/>sono<sp/>tra<sp/>i<sp/>due<sp/>assignment</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>documentazione<sp/>del<sp/>manipulation<sp/>manager<sp/>cambia</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>anche<sp/>quella<sp/>della<sp/>navigation<sp/>unit<sp/>(usa<sp/>un<sp/>algoritmo<sp/>diverso)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>elimina<sp/>le<sp/>cartelle<sp/>inutilizzate<sp/>su<sp/>esempi<sp/>e<sp/>tutto<sp/>il<sp/>resto<sp/>(se<sp/>non<sp/>servono,<sp/>eliminale)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>verificare<sp/>che<sp/>tutte<sp/>le<sp/>pagine<sp/>ausiliarie<sp/>abbiano<sp/>la<sp/>loro<sp/>TOCtree<sp/>interna,<sp/>specie<sp/>quando<sp/>sono<sp/>lunghe<sp/>pagine</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline></codeline>

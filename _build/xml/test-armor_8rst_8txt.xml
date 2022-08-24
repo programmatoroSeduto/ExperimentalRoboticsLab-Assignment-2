@@ -93,6 +93,6 @@
 <codeline lineno="84"><highlight class="normal"></highlight></codeline>
 <codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">@end</highlight><highlight class="normal">uml</highlight></codeline>
     </programlisting>
-    <location file="_build/html/_sources/robocluedo_module_testing/_uml/test-armor.rst.txt"/>
+    <location file="_build/html/_sources/robocluedo_module_testing/_uml/NO/test-armor.rst.txt"/>
   </compounddef>
 </doxygen>
