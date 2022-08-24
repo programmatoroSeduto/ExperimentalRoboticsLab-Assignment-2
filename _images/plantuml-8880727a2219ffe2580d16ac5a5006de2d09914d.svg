@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="368px" preserveAspectRatio="none" style="width:1119px;height:368px;background:#FFFFFF;" version="1.1" viewBox="0 0 1119 368" width="1119px" zoomAndPan="magnify"><defs/><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="423" x="341" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="413" x="346" y="22.9951">Mission Manager -- interaction with aRMOR interface</text><!--MD5=[8f9906a53639a45e8f1d1b5fd8a8f490]
+entity ARMOR_INTERFACE--><g id="elem_ARMOR_INTERFACE"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="176" x="7" y="159.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="163" y="164.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="161" y="166.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="161" y="170.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="100" x="40" y="192.792">«RCL aRMOR»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="136" x="22" y="209.0889">ARMOR_INTERFACE</text></g><!--MD5=[ff6769c984590f49ebaa14c52fb754a5]
+entity SRV_ARMOR_ADD--><g id="elem_SRV_ARMOR_ADD"><ellipse cx="724" cy="51.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="163" x="642.5" y="81.292">/cluedo_armor/add_hint</text></g><!--MD5=[9a50e2d0d5368a0a1b0a68b01337ec49]
+entity SRV_ARMOR_FIND--><g id="elem_SRV_ARMOR_FIND"><ellipse cx="724" cy="144.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="225" x="611.5" y="174.292">/cluedo_armor/find_consistent_h</text></g><!--MD5=[3b3b20904a042ad183e8b7df1d6262e8]
+entity SRV_ARMOR_DEL--><g id="elem_SRV_ARMOR_DEL"><ellipse cx="724" cy="237.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="230" x="609" y="267.292">/cluedo_armor/wrong_hypothesis</text></g><!--MD5=[780a75eaa14ca967fc45d84d76f7efe8]
+entity SRV_ARMOR_BACKUP--><g id="elem_SRV_ARMOR_BACKUP"><ellipse cx="724" cy="330.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="155" x="646.5" y="360.292">/cluedo_armor/backup</text></g><!--MD5=[9a0d4b0340012a44161447de88fcc332]
+entity MISSION_MANAGER--><g id="elem_MISSION_MANAGER"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="205" x="908" y="159.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1093" y="164.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1091" y="166.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1091" y="170.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="165" x="923" y="192.792">«RCL Mission Manager»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="134" x="938.5" y="209.0889">MISSION_MANAGER</text></g><!--MD5=[5c6dc7dc5376f33f1f8e06a83ace745c]
+link ARMOR_INTERFACE to SRV_ARMOR_ADD--><g id="link_ARMOR_INTERFACE_SRV_ARMOR_ADD"><path d="M149.86,159.7469 C169.21,149.6069 191.57,139.2169 213,132.2969 C403.92,70.6569 650.76,54.8869 709.87,51.8969 " fill="none" id="ARMOR_INTERFACE-to-SRV_ARMOR_ADD" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="715,51.6469,705.8165,48.0882,710.0059,51.8894,706.2047,56.0788,715,51.6469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="237" x="273.5" y="60.3638">robocluedo_armor_msgs/AddHint.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="140.2155" y="148.8153">srv</text></g><!--MD5=[fb6a378461c75b0d2f08eb5a5c26451d]
+link ARMOR_INTERFACE to SRV_ARMOR_FIND--><g id="link_ARMOR_INTERFACE_SRV_ARMOR_FIND"><path d="M183.18,184.7569 C336.03,173.3069 642.55,150.3269 709.77,145.2869 " fill="none" id="ARMOR_INTERFACE-to-SRV_ARMOR_FIND" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="714.86,144.9069,705.5877,141.5866,709.8738,145.2783,706.182,149.5645,714.86,144.9069" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="356" x="214" y="153.3638">robocluedo_armor_msgs/FindConsistentHypotheses.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="190.9639" y="196.9217">srv</text></g><!--MD5=[2eb170e8eb9506c418e17ae0e9bee8b0]
+link ARMOR_INTERFACE to SRV_ARMOR_DEL--><g id="link_ARMOR_INTERFACE_SRV_ARMOR_DEL"><path d="M183.01,209.0369 C193.09,210.6769 203.25,212.1569 213,213.2969 C409.59,236.2969 651.25,237.4369 709.78,237.3469 " fill="none" id="ARMOR_INTERFACE-to-SRV_ARMOR_DEL" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="714.87,237.3369,705.8586,233.3626,709.87,237.3512,705.8815,241.3626,714.87,237.3369" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="305" x="239.5" y="209.3638">robocluedo_armor_msgs/DiscardHypothesis.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="191.085" y="223.2163">srv</text></g><!--MD5=[05e3c9b71958fc16fdfb781ed7b884f3]
+link ARMOR_INTERFACE to SRV_ARMOR_BACKUP--><g id="link_ARMOR_INTERFACE_SRV_ARMOR_BACKUP"><path d="M139.18,222.8869 C160.4,236.8669 186.97,252.1869 213,261.2969 C401.71,327.3769 650.21,330.6569 709.77,330.4369 " fill="none" id="ARMOR_INTERFACE-to-SRV_ARMOR_BACKUP" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="714.93,330.4069,705.9073,326.4584,709.9301,330.4354,705.953,334.4582,714.93,330.4069" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="124" x="330" y="257.3638">std_srvs/Trigger.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="126.7909" y="242.4567">srv</text></g><!--MD5=[0ab236128e0fc6bea1d654d04f92e384]
+link SRV_ARMOR_ADD to MISSION_MANAGER--><g id="link_SRV_ARMOR_ADD_MISSION_MANAGER"><path d="M733.18,53.8669 C753.09,60.2269 805.47,77.6169 847,97.2969 C884.2,114.9169 924.24,138.0369 955.27,156.9269 " fill="none" id="SRV_ARMOR_ADD-to-MISSION_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="959.78,159.6869,954.2039,151.5686,955.5193,157.0704,950.0175,158.3858,959.78,159.6869" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="938.2878" y="148.7429">cl</text></g><!--MD5=[5a3de3fcc593adb3e5e74c58e19d50d6]
+link SRV_ARMOR_FIND to MISSION_MANAGER--><g id="link_SRV_ARMOR_FIND_MISSION_MANAGER"><path d="M733.21,145.6569 C758.25,149.7869 836.02,162.6369 902.69,173.6569 " fill="none" id="SRV_ARMOR_FIND-to-MISSION_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="907.88,174.5069,899.6524,169.0933,902.9469,173.6918,898.3483,176.9863,907.88,174.5069" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="889.9767" y="185.9113">cl</text></g><!--MD5=[52db7bb16e793cd414405373723acb94]
+link SRV_ARMOR_DEL to MISSION_MANAGER--><g id="link_SRV_ARMOR_DEL_MISSION_MANAGER"><path d="M733.21,235.9669 C758.25,231.9169 836.02,219.3469 902.69,208.5669 " fill="none" id="SRV_ARMOR_DEL-to-MISSION_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="907.88,207.7269,898.3636,205.1894,902.942,208.5118,899.6196,213.0902,907.88,207.7269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="889.9767" y="221.5709">cl</text></g><!--MD5=[e3db4730e12bcb8d7a7cf0f6f1988241]
+link SRV_ARMOR_BACKUP to MISSION_MANAGER--><g id="link_SRV_ARMOR_BACKUP_MISSION_MANAGER"><path d="M733.17,327.6169 C753.04,320.9969 805.34,302.9869 847,283.2969 C883.46,266.0669 922.85,243.8669 953.72,225.5869 " fill="none" id="SRV_ARMOR_BACKUP-to-MISSION_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="958.21,222.9169,948.4271,224.055,953.9062,225.462,952.4993,230.9411,958.21,222.9169" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="937.2891" y="242.4924">cl</text></g><!--MD5=[f7ff2acf0e2a87987d0aee485f59f71b]
+@startuml
+
+title Mission Manager - - interaction with aRMOR interface
+left to right direction
+
+''' COMPONENTS
+component ARMOR_INTERFACE <<RCL aRMOR>>
+
+() "/cluedo_armor/add_hint" as SRV_ARMOR_ADD
+() "/cluedo_armor/find_consistent_h" as SRV_ARMOR_FIND
+() "/cluedo_armor/wrong_hypothesis" as SRV_ARMOR_DEL
+() "/cluedo_armor/backup" as SRV_ARMOR_BACKUP
+
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_ADD : robocluedo_armor_msgs/AddHint.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_FIND : robocluedo_armor_msgs/FindConsistentHypotheses.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_DEL : robocluedo_armor_msgs/DiscardHypothesis.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_BACKUP : std_srvs/Trigger.srv
+
+component MISSION_MANAGER <<RCL Mission Manager>>
+
+SRV_ARMOR_ADD - -> "cl" MISSION_MANAGER
+SRV_ARMOR_FIND - -> "cl" MISSION_MANAGER
+SRV_ARMOR_DEL - -> "cl" MISSION_MANAGER
+SRV_ARMOR_BACKUP - -> "cl" MISSION_MANAGER
+
+
+@enduml
+
+@startuml
+
+title Mission Manager - - interaction with aRMOR interface
+left to right direction
+
+component ARMOR_INTERFACE <<RCL aRMOR>>
+
+() "/cluedo_armor/add_hint" as SRV_ARMOR_ADD
+() "/cluedo_armor/find_consistent_h" as SRV_ARMOR_FIND
+() "/cluedo_armor/wrong_hypothesis" as SRV_ARMOR_DEL
+() "/cluedo_armor/backup" as SRV_ARMOR_BACKUP
+
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_ADD : robocluedo_armor_msgs/AddHint.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_FIND : robocluedo_armor_msgs/FindConsistentHypotheses.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_DEL : robocluedo_armor_msgs/DiscardHypothesis.srv
+ARMOR_INTERFACE "srv" - -> SRV_ARMOR_BACKUP : std_srvs/Trigger.srv
+
+component MISSION_MANAGER <<RCL Mission Manager>>
+
+SRV_ARMOR_ADD - -> "cl" MISSION_MANAGER
+SRV_ARMOR_FIND - -> "cl" MISSION_MANAGER
+SRV_ARMOR_DEL - -> "cl" MISSION_MANAGER
+SRV_ARMOR_BACKUP - -> "cl" MISSION_MANAGER
+
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

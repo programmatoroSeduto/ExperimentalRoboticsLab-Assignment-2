@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>README – the RoboCLuedo Project – ROUND 2 &mdash; RoboCLuedo #2 1.0.0 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
+      <link rel="stylesheet" href="_static/assets/jsonview.bundle.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-needs/libs/html/datatables.min.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-needs/common.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-needs/modern.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-needs/layouts.css" type="text/css" />
+      <link rel="stylesheet" href="_static/sphinx-needs/styles.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/assets/jsonview.bundle.js"></script>
+        <script src="_static/assets/jsonview_loader.js"></script>
+        <script src="_static/sphinx-needs/libs/html/datatables.min.js"></script>
+        <script src="_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+        <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="PKG DOCS – robocluedo armor" href="robocluedo_armor/index.html" />
+    <link rel="prev" title="RCL#2 – the RoboCLuedo Project" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> RoboCLuedo #2
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">README</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">the project main README</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_movement_controller/index.html">PKG DOCS – robocluedo_movement_controller</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_movement_controller_msgs/index.html">PKG DOCS – robocluedo_movement_msgs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_mission_manager/index.html">PKG DOCS – robocluedo_mission_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_module_testing/index.html">PKG DOCS – RoboCLuedo Module Testing</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Dependencies Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_dependencies/_docs/erl2-oracle-user-manual.html">Oracle2 – User Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_dependencies/_docs/robocluedo-urdf-user-manual.html">the RoboCLuedo URDF model – User Manual</a></li>
+<li class="toctree-l1"><a class="reference internal" href="robocluedo_dependencies/_docs/worlds-user-manual.html">WORLDS – a collection of Gazebo World Files</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_docs/project-setup.html">RCL#2 SETUP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/run-the-project.html">RCL#2 RUN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/dev-log-rcl2.html">Development LOG</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Extensions and other references</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="_ext/plant-uml-reference.html">PlantUML quick reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">RoboCLuedo #2</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>README – the RoboCLuedo Project – ROUND 2</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/README-sphinx.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="readme-the-robocluedo-project-round-2">
+<h1>README – the RoboCLuedo Project – ROUND 2<a class="headerlink" href="#readme-the-robocluedo-project-round-2" title="Permalink to this heading"></a></h1>
+<p><em>Francesco Ganci</em> - S4143910 - A.A.2021/2022</p>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">README – the RoboCLuedo Project – ROUND 2</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-you-can-find-in-this-readme">What you can find in this readme</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-rcl-2">Introduction – RCL#2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technical-goals-rcl-2">Technical Goals – RCL#2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-rcl-2">Features – RCL#2</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#expected-behaviour-rcl-2">Expected Behaviour – RCL#2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erl-2-environment">ERL#2 Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-behaviour">Expected Behaviour</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sw-arch-components">SW Arch – Components</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#highlights-of-the-architecture">highlights of the architecture</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-simplified-schema">Components – simplified schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#components-extended-schema">Components – extended schema</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#sw-arch-communication-protocols-overview">SW Arch – communication protocols overview</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#foreword-diagrams-conventions">Foreword – diagrams conventions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#navigation-using-bug-m-rcl-2">navigation using bug_m (RCL#2)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manipulation-synchronous-manipulation">manipulation – synchronous manipulation</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-manager-workflow">Mission manager workflow</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rosplan-landmarks-temporal-diagrams">ROSPlan landmarks – temporal diagrams</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#replan-landmark">REPLAN landmark</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-collect-and-solve-landmarks">About COLLECT and SOLVE landmarks</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#working-hypotheses">working hypotheses</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-environment">About the environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#about-the-reasoning">About the reasoning</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#improvements-and-future-develops">Improvements and future develops</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#author-and-contacts">Author and Contacts</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<p><img alt="Cluedo3" src="_images/cluedexterbox.jpg" /></p>
+<hr class="docutils" />
+<div class="section" id="what-you-can-find-in-this-readme">
+<h2>What you can find in this readme<a class="headerlink" href="#what-you-can-find-in-this-readme" title="Permalink to this heading"></a></h2>
+<p>This readme goes through the design ideas under the project.</p>
+<ul class="simple">
+<li><p>expected behaviour of the project</p></li>
+<li><p>main design ideas</p></li>
+<li><p>Software Architecture components overview</p></li>
+<li><p>Software Architecture communication protocols overview</p></li>
+</ul>
+<p>The parts of the architecture are deeply detailed inside this documentation, see the <em>Packages Documentation</em> section.</p>
+</div>
+<div class="section" id="introduction-rcl-2">
+<h2>Introduction – RCL#2<a class="headerlink" href="#introduction-rcl-2" title="Permalink to this heading"></a></h2>
+<p>The main aim of the <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2">RCL#2</a> project is to implement the control system of a robot playing a game freely inspired to the classic board game <em>CLuedo</em>.</p>
+<p>In particular, the system controls a 4-wheeled robot with one manipulator. The robot explores the surroundings in search of any clue that could be determinant to <em>understand</em> who is the killer, what is the weapon of the murder, and where the poor Dr. Black has been killed. The robot uses a OWL-based system to reason about the clues, collecting, putting together, and finding a one possible solution. The arbiter of the game is th so-called <em>Oracle</em>, which knows the solution, and can be interrogated when the robot is ready to announce the murderer.</p>
+<p>(But, differently from the real game, the robot can propose as many solution as it wants, without loosing the game after a wrong proposal…)</p>
+<div class="section" id="technical-goals-rcl-2">
+<h3>Technical Goals – RCL#2<a class="headerlink" href="#technical-goals-rcl-2" title="Permalink to this heading"></a></h3>
+<p>First of all, the main aim is to create a better architecture than in the previous <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">RCL#1</a> project, which is not so flexible (mainly due to unclear requirements, concerning in particular the interface of the Oracle which clearly must be external to the project): this did lead to twrow away many parts of the preivous version of the project, except for the aRMOR part which is reusable almost completely, with a little of message updates. In particular, the project should represent a basis for the third iteration of the project: the strategy is to implement an architecture which can be flexible enough to allow the re-usage of almost all the parts, with very little changes.</p>
+<p>Moreover, as in the other projects, a great care has been given to <em>the metodology of work</em>: not only writing the code, but also using and developing its documentation during the work. A big effort has been made as well, in documenting about the technologies involved in the implementation of this project, trying to find a way to make it work which could work also on other platforms as much as possible. Finally, the project comes with a rich <em>module testing</em> allowing to ensure the functioning of each module, either single or in combination with other elements of the architecture. See the official project documentation for further informations.</p>
+</div>
+<div class="section" id="features-rcl-2">
+<h3>Features – RCL#2<a class="headerlink" href="#features-rcl-2" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>manipulator control using MoveIt with well-known poses</p></li>
+<li><p>navigation using a multi-layer implementation (to gain flexibility for later updates)</p></li>
+<li><p>usage of a OWL-based ontology for elaborating CLuedo hints and combining them into hypotheses and then possible solutions of the mystery</p></li>
+<li><p>usage of a double-layered planning strategy involving a simple state-machine at high level and ROSPlan for the low-level planning</p>
+<ul>
+<li><p>the project introduces a <em>policy</em> made of <em>landmarks</em>: the main idea is that the problem can be solved by “steps” (the so-called landmarks) that are macro-steps to be expanded by ROSPlan in sequences of actions to apply, depending on the situation</p></li>
+<li><p>this choice allows to have a part of the architecture not taking into account the details of the PDDL model, making an <em>abstraction</em> upon the real structure of the PDDL</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="expected-behaviour-rcl-2">
+<h2>Expected Behaviour – RCL#2<a class="headerlink" href="#expected-behaviour-rcl-2" title="Permalink to this heading"></a></h2>
+<p>Here’s how the robot should behave, just as a short overview of how the RCL#2 project works.</p>
+<div class="section" id="erl-2-environment">
+<h3>ERL#2 Environment<a class="headerlink" href="#erl-2-environment" title="Permalink to this heading"></a></h3>
+<p>Our RoboCLuedo starts in the middle of a little square room (6m per 6m). Here’s how the environment appears on Gazebo:</p>
+<p><img alt="env-gazebo" src="_images/env-gz.png" /></p>
+<p>Abit outside the arena, there are four markers, that in this simulation are the points where the robot can find the hints. When the robot touches a marker, it receives a hint that it can store and elaborate inside its ontology. Here’s the environment as seen in RViz, showing the positions of the markers:</p>
+<p><img alt="env-rviz" src="_images/env-rv.png" /></p>
+</div>
+<div class="section" id="expected-behaviour">
+<h3>Expected Behaviour<a class="headerlink" href="#expected-behaviour" title="Permalink to this heading"></a></h3>
+<p>During the searching phase, there’s a common sequence of operations repeated:</p>
+<ul class="simple">
+<li><p>go in front o a marker</p></li>
+<li><p>“touch” the marker (it triggers the oracle to send a hint)</p></li>
+<li><p>put back the robot in its home position</p></li>
+</ul>
+<p>then the robot selects another waypoint, and the cycle restarts. When the robot succeeded in obtaining at least one CONSISTENT hypothesis, the robot goes at the center of the arena to propose its solution to the Oracle. Due to the fact that the Oracle could return a corrupted hint, or also a repeated one, the robotcould take a lot of time to formulate a acceptable hypothesis.</p>
+</div>
+</div>
+<div class="section" id="sw-arch-components">
+<h2>SW Arch – Components<a class="headerlink" href="#sw-arch-components" title="Permalink to this heading"></a></h2>
+<p>The project is a rich composition of many packages, resulting in a complex, heavy centralized architecture. It behaves as a classical hyerarchical architecture: sense, then plan, then act. <em>So far, the ‘sense’ part is simulated by the Oracle sending the hints</em>: in afuture development, the robot should get the hints from the environment using a vision system.</p>
+<div class="section" id="highlights-of-the-architecture">
+<h3>highlights of the architecture<a class="headerlink" href="#highlights-of-the-architecture" title="Permalink to this heading"></a></h3>
+<p>Here are the concept I used during each phase of the job:</p>
+<ul>
+<li><p><strong>separation</strong> : Great care has been given in <em>guaranteeing the neat separation between components</em></p>
+<p>for instance, the RCL ROSPlan package doesn’t interact directly with the motion controllers: it exposes a client to implement instead, which is called each time a ROSPlan action needs to perform the navigation. It requires a <em>bridge node</em>, that is a delegate between the ROSPlan framework and the real navigation system.</p>
+</li>
+<li><p><strong>abstraction</strong> : the interfaces provided by each package <em>aims at hiding the implementation details</em>, enhancing a standard, intuitive way to use each package</p>
+<p>in particular, most of them provide a number of <em>directives</em>, i.e. spcecific operations an external node expects to be implemented in a way that the node don’t want to know. The aRMOR package along with this project is a good example of this.</p>
+</li>
+<li><p><strong>flexibility and adaptability</strong> : the neat separation between packages, alongside with the abstraction, lets the architecture to be more flexible and easily updatable.</p></li>
+<li><p><strong>module testing</strong> : it is a fundamental concept traversing all the lifecycle of this project since RCL#1</p>
+<p>The project contains a rich module testing section, allowing the developer to not wasting time in looking for bugs in a very complex, demanding architecture. Each package can be tested independently, and most of the times with just a bash script. Sometimes also some code has been provided in order to test the project.</p>
+<p><em>Developing a rich debug system is a necessity</em> with such a large project. You cannot go on if you can’t be sure at 100% that the components “at the bottom” work as expected. It helped me during the development phase hundreds of times, even revealing bugs whicc was very difficult to spot simply running the proejct.</p>
+</li>
+</ul>
+</div>
+<div class="section" id="components-simplified-schema">
+<h3>Components – simplified schema<a class="headerlink" href="#components-simplified-schema" title="Permalink to this heading"></a></h3>
+<p>It highlights the centralized structure of the architecture. Each component here corresponds to a package used by the project.</p>
+<p>The mission manager contains the bridges above-mentioned (there are bridges for both the navigation and the manipulation), as well as the <em>main node</em> providing a high-layer planning by means of landmarks and aRMOR operations.</p>
+<p class="plantuml">
+<object data="_images/plantuml-5d50f396719baa4c1f0c611f8ea6e12a670d28f0.svg" type="image/svg+xml" style="width:695px;height:777px;background:#FFFFFF;">
+<img src="_images/plantuml-5d50f396719baa4c1f0c611f8ea6e12a670d28f0.png" alt="&#64;startuml
+
+''' INFOS
+title Project Architecture simplified
+skinparam Padding 10
+allow_mixing
+
+
+''' COMPONENTS
+database &quot;aRMOR&quot; as ARMOR
+component &quot;MoveIt!&quot; as MOVEIT
+component &quot;erl2 Oracle&quot; as ORACLE
+component &quot;ROSPlan&quot; as ROSPLAN
+
+component &quot;RCL environment&quot; as ENVIRONMENT
+
+package RCL {
+node &quot;RCL mission manager&quot; as MISSION_MANAGER
+' component &quot;RCL Vision&quot; as VISION
+component &quot;RCL aRMOR interface&quot; as RCL_ARMOR
+component &quot;RCL ROSPlan&quot; as RCL_ROSPLAN
+component &quot;RCL Movement Controller&quot; as MOVEMENT
+}
+
+
+''' CONNECTIONS
+ENVIRONMENT &lt;--&gt; MOVEIT
+MOVEIT &lt;--&gt; MOVEMENT
+
+ENVIRONMENT &lt;--&gt; MOVEMENT
+MOVEMENT &lt;--&gt; MISSION_MANAGER
+
+MISSION_MANAGER &lt;--&gt; RCL_ROSPLAN
+ROSPLAN &lt;-up-&gt; RCL_ROSPLAN
+MISSION_MANAGER &lt;--&gt; RCL_ARMOR
+ARMOR &lt;-right-&gt; RCL_ARMOR
+' MISSION_MANAGER &lt;--&gt; VISION
+' VISION &lt;--&gt; ORACLE
+MISSION_MANAGER -right- ORACLE
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="components-extended-schema">
+<h3>Components – extended schema<a class="headerlink" href="#components-extended-schema" title="Permalink to this heading"></a></h3>
+<p>This schema wants to give an idea of how much the architecture of the project is extended. Inside it there are pointed out many ideas inside RCL#2:</p>
+<ul>
+<li><p>the ROSPlan side is a sort of mikrokosmos of components. The system uses the idea of <em>landmarks</em>, implementing the “low level planning system”. See the official documentation, and in particular the design of the PDDL, for further details about such a planning policy.</p>
+<p>The problem solution strategy is divided into three “steps”, called <em>landmakrs</em> in the terminology of the project:</p>
+<ul class="simple">
+<li><p><strong>REPLAN</strong> : tidy the rosplan kb up, maing it ready for a new iteration of the strategy</p></li>
+<li><p><strong>COLLECT</strong> : move the robot in the environment, <em>using a topological localisation</em> integrated with the ROSPlan PDDL model</p></li>
+<li><p><strong>SOLVE</strong> : the final step, introduce the “assumed” solution of the case and check it; the robot moves towards the center before introducing the solution</p></li>
+</ul>
+</li>
+<li><p>the movement controller package implements both the navigation system and the manipulation system.</p>
+<p>the navigation system is divided into many layers (hierarchical architecture inside): the behavioural section, containing</p>
+<ul class="simple">
+<li><p>the <em>elementary behaviours</em> directly influencing the motion of the robot,</p></li>
+<li><p>combined into <em>composite behaviours</em> which group the elementary behaviours to make more structured motion strategies</p></li>
+<li><p>and the <em>motion controllers</em>, components of the navigation manager (implemented as classes inside that node) providing a “cozy” abstraction for the navigation system: a external node sees onl a simple interface, without having the need to deal with the details of the implementation of the navigation system.</p></li>
+</ul>
+</li>
+</ul>
+<p>Here’s the diagram:</p>
+<p class="plantuml">
+<object data="_images/plantuml-9bea1d9cdbbbe3b3323f4e81822d05d0672e0d7a.svg" type="image/svg+xml" style="width:1491px;height:1244px;background:#FFFFFF;">
+<img src="_images/plantuml-9bea1d9cdbbbe3b3323f4e81822d05d0672e0d7a.png" alt="&#64;startuml
+
+''' INFOS
+title Project Architecture - extended
+left to right direction
+
+
+''' COMPONENTS
+package armor{
+database &quot;aRMOR&quot; as ARMOR
+component &quot;RCL aRMOR interface&quot; as RCL_ARMOR
+}
+
+package &quot;RCL Mission Manager&quot;{
+component &quot;RCL mission manager&quot; as MISSION_MANAGER
+component &quot;RCL manipulation unit&quot; as MANIP_UNIT
+component &quot;RCL navigation unit&quot; as NAV_UNIT
+}
+
+package &quot;RCL ROSPlan&quot; {
+component &quot;ROSPlan pipeline manager&quot; as ROSPLAN
+component &quot;RCL kb_tools&quot; as RCL_KBTOOLS
+database &quot;ROSPlan kb&quot; as ROSPLANKB
+component &quot;ROSPlan components&quot; as ROSPLAN_COMPONENTS
+file &quot;domain&quot; as DOMAIN
+file &quot;problem&quot; as PROBLEM
+node &quot;feedback manager&quot; as FEEDBACK
+package &quot;RCL ROSPlan Actions&quot; as ROSPLAN_ACTIONS {
+node REPLAN
+node SOLVE
+node COLLECT
+}
+}
+
+package &quot;erl2&quot;{
+component &quot;erl2 Oracle&quot; as ORACLE
+}
+
+package &quot;Simulated Environment&quot; as ENVIRONMENT {
+component &quot;RCL robot&quot;
+node &quot;Gazebo&quot;
+node &quot;RViz&quot;
+}
+
+package moveit {
+component &quot;MoveIt!&quot; as MOVEIT
+}
+
+package &quot;RCL Movement Controller&quot; {
+component &quot;RCL navigation manager&quot; as MOVEMENT
+component &quot;RCL manipulation controller&quot; as MANIPULATION
+
+package behaviours {
+node &quot;bug_m&quot;
+node &quot;head_orientation&quot;
+node &quot;go_to_point&quot;
+}
+
+}
+
+''' CONNECTIONS
+ENVIRONMENT -- MOVEIT
+MOVEIT -- MANIPULATION
+
+ENVIRONMENT -- MOVEMENT
+
+MANIPULATION -- MANIP_UNIT
+MOVEMENT -- NAV_UNIT
+
+MISSION_MANAGER -- RCL_ARMOR
+RCL_ARMOR &lt;--&gt; ARMOR
+
+MISSION_MANAGER -- ROSPLAN
+
+MISSION_MANAGER -- ORACLE
+
+PROBLEM -- ROSPLANKB
+DOMAIN -- ROSPLANKB
+ROSPLANKB -- ROSPLAN_COMPONENTS
+ROSPLAN_COMPONENTS -- ROSPLAN 
+ROSPLAN_COMPONENTS --ROSPLAN_ACTIONS
+ROSPLAN_ACTIONS -- FEEDBACK
+FEEDBACK -- ROSPLAN
+ROSPLANKB -- RCL_KBTOOLS
+RCL_KBTOOLS -- ROSPLAN
+
+ROSPLAN_ACTIONS -- NAV_UNIT
+ROSPLAN_ACTIONS -- MANIP_UNIT
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="sw-arch-communication-protocols-overview">
+<h2>SW Arch – communication protocols overview<a class="headerlink" href="#sw-arch-communication-protocols-overview" title="Permalink to this heading"></a></h2>
+<p>Here are the temporal diagrams of the project, describing just the essential steps performed in communicating between packages</p>
+<div class="section" id="foreword-diagrams-conventions">
+<h3>Foreword – diagrams conventions<a class="headerlink" href="#foreword-diagrams-conventions" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>the <em>package temporal diagram</em> represents how different independe packages work together</p></li>
+<li><p>the <em>node temporal diagram</em> is more specific and goes deeper into how the nodes communicate each other</p></li>
+<li><p>the square note is used for exposing scenarios and hypotheses</p></li>
+<li><p>the rhomboid annotation underlines an operation inside the node or the package</p></li>
+</ul>
+</div>
+<div class="section" id="navigation-using-bug-m-rcl-2">
+<h3>navigation using bug_m (RCL#2)<a class="headerlink" href="#navigation-using-bug-m-rcl-2" title="Permalink to this heading"></a></h3>
+<p><strong>package temporal diagram</strong>. The RCL#2 uses simple behaviours in order to perform the navigation. The package <em>robocluedo_mission_manager</em> offers delegates to enable the communicaton between two different packages: RCL ROSPlan, and the movement controller package.</p>
+<p class="plantuml">
+<object data="_images/plantuml-a097e5646d49ce29eb649a520ca09d12c8165e75.svg" type="image/svg+xml" style="width:501px;height:479px;background:#FFFFFF;">
+<img src="_images/plantuml-a097e5646d49ce29eb649a520ca09d12c8165e75.png" alt="&#64;startuml
+
+title bug_m navigation - package temporal diagram
+
+''' ENTITIES 
+collections ROSPLAN
+collections MISSION
+collections MOVEMENT
+
+''' SEQUENCE
+' == section ==
+' ...
+== First setup (first request) ==
+
+MISSION -&gt; MOVEMENT : SET controller &lt;b&gt;ID=0&lt;/b&gt;
+MISSION &lt;- MOVEMENT : &lt;i&gt;success&lt;/i&gt;
+hnote over MISSION: waiting for markers
+
+== Movement ==
+
+ROSPLAN -&gt; MISSION : request from ROSPlan action
+MISSION -&gt; MOVEMENT : navigation request
+hnote over MOVEMENT 
+performing navigation 
+with BUG_M behaviour
+end hnote
+MISSION &lt;- MOVEMENT : target reached
+ROSPLAN &lt;- MISSION : navigation ended
+
+&#64;enduml"/>
+
+</object></p>
+<p><strong>node temporal diagram</strong>. The navigation is divided into many layers: the delegate (NAVIGATION_UNIT) inside the <em>robocluedo_mission_manager</em> package, the manager (NAVIGATION_MANAGER), the controller (NAVIGATION_CONTROLLER), the composite behaviour (BUGM_NAV) and the elementary behaviours (in this case HEAD_ORIENTATION and GOTO_POINT).</p>
+<p>The robot moves backwards very slowly, trying to gain space for then performing the rotation. Successively, it rotates orienting its head towards the target. The trasvel proceeds along a straight line from the starting point to the target one. And finally, the robot orients itself to reach the final pose.</p>
+<p class="plantuml">
+<object data="_images/plantuml-a40f12feeeff2a17d88d1c61181562a0911b071f.svg" type="image/svg+xml" style="width:1156px;height:1110px;background:#FFFFFF;">
+<img src="_images/plantuml-a40f12feeeff2a17d88d1c61181562a0911b071f.png" alt="&#64;startuml
+
+title bug_m navigation - node temporal diagram
+' header ...
+' footer ...
+
+''' ENTITIES 
+participant MOVE_TO order 0
+participant NAVIGATION_UNIT order 1
+participant NAVIGATION_MANAGER order 2
+participant NAVIGATION_CONTROLLER order 3
+participant BUGM_NAV order 5
+participant HEAD_ORIENT order 6
+participant GOTO_POINT order 5
+
+''' SEQUENCE
+' == section ==
+' ...
+
+== request ==
+MOVE_TO -&gt; NAVIGATION_UNIT : using RCL ROSPlan interface
+hnote over NAVIGATION_UNIT 
+	waiting for markers
+end hnote
+NAVIGATION_UNIT -&gt; NAVIGATION_MANAGER : using RCL navigation req
+note over NAVIGATION_MANAGER
+	let's assume a controller 
+	has been activated before...
+	otherwise, the service returns 
+	immediately
+end note
+NAVIGATION_MANAGER --&gt; NAVIGATION_CONTROLLER : call function
+
+
+== navigation job ==
+NAVIGATION_CONTROLLER -&gt; BUGM_NAV : switch ON
+hnote over NAVIGATION_CONTROLLER
+	waiting for a signal ...
+end hnote
+note over BUGM_NAV
+	the behaviour receives 
+	a final orientation to achieve
+	and a target to reach
+end note
+
+note over BUGM_NAV
+here the BUGM_NAV Could 
+perform a backwards movement
+for gaining manouver space
+end note
+
+BUGM_NAV -&gt; GOTO_POINT : switch ON
+
+hnote over BUGM_NAV
+	reading position error ...
+end hnote
+
+hnote over GOTO_POINT
+turning 
+towards the target ...
+end hnote
+
+hnote over GOTO_POINT
+navigating straight 
+to the target
+end hnote
+
+BUGM_NAV -&gt; GOTO_POINT : switch OFF
+
+BUGM_NAV -&gt; HEAD_ORIENT : switch ON
+
+hnote over BUGM_NAV
+	reading orientation error ...
+end hnote
+
+hnote over HEAD_ORIENT
+	turning
+end hnote
+
+BUGM_NAV -&gt; HEAD_ORIENT : switch OFF
+
+NAVIGATION_CONTROLLER &lt;- BUGM_NAV : send signal
+NAVIGATION_CONTROLLER -&gt; BUGM_NAV : switch OFF
+
+== response ==
+NAVIGATION_MANAGER &lt;-- NAVIGATION_CONTROLLER : return
+NAVIGATION_UNIT &lt;- NAVIGATION_MANAGER : response (RCL movement controller)
+MOVE_TO &lt;- NAVIGATION_UNIT : response (RCL ROSPlan)
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+<div class="section" id="manipulation-synchronous-manipulation">
+<h3>manipulation – synchronous manipulation<a class="headerlink" href="#manipulation-synchronous-manipulation" title="Permalink to this heading"></a></h3>
+<p class="plantuml">
+<object data="_images/plantuml-537b0086666eb82f1f869b36a89acc86785c0fae.svg" type="image/svg+xml" style="width:466px;height:514px;background:#FFFFFF;">
+<img src="_images/plantuml-537b0086666eb82f1f869b36a89acc86785c0fae.png" alt="&#64;startuml
+
+title Synchronous manipulation -- RCL#2
+
+''' ENTITIES
+participant COLLECT
+participant MANIP_UNIT
+participant MANIPULATION
+
+== put near to the marker ==
+
+COLLECT --&gt; MANIP_UNIT : send command near
+MANIP_UNIT --&gt; MANIPULATION : convert and pass request
+hnote over MANIPULATION : moveit move()
+MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIP_UNIT : &lt;i&gt;success&lt;/i&gt;
+
+== home position ==
+
+COLLECT --&gt; MANIP_UNIT : send command home
+MANIP_UNIT --&gt; MANIPULATION : convert and pass request
+hnote over MANIPULATION : moveit move()
+MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIP_UNIT : &lt;i&gt;success&lt;/i&gt;
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+</div>
+<div class="section" id="mission-manager-workflow">
+<h2>Mission manager workflow<a class="headerlink" href="#mission-manager-workflow" title="Permalink to this heading"></a></h2>
+<p>Here’s the state diagram of the mission manager. Please take into account that the states REPLAN, COLLECT, and SOLVE, are <em>landmarks</em>; see the documentation about the <em>robocluedo_rosplan</em> package for further informations.</p>
+<p>The diagram doesn’t show the status FAULT_COUNT which, as the name suggests, counts the unexpected (and unexplained) failures. The node has a counter of failures, and when the counter reaches zero, the node closes wuthout succeeding the mission. This strategy <em>could be replaced, or altered, in future updates.</em></p>
+<p class="plantuml">
+<object data="_images/plantuml-efda8d46c90c64546f99a491b0ec79867075f406.svg" type="image/svg+xml" style="width:835px;height:875px;background:#FFFFFF;">
+<img src="_images/plantuml-efda8d46c90c64546f99a491b0ec79867075f406.png" alt="&#64;startuml
+
+state REPLAN
+REPLAN : clean the kb
+
+state COLLECT
+COLLECT : move the robot and \n collect hints around
+
+state ASK_ORACLE
+ASK_ORACLE : check if in the ontology \n there are valid hypotheses \n to propose to the Oracle
+
+state SOLVE
+SOLVE : move to the center\n ready to introduce \n a solution
+
+state ASK_ONTOLOGY
+ASK_ONTOLOGY : check the solution\nask to the Oracle
+
+''' state MISSION_STATUS_COUNT_FAULT
+''' MISSION_STATUS_COUNT_FAULT : unexpected situation
+
+[*] --&gt; REPLAN : mission manager begins (like Batman...)
+REPLAN --&gt; COLLECT : still mumbleing
+COLLECT --&gt; ASK_ONTOLOGY : arrived at the waypoint
+ASK_ONTOLOGY --&gt; COLLECT : no bright ideas
+COLLECT --&gt; REPLAN : end of the explorable waypoints!
+ASK_ONTOLOGY --&gt; SOLVE : at least one possible solution found
+SOLVE --&gt; REPLAN : need for updating the paths
+REPLAN --&gt; SOLVE : possible solution ready
+SOLVE --&gt; ASK_ORACLE : at the center
+ASK_ORACLE --&gt; [*] : mystery solved!
+ASK_ORACLE --&gt; REPLAN : solution wrong
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+<div class="section" id="rosplan-landmarks-temporal-diagrams">
+<h2>ROSPlan landmarks – temporal diagrams<a class="headerlink" href="#rosplan-landmarks-temporal-diagrams" title="Permalink to this heading"></a></h2>
+<p>The mission manager makes a high level planning, whereas the RCL ROSPlan framework performs a <em>mid-level planning</em>: the mission manager divides the mission into a <em>policy</em> made of some macro-steps, and the ROSPlan package decides how to perform such macrosteps expanding them in a sequence of actions according to the situation registered in the ROSPlan knowledge base.</p>
+<p>This leads to a more elaborated architecture for this framework, but also makes more flexible the behaviour of the system.</p>
+<p>The following diagrams shows not only what happens when a landmark is requested, but also how the MISSION_MANAGER carries out the ellaboration of the landmarks.</p>
+<div class="section" id="replan-landmark">
+<h3>REPLAN landmark<a class="headerlink" href="#replan-landmark" title="Permalink to this heading"></a></h3>
+<p class="plantuml">
+<object data="_images/plantuml-8374cfcd4fab6e8dc2d632b603bba73152120434.svg" type="image/svg+xml" style="width:861px;height:935px;background:#FFFFFF;">
+<img src="_images/plantuml-8374cfcd4fab6e8dc2d632b603bba73152120434.png" alt="&#64;startuml
+
+title landmark execution - REPLAN
+
+''' ENTITIES
+participant MISSION_MANAGER
+participant PIPELINE
+participant KB_INTERFACE
+participant LOAD
+participant PLAN
+participant PARSE
+participant DISPATCH
+
+'' TEMPORAL DIAGRAM
+== planning phase ==
+
+note over MISSION_MANAGER: try to load and solve the problem
+
+MISSION_MANAGER -&gt; PIPELINE : load (landmark REPLAN) and solve
+
+PIPELINE -&gt; KB_INTERFACE : prepare REPLAN
+PIPELINE &lt;- KB_INTERFACE : &lt;i&gt;always success&lt;/i&gt;
+
+PIPELINE -&gt; LOAD : trigger loading
+PIPELINE &lt;- LOAD : &lt;i&gt;success&lt;/i&gt; (immediately)
+hnote over PIPELINE: waiting 'load' output
+PIPELINE &lt;- LOAD : 'load' output
+
+note over PIPELINE
+let's assume that everything went fine
+end note
+
+PIPELINE -&gt; PLAN : solve the problem
+PIPELINE &lt;- PLAN : &lt;i&gt;success&lt;/i&gt; (immediately)
+hnote over PIPELINE: waiting 'solve' output
+PIPELINE &lt;- PLAN : 'solve' output
+
+note over PIPELINE
+let's assume that everything went fine
+end note
+
+MISSION_MANAGER &lt;- PIPELINE : &lt;i&gt;success&lt;/i&gt;
+
+== dispatch phase ==
+
+MISSION_MANAGER -&gt; PIPELINE : parse and dispatch
+
+PIPELINE -&gt; PARSE : parse plan
+PIPELINE &lt;- PARSE
+hnote over PIPELINE: waiting 'parse' output
+PIPELINE &lt;- PARSE : 'parse'
+
+PIPELINE -&gt; DISPATCH : dispatch plan
+note over MISSION_MANAGER, DISPATCH : it requires a lot of time: the system is running the RCL ROSPlan actions
+PIPELINE &lt;- DISPATCH : end execution
+
+MISSION_MANAGER &lt;- PIPELINE : &lt;i&gt;success&lt;/i&gt;
+
+&#64;enduml"/>
+
+</object></p>
+</div>
+<div class="section" id="about-collect-and-solve-landmarks">
+<h3>About COLLECT and SOLVE landmarks<a class="headerlink" href="#about-collect-and-solve-landmarks" title="Permalink to this heading"></a></h3>
+<p>the procedure is always the same for the other landmarks: the mission manager splits the landmark execution in two phases in the same way. Obviously, if something could go wrong, the procedure would be shorter, and the MISSION_MANAGER would spend a bit to understand what went wrong.</p>
+</div>
+</div>
+<div class="section" id="working-hypotheses">
+<h2>working hypotheses<a class="headerlink" href="#working-hypotheses" title="Permalink to this heading"></a></h2>
+<p>Few assumptions are needed, since the architecture tries to interact with general-purpose frameworks, using standard ways for interacting with the low level system. The most important assumption is that <em>the rules of the game are satisfied</em>, otherwise the behaviour of the robot is not determined.</p>
+<div class="section" id="about-the-environment">
+<h3>About the environment<a class="headerlink" href="#about-the-environment" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>the robot moves on a flat floor: always room can be reached by moving the roobot on the same floor (the house has only one, perfectly flat, floor)</p></li>
+<li><p><strong>environment completely free, without obstacles</strong>, for instance a small flat arena as in this assignment</p></li>
+<li><p>the topology of the environment is well known, as well as the cartesian coordinates of the waypoints</p>
+<ul>
+<li><p>there’s a node publishing the cartesian positions of the markers</p></li>
+<li><p>and the <em>topological map of the environment</em> is known in advance</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="about-the-reasoning">
+<h3>About the reasoning<a class="headerlink" href="#about-the-reasoning" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>the mystery can be solved at least with a two-steps policy COLLECT, SOLVE</p>
+<ul>
+<li><p>it is mostly due to the rules of the game</p></li>
+<li><p><em>if the game changes, the policy should be reviewed</em> accordingly to the new rules</p></li>
+<li><p>in particular, if the problem cannot be reduced in a combination of two general steps, the planner shall provide other landmarks</p></li>
+</ul>
+</li>
+<li><p><em>a solution exists</em></p>
+<ul>
+<li><p>i.e. the oracle works fine</p></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>the robot can work only in well-known environments. It doesn’t support free exploration</p>
+<ul>
+<li><p>the free exploration requires the robot to choose by itself the waypoints, maybe based on the measurements from the laser sensor, or other systems</p></li>
+<li><p>currently, there’s no such a functionality</p></li>
+</ul>
+</li>
+<li><p><em>no secure communication error handling</em>.</p>
+<ul>
+<li><p>there could be a big deal try to run the achitecture distributed on a WiFi network: when a service call fails for instance, most of the nodes of the project are not able to cope with that in a acceptable situation. Most of times the node simply closes</p></li>
+<li><p>overcoming this problem requires a long work of code review and, sometimes, re-design</p></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="improvements-and-future-develops">
+<h2>Improvements and future develops<a class="headerlink" href="#improvements-and-future-develops" title="Permalink to this heading"></a></h2>
+<p><strong>Create a distributed version of the architecture, with multiple robots</strong>. Thanks to the strict separation between the components applied during the design and then during the implementation, the architecture can be extended to many robots inside the same environment. Some components can be centralized, such as the part concerning the ontology. The main problem in this case could be the to find a tradeoff between the       bandwidth required to enable the robots to communicate with the central system, and the computational capabilities onboard.</p>
+<p><strong>Architectural Review of the ROSPlan package</strong>. Currently the knowledge base interface inside the <em>robocluedo_rosplan</em> package is of no use for nodes outside. There are many situations in which having directives exposed by the knowledge base interface can be useful. For instance, the code of the pipeline manager, currently <em>too much complex</em>, can be simplified a lot distributing the capability to explain a failure on two nodes. And, finally, the capability to write inside the ontology, taking into account the characteristics of the PDDL problem, is always useful. For these reasons, the ROSPlan implementation should be reviewed in order to provide a better supporto to the working cycle. The current package can be considered a <em>first prototype</em>, and it shall be formalized from the architectural point of view, and reimplemented, taking into account also the <em>directives</em> and the <em>features</em> given the PDDL model.</p>
+<p><strong>Manipulation Controller</strong>. The manipulation approch can be heavily reviewed. The robot currently uses a very raw implementation of a moveit-based controller using well-known poses only. The cartesian plan should be introduced. Even a end effector should be defined.</p>
+<p><strong>Navigation manager and controllers</strong>. The current structure can be improved a lot. The current navigation manager is very near to be a prototype: the approach works quite good, even if the problem is too much simple to see any relevant advantage from the approach with navigation controllers, but it should be implemented in a more tidy way. For instance, the system shall be divided into several files, instead of a long one a bit lasagna-code style.</p>
+<p><strong>URDF model improvements</strong>. The current module, although it works quite good, it is too much basic. The physic can be improved, regulating with more attention the inertias of the components. Also the controllers can be improved. A code review on the model could help as well.</p>
+<p><strong>Adding a real graphical interface</strong>. The project completely lacks of a decent user interface, which is, in my opinion, one of the most serious limitations of the project. The user, and the developer as well, should be enabled to understand what’s wrong using a GUI instead of many prints on a console. A GUI allows to see the status of the entire project <em>at a glance</em>, instead of reading endless logs and console messages trying to grasp something. Also the image visualisation should be improved, allowing the user to select one camera to visualise, for instance.</p>
+<hr class="docutils" />
+<p><img alt="Cluedo3" src="_images/cluedexter.jpg" /></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="author-and-contacts">
+<h2>Author and Contacts<a class="headerlink" href="#author-and-contacts" title="Permalink to this heading"></a></h2>
+<p>A project designed and developed by Francesco Ganci (S4143910)</p>
+<ul class="simple">
+<li><p><strong>Email</strong> : <span class="xref myst"><em>S4143910&#64;studenti.unige.it</em></span></p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="RCL#2 – the RoboCLuedo Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="robocluedo_armor/index.html" class="btn btn-neutral float-right" title="PKG DOCS – robocluedo armor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Francesco Ganci.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

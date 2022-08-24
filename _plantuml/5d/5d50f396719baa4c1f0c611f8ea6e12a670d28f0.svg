@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="777px" preserveAspectRatio="none" style="width:695px;height:777px;background:#FFFFFF;" version="1.1" viewBox="0 0 695 777" width="695px" zoomAndPan="magnify"><defs/><g><rect height="46.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="270" x="205.75" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="240" x="220.75" y="32.9951">Project Architecture simplified</text><!--MD5=[c433abff822608f390fdd30dbb961688]
+cluster RCL--><g id="cluster_RCL"><path d="M119,272.2969 L170,272.2969 A3.75,3.75 0 0 1 172.5,274.7969 L179.5,314.5938 L537,314.5938 A2.5,2.5 0 0 1 539.5,317.0938 L539.5,658.7969 A2.5,2.5 0 0 1 537,661.2969 L119,661.2969 A2.5,2.5 0 0 1 116.5,658.7969 L116.5,274.7969 A2.5,2.5 0 0 1 119,272.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="116.5" x2="179.5" y1="314.5938" y2="314.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="30" x="130.5" y="297.292">RCL</text></g><!--MD5=[9a0d4b0340012a44161447de88fcc332]
+entity MISSION_MANAGER--><g id="elem_MISSION_MANAGER"><polygon fill="#F1F1F1" points="306,463.2969,316,453.2969,515,453.2969,515,509.5938,505,519.5938,306,519.5938,306,463.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="505" x2="515" y1="463.2969" y2="453.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="306" x2="505" y1="463.2969" y2="463.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="505" x2="505" y1="463.2969" y2="519.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="331" y="496.292">RCL mission manager</text></g><!--MD5=[0f6829ecb44924df652b3631a96aadbd]
+entity RCL_ARMOR--><g id="elem_RCL_ARMOR"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="206" x="132.5" y="579.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="318.5" y="584.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="316.5" y="586.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="316.5" y="590.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="157.5" y="622.292">RCL aRMOR interface</text></g><!--MD5=[47f35d3126ea50c850665eaf26625533]
+entity RCL_ROSPLAN--><g id="elem_RCL_ROSPLAN"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="150" x="373.5" y="579.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="503.5" y="584.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="501.5" y="586.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="501.5" y="590.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="90" x="398.5" y="622.292">RCL ROSPlan</text></g><!--MD5=[80ad804a48cb6a09fe122341649e624a]
+entity MOVEMENT--><g id="elem_MOVEMENT"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="235" x="288" y="327.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="503" y="332.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="501" y="334.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="501" y="338.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="175" x="313" y="370.292">RCL Movement Controller</text></g><!--MD5=[d966621a06b379d0f2866da504c15a36]
+entity ARMOR--><g id="elem_ARMOR"><path d="M6,589.7969 C6,579.7969 51.5,579.7969 51.5,579.7969 C51.5,579.7969 97,579.7969 97,589.7969 L97,635.0938 C97,645.0938 51.5,645.0938 51.5,645.0938 C51.5,645.0938 6,645.0938 6,635.0938 L6,589.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M6,589.7969 C6,599.7969 51.5,599.7969 51.5,599.7969 C51.5,599.7969 97,599.7969 97,589.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="26" y="626.792">aRMOR</text></g><!--MD5=[6c629335c16ba9d7cc5a2834000a699b]
+entity MOVEIT--><g id="elem_MOVEIT"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="110" x="296.5" y="190.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="386.5" y="195.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="384.5" y="197.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="384.5" y="201.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="321.5" y="233.292">MoveIt!</text></g><!--MD5=[0ff8cde09c95e7bd5ad5c1a367aa2e4a]
+entity ORACLE--><g id="elem_ORACLE"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="134" x="555.5" y="453.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="669.5" y="458.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="667.5" y="460.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="667.5" y="464.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="580.5" y="496.292">erl2 Oracle</text></g><!--MD5=[8fd27179cfada5ccc37b63382e72f2b8]
+entity ROSPLAN--><g id="elem_ROSPLAN"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="119" x="389" y="705.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="488" y="710.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="486" y="712.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="486" y="716.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="59" x="414" y="748.292">ROSPlan</text></g><!--MD5=[486232cd7de46315ddcadcacea223c06]
+entity ENVIRONMENT--><g id="elem_ENVIRONMENT"><rect fill="#F1F1F1" height="66.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="178" x="316.5" y="64.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="474.5" y="69.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="472.5" y="71.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="472.5" y="75.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="118" x="341.5" y="107.292">RCL environment</text></g><!--MD5=[cbaab8b86e01fba88e79cd38bb824379]
+link ENVIRONMENT to MOVEIT--><g id="link_ENVIRONMENT_MOVEIT"><path codeLine="26" d="M389.35,135.3869 C382.46,151.1969 374.45,169.5969 367.57,185.3869 " fill="none" id="ENVIRONMENT-MOVEIT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="365.48,190.2069,372.7444,183.5564,367.4788,185.6238,365.4115,180.3583,365.48,190.2069" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="391.45,130.5569,384.1856,137.2073,389.4512,135.14,391.5185,140.4055,391.45,130.5569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[34b5f7a14996c7b8daebd1b3010a6b5c]
+link MOVEIT to MOVEMENT--><g id="link_MOVEIT_MOVEMENT"><path codeLine="27" d="M366.38,261.4969 C373.98,280.4969 383.2,303.5469 390.78,322.4969 " fill="none" id="MOVEIT-MOVEMENT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="392.67,327.2269,393.0414,317.385,390.813,322.5845,385.6136,320.3561,392.67,327.2269" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="364.43,256.6369,364.0586,266.4787,366.287,261.2793,371.4864,263.5076,364.43,256.6369" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[59e2fe48d6188b7fee0ac592cf50b3bc]
+link ENVIRONMENT to MOVEMENT--><g id="link_ENVIRONMENT_MOVEMENT"><path codeLine="29" d="M414.97,135.4569 C418.75,152.1069 422.64,172.0669 424.5,190.2969 C427.48,219.4769 427.17,227.0869 424.5,256.2969 C422.5,278.1469 418.17,302.2769 414.14,321.6869 " fill="none" id="ENVIRONMENT-MOVEMENT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="413.02,327.0369,418.8059,319.0667,414.0608,322.1464,410.9811,317.4014,413.02,327.0369" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="413.81,130.4069,411.9175,140.0722,414.9249,135.281,419.7161,138.2884,413.81,130.4069" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[0f53ab67025f86f4884f1e9deeca44d1]
+link MOVEMENT to MISSION_MANAGER--><g id="link_MOVEMENT_MISSION_MANAGER"><path codeLine="30" d="M407.01,398.8369 C407.64,414.4169 408.37,432.4669 409,448.0269 " fill="none" id="MOVEMENT-MISSION_MANAGER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="409.21,453.2069,412.846,444.0538,409.0096,448.2109,404.8525,444.3744,409.21,453.2069" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="406.8,393.5569,403.1629,402.7096,406.9998,398.5529,411.1565,402.3898,406.8,393.5569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d765d9863f10af304e452562f2485cd3]
+link MISSION_MANAGER to RCL_ROSPLAN--><g id="link_MISSION_MANAGER_RCL_ROSPLAN"><path codeLine="32" d="M421.87,524.3869 C426.71,540.1969 432.35,558.5969 437.19,574.3869 " fill="none" id="MISSION_MANAGER-RCL_ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="438.66,579.2069,439.8302,569.4278,437.1866,574.4289,432.1854,571.7853,438.66,579.2069" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="420.38,519.5569,419.2098,529.336,421.8534,524.3348,426.8546,526.9785,420.38,519.5569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9dc675c25b22446aaebdf43fc7812f0e]
+link RCL_ROSPLAN to ROSPLAN--><g id="link_RCL_ROSPLAN_ROSPLAN"><path codeLine="33" d="M448.5,650.8369 C448.5,666.4169 448.5,684.4669 448.5,700.0269 " fill="none" id="RCL_ROSPLAN-ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="448.5,705.2069,452.5,696.2069,448.5,700.2069,444.5,696.2069,448.5,705.2069" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="448.5,645.5569,444.5,654.5569,448.5,650.5569,452.5,654.5569,448.5,645.5569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[842b2851b2cd1464c25f009b2944caad]
+link MISSION_MANAGER to RCL_ARMOR--><g id="link_MISSION_MANAGER_RCL_ARMOR"><path codeLine="34" d="M360.67,522.6069 C337,539.3769 308.8,559.3569 285.15,576.1169 " fill="none" id="MISSION_MANAGER-RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="280.79,579.2069,290.4412,577.2435,284.8625,576.3061,285.7999,570.7274,280.79,579.2069" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="364.98,519.5569,355.3243,521.4978,360.9007,522.4482,359.9503,528.0246,364.98,519.5569" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8827004c151b1f48bbed612bb6096fa9]
+link ARMOR to RCL_ARMOR--><g id="link_ARMOR_RCL_ARMOR"><path codeLine="35" d="M102.36,612.2969 C110.61,612.2969 118.87,612.2969 127.13,612.2969 " fill="none" id="ARMOR-RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="132.27,612.2969,123.27,608.2969,127.27,612.2969,123.27,616.2969,132.27,612.2969" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="97.14,612.2969,106.14,616.2969,102.14,612.2969,106.14,608.2969,97.14,612.2969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ab91a5f2e08068b9424c3ab9025a1626]
+link MISSION_MANAGER to ORACLE--><g id="link_MISSION_MANAGER_ORACLE"><path codeLine="38" d="M515.26,486.2969 C528.66,486.2969 542.07,486.2969 555.47,486.2969 " fill="none" id="MISSION_MANAGER-ORACLE" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[107b5b06e12b0de0e16da43df5cdfcee]
+@startuml
+
+''' INFOS
+title Project Architecture simplified
+skinparam Padding 10
+allow_mixing
+
+
+''' COMPONENTS
+database "aRMOR" as ARMOR
+component "MoveIt!" as MOVEIT
+component "erl2 Oracle" as ORACLE
+component "ROSPlan" as ROSPLAN
+
+component "RCL environment" as ENVIRONMENT
+
+package RCL {
+node "RCL mission manager" as MISSION_MANAGER
+' component "RCL Vision" as VISION
+component "RCL aRMOR interface" as RCL_ARMOR
+component "RCL ROSPlan" as RCL_ROSPLAN
+component "RCL Movement Controller" as MOVEMENT
+}
+
+
+''' CONNECTIONS
+ENVIRONMENT <- -> MOVEIT
+MOVEIT <- -> MOVEMENT
+
+ENVIRONMENT <- -> MOVEMENT
+MOVEMENT <- -> MISSION_MANAGER
+
+MISSION_MANAGER <- -> RCL_ROSPLAN
+ROSPLAN <-up-> RCL_ROSPLAN
+MISSION_MANAGER <- -> RCL_ARMOR
+ARMOR <-right-> RCL_ARMOR
+' MISSION_MANAGER <- -> VISION
+' VISION <- -> ORACLE
+MISSION_MANAGER -right- ORACLE
+
+@enduml
+
+@startuml
+
+title Project Architecture simplified
+skinparam Padding 10
+allow_mixing
+
+
+database "aRMOR" as ARMOR
+component "MoveIt!" as MOVEIT
+component "erl2 Oracle" as ORACLE
+component "ROSPlan" as ROSPLAN
+
+component "RCL environment" as ENVIRONMENT
+
+package RCL {
+node "RCL mission manager" as MISSION_MANAGER
+component "RCL aRMOR interface" as RCL_ARMOR
+component "RCL ROSPlan" as RCL_ROSPLAN
+component "RCL Movement Controller" as MOVEMENT
+}
+
+
+ENVIRONMENT <- -> MOVEIT
+MOVEIT <- -> MOVEMENT
+
+ENVIRONMENT <- -> MOVEMENT
+MOVEMENT <- -> MISSION_MANAGER
+
+MISSION_MANAGER <- -> RCL_ROSPLAN
+ROSPLAN <-up-> RCL_ROSPLAN
+MISSION_MANAGER <- -> RCL_ARMOR
+ARMOR <-right-> RCL_ARMOR
+MISSION_MANAGER -right- ORACLE
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

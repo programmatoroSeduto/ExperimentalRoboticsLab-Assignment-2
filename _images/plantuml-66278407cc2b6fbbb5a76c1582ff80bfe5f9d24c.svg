@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="275px" preserveAspectRatio="none" style="width:2126px;height:275px;background:#FFFFFF;" version="1.1" viewBox="0 0 2126 275" width="2126px" zoomAndPan="magnify"><defs/><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="128" x="992" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="118" x="997" y="22.9951">Navigation Unit</text><!--MD5=[d3c6a3352a82e16776188b2bc459db07]
+entity NAV_UNIT--><g id="elem_NAV_UNIT"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="205" x="1018" y="112.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1203" y="117.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1201" y="119.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1201" y="123.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="165" x="1033" y="145.792">«RCL Mission Manager»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="67" x="1082" y="162.0889">NAV_UNIT</text></g><!--MD5=[85ef202db001cb86ff447339d93abb15]
+entity NAV_MANAGER--><g id="elem_NAV_MANAGER"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="233" x="7" y="81.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="220" y="86.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="218" y="88.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="218" y="92.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="193" x="22" y="114.792">«RCL Movement Controller»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="105" x="66" y="131.0889">NAV_MANAGER</text></g><!--MD5=[3785e3996c802fce7478392b1ee76233]
+entity MOVE_TO--><g id="elem_MOVE_TO"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="195" x="1925" y="112.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="2100" y="117.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="2098" y="119.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="2098" y="123.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="155" x="1940" y="145.792">«RCL ROSPlan Action»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="1983.5" y="162.0889">MOVE_TO</text></g><!--MD5=[0ff8cde09c95e7bd5ad5c1a367aa2e4a]
+entity ORACLE--><g id="elem_ORACLE"><rect fill="#F1F1F1" height="62.5938" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="172" x="37.5" y="205.7969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="189.5" y="210.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="187.5" y="212.7969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="187.5" y="216.7969"/><text fill="#000000" font-family="sans-serif" font-size="14" font-style="italic" lengthAdjust="spacing" textLength="132" x="52.5" y="238.792">«erl_assignment3»</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="56" x="90.5" y="255.0889">ORACLE</text></g><!--MD5=[83939bd4eaca96de1f2d6a543c6665cf]
+entity SRV_ROSPLAN_NAV--><g id="elem_SRV_ROSPLAN_NAV"><ellipse cx="1739" cy="144.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="235" x="1621.5" y="174.292">/robocluedo/navigation_command</text></g><!--MD5=[34c22eff6d64aeaae478320b55e782f7]
+entity SRV_NAV--><g id="elem_SRV_NAV"><ellipse cx="829" cy="51.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="218" x="720" y="81.292">/navigation_manager/navigation</text></g><!--MD5=[941ebcf29341f49f7527c91f632a6706]
+entity SRV_ALGO--><g id="elem_SRV_ALGO"><ellipse cx="829" cy="144.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="241" x="708.5" y="174.292">/navigation_manager/set_algorithm</text></g><!--MD5=[3f133cceabc89a2b3ca3196e055bc0f7]
+entity TOPIC_MARKER--><g id="elem_TOPIC_MARKER"><ellipse cx="829" cy="237.2969" fill="#F1F1F1" rx="8" ry="8" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="143" x="757.5" y="267.292">/visualization_marker</text></g><!--MD5=[5d26cbadf9523cf2c79b8e6ff3774c21]
+link NAV_UNIT to SRV_ROSPLAN_NAV--><g id="link_NAV_UNIT_SRV_ROSPLAN_NAV"><path d="M1223.3,144.2969 C1377.67,144.2969 1659.89,144.2969 1724.55,144.2969 " fill="none" id="NAV_UNIT-to-SRV_ROSPLAN_NAV" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1729.8,144.2969,1720.8115,140.2712,1724.8,144.2826,1720.7886,148.2711,1729.8,144.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="329" x="1254" y="140.3638">robocluedo_rosplan_msgs/NavigationCommand.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="1230.8452" y="156.8858">srv</text></g><!--MD5=[204a97957c424fc892d29101e54cea17]
+link NAV_MANAGER to SRV_NAV--><g id="link_NAV_MANAGER_SRV_NAV"><path d="M240.27,103.0969 C417.82,87.4469 744.23,58.6769 814.46,52.4869 " fill="none" id="NAV_MANAGER-to-SRV_NAV" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="819.77,52.0269,810.4514,48.8389,814.7896,52.4693,811.1592,56.8075,819.77,52.0269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="399" x="271" y="62.3638">robocluedo_movement_controller_msgs/NavigationService.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="247.9646" y="115.0157">srv</text></g><!--MD5=[630d2729aa530fab62c309503df4171b]
+link NAV_MANAGER to SRV_ALGO--><g id="link_NAV_MANAGER_SRV_ALGO"><path d="M240.04,120.6769 C250.17,121.2569 260.27,121.8069 270,122.2969 C487.59,133.3169 753.14,141.9369 814.79,143.8869 " fill="none" id="NAV_MANAGER-to-SRV_ALGO" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="819.81,144.0469,810.9401,139.7661,814.8125,143.8898,810.6888,147.7622,819.81,144.0469" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="346" x="297.5" y="118.3638">robocluedo_movement_controller_msgs/Algorithm.srv</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="19" x="248.1144" y="133.7143">srv</text></g><!--MD5=[2b2fb582d811df62b58db3592760f332]
+link ORACLE to TOPIC_MARKER--><g id="link_ORACLE_TOPIC_MARKER"><path d="M209.71,237.2969 C377.28,237.2969 739.9,237.2969 814.44,237.2969 " fill="none" id="ORACLE-to-TOPIC_MARKER" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="819.67,237.2969,810.67,233.2969,814.67,237.2969,810.67,241.2969,819.67,237.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="234" x="353.5" y="233.3638">visualization_msgs/MarkerArray.msg</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="24" x="217.5361" y="249.9829">pub</text></g><!--MD5=[d41f873d72b31c4c275393e5c079a896]
+link SRV_ROSPLAN_NAV to MOVE_TO--><g id="link_SRV_ROSPLAN_NAV_MOVE_TO"><path d="M1748.12,144.2969 C1773.38,144.2969 1852.87,144.2969 1919.67,144.2969 " fill="none" id="SRV_ROSPLAN_NAV-to-MOVE_TO" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1924.86,144.2969,1915.86,140.2969,1919.86,144.2969,1915.86,148.2969,1924.86,144.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="1907.0016" y="156.9586">cl</text></g><!--MD5=[bac621e37c33892489d68cb45a8ac2dc]
+link SRV_NAV to NAV_UNIT--><g id="link_SRV_NAV_NAV_UNIT"><path d="M838.05,53.8769 C863.86,62.1769 946.98,88.8769 1016.25,111.1269 " fill="none" id="SRV_NAV-to-NAV_UNIT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1021.22,112.7269,1013.8751,106.1654,1016.4597,111.1973,1011.4278,113.7819,1021.22,112.7269" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="999.8144" y="105.55">cl</text></g><!--MD5=[78533464c5735568fb320f98a0211c30]
+link SRV_ALGO to NAV_UNIT--><g id="link_SRV_ALGO_NAV_UNIT"><path d="M838.05,144.2969 C863.41,144.2969 944.09,144.2969 1012.6,144.2969 " fill="none" id="SRV_ALGO-to-NAV_UNIT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1017.93,144.2969,1008.93,140.2969,1012.93,144.2969,1008.93,148.2969,1017.93,144.2969" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="10" x="1000.0303" y="156.9343">cl</text></g><!--MD5=[ef327cd765a66b513ba553465bc6eb87]
+link TOPIC_MARKER to NAV_UNIT--><g id="link_TOPIC_MARKER_NAV_UNIT"><path d="M838.05,234.7169 C863.86,226.4169 946.98,199.7169 1016.25,177.4669 " fill="none" id="TOPIC_MARKER-to-NAV_UNIT" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1021.22,175.8669,1011.4278,174.8119,1016.4597,177.3965,1013.8751,182.4284,1021.22,175.8669" style="stroke:#181818;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="23" x="986.7958" y="191.9907">sub</text></g><!--MD5=[ced1d1c0e5a401b9ec617c994a3056bb]
+@startuml
+
+title Navigation Unit
+left to right direction
+
+''' COMPONENTS
+component NAV_UNIT <<RCL Mission Manager>>
+component NAV_MANAGER <<RCL Movement Controller>>
+component MOVE_TO <<RCL ROSPlan Action>>
+component ORACLE <<erl_assignment3>>
+
+''' INTERFACES
+() "/robocluedo/navigation_command" as SRV_ROSPLAN_NAV
+() "/navigation_manager/navigation" as SRV_NAV
+() "/navigation_manager/set_algorithm" as SRV_ALGO
+() "/visualization_marker" as TOPIC_MARKER
+
+NAV_UNIT "srv" - -> SRV_ROSPLAN_NAV : robocluedo_rosplan_msgs/NavigationCommand.srv
+NAV_MANAGER "srv" - -> SRV_NAV : robocluedo_movement_controller_msgs/NavigationService.srv
+NAV_MANAGER "srv" - -> SRV_ALGO : robocluedo_movement_controller_msgs/Algorithm.srv
+ORACLE "pub" - -> TOPIC_MARKER : visualization_msgs/MarkerArray.msg
+
+SRV_ROSPLAN_NAV - -> "cl" MOVE_TO
+SRV_NAV - -> "cl" NAV_UNIT
+SRV_ALGO - -> "cl" NAV_UNIT
+TOPIC_MARKER -down-> "sub" NAV_UNIT
+
+@enduml
+
+@startuml
+
+title Navigation Unit
+left to right direction
+
+component NAV_UNIT <<RCL Mission Manager>>
+component NAV_MANAGER <<RCL Movement Controller>>
+component MOVE_TO <<RCL ROSPlan Action>>
+component ORACLE <<erl_assignment3>>
+
+() "/robocluedo/navigation_command" as SRV_ROSPLAN_NAV
+() "/navigation_manager/navigation" as SRV_NAV
+() "/navigation_manager/set_algorithm" as SRV_ALGO
+() "/visualization_marker" as TOPIC_MARKER
+
+NAV_UNIT "srv" - -> SRV_ROSPLAN_NAV : robocluedo_rosplan_msgs/NavigationCommand.srv
+NAV_MANAGER "srv" - -> SRV_NAV : robocluedo_movement_controller_msgs/NavigationService.srv
+NAV_MANAGER "srv" - -> SRV_ALGO : robocluedo_movement_controller_msgs/Algorithm.srv
+ORACLE "pub" - -> TOPIC_MARKER : visualization_msgs/MarkerArray.msg
+
+SRV_ROSPLAN_NAV - -> "cl" MOVE_TO
+SRV_NAV - -> "cl" NAV_UNIT
+SRV_ALGO - -> "cl" NAV_UNIT
+TOPIC_MARKER -down-> "sub" NAV_UNIT
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>
