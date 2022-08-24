@@ -9,13 +9,13 @@
 > - ROS1 noetic
 > 
 > Documentation:
-> - [Official Documentation for RCL#2](erl2)
+> - [Official Documentation for RCL#2](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/)
 > 
 > **Project Setup**:
-> - see the [Official Docs](erl3setup)
+> - see the [Official Docs](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/_docs/project-setup.html#setup-the-project)
 > 
 > **Run the project**:
-> - see the [Official Docs](erl3run)
+> - see the [Official Docs](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/_docs/run-the-project.html#run-the-project)
 > 
 > Starter kit:
 > - [CarmineD8/erl2 on GitHub](https://github.com/CarmineD8/erl2/)
@@ -26,9 +26,9 @@
 > - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1 on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)
 > 
 > In a hurry?
-> - [See it in action!](videoexample)
+> - [See it in action! VIDEO DEMO](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2/blob/video-demo/rcl2-demo.mp4)
 > 
 
 ---
 
-See the README of the project inside the [Official Documentation]()
+See the README of the project inside the [Official Documentation](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/README-sphinx.html)
