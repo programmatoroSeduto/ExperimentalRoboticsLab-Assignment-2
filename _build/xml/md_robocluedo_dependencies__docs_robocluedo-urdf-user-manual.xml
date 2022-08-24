@@ -2,13 +2,20 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual" kind="page">
     <compoundname>md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual</compoundname>
-    <title>the RoboCLuedo Project no.2 – robot URDF model – User Manual</title>
+    <title>the RoboCLuedo URDF model – User Manual</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><programlisting filename=".toctree"><codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
+<para><hruler/>
+</para>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Contents</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
 </programlisting></para>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md205">
+<para><hruler/>
+</para>
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md189">
 <title>Model file structure</title>
 <para>inside the folder <computeroutput>robocluedo_urdf_model</computeroutput> there are these files:</para>
 <para><itemizedlist>
@@ -26,8 +33,10 @@
 </para>
 </listitem></itemizedlist>
 </para>
+<para><hruler/>
+</para>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md206">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md191">
 <title>HOW TO generate the model</title>
 <para>execute the file <computeroutput>generate_model.sh</computeroutput>; the URDF and its schematic will be located into the folder <computeroutput>model</computeroutput> with names</para>
 <para><itemizedlist>
@@ -53,7 +62,7 @@
 <codeline><highlight class="normal">Created<sp/>file<sp/>robocluedo_robot.pdf</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md207">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md192">
 <title>HOW TO generate the package with Moveit</title>
 <para>first of all, use the setup assistant to generate the package. Inside the project, <computeroutput>robocluedo_robot</computeroutput>.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>moveit_setup_assistant<sp/>setup.assistant.launch</highlight></codeline>
@@ -65,7 +74,7 @@
 </listitem><listitem><para>In config/joint_limits.yaml let&apos;s set to 1 the scaling factor.</para>
 </listitem></itemizedlist>
 </para>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md208">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md193">
 <title>file ros_controllers.yaml</title>
 <para><programlisting filename=".yaml"><codeline><highlight class="normal">#<sp/>Simulation<sp/>settings<sp/>for<sp/>using<sp/>moveit_sim_controllers</highlight></codeline>
 <codeline><highlight class="normal">moveit_sim_hw_interface:</highlight></codeline>
@@ -102,6 +111,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>name:<sp/>end_effector_group_controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>action_ns:<sp/>follow_joint_trajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>default:<sp/>True</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>FollowJointTrajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arm_joint_04</highlight></codeline>
 <codeline><highlight class="normal">arm_group_controller:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>type:<sp/>effort_controllers/JointTrajectoryController</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>joints:</highlight></codeline>
@@ -111,35 +126,35 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>gains:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_01:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_02:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_03:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_04:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md209">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md194">
 <title>file joint_limits.yaml</title>
 <para><programlisting filename=".yaml"><codeline><highlight class="normal">#<sp/>joint_limits.yaml<sp/>allows<sp/>the<sp/>dynamics<sp/>properties<sp/>specified<sp/>in<sp/>the<sp/>URDF<sp/>to<sp/>be<sp/>overwritten<sp/>or<sp/>augmented<sp/>as<sp/>needed</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>For<sp/>beginners,<sp/>we<sp/>downscale<sp/>velocity<sp/>and<sp/>acceleration<sp/>limits.</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>You<sp/>can<sp/>always<sp/>specify<sp/>higher<sp/>scaling<sp/>factors<sp/>(&lt;=<sp/>1.0)<sp/>in<sp/>your<sp/>motion<sp/>requests.<sp/><sp/>#<sp/>Increase<sp/>the<sp/>values<sp/>below<sp/>to<sp/>1.0<sp/>to<sp/>always<sp/>move<sp/>at<sp/>maximum<sp/>speed.</highlight></codeline>
-<codeline><highlight class="normal">default_velocity_scaling_factor:<sp/>1</highlight></codeline>
-<codeline><highlight class="normal">default_acceleration_scaling_factor:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">default_velocity_scaling_factor:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">default_acceleration_scaling_factor:<sp/>1.0</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>Specific<sp/>joint<sp/>properties<sp/>can<sp/>be<sp/>changed<sp/>with<sp/>the<sp/>keys<sp/>[max_position,<sp/>min_position,<sp/>max_velocity,<sp/>max_acceleration]</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>Joint<sp/>limits<sp/>can<sp/>be<sp/>turned<sp/>off<sp/>with<sp/>[has_velocity_limits,<sp/>has_acceleration_limits]</highlight></codeline>
@@ -166,26 +181,43 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>max_acceleration:<sp/>0</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md210">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md195">
 <title>Gazebo world files fix</title>
 <para>apply this code into the file <bold>gazebo.launch</bold> :</para>
-<para><programlisting filename=".xml"><codeline><highlight class="comment">&lt;!--<sp/>world<sp/>file<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_name&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;square_room.world&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>worlds)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_file_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<para><programlisting filename=".xml"><codeline><highlight class="normal">&lt;?</highlight><highlight class="keyword">xml</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">version</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;1.0&quot;</highlight><highlight class="normal">?&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">launch</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;paused&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;gazebo_gui&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;true&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;urdf_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>robocluedo_urdf_model)/robot/model/robocluedo_urdf.urdf&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">&lt;!--<sp/>world<sp/>file<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>worlds)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_name&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;square_room.world&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_file_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
 <codeline><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal"></highlight><highlight class="comment">&lt;!--<sp/>startup<sp/>simulated<sp/>world<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
-<codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">include</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">file</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>gazebo_ros)/launch/empty_world.launch&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;paused&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>paused)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;gui&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>gazebo_gui)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_name&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>world_file_path)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;/</highlight><highlight class="keywordtype">include</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">&lt;!--<sp/>startup<sp/>simulated<sp/>world<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">include</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">file</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>gazebo_ros)/launch/empty_world.launch&quot;</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;paused&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>paused)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;gui&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>gazebo_gui)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_name&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>world_file_path)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/</highlight><highlight class="keywordtype">include</highlight><highlight class="normal">&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">&lt;!--<sp/>send<sp/>robot<sp/>urdf<sp/>to<sp/>param<sp/>server<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">param</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;robot_description&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">textfile</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>urdf_path)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/></highlight><highlight class="comment">&lt;!--<sp/>push<sp/>robot_description<sp/>to<sp/>factory<sp/>and<sp/>spawn<sp/>robot<sp/>in<sp/>gazebo<sp/>at<sp/>the<sp/>origin,<sp/>change<sp/>x,y,z<sp/>arguments<sp/>to<sp/>spawn<sp/>in<sp/>a<sp/>different<sp/>position<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">node</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;spawn_gazebo_model&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">pkg</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;gazebo_ros&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">type</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;spawn_model&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">args</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;-urdf<sp/>-param<sp/>robot_description<sp/>-model<sp/>robot<sp/>-x<sp/>0<sp/>-y<sp/>0<sp/>-z<sp/>0&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">respawn</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;false&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">output</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;screen&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">include</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">file</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>robocluedo_robot)/launch/ros_controllers.launch&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
+<codeline><highlight class="normal">&lt;/</highlight><highlight class="keywordtype">launch</highlight><highlight class="normal">&gt;</highlight></codeline>
 </programlisting></para>
 <para>and apply this fix in the <bold>demo_gazebo.launch</bold> :</para>
 <para><programlisting filename=".xml"><codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>worlds)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
 <codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_name&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;square_room.world&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
 <codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;world_file_path&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">default</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;</highlight><highlight class="normal"><sp/>/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal"></highlight><highlight class="comment">&lt;!--<sp/>launch<sp/>the<sp/>gazebo<sp/>simulator<sp/>and<sp/>spawn<sp/>the<sp/>robot<sp/>--&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline><highlight class="normal">&lt;</highlight><highlight class="keywordtype">include</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">file</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(find<sp/>robocluedo_robot)/launch/gazebo.launch&quot;</highlight><highlight class="normal"><sp/>&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>&lt;</highlight><highlight class="keywordtype">arg</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">name</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;paused&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">value</highlight><highlight class="normal">=</highlight><highlight class="stringliteral">&quot;$(arg<sp/>paused)&quot;</highlight><highlight class="normal">/&gt;</highlight></codeline>
@@ -198,7 +230,7 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md211">
+<sect1 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md196">
 <title>HOW TO test the model with Gazebo</title>
 <para>launch this:</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch</highlight></codeline>
@@ -208,14 +240,14 @@
 </para>
 <para><image type="html" name="robot_rviz.png" inline="yes"></image>
 </para>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md212">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md197">
 <title>HOW TO Launch the simulation with other worlds file</title>
 <para>the package takes the world files from the package <emphasis>worlds</emphasis> located into the <emphasis>robocluedo_depedencied</emphasis> folder. The default world file is <emphasis>square_room.world</emphasis>.</para>
 <para>here&apos;s the syntax of the command:</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>world_name:=indoor.world</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md213">
+<sect2 id="md_robocluedo_dependencies__docs_robocluedo-urdf-user-manual_1autotoc_md198">
 <title>HOW TO launch a world &lt;em&gt;outside the package worlds&lt;/em&gt;</title>
 <para>in case the world file is not included in the <emphasis>worlds</emphasis> package, you have two possibilities.</para>
 <para>the first one is to specify both path and name in this way:</para>

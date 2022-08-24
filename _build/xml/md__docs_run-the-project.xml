@@ -2,11 +2,28 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md__docs_run-the-project" kind="page">
     <compoundname>md__docs_run-the-project</compoundname>
-    <title>How to Run this Project</title>
+    <title>run-the-project</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para>... well, how to ... ? </para>
+<para>(run-the-project)=</para>
+<sect1 id="md__docs_run-the-project_1autotoc_md101">
+<title>HOW TO Run RCL#2 Project</title>
+<para>``<computeroutput>{seealso} If something don&apos;t work, see the testing procedures you can find in the documentation here: {any}</computeroutput>pkg-module-testing<computeroutput> </computeroutput>``</para>
+<para>Here are the instructions for running the RCL#2 project. I suggest you to use at least two shells: one for the &quot;useless output&quot;, and another one for the output from the mission manager.</para>
+<sect3 id="md__docs_run-the-project_1autotoc_md102">
+<title>Shell 1</title>
+<para>all the components, without the <computeroutput>mission manager</computeroutput></para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>robocluedo_mission_manager<sp/>run_components_final.launch<sp/>2&gt;/dev/null</highlight></codeline>
+</programlisting></para>
+</sect3>
+<sect3 id="md__docs_run-the-project_1autotoc_md103">
+<title>Shell 2</title>
+<para>the shell will show the output from the mission manager, to show how the investigation is proceeding.</para>
+<para><programlisting filename=".bash"><codeline><highlight class="normal">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+</programlisting> </para>
+</sect3>
+</sect1>
     </detaileddescription>
   </compounddef>
 </doxygen>

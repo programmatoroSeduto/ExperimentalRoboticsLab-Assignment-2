@@ -1,18 +1,33 @@
 
-# Oracle (for the ERL project no.2) -- User Documentation
+# Oracle2 -- User Documentation
+
+```{seealso}
+See [*CarmineD8/erl2* on GitHub](https://github.com/CarmineD8/erl2.git)
+
+The oracle in this repository hasn't a develop mode. 
+```
+
+---
 
 ```{toctree}
+---
+caption: Contents
+---
 ./erl2-oracle-user-manual.md
 ```
+
+---
 
 purposes of this node are
 
 - to choose a solution of the mystery
 - to provide hints to the system in order to enable it inferring the solution
 - to check the solution, as a sort of arbiter of the game
-- to provide the posision of the hint sources and to visualize them in RViz
+- to provide the positions of the hint sources (*waypoints*) and to visualize them in RViz
 
 ## SCHEMA -- node *simulation.cpp*
+
+Here's a brief representation of how the node works:
 
 ```{uml} 
 @startuml

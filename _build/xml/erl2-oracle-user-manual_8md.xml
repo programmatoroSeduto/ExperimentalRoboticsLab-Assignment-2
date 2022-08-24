@@ -8,20 +8,35 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>Oracle<sp/>(for<sp/>the<sp/>ERL<sp/>project<sp/>no.2)<sp/>--<sp/>User<sp/>Documentation</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Oracle2<sp/>--<sp/>User<sp/>Documentation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```{seealso}</highlight></codeline>
+<codeline><highlight class="normal">See<sp/>[*CarmineD8/erl2*<sp/>on<sp/>GitHub](https://github.com/CarmineD8/erl2.git)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">The<sp/>oracle<sp/>in<sp/>this<sp/>repository<sp/>hasn&apos;t<sp/>a<sp/>develop<sp/>mode.<sp/></highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{toctree}</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Contents</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline><highlight class="normal">./erl2-oracle-user-manual.md</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">purposes<sp/>of<sp/>this<sp/>node<sp/>are</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>to<sp/>choose<sp/>a<sp/>solution<sp/>of<sp/>the<sp/>mystery</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>to<sp/>provide<sp/>hints<sp/>to<sp/>the<sp/>system<sp/>in<sp/>order<sp/>to<sp/>enable<sp/>it<sp/>inferring<sp/>the<sp/>solution</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>to<sp/>check<sp/>the<sp/>solution,<sp/>as<sp/>a<sp/>sort<sp/>of<sp/>arbiter<sp/>of<sp/>the<sp/>game</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>to<sp/>provide<sp/>the<sp/>posision<sp/>of<sp/>the<sp/>hint<sp/>sources<sp/>and<sp/>to<sp/>visualize<sp/>them<sp/>in<sp/>RViz</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>to<sp/>provide<sp/>the<sp/>positions<sp/>of<sp/>the<sp/>hint<sp/>sources<sp/>(*waypoints*)<sp/>and<sp/>to<sp/>visualize<sp/>them<sp/>in<sp/>RViz</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>SCHEMA<sp/>--<sp/>node<sp/>*simulation.cpp*</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Here&apos;s<sp/>a<sp/>brief<sp/>representation<sp/>of<sp/>how<sp/>the<sp/>node<sp/>works:</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{uml}<sp/></highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>

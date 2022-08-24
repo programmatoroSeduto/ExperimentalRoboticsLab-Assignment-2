@@ -19,11 +19,19 @@
 <listitem><para><anchor id="todo_1_todo000005"/>there&apos;s no way to compose aRMOR commands in a list. actually <ref refid="armor__tools_8h_1a7a575f204a28d981cec16310d0288c38" kindref="member">ARMOR_SERVICE_MULTIPLE_REQUESTS</ref> is unused.  </para>
 </listitem>
 <varlistentry><term>Member <ref refid="classkb__tools_1afcdd633b556099168c1c97df9923e33d" kindref="member">kb_tools::get_predicate</ref>  (const std::string &amp;pname, std::map&lt; std::string, std::string &gt; params)</term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000008"/>the method assumes that only one result is returned, which is true for fully defined queries, but what about partial queries? </para>
+<listitem><para><anchor id="todo_1_todo000012"/>the method assumes that only one result is returned, which is true for fully defined queries, but what about partial queries? </para>
+</listitem>
+<varlistentry><term>File <ref refid="manipulation__controller_8cpp" kindref="compound">manipulation_controller.cpp</ref>  </term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000009"/>implement a form of asynchronous movement</para>
+<para><anchor id="todo_1_todo000010"/>introduce cartesian planning and a clear end effector</para>
+<para><anchor id="todo_1_todo000011"/>the way the node uses moveit is a bit raw ... it would deserve a review.  </para>
+</listitem>
+<varlistentry><term>Member <ref refid="classnode__manipulation__unit_1acc8dace053bce583b55a7109326042e6" kindref="member">node_manipulation_unit::cbk_markers</ref>  (const visualization_msgs::MarkerArray::ConstPtr &amp;data)</term></varlistentry>
+<listitem><para><anchor id="todo_1_todo000006"/>currently the algorithm just distinguishes between &quot;high&quot; markers and low markers; this approach could be improved in order to perform a better manipulation.  </para>
 </listitem>
 <varlistentry><term>File <ref refid="test__armor__tools_8cpp" kindref="compound">test_armor_tools.cpp</ref>  </term></varlistentry>
-<listitem><para><anchor id="todo_1_todo000006"/>translate logs from italian to English and reorder</para>
-<para><anchor id="todo_1_todo000007"/>translate logs from italian to English and reorder</para>
+<listitem><para><anchor id="todo_1_todo000007"/>translate logs from italian to English and reorder</para>
+<para><anchor id="todo_1_todo000008"/>translate logs from italian to English and reorder</para>
 </listitem>
 </variablelist>
 </para>

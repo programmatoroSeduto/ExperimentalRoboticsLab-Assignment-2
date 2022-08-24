@@ -8,11 +8,18 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>the<sp/>RoboCLuedo<sp/>Project<sp/>no.2<sp/>--<sp/>robot<sp/>URDF<sp/>model<sp/>--<sp/>User<sp/>Manual</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>the<sp/>RoboCLuedo<sp/>URDF<sp/>model<sp/>--<sp/>User<sp/>Manual</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{toctree}</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Contents</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline><highlight class="normal">./robocluedo-urdf-user-manual.md</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Model<sp/>file<sp/>structure</highlight></codeline>
 <codeline></codeline>
@@ -29,6 +36,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`robocluedo_sensing`<sp/>:<sp/>this<sp/>file<sp/>contains<sp/>the<sp/>sensors<sp/>mounted<sp/>on<sp/>the<sp/>robot</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`robocluedo_gazebo_plugins`<sp/>:<sp/>definition<sp/>of<sp/>the<sp/>Gazebo<sp/>plugins,<sp/>without<sp/>the<sp/>sensing<sp/>part</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>`robocluedo_transmission`<sp/>:<sp/>Gazebo<sp/>controllers</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>HOW<sp/>TO<sp/>generate<sp/>the<sp/>model</highlight></codeline>
 <codeline></codeline>
@@ -109,6 +118,12 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_02</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_03</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>-<sp/>name:<sp/>end_effector_group_controller</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>action_ns:<sp/>follow_joint_trajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>default:<sp/>True</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>type:<sp/>FollowJointTrajectory</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>joints:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>arm_joint_04</highlight></codeline>
 <codeline><highlight class="normal">arm_group_controller:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>type:<sp/>effort_controllers/JointTrajectoryController</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>joints:</highlight></codeline>
@@ -118,22 +133,22 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>arm_joint_04</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>gains:</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_01:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_02:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_03:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>arm_joint_04:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>100</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>p:<sp/>10</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>d:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i:<sp/>0</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/>i_clamp:<sp/>0</highlight></codeline>
@@ -147,8 +162,8 @@
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>For<sp/>beginners,<sp/>we<sp/>downscale<sp/>velocity<sp/>and<sp/>acceleration<sp/>limits.</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>You<sp/>can<sp/>always<sp/>specify<sp/>higher<sp/>scaling<sp/>factors<sp/>(&lt;=<sp/>1.0)<sp/>in<sp/>your<sp/>motion<sp/>requests.<sp/><sp/>#<sp/>Increase<sp/>the<sp/>values<sp/>below<sp/>to<sp/>1.0<sp/>to<sp/>always<sp/>move<sp/>at<sp/>maximum<sp/>speed.</highlight></codeline>
-<codeline><highlight class="normal">default_velocity_scaling_factor:<sp/>1</highlight></codeline>
-<codeline><highlight class="normal">default_acceleration_scaling_factor:<sp/>1</highlight></codeline>
+<codeline><highlight class="normal">default_velocity_scaling_factor:<sp/>1.0</highlight></codeline>
+<codeline><highlight class="normal">default_acceleration_scaling_factor:<sp/>1.0</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">#<sp/>Specific<sp/>joint<sp/>properties<sp/>can<sp/>be<sp/>changed<sp/>with<sp/>the<sp/>keys<sp/>[max_position,<sp/>min_position,<sp/>max_velocity,<sp/>max_acceleration]</highlight></codeline>
 <codeline><highlight class="normal">#<sp/>Joint<sp/>limits<sp/>can<sp/>be<sp/>turned<sp/>off<sp/>with<sp/>[has_velocity_limits,<sp/>has_acceleration_limits]</highlight></codeline>
@@ -181,19 +196,34 @@
 <codeline><highlight class="normal">apply<sp/>this<sp/>code<sp/>into<sp/>the<sp/>file<sp/>**gazebo.launch**<sp/>:<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```xml</highlight></codeline>
+<codeline><highlight class="normal">&lt;?xml<sp/>version=&quot;1.0&quot;?&gt;</highlight></codeline>
+<codeline><highlight class="normal">&lt;launch&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>default=&quot;false&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;gazebo_gui&quot;<sp/>default=&quot;true&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;urdf_path&quot;<sp/>default=&quot;$(find<sp/>robocluedo_urdf_model)/robot/model/robocluedo_urdf.urdf&quot;/&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">&lt;!--<sp/>world<sp/>file<sp/>--&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_name&quot;<sp/>default=&quot;square_room.world&quot;/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_path&quot;<sp/>default=&quot;$(find<sp/>worlds)&quot;/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>default=&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;!--<sp/>world<sp/>file<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;world_path&quot;<sp/>default=&quot;$(find<sp/>worlds)&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;world_name&quot;<sp/>default=&quot;square_room.world&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>default=&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&lt;!--<sp/>startup<sp/>simulated<sp/>world<sp/>--&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;include<sp/>file=&quot;$(find<sp/>gazebo_ros)/launch/empty_world.launch&quot;&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>value=&quot;$(arg<sp/>paused)&quot;/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;gui&quot;<sp/>value=&quot;$(arg<sp/>gazebo_gui)&quot;/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;world_name&quot;<sp/>value=&quot;$(arg<sp/>world_file_path)&quot;<sp/>/&gt;</highlight></codeline>
-<codeline><highlight class="normal">&lt;/include&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;!--<sp/>startup<sp/>simulated<sp/>world<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;include<sp/>file=&quot;$(find<sp/>gazebo_ros)/launch/empty_world.launch&quot;&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>value=&quot;$(arg<sp/>paused)&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;arg<sp/>name=&quot;gui&quot;<sp/>value=&quot;$(arg<sp/>gazebo_gui)&quot;/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>&lt;arg<sp/>name=&quot;world_name&quot;<sp/>value=&quot;$(arg<sp/>world_file_path)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;/include&gt;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;!--<sp/>send<sp/>robot<sp/>urdf<sp/>to<sp/>param<sp/>server<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;param<sp/>name=&quot;robot_description&quot;<sp/>textfile=&quot;$(arg<sp/>urdf_path)&quot;<sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;!--<sp/>push<sp/>robot_description<sp/>to<sp/>factory<sp/>and<sp/>spawn<sp/>robot<sp/>in<sp/>gazebo<sp/>at<sp/>the<sp/>origin,<sp/>change<sp/>x,y,z<sp/>arguments<sp/>to<sp/>spawn<sp/>in<sp/>a<sp/>different<sp/>position<sp/>--&gt;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;node<sp/>name=&quot;spawn_gazebo_model&quot;<sp/>pkg=&quot;gazebo_ros&quot;<sp/>type=&quot;spawn_model&quot;<sp/>args=&quot;-urdf<sp/>-param<sp/>robot_description<sp/>-model<sp/>robot<sp/>-x<sp/>0<sp/>-y<sp/>0<sp/>-z<sp/>0&quot;</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>respawn=&quot;false&quot;<sp/>output=&quot;screen&quot;<sp/>/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal"><sp/><sp/>&lt;include<sp/>file=&quot;$(find<sp/>robocluedo_robot)/launch/ros_controllers.launch&quot;/&gt;</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">&lt;/launch&gt;</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">and<sp/>apply<sp/>this<sp/>fix<sp/>in<sp/>the<sp/>**demo_gazebo.launch**<sp/>:<sp/></highlight></codeline>
@@ -202,7 +232,7 @@
 <codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_path&quot;<sp/>default=&quot;$(find<sp/>worlds)&quot;/&gt;</highlight></codeline>
 <codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_name&quot;<sp/>default=&quot;square_room.world&quot;/&gt;</highlight></codeline>
 <codeline><highlight class="normal">&lt;arg<sp/>name=&quot;world_file_path&quot;<sp/>default=&quot;$(arg<sp/>world_path)/$(arg<sp/>world_name)&quot;<sp/>/&gt;</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/></highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">&lt;!--<sp/>launch<sp/>the<sp/>gazebo<sp/>simulator<sp/>and<sp/>spawn<sp/>the<sp/>robot<sp/>--&gt;</highlight></codeline>
 <codeline><highlight class="normal">&lt;include<sp/>file=&quot;$(find<sp/>robocluedo_robot)/launch/gazebo.launch&quot;<sp/>&gt;</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/>&lt;arg<sp/>name=&quot;paused&quot;<sp/>value=&quot;$(arg<sp/>paused)&quot;/&gt;</highlight></codeline>

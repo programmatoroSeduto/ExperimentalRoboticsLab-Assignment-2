@@ -8,9 +8,33 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>How<sp/>to<sp/>Run<sp/>this<sp/>Project</highlight></codeline>
+<codeline><highlight class="normal">(run-the-project)=</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">...<sp/>well,<sp/>how<sp/>to<sp/>...<sp/>?</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>HOW<sp/>TO<sp/>Run<sp/>RCL#2<sp/>Project</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```{seealso}</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>something<sp/>don&apos;t<sp/>work,<sp/>see<sp/>the<sp/>testing<sp/>procedures<sp/>you<sp/>can<sp/>find<sp/>in<sp/>the<sp/>documentation<sp/>here:<sp/>{any}`pkg-module-testing`</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Here<sp/>are<sp/>the<sp/>instructions<sp/>for<sp/>running<sp/>the<sp/>RCL#2<sp/>project.<sp/>I<sp/>suggest<sp/>you<sp/>to<sp/>use<sp/>at<sp/>least<sp/>two<sp/>shells:<sp/>one<sp/>for<sp/>the<sp/>&quot;useless<sp/>output&quot;,<sp/>and<sp/>another<sp/>one<sp/>for<sp/>the<sp/>output<sp/>from<sp/>the<sp/>mission<sp/>manager.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Shell<sp/>1</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">all<sp/>the<sp/>components,<sp/>without<sp/>the<sp/>`mission<sp/>manager`</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">roslaunch<sp/>robocluedo_mission_manager<sp/>run_components_final.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Shell<sp/>2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">the<sp/>shell<sp/>will<sp/>show<sp/>the<sp/>output<sp/>from<sp/>the<sp/>mission<sp/>manager,<sp/>to<sp/>show<sp/>how<sp/>the<sp/>investigation<sp/>is<sp/>proceeding.<sp/></highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```bash</highlight></codeline>
+<codeline><highlight class="normal">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
     <location file="_docs/run-the-project.md"/>
   </compounddef>

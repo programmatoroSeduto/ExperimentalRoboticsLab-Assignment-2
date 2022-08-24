@@ -4,10 +4,25 @@
 * @file manipulation_unit.cpp
 * 
 * @brief mission manager bridge between the robocluedo ROSPlan framework 
-* 	and the manipulation controller.
+* 	and the navigation controller
+* 
+* This node is a bridge between the ROSPlan framework, which assumes 
+* some other node implemented the service for the navigation from rosplan, 
+* and the navigation system: a service call into a service call. 
+* 
+* The task of this node is quite simple: when received a request from the
+* ROSPlan module, the node associates the cartesian coordinates of the
+* pointed waypoint, then calls the navigation service; when the navigation
+* has finished, the node adapt and returns the response to ROSPlan.
+* 
+* There are also other sub-tasks performed by this node: listening for the
+* markers in order to find the coordinates of the waypoints, for instance,
+* using a one-shot subscriber. Or also to initialise the navigation system. 
+* 
+* @attention This implementation doesn't supports the develop mode. 
 * 
 * @authors Francesco Ganci
-* @version v1.0 
+* @version v1.1
 * 
 ***********************************************/
 
@@ -88,7 +103,7 @@ public:
 		TLOG( "sub topic " << TOPIC_MARMERS << " ...  OK" );
 	}
 	
-	/// spin function: just swait for shutdown
+	/// spin function: just wait for shutdown
 	void spin( )
 	{
 		// simple spin
@@ -99,8 +114,17 @@ public:
 	 *  
 	 * \brief service implementation for the rosplan interface
 	 * 
-	 * @param req
-	 * @param res
+	 * this service behaves as a simple delegate, which takes the message 
+	 * from the ROSPlan side, associates a posture of the command which 
+	 * also depends on the quote of the selected marker, and then calls
+	 * the real manipulation controller to perform the movement of the
+	 * arm. 
+	 * 
+	 * @note the ROSplan action calls this function, in RCL#2, when the
+	 * 	robot stands in front of a marker. 
+	 * 
+	 * @param req the command, ROSPlan side
+	 * @param res the response to ROSPlan
 	 * 
 	 * @returns always true
 	 * 
@@ -142,7 +166,21 @@ public:
 		return true;
 	}
 	
-	/** "one-shot" listener for the markers from the Oracle */
+	/********************************************//**
+	 *  
+	 * \brief "one-shot" listener for the markers from the Oracle
+	 * 
+	 * The callback is called once: after having read the markers from the 
+	 * topic, it shuts down the subscriber, in order to save a bit of
+	 * performance. 
+	 * 
+	 * @param data the array of markers
+	 * 
+	 * @todo currently the algorithm just distinguishes between "high"
+	 * 	markers and low markers; this approach could be improved in order
+	 * 	to perform a better manipulation. 
+	 * 
+	 ***********************************************/
 	void cbk_markers( const visualization_msgs::MarkerArray::ConstPtr& data )
 	{
 		TLOG( "reading markers ... " );
@@ -152,28 +190,8 @@ public:
 		float max_h = 0.f;
 		for( const visualization_msgs::Marker& mrk : data->markers )
 		{
-			/*
-			std::string marker_name = SS("wp") + SSS(i+1);
-			
-			robocluedo_movement_controller_msgs::Pose2D markerpose;
-			
-			markerpose.x = mrk.pose.position.x * SCALING_FACTOR;
-			markerpose.y = mrk.pose.position.y * SCALING_FACTOR;
-			*/
 			if( mrk.pose.position.z > max_h )
 				max_h = mrk.pose.position.z;
-			/*
-			markerpose.yaw = atan2( markerpose.y, markerpose.x ); // atan2 from -pi to pi
-			if( markerpose.yaw > 3.135 )
-				markerpose.yaw = 3.135; 
-			else if( markerpose.yaw < -3.135 )
-				markerpose.yaw = 3.135;
-			
-			waypoints[marker_name] = markerpose;
-			
-			++i;
-			TLOG( "received (" << i << ") marker with data (x=" << markerpose.x << ", y=" << markerpose.y << ", yaw= " << markerpose.yaw << ")" );
-			*/
 		}
 		
 		i = 0;

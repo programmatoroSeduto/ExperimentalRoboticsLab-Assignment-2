@@ -1,9 +1,16 @@
 
-# the RoboCLuedo Project no.2 -- robot URDF model -- User Manual
+# the RoboCLuedo URDF model -- User Manual
+
+---
 
 ```{toctree}
+---
+caption: Contents
+---
 ./robocluedo-urdf-user-manual.md
 ```
+
+---
 
 ## Model file structure
 
@@ -20,6 +27,8 @@ inside the folder `robocluedo_urdf_model` there are these files:
 	- `robocluedo_sensing` : this file contains the sensors mounted on the robot
 	- `robocluedo_gazebo_plugins` : definition of the Gazebo plugins, without the sensing part
 	- `robocluedo_transmission` : Gazebo controllers
+
+---
 
 ## HOW TO generate the model
 
@@ -100,6 +109,12 @@ controller_list:
       - arm_joint_02
       - arm_joint_03
       - arm_joint_04
+  - name: end_effector_group_controller
+    action_ns: follow_joint_trajectory
+    default: True
+    type: FollowJointTrajectory
+    joints:
+      arm_joint_04
 arm_group_controller:
   type: effort_controllers/JointTrajectoryController
   joints:
@@ -109,22 +124,22 @@ arm_group_controller:
     - arm_joint_04
   gains:
     arm_joint_01:
-      p: 100
+      p: 10
       d: 0
       i: 0
       i_clamp: 0
     arm_joint_02:
-      p: 100
+      p: 10
       d: 0
       i: 0
       i_clamp: 0
     arm_joint_03:
-      p: 100
+      p: 10
       d: 0
       i: 0
       i_clamp: 0
     arm_joint_04:
-      p: 100
+      p: 10
       d: 0
       i: 0
       i_clamp: 0
@@ -138,8 +153,8 @@ arm_group_controller:
 
 # For beginners, we downscale velocity and acceleration limits.
 # You can always specify higher scaling factors (<= 1.0) in your motion requests.  # Increase the values below to 1.0 to always move at maximum speed.
-default_velocity_scaling_factor: 1
-default_acceleration_scaling_factor: 1
+default_velocity_scaling_factor: 1.0
+default_acceleration_scaling_factor: 1.0
 
 # Specific joint properties can be changed with the keys [max_position, min_position, max_velocity, max_acceleration]
 # Joint limits can be turned off with [has_velocity_limits, has_acceleration_limits]
@@ -172,19 +187,34 @@ joint_limits:
 apply this code into the file **gazebo.launch** : 
 
 ```xml
+<?xml version="1.0"?>
+<launch>
+  <arg name="paused" default="false"/>
+  <arg name="gazebo_gui" default="true"/>
+  <arg name="urdf_path" default="$(find robocluedo_urdf_model)/robot/model/robocluedo_urdf.urdf"/>
   
-<!-- world file -->
-<arg name="world_name" default="square_room.world"/>
-<arg name="world_path" default="$(find worlds)"/>
-<arg name="world_file_path" default="$(arg world_path)/$(arg world_name)" />
+  <!-- world file -->
+  <arg name="world_path" default="$(find worlds)"/>
+  <arg name="world_name" default="square_room.world"/>
+  <arg name="world_file_path" default="$(arg world_path)/$(arg world_name)" />
 
-<!-- startup simulated world -->
-<include file="$(find gazebo_ros)/launch/empty_world.launch">
-  <arg name="paused" value="$(arg paused)"/>
-  <arg name="gui" value="$(arg gazebo_gui)"/>
-  <arg name="world_name" value="$(arg world_file_path)" />
-</include>
+  <!-- startup simulated world -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="gui" value="$(arg gazebo_gui)"/>
+    <arg name="world_name" value="$(arg world_file_path)" />
+  </include>
 
+  <!-- send robot urdf to param server -->
+  <param name="robot_description" textfile="$(arg urdf_path)" />
+
+  <!-- push robot_description to factory and spawn robot in gazebo at the origin, change x,y,z arguments to spawn in a different position -->
+  <node name="spawn_gazebo_model" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model robot -x 0 -y 0 -z 0"
+    respawn="false" output="screen" />
+
+  <include file="$(find robocluedo_robot)/launch/ros_controllers.launch"/>
+
+</launch>
 ```
 
 and apply this fix in the **demo_gazebo.launch** : 
@@ -193,7 +223,7 @@ and apply this fix in the **demo_gazebo.launch** :
 <arg name="world_path" default="$(find worlds)"/>
 <arg name="world_name" default="square_room.world"/>
 <arg name="world_file_path" default="$(arg world_path)/$(arg world_name)" />
-  
+
 <!-- launch the gazebo simulator and spawn the robot -->
 <include file="$(find robocluedo_robot)/launch/gazebo.launch" >
   <arg name="paused" value="$(arg paused)"/>

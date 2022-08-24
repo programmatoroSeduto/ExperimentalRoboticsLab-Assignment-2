@@ -15,7 +15,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="229" column="17" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="229" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="291" column="17" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="291" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a5b060653882f04ff7c8d037da0758afa" prot="private" static="no" mutable="no">
         <type>ros::ServiceServer</type>
@@ -29,7 +29,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="232" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="232" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="294" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="294" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1aad1f56a89469de2726ca8d4cdc332ccb" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="235" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="235" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="297" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="297" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1aa5e354f55a42e37aa8eef7d35b09eba5" prot="private" static="no" mutable="no">
         <type>ros::Subscriber</type>
@@ -57,7 +57,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="238" column="17" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="238" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="300" column="17" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="300" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a5421a6d62f316d7618613b36418ce105" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="241" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="241" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="303" column="20" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="303" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a6474c507095194da8b48d5dba5aa0ecf" prot="private" static="no" mutable="no">
         <type>std::map&lt; std::string, robocluedo_movement_controller_msgs::Pose2D &gt;</type>
@@ -85,7 +85,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="244" column="10" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="244" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="306" column="10" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="306" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a70d0814f60cb07f37b352401dac6600d" prot="private" static="no" mutable="no">
         <type>std::map&lt; std::string, bool &gt;</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="247" column="10" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="247" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="309" column="10" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="309" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a34ee76415ed7a4d90eaaeadba49f1f9b" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -114,7 +114,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="250" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="250" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="312" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="312" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classnode__navigation__unit_1a38301d6d3ac11c8752d78d6a88cc4c97" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -129,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="253" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="253" bodyend="-1"/>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="315" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="315" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -139,21 +139,22 @@
         <argsstring>()</argsstring>
         <name>node_navigation_unit</name>
         <briefdescription>
+<para>node class constructor </para>
         </briefdescription>
         <detaileddescription>
-<para>node class constructor </para>
+<para>here the node opens all the channels with the other components. </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="53" column="1" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="53" bodyend="84"/>
-        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="18">TLOG</references>
-        <references refid="navigation__unit_8cpp_1a735ccfd0415c3273be69843313f0030e" compoundref="navigation__unit_8cpp" startline="41">TOPIC_MARMERS</references>
-        <references refid="classnode__navigation__unit_1a38f8c50c557734f1b3e8f462f8a01cf1" compoundref="navigation__unit_8cpp" startline="171" endline="224">cbk_markers</references>
-        <references refid="navigation__unit_8cpp_1ab0929e7582a550143206b2a76e5ba4c3" compoundref="navigation__unit_8cpp" startline="38">SERVICE_ROSPLAN_NAVIGATION</references>
-        <references refid="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" compoundref="navigation__unit_8cpp" startline="94" endline="168">cbk_navigation</references>
-        <references refid="navigation__unit_8cpp_1a86668a6e04783029932ae15d276f52a3" compoundref="navigation__unit_8cpp" startline="40">SERVICE_NAVIGATION</references>
-        <references refid="navigation__unit_8cpp_1a59b71c836719259a2e9b1428ec35504c" compoundref="navigation__unit_8cpp" startline="20">TERR</references>
-        <references refid="navigation__unit_8cpp_1a5160cb2daa1573cc08cd9c0a0400b484" compoundref="navigation__unit_8cpp" startline="39">SERVICE_SET_ALGORITHM</references>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="82" column="1" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="82" bodyend="113"/>
+        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="33">TLOG</references>
+        <references refid="navigation__unit_8cpp_1a735ccfd0415c3273be69843313f0030e" compoundref="navigation__unit_8cpp" startline="56">TOPIC_MARMERS</references>
+        <references refid="classnode__navigation__unit_1a38f8c50c557734f1b3e8f462f8a01cf1" compoundref="navigation__unit_8cpp" startline="233" endline="286">cbk_markers</references>
+        <references refid="navigation__unit_8cpp_1ab0929e7582a550143206b2a76e5ba4c3" compoundref="navigation__unit_8cpp" startline="53">SERVICE_ROSPLAN_NAVIGATION</references>
+        <references refid="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" compoundref="navigation__unit_8cpp" startline="140" endline="214">cbk_navigation</references>
+        <references refid="navigation__unit_8cpp_1a86668a6e04783029932ae15d276f52a3" compoundref="navigation__unit_8cpp" startline="55">SERVICE_NAVIGATION</references>
+        <references refid="navigation__unit_8cpp_1a59b71c836719259a2e9b1428ec35504c" compoundref="navigation__unit_8cpp" startline="35">TERR</references>
+        <references refid="navigation__unit_8cpp_1a5160cb2daa1573cc08cd9c0a0400b484" compoundref="navigation__unit_8cpp" startline="54">SERVICE_SET_ALGORITHM</references>
       </memberdef>
       <memberdef kind="function" id="classnode__navigation__unit_1ac9686d1419e456981420e56bb5ea45b3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -167,8 +168,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="87" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="87" bodyend="91"/>
-        <referencedby refid="navigation__unit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__unit_8cpp" startline="264" endline="279">main</referencedby>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="116" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="116" bodyend="120"/>
+        <referencedby refid="navigation__unit_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" compoundref="navigation__unit_8cpp" startline="326" endline="341">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>bool</type>
@@ -184,20 +185,37 @@
           <declname>res</declname>
         </param>
         <briefdescription>
+<para>the service required by the rosplan package </para>
         </briefdescription>
         <detaileddescription>
-<para>the service required by the rosplan package </para>
+<para>A service call inside the service call: the node, after received the request, translates it into a request for the navigation manager, then calls that service and waits. When the navigation ends, the service of this node returns a proper response to the ROSPlan framework.</para>
+<para>The service does also something else. First of all, it tries to set the algorithm the first time it is called. And second, it waits for the first reading of the markers from the markers publisher. These operations are performed only during the first service call.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>request</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the waypoint to reach </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>success or not? </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="94" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="94" bodyend="168"/>
-        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="18">TLOG</references>
-        <references refid="examples__tools_8md_8txt_1a3ab222c417f68c76f410be52f2b31aab" compoundref="examples__tools_8md_8txt" startline="116">req</references>
-        <references refid="navigation__unit_8cpp_1a256d3c2a228d8927d1052be67b95c0c6" compoundref="navigation__unit_8cpp" startline="44">NAV_ALGO_BUG_M</references>
-        <references refid="navigation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="navigation__unit_8cpp" startline="19">TWARN</references>
-        <references refid="examples__tools_8md_8txt_1a73a8bd208b47d12909d34a6961dc4394" compoundref="examples__tools_8md_8txt" startline="117">res</references>
-        <references refid="erl2-oracle-user-manual_8md_8txt_1a060ea53faa9c0b619cd0d5ccec07b0fe" compoundref="erl2-oracle-user-manual_8md_8txt" startline="127">r</references>
-        <referencedby refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" compoundref="navigation__unit_8cpp" startline="53" endline="84">node_navigation_unit</referencedby>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="140" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="140" bodyend="214"/>
+        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="33">TLOG</references>
+        <references refid="navigation__unit_8cpp_1a256d3c2a228d8927d1052be67b95c0c6" compoundref="navigation__unit_8cpp" startline="59">NAV_ALGO_BUG_M</references>
+        <references refid="navigation__unit_8cpp_1a723a84b8e4828b3ba1ad2ccf3e787643" compoundref="navigation__unit_8cpp" startline="34">TWARN</references>
+        <referencedby refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" compoundref="navigation__unit_8cpp" startline="82" endline="113">node_navigation_unit</referencedby>
       </memberdef>
       <memberdef kind="function" id="classnode__navigation__unit_1a38f8c50c557734f1b3e8f462f8a01cf1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -209,25 +227,33 @@
           <declname>data</declname>
         </param>
         <briefdescription>
+<para>&quot;one-shot&quot; listener for the markers from the Oracle </para>
         </briefdescription>
         <detaileddescription>
-<para>&quot;one-shot&quot; listener for the markers from the Oracle </para>
+<para>The callback stores the markers, then shuts the subscription down, to not waste computational resources in a continuous updating of the markers.</para>
+<para><simplesect kind="note"><para>we&apos;re assuming here that the markers don&apos;t change during the simulation. If the markers are able to move though, the subscription should keep opened.</para>
+</simplesect>
+<simplesect kind="note"><para>currently, the function assumes that the index of a marker inside the array is its ID as well. for instance, data-&gt;markers[2] is called &quot;wp3&quot; by the function. </para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="171" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="171" bodyend="224"/>
-        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="18">TLOG</references>
-        <references refid="navigation__unit_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" compoundref="navigation__unit_8cpp" startline="35">SS</references>
-        <references refid="navigation__unit_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" compoundref="navigation__unit_8cpp" startline="36">SSS</references>
-        <references refid="navigation__unit_8cpp_1a1dfc2df4edf95f828461ec28a276d36c" compoundref="navigation__unit_8cpp" startline="46">SCALING_FACTOR</references>
-        <referencedby refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" compoundref="navigation__unit_8cpp" startline="53" endline="84">node_navigation_unit</referencedby>
+        <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="233" column="6" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="233" bodyend="286"/>
+        <references refid="navigation__unit_8cpp_1a4c242fea9a3b706e637163f8b0eed95c" compoundref="navigation__unit_8cpp" startline="33">TLOG</references>
+        <references refid="navigation__unit_8cpp_1a4dd99440d96934e4ab5a21200dc39b8d" compoundref="navigation__unit_8cpp" startline="50">SS</references>
+        <references refid="navigation__unit_8cpp_1a7e2447c604e41f223a9ea0a6338d6f33" compoundref="navigation__unit_8cpp" startline="51">SSS</references>
+        <references refid="navigation__unit_8cpp_1a1dfc2df4edf95f828461ec28a276d36c" compoundref="navigation__unit_8cpp" startline="61">SCALING_FACTOR</references>
+        <referencedby refid="classnode__navigation__unit_1a8e006d7a32c49cbbe77391da6cc81a85" compoundref="navigation__unit_8cpp" startline="82" endline="113">node_navigation_unit</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
+<para>implementation of the node </para>
     </briefdescription>
     <detaileddescription>
+<para>The navigation unit is implemented as a class containing all the services and the topics needed to perform the navigation. </para>
     </detaileddescription>
-    <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="49" column="1" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="48" bodyend="254"/>
+    <location file="robocluedo_mission_manager/src/navigation_unit.cpp" line="72" column="1" bodyfile="robocluedo_mission_manager/src/navigation_unit.cpp" bodystart="71" bodyend="316"/>
     <listofallmembers>
       <member refid="classnode__navigation__unit_1a38f8c50c557734f1b3e8f462f8a01cf1" prot="public" virt="non-virtual"><scope>node_navigation_unit</scope><name>cbk_markers</name></member>
       <member refid="classnode__navigation__unit_1aeb2f63387b054d89dc6a78c434d73441" prot="public" virt="non-virtual"><scope>node_navigation_unit</scope><name>cbk_navigation</name></member>
