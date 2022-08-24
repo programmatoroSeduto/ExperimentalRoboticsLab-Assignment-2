@@ -2,23 +2,28 @@
 RCL#2 -- the RoboCLuedo Project
 ========================================
 
-*here we go again*
-
 .. image:: _media/cluedologo.jpg
    :class: with-border with-shadow
    :alt: Textual alternative to the image
+
+.. seealso::
+	Here you can find instructions on :ref:`setup-the-project`
+
+.. seealso::
+	Here you can find instructions on :ref:`run-the-project`
 
 .. toctree::
    :titlesonly:
    :caption: README
    :glob:
    
-   the project main README <./README.md>
+   the project main README <./README-sphinx.md>
    UML overall arch <./_uml/arch.md>
 
 
 .. toctree::
    :titlesonly:
+   :maxdepth: 1
    :caption: Packages Documentation
    :glob:
    
@@ -38,32 +43,31 @@ RCL#2 -- the RoboCLuedo Project
 
 .. toctree::
    :titlesonly:
+   :maxdepth: 1
    :caption: Dependencies Documentation
    :glob:
    
    ./robocluedo_dependencies/_docs/*
-
-..Module Testing <./robocluedo_dependencies/_docs/test-the-project.md>
+   ./robocluedo_dependencies/vision_opencv/cv_bridge/doc/index.rst
+   .robocluedo_dependencies/vision_opencv/image_geometry/doc/index.rst
 
 
 .. toctree::
    :titlesonly:
+   :maxdepth: 1
    :caption: Other Documents
    :glob:
    
+   RCL#2 SETUP <./_docs/project-setup.rst>
+   RCL#2 RUN <./_docs/run-the-project.md>
+   Development LOG <./_docs/dev-log-rcl3.md>
+   How to setup Sphinx <./_docs/how-to-setup-doxy-sphinx-ws.md>
    _docs/*
 
 
 .. toctree::
    :titlesonly:
-   :caption: General Code Examples
-   :glob:
-   
-   _examples/examples-index.md
-
-
-.. toctree::
-   :titlesonly:
+   :maxdepth: 1
    :caption: Extensions and other references
    :glob:
    

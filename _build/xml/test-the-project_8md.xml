@@ -8,6 +8,8 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
+<codeline><highlight class="normal">(project-testing)=</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">#<sp/>Testing<sp/>the<sp/>project</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{toctree}</highlight></codeline>

@@ -7,7 +7,7 @@
     </briefdescription>
     <detaileddescription>
 <para>(pddl-model)=</para>
-<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md331">
+<sect1 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md374">
 <title>PDDL Design – the new RoboCLuedo PDDL model</title>
 <para><programlisting filename=".warning"><codeline><highlight class="normal">This<sp/>document<sp/>is<sp/>very<sp/>old,<sp/>and<sp/>for<sp/>sure<sp/>it<sp/>needs<sp/>to<sp/>be<sp/>updated.<sp/>You<sp/>can<sp/>find<sp/>the<sp/>current<sp/>model<sp/>in<sp/>the<sp/>folder<sp/>`/robocluedo_rosplan/pddl/robocluedo_3`.</highlight></codeline>
 <codeline></codeline>
@@ -25,7 +25,7 @@
 </programlisting></para>
 <para><hruler/>
 </para>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md334">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md377">
 <title>Differences from the previous version</title>
 <para>see <ulink url="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git">the previous version of the RoboCLuedo #2 Project</ulink></para>
 <para><itemizedlist>
@@ -41,7 +41,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md335">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md378">
 <title>A list of Landmarks</title>
 <para><programlisting filename=".note"><codeline><highlight class="normal">the<sp/>implementation<sp/>of<sp/>the<sp/>landmarks<sp/>is<sp/>a<sp/>bit<sp/>more<sp/>cumbersome,<sp/>even<sp/>if<sp/>the<sp/>principle<sp/>is<sp/>the<sp/>one<sp/>outlined<sp/>here.<sp/>See<sp/>{any}`kb_interface`<sp/>for<sp/>more<sp/>informations.<sp/></highlight></codeline>
 </programlisting></para>
@@ -53,13 +53,13 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md336">
+<sect2 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md379">
 <title>list of actions</title>
 <para><programlisting filename=".note"><codeline><highlight class="normal">This<sp/>document<sp/>reports<sp/>the<sp/>very<sp/>first<sp/>version<sp/>of<sp/>the<sp/>code,<sp/>*which<sp/>is<sp/>sometimes<sp/>not<sp/>correct*.<sp/>Please<sp/>refer<sp/>to<sp/>the<sp/>models<sp/>inside<sp/>the<sp/>folder<sp/>`/robocluedo_rosplan/pddl/robocluedo_3`.</highlight></codeline>
 </programlisting></para>
 <para><programlisting filename=".note"><codeline><highlight class="normal">*document<sp/>in<sp/>italian*<sp/>(thinking<sp/>in<sp/>english<sp/>makes<sp/>everything<sp/>...<sp/>annoyingly<sp/>slower)</highlight></codeline>
 </programlisting></para>
-<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md337">
+<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md380">
 <title>REPLAN</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) replan**<itemizedlist>
@@ -113,7 +113,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect3>
-<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md338">
+<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md381">
 <title>COLLECT</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) move-to**<itemizedlist>
@@ -288,7 +288,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect3>
-<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md341">
+<sect3 id="md_robocluedo_rosplan__docs_new-robocluedo_1autotoc_md384">
 <title>SOLVE</title>
 <para><itemizedlist>
 <listitem><para>**(ACTION) move-to-center**<itemizedlist>

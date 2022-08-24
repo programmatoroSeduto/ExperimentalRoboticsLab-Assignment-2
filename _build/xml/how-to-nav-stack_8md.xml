@@ -809,6 +809,6 @@
 <codeline><highlight class="normal">goal.goal.target_pose.pose.orientation.w<sp/>=<sp/>1.0;</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_movement_controller/_docs/how-to-nav-stack.md"/>
+    <location file="robocluedo_movement_controller/_docs/NO/how-to-nav-stack.md"/>
   </compounddef>
 </doxygen>

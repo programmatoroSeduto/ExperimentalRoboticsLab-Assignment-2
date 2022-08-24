@@ -2,24 +2,27 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md_robocluedo_module_testing__docs_test-the-project" kind="page">
     <compoundname>md_robocluedo_module_testing__docs_test-the-project</compoundname>
-    <title>Testing the project</title>
+    <title>test-the-project</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
+<para>(project-testing)=</para>
+<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md256">
+<title>Testing the project</title>
 <para><programlisting filename=".toctree"><codeline><highlight class="normal">./test-the-project.md</highlight></codeline>
 </programlisting></para>
 <para>this document provides useful informations for testing the components of the architecture before running it entirely.</para>
 <para><emphasis>this document also contains the expected outputs from the programs</emphasis>, or at least the outputs not too much long.</para>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md214">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md257">
 <title>before proceeding</title>
 <para><itemizedlist>
 <listitem><para>be sure that <emphasis>the entire project has been compiled entirely without errors</emphasis>, see the instructions</para>
 </listitem></itemizedlist>
 </para>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md215">
+</sect2>
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md258">
 <title>TESTING PKG robocluedo_armor</title>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md216">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md259">
 <title>pure test on aRMOR</title>
 <para>this test lets to understand if aRMOR is doing its work in the correct way.</para>
 <para>in the package <computeroutput>robocluedo_module_Testing</computeroutput> there&apos;s a node called <computeroutput><ref refid="test__armor_8cpp" kindref="compound">test_armor.cpp</ref></computeroutput> whose job is just to perform the most basic operations on aRMOR. <emphasis>If even this simple script doesn&apos;t work, there&apos;s a problem with your installation of aRMOR</emphasis>.</para>
@@ -31,8 +34,8 @@
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_module_testing<sp/>test_armor</highlight></codeline>
 </programlisting></para>
 <para><bold>NOTE</bold> : this simple test will also create a owl file into the desktop.</para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md217">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md260">
 <title>tesing aRMOR tools</title>
 <para>the class <computeroutput>armor_tools</computeroutput> is the low-level set of services used by the armor interface to work. It provides very simple services, then made more detailed by its child class <computeroutput>armor_cluedo</computeroutput>.</para>
 <para><bold>how to run the test:</bold></para>
@@ -42,8 +45,8 @@
 <codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_module_testing<sp/>test_armor_tools</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md218">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md261">
 <title>Testing aRMOR cluedo</title>
 <para>the class <computeroutput>armor_cluedo</computeroutput> takes into account the specific characteristics of the problem, making the interaction between the system and the ontology even easier.</para>
 <para><bold>how to run the test:</bold></para>
@@ -53,12 +56,12 @@
 <codeline><highlight class="normal">#<sp/>shell<sp/>2</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_module_testing<sp/>test_armor_cluedo</highlight></codeline>
 </programlisting></para>
+</sect3>
 </sect2>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md219">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md262">
 <title>TESTING PKG robocluedo_rosplan</title>
 <para>most of the packages here can be tested using simple scripts from a console. no special node is needed.</para>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md220">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md263">
 <title>PDDL model</title>
 <para>the model should work well, but to be sure, there&apos;s a simple way to test out it:</para>
 <para><itemizedlist>
@@ -71,8 +74,8 @@
 <para>```bash (:goal (not-dirty )) ```</para>
 </listitem></itemizedlist>
 </para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md221">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md264">
 <title>simple ROSPlan pipeline</title>
 <para>this test aims at testing how the architecture of ROSPlan works without running the pipeline manager nor the other components attached with the ontology. Just to be sure that ROSPlan is working well.</para>
 <para>in this test, we&apos;re going to use the <emphasis>RoboCLuedo PDDL model with the Simulated Actions</emphasis>. Use the bash commands here below:</para>
@@ -88,8 +91,8 @@
 <codeline><highlight class="normal">rostopic<sp/>echo<sp/>/rosplan_parsing_interface/complete_plan<sp/>-n<sp/>1</highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/rosplan_plan_dispatcher/dispatch_plan<sp/>&quot;{}&quot;<sp/></highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md222">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md265">
 <title>ROSPlan replanning and knowledge base update</title>
 <para>the package robocluedo_rosplan has a fundamental node called <computeroutput><ref refid="classkb__interface" kindref="compound">kb_interface</ref></computeroutput> updating the knowledge according to the landmark. It provdes a fundamental funcitonality for performing the replanning, and its architecture is heavily specialized for working with this PDDL.</para>
 <para><bold>Notice that</bold> the main node to interact with when using ROSPlan is the pipeline manager, and not this node, <emphasis>which should be hidden in the package</emphasis>.</para>
@@ -136,8 +139,8 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/rosplan_plan_dispatcher/dispatch_plan<sp/>&quot;{}&quot;<sp/></highlight></codeline>
 </programlisting></para>
 <para>consider that, each time all the waypoints have been explored, the robot must call the service <computeroutput>/replan</computeroutput> to reset its status.</para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md223">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md266">
 <title>ROSPlan pipeline manager with simulated actions</title>
 <para>the main component controlling the ROSPlan architecture is the so called <computeroutput><ref refid="namespacerosplan__pipeline__manager" kindref="compound">rosplan_pipeline_manager</ref></computeroutput>. It provides functionalities for doing many things:</para>
 <para><itemizedlist>
@@ -211,8 +214,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>(not-hint-ready<sp/>)</highlight></codeline>
 <codeline><highlight class="normal">)</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md224">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md267">
 <title>ROSPlan pipeline manager with simulated actions – NO LAUNCH FILE</title>
 <para><programlisting filename=".text"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
 <codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>load_rosplan.launch</highlight></codeline>
@@ -244,8 +247,8 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md225">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md268">
 <title>the same test with launch file</title>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
 <codeline><highlight class="normal">roslaunch<sp/>robocluedo_rosplan<sp/>run.launch</highlight></codeline>
@@ -269,11 +272,11 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
 </programlisting></para>
+</sect3>
 </sect2>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md226">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md269">
 <title>TESTING PKG robocluedo_robot</title>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md227">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md270">
 <title>BEFORE THE TESTS...</title>
 <para>make sure to have the updated version of the model.</para>
 <para><itemizedlist>
@@ -281,8 +284,8 @@
 </listitem><listitem><para>run the script <computeroutput>./generate_mode.sh</computeroutput> : the model should appear as console output</para>
 </listitem></itemizedlist>
 </para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md228">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md271">
 <title>the most simple test!</title>
 <para><emphasis>try and guess?</emphasis> let&apos;s try to ... execute the main launch file. You should not see something strange ... or, worse, errors or crashes.</para>
 <para><bold>first test:</bold> Gazebo only</para>
@@ -297,12 +300,12 @@
 <para>the same launcher, without warnings (not necessairly a good thing...):</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
 </programlisting></para>
+</sect3>
 </sect2>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md229">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md272">
 <title>TESTING PKG robocluedo_movement_controller</title>
 <para>the package contains nodes for performing the navigation and the manipulation.</para>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md230">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md273">
 <title>go to opint</title>
 <para>this py node performs a simple navigation between two points in a path without obstacles.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
@@ -344,8 +347,8 @@
 <codeline><highlight class="normal">sleep<sp/>20</highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/go_to_point_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md231">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md274">
 <title>head orientation</title>
 <para>this node simply rotates the robot of a certain value of radiants.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
@@ -377,8 +380,8 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/head_orient_switch<sp/>&quot;data:<sp/>true&quot;</highlight></codeline>
 <codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md232">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md275">
 <title>wall follow behaviour</title>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
 <codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
@@ -391,8 +394,8 @@
 <codeline><highlight class="normal">sleep<sp/>30</highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/wall_follower_switch<sp/>&quot;data:<sp/>false&quot;</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md233">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md276">
 <title>the bug_m module</title>
 <para>the so called <ref refid="namespacebug__m" kindref="compound">bug_m</ref> is a navigation controller made up of four nodes:</para>
 <para><itemizedlist>
@@ -442,8 +445,8 @@
 <codeline><highlight class="normal">sleep<sp/>15</highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/bug_switch<sp/>&quot;data:<sp/>false&quot;<sp/></highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md234">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md277">
 <title>testing navigation manager</title>
 <para>the so called node <emphasis>navigation manager</emphasis> allows</para>
 <para><itemizedlist>
@@ -492,8 +495,8 @@
 <codeline><highlight class="normal"><sp/><sp/>yaw:<sp/>1.0</highlight></codeline>
 <codeline><highlight class="normal">force_enable:<sp/>true&quot;<sp/></highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md235">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md278">
 <title>manipulation controller</title>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
 <codeline><highlight class="normal">roslaunch<sp/>robocluedo_robot<sp/>demo_gazebo.launch<sp/>2&gt;/dev/null</highlight></codeline>
@@ -525,9 +528,9 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/tip_pos<sp/>&quot;command:<sp/>5&quot;<sp/></highlight></codeline>
 <codeline><highlight class="normal">sleep<sp/>2</highlight></codeline>
 </programlisting></para>
+</sect3>
 </sect2>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md236">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md279">
 <title>TESTING rosplan plus real motion controller</title>
 <para>it is the same last test of robocluedo ROSPlan, but this time using the real movement controller.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
@@ -548,8 +551,8 @@
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>1}&quot;<sp/></highlight></codeline>
 <codeline><highlight class="normal">rosservice<sp/>call<sp/>/robocluedo/pipeline_manager<sp/>&quot;{load_problem:<sp/>true,<sp/>solve_problem:<sp/>true,<sp/>parse_plan:<sp/>true,<sp/>execute_plan:<sp/>true,<sp/>landmark:<sp/>2}&quot;</highlight></codeline>
 </programlisting></para>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md237">
+</sect2>
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md280">
 <title>Final Tests</title>
 <para><bold>before running these tests</bold> :</para>
 <para><itemizedlist>
@@ -559,7 +562,7 @@
 <para>this option says the Oracle to send just the elements of th winner message and not all the other items. keys are selected randomly from the fields of the winner ID.</para>
 </listitem></itemizedlist>
 </para>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md238">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md281">
 <title>first test</title>
 <para>this test allows to see the output from aRMOR.</para>
 <para><programlisting filename=".bash"><codeline><highlight class="normal">#<sp/>shell<sp/>1</highlight></codeline>
@@ -571,8 +574,8 @@
 <codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md239">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md282">
 <title>another test</title>
 <para>this test is used for checking the behaviour of ROSPlan, and in particular of the pipeline manager (which is written in Python unfortunately).</para>
 <para><emphasis>this test corresponds to how to run the project.</emphasis></para>
@@ -585,11 +588,11 @@
 <codeline><highlight class="normal">#<sp/>shell<sp/>3</highlight></codeline>
 <codeline><highlight class="normal">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
 </programlisting></para>
+</sect3>
 </sect2>
-</sect1>
-<sect1 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md240">
+<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md283">
 <title>TESTS OUTPUTS</title>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md241">
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md284">
 <title>armor only</title>
 <para><bold>SHELL 1:</bold></para>
 <para><programlisting filename=".text"><codeline><highlight class="normal">started<sp/>roslaunch<sp/>server<sp/>http://3b17871017fd:43585/</highlight></codeline>
@@ -855,8 +858,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>---</highlight></codeline>
 <codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660392486.200766100]:<sp/>[test_armor]<sp/>closing...</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md242">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md285">
 <title>armor with armor_tools</title>
 <para><bold>SHELL 1:</bold></para>
 <para><programlisting filename=".text"><codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_module_testing/launch/test_armor#<sp/>roslaunch<sp/>robocluedo_module_testing<sp/>test_armor.launch</highlight></codeline>
@@ -1039,8 +1042,8 @@
 <codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660394503.714410400]:<sp/>[test_armor_tools]<sp/>salvataggio</highlight></codeline>
 <codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660394503.832474000]:<sp/>[test_armor_tools]<sp/>THAT&apos;S<sp/>ALL<sp/>FOLKS!</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md243">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md286">
 <title>armor with armor_cluedo and armor_tools</title>
 <para><bold>SHELL 1:</bold></para>
 <para><programlisting filename=".text"><codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_module_testing/launch/test_armor#<sp/>roslaunch<sp/>robocluedo_module_testing<sp/>test_armor.launch</highlight></codeline>
@@ -1263,8 +1266,8 @@
 <codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660394742.474843000]:<sp/>[test_armor_tools]<sp/><sp/>numero<sp/>1<sp/>-&gt;<sp/>HP3</highlight></codeline>
 <codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660394742.597462300]:<sp/>[test_armor_tools]<sp/>THAT&apos;S<sp/>ALL<sp/>FOLKS!</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md244">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md287">
 <title>ROSPlan – PDDL model</title>
 <para><bold>popf output (first goal):</bold></para>
 <para><programlisting filename=".text"><codeline><highlight class="normal">root@3b17871017fd:~/ros_ws/src/erl2-new/robocluedo_rosplan/pddl/robocluedo#<sp/>./solve_popf.sh<sp/></highlight></codeline>
@@ -1304,8 +1307,8 @@
 <codeline><highlight class="normal">8.919:<sp/>(move-to-center<sp/>wp4<sp/>center)<sp/><sp/>[0.990]</highlight></codeline>
 <codeline><highlight class="normal">9.910:<sp/>(solve)<sp/><sp/>[0.990]</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md245">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md288">
 <title>simple ROSPlan pipeline</title>
 <para><bold>SHELL 1:</bold></para>
 <para><programlisting filename=".text"><codeline><highlight class="normal">[<sp/>INFO]<sp/>[1660396623.534248300]:<sp/>KCL:<sp/>(/rosplan_knowledge_base)<sp/>Starting<sp/>a<sp/>PDDL<sp/>Knowledge<sp/>Base</highlight></codeline>
@@ -1434,13 +1437,14 @@
 <codeline><highlight class="normal">success:<sp/>True</highlight></codeline>
 <codeline><highlight class="normal">goal_achieved:<sp/>True</highlight></codeline>
 </programlisting></para>
-</sect2>
-<sect2 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md246">
+</sect3>
+<sect3 id="md_robocluedo_module_testing__docs_test-the-project_1autotoc_md289">
 <title>???</title>
 <para><bold>SHELL 1:</bold></para>
 <para><programlisting filename=".text"></programlisting></para>
 <para><bold>SHELL 2:</bold></para>
 <para><programlisting filename=".text"></programlisting> </para>
+</sect3>
 </sect2>
 </sect1>
     </detaileddescription>

@@ -157,6 +157,6 @@
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
-    <location file="_uml/arch.md"/>
+    <location file="_uml/NO/arch.md"/>
   </compounddef>
 </doxygen>

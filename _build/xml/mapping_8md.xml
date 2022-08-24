@@ -81,6 +81,6 @@
 <codeline></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
     </programlisting>
-    <location file="robocluedo_movement_controller/_docs/mapping.md"/>
+    <location file="robocluedo_movement_controller/_docs/NO/mapping.md"/>
   </compounddef>
 </doxygen>

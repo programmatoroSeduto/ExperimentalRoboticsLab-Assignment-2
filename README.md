@@ -1,37 +1,34 @@
 
-# README -- the RoboCLuedo Project -- part 2
+# README -- the RoboCLuedo Project -- ROUND 2
 
-- what is this
-	- project tree
-	- aims of the project
-- how to install the project
-	- dependencies:
-		- moveit
-		- ROSPlan
-		- slam gmapping
-	- tools:
-		- docker
-	- setup procedure
-- how to run the project
-	- easy run
-	- manual run with a short project presentation
-	- module testing:
-		- ...
-- how to use the documentation system
-	- documentation system setup (usa lo script)
-	- come rigenerare la documentazione
-	- file principali della documentazione
-- TROUBLESHOOTING
-	- sicuro la roba su tutti i problemi del Docker del corso
-	- ...
-- discussione del progetto
-	- ... (sarebbe meglio fare questo lavoro nella documentazione Sphinx?)
-- authors and contacts 
-	- (questa è facile...)
+*Francesco Ganci* - S4143910 - A.A.2021/2022
 
-## scopi del progetto
+---
 
-- implementazione di un'architettura ...
-- sfruttare maggiormente il formalismo UML per migliorare la progettazione
-- sfruttare meglio la documentazione (documentazione non solo come parte finale del codice, ma anche come ambiente di lavoro)
+> Compatible With:
+> - ROS1 noetic
+> 
+> Documentation:
+> - [Official Documentation for RCL#2](erl2)
+> 
+> **Project Setup**:
+> - see the [Official Docs](erl3setup)
+> 
+> **Run the project**:
+> - see the [Official Docs](erl3run)
+> 
+> Starter kit:
+> - [CarmineD8/erl2 on GitHub](https://github.com/CarmineD8/erl2/)
+> 
+> Other versions of the RCL project:
+> - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3 (Official Release) on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3)
+> - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD (old version) on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)
+> - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1 on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)
+> 
+> In a hurry?
+> - [See it in action!](videoexample)
+> 
 
+---
+
+See the README of the project inside the [Official Documentation]()

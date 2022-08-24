@@ -2363,6 +2363,14 @@ prima di passare a qualcosa di più strutturale, o anche alla scrittura del read
 	- e infine le librerie ... ah no erano già documentati (che pacchia)
 - **COMMIT**: "code documentation (still working...)"
 
+---
+
+ci avviciniamo all'ultima revisione del readme
+
+- prima meglio controllare i packages per l'ultima volta
+- metto a posto un attimo la homepage
+- *e finalmente l'ultimo readme*
+
 
 ```{todo}
 **secondo assignment:**

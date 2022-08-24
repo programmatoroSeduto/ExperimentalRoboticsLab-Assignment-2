@@ -418,25 +418,25 @@
     <member refid="namespacewall__follow__service__m_1a2f9f1202ed1e75ee80471a9dff56fdbe" kind="function"><name>follow_the_wall</name></member>
     <member refid="namespacewall__follow__service__m_1ab4dbc79e32b45a381737fb7b3c126edf" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="cpp-docs-template_8md" kind="file"><name>cpp-docs-template.md</name>
-  </compound>
   <compound refid="dev-log-rcl2_8md" kind="file"><name>dev-log-rcl2.md</name>
   </compound>
   <compound refid="how-to-setup-doxy-sphinx-ws_8md" kind="file"><name>how-to-setup-doxy-sphinx-ws.md</name>
   </compound>
   <compound refid="catkin-notes_8md" kind="file"><name>catkin-notes.md</name>
   </compound>
+  <compound refid="cpp-docs-template_8md" kind="file"><name>cpp-docs-template.md</name>
+  </compound>
+  <compound refid="sphinx-yaml_8md" kind="file"><name>sphinx-yaml.md</name>
+  </compound>
+  <compound refid="__docs_2_n_o_2twist-keyboard_8md" kind="file"><name>twist-keyboard.md</name>
+  </compound>
+  <compound refid="robocluedo__movement__controller_2__docs_2twist-keyboard_8md" kind="file"><name>twist-keyboard.md</name>
+  </compound>
   <compound refid="rest-directives_8md" kind="file"><name>rest-directives.md</name>
   </compound>
   <compound refid="run-the-project_8md" kind="file"><name>run-the-project.md</name>
   </compound>
   <compound refid="sphinx-mock_8md" kind="file"><name>sphinx-mock.md</name>
-  </compound>
-  <compound refid="sphinx-yaml_8md" kind="file"><name>sphinx-yaml.md</name>
-  </compound>
-  <compound refid="__docs_2twist-keyboard_8md" kind="file"><name>twist-keyboard.md</name>
-  </compound>
-  <compound refid="robocluedo__movement__controller_2__docs_2twist-keyboard_8md" kind="file"><name>twist-keyboard.md</name>
   </compound>
   <compound refid="examples-index_8md" kind="file"><name>examples-index.md</name>
   </compound>
@@ -449,6 +449,8 @@
   <compound refid="arch_8md" kind="file"><name>arch.md</name>
   </compound>
   <compound refid="conf_8py" kind="file"><name>conf.py</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e-sphinx_8md" kind="file"><name>README-sphinx.md</name>
   </compound>
   <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
   </compound>
@@ -718,11 +720,11 @@
     <member refid="test__armor__tools_8cpp_1a78703009283c736ea377ca3a343cbd58" kind="function"><name>armorTestSession2</name></member>
     <member refid="test__armor__tools_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kind="function"><name>main</name></member>
   </compound>
+  <compound refid="moveit-snippets_8md" kind="file"><name>moveit-snippets.md</name>
+  </compound>
   <compound refid="how-to-nav-stack_8md" kind="file"><name>how-to-nav-stack.md</name>
   </compound>
   <compound refid="mapping_8md" kind="file"><name>mapping.md</name>
-  </compound>
-  <compound refid="moveit-snippets_8md" kind="file"><name>moveit-snippets.md</name>
   </compound>
   <compound refid="odometry-and-navigation_8md" kind="file"><name>odometry-and-navigation.md</name>
   </compound>
@@ -786,11 +788,11 @@
   </compound>
   <compound refid="pddl-and-rosplan_8md" kind="file"><name>pddl-and-rosplan.md</name>
   </compound>
+  <compound refid="rosplan-pipeline_8md" kind="file"><name>rosplan-pipeline.md</name>
+  </compound>
   <compound refid="rosplan-arch_8md" kind="file"><name>rosplan-arch.md</name>
   </compound>
   <compound refid="rosplan-kb_8md" kind="file"><name>rosplan-kb.md</name>
-  </compound>
-  <compound refid="rosplan-pipeline_8md" kind="file"><name>rosplan-pipeline.md</name>
   </compound>
   <compound refid="feedback__manager_8h" kind="file"><name>feedback_manager.h</name>
     <member refid="feedback__manager_8h_1a7fde9014c619ef02f705989a9032a8a5" kind="define"><name>ACTION_NAME_UNKNOWN</name></member>
@@ -890,13 +892,17 @@
     <member refid="replan__node_8cpp_1ac55116ccd10a2e3bfb144277f960d79e" kind="function"><name>shut_msg</name></member>
     <member refid="replan__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kind="function"><name>main</name></member>
   </compound>
-  <compound refid="md__docs_cpp-docs-template" kind="page"><name>md__docs_cpp-docs-template</name>
-  </compound>
   <compound refid="md__docs_dev-log-rcl2" kind="page"><name>md__docs_dev-log-rcl2</name>
   </compound>
   <compound refid="md__docs_how-to-setup-doxy-sphinx-ws" kind="page"><name>md__docs_how-to-setup-doxy-sphinx-ws</name>
   </compound>
   <compound refid="md__docs__n_o_catkin-notes" kind="page"><name>md__docs_NO_catkin-notes</name>
+  </compound>
+  <compound refid="md__docs__n_o_cpp-docs-template" kind="page"><name>md__docs_NO_cpp-docs-template</name>
+  </compound>
+  <compound refid="md__docs__n_o_sphinx-yaml" kind="page"><name>md__docs_NO_sphinx-yaml</name>
+  </compound>
+  <compound refid="md__docs__n_o_twist-keyboard" kind="page"><name>md__docs_NO_twist-keyboard</name>
   </compound>
   <compound refid="md__docs_rest-directives" kind="page"><name>md__docs_rest-directives</name>
   </compound>
@@ -904,15 +910,13 @@
   </compound>
   <compound refid="md__docs_sphinx-mock" kind="page"><name>md__docs_sphinx-mock</name>
   </compound>
-  <compound refid="md__docs_sphinx-yaml" kind="page"><name>md__docs_sphinx-yaml</name>
-  </compound>
-  <compound refid="md__docs_twist-keyboard" kind="page"><name>md__docs_twist-keyboard</name>
-  </compound>
   <compound refid="md__examples_examples-index" kind="page"><name>md__examples_examples-index</name>
   </compound>
   <compound refid="md__ext_plant-uml-reference" kind="page"><name>md__ext_plant-uml-reference</name>
   </compound>
-  <compound refid="md__uml_arch" kind="page"><name>md__uml_arch</name>
+  <compound refid="md__uml__n_o_arch" kind="page"><name>md__uml_NO_arch</name>
+  </compound>
+  <compound refid="md__r_e_a_d_m_e-sphinx" kind="page"><name>md_README-sphinx</name>
   </compound>
   <compound refid="md__r_e_a_d_m_e" kind="page"><name>md_README</name>
   </compound>
@@ -942,11 +946,11 @@
   </compound>
   <compound refid="md_robocluedo_module_testing__docs_test-the-project" kind="page"><name>md_robocluedo_module_testing__docs_test-the-project</name>
   </compound>
-  <compound refid="md_robocluedo_movement_controller__docs_how-to-nav-stack" kind="page"><name>md_robocluedo_movement_controller__docs_how-to-nav-stack</name>
-  </compound>
-  <compound refid="md_robocluedo_movement_controller__docs_mapping" kind="page"><name>md_robocluedo_movement_controller__docs_mapping</name>
-  </compound>
   <compound refid="md_robocluedo_movement_controller__docs_moveit-snippets" kind="page"><name>md_robocluedo_movement_controller__docs_moveit-snippets</name>
+  </compound>
+  <compound refid="md_robocluedo_movement_controller__docs__n_o_how-to-nav-stack" kind="page"><name>md_robocluedo_movement_controller__docs_NO_how-to-nav-stack</name>
+  </compound>
+  <compound refid="md_robocluedo_movement_controller__docs__n_o_mapping" kind="page"><name>md_robocluedo_movement_controller__docs_NO_mapping</name>
   </compound>
   <compound refid="md_robocluedo_movement_controller__docs_odometry-and-navigation" kind="page"><name>md_robocluedo_movement_controller__docs_odometry-and-navigation</name>
   </compound>
@@ -964,11 +968,11 @@
   </compound>
   <compound refid="md_robocluedo_rosplan__docs_pddl-and-rosplan" kind="page"><name>md_robocluedo_rosplan__docs_pddl-and-rosplan</name>
   </compound>
+  <compound refid="md_robocluedo_rosplan__uml__n_o_rosplan-pipeline" kind="page"><name>md_robocluedo_rosplan__uml_NO_rosplan-pipeline</name>
+  </compound>
   <compound refid="md_robocluedo_rosplan__uml_rosplan-arch" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-arch</name>
   </compound>
   <compound refid="md_robocluedo_rosplan__uml_rosplan-kb" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-kb</name>
-  </compound>
-  <compound refid="md_robocluedo_rosplan__uml_rosplan-pipeline" kind="page"><name>md_robocluedo_rosplan__uml_rosplan-pipeline</name>
   </compound>
   <compound refid="md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo" kind="page"><name>md_robocluedo_rosplan_pddl_robocluedo_old_robocluedo</name>
   </compound>
@@ -1030,6 +1034,12 @@
   </compound>
   <compound refid="dir_d09cc6f3dd3e18e958bb28cf9fa4d689" kind="dir"><name>_docs/NO</name>
   </compound>
+  <compound refid="dir_29baa57e8dea22478994f06de7d38b2d" kind="dir"><name>_uml/NO</name>
+  </compound>
+  <compound refid="dir_1b48a062df147436693c4761eef22b68" kind="dir"><name>robocluedo_movement_controller/_docs/NO</name>
+  </compound>
+  <compound refid="dir_73f1b153c9a704f25fac176b7a179fd0" kind="dir"><name>robocluedo_rosplan/_uml/NO</name>
+  </compound>
   <compound refid="dir_8f271a8bf64d1640e8456e58d2622c61" kind="dir"><name>robocluedo_armor/_uml/NO</name>
   </compound>
   <compound refid="dir_93829e55076e13599f35fa93e9f2ce24" kind="dir"><name>robocluedo_rosplan/pddl</name>
@@ -1064,25 +1074,25 @@
   </compound>
   <compound refid="dir_22862a0f699997d81529825bd9bf98f2" kind="dir"><name>robocluedo_dependencies/robocluedo_urdf_model</name>
   </compound>
+  <compound refid="dir_e1cd440dd794230a2b27c099159b1776" kind="dir"><name>robocluedo_rosplan/scripts</name>
+  </compound>
   <compound refid="dir_6b971339f4550cf15d3fade61b081d01" kind="dir"><name>robocluedo_module_testing/scripts</name>
   </compound>
   <compound refid="dir_fa5ae3c756c3e4590e39154bd032dea4" kind="dir"><name>robocluedo_movement_controller/scripts</name>
   </compound>
-  <compound refid="dir_e1cd440dd794230a2b27c099159b1776" kind="dir"><name>robocluedo_rosplan/scripts</name>
-  </compound>
   <compound refid="dir_21fb2647d68eb34b9bdefce00aa27d0b" kind="dir"><name>robocluedo_rosplan/pddl/simpletest</name>
-  </compound>
-  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
-  </compound>
-  <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
-  </compound>
-  <compound refid="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir"><name>robocluedo_mission_manager/src</name>
-  </compound>
-  <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
   </compound>
   <compound refid="dir_612abe7fe2a3e4eb0d36e5d84c4ffac3" kind="dir"><name>robocluedo_armor/src</name>
   </compound>
+  <compound refid="dir_8d099aab18881ca1be7e4ba9664416f6" kind="dir"><name>robocluedo_module_testing/src</name>
+  </compound>
   <compound refid="dir_7cdcca042c9ec2187b25f38298e09291" kind="dir"><name>robocluedo_movement_controller/src</name>
+  </compound>
+  <compound refid="dir_d7ec9740031d8e6ce822a63da96aae0c" kind="dir"><name>robocluedo_rosplan/src</name>
+  </compound>
+  <compound refid="dir_c746f52b8a1627b9b009f016f9a44fdc" kind="dir"><name>robocluedo_mission_manager/src</name>
+  </compound>
+  <compound refid="dir_8061813b15f0fb8aa80b66b49ce26c95" kind="dir"><name>robocluedo_dependencies/erl2/src</name>
   </compound>
   <compound refid="dir_d1dd20c86d170f1b50d500067c6334dd" kind="dir"><name>robocluedo_armor/logs/test_20211109</name>
   </compound>

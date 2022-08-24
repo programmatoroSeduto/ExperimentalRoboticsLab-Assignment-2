@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>README – the RoboCLuedo Project – part 2 &mdash; RoboCLuedo #2 1.0.0 documentation</title>
+  <title>README – the RoboCLuedo Project – ROUND 2 &mdash; RoboCLuedo #2 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -29,9 +29,7 @@
         <script src="_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="UML – components schema of the project" href="_uml/arch.html" />
-    <link rel="prev" title="RCL#2 – the RoboCLuedo Project" href="index.html" /> 
+    <link rel="search" title="Search" href="search.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,9 +48,8 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">README</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">the project main README</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_uml/arch.html">UML overall arch</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="README-sphinx.html">the project main README</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
 <ul>
@@ -73,20 +70,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_docs/cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/project-setup.html">RCL#2 SETUP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/run-the-project.html">RCL#2 RUN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/dev-log-rcl2.html">RoboCLuedo – Development Log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/project-setup.html">HOW TO setup the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/run-the-project.html">HOW TO Run RCL#2 Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/sphinx-yaml.html">YAML and Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/twist-keyboard.html">HOW TO – twist keyboard</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="_examples/examples-index.html">Code Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extensions and other references</span></p>
 <ul>
@@ -107,7 +96,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>README – the RoboCLuedo Project – part 2</li>
+      <li>README – the RoboCLuedo Project – ROUND 2</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/README.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -117,84 +106,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="readme-the-robocluedo-project-part-2">
-<h1>README – the RoboCLuedo Project – part 2<a class="headerlink" href="#readme-the-robocluedo-project-part-2" title="Permalink to this heading"></a></h1>
+  <div class="section" id="readme-the-robocluedo-project-round-2">
+<h1>README – the RoboCLuedo Project – ROUND 2<a class="headerlink" href="#readme-the-robocluedo-project-round-2" title="Permalink to this heading"></a></h1>
+<p><em>Francesco Ganci</em> - S4143910 - A.A.2021/2022</p>
+<hr class="docutils" />
+<blockquote>
+<div><p>Compatible With:</p>
 <ul class="simple">
-<li><p>what is this</p>
-<ul>
-<li><p>project tree</p></li>
-<li><p>aims of the project</p></li>
+<li><p>ROS1 noetic</p></li>
 </ul>
-</li>
-<li><p>how to install the project</p>
-<ul>
-<li><p>dependencies:</p>
-<ul>
-<li><p>moveit</p></li>
-<li><p>ROSPlan</p></li>
-<li><p>slam gmapping</p></li>
-</ul>
-</li>
-<li><p>tools:</p>
-<ul>
-<li><p>docker</p></li>
-</ul>
-</li>
-<li><p>setup procedure</p></li>
-</ul>
-</li>
-<li><p>how to run the project</p>
-<ul>
-<li><p>easy run</p></li>
-<li><p>manual run with a short project presentation</p></li>
-<li><p>module testing:</p>
-<ul>
-<li><p>…</p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>how to use the documentation system</p>
-<ul>
-<li><p>documentation system setup (usa lo script)</p></li>
-<li><p>come rigenerare la documentazione</p></li>
-<li><p>file principali della documentazione</p></li>
-</ul>
-</li>
-<li><p>TROUBLESHOOTING</p>
-<ul>
-<li><p>sicuro la roba su tutti i problemi del Docker del corso</p></li>
-<li><p>…</p></li>
-</ul>
-</li>
-<li><p>discussione del progetto</p>
-<ul>
-<li><p>… (sarebbe meglio fare questo lavoro nella documentazione Sphinx?)</p></li>
-</ul>
-</li>
-<li><p>authors and contacts</p>
-<ul>
-<li><p>(questa è facile…)</p></li>
-</ul>
-</li>
-</ul>
-<div class="section" id="scopi-del-progetto">
-<h2>scopi del progetto<a class="headerlink" href="#scopi-del-progetto" title="Permalink to this heading"></a></h2>
+<p>Documentation:</p>
 <ul class="simple">
-<li><p>implementazione di un’architettura …</p></li>
-<li><p>sfruttare maggiormente il formalismo UML per migliorare la progettazione</p></li>
-<li><p>sfruttare meglio la documentazione (documentazione non solo come parte finale del codice, ma anche come ambiente di lavoro)</p></li>
+<li><p><span class="xref myst">Official Documentation for RCL#2</span></p></li>
 </ul>
-</div>
+<p><strong>Project Setup</strong>:</p>
+<ul class="simple">
+<li><p>see the <span class="xref myst">Official Docs</span></p></li>
+</ul>
+<p><strong>Run the project</strong>:</p>
+<ul class="simple">
+<li><p>see the <span class="xref myst">Official Docs</span></p></li>
+</ul>
+<p>Starter kit:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/CarmineD8/erl2/">CarmineD8/erl2 on GitHub</a></p></li>
+</ul>
+<p>Other versions of the RCL project:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3">programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3 (Official Release) on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git">programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD (old version) on GitHub</a></p></li>
+<li><p><a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1 on GitHub</a></p></li>
+</ul>
+<p>In a hurry?</p>
+<ul class="simple">
+<li><p><span class="xref myst">See it in action!</span></p></li>
+</ul>
+</div></blockquote>
+<hr class="docutils" />
+<p>See the README of the project inside the <span class="xref myst">Official Documentation</span></p>
 </div>
 
 
            </div>
           </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="RCL#2 – the RoboCLuedo Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="_uml/arch.html" class="btn btn-neutral float-right" title="UML – components schema of the project" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+          <footer>
 
   <hr/>
 

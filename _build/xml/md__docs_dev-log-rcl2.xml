@@ -21,7 +21,7 @@
 <codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>...</highlight></codeline>
 </programlisting></para>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md16">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md1">
 <title>08/08/2022 – setup della documentazione e project refactoring</title>
 <para>la versione precedente del progetto ha parecchi difetti:</para>
 <para><itemizedlist>
@@ -133,7 +133,7 @@
 <para><hruler/>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md21">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md6">
 <title>09/08/2022 – modello PDDL e ROSPlan package</title>
 <para><itemizedlist>
 <listitem><para>serve uno <emphasis>schema completo</emphasis> dell&apos;applicazione prima di iniziare<itemizedlist>
@@ -243,7 +243,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md24">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md9">
 <title>./solve_popf.sh</title>
 <para>Number of literals: 28 Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] Post filtering unreachable actions: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] No analytic limits found, not considering limit effects of goal-only operators 93% of the ground temporal actions in this problem are compression-safe Initial heuristic = 8.000 b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6.936)b (2.000 | 7.927)b (1.000 | 8.918);;;; Solution Found ; States evaluated: 15 ; Cost: 9.909 ; Time 0.00 0.000: (replan) [0.990] 0.991: (move-to center wp1) [0.990] 1.982: (signal-collect-hint wp1) [0.990] 2.973: (collect-hint wp1) [0.990] 3.964: (move-to wp1 wp2) [0.990] 4.955: (move-to wp2 wp3) [0.990] 5.946: (signal-collect-hint wp3) [0.990] 6.937: (collect-hint wp3) [0.990] 7.928: (move-to wp3 wp4) [0.990] 8.919: (move-to-center wp4 center) [0.990] ```</para>
 <para>per il goal:</para>
@@ -452,14 +452,14 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md27">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md12">
 <title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
 <para>rosservice list </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md28">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md13">
 <title>/update_goal</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md29">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md14">
 <title>/replan</title>
 <para>``` azione di replan: ```bash rosservice call /replan &quot;{}&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
@@ -467,7 +467,7 @@
 <para>rosservice call /replan &quot;{}&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md30">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md15">
 <title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
 <para>``` landmarks: ```bash rosservice call /update_goal &quot;landmark: 0&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
@@ -525,19 +525,19 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md32">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md17">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md33">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md18">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md34">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md19">
 <title>shell 3</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md35">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md20">
 <title>shell 4</title>
 <para>rosservice list | grep robocluedo</para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: false, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</para>
@@ -552,7 +552,7 @@
 </para>
 <para><hruler/>
 </para>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md37">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md22">
 <title>10/08/2021 – rosplan pipeline manager – planning e replanning</title>
 <para>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l&apos;istanza del problema.</para>
 <para><itemizedlist>
@@ -574,7 +574,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md38">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md23">
 <title>A problem has been encountered, and the problem has been deemed unsolvable</title>
 <para>The goal fact: (not-is-center center)</para>
 <para>...cannot be found either in the initial state, as an add effect of an action, or as a timed initial literal. As such, the problem has been deemed unsolvable. ```<itemizedlist>
@@ -596,15 +596,15 @@
 </para>
 </sect2>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md39">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md24">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md40">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md25">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md41">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md26">
 <title>shell 3</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: false, execute_plan: false, landmark: 0}&quot; ```<itemizedlist>
@@ -743,21 +743,21 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md44">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md29">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md45">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md30">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md46">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md31">
 <title>shell 3 (not with simulated actions)</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md47">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md32">
 <title>rosrun robocluedo_rosplan rosplan_simulated_motion_system.py</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md48">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md33">
 <title>shell 4</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}&quot; ```<itemizedlist>
@@ -772,7 +772,7 @@
 </para>
 <para><hruler/>
 </para>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md50">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md35">
 <title>11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</title>
 <para>anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto.</para>
 <para><itemizedlist>
@@ -1053,7 +1053,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md55">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md40">
 <title>12/08/2022 – ancora sul movement controller</title>
 <para><itemizedlist>
 <listitem><para>anzitutto, i lavori noiosi:<itemizedlist>
@@ -1302,7 +1302,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md62">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md47">
 <title>13/08/2022 – mission manager – module testing – test completo</title>
 <para>implementazione del nodo main dell&apos;architettura (fatto questo si passa al testing e si impacchetta tutto)</para>
 <para><itemizedlist>
@@ -1607,7 +1607,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md69">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md54">
 <title>14/08/2022 – prova del sistema completo</title>
 <para>debug del mission manager</para>
 <para><itemizedlist>
@@ -2007,7 +2007,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md72">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md57">
 <title>15/08/2022 – ultime issues – documentazione del codice e deploy</title>
 <para>anzitutto, un piccolo elenco di quello che devo fare per il deployment:</para>
 <para><itemizedlist>
@@ -2228,6 +2228,14 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>infine<sp/>le<sp/>librerie<sp/>...<sp/>ah<sp/>no<sp/>erano<sp/>già<sp/>documentati<sp/>(che<sp/>pacchia)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;code<sp/>documentation<sp/>(still<sp/>working...)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ci<sp/>avviciniamo<sp/>all&apos;ultima<sp/>revisione<sp/>del<sp/>readme</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>prima<sp/>meglio<sp/>controllare<sp/>i<sp/>packages<sp/>per<sp/>l&apos;ultima<sp/>volta</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>metto<sp/>a<sp/>posto<sp/>un<sp/>attimo<sp/>la<sp/>homepage</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*e<sp/>finalmente<sp/>l&apos;ultimo<sp/>readme*</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{todo}</highlight></codeline>
 <codeline><highlight class="normal">**secondo<sp/>assignment:**</highlight></codeline>
@@ -2255,7 +2263,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md76">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md61">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -2292,9 +2300,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md77">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md62">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log-rcl2_1autotoc_md78">
+<sect3 id="md__docs_dev-log-rcl2_1autotoc_md63">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2306,7 +2314,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log-rcl2_1autotoc_md79">
+<sect3 id="md__docs_dev-log-rcl2_1autotoc_md64">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

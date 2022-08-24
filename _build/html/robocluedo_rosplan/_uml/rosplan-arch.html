@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>UML – robocluedo rosplan &mdash; RoboCLuedo #2 1.0.0 documentation</title>
+  <title>UML – robocluedo rosplan – in a nutshell &mdash; RoboCLuedo #2 1.0.0 documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/graphviz.css" type="text/css" />
@@ -51,8 +51,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">README</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../README.html">the project main README</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_uml/arch.html">UML overall arch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../README-sphinx.html">the project main README</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
 <ul class="current">
@@ -61,9 +60,11 @@
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">PKG DOCS – robocluedo_rosplan</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../_docs/new-robocluedo.html">PDDL Design – the new RoboCLuedo PDDL model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_docs/pddl-and-rosplan.html">DOCS – PDDL and ROSPlan</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">UML – robocluedo rosplan</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">UML – robocluedo rosplan – in a nutshell</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="rosplan-kb.html">UML – ROSPlann Knowledge base – formal ROS description</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rosplan-pipeline.html">UML – ROSPlan pipeline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../_code_reference/collect.html">ROSPlan action collect</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_code_reference/feedback_manager.html">CLASS feedback manager</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_code_reference/kb_interface.html">NODE kb_interface</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../_code_reference/kb_tools.html">CLASS kb_tools</a></li>
@@ -87,20 +88,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/project-setup.html">RCL#2 SETUP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/run-the-project.html">RCL#2 RUN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../_docs/how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/dev-log-rcl2.html">RoboCLuedo – Development Log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/project-setup.html">HOW TO setup the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/run-the-project.html">HOW TO Run RCL#2 Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../_docs/sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/sphinx-yaml.html">YAML and Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../_docs/twist-keyboard.html">HOW TO – twist keyboard</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../_examples/examples-index.html">Code Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extensions and other references</span></p>
 <ul>
@@ -122,7 +115,7 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
           <li><a href="../index.html">PKG DOCS – robocluedo_rosplan</a> &raquo;</li>
-      <li>UML – robocluedo rosplan</li>
+      <li>UML – robocluedo rosplan – in a nutshell</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/robocluedo_rosplan/_uml/rosplan-arch.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -132,10 +125,25 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="uml-robocluedo-rosplan">
-<h1>UML – robocluedo rosplan<a class="headerlink" href="#uml-robocluedo-rosplan" title="Permalink to this heading"></a></h1>
-<div class="section" id="simple-description">
-<h2>simple description<a class="headerlink" href="#simple-description" title="Permalink to this heading"></a></h2>
+  <div class="section" id="uml-robocluedo-rosplan-in-a-nutshell">
+<h1>UML – robocluedo rosplan – in a nutshell<a class="headerlink" href="#uml-robocluedo-rosplan-in-a-nutshell" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">UML – robocluedo rosplan – in a nutshell</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#elements">elements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#uml-architecture-simplified">UML – Architecture (simplified)</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#blocks">Blocks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="section" id="elements">
+<h2>elements<a class="headerlink" href="#elements" title="Permalink to this heading"></a></h2>
 <p>nodes and components:</p>
 <ul class="simple">
 <li><p>knowledge base</p></li>
@@ -143,18 +151,26 @@
 <li><p>planning interface</p></li>
 <li><p>parsing interface</p></li>
 <li><p>plan dispatcher</p></li>
-<li><p>… actions …</p></li>
+</ul>
+<p>… actions …</p>
+<ul class="simple">
 <li><p>feedback manager</p></li>
 <li><p>rosplan kb interface</p></li>
 <li><p>rosplan pipeline manager</p></li>
 </ul>
+</div>
+<div class="section" id="uml-architecture-simplified">
+<h2>UML – Architecture (simplified)<a class="headerlink" href="#uml-architecture-simplified" title="Permalink to this heading"></a></h2>
+<p>here’s a essential representation of the package plus the ROSPlan system, controlled by this package:</p>
 <p class="plantuml">
-<object data="../../_images/plantuml-20800ddf017905e8c447db5dbfae9c597a529030.svg" type="image/svg+xml" style="width:1027px;height:1149px;background:#FFFFFF;">
-<img src="../../_images/plantuml-20800ddf017905e8c447db5dbfae9c597a529030.png" alt="&#64;startuml
+<object data="../../_images/plantuml-fa7a8c83be4fbf9a8a38ee3e2ce265c5f1928d7f.svg" type="image/svg+xml" style="width:1554px;height:396px;background:#FFFFFF;">
+<img src="../../_images/plantuml-fa7a8c83be4fbf9a8a38ee3e2ce265c5f1928d7f.png" alt="&#64;startuml
+scale 0.7
 
 ''' DIAGRAM INFOS
 title &quot;robocluedo rosplan&quot;
 skinparam Padding 8
+left to right direction
 
 
 ''' DIAGRAM ELEMENTS
@@ -170,45 +186,55 @@ package &quot;ROSplan&quot; {
 	[parsing interface] &lt;&lt;ROSPlan&gt;&gt; as PARSE
 	[plan dispatcher] &lt;&lt;ROSPlan&gt;&gt; as DISPATCH
 
-	KB -right-&gt; PROBLEM
-	PROBLEM -down-&gt; PLAN
-	PLAN -down-&gt; PARSE
-	KB -right- PARSE
-	PARSE -down-&gt; DISPATCH
-	KB -left- DISPATCH
+	KB -- PROBLEM
+	PROBLEM -- PLAN
+	PLAN -- PARSE
+	' KB -- PARSE
+	PARSE -- DISPATCH
+	' KB -- DISPATCH
 }
 
-package &quot;actions dispatch&quot; {
-	[action] as ACTION
+package &quot;actions dispatch&quot; as ACTION {
+	node actions
 }
 
 [feedback\nmanager] as FEEDBACK
 [ROSPlan\npipeline manager] &lt;&lt;node&gt;&gt; as MANAGER
 [KB interface] &lt;&lt;node&gt;&gt; as IKB
-ACTION --&gt; IKB
 
-DISPATCH -right-&gt; ACTION
-PDDL_DOM --&gt; KB
-PDDL_PROB --&gt; KB
-IKB &lt;--&gt; KB
+DISPATCH -- ACTION
+PDDL_DOM -- KB
+PDDL_PROB -- KB
+IKB -- KB
 
-ACTION --&gt; FEEDBACK
+ACTION -- FEEDBACK
+FEEDBACK -- MANAGER
 
-PROBLEM -right-&gt; MANAGER
-PLAN -right-&gt; MANAGER
-PARSE -right-&gt; MANAGER
-DISPATCH -right-&gt; MANAGER
+PROBLEM -right- MANAGER
+PLAN -right- MANAGER
+PARSE -right- MANAGER
+DISPATCH -right- MANAGER
 }
 
-() &quot;feedback topic&quot; as TOPIC_FEEDBACK
-FEEDBACK --&gt; TOPIC_FEEDBACK
 () &quot;service pipeline manager&quot; as SRV_MANAGER
 MANAGER --&gt; SRV_MANAGER
 () &quot;KB interface service&quot; as SRV_IKB
 IKB --&gt; SRV_IKB
+
+IKB &lt;--&gt; MANAGER
 &#64;enduml"/>
 
 </object></p>
+<div class="section" id="blocks">
+<h3>Blocks<a class="headerlink" href="#blocks" title="Permalink to this heading"></a></h3>
+<p>let’s see better some important blocks:</p>
+<ul class="simple">
+<li><p>the <strong>rosplan pipeline manager</strong> controls the steps the ROSPlan architecture uses to make and execute the plan, from the problem loading phase to the dispatch. Another fundamental functionality provided by this block is to make explainable possible problems that could occur during the planning, with a rich feedback send to the node using the pipeline manager.</p></li>
+<li><p>the service for dispatching the plan provides just two informations: if the plan has been executed successfully, and if the goal has been fulfilled at the end of the dispatch, and unfortunately <em>nothing else</em>. Here’s where the <strong>feedback manager</strong> comes in: role of the feedback manager is to make the ROSPlan actions able to explain in details each possible “problematic” situation which could happen during the plan dispatch. The action encountering something wrong <em>publishes</em> a precise type of feedback through a topic reserved for the feedback exchange, and the ROSPlan pipeline manager exploits such a feedback to explain what’s wrong with the last plan dispatch.</p></li>
+<li><p>another fundamental tool inside the package is the so-called <strong>KB interface</strong>, which provides the ability to modify the predicates of the problem instance inside the knowledge base. This eposes services making easier to <em>replan</em> as well as to <em>alter</em> and to <em>read</em> the informations inside the knowledge base. Its implementation follows the particular characteristics of the PDDL domain, hence one of its roles is to <em>hide the spcificity of the PDDL problem</em>, providing a general, flexible interface for handling the problem in a (kinda) “standard” way.</p></li>
+<li><p>the dispach can interact with the system using a bunch of both ROS actions and Simulated Actions, enabling the system to perform functionalities such as navigation and manipulation.</p></li>
+</ul>
+</div>
 </div>
 </div>
 

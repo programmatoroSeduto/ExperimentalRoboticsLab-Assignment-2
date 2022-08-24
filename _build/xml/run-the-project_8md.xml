@@ -13,7 +13,7 @@
 <codeline><highlight class="normal">#<sp/>HOW<sp/>TO<sp/>Run<sp/>RCL#2<sp/>Project</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{seealso}</highlight></codeline>
-<codeline><highlight class="normal">If<sp/>something<sp/>don&apos;t<sp/>work,<sp/>see<sp/>the<sp/>testing<sp/>procedures<sp/>you<sp/>can<sp/>find<sp/>in<sp/>the<sp/>documentation<sp/>here:<sp/>{any}`pkg-module-testing`</highlight></codeline>
+<codeline><highlight class="normal">If<sp/>something<sp/>don&apos;t<sp/>work,<sp/>see<sp/>the<sp/>testing<sp/>procedures<sp/>you<sp/>can<sp/>find<sp/>in<sp/>the<sp/>documentation<sp/>here:<sp/>{any}`project-testing`</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Here<sp/>are<sp/>the<sp/>instructions<sp/>for<sp/>running<sp/>the<sp/>RCL#2<sp/>project.<sp/>I<sp/>suggest<sp/>you<sp/>to<sp/>use<sp/>at<sp/>least<sp/>two<sp/>shells:<sp/>one<sp/>for<sp/>the<sp/>&quot;useless<sp/>output&quot;,<sp/>and<sp/>another<sp/>one<sp/>for<sp/>the<sp/>output<sp/>from<sp/>the<sp/>mission<sp/>manager.<sp/></highlight></codeline>

@@ -30,7 +30,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="HOW TO – navigation stack CRASH COURSE" href="_docs/how-to-nav-stack.html" />
+    <link rel="next" title="HOW TO – moveit snippets" href="_docs/moveit-snippets.html" />
     <link rel="prev" title="PKG DOCS – robocluedo_rosplan_msgs" href="../robocluedo_rosplan_msgs/index.html" /> 
 </head>
 
@@ -51,8 +51,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">README</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../README.html">the project main README</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_uml/arch.html">UML overall arch</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../README-sphinx.html">the project main README</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Packages Documentation</span></p>
 <ul class="current">
@@ -61,8 +60,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan/index.html">PKG DOCS – robocluedo_rosplan</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PKG DOCS – robocluedo_movement_controller</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html">HOW TO – navigation stack CRASH COURSE</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/mapping.html">HOW TO perform localization with AMCL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/moveit-snippets.html">HOW TO – moveit snippets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/odometry-and-navigation.html">Messages – Navigation and Odometry</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/twist-keyboard.html">HOW TO – twist keyboard</a></li>
@@ -89,20 +86,12 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Other Documents</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/cpp-docs-template.html">Documentation for c++ nodes and libraries</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_docs/project-setup.html">RCL#2 SETUP</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_docs/run-the-project.html">RCL#2 RUN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../_docs/how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/dev-log-rcl2.html">RoboCLuedo – Development Log</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/how-to-setup-doxy-sphinx-ws.html">How to setup a Doxygen/Sphinx workspace</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/how-to-setup-doxy-sphinx-ws.html#sphinx-config-file-configuration">Sphinx – config file configuration</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/project-setup.html">HOW TO setup the project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/run-the-project.html">HOW TO Run RCL#2 Project</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../_docs/sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/sphinx-yaml.html">YAML and Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../_docs/twist-keyboard.html">HOW TO – twist keyboard</a></li>
-</ul>
-<p class="caption" role="heading"><span class="caption-text">General Code Examples</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../_examples/examples-index.html">Code Examples</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Extensions and other references</span></p>
 <ul>
@@ -179,51 +168,6 @@ The idea of the controllers is more related to furure developments of the projec
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_docs/how-to-nav-stack.html">HOW TO – navigation stack CRASH COURSE</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#install-the-navigation-stack">install the Navigation Stack</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#slam-gmapping">Slam - GMapping</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#movebase">MoveBase</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#a-quick-example-with-gazebo-and-rviz">A quick example with Gazebo and RViz</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#names-and-types-of-the-interfaces-of-movebase">Names and Types of the Interfaces of MoveBase</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#the-action-movebase">the action movebase</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#a-note-about-the-action-names">A note about the action names</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#move-base-msgs-movebasegoal">move_base_msgs/MoveBaseGoal</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#move-base-msgs-movebasefeedback">move_base_msgs/MoveBaseFeedback</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#move-base-msgs-movebaseresult">move_base_msgs/MoveBaseResult</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#other-interfaces">other interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#geometry-msgs-posestamped">geometry_msgs/PoseStamped</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#geometry-msgs-pose">geometry_msgs/Pose</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#geometry-msgs-quaternion">geometry_msgs/Quaternion</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#geometry-msgs-point">geometry_msgs/Point</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#movebase-action-calls-in-c">MoveBase action calls in C++</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#c-headers">C++ – headers</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#c-main-with-async-spinner">C++ – main with async spinner</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#c-open-the-action-client">C++ – open the action client</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#c-use-the-client-callback-based-approach">C++ – use the client – callback based approach</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#slam-and-gmapping-navigation-stack-structure">SLAM and GMapping – navigation stack structure</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#hokuyo-laser-range-finder">Hokuyo laser range finder</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/how-to-nav-stack.html#usare-movebase-senza-ricorrere-alla-actionlib">Usare MoveBase senza ricorrere alla actionlib</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#richiesta-di-cancellazione">richiesta di cancellazione</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/how-to-nav-stack.html#richiesta-di-movimento-verso-un-target">richiesta di movimento verso un target</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/mapping.html">HOW TO perform localization with AMCL</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_docs/mapping.html#save-the-map">Save the map</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/mapping.html#load-the-map-with-amcl">Load the map with AMCL</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/moveit-snippets.html">HOW TO – moveit snippets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_docs/moveit-snippets.html#headers-and-setup">headers and Setup</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="_docs/moveit-snippets.html#basic">Basic</a></li>
@@ -319,7 +263,7 @@ The idea of the controllers is more related to furure developments of the projec
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../robocluedo_rosplan_msgs/index.html" class="btn btn-neutral float-left" title="PKG DOCS – robocluedo_rosplan_msgs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="_docs/how-to-nav-stack.html" class="btn btn-neutral float-right" title="HOW TO – navigation stack CRASH COURSE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="_docs/moveit-snippets.html" class="btn btn-neutral float-right" title="HOW TO – moveit snippets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
