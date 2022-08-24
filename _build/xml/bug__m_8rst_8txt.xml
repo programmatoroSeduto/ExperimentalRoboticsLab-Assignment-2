@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="bug__m_8rst_8txt" kind="file" language="C++">
+    <compoundname>bug_m.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="bug__m_8rst_8txt_1a58306b7819d4924921d922ffdf9b396a" prot="public" static="no" mutable="no">
+        <type>_node bug</type>
+        <definition>_node bug m</definition>
+        <argsstring></argsstring>
+        <name>m</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_movement_controller/_code_reference/bug_m.rst.txt" line="2" column="10" bodyfile="_build/html/_sources/robocluedo_movement_controller/_code_reference/bug_m.rst.txt" bodystart="9" bodyend="-1"/>
+        <referencedby refid="classkb__interface_1a339f9f7ba3d53f3f8e1143d6dbb6148b" compoundref="kb__interface_8cpp" startline="191" endline="242">kb_interface::cbk_replan</referencedby>
+        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="277" endline="358">kb_interface::cbk_update_goal</referencedby>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">..<sp/>_node-bug-<ref refid="bug__m_8rst_8txt_1a58306b7819d4924921d922ffdf9b396a" kindref="member">m</ref>:</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">NODE<sp/><ref refid="namespacebug__m" kindref="compound">bug_m</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">==========================================</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">..<sp/>seealso::</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>the<sp/>ROS<sp/>:any:`node-<ref refid="update-navigation-manager_8md_8txt_1a47efa6955a16927c23af81912e4bc982" kindref="member">navigation</ref>-<ref refid="run-the-project_8md_8txt_1a68164347ab46eb3181eaf10b0c98402a" kindref="member">manager</ref>`<sp/>implements<sp/>a<sp/>handly<sp/>abstraction<sp/></highlight></codeline>
+<codeline lineno="9" refid="bug__m_8rst_8txt_1a58306b7819d4924921d922ffdf9b396a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>node,<sp/>making<sp/>use<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>concept<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>*controllers*.<sp/><sp/></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">..<sp/><ref refid="update-navigation-manager_8md_8txt_1ad85220ffcb3771cb01a7dcf6f2e3193f" kindref="member">automodule:: bug_m</ref></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>:members:</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>:noindex:</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/robocluedo_movement_controller/_code_reference/bug_m.rst.txt"/>
+  </compounddef>
+</doxygen>

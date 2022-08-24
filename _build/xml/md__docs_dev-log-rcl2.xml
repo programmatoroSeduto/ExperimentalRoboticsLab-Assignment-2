@@ -1321,7 +1321,7 @@
 </para>
 </listitem><listitem><para>giusto un mini programmino di prova: (più che altro per sondare le mie caopacità dinamitarde)</para>
 <para>```c++ #include &lt;iostream&gt; #include &lt;string&gt; #include &lt;stdlib.h&gt; #include &lt;unistd.h&gt;</para>
-<para>int <ref refid="example__armor__cluedo__1_8cpp_1a0ddf1224851353fc92bfbff6f499fa97" kindref="member">main()</ref> { std::string id = &quot;ID13398&quot;;</para>
+<para>int <ref refid="examples__cluedo_8md_8txt_1a0055e76cf5ab9e6852445b755e20c0b6" kindref="member">main()</ref> { std::string id = &quot;ID13398&quot;;</para>
 <para>std::size_t pos_init = id.find(&quot;ID&quot;); std::cout &lt;&lt; &quot;pos=&quot; &lt;&lt; pos_init &lt;&lt; std::endl; // std::size_t pos_end = pos_init + 2; std::cout &lt;&lt; &quot;(str) ID=&quot; &lt;&lt; id.substr(pos_init+2) &lt;&lt; std::endl; // int id_int = atoi(id.substr(pos_init+2).c_str()); int id_int = atoi(id.substr(2).c_str()); std::cout &lt;&lt; &quot;(int) ID=&quot; &lt;&lt; id_int &lt;&lt; std::endl;</para>
 <para>return 0;</para>
 <para>/*OUTPUT</para>

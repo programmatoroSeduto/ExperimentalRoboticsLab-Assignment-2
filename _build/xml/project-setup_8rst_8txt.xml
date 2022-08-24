@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="project-setup_8rst_8txt" kind="file" language="C++">
+    <compoundname>project-setup.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" prot="public" static="no" mutable="no">
+        <type>_setup <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>_setup the project</definition>
+        <argsstring></argsstring>
+        <name>project</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/project-setup.rst.txt" line="2" column="11" bodyfile="_build/html/_sources/_docs/project-setup.rst.txt" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">..<sp/>_setup-<ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref>-<ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>:</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">HOW<sp/>TO<sp/><ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a39446158cebd784a13e8e3a44a5f4365" kindref="member">setup</ref><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref></highlight></codeline>
+<codeline lineno="5"><highlight class="normal">================================</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"><sp/><sp/><sp/><sp/>:caption:<sp/>Contents</highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/>:maxdepth:<sp/>3</highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>./<ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>-<ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a39446158cebd784a13e8e3a44a5f4365" kindref="member">setup</ref>.md</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal">This<sp/>document<sp/>describes<sp/>how<sp/>to<sp/>perform<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>*installation<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>*.</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">Docker<sp/>Image</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">-----------------------------</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal">..<sp/>attention::</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>**strongly<sp/>recommended!**<sp/>This<sp/>docker<sp/>image<sp/>contains<sp/>all<sp/>you<sp/>need<sp/>to<sp/>run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>simulation.<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">I<sp/>strongly<sp/>suggest<sp/>you<sp/>to<sp/>run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref><sp/>inside<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>Docker<sp/>container.<sp/>`Here<sp/>&lt;https:</highlight><highlight class="comment">//hub.docker.com/r/carms84/exproblab&gt;`_<sp/>is<sp/>the<sp/>official<sp/>site<sp/>of<sp/>the<sp/>image.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">Run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>image<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>instruction:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">..<sp/><ref refid="examples__tools_8md_8txt_1a9e62a1e988e0d3599a0e1f28d21142d8" kindref="member">code</ref>-block::</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>docker<sp/>run<sp/>-<ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref><sp/>-p<sp/>6080:80<sp/>-p<sp/>5900:5900<sp/>-p<sp/>8888:8888<sp/>--name<sp/>RCL_project<sp/>carms84/exproblab</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">You<sp/>can<sp/>access<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>machine<sp/>typing<sp/>*http:</highlight><highlight class="comment">//127.0.0.1:6080/*<sp/>on<sp/>your<sp/>console,<sp/>or<sp/>better<sp/>using<sp/>tools<sp/>such<sp/>as<sp/>VNC.</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">..<sp/>attention::</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>there<sp/>could<sp/>be<sp/>some<sp/>problems<sp/>in<sp/>running<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>container<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>first<sp/>time.<sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" refkind="member"><highlight class="normal">It<sp/>happens<sp/>each<sp/>time<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>container<sp/>is<sp/>created<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>first<sp/>time<sp/>after<sp/>its<sp/>creation:<sp/>xvnc11<sp/>gives<sp/>some<sp/>problems.<sp/>To<sp/>solve<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="sphinx-mock_8md_8txt_1a841386fb13edeb6b673c170c05f89366" kindref="member">situation</ref>,<sp/>first<sp/>run<sp/>a<sp/><ref refid="test-the-project_8md_8txt_1abb609fa085002db88d69fb272ea20359" kindref="member">bash</ref><sp/>inside<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>machine<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="robocluedo-urdf-user-manual_8md_8txt_1a95f54475c215df7f58e8573759c17625" kindref="member">following</ref><sp/>command:</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">..<sp/><ref refid="examples__tools_8md_8txt_1a9e62a1e988e0d3599a0e1f28d21142d8" kindref="member">code</ref>-block::</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>docker<sp/>exec<sp/>-<ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref><sp/>RCL_project<sp/>/bin/<ref refid="test-the-project_8md_8txt_1abb609fa085002db88d69fb272ea20359" kindref="member">bash</ref></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><ref refid="test-the-project_8md_8txt_1a7d7444888737118a1f271d6e87adf29b" kindref="member">and</ref><sp/>copy<sp/><ref refid="test-the-project_8md_8txt_1a7d7444888737118a1f271d6e87adf29b" kindref="member">and</ref><sp/>paste<sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>sequence<sp/>of<sp/>commands:</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="42"><highlight class="normal">..<sp/><ref refid="examples__tools_8md_8txt_1a9e62a1e988e0d3599a0e1f28d21142d8" kindref="member">code</ref>-block::</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>rm<sp/>/tmp/.X1-lock</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>/usr/bin/Xvfb<sp/>:1<sp/>-screen<sp/>0<sp/>1024x768x16<sp/>&amp;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/>export<sp/>DISPLAY=</highlight><highlight class="stringliteral">&quot;:1&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>export<sp/>HOME=</highlight><highlight class="stringliteral">&quot;/root&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>export<sp/>USER=</highlight><highlight class="stringliteral">&quot;/root&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>/usr/bin/openbox<sp/>&amp;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>/usr/bin/lxpanel<sp/>--profile<sp/>LXDE<sp/>&amp;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>/usr/bin/pcmanfm<sp/>--desktop<sp/>--profile<sp/>LXDE<sp/>&amp;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/>x11vnc<sp/>-display<sp/>:1<sp/>-xkb<sp/>-<ref refid="update-navigation-manager_8md_8txt_1a3b40c694222c27aeac8309344725ab1e" kindref="member">forever</ref><sp/>-shared<sp/>-repeat<sp/>&amp;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal">The<sp/>docker<sp/>is<sp/>a<sp/>bit<sp/>old<sp/>inside.<sp/>It<sp/>should<sp/>be<sp/>updated<sp/>before<sp/>going<sp/>on,<sp/></highlight><highlight class="keyword">using</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>sequence<sp/>of<sp/>instructions:</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal">..<sp/><ref refid="examples__tools_8md_8txt_1a9e62a1e988e0d3599a0e1f28d21142d8" kindref="member">code</ref>-block::</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-<ref refid="simulation_8cpp_1a0049a8a39c319bf1470f36c9e0f75abd" kindref="member">key</ref><sp/>adv<sp/>--keyserver<sp/>keyserver.ubuntu.com<sp/>--recv-keys<sp/>4EB27DB2A3B88B8B</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>curl<sp/>-s<sp/>https:</highlight><highlight class="comment">//raw.githubusercontent.com/ros/rosdistro/master/ros.asc<sp/>|<sp/>sudo<sp/>apt-key<sp/>add<sp/>-</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>curl<sp/>-sSL<sp/>https:</highlight><highlight class="comment">//raw.githubusercontent.com/ros/rosdistro/master/ros.key<sp/>-o<sp/>/usr/share/keyrings/ros-archive-keyring.gpg</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/><ref refid="rosplan-kb_8md_8txt_1a58d074ac72318f9886c4e6800ed1afab" kindref="member">update</ref><sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>upgrade<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">Setup<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>workspace</highlight></codeline>
+<codeline lineno="67"><highlight class="normal">-----------------------------</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal">..<sp/>note::</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>not<sp/><ref refid="update-navigation-manager_8md_8txt_1a7ca2749a968e0ac21602d5dad3ff6975" kindref="member">needed</ref><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>you<sp/>already<sp/>have<sp/>Docker<sp/>with<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>image<sp/>suggested<sp/><ref refid="update-navigation-manager_8md_8txt_1a680ea59b902b3ce5ffca50830e3f3e8d" kindref="member">above</ref>.<sp/></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal">You<sp/>need,<sp/>first<sp/>of<sp/>all,<sp/>to<sp/>create<sp/>a<sp/></highlight><highlight class="keyword">new</highlight><highlight class="normal"><sp/>workspace<sp/>**which<sp/>must<sp/>be<sp/>called<sp/>ros_ws**:<sp/><ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref><sp/>is<sp/>very<sp/>important,<sp/>otherwise<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="how-to-setup-doxy-sphinx-ws_8md_8txt_1a39446158cebd784a13e8e3a44a5f4365" kindref="member">setup</ref><sp/>won</highlight><highlight class="stringliteral">&apos;t<sp/>work.<sp/>Another<sp/>important<sp/>observation<sp/>to<sp/>do<sp/>here<sp/>is<sp/>that<sp/>**the<sp/>workspace<sp/>must<sp/>be<sp/>located<sp/>in<sp/>your<sp/>/root<sp/>folder.</highlight></codeline>
+<codeline lineno="73"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="74"><highlight class="stringliteral">You<sp/>can<sp/>quickly<sp/>create<sp/>a<sp/>new<sp/>workspace<sp/>by<sp/>running<sp/>this<sp/>command<sp/>inside<sp/>the<sp/>*/root*<sp/>folder:</highlight></codeline>
+<codeline lineno="75"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="76"><highlight class="stringliteral">To<sp/>do<sp/>this,<sp/></highlight></codeline>
+<codeline lineno="77"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="78"><highlight class="stringliteral">..<sp/>code-block::<sp/></highlight></codeline>
+<codeline lineno="79"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="80"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/</highlight></codeline>
+<codeline lineno="81"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/programmatoroSeduto/docker-exproblab-backup.git<sp/>-b<sp/>main<sp/>ros_ws</highlight></codeline>
+<codeline lineno="82"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="83"><highlight class="stringliteral">The<sp/>download<sp/>is<sp/>quite<sp/>large,<sp/>so<sp/>it<sp/>could<sp/>take<sp/>some<sp/>minutes<sp/>depending<sp/>on<sp/>your<sp/>network.<sp/></highlight></codeline>
+<codeline lineno="84"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="85"><highlight class="stringliteral">After<sp/>downloaded<sp/>everything,<sp/>try<sp/>to<sp/>compile<sp/>the<sp/>workspace:</highlight></codeline>
+<codeline lineno="86"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="87"><highlight class="stringliteral">..<sp/>code-block::<sp/></highlight></codeline>
+<codeline lineno="88"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="89"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/ros_ws/</highlight></codeline>
+<codeline lineno="90"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="91"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="92"><highlight class="stringliteral">..<sp/>note::</highlight></codeline>
+<codeline lineno="93"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>remember<sp/>to<sp/>source<sp/>the<sp/>workspace!<sp/>Put<sp/>the<sp/>source<sp/>insideyour<sp/>*.bashrc*<sp/>file.<sp/></highlight></codeline>
+<codeline lineno="94"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="95"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="96"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="97"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="98"><highlight class="stringliteral">build<sp/>the<sp/>aRMOR<sp/>ontology</highlight></codeline>
+<codeline lineno="99"><highlight class="stringliteral">--------------------------</highlight></codeline>
+<codeline lineno="100"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="101"><highlight class="stringliteral">The<sp/>project<sp/>requires<sp/>aRMOR<sp/>as<sp/>one<sp/>of<sp/>its<sp/>essential<sp/>component.<sp/>Use<sp/>this<sp/>instructions<sp/>to<sp/>compile<sp/>it:</highlight></codeline>
+<codeline lineno="102"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="103"><highlight class="stringliteral">..<sp/>code-block::</highlight></codeline>
+<codeline lineno="104"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/ros_ws/src/armor/armor</highlight></codeline>
+<codeline lineno="106"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>chmod<sp/>+x<sp/>./gradlew</highlight></codeline>
+<codeline lineno="107"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>./gradlew<sp/>deployApp</highlight></codeline>
+<codeline lineno="108"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/ros_ws</highlight></codeline>
+<codeline lineno="109"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="110"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="111"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="112"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="113"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="114"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="115"><highlight class="stringliteral">Install<sp/>the<sp/>MoveIt!<sp/>framework</highlight></codeline>
+<codeline lineno="116"><highlight class="stringliteral">---------------------------------------</highlight></codeline>
+<codeline lineno="117"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="118"><highlight class="stringliteral">Use<sp/>this<sp/>simple<sp/>bash<sp/>script<sp/>for<sp/>installing<sp/>MoveIt.<sp/>The<sp/>project<sp/>requires<sp/>the<sp/>version<sp/>1.1.5<sp/>:<sp/></highlight></codeline>
+<codeline lineno="119"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="120"><highlight class="stringliteral">..<sp/>code-block::<sp/></highlight></codeline>
+<codeline lineno="121"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="122"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/ros_ws/src</highlight></codeline>
+<codeline lineno="123"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>sudo<sp/>apt<sp/>install<sp/>-y<sp/>ros-noetic-moveit</highlight></codeline>
+<codeline lineno="124"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>apt-get<sp/>remove<sp/>-y<sp/>ros-noetic-moveit*</highlight></codeline>
+<codeline lineno="125"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>apt-get<sp/>remove<sp/>-y<sp/>ros-noetic-srdfdom</highlight></codeline>
+<codeline lineno="126"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/ros-planning/moveit.git</highlight></codeline>
+<codeline lineno="127"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>moveit</highlight></codeline>
+<codeline lineno="128"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>checkout<sp/>2b881e5e3c4fd900d4d4310f4b12f9c4a63eb5dd</highlight></codeline>
+<codeline lineno="129"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="130"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/ros-planning/moveit_resources.git</highlight></codeline>
+<codeline lineno="131"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>moveit_resources</highlight></codeline>
+<codeline lineno="132"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>checkout<sp/>f6a7d161e224b9909afaaf621822daddf61b6f52</highlight></codeline>
+<codeline lineno="133"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="134"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/ros-planning/srdfdom.git</highlight></codeline>
+<codeline lineno="135"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>srdfdom</highlight></codeline>
+<codeline lineno="136"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>checkout<sp/>b1d67a14e45133928f9793e9ee143998219760fd</highlight></codeline>
+<codeline lineno="137"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="138"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>apt-get<sp/>install<sp/>-y<sp/>ros-noetic-rosparam-shortcuts</highlight></codeline>
+<codeline lineno="139"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="140"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="141"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="142"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="143"><highlight class="stringliteral">this<sp/>step<sp/>requires<sp/>a<sp/>lot<sp/>of<sp/>time...</highlight></codeline>
+<codeline lineno="144"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="145"><highlight class="stringliteral">..<sp/>note::</highlight></codeline>
+<codeline lineno="146"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>the<sp/>fact<sp/>that<sp/>there<sp/>is<sp/>the<sp/>same<sp/>*catkin_make*<sp/>twice<sp/>at<sp/>the<sp/>end<sp/>of<sp/>the<sp/>code<sp/>is<sp/>not<sp/>a<sp/>mistake:<sp/>it<sp/>could<sp/>happen<sp/>that<sp/>the<sp/>compiler<sp/>crashes<sp/>due<sp/>to<sp/>a<sp/>lack<sp/>of<sp/>free<sp/>memory.<sp/>To<sp/>continue<sp/>the<sp/>compilation,<sp/>just<sp/>call<sp/>*catkin_make*<sp/>again.<sp/></highlight></codeline>
+<codeline lineno="147"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="148"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="149"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="150"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="151"><highlight class="stringliteral">(optional)<sp/>Install<sp/>the<sp/>documentation<sp/>system</highlight></codeline>
+<codeline lineno="152"><highlight class="stringliteral">--------------------------------------</highlight></codeline>
+<codeline lineno="153"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="154"><highlight class="stringliteral">..<sp/>note::</highlight></codeline>
+<codeline lineno="155"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>Do<sp/>it<sp/>only<sp/>if<sp/>you&apos;</highlight><highlight class="normal">re<sp/>also<sp/>interested<sp/>in<sp/>refreshing<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="rest-directives_8md_8txt_1adb81e9bf9520066dfb32d5594e56e029" kindref="member">documentation</ref><sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>.</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="157"><highlight class="normal">This<sp/>is<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>script<sp/>to<sp/>use<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>setting<sp/>up<sp/>Doxygen<sp/>plus<sp/>Sphinx,<sp/><ref refid="test-the-project_8md_8txt_1a7d7444888737118a1f271d6e87adf29b" kindref="member">and</ref><sp/>some<sp/>other<sp/><ref refid="run-the-project_8md_8txt_1a1947fbe60a3e52fae97c9ecf4881bc36" kindref="member">components</ref><sp/>such<sp/>as<sp/>PlantUML.</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"></highlight></codeline>
+<codeline lineno="159"><highlight class="normal">..<sp/><ref refid="examples__tools_8md_8txt_1a9e62a1e988e0d3599a0e1f28d21142d8" kindref="member">code</ref>-block::</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>doxygen</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref><sp/>doxygen</highlight></codeline>
+<codeline lineno="163"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref><sp/>doxygen-gui</highlight></codeline>
+<codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="165"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>sphinx</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>apt-get<sp/>install<sp/>python-setuptools<sp/>python-dev<sp/>build-essential<sp/><sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/><ref refid="sphinx-mock_8md_8txt_1abe05ec1b0ec6f8843707c9a8669307b1" kindref="member">sphinx</ref>==4.5.0</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>sphinxcontrib-fulltoc</highlight></codeline>
+<codeline lineno="169"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>rst2pdf</highlight></codeline>
+<codeline lineno="170"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>sphinxcontrib-needs</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>uninstall<sp/>docutils<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref></highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>docutils</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/><ref refid="sphinx-mock_8md_8txt_1abe05ec1b0ec6f8843707c9a8669307b1" kindref="member">sphinx</ref>-needs</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>breathe</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>breathe</highlight></codeline>
+<codeline lineno="177"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/><ref refid="sphinx-mock_8md_8txt_1abe05ec1b0ec6f8843707c9a8669307b1" kindref="member">sphinx</ref>-rtd-theme</highlight></codeline>
+<codeline lineno="178"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>myst-parser</highlight></codeline>
+<codeline lineno="179"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>openjdk<sp/>13</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="181"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref><sp/>openjdk-13-jre</highlight></codeline>
+<codeline lineno="182"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="183"><highlight class="normal"></highlight><highlight class="preprocessor"><sp/><sp/><sp/><sp/>#<sp/>plantUML</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="184"><highlight class="normal"><sp/><sp/><sp/><sp/>sudo<sp/>apt-get<sp/>install<sp/>-<ref refid="robocluedo-urdf-user-manual_8md_8txt_1af8e0a057b25c1e11af3f7dd625d5ee1f" kindref="member">y</ref><sp/>graphviz</highlight></codeline>
+<codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>pip3<sp/>install<sp/>sphinxcontrib-<ref refid="namespaceconf_1a04c272e775af47ba3baf2be945ab445f" kindref="member">plantuml</ref></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"></highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight></codeline>
+<codeline lineno="189"><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal">Download<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>repository</highlight></codeline>
+<codeline lineno="191"><highlight class="normal">----------------------------------</highlight></codeline>
+<codeline lineno="192"><highlight class="normal"></highlight></codeline>
+<codeline lineno="193"><highlight class="normal">It</highlight><highlight class="stringliteral">&apos;s<sp/>time<sp/>to<sp/>download<sp/>and<sp/>install<sp/>the<sp/>project<sp/>RCL#3<sp/>!<sp/>You<sp/>can<sp/>use<sp/>this<sp/>quick<sp/>bash<sp/>script<sp/>for<sp/>downloading<sp/>and<sp/>compiling<sp/>the<sp/>project:</highlight></codeline>
+<codeline lineno="194"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="195"><highlight class="stringliteral">..<sp/>code-block::</highlight></codeline>
+<codeline lineno="196"><highlight class="stringliteral"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="197"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>/root/ros_ws/src</highlight></codeline>
+<codeline lineno="198"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>git<sp/>clone<sp/>https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2.git<sp/>-b<sp/>main<sp/>./erl2</highlight></codeline>
+<codeline lineno="199"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>cd<sp/>..</highlight></codeline>
+<codeline lineno="200"><highlight class="stringliteral"><sp/><sp/><sp/><sp/>catkin_make</highlight></codeline>
+<codeline lineno="201"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="202"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="203"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="204"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="205"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="206"><highlight class="stringliteral">Test<sp/>out<sp/>the<sp/>project!</highlight></codeline>
+<codeline lineno="207"><highlight class="stringliteral">---------------------</highlight></codeline>
+<codeline lineno="208"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="209"><highlight class="stringliteral">The<sp/>project<sp/>has<sp/>been<sp/>compiled.<sp/>You&apos;</highlight><highlight class="normal">re<sp/>ready<sp/>to<sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"><sp/><ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref>!<sp/>See<sp/>how<sp/>to<sp/>run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>further<sp/>informations<sp/>about<sp/>how<sp/>to<sp/>run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>architecture.<sp/></highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="211"><highlight class="normal">..<sp/>seealso::</highlight></codeline>
+<codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/>see<sp/>also<sp/>:ref:`run-<ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref>-<ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>`</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/_docs/project-setup.rst.txt"/>
+  </compounddef>
+</doxygen>

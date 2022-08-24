@@ -7,7 +7,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="normal">Example<sp/>2<sp/>--<sp/>components<sp/>diagram</highlight></codeline>
+<codeline lineno="1"><highlight class="normal">Example<sp/>2<sp/>--<sp/><ref refid="run-the-project_8md_8txt_1a1947fbe60a3e52fae97c9ecf4881bc36" kindref="member">components</ref><sp/>diagram</highlight></codeline>
 <codeline lineno="2"><highlight class="normal">=================================</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal">..<sp/>uml::</highlight></codeline>

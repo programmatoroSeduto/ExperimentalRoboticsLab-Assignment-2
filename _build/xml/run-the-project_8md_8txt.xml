@@ -1,0 +1,101 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="run-the-project_8md_8txt" kind="file" language="C++">
+    <compoundname>run-the-project.md.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="run-the-project_8md_8txt_1af28585d1b8425ad216f3f7aee99ccb81" prot="public" static="no" mutable="no">
+        <type>run <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>run the project</definition>
+        <argsstring></argsstring>
+        <name>project</name>
+        <initializer>=
+
+
+
+```{seealso}
+If something don&apos;t <ref refid="test-the-project_8md_8txt_1afec0d0fde227323e537903983d1c3873" kindref="member">work</ref></initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/run-the-project.md.txt" line="2" column="7" bodyfile="_build/html/_sources/_docs/run-the-project.md.txt" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="run-the-project_8md_8txt_1aa89a7b13fc847802032407af17d56522" prot="public" static="no" mutable="no">
+        <type>run <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> see <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="test-the-project_8md_8txt_1ac40523e666181e2e93d2002e9503682f" kindref="member">testing</ref> procedures you can find in <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rest-directives_8md_8txt_1adb81e9bf9520066dfb32d5594e56e029" kindref="member">documentation</ref></type>
+        <definition>run the see the testing procedures you can find in the documentation here</definition>
+        <argsstring></argsstring>
+        <name>here</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/run-the-project.md.txt" line="7" column="63" bodyfile="_build/html/_sources/_docs/run-the-project.md.txt" bodystart="10" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="run-the-project_8md_8txt_1a1947fbe60a3e52fae97c9ecf4881bc36" prot="public" static="no" mutable="no">
+        <type>run <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> see <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="test-the-project_8md_8txt_1ac40523e666181e2e93d2002e9503682f" kindref="member">testing</ref> procedures you can find in <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rest-directives_8md_8txt_1adb81e9bf9520066dfb32d5594e56e029" kindref="member">documentation</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> another one <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> output from <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> mission <ref refid="update-navigation-manager_8md_8txt_1a13c0c6e7c6286840ae3f49678fb3ddc7" kindref="member">manager</ref> all <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>run the see the testing procedures you can find in the documentation and another one for the output from the mission manager all the components</definition>
+        <argsstring></argsstring>
+        <name>components</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/run-the-project.md.txt" line="14" column="9" bodyfile="_build/html/_sources/_docs/run-the-project.md.txt" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="run-the-project_8md_8txt_1a68164347ab46eb3181eaf10b0c98402a" prot="public" static="no" mutable="no">
+        <type>run <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> see <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="test-the-project_8md_8txt_1ac40523e666181e2e93d2002e9503682f" kindref="member">testing</ref> procedures you can find in <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rest-directives_8md_8txt_1adb81e9bf9520066dfb32d5594e56e029" kindref="member">documentation</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> another one <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> output from <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> mission manager all <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> without <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> mission manager <ref refid="test-the-project_8md_8txt_1abb609fa085002db88d69fb272ea20359" kindref="member">bash</ref> roslaunch <ref refid="robocluedo__mission__manager_2index_8rst_8txt_1ac5c617428e54eb96fd9f93cad3dab939" kindref="member">robocluedo_mission_manager</ref> run_components_final launch dev null <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> shell will show <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> output from <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> mission</type>
+        <definition>run the see the testing procedures you can find in the documentation and another one for the output from the mission manager all the without the mission manager bash roslaunch robocluedo_mission_manager run_components_final launch dev null the shell will show the output from the mission manager</definition>
+        <argsstring></argsstring>
+        <name>manager</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/_docs/run-the-project.md.txt" line="23" column="49" bodyfile="_build/html/_sources/_docs/run-the-project.md.txt" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2" refid="run-the-project_8md_8txt_1af28585d1b8425ad216f3f7aee99ccb81" refkind="member"><highlight class="normal">(run-<ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref>-<ref refid="run-the-project_8md_8txt_1af28585d1b8425ad216f3f7aee99ccb81" kindref="member">project</ref>)=</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">#<sp/>HOW<sp/>TO<sp/>Run<sp/>RCL#2<sp/>Project</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">```{seealso}</highlight></codeline>
+<codeline lineno="7"><highlight class="normal">If<sp/>something<sp/>don</highlight><highlight class="stringliteral">&apos;t<sp/>work,<sp/>see<sp/>the<sp/>testing<sp/>procedures<sp/>you<sp/>can<sp/>find<sp/>in<sp/>the<sp/>documentation<sp/>here:<sp/>{any}`project-testing`</highlight></codeline>
+<codeline lineno="8"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="9"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="10" refid="run-the-project_8md_8txt_1aa89a7b13fc847802032407af17d56522" refkind="member"><highlight class="stringliteral">Here<sp/>are<sp/>the<sp/>instructions<sp/>for<sp/>running<sp/>the<sp/>RCL#2<sp/>project.<sp/>I<sp/>suggest<sp/>you<sp/>to<sp/>use<sp/>at<sp/>least<sp/>two<sp/>shells:<sp/>one<sp/>for<sp/>the<sp/>&quot;useless<sp/>output&quot;,<sp/>and<sp/>another<sp/>one<sp/>for<sp/>the<sp/>output<sp/>from<sp/>the<sp/>mission<sp/>manager.<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="12"><highlight class="stringliteral">###<sp/>Shell<sp/>1</highlight></codeline>
+<codeline lineno="13"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="14" refid="run-the-project_8md_8txt_1a1947fbe60a3e52fae97c9ecf4881bc36" refkind="member"><highlight class="stringliteral">all<sp/>the<sp/>components,<sp/>without<sp/>the<sp/>`mission<sp/>manager`</highlight></codeline>
+<codeline lineno="15"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="16"><highlight class="stringliteral">```bash</highlight></codeline>
+<codeline lineno="17"><highlight class="stringliteral">roslaunch<sp/>robocluedo_mission_manager<sp/>run_components_final.launch<sp/>2&gt;/dev/null</highlight></codeline>
+<codeline lineno="18"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="19"><highlight class="stringliteral">```</highlight></codeline>
+<codeline lineno="20"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="21"><highlight class="stringliteral">###<sp/>Shell<sp/>2</highlight></codeline>
+<codeline lineno="22"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="23" refid="run-the-project_8md_8txt_1a68164347ab46eb3181eaf10b0c98402a" refkind="member"><highlight class="stringliteral">the<sp/>shell<sp/>will<sp/>show<sp/>the<sp/>output<sp/>from<sp/>the<sp/>mission<sp/>manager,<sp/>to<sp/>show<sp/>how<sp/>the<sp/>investigation<sp/>is<sp/>proceeding.<sp/></highlight></codeline>
+<codeline lineno="24"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="25"><highlight class="stringliteral">```bash</highlight></codeline>
+<codeline lineno="26"><highlight class="stringliteral">rosrun<sp/>robocluedo_mission_manager<sp/>mission_manager</highlight></codeline>
+<codeline lineno="27"><highlight class="stringliteral"></highlight></codeline>
+<codeline lineno="28"><highlight class="stringliteral">```</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/_docs/run-the-project.md.txt"/>
+  </compounddef>
+</doxygen>

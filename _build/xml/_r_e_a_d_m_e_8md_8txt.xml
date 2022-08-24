@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="_r_e_a_d_m_e_8md_8txt" kind="file" language="C++">
+    <compoundname>README.md.txt</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#<sp/>README<sp/>--<sp/>the<sp/>RoboCLuedo<sp/>Project<sp/>--<sp/>ROUND<sp/>2</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">*Francesco<sp/>Ganci*<sp/>-<sp/>S4143910<sp/>-<sp/><ref refid="_r_e_a_d_m_e-sphinx_8md_8txt_1ad8f07c2f1c4fa3c4356b2d91391bfc44" kindref="member">A</ref>.A.2021/2022</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal">&gt;<sp/>Compatible<sp/>With:</highlight></codeline>
+<codeline lineno="9"><highlight class="normal">&gt;<sp/>-<sp/>ROS1<sp/>noetic</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="11"><highlight class="normal">&gt;<sp/>Documentation:</highlight></codeline>
+<codeline lineno="12"><highlight class="normal">&gt;<sp/>-<sp/>[Official<sp/>Documentation<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>RCL#2](erl2)</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">&gt;<sp/>**Project<sp/>Setup**:</highlight></codeline>
+<codeline lineno="15"><highlight class="normal">&gt;<sp/>-<sp/>see<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>[Official<sp/>Docs](erl3setup)</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">&gt;<sp/>**Run<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>**:</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">&gt;<sp/>-<sp/>see<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>[Official<sp/>Docs](erl3run)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">&gt;<sp/>Starter<sp/>kit:</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">&gt;<sp/>-<sp/>[CarmineD8/erl2<sp/>on<sp/>GitHub](https:</highlight><highlight class="comment">//github.com/CarmineD8/erl2/)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">&gt;<sp/>Other<sp/>versions<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>RCL<sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>:</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">&gt;<sp/>-<sp/>[programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3<sp/>(Official<sp/>Release)<sp/>on<sp/>GitHub](https:</highlight><highlight class="comment">//github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">&gt;<sp/>-<sp/>[programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD<sp/>(old<sp/>version)<sp/>on<sp/>GitHub](https:</highlight><highlight class="comment">//github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal">&gt;<sp/>-<sp/>[programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1<sp/>on<sp/>GitHub](https:</highlight><highlight class="comment">//github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">&gt;<sp/>In<sp/>a<sp/>hurry?</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">&gt;<sp/>-<sp/>[See<sp/><ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref><sp/>in<sp/><ref refid="rosplan-kb_8md_8txt_1adb8fc4fb35d56559fca0e166438a9b78" kindref="member">action</ref>!](videoexample)</highlight></codeline>
+<codeline lineno="30"><highlight class="normal">&gt;<sp/></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal">---</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal">See<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>README<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref><sp/>inside<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>[Official<sp/>Documentation]()</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/README.md.txt"/>
+  </compounddef>
+</doxygen>

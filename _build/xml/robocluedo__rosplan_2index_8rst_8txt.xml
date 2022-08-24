@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="robocluedo__rosplan_2index_8rst_8txt" kind="file" language="C++">
+    <compoundname>index.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="robocluedo__rosplan_2index_8rst_8txt_1a3d6e605f6c390b153788cb62d325149c" prot="public" static="no" mutable="no">
+        <type>_pkg robocluedo</type>
+        <definition>_pkg robocluedo rosplan</definition>
+        <argsstring></argsstring>
+        <name>rosplan</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/index.rst.txt" line="2" column="16" bodyfile="_build/html/_sources/robocluedo_rosplan/index.rst.txt" bodystart="7" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="robocluedo__rosplan_2index_8rst_8txt_1a59bc68d0cc4903b703abc3505ff56aff" prot="public" static="no" mutable="no">
+        <type>_pkg robocluedo <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> includes a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="robocluedo__movement__controller_2__docs_2twist-keyboard_8md_8txt_1adfc9aab92fe800079c9707729e8057dc" kindref="member">mode</ref> of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> problem <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> RoboCLuedo has to solve a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> ROS implementation of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="robocluedo__rosplan_2index_8rst_8txt_1abde6e15e277151cc40efac68f16a3835" kindref="member">actions</ref> services to control <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rosplan-arch_8md_8txt_1ac0b0e1150e31702c746a6510e2447c3a" kindref="member">planning</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> execution of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> plan <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> is designed as a *standalone module <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref> opens a <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> client <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> assumes that something <ref refid="rosplan-kb_8md_8txt_1a0544c3fe466e421738dae463968b70ba" kindref="member">else</ref> han implemented <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> Here s a list of nodes inside <ref refid="test-the-project_8md_8txt_1afee713d73889cb3d217e1a01f719d24e" kindref="member">this</ref></type>
+        <definition>_pkg robocluedo it includes a PDDL mode of the problem the RoboCLuedo has to solve a PDDL ROS implementation of the PDDL actions services to control the planning and the execution of the plan it is designed as a* standalone module the system opens a service client and assumes that something else han implemented it Here s a list of nodes inside this package</definition>
+        <argsstring></argsstring>
+        <name>package</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/index.rst.txt" line="15" column="35" bodyfile="_build/html/_sources/robocluedo_rosplan/index.rst.txt" bodystart="13" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="robocluedo__rosplan_2index_8rst_8txt_1a013a6909327179cc5d1a26bf6d818a00" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_pkg robocluedo <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> includes a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="robocluedo__movement__controller_2__docs_2twist-keyboard_8md_8txt_1adfc9aab92fe800079c9707729e8057dc" kindref="member">mode</ref> of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> problem <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> RoboCLuedo has to solve a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> ROS implementation of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="robocluedo__rosplan_2index_8rst_8txt_1abde6e15e277151cc40efac68f16a3835" kindref="member">actions</ref> services to control <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rosplan-arch_8md_8txt_1ac0b0e1150e31702c746a6510e2447c3a" kindref="member">planning</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> execution of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> plan <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> is designed as a *standalone module <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref> opens a <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> client <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> assumes that something <ref refid="rosplan-kb_8md_8txt_1a0544c3fe466e421738dae463968b70ba" kindref="member">else</ref> han implemented <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> Here s a list of nodes inside <ref refid="test-the-project_8md_8txt_1afee713d73889cb3d217e1a01f719d24e" kindref="member">this</ref> with a little of <ref refid="update-navigation-manager_8md_8txt_1a6a1b47a49153e46f8b3edecbbce397c3" kindref="member">explaination</ref> about their functions Libraries **knowledge_base_tools feedback_manager h **implements a simple feedback <ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref> used <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> providing further informations to <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> pipeline <ref refid="update-navigation-manager_8md_8txt_1a13c0c6e7c6286840ae3f49678fb3ddc7" kindref="member">manager</ref> in <ref refid="update-navigation-manager_8md_8txt_1a21f92c8d8dde48f42bb4d76398f5449f" kindref="member">case</ref> of failure in applying one ROSPlan action **knowledge_base_tools <ref refid="classkb__interface" kindref="compound">kb_interface</ref> h **implements some basic <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> calls <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> nodes can be used to alter <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> ROSPlan knowledge <ref refid="robocluedo_8md_8txt_1a9018999adca630e3f5d8e224927f57bd" kindref="member">base</ref> ROSPlan Actions **collect_node cpp **implements <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref></type>
+        <definition>_pkg robocluedo it includes a PDDL mode of the problem the RoboCLuedo has to solve a PDDL ROS implementation of the PDDL actions services to control the planning and the execution of the plan it is designed as a* standalone module the system opens a service client and assumes that something else han implemented it Here s a list of nodes inside this with a little of explaination about their functions Libraries** knowledge_base_tools feedback_manager h** implements a simple feedback system used for providing further informations to the pipeline manager in case of failure in applying one ROSPlan action** knowledge_base_tools kb_interface h** implements some basic service calls the nodes can be used to alter the ROSPlan knowledge base ROSPlan Actions** collect_node cpp** implements the PDDL action</definition>
+        <argsstring>(collect ?wp)`` which first moves the manipulator inside the marker</argsstring>
+        <name>action</name>
+        <param>
+          <type>collect ?</type>
+          <declname>wp</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/index.rst.txt" line="27" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="robocluedo__rosplan_2index_8rst_8txt_1abde6e15e277151cc40efac68f16a3835" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>_pkg robocluedo <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> includes a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="robocluedo__movement__controller_2__docs_2twist-keyboard_8md_8txt_1adfc9aab92fe800079c9707729e8057dc" kindref="member">mode</ref> of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> problem <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> RoboCLuedo has to solve a <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> ROS implementation of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> actions services to control <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="rosplan-arch_8md_8txt_1ac0b0e1150e31702c746a6510e2447c3a" kindref="member">planning</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> execution of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> plan <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> is designed as a *standalone module <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref> opens a <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> client <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> assumes that something <ref refid="rosplan-kb_8md_8txt_1a0544c3fe466e421738dae463968b70ba" kindref="member">else</ref> han implemented <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> Here s a list of nodes inside <ref refid="test-the-project_8md_8txt_1afee713d73889cb3d217e1a01f719d24e" kindref="member">this</ref> with a little of <ref refid="update-navigation-manager_8md_8txt_1a6a1b47a49153e46f8b3edecbbce397c3" kindref="member">explaination</ref> about their functions Libraries **knowledge_base_tools feedback_manager h **implements a simple feedback <ref refid="robocluedo_8md_8txt_1ad39625d3f97633d655eb50c16dcf9e3a" kindref="member">system</ref> used <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> providing further informations to <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> pipeline <ref refid="update-navigation-manager_8md_8txt_1a13c0c6e7c6286840ae3f49678fb3ddc7" kindref="member">manager</ref> in <ref refid="update-navigation-manager_8md_8txt_1a21f92c8d8dde48f42bb4d76398f5449f" kindref="member">case</ref> of failure in applying one ROSPlan <ref refid="robocluedo__rosplan_2index_8rst_8txt_1a013a6909327179cc5d1a26bf6d818a00" kindref="member">action</ref> **knowledge_base_tools <ref refid="classkb__interface" kindref="compound">kb_interface</ref> h **implements some basic <ref refid="rosplan-kb_8md_8txt_1aca1ed6b4b0cfeb558dd5ec675c0bbec8" kindref="member">service</ref> calls <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> nodes can be used to alter <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> ROSPlan knowledge <ref refid="robocluedo_8md_8txt_1a9018999adca630e3f5d8e224927f57bd" kindref="member">base</ref> ROSPlan Actions **collect_node cpp **implements <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref> <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> then <ref refid="robocluedo_8md_8txt_1aba1fd21f449d47cc75e5ed32f0c9ec2e" kindref="member">moves</ref> back <ref refid="test-the-project_8md_8txt_1ab6843769f5f1e0819228ab2114a263cd" kindref="member">it</ref> to its home <ref refid="robocluedo_8md_8txt_1af4b24a0502bfd700917d31d9e210e851" kindref="member">position</ref> **move_to_node cpp **<ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> **move_to_center_node cpp **are implementations respectively of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="new-robocluedo_8md_8txt_1a68029dffeca3797688a7f9bae94f35bf" kindref="member">PDDL</ref></type>
+        <definition>_pkg robocluedo it includes a PDDL mode of the problem the RoboCLuedo has to solve a PDDL ROS implementation of the PDDL actions services to control the planning and the execution of the plan it is designed as a* standalone module the system opens a service client and assumes that something else han implemented it Here s a list of nodes inside this with a little of explaination about their functions Libraries** knowledge_base_tools feedback_manager h** implements a simple feedback system used for providing further informations to the pipeline manager in case of failure in applying one ROSPlan action** knowledge_base_tools kb_interface h** implements some basic service calls the nodes can be used to alter the ROSPlan knowledge base ROSPlan Actions** collect_node cpp** implements the PDDL and then moves back it to its home position** move_to_node cpp** and** move_to_center_node cpp** are implementations respectively of the PDDL actions</definition>
+        <argsstring>(move-to ?from ?to)`` and ``(move-to-center ?from)``</argsstring>
+        <name>actions</name>
+        <param>
+          <type>move-to ?from ?</type>
+          <declname>to</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_rosplan/index.rst.txt" line="29" column="90"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">..<sp/>_pkg-robocluedo-<ref refid="robocluedo__rosplan_2index_8rst_8txt_1a3d6e605f6c390b153788cb62d325149c" kindref="member">rosplan</ref>:</highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">PKG<sp/>DOCS<sp/>--<sp/>robocluedo_rosplan</highlight></codeline>
+<codeline lineno="5"><highlight class="normal">==========================================</highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7" refid="robocluedo__rosplan_2index_8rst_8txt_1a3d6e605f6c390b153788cb62d325149c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">package<sp/></highlight><highlight class="normal">is<sp/>in<sp/>charge<sp/>to<sp/>&quot;drive&quot;<sp/>ROSPlan<sp/>in<sp/>the<sp/>way<sp/>the<sp/>project<sp/>requires.<sp/>In<sp/>particular,<sp/>it<sp/>includes</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">-<sp/>a<sp/>PDDL<sp/>mode<sp/>of<sp/>the<sp/>problem<sp/>the<sp/>RoboCLuedo<sp/>has<sp/>to<sp/>solve</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">-<sp/>a<sp/>PDDL/ROS<sp/>implementation<sp/>of<sp/>the<sp/>PDDL<sp/>actions</highlight></codeline>
+<codeline lineno="11"><highlight class="normal">-<sp/>services<sp/>to<sp/>control<sp/>the<sp/>planning<sp/>and<sp/>the<sp/>execution<sp/>of<sp/>the<sp/>plan</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="robocluedo__rosplan_2index_8rst_8txt_1a59bc68d0cc4903b703abc3505ff56aff" refkind="member"><highlight class="normal">it<sp/>is<sp/>designed<sp/>as<sp/>a<sp/>*standalone<sp/>module*:<sp/>when<sp/>a<sp/>functionality<sp/>is<sp/>required,<sp/>the<sp/>system<sp/>opens<sp/>a<sp/>service<sp/>client<sp/>and<sp/>assumes<sp/>that<sp/>something<sp/>else<sp/>han<sp/>implemented<sp/>it.<sp/></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal">Here&apos;s<sp/>a<sp/>list<sp/>of<sp/>nodes<sp/>inside<sp/>this<sp/>package,<sp/>with<sp/>a<sp/>little<sp/>of<sp/>explaination<sp/>about<sp/>their<sp/>functions.</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">Libraries</highlight></codeline>
+<codeline lineno="18"><highlight class="normal">----------</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal">-<sp/>**knowledge_base_tools/feedback_manager.h**<sp/>implements<sp/>a<sp/>simple<sp/>feedback<sp/>system<sp/>used<sp/>for<sp/>providing<sp/>further<sp/>informations<sp/>to<sp/>the<sp/>pipeline<sp/>manager<sp/>in<sp/>case<sp/>of<sp/>failure<sp/>in<sp/>applying<sp/>one<sp/>ROSPlan<sp/>action.</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal">-<sp/>**knowledge_base_tools/kb_interface.h**<sp/>implements<sp/>some<sp/>basic<sp/>service<sp/>calls<sp/>the<sp/>nodes<sp/>can<sp/>be<sp/>used<sp/>to<sp/>alter<sp/>the<sp/>ROSPlan<sp/>knowledge<sp/>base<sp/></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal">ROSPlan<sp/>Actions</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">-----------------</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal">-<sp/>**collect_node.cpp**<sp/>implements<sp/>the<sp/>PDDL<sp/>action<sp/>``(collect<sp/>?wp<sp/>)``<sp/>which<sp/>first<sp/>moves<sp/>the<sp/>manipulator<sp/>inside<sp/>the<sp/>marker,<sp/>and<sp/>then<sp/>moves<sp/>back<sp/>it<sp/>to<sp/>its<sp/>home<sp/>position</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">-<sp/>**move_to_node.cpp**<sp/>and<sp/>**move_to_center_node.cpp**<sp/>are<sp/>implementations<sp/>respectively<sp/>of<sp/>the<sp/>PDDL<sp/>actions<sp/>``(move-to<sp/>?from<sp/>?to<sp/>)``<sp/>and<sp/>``(move-to-center<sp/>?from<sp/>)``,<sp/>that<sp/>make<sp/>use<sp/>of<sp/>the<sp/>navigation<sp/>system<sp/>to<sp/>move<sp/>the<sp/>robot<sp/>from<sp/>one<sp/>waypoint<sp/>to<sp/>another<sp/>one.<sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal">-<sp/>**replan_node.cpp**<sp/>implements<sp/>``(replan<sp/>)``<sp/>whose<sp/>the<sp/>only<sp/>purpose<sp/>is<sp/>to<sp/>clear<sp/>the<sp/>knowledge<sp/>base<sp/>before<sp/>starting.<sp/>The<sp/>action<sp/>is<sp/>called<sp/>at<sp/>the<sp/>beginning<sp/>of<sp/>the<sp/>plan<sp/>if<sp/>the<sp/>robot<sp/>is<sp/>in<sp/>state<sp/>``(dirty<sp/>)``<sp/>(see<sp/>:any:`pddl-model`<sp/>for<sp/>further<sp/>informations<sp/>about<sp/>how<sp/>the<sp/>PDDL<sp/>model<sp/>works)</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">Nodes</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">-----------------</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal">-<sp/>**rosplan_pipeline_manager.py**<sp/>is<sp/>meant<sp/>to<sp/>be<sp/>a<sp/>sort<sp/>of<sp/>*main<sp/>node*<sp/>for<sp/>the<sp/>package:<sp/>it<sp/>provides<sp/>services<sp/>for<sp/>managing<sp/>all<sp/>the<sp/>steps<sp/>of<sp/>the<sp/>ROSPlan<sp/>planning<sp/>approach,<sp/>starting<sp/>from<sp/>the<sp/>problem<sp/>loading<sp/>to<sp/>the<sp/>dispatch<sp/>phase<sp/>where<sp/>the<sp/>solution<sp/>is<sp/>put<sp/>into<sp/>practice.<sp/>The<sp/>node<sp/>also<sp/>provides<sp/>functionalities<sp/>for<sp/>explaining<sp/>any<sp/>unexpected<sp/>situation<sp/>it<sp/>could<sp/>happen<sp/>during<sp/>the<sp/>planning<sp/>process,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>particular<sp/>behaviours<sp/>of<sp/>the<sp/>planning<sp/>system<sp/>in<sp/>use<sp/>and<sp/>using<sp/>the<sp/>feedback<sp/>messages<sp/>from<sp/>the<sp/>actions.<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="38"><highlight class="normal">-<sp/>**kb_interface.cpp**<sp/>implements<sp/>a<sp/>set<sp/>of<sp/>basic<sp/>services<sp/>to<sp/>handle<sp/>the<sp/>state<sp/>of<sp/>the<sp/>ROSPlan<sp/>knowledge<sp/>base,<sp/>especially<sp/>before<sp/>starting<sp/>a<sp/>new<sp/>problem<sp/>instance.<sp/>The<sp/>node<sp/>is<sp/>made<sp/>to<sp/>hide<sp/>the<sp/>technical<sp/>particularities<sp/>of<sp/>the<sp/>PDDL<sp/>model,<sp/>trying<sp/>to<sp/>provide<sp/>a<sp/>handy,<sp/>&quot;standard&quot;<sp/>interface<sp/>to<sp/>the<sp/>other<sp/>nodes.<sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>:caption:<sp/>User<sp/>Documentation</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>./_docs</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"></highlight></codeline>
+<codeline lineno="46"><highlight class="comment"></highlight></codeline>
+<codeline lineno="47"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="48"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>UML<sp/>diagrams</highlight></codeline>
+<codeline lineno="49"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="50"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="51"><highlight class="comment"><sp/><sp/><sp/><sp/>./_uml/*</highlight></codeline>
+<codeline lineno="52"><highlight class="comment"></highlight></codeline>
+<codeline lineno="53"><highlight class="comment"></highlight></codeline>
+<codeline lineno="54"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="55"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>code<sp/>reference</highlight></codeline>
+<codeline lineno="56"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="57"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="58"><highlight class="comment"><sp/><sp/><sp/><sp/>./_code_reference/*</highlight></codeline>
+<codeline lineno="59"><highlight class="comment"></highlight></codeline>
+<codeline lineno="60"><highlight class="comment"></highlight></codeline>
+<codeline lineno="61"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="62"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Package<sp/>Code<sp/>Documentation</highlight></codeline>
+<codeline lineno="63"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="64"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="65"><highlight class="comment"><sp/><sp/><sp/><sp/>./src/*</highlight></codeline>
+<codeline lineno="66"><highlight class="comment"><sp/><sp/><sp/><sp/>./scripts/*</highlight></codeline>
+<codeline lineno="67"><highlight class="comment"></highlight></codeline>
+<codeline lineno="68"><highlight class="comment"></highlight></codeline>
+<codeline lineno="69"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="70"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Code<sp/>Examples</highlight></codeline>
+<codeline lineno="71"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="72"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="73"><highlight class="comment"><sp/><sp/><sp/><sp/>./_examples/*</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/robocluedo_rosplan/index.rst.txt"/>
+  </compounddef>
+</doxygen>

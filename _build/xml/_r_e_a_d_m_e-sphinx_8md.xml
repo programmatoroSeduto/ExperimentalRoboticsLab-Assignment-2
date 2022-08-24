@@ -441,7 +441,7 @@
 <codeline><highlight class="normal">MANIP_UNIT<sp/>--&gt;<sp/>MANIPULATION<sp/>:<sp/>convert<sp/>and<sp/>pass<sp/>request</highlight></codeline>
 <codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION<sp/>:<sp/>moveit<sp/>move()</highlight></codeline>
 <codeline><highlight class="normal">MANIP_UNIT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIP_UNIT<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">==<sp/>home<sp/>position<sp/>==</highlight></codeline>
 <codeline></codeline>
@@ -449,7 +449,7 @@
 <codeline><highlight class="normal">MANIP_UNIT<sp/>--&gt;<sp/>MANIPULATION<sp/>:<sp/>convert<sp/>and<sp/>pass<sp/>request</highlight></codeline>
 <codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION<sp/>:<sp/>moveit<sp/>move()</highlight></codeline>
 <codeline><highlight class="normal">MANIP_UNIT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIP_UNIT<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>

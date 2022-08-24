@@ -432,7 +432,7 @@ COLLECT --> MANIP_UNIT : send command near
 MANIP_UNIT --> MANIPULATION : convert and pass request
 hnote over MANIPULATION : moveit move()
 MANIP_UNIT <-- MANIPULATION : <i>success</i>
-COLLECT <-- MANIPULATION : <i>success</i>
+COLLECT <-- MANIP_UNIT : <i>success</i>
 
 == home position ==
 
@@ -440,7 +440,7 @@ COLLECT --> MANIP_UNIT : send command home
 MANIP_UNIT --> MANIPULATION : convert and pass request
 hnote over MANIPULATION : moveit move()
 MANIP_UNIT <-- MANIPULATION : <i>success</i>
-COLLECT <-- MANIPULATION : <i>success</i>
+COLLECT <-- MANIP_UNIT : <i>success</i>
 
 @enduml
 ```

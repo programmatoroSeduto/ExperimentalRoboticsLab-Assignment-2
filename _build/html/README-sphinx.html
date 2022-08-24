@@ -558,8 +558,8 @@ MOVE_TO &lt;- NAVIGATION_UNIT : response (RCL ROSPlan)
 <div class="section" id="manipulation-synchronous-manipulation">
 <h3>manipulation – synchronous manipulation<a class="headerlink" href="#manipulation-synchronous-manipulation" title="Permalink to this heading"></a></h3>
 <p class="plantuml">
-<object data="_images/plantuml-ca2400929d0e422c14048352161b524de151bfa2.svg" type="image/svg+xml" style="width:466px;height:514px;background:#FFFFFF;">
-<img src="_images/plantuml-ca2400929d0e422c14048352161b524de151bfa2.png" alt="&#64;startuml
+<object data="_images/plantuml-537b0086666eb82f1f869b36a89acc86785c0fae.svg" type="image/svg+xml" style="width:466px;height:514px;background:#FFFFFF;">
+<img src="_images/plantuml-537b0086666eb82f1f869b36a89acc86785c0fae.png" alt="&#64;startuml
 
 title Synchronous manipulation -- RCL#2
 
@@ -574,7 +574,7 @@ COLLECT --&gt; MANIP_UNIT : send command near
 MANIP_UNIT --&gt; MANIPULATION : convert and pass request
 hnote over MANIPULATION : moveit move()
 MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
-COLLECT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIP_UNIT : &lt;i&gt;success&lt;/i&gt;
 
 == home position ==
 
@@ -582,7 +582,7 @@ COLLECT --&gt; MANIP_UNIT : send command home
 MANIP_UNIT --&gt; MANIPULATION : convert and pass request
 hnote over MANIPULATION : moveit move()
 MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
-COLLECT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIP_UNIT : &lt;i&gt;success&lt;/i&gt;
 
 &#64;enduml"/>
 

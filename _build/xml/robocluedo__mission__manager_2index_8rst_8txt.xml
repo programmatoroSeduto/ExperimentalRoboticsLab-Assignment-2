@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
+  <compounddef id="robocluedo__mission__manager_2index_8rst_8txt" kind="file" language="C++">
+    <compoundname>index.rst.txt</compoundname>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="robocluedo__mission__manager_2index_8rst_8txt_1ac5c617428e54eb96fd9f93cad3dab939" prot="public" static="no" mutable="no">
+        <type>PKG DOCS</type>
+        <definition>PKG DOCS robocluedo_mission_manager</definition>
+        <argsstring></argsstring>
+        <name>robocluedo_mission_manager</name>
+        <initializer>==========================================
+
+<ref refid="test-the-project_8md_8txt_1afee713d73889cb3d217e1a01f719d24e" kindref="member">this</ref> is <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> center of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> architecture <ref refid="rosplan-kb_8md_8txt_1a70b081480885bd2f2b09ae4e492abc6c" kindref="member">for</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> robocluedo project. 
+
+The node provides three nodes:
+
+- **mission_manager.cpp** : <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> <ref refid="replan__node_8cpp_1a3c04138a5bfe5d72780bb7e82a18e627" kindref="member">main</ref> node of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> architecture</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_mission_manager/index.rst.txt" line="2" column="11" bodyfile="_build/html/_sources/robocluedo_mission_manager/index.rst.txt" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="robocluedo__mission__manager_2index_8rst_8txt_1a89c8133e64003845e3474574b6e8e2ca" prot="public" static="no" mutable="no">
+        <type><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> node which runs <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> investigation **manipulation_unit cpp <ref refid="update-navigation-manager_8md_8txt_1a15b7813e77b47a47a7537cf54bcdbc8a" kindref="member">and</ref> <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref> motion controllers of <ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref></type>
+        <definition>the node which runs the investigation** manipulation_unit cpp and the motion controllers of the system</definition>
+        <argsstring></argsstring>
+        <name>system</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="_build/html/_sources/robocluedo_mission_manager/index.rst.txt" line="11" column="36" bodyfile="_build/html/_sources/robocluedo_mission_manager/index.rst.txt" bodystart="11" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal">PKG<sp/>DOCS<sp/>--<sp/><ref refid="robocluedo__mission__manager_2index_8rst_8txt_1ac5c617428e54eb96fd9f93cad3dab939" kindref="member">robocluedo_mission_manager</ref></highlight></codeline>
+<codeline lineno="3" refid="robocluedo__mission__manager_2index_8rst_8txt_1ac5c617428e54eb96fd9f93cad3dab939" refkind="member"><highlight class="normal">==========================================</highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight><highlight class="keyword">this</highlight><highlight class="normal"><sp/>is<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>center<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>architecture<sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>robocluedo<sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>.<sp/></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal">The<sp/>node<sp/>provides<sp/>three<sp/>nodes:</highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal">-<sp/>**mission_manager.cpp**<sp/>:<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="examples__cluedo_8md_8txt_1a0055e76cf5ab9e6852445b755e20c0b6" kindref="member">main</ref><sp/>node<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>architecture;<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>node<sp/>which<sp/>runs<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>investigation</highlight></codeline>
+<codeline lineno="10"><highlight class="normal">-<sp/>**manipulation_unit.cpp**<sp/>:<sp/>pass<sp/>a<sp/>manipulation<sp/>command<sp/>from<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>ROSPlan<sp/>framework<sp/>to<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>real<sp/>manipulation<sp/><ref refid="robocluedo__movement__controller_2index_8rst_8txt_1ad6eb65e53cb239a17becfede80b61d9e" kindref="member">controller</ref></highlight></codeline>
+<codeline lineno="11" refid="robocluedo__mission__manager_2index_8rst_8txt_1a89c8133e64003845e3474574b6e8e2ca" refkind="member"><highlight class="normal">-<sp/>**navigation_unit.cpp**<sp/>acts<sp/>as<sp/>a<sp/>bridge<sp/>between<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>ROSPlan<sp/><ref refid="robocluedo__rosplan_2index_8rst_8txt_1abde6e15e277151cc40efac68f16a3835" kindref="member">actions</ref><sp/>requiring<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="update-navigation-manager_8md_8txt_1a47efa6955a16927c23af81912e4bc982" kindref="member">navigation</ref><sp/>capabilities<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="robocluedo__mission__manager_2index_8rst_8txt_1a89c8133e64003845e3474574b6e8e2ca" kindref="member">system</ref>,<sp/><ref refid="test-the-project_8md_8txt_1a7d7444888737118a1f271d6e87adf29b" kindref="member">and</ref><sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>motion<sp/>controllers<sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="robocluedo__mission__manager_2index_8rst_8txt_1a89c8133e64003845e3474574b6e8e2ca" kindref="member">system</ref>,<sp/>guaranteeing<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/>architectural<sp/>separation<sp/>between<sp/>different<sp/><ref refid="run-the-project_8md_8txt_1a1947fbe60a3e52fae97c9ecf4881bc36" kindref="member">components</ref><sp/>of<sp/><ref refid="cpp-docs-template_8md_8txt_1a8dfd148d0f4736cfd77e16fc5d110ad2" kindref="member">the</ref><sp/><ref refid="project-setup_8rst_8txt_1a9664c09caeb93152fd88363783d77731" kindref="member">project</ref>.</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>:caption:<sp/>User<sp/>Documentation</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/>./_docs</highlight><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="19"><highlight class="comment"></highlight></codeline>
+<codeline lineno="20"><highlight class="comment"></highlight></codeline>
+<codeline lineno="21"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="22"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>UML<sp/>diagrams</highlight></codeline>
+<codeline lineno="23"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="24"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="25"><highlight class="comment"><sp/><sp/><sp/><sp/>./_uml/*</highlight></codeline>
+<codeline lineno="26"><highlight class="comment"></highlight></codeline>
+<codeline lineno="27"><highlight class="comment"></highlight></codeline>
+<codeline lineno="28"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="29"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>code<sp/>reference</highlight></codeline>
+<codeline lineno="30"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="31"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="32"><highlight class="comment"><sp/><sp/><sp/><sp/>./_code_reference/*</highlight></codeline>
+<codeline lineno="33"><highlight class="comment"></highlight></codeline>
+<codeline lineno="34"><highlight class="comment"></highlight></codeline>
+<codeline lineno="35"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="36"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Package<sp/>Code<sp/>Documentation</highlight></codeline>
+<codeline lineno="37"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="38"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="39"><highlight class="comment"><sp/><sp/><sp/><sp/>./src/*</highlight></codeline>
+<codeline lineno="40"><highlight class="comment"><sp/><sp/><sp/><sp/>./scripts/*</highlight></codeline>
+<codeline lineno="41"><highlight class="comment"></highlight></codeline>
+<codeline lineno="42"><highlight class="comment"></highlight></codeline>
+<codeline lineno="43"><highlight class="comment">..<sp/>toctree::</highlight></codeline>
+<codeline lineno="44"><highlight class="comment"><sp/><sp/><sp/><sp/>:caption:<sp/>Code<sp/>Examples</highlight></codeline>
+<codeline lineno="45"><highlight class="comment"><sp/><sp/><sp/><sp/>:glob:</highlight></codeline>
+<codeline lineno="46"><highlight class="comment"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="47"><highlight class="comment"><sp/><sp/><sp/><sp/>./_examples/*</highlight></codeline>
+    </programlisting>
+    <location file="_build/html/_sources/robocluedo_mission_manager/index.rst.txt"/>
+  </compounddef>
+</doxygen>
