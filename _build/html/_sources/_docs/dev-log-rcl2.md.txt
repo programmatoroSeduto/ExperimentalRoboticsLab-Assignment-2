@@ -2351,6 +2351,18 @@ prima di passare a qualcosa di più strutturale, o anche alla scrittura del read
 	- (...a dopo)
 - **COMMI**: "code documentation (still working...)"
 
+---
+
+- rosplan
+	- manca l'elenco dei nodi di rosplan in entrambi i package ... devo aggiungerlo
+	- ... e documentazione del codice (speriamo in una cosa breve)
+	- iniziamo dalle actions
+		- collect (l'unica veramente nuova)
+		- (le altre le prendo pari pari dall'altro package)
+	- poi i nodi principali, che sono cambiati poco rispetto a erl2
+	- e infine le librerie ... ah no erano già documentati (che pacchia)
+- **COMMIT**: "code documentation (still working...)"
+
 
 ```{todo}
 **secondo assignment:**

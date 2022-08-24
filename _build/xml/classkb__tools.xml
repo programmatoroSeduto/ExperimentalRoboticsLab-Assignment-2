@@ -259,8 +259,8 @@
         <references refid="classkb__tools_1aef928170758f6785ee44daf81c814cc6" compoundref="kb__tools_8h" startline="197">debug_mode</references>
         <references refid="kb__tools_8h_1a14480e81381e195709ebd903dedd6c60" compoundref="kb__tools_8h" startline="30">SERVICE_QUERY</references>
         <references refid="classkb__tools_1a25b2a84da20ed8d1bb6cea6f07ef45f1" compoundref="kb__tools_8h" startline="200">success</references>
-        <referencedby refid="classkb__interface_1a339f9f7ba3d53f3f8e1143d6dbb6148b" compoundref="kb__interface_8cpp" startline="137" endline="188">kb_interface::cbk_replan</referencedby>
-        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="191" endline="272">kb_interface::cbk_update_goal</referencedby>
+        <referencedby refid="classkb__interface_1a339f9f7ba3d53f3f8e1143d6dbb6148b" compoundref="kb__interface_8cpp" startline="191" endline="242">kb_interface::cbk_replan</referencedby>
+        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="277" endline="358">kb_interface::cbk_update_goal</referencedby>
       </memberdef>
       <memberdef kind="function" id="classkb__tools_1a28db234bb29bece4e83b7a27201fa013" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -321,8 +321,8 @@
         <references refid="classkb__tools_1aef928170758f6785ee44daf81c814cc6" compoundref="kb__tools_8h" startline="197">debug_mode</references>
         <references refid="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" compoundref="kb__tools_8h" startline="38">SERVICE_KB_UPDATE</references>
         <references refid="classkb__tools_1a25b2a84da20ed8d1bb6cea6f07ef45f1" compoundref="kb__tools_8h" startline="200">success</references>
-        <referencedby refid="classkb__interface_1a339f9f7ba3d53f3f8e1143d6dbb6148b" compoundref="kb__interface_8cpp" startline="137" endline="188">kb_interface::cbk_replan</referencedby>
-        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="191" endline="272">kb_interface::cbk_update_goal</referencedby>
+        <referencedby refid="classkb__interface_1a339f9f7ba3d53f3f8e1143d6dbb6148b" compoundref="kb__interface_8cpp" startline="191" endline="242">kb_interface::cbk_replan</referencedby>
+        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="277" endline="358">kb_interface::cbk_update_goal</referencedby>
       </memberdef>
       <memberdef kind="function" id="classkb__tools_1a7fb58239d1af820464b79c37ed7baa54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -383,7 +383,7 @@
         <references refid="classkb__tools_1aef928170758f6785ee44daf81c814cc6" compoundref="kb__tools_8h" startline="197">debug_mode</references>
         <references refid="kb__tools_8h_1ac9ef9cc1af3aeeacaf4b06f1b54ece3a" compoundref="kb__tools_8h" startline="38">SERVICE_KB_UPDATE</references>
         <references refid="classkb__tools_1a25b2a84da20ed8d1bb6cea6f07ef45f1" compoundref="kb__tools_8h" startline="200">success</references>
-        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="191" endline="272">kb_interface::cbk_update_goal</referencedby>
+        <referencedby refid="classkb__interface_1a974022d8c24dc668a7a4563ec9dfdc18" compoundref="kb__interface_8cpp" startline="277" endline="358">kb_interface::cbk_update_goal</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">

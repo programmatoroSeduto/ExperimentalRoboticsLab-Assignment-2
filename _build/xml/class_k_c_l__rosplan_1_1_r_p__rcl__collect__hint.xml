@@ -17,7 +17,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="44" column="17" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="44" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="48" column="17" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="48" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1ad1a8fee5e7edb729072ef41f0eec5d95" prot="private" static="no" mutable="no">
         <type><ref refid="classaction__feedback__manager" kindref="compound">action_feedback_manager</ref></type>
@@ -31,7 +31,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="47" column="25" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="47" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="51" column="25" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="51" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a57e4a023b163cbd7a97a8add75b99c17" prot="private" static="no" mutable="no">
         <type>std::string</type>
@@ -46,7 +46,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="50" column="13" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="50" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="54" column="13" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="54" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a47db5ea007521c28d345beea156d0896" prot="private" static="no" mutable="no">
         <type>ros::ServiceClient</type>
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="53" column="20" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="53" bodyend="-1"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="57" column="20" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="57" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -80,10 +80,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="33" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="60" bodyend="78"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="37" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="60" bodyend="78"/>
         <references refid="classaction__feedback__manager_1a4052c9aaecc90f62b37d2b790a74f2bf" compoundref="feedback__manager_8h" startline="46">action_feedback_manager::action_name</references>
         <references refid="action__name_8h_1a5fd6c7de99fa188561b1bbb00cc7ea50" compoundref="action__name_8h" startline="15">ROSPLAN_ACTION_NAME</references>
-        <references refid="collect__hint_8h_1ad42f6ba1d41da3db4903f3dc93bda287" compoundref="collect__hint_8h" startline="23">SRV_MANIPULATION</references>
+        <references refid="collect__hint_8h_1ad42f6ba1d41da3db4903f3dc93bda287" compoundref="collect__hint_8h" startline="27">SRV_MANIPULATION</references>
       </memberdef>
       <memberdef kind="function" id="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a159d907fc401464367e142818f6521cc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="36" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="82" bodyend="85"/>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="40" column="1" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="82" bodyend="85"/>
       </memberdef>
       <memberdef kind="function" id="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a1875c3481b554787f348877ed63fd507" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -115,8 +115,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="39" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="93" bodyend="163"/>
-        <references refid="collect__hint_8h_1ad42f6ba1d41da3db4903f3dc93bda287" compoundref="collect__hint_8h" startline="23">SRV_MANIPULATION</references>
+        <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="43" column="6" bodyfile="robocluedo_rosplan/src/robocluedo_rosplan_actions/collect_hint.cpp" bodystart="93" bodyend="163"/>
+        <references refid="collect__hint_8h_1ad42f6ba1d41da3db4903f3dc93bda287" compoundref="collect__hint_8h" startline="27">SRV_MANIPULATION</references>
         <references refid="classaction__feedback__manager_1a8c9c45679421da4398b37b87eab9fe67" compoundref="feedback__manager_8cpp" startline="46" endline="50">action_feedback_manager::fb_failure</references>
         <references refid="classaction__feedback__manager_1a41faa38f3cea2f4c19fd2694368d4ff5" compoundref="feedback__manager_8cpp" startline="60" endline="64">action_feedback_manager::fb_hw_manipulation_failure</references>
       </memberdef>
@@ -147,7 +147,7 @@
         </childnode>
       </node>
     </collaborationgraph>
-    <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="29" column="1" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="28" bodyend="54"/>
+    <location file="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" line="33" column="1" bodyfile="robocluedo_rosplan/include/robocluedo_rosplan_actions/collect_hint.h" bodystart="32" bodyend="58"/>
     <listofallmembers>
       <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a57e4a023b163cbd7a97a8add75b99c17" prot="private" virt="non-virtual"><scope>KCL_rosplan::RP_rcl_collect_hint</scope><name>action_name</name></member>
       <member refid="class_k_c_l__rosplan_1_1_r_p__rcl__collect__hint_1a47db5ea007521c28d345beea156d0896" prot="private" virt="non-virtual"><scope>KCL_rosplan::RP_rcl_collect_hint</scope><name>cl_manip</name></member>

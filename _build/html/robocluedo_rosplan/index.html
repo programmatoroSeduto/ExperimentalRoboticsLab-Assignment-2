@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PKG DOCS – robocluedo_rosplan &mdash; RobotCLuedo #2 1.0.0 documentation</title>
+  <title>PKG DOCS – robocluedo_rosplan &mdash; RoboCLuedo #2 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -30,7 +30,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PDDL description – the new RoboCLuedo" href="_docs/new-robocluedo.html" />
+    <link rel="next" title="PDDL Design – the new RoboCLuedo PDDL model" href="_docs/new-robocluedo.html" />
     <link rel="prev" title="PKG DOCS – robocluedo_armor_msgs" href="../robocluedo_armor_msgs/index.html" /> 
 </head>
 
@@ -39,7 +39,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> RobotCLuedo #2
+            <a href="../index.html" class="icon icon-home"> RoboCLuedo #2
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -59,19 +59,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor/index.html">PKG DOCS – robocluedo armor</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_armor_msgs/index.html">PKG DOCS – robocluedo_armor_msgs</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">PKG DOCS – robocluedo_rosplan</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html">PDDL description – the new RoboCLuedo</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/pddl-and-rosplan.html">PDDL and ROSPlan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html">PDDL Design – the new RoboCLuedo PDDL model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/pddl-and-rosplan.html">DOCS – PDDL and ROSPlan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_uml/rosplan-arch.html">UML – robocluedo rosplan</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_uml/rosplan-kb.html">UML – ROSPlann Knowledge base – formal ROS description</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_uml/rosplan-pipeline.html">UML – ROSPlan pipeline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/action_collect_hint.html">CODE REFERENCE – ROSPlan action collect_hint</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/feedback_manager.html">CODE REFERENCE – class feedback manager</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_interface.html">CODE REFERENCE – node kb_interface</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_tools.html">CODE REFERENCE – class kb_tools</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to.html">CODE REFERENCE – ROSPlan action move_to</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to_center.html">CODE REFERENCE – ROSPlan action move_to_center</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/replan.html">CODE REFERENCE – ROSPlan action replan</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/rosplan_pipeline_manager.html">CODE REFERENCE – node rosplan_pipeline_manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/feedback_manager.html">CLASS feedback manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_interface.html">NODE kb_interface</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_tools.html">CLASS kb_tools</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to.html">ROSPlan action move_to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to_center.html">ROSPlan action move_to_center</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/replan.html">ROSPlan action replan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_code_reference/rosplan_pipeline_manager.html">NODE rosplan_pipeline_manager.py</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../robocluedo_rosplan_msgs/index.html">PKG DOCS – robocluedo_rosplan_msgs</a></li>
@@ -114,7 +113,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">RobotCLuedo #2</a>
+          <a href="../index.html">RoboCLuedo #2</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -141,24 +140,43 @@
 <li><p>services to control the planning and the execution of the plan</p></li>
 </ul>
 <p>it is designed as a <em>standalone module</em>: when a functionality is required, the system opens a service client and assumes that something else han implemented it.</p>
+<p>Here’s a list of nodes inside this package, with a little of explaination about their functions.</p>
+<div class="section" id="libraries">
+<h2>Libraries<a class="headerlink" href="#libraries" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>knowledge_base_tools/feedback_manager.h</strong> implements a simple feedback system used for providing further informations to the pipeline manager in case of failure in applying one ROSPlan action.</p></li>
+<li><p><strong>knowledge_base_tools/kb_interface.h</strong> implements some basic service calls the nodes can be used to alter the ROSPlan knowledge base</p></li>
+</ul>
+</div>
+<div class="section" id="rosplan-actions">
+<h2>ROSPlan Actions<a class="headerlink" href="#rosplan-actions" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>collect_node.cpp</strong> implements the PDDL action <code class="docutils literal notranslate"><span class="pre">(collect</span> <span class="pre">?wp</span> <span class="pre">)</span></code> which first moves the manipulator inside the marker, and then moves back it to its home position</p></li>
+<li><p><strong>move_to_node.cpp</strong> and <strong>move_to_center_node.cpp</strong> are implementations respectively of the PDDL actions <code class="docutils literal notranslate"><span class="pre">(move-to</span> <span class="pre">?from</span> <span class="pre">?to</span> <span class="pre">)</span></code> and <code class="docutils literal notranslate"><span class="pre">(move-to-center</span> <span class="pre">?from</span> <span class="pre">)</span></code>, that make use of the navigation system to move the robot from one waypoint to another one.</p></li>
+<li><p><strong>replan_node.cpp</strong> implements <code class="docutils literal notranslate"><span class="pre">(replan</span> <span class="pre">)</span></code> whose the only purpose is to clear the knowledge base before starting. The action is called at the beginning of the plan if the robot is in state <code class="docutils literal notranslate"><span class="pre">(dirty</span> <span class="pre">)</span></code> (see <a class="reference internal" href="_docs/new-robocluedo.html#pddl-model"><span class="std std-ref">PDDL Design – the new RoboCLuedo PDDL model</span></a> for further informations about how the PDDL model works)</p></li>
+</ul>
+</div>
+<div class="section" id="nodes">
+<h2>Nodes<a class="headerlink" href="#nodes" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>rosplan_pipeline_manager.py</strong> is meant to be a sort of <em>main node</em> for the package: it provides services for managing all the steps of the ROSPlan planning approach, starting from the problem loading to the dispatch phase where the solution is put into practice. The node also provides functionalities for explaining any unexpected situation it could happen during the planning process, taking into account the particular behaviours of the planning system in use and using the feedback messages from the actions.</p></li>
+<li><p><strong>kb_interface.cpp</strong> implements a set of basic services to handle the state of the ROSPlan knowledge base, especially before starting a new problem instance. The node is made to hide the technical particularities of the PDDL model, trying to provide a handy, “standard” interface to the other nodes.</p></li>
+</ul>
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">User Documentation</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_docs/new-robocluedo.html">PDDL description – the new RoboCLuedo</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html#differences-from-the-previous-version">differences from the previous version</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html#list-of-landmarks">list of Landmarks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#list-of-services-provided-by-the-kb-interface">list of services provided by the kb interface</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/new-robocluedo.html">PDDL Design – the new RoboCLuedo PDDL model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html#differences-from-the-previous-version">Differences from the previous version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html#a-list-of-landmarks">A list of Landmarks</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/new-robocluedo.html#list-of-actions">list of actions</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#replan">replan</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#collect">collect</a></li>
-<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#solve">solve</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#replan">REPLAN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#collect">COLLECT</a></li>
+<li class="toctree-l3"><a class="reference internal" href="_docs/new-robocluedo.html#solve">SOLVE</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/pddl-and-rosplan.html">PDDL and ROSPlan</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_docs/pddl-and-rosplan.html">DOCS – PDDL and ROSPlan</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_docs/pddl-and-rosplan.html#validation-with-parser">validation with Parser</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/pddl-and-rosplan.html#solution-with-popf">solution with popf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_docs/pddl-and-rosplan.html#specific-rules-for-the-pddl-in-ros-plan">Specific rules for the PDDL in ROS Plan</a></li>
@@ -204,47 +222,42 @@
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">code reference</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/action_collect_hint.html">CODE REFERENCE – ROSPlan action collect_hint</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/action_collect_hint.html#action-header">Action Header</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/action_collect_hint.html#action-implementation">Action Implementation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="_code_reference/action_collect_hint.html#node-implementation">Node implementation</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/feedback_manager.html">CODE REFERENCE – class feedback manager</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/feedback_manager.html">CLASS feedback manager</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/feedback_manager.html#header">Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/feedback_manager.html#implementation">Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/kb_interface.html">CODE REFERENCE – node kb_interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/kb_tools.html">CODE REFERENCE – class kb_tools</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/kb_interface.html">NODE kb_interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/kb_tools.html">CLASS kb_tools</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_tools.html#header">Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/kb_tools.html#implementation">Implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/move_to.html">CODE REFERENCE – ROSPlan action move_to</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/move_to.html">ROSPlan action move_to</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to.html#action-header">Action Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to.html#action-implementation">Action Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to.html#node-implementation">Node implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/move_to_center.html">CODE REFERENCE – ROSPlan action move_to_center</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/move_to_center.html">ROSPlan action move_to_center</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to_center.html#action-header">Action Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to_center.html#action-implementation">Action Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/move_to_center.html#node-implementation">Node implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/replan.html">CODE REFERENCE – ROSPlan action replan</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/replan.html">ROSPlan action replan</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/replan.html#action-header">Action Header</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/replan.html#action-implementation">Action Implementation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="_code_reference/replan.html#node-implementation">Node implementation</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="_code_reference/rosplan_pipeline_manager.html">CODE REFERENCE – node rosplan_pipeline_manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_code_reference/rosplan_pipeline_manager.html">NODE rosplan_pipeline_manager.py</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 </div>
 <div class="toctree-wrapper compound">
+</div>
 </div>
 </div>
 
@@ -253,7 +266,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../robocluedo_armor_msgs/index.html" class="btn btn-neutral float-left" title="PKG DOCS – robocluedo_armor_msgs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="_docs/new-robocluedo.html" class="btn btn-neutral float-right" title="PDDL description – the new RoboCLuedo" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="_docs/new-robocluedo.html" class="btn btn-neutral float-right" title="PDDL Design – the new RoboCLuedo PDDL model" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

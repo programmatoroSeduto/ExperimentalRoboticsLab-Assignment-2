@@ -2216,6 +2216,18 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(...a<sp/>dopo)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>**COMMI**:<sp/>&quot;code<sp/>documentation<sp/>(still<sp/>working...)&quot;</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">-<sp/>rosplan</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>manca<sp/>l&apos;elenco<sp/>dei<sp/>nodi<sp/>di<sp/>rosplan<sp/>in<sp/>entrambi<sp/>i<sp/>package<sp/>...<sp/>devo<sp/>aggiungerlo</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>documentazione<sp/>del<sp/>codice<sp/>(speriamo<sp/>in<sp/>una<sp/>cosa<sp/>breve)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>iniziamo<sp/>dalle<sp/>actions</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>collect<sp/>(l&apos;unica<sp/>veramente<sp/>nuova)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(le<sp/>altre<sp/>le<sp/>prendo<sp/>pari<sp/>pari<sp/>dall&apos;altro<sp/>package)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>poi<sp/>i<sp/>nodi<sp/>principali,<sp/>che<sp/>sono<sp/>cambiati<sp/>poco<sp/>rispetto<sp/>a<sp/>erl2</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>infine<sp/>le<sp/>librerie<sp/>...<sp/>ah<sp/>no<sp/>erano<sp/>già<sp/>documentati<sp/>(che<sp/>pacchia)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;code<sp/>documentation<sp/>(still<sp/>working...)&quot;</highlight></codeline>
+<codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{todo}</highlight></codeline>
 <codeline><highlight class="normal">**secondo<sp/>assignment:**</highlight></codeline>

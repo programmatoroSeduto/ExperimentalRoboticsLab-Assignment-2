@@ -8,7 +8,7 @@
         <definition>string conf.project</definition>
         <argsstring></argsstring>
         <name>project</name>
-        <initializer>=  &apos;RobotCLuedo #2&apos;</initializer>
+        <initializer>=  &apos;RoboCLuedo #2&apos;</initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>

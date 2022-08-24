@@ -1,5 +1,5 @@
 
-RCL -- the RoboCLuedo Project - part 2
+RCL#2 -- the RoboCLuedo Project
 ========================================
 
 *here we go again*

@@ -4,6 +4,10 @@
 * @file collect_hint.h
 * @brief ROSPlan action implementation
 * 
+* This node implements the action (collect ?wp ) used for taking a clue
+* from a marker. It performs a simple behaviour: move down the arm to touch 
+* the marker, wait, and finally move the arm bask to the home position. 
+* 
 * @authors Francesco Ganci
 * @version v1.0
 * 
