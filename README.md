@@ -5,9 +5,14 @@
 
 ---
 
-> Compatible With:
-> - ROS1 noetic
+**See the README of the project inside the [Official Documentation](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/README-sphinx.html)**
+
+---
+ 
 > 
+> Video demo
+> - [**VIDEO DEMO**](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2/blob/video-demo/rcl2-demo.mp4)
+>
 > Documentation:
 > - [Official Documentation for RCL#2](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/)
 > 
@@ -23,12 +28,6 @@
 > Other versions of the RCL project:
 > - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3 (Official Release) on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3)
 > - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD (old version) on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2-OLD.git)
-> - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1 on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)
-> 
-> In a hurry?
-> - [See it in action! VIDEO DEMO](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2/blob/video-demo/rcl2-demo.mp4)
-> 
+> - [programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1 on GitHub](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git) 
 
 ---
-
-See the README of the project inside the [Official Documentation](https://programmatoroseduto.github.io/ExperimentalRoboticsLab-Assignment-2/README-sphinx.html)
