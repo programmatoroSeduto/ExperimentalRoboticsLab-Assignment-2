@@ -8,11 +8,18 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>RoboCLuedo<sp/>--<sp/>Development<sp/>Log</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>RCL#2<sp/>LOG<sp/>--<sp/>development<sp/>log</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{toctree}</highlight></codeline>
-<codeline><highlight class="normal">./dev-log.md</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Indice<sp/></highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">./dev-log-rcl2.md</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>[plantUML<sp/>online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>[un<sp/>altro<sp/>editor<sp/>motlo<sp/>carino<sp/>per<sp/>PlantText](https://www.planttext.com/)</highlight></codeline>
@@ -2379,32 +2386,7 @@
 <codeline><highlight class="normal">-<sp/>prima<sp/>meglio<sp/>controllare<sp/>i<sp/>packages<sp/>per<sp/>l&apos;ultima<sp/>volta</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>metto<sp/>a<sp/>posto<sp/>un<sp/>attimo<sp/>la<sp/>homepage</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>*e<sp/>finalmente<sp/>l&apos;ultimo<sp/>readme*</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{todo}</highlight></codeline>
-<codeline><highlight class="normal">**secondo<sp/>assignment:**</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>importare<sp/>la<sp/>documentazione<sp/>di<sp/>aRMOR<sp/>finale<sp/>dal<sp/>terzo<sp/>assignment</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>la<sp/>documentazione<sp/>del<sp/>package<sp/>rosplan<sp/>può<sp/>essere<sp/>riportata<sp/>pari<sp/>pari<sp/>nell&apos;assignment<sp/>2,<sp/>perchè<sp/>tanto<sp/>è<sp/>identica</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>di<sp/>rosplan</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>copiare<sp/>per<sp/>intero<sp/>rosplan-arch.md</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>qualcosa<sp/>di<sp/>specifico<sp/>da<sp/>inserire<sp/>in<sp/>questo<sp/>documento?</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiornare<sp/>la<sp/>documentazione<sp/>per<sp/>il<sp/>vecchio<sp/>robot</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>mission<sp/>manager</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>quanto<sp/>riguarda<sp/>la<sp/>documentazione<sp/>del<sp/>mission<sp/>manager<sp/>main,<sp/>la<sp/>documentazione<sp/>cambia<sp/>di<sp/>pochissimo</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>casomai,<sp/>indica<sp/>quali<sp/>differenze<sp/>ci<sp/>sono<sp/>tra<sp/>i<sp/>due<sp/>assignment</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>documentazione<sp/>del<sp/>manipulation<sp/>manager<sp/>cambia</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>anche<sp/>quella<sp/>della<sp/>navigation<sp/>unit<sp/>(usa<sp/>un<sp/>algoritmo<sp/>diverso)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>elimina<sp/>le<sp/>cartelle<sp/>inutilizzate<sp/>su<sp/>esempi<sp/>e<sp/>tutto<sp/>il<sp/>resto<sp/>(se<sp/>non<sp/>servono,<sp/>eliminale)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>verificare<sp/>che<sp/>tutte<sp/>le<sp/>pagine<sp/>ausiliarie<sp/>abbiano<sp/>la<sp/>loro<sp/>TOCtree<sp/>interna,<sp/>specie<sp/>quando<sp/>sono<sp/>lunghe<sp/>pagine</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">lavoro<sp/>conclusivo<sp/>(entrambi<sp/>gli<sp/>assignment):</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiustare<sp/>i<sp/>link<sp/>(ora<sp/>che<sp/>sai<sp/>linkare<sp/>le<sp/>pagine<sp/>in<sp/>markdown...)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>creare<sp/>un<sp/>nuovo<sp/>branch<sp/>su<sp/>ognuno<sp/>dei<sp/>due<sp/>progetti<sp/>per<sp/>github<sp/>pages</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>e<sp/>creare<sp/>uno<sp/>script<sp/>che<sp/>permetta<sp/>di<sp/>aggiornare<sp/>la<sp/>documentazione</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>infine,<sp/>*cancella<sp/>la<sp/>documentazione<sp/>dalla<sp/>repo<sp/>principale*</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;finally&quot;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>

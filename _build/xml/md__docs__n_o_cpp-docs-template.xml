@@ -6,7 +6,7 @@
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md82">
+<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md94">
 <title>conventions</title>
 <para><itemizedlist>
 <listitem><para>the header contains the big part of the documentation</para>
@@ -17,7 +17,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md83">
+<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md95">
 <title>file documentation</title>
 <para>documentation of a node or a library.</para>
 <para><itemizedlist>
@@ -26,7 +26,7 @@
 </listitem><listitem><para>remember to use <computeroutput>\ref</computeroutput> when you&apos;re referring to a name of the code</para>
 </listitem></itemizedlist>
 </para>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md84">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md96">
 <title>Header documentation / node documentation</title>
 <para><bold>use this both for nodes and for header files</bold></para>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
@@ -122,7 +122,7 @@
 <codeline><highlight class="normal"><sp/>***********************************************/</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md85">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md97">
 <title>Cpp file documentation</title>
 <para>this file simply makes a reference to the header.</para>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
@@ -141,9 +141,9 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md86">
+<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md98">
 <title>Code Elements Documentation</title>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md87">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md99">
 <title>naive doc</title>
 <para>the most free template.</para>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
@@ -155,7 +155,7 @@
 <codeline><highlight class="normal"><sp/>***********************************************/</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md88">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md100">
 <title>classical function documentation</title>
 <para>use this also for class methods!</para>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
@@ -171,7 +171,7 @@
 <codeline><highlight class="normal"><sp/>***********************************************/</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md89">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md101">
 <title>MAIN FUNCTION documentation</title>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/><sp/></highlight></codeline>
@@ -182,7 +182,7 @@
 <codeline><highlight class="normal"><sp/>***********************************************/</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md90">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md102">
 <title>service implementation documentation</title>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
 <codeline><highlight class="normal"><sp/>*<sp/><sp/></highlight></codeline>
@@ -198,7 +198,7 @@
 <codeline><highlight class="normal"><sp/>***********************************************/</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md91">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md103">
 <title>publisher-callback documentation</title>
 <para>this template can be used to document a function callback which also publishes something.</para>
 <para><programlisting filename=".html"><codeline><highlight class="normal">/********************************************//**</highlight></codeline>
@@ -216,17 +216,17 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md92">
+<sect1 id="md__docs__n_o_cpp-docs-template_1autotoc_md104">
 <title>useful doxygen statements</title>
 <para>see <ulink url="https://www.doxygen.nl/manual/commands.html">doxygen statements</ulink></para>
 <para>see also <ulink url="https://www.oracle.com/it/technical-resources/articles/java/javadoc-tool.html">javadoc official giude</ulink></para>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md93">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md105">
 <title>TODO remarks</title>
 <para><programlisting><codeline><highlight class="normal">@todo<sp/>something<sp/>still<sp/>to<sp/>do</highlight></codeline>
 <codeline><highlight class="normal">@bug<sp/>describe<sp/>the<sp/>bug<sp/>here<sp/>...</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md94">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md106">
 <title>annotations and remarks</title>
 <para><programlisting><codeline><highlight class="normal">\note</highlight></codeline>
 <codeline><highlight class="normal">...your<sp/>annotation...</highlight></codeline>
@@ -241,7 +241,7 @@
 <codeline><highlight class="normal">This<sp/>is<sp/>the<sp/>first<sp/>paragraph.</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md95">
+<sect2 id="md__docs__n_o_cpp-docs-template_1autotoc_md107">
 <title>warnings and limitations</title>
 <para><programlisting filename=".text"><codeline><highlight class="normal">@warning<sp/>this<sp/>is<sp/>a<sp/>warning</highlight></codeline>
 <codeline><highlight class="normal">@deprecated<sp/>...deprecation<sp/>notice<sp/>here...</highlight></codeline>

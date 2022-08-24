@@ -2,12 +2,19 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.17">
   <compounddef id="md__docs_dev-log-rcl2" kind="page">
     <compoundname>md__docs_dev-log-rcl2</compoundname>
-    <title>RoboCLuedo – Development Log</title>
+    <title>RCL#2 LOG – development log</title>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
-<para><programlisting filename=".toctree"><codeline><highlight class="normal">./dev-log.md</highlight></codeline>
+<para><hruler/>
+</para>
+<para><programlisting filename=".toctree"><codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">caption:<sp/>Indice<sp/></highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">./dev-log-rcl2.md</highlight></codeline>
 </programlisting></para>
+<para><hruler/>
+</para>
 <para><itemizedlist>
 <listitem><para><ulink url="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</ulink></para>
 </listitem><listitem><para><ulink url="https://www.planttext.com/">un altro editor motlo carino per PlantText</ulink></para>
@@ -21,7 +28,7 @@
 <codeline><highlight class="normal">-<sp/>...fatto...</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>...</highlight></codeline>
 </programlisting></para>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md1">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md3">
 <title>08/08/2022 – setup della documentazione e project refactoring</title>
 <para>la versione precedente del progetto ha parecchi difetti:</para>
 <para><itemizedlist>
@@ -133,7 +140,7 @@
 <para><hruler/>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md6">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md8">
 <title>09/08/2022 – modello PDDL e ROSPlan package</title>
 <para><itemizedlist>
 <listitem><para>serve uno <emphasis>schema completo</emphasis> dell&apos;applicazione prima di iniziare<itemizedlist>
@@ -243,7 +250,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md9">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md11">
 <title>./solve_popf.sh</title>
 <para>Number of literals: 28 Constructing lookup tables: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] Post filtering unreachable actions: [10%] [20%] [30%] [40%] [50%] [60%] [70%] [80%] [90%] [100%] [110%] [120%] [130%] [140%] [150%] [160%] No analytic limits found, not considering limit effects of goal-only operators 93% of the ground temporal actions in this problem are compression-safe Initial heuristic = 8.000 b (7.000 | 0.990)b (6.000 | 0.990)b (5.000 | 2.972)b (4.000 | 5.945)b (3.000 | 6.936)b (2.000 | 7.927)b (1.000 | 8.918);;;; Solution Found ; States evaluated: 15 ; Cost: 9.909 ; Time 0.00 0.000: (replan) [0.990] 0.991: (move-to center wp1) [0.990] 1.982: (signal-collect-hint wp1) [0.990] 2.973: (collect-hint wp1) [0.990] 3.964: (move-to wp1 wp2) [0.990] 4.955: (move-to wp2 wp3) [0.990] 5.946: (signal-collect-hint wp3) [0.990] 6.937: (collect-hint wp3) [0.990] 7.928: (move-to wp3 wp4) [0.990] 8.919: (move-to-center wp4 center) [0.990] ```</para>
 <para>per il goal:</para>
@@ -452,14 +459,14 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md12">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md14">
 <title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
 <para>rosservice list </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md13">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md15">
 <title>/update_goal</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md14">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md16">
 <title>/replan</title>
 <para>``` azione di replan: ```bash rosservice call /replan &quot;{}&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
@@ -467,7 +474,7 @@
 <para>rosservice call /replan &quot;{}&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md15">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md17">
 <title>rostopic echo /rosplan_problem_interface/problem_instance -n 1 -p</title>
 <para>``` landmarks: ```bash rosservice call /update_goal &quot;landmark: 0&quot;</para>
 <para>rosservice call /rosplan_problem_interface/problem_generation_server</para>
@@ -525,19 +532,19 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md17">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md19">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md18">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md20">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md19">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md21">
 <title>shell 3</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md20">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md22">
 <title>shell 4</title>
 <para>rosservice list | grep robocluedo</para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: false, solve_problem: false, parse_plan: false, execute_plan: false, landmark: 0}&quot;</para>
@@ -552,7 +559,7 @@
 </para>
 <para><hruler/>
 </para>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md22">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md24">
 <title>10/08/2021 – rosplan pipeline manager – planning e replanning</title>
 <para>torniamo a lavorare sul pipeline manager, una funzionalità per volta. Ieri: l&apos;istanza del problema.</para>
 <para><itemizedlist>
@@ -574,7 +581,7 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md23">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md25">
 <title>A problem has been encountered, and the problem has been deemed unsolvable</title>
 <para>The goal fact: (not-is-center center)</para>
 <para>...cannot be found either in the initial state, as an add effect of an action, or as a timed initial literal. As such, the problem has been deemed unsolvable. ```<itemizedlist>
@@ -596,15 +603,15 @@
 </para>
 </sect2>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md24">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md26">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md25">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md27">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md26">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md28">
 <title>shell 3</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: false, execute_plan: false, landmark: 0}&quot; ```<itemizedlist>
@@ -743,21 +750,21 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md29">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md31">
 <title>shell 1</title>
 <para>roslaunch robocluedo_rosplan load_rosplan.launch</para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md30">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md32">
 <title>shell 2</title>
 <para>rosrun robocluedo_rosplan <ref refid="classkb__interface" kindref="compound">kb_interface</ref></para>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md31">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md33">
 <title>shell 3 (not with simulated actions)</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md32">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md34">
 <title>rosrun robocluedo_rosplan rosplan_simulated_motion_system.py</title>
 </sect1>
-<sect1 id="md__docs_dev-log-rcl2_1autotoc_md33">
+<sect1 id="md__docs_dev-log-rcl2_1autotoc_md35">
 <title>shell 4</title>
 <para>rosrun robocluedo_rosplan <ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></para>
 <para>rosservice call /robocluedo/pipeline_manager &quot;{load_problem: true, solve_problem: true, parse_plan: true, execute_plan: true, landmark: 2}&quot; ```<itemizedlist>
@@ -772,7 +779,7 @@
 </para>
 <para><hruler/>
 </para>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md35">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md37">
 <title>11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</title>
 <para>anzitutto, vorrei lavorare sulle issue di ieri: il fatto che la sequenza di landmark che mi aspetto non funzioni come si deve è un problema grave che va risolto al più presto.</para>
 <para><itemizedlist>
@@ -1053,7 +1060,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md40">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md42">
 <title>12/08/2022 – ancora sul movement controller</title>
 <para><itemizedlist>
 <listitem><para>anzitutto, i lavori noiosi:<itemizedlist>
@@ -1302,7 +1309,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md47">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md49">
 <title>13/08/2022 – mission manager – module testing – test completo</title>
 <para>implementazione del nodo main dell&apos;architettura (fatto questo si passa al testing e si impacchetta tutto)</para>
 <para><itemizedlist>
@@ -1607,7 +1614,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md54">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md56">
 <title>14/08/2022 – prova del sistema completo</title>
 <para>debug del mission manager</para>
 <para><itemizedlist>
@@ -2007,7 +2014,7 @@
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md57">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md59">
 <title>15/08/2022 – ultime issues – documentazione del codice e deploy</title>
 <para>anzitutto, un piccolo elenco di quello che devo fare per il deployment:</para>
 <para><itemizedlist>
@@ -2099,171 +2106,204 @@
 <para><bold>topics</bold>:</para>
 <para>`<computeroutput> </computeroutput>`  `<computeroutput>\</computeroutput> <programlisting><codeline><highlight class="normal">**services:**</highlight></codeline>
 </programlisting></para>
-<para>`<computeroutput>\</computeroutput>  `<computeroutput>\</computeroutput> <programlisting><codeline><highlight class="normal">-<sp/>iniziamo<sp/>dal<sp/>package<sp/>di<sp/>aRMOR<sp/>e<sp/>armor<sp/>msgs</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>delle<sp/>interfacce</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>c&apos;è<sp/>anche<sp/>un<sp/>giga<sp/>UML<sp/>per<sp/>aRMOR,<sp/>direi<sp/>che<sp/>siamo<sp/>soddisfatti</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mancano<sp/>gli<sp/>esempi,<sp/>che<sp/>mi<sp/>tocca<sp/>riconvertire<sp/>da<sp/>Doxygen<sp/>a<sp/>Sphinx</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>peccato<sp/>però,<sp/>lo<sp/>stile<sp/>di<sp/>Doxygen<sp/>mi<sp/>piaceva<sp/>abbastanza<sp/>...<sp/>graficamente<sp/>orrendo,<sp/>ma<sp/>metteva<sp/>i<sp/>link<sp/>belli<sp/>sistemati<sp/>in<sp/>automatico</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>serve<sp/>anche<sp/>un<sp/>documento<sp/>in<sp/>cui<sp/>trascrivere<sp/>i<sp/>comandi<sp/>aRMOR<sp/>dal<sp/>module<sp/>testing</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ora<sp/>manca<sp/>solo<sp/>la<sp/>documentazione<sp/>del<sp/>codice,<sp/>che<sp/>peraltro<sp/>è<sp/>già<sp/>fatta:<sp/>devo<sp/>solo<sp/>espanderla</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>se<sp/>non<sp/>ricordo<sp/>male,<sp/>avevo<sp/>scritto<sp/>anche<sp/>delle<sp/>informazioni<sp/>su<sp/>come<sp/>configurare<sp/>il<sp/>componente...<sp/>al<sp/>vecchio<sp/>progetto!</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>mi<sp/>sono<sp/>accorto<sp/>che<sp/>nel<sp/>package<sp/>erano<sp/>rimasti<sp/>dei<sp/>vecchi<sp/>parametri<sp/>...<sp/>togliendoli<sp/>non<sp/>esploder<sp/>aRMOR,<sp/>vero?<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>ok<sp/>ha<sp/>funzionato<sp/>tutto,<sp/>quindi<sp/>quei<sp/>parametri<sp/>erano<sp/>inutili<sp/>qui</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>posso<sp/>anche<sp/>eliminare<sp/>i<sp/>file<sp/>contenenti<sp/>gli<sp/>items<sp/>(la<sp/>cartella<sp/>cluedo<sp/>items)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>e<sp/>con<sp/>aRMOR<sp/>abbiamo<sp/>chiuso!</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(armor<sp/>documentation)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">meglio<sp/>fare<sp/>quello<sp/>che<sp/>so<sp/>di<sp/>non<sp/>dover<sp/>andare<sp/>a<sp/>ritoccare<sp/>nel<sp/>terzo<sp/>assignment:<sp/>devo<sp/>fare<sp/>solo<sp/>le<sp/>cose<sp/>su<sp/>cui<sp/>so<sp/>che<sp/>non<sp/>ci<sp/>metterò<sp/>mai<sp/>più<sp/>mano</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>robot<sp/>urdf<sp/>documentazione</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...e<sp/>invece<sp/>direi<sp/>che<sp/>va<sp/>bene,<sp/>anche<sp/>se<sp/>il<sp/>robot<sp/>mostrato<sp/>è<sp/>ancora<sp/>quello<sp/>con<sp/>le<sp/>ruote<sp/>più<sp/>lontane<sp/>dal<sp/>centro</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>nello<sp/>user<sp/>manual<sp/>di<sp/>erl2<sp/>non<sp/>si<sp/>fa<sp/>riferimento<sp/>alle<sp/>funzionalità<sp/>di<sp/>sviluppo</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>le<sp/>aggiungo<sp/>ora</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>per<sp/>quanto<sp/>riguarda<sp/>i<sp/>file<sp/>worlds,<sp/>aspetterei<sp/>il<sp/>terzo<sp/>progetto<sp/>per<sp/>fare<sp/>qualunque<sp/>modifica:ç<sp/>ho<sp/>tutti<sp/>quei<sp/>file<sp/>world<sp/>da<sp/>provare<sp/>...<sp/>lo<sp/>farò<sp/>poi</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>--<sp/>&quot;deploy<sp/>(dependencies<sp/>documentation)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">il<sp/>mio<sp/>obiettivo<sp/>è<sp/>solo<sp/>di<sp/>*dare<sp/>una<sp/>ripulita*<sp/>prima<sp/>di<sp/>iniziare<sp/>ad<sp/>implementare<sp/>il<sp/>prossimo<sp/>assignment</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>direi<sp/>che<sp/>la<sp/>documentazione<sp/>riferita<sp/>ai<sp/>pacchetti<sp/>di<sp/>messaggi<sp/>...<sp/>non<sp/>serve,<sp/>a<sp/>meno<sp/>di<sp/>non<sp/>trovare<sp/>un<sp/>modo<sp/>per<sp/>forzare<sp/>Sphinx<sp/>ad<sp/>importarli<sp/>nella<sp/>documentazione,<sp/>il<sp/>che<sp/>sarebbe<sp/>veramente<sp/>molto<sp/>bello.<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*la<sp/>scomoda<sp/>domanda:<sp/>esiste<sp/>un<sp/>modo<sp/>per<sp/>importare<sp/>i<sp/>file<sp/>.yaml<sp/>come<sp/>si<sp/>fa<sp/>per<sp/>il<sp/>codice?*</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>è<sp/>interessante:<sp/>[sphinx](http://wiki.ros.org/Sphinx)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e<sp/>anche<sp/>questo:<sp/>[rosdoc](http://wiki.ros.org/rosdoc_lite)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>anche<sp/>questo<sp/>sembra<sp/>piuttosto<sp/>interessante<sp/>[qui](https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>**ma<sp/>nulla<sp/>di<sp/>convincente<sp/>finora**</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>questo<sp/>mi<sp/>sembra<sp/>la<sp/>soluzione<sp/>migliore:<sp/>[sphinxcontrob-yaml](https://pypi.org/project/sphinxcontrib-yaml/)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>proviamolo,<sp/>sembra<sp/>interessante</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>giusto<sp/>un<sp/>minimo<sp/>di<sp/>documentazione<sp/>preliminare,<sp/>che<sp/>non<sp/>guasta<sp/>mai</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>*momento<sp/>della<sp/>verità...*</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>logicamente<sp/>non<sp/>funziona</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>per<sp/>ora<sp/>*mi<sp/>arrendo*<sp/>,<sp/>ma<sp/>solo<sp/>*per<sp/>ora*</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**<sp/>:<sp/>&quot;deployment<sp/>(testing<sp/>autoyaml<sp/>...<sp/>not<sp/>working)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">dopo<sp/>questo<sp/>excursus<sp/>che<sp/>mi<sp/>ha<sp/>solo<sp/>fatto<sp/>venire<sp/>il<sp/>nervoso,<sp/>andiamo<sp/>avanti</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>ultime<sp/>cose<sp/>coi<sp/>package<sp/>per<sp/>i<sp/>messaggi<sp/>(sarebbe<sp/>bello<sp/>avere<sp/>un<sp/>modo<sp/>per<sp/>importare<sp/>i<sp/>file<sp/>yaml<sp/>dentro<sp/>alla<sp/>documentazione,<sp/>così<sp/>da<sp/>poter<sp/>documentare<sp/>anche<sp/>i<sp/>messaggi<sp/>senza<sp/>dover<sp/>fare<sp/>dell&apos;orrendo<sp/>copia<sp/>incolla)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>ultima<sp/>sistemata<sp/>ai<sp/>packages<sp/>coi<sp/>messaggi</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>codice<sp/>per<sp/>il<sp/>module<sp/>testing<sp/>(veramente<sp/>poca<sp/>roba)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...avevo<sp/>dimeticato<sp/>che<sp/>per<sp/>i<sp/>moduli<sp/>python<sp/>servisse<sp/>il<sp/>mocking...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>in<sp/>più<sp/>devi<sp/>aggiungere<sp/>i<sp/>percorsi<sp/>a<sp/>mano<sp/>in<sp/>sphinx</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>a<sp/>questo<sp/>punto<sp/>per<sp/>ora<sp/>facciamo<sp/>solo<sp/>la<sp/>generazione<sp/>delle<sp/>code<sp/>reference</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>movement<sp/>controller</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>rosplan</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(setup<sp/>code<sp/>docs)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>mi<sp/>sono<sp/>dimenticato<sp/>il<sp/>mission<sp/>manager!</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;deployment<sp/>(pkg<sp/>mission<sp/>manager<sp/>docs<sp/>setup)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>23/08/2022<sp/>--<sp/>todo</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>riconfigurazione<sp/>della<sp/>workspace<sp/>(prepariamoci<sp/>a<sp/>metterci<sp/>una<sp/>pietra<sp/>sopra)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>il<sp/>progetto<sp/>(fortunatamente)<sp/>funziona<sp/>ancora,<sp/>dopo<sp/>qualche<sp/>piccolo<sp/>problema<sp/>iniziale<sp/>con<sp/>catkin,<sp/>durato<sp/>poco<sp/>fortunatamente</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">In<sp/>piano<sp/>è<sp/>quello<sp/>di<sp/>prendere<sp/>la<sp/>documentazione<sp/>da<sp/>erl3<sp/>e<sp/>riadattarla<sp/>a<sp/>erl2<sp/>per<sp/>quanto<sp/>possibile,<sp/>modificando<sp/>solo<sp/>ed<sp/>esclusivamente<sp/>le<sp/>parti<sp/>realmente<sp/>diverte<sp/>tra<sp/>i<sp/>vari<sp/>progetti,<sp/>e<sp/>copiando<sp/>tutto<sp/>il<sp/>resto.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">direttamente<sp/>dal<sp/>terzo<sp/>assignment<sp/>(fortunatamente<sp/>concluso<sp/>...<sp/>nightly)<sp/>la<sp/>todo<sp/>list!</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>24/08/2022<sp/>--<sp/>documentazione</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">Il<sp/>piano<sp/>è<sp/>di<sp/>sfruttare<sp/>la<sp/>grande<sp/>somiglianza<sp/>tra<sp/>i<sp/>due<sp/>progetti<sp/>per<sp/>ridurre<sp/>la<sp/>mole<sp/>di<sp/>lavoro<sp/>per<sp/>la<sp/>documentazione.<sp/>direi<sp/>di<sp/>procedere<sp/>confrontando<sp/>man<sp/>mano<sp/>i<sp/>due<sp/>siti<sp/>della<sp/>documentazione<sp/>generati<sp/>con<sp/>sphinx,<sp/>e<sp/>decidere<sp/>di<sp/>volta<sp/>in<sp/>volta<sp/>cosa<sp/>fare.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>homepage!</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>project<sp/>setup<sp/>e<sp/>project<sp/>run</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>creazione<sp/>di<sp/>un<sp/>unico<sp/>launch<sp/>file<sp/>per<sp/>eseguire<sp/>il<sp/>progetto</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>del<sp/>module<sp/>testing<sp/>nel<sp/>suo<sp/>package</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">prima<sp/>di<sp/>passare<sp/>a<sp/>qualcosa<sp/>di<sp/>più<sp/>strutturale,<sp/>o<sp/>anche<sp/>alla<sp/>scrittura<sp/>del<sp/>readme,<sp/>mi<sp/>conviene<sp/>passare<sp/>in<sp/>rassegna<sp/>tutti<sp/>i<sp/>packages:</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>armor<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(importa<sp/>da<sp/>erl3,<sp/>tanto<sp/>è<sp/>pari<sp/>pari)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>dependencies</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>package<sp/>worlds</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>documentazione<sp/>del<sp/>package<sp/>worlds</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>aggiornamento<sp/>documentazione<sp/>oracolo<sp/>(c&apos;è<sp/>pochissimo<sp/>da<sp/>rivedere)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/>aggiornamento<sp/>documentazione<sp/>robot</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>i<sp/>file<sp/>yaml<sp/>nella<sp/>documentazione<sp/>li<sp/>aggiusterei<sp/>...<sp/>giusto<sp/>per<sp/>essere<sp/>sicuro</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>mission<sp/>manager</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>iniziamo<sp/>con<sp/>la<sp/>struttura<sp/>globale<sp/>del<sp/>package</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>diagrammi<sp/>UML<sp/>del<sp/>package<sp/>(prendi<sp/>quelli<sp/>di<sp/>erl3<sp/>e<sp/>modificali)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>il<sp/>diagramma<sp/>della<sp/>manipulation<sp/>unit<sp/>va<sp/>rifatto<sp/>da<sp/>capo<sp/>(me<sp/>lo<sp/>dovevo<sp/>aspettare)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>ora<sp/>la<sp/>documentazione<sp/>del<sp/>codice<sp/>(*can&apos;t<sp/>...<sp/>wait<sp/>for<sp/>it?*)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>manipulation<sp/>unit</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>navigation<sp/>unit</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>e<sp/>mission<sp/>manager<sp/>(izi<sp/>pizi)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>e<sp/>passiamo<sp/>al<sp/>movement<sp/>controller</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>mi<sp/>fa<sp/>&quot;piacere&quot;<sp/>notare<sp/>che<sp/>in<sp/>nessuno<sp/>degli<sp/>indici<sp/>dei<sp/>due<sp/>movement<sp/>controller<sp/>non<sp/>c&apos;è<sp/>l&apos;elenco<sp/>dei<sp/>nodi<sp/>...<sp/>**AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA**</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>li<sp/>scrivo<sp/>adesso</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>revisione<sp/>degli<sp/>UML<sp/>(dovrebbero<sp/>andare<sp/>bene<sp/>in<sp/>entrambe<sp/>le<sp/>versioni)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>non<sp/>avevo<sp/>rimosso<sp/>wall_follow<sp/>...<sp/>fatto</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>si<sp/>passa<sp/>alla<sp/>documentazione<sp/>del<sp/>codice</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>bug<sp/>m</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>go<sp/>to<sp/>point</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>manipulation<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>navigation</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>e<sp/>l&apos;ultima<sp/>fatica,<sp/>il<sp/>rosplan<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>documentazione<sp/>ausiliaria<sp/>e<sp/>struttura<sp/>del<sp/>package</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>(...a<sp/>dopo)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMI**:<sp/>&quot;code<sp/>documentation<sp/>(still<sp/>working...)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>rosplan</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>manca<sp/>l&apos;elenco<sp/>dei<sp/>nodi<sp/>di<sp/>rosplan<sp/>in<sp/>entrambi<sp/>i<sp/>package<sp/>...<sp/>devo<sp/>aggiungerlo</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>...<sp/>e<sp/>documentazione<sp/>del<sp/>codice<sp/>(speriamo<sp/>in<sp/>una<sp/>cosa<sp/>breve)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>iniziamo<sp/>dalle<sp/>actions</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>collect<sp/>(l&apos;unica<sp/>veramente<sp/>nuova)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>(le<sp/>altre<sp/>le<sp/>prendo<sp/>pari<sp/>pari<sp/>dall&apos;altro<sp/>package)</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>poi<sp/>i<sp/>nodi<sp/>principali,<sp/>che<sp/>sono<sp/>cambiati<sp/>poco<sp/>rispetto<sp/>a<sp/>erl2</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>infine<sp/>le<sp/>librerie<sp/>...<sp/>ah<sp/>no<sp/>erano<sp/>già<sp/>documentati<sp/>(che<sp/>pacchia)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>**COMMIT**:<sp/>&quot;code<sp/>documentation<sp/>(still<sp/>working...)&quot;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">---</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ci<sp/>avviciniamo<sp/>all&apos;ultima<sp/>revisione<sp/>del<sp/>readme</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>prima<sp/>meglio<sp/>controllare<sp/>i<sp/>packages<sp/>per<sp/>l&apos;ultima<sp/>volta</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>metto<sp/>a<sp/>posto<sp/>un<sp/>attimo<sp/>la<sp/>homepage</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>*e<sp/>finalmente<sp/>l&apos;ultimo<sp/>readme*</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{todo}</highlight></codeline>
-<codeline><highlight class="normal">**secondo<sp/>assignment:**</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>importare<sp/>la<sp/>documentazione<sp/>di<sp/>aRMOR<sp/>finale<sp/>dal<sp/>terzo<sp/>assignment</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>la<sp/>documentazione<sp/>del<sp/>package<sp/>rosplan<sp/>può<sp/>essere<sp/>riportata<sp/>pari<sp/>pari<sp/>nell&apos;assignment<sp/>2,<sp/>perchè<sp/>tanto<sp/>è<sp/>identica</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>di<sp/>rosplan</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>copiare<sp/>per<sp/>intero<sp/>rosplan-arch.md</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>c&apos;è<sp/>qualcosa<sp/>di<sp/>specifico<sp/>da<sp/>inserire<sp/>in<sp/>questo<sp/>documento?</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiornare<sp/>la<sp/>documentazione<sp/>per<sp/>il<sp/>vecchio<sp/>robot</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>documentazione<sp/>mission<sp/>manager</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>per<sp/>quanto<sp/>riguarda<sp/>la<sp/>documentazione<sp/>del<sp/>mission<sp/>manager<sp/>main,<sp/>la<sp/>documentazione<sp/>cambia<sp/>di<sp/>pochissimo</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>-<sp/>casomai,<sp/>indica<sp/>quali<sp/>differenze<sp/>ci<sp/>sono<sp/>tra<sp/>i<sp/>due<sp/>assignment</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>la<sp/>documentazione<sp/>del<sp/>manipulation<sp/>manager<sp/>cambia</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>e<sp/>anche<sp/>quella<sp/>della<sp/>navigation<sp/>unit<sp/>(usa<sp/>un<sp/>algoritmo<sp/>diverso)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>elimina<sp/>le<sp/>cartelle<sp/>inutilizzate<sp/>su<sp/>esempi<sp/>e<sp/>tutto<sp/>il<sp/>resto<sp/>(se<sp/>non<sp/>servono,<sp/>eliminale)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>verificare<sp/>che<sp/>tutte<sp/>le<sp/>pagine<sp/>ausiliarie<sp/>abbiano<sp/>la<sp/>loro<sp/>TOCtree<sp/>interna,<sp/>specie<sp/>quando<sp/>sono<sp/>lunghe<sp/>pagine</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">lavoro<sp/>conclusivo<sp/>(entrambi<sp/>gli<sp/>assignment):</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>aggiustare<sp/>i<sp/>link<sp/>(ora<sp/>che<sp/>sai<sp/>linkare<sp/>le<sp/>pagine<sp/>in<sp/>markdown...)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>creare<sp/>un<sp/>nuovo<sp/>branch<sp/>su<sp/>ognuno<sp/>dei<sp/>due<sp/>progetti<sp/>per<sp/>github<sp/>pages</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>e<sp/>creare<sp/>uno<sp/>script<sp/>che<sp/>permetta<sp/>di<sp/>aggiornare<sp/>la<sp/>documentazione</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>infine,<sp/>*cancella<sp/>la<sp/>documentazione<sp/>dalla<sp/>repo<sp/>principale*</highlight></codeline>
-</programlisting></para>
+<para>`<computeroutput>\</computeroutput>  <computeroutput>\` </computeroutput>`</para>
+<para><itemizedlist>
+<listitem><para>iniziamo dal package di aRMOR e armor msgs<itemizedlist>
+<listitem><para>documentazione delle interfacce</para>
+</listitem><listitem><para>ora c&apos;è anche un giga UML per aRMOR, direi che siamo soddisfatti</para>
+</listitem><listitem><para>mancano gli esempi, che mi tocca riconvertire da Doxygen a Sphinx<itemizedlist>
+<listitem><para>peccato però, lo stile di Doxygen mi piaceva abbastanza ... graficamente orrendo, ma metteva i link belli sistemati in automatico</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e serve anche un documento in cui trascrivere i comandi aRMOR dal module testing</para>
+</listitem><listitem><para>ora manca solo la documentazione del codice, che peraltro è già fatta: devo solo espanderla</para>
+</listitem><listitem><para>se non ricordo male, avevo scritto anche delle informazioni su come configurare il componente... al vecchio progetto!</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>mi sono accorto che nel package erano rimasti dei vecchi parametri ... togliendoli non esploder aRMOR, vero?<itemizedlist>
+<listitem><para>ok ha funzionato tutto, quindi quei parametri erano inutili qui</para>
+</listitem><listitem><para>posso anche eliminare i file contenenti gli items (la cartella cluedo items)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e con aRMOR abbiamo chiuso!</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (armor documentation)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>meglio fare quello che so di non dover andare a ritoccare nel terzo assignment: devo fare solo le cose su cui so che non ci metterò mai più mano</para>
+<para><itemizedlist>
+<listitem><para>robot urdf documentazione<itemizedlist>
+<listitem><para>...e invece direi che va bene, anche se il robot mostrato è ancora quello con le ruote più lontane dal centro</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>nello user manual di erl2 non si fa riferimento alle funzionalità di sviluppo<itemizedlist>
+<listitem><para>le aggiungo ora</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per quanto riguarda i file worlds, aspetterei il terzo progetto per fare qualunque modifica:ç ho tutti quei file world da provare ... lo farò poi</para>
+</listitem><listitem><para><bold>COMMIT</bold> <ndash/> &quot;deploy (dependencies documentation)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>il mio obiettivo è solo di <emphasis>dare una ripulita</emphasis> prima di iniziare ad implementare il prossimo assignment</para>
+<para><itemizedlist>
+<listitem><para>direi che la documentazione riferita ai pacchetti di messaggi ... non serve, a meno di non trovare un modo per forzare Sphinx ad importarli nella documentazione, il che sarebbe veramente molto bello.<itemizedlist>
+<listitem><para><emphasis>la scomoda domanda: esiste un modo per importare i file .yaml come si fa per il codice?</emphasis><itemizedlist>
+<listitem><para>questo è interessante: <ulink url="http://wiki.ros.org/Sphinx">sphinx</ulink></para>
+</listitem><listitem><para>e anche questo: <ulink url="http://wiki.ros.org/rosdoc_lite">rosdoc</ulink></para>
+</listitem><listitem><para>anche questo sembra piuttosto interessante <ulink url="https://www.astro.rug.nl/~vogelaar/sphinx/build/html/index.html">qui</ulink></para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>ma nulla di convincente finora</bold></para>
+</listitem><listitem><para>questo mi sembra la soluzione migliore: <ulink url="https://pypi.org/project/sphinxcontrib-yaml/">sphinxcontrob-yaml</ulink><itemizedlist>
+<listitem><para>proviamolo, sembra interessante</para>
+</listitem><listitem><para>giusto un minimo di documentazione preliminare, che non guasta mai</para>
+</listitem><listitem><para><emphasis>momento della verità...</emphasis></para>
+</listitem><listitem><para>... e logicamente non funziona</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>per ora <emphasis>mi arrendo</emphasis> , ma solo <emphasis>per ora</emphasis></para>
+</listitem><listitem><para><bold>COMMIT</bold> : &quot;deployment (testing autoyaml ... not working)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>dopo questo excursus che mi ha solo fatto venire il nervoso, andiamo avanti</para>
+<para><itemizedlist>
+<listitem><para>ultime cose coi package per i messaggi (sarebbe bello avere un modo per importare i file yaml dentro alla documentazione, così da poter documentare anche i messaggi senza dover fare dell&apos;orrendo copia incolla)</para>
+</listitem><listitem><para>ultima sistemata ai packages coi messaggi</para>
+</listitem><listitem><para>documentazione del codice per il module testing (veramente poca roba)<itemizedlist>
+<listitem><para>...avevo dimeticato che per i moduli python servisse il mocking...</para>
+</listitem><listitem><para>... in più devi aggiungere i percorsi a mano in sphinx</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>a questo punto per ora facciamo solo la generazione delle code reference<itemizedlist>
+<listitem><para>movement controller</para>
+</listitem><listitem><para>rosplan</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (setup code docs)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>mi sono dimenticato il mission manager!</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;deployment (pkg mission manager docs setup)&quot;</para>
+</listitem></itemizedlist>
+</para>
 <para><hruler/>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md61">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md67">
+<title>23/08/2022 – todo</title>
+<para><itemizedlist>
+<listitem><para>riconfigurazione della workspace (prepariamoci a metterci una pietra sopra)</para>
+</listitem><listitem><para>il progetto (fortunatamente) funziona ancora, dopo qualche piccolo problema iniziale con catkin, durato poco fortunatamente</para>
+</listitem></itemizedlist>
+</para>
+<para>In piano è quello di prendere la documentazione da erl3 e riadattarla a erl2 per quanto possibile, modificando solo ed esclusivamente le parti realmente diverte tra i vari progetti, e copiando tutto il resto.</para>
+<para>direttamente dal terzo assignment (fortunatamente concluso ... nightly) la todo list!</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md69">
+<title>24/08/2022 – documentazione</title>
+<para>Il piano è di sfruttare la grande somiglianza tra i due progetti per ridurre la mole di lavoro per la documentazione. direi di procedere confrontando man mano i due siti della documentazione generati con sphinx, e decidere di volta in volta cosa fare.</para>
+<para><itemizedlist>
+<listitem><para>homepage!</para>
+</listitem><listitem><para>project setup e project run</para>
+</listitem><listitem><para>creazione di un unico launch file per eseguire il progetto</para>
+</listitem><listitem><para>documentazione del module testing nel suo package</para>
+</listitem></itemizedlist>
+</para>
+<para>prima di passare a qualcosa di più strutturale, o anche alla scrittura del readme, mi conviene passare in rassegna tutti i packages:</para>
+<para><itemizedlist>
+<listitem><para>armor<itemizedlist>
+<listitem><para>(importa da erl3, tanto è pari pari)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>dependencies<itemizedlist>
+<listitem><para>package worlds</para>
+</listitem><listitem><para>e documentazione del package worlds</para>
+</listitem><listitem><para>aggiornamento documentazione oracolo (c&apos;è pochissimo da rivedere) aggiornamento documentazione robot<itemizedlist>
+<listitem><para>i file yaml nella documentazione li aggiusterei ... giusto per essere sicuro</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>mission manager<itemizedlist>
+<listitem><para>iniziamo con la struttura globale del package</para>
+</listitem><listitem><para>diagrammi UML del package (prendi quelli di erl3 e modificali)</para>
+</listitem><listitem><para>... il diagramma della manipulation unit va rifatto da capo (me lo dovevo aspettare)</para>
+</listitem><listitem><para>e ora la documentazione del codice (<emphasis>can&apos;t ... wait for it?</emphasis>)<itemizedlist>
+<listitem><para>manipulation unit</para>
+</listitem><listitem><para>navigation unit</para>
+</listitem><listitem><para>e mission manager (izi pizi)</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e passiamo al movement controller<itemizedlist>
+<listitem><para>mi fa &quot;piacere&quot; notare che in nessuno degli indici dei due movement controller non c&apos;è l&apos;elenco dei nodi ... <bold>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</bold><itemizedlist>
+<listitem><para>li scrivo adesso</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>revisione degli UML (dovrebbero andare bene in entrambe le versioni)</para>
+</listitem><listitem><para>non avevo rimosso wall_follow ... fatto</para>
+</listitem><listitem><para>e si passa alla documentazione del codice<itemizedlist>
+<listitem><para>bug m</para>
+</listitem><listitem><para>go to point</para>
+</listitem><listitem><para>manipulation</para>
+</listitem><listitem><para>navigation</para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>e l&apos;ultima fatica, il rosplan<itemizedlist>
+<listitem><para>documentazione ausiliaria e struttura del package</para>
+</listitem><listitem><para>(...a dopo)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMI</bold>: &quot;code documentation (still working...)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para><itemizedlist>
+<listitem><para>rosplan<itemizedlist>
+<listitem><para>manca l&apos;elenco dei nodi di rosplan in entrambi i package ... devo aggiungerlo</para>
+</listitem><listitem><para>... e documentazione del codice (speriamo in una cosa breve)</para>
+</listitem><listitem><para>iniziamo dalle actions<itemizedlist>
+<listitem><para>collect (l&apos;unica veramente nuova)</para>
+</listitem><listitem><para>(le altre le prendo pari pari dall&apos;altro package)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para>poi i nodi principali, che sono cambiati poco rispetto a erl2</para>
+</listitem><listitem><para>e infine le librerie ... ah no erano già documentati (che pacchia)</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;code documentation (still working...)&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+<para>ci avviciniamo all&apos;ultima revisione del readme</para>
+<para><itemizedlist>
+<listitem><para>prima meglio controllare i packages per l&apos;ultima volta</para>
+</listitem><listitem><para>metto a posto un attimo la homepage</para>
+</listitem><listitem><para><emphasis>e finalmente l&apos;ultimo readme</emphasis></para>
+</listitem><listitem><para><bold>COMMIT</bold>: &quot;finally&quot;</para>
+</listitem></itemizedlist>
+</para>
+<para><hruler/>
+</para>
+</sect2>
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md73">
 <title>TODO</title>
 <para><itemizedlist>
 <listitem><para>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</para>
@@ -2300,9 +2340,9 @@
 </listitem></itemizedlist>
 </para>
 </sect2>
-<sect2 id="md__docs_dev-log-rcl2_1autotoc_md62">
+<sect2 id="md__docs_dev-log-rcl2_1autotoc_md74">
 <title>NOTE</title>
-<sect3 id="md__docs_dev-log-rcl2_1autotoc_md63">
+<sect3 id="md__docs_dev-log-rcl2_1autotoc_md75">
 <title>una nota su rosplan e il mission manager</title>
 <para>il principio è questo:</para>
 <para><itemizedlist>
@@ -2314,7 +2354,7 @@
 <para>in questo caso la sequenza delle azioni non è molto complessa, però in futuro potrebbe esserla. ad esempio, il landmark COLLECT, che attualmente comprende una sequenza di 3 azioni (più la scelta di dove andare in base alla mappa topologica dell&apos;area ... ok, non così semplice) potrebbe, in futuro, comprenderne di più: ad esempio, comprendere movimenti espliciti del manipolatore in base al tipo di hint da raccogliere, determinate operazioni di sensing durante la raccolta, e molto di più.</para>
 <para>più il comportamento del robot evolve in complessità, più è necessaria una separazione tra diversi modi di vedere il da farsi. più di due livelli però ... non so quanto convenga. 2 è la scelta più logica ed efficace per la maggioranza dei casi.</para>
 </sect3>
-<sect3 id="md__docs_dev-log-rcl2_1autotoc_md64">
+<sect3 id="md__docs_dev-log-rcl2_1autotoc_md76">
 <title>vantaggi (e svantaggi) dell&apos;approccio per landmarks</title>
 <para>motivazioni per cui ho scelto un planning su due livelli e l&apos;approccio dei landmarks:</para>
 <para><itemizedlist>

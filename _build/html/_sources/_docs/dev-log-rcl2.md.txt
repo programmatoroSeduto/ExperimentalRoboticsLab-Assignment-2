@@ -1,9 +1,16 @@
 
-# RoboCLuedo -- Development Log
+# RCL#2 LOG -- development log
+
+---
 
 ```{toctree}
-./dev-log.md
+---
+caption: Indice 
+---
+./dev-log-rcl2.md
 ```
+
+---
 
 - [plantUML online](http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00)
 - [un altro editor motlo carino per PlantText](https://www.planttext.com/)
@@ -2370,32 +2377,7 @@ ci avviciniamo all'ultima revisione del readme
 - prima meglio controllare i packages per l'ultima volta
 - metto a posto un attimo la homepage
 - *e finalmente l'ultimo readme*
-
-
-```{todo}
-**secondo assignment:**
-
-- importare la documentazione di aRMOR finale dal terzo assignment
-- la documentazione del package rosplan può essere riportata pari pari nell'assignment 2, perchè tanto è identica
-- documentazione di rosplan
-	- copiare per intero rosplan-arch.md
-	- c'è qualcosa di specifico da inserire in questo documento?
-- aggiornare la documentazione per il vecchio robot
-- documentazione mission manager
-	- per quanto riguarda la documentazione del mission manager main, la documentazione cambia di pochissimo
-		- casomai, indica quali differenze ci sono tra i due assignment
-	- la documentazione del manipulation manager cambia
-	- e anche quella della navigation unit (usa un algoritmo diverso)
-- elimina le cartelle inutilizzate su esempi e tutto il resto (se non servono, eliminale)
-- verificare che tutte le pagine ausiliarie abbiano la loro TOCtree interna, specie quando sono lunghe pagine
-
-lavoro conclusivo (entrambi gli assignment):
-- aggiustare i link (ora che sai linkare le pagine in markdown...)
-- creare un nuovo branch su ognuno dei due progetti per github pages
-- e creare uno script che permetta di aggiornare la documentazione
-- infine, *cancella la documentazione dalla repo principale*
-
-```
+- **COMMIT**: "finally"
 
 ---
 

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentStyleType="text/css" height="1244px" preserveAspectRatio="none" style="width:1491px;height:1244px;background:#FFFFFF;" version="1.1" viewBox="0 0 1491 1244" width="1491px" zoomAndPan="magnify"><defs/><g><rect height="26.2969" style="stroke:#00000000;stroke-width:1.0;fill:none;" width="261" x="608" y="5"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="251" x="613" y="22.9951">Project Architecture - extended</text><!--MD5=[3290a3d2b9c0a2561ce47a49167ad83c]
+cluster armor--><g id="cluster_armor"><path d="M1119.5,428.2969 L1167.5,428.2969 A3.75,3.75 0 0 1 1170,430.7969 L1177,450.5938 L1481.5,450.5938 A2.5,2.5 0 0 1 1484,453.0938 L1484,522.7969 A2.5,2.5 0 0 1 1481.5,525.2969 L1119.5,525.2969 A2.5,2.5 0 0 1 1117,522.7969 L1117,430.7969 A2.5,2.5 0 0 1 1119.5,428.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1117" x2="1177" y1="450.5938" y2="450.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="47" x="1121" y="443.292">armor</text></g><!--MD5=[72ec1ef6db8df4b6bc510ac98a681591]
+cluster RCL Mission Manager--><g id="cluster_RCL Mission Manager"><path d="M852.5,488.2969 L1020.5,488.2969 A3.75,3.75 0 0 1 1023,490.7969 L1030,510.5938 L1068.5,510.5938 A2.5,2.5 0 0 1 1071,513.0938 L1071,744.7969 A2.5,2.5 0 0 1 1068.5,747.2969 L852.5,747.2969 A2.5,2.5 0 0 1 850,744.7969 L850,490.7969 A2.5,2.5 0 0 1 852.5,488.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="850" x2="1030" y1="510.5938" y2="510.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="167" x="854" y="503.292">RCL Mission Manager</text></g><!--MD5=[50a2f19a8c034c1bda91c457de53d287]
+cluster RCL ROSPlan--><g id="cluster_RCL ROSPlan"><path d="M8.5,771.2969 L109.5,771.2969 A3.75,3.75 0 0 1 112,773.7969 L119,793.5938 L1350.5,793.5938 A2.5,2.5 0 0 1 1353,796.0938 L1353,1165.7969 A2.5,2.5 0 0 1 1350.5,1168.2969 L8.5,1168.2969 A2.5,2.5 0 0 1 6,1165.7969 L6,773.7969 A2.5,2.5 0 0 1 8.5,771.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="6" x2="119" y1="793.5938" y2="793.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="100" x="10" y="786.292">RCL ROSPlan</text></g><!--MD5=[d52787fb9afba253a951849d442c2cd9]
+cluster ROSPLAN_ACTIONS--><g id="cluster_ROSPLAN_ACTIONS"><path d="M623.5,913.2969 L788.5,913.2969 A3.75,3.75 0 0 1 791,915.7969 L798,935.5938 L1033.5,935.5938 A2.5,2.5 0 0 1 1036,938.0938 L1036,1123.7969 A2.5,2.5 0 0 1 1033.5,1126.2969 L623.5,1126.2969 A2.5,2.5 0 0 1 621,1123.7969 L621,915.7969 A2.5,2.5 0 0 1 623.5,913.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="621" x2="798" y1="935.5938" y2="935.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="164" x="625" y="928.292">RCL ROSPlan Actions</text></g><!--MD5=[c413bdb2eeadf7f37ee5ff58ddc3d741]
+cluster erl2--><g id="cluster_erl2"><path d="M1155.5,549.2969 L1187.5,549.2969 A3.75,3.75 0 0 1 1190,551.7969 L1197,571.5938 L1296.5,571.5938 A2.5,2.5 0 0 1 1299,574.0938 L1299,643.7969 A2.5,2.5 0 0 1 1296.5,646.2969 L1155.5,646.2969 A2.5,2.5 0 0 1 1153,643.7969 L1153,551.7969 A2.5,2.5 0 0 1 1155.5,549.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="1153" x2="1197" y1="571.5938" y2="571.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="31" x="1157" y="564.292">erl2</text></g><!--MD5=[4a4f0e6043b47fc8cab18a797167e00e]
+cluster ENVIRONMENT--><g id="cluster_ENVIRONMENT"><path d="M137.5,43.2969 L319.5,43.2969 A3.75,3.75 0 0 1 322,45.7969 L329,65.5938 L479,65.5938 A2.5,2.5 0 0 1 481.5,68.0938 L481.5,253.7969 A2.5,2.5 0 0 1 479,256.2969 L137.5,256.2969 A2.5,2.5 0 0 1 135,253.7969 L135,45.7969 A2.5,2.5 0 0 1 137.5,43.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="135" x2="329" y1="65.5938" y2="65.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="181" x="139" y="58.292">Simulated Environment</text></g><!--MD5=[f8c67dae79871263af26454ede3c252f]
+cluster moveit--><g id="cluster_moveit"><path d="M364,288.2969 L418,288.2969 A3.75,3.75 0 0 1 420.5,290.7969 L427.5,310.5938 L481,310.5938 A2.5,2.5 0 0 1 483.5,313.0938 L483.5,382.7969 A2.5,2.5 0 0 1 481,385.2969 L364,385.2969 A2.5,2.5 0 0 1 361.5,382.7969 L361.5,290.7969 A2.5,2.5 0 0 1 364,288.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="361.5" x2="427.5" y1="310.5938" y2="310.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="53" x="365.5" y="303.292">moveit</text></g><!--MD5=[fb57ac82275689eb067e1d4d79e0f27c]
+cluster RCL Movement Controller--><g id="cluster_RCL Movement Controller"><path d="M564.5,81.2969 L766.5,81.2969 A3.75,3.75 0 0 1 769,83.7969 L776,103.5938 L1058.5,103.5938 A2.5,2.5 0 0 1 1061,106.0938 L1061,461.7969 A2.5,2.5 0 0 1 1058.5,464.2969 L564.5,464.2969 A2.5,2.5 0 0 1 562,461.7969 L562,83.7969 A2.5,2.5 0 0 1 564.5,81.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="562" x2="776" y1="103.5938" y2="103.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="201" x="566" y="96.292">RCL Movement Controller</text></g><!--MD5=[d40cf5c215657fb3fe2b2c6fb7de3704]
+cluster behaviours--><g id="cluster_behaviours"><path d="M600.5,124.2969 L689.5,124.2969 A3.75,3.75 0 0 1 692,126.7969 L699,146.5938 L1034.5,146.5938 A2.5,2.5 0 0 1 1037,149.0938 L1037,299.7969 A2.5,2.5 0 0 1 1034.5,302.2969 L600.5,302.2969 A2.5,2.5 0 0 1 598,299.7969 L598,126.7969 A2.5,2.5 0 0 1 600.5,124.2969 " style="stroke:#000000;stroke-width:1.5;fill:none;"/><line style="stroke:#000000;stroke-width:1.5;fill:none;" x1="598" x2="699" y1="146.5938" y2="146.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" font-weight="bold" lengthAdjust="spacing" textLength="88" x="602" y="139.292">behaviours</text></g><!--MD5=[d966621a06b379d0f2866da504c15a36]
+entity ARMOR--><g id="elem_ARMOR"><path d="M1397,473.7969 C1397,463.7969 1432.5,463.7969 1432.5,463.7969 C1432.5,463.7969 1468,463.7969 1468,473.7969 L1468,499.0938 C1468,509.0938 1432.5,509.0938 1432.5,509.0938 C1432.5,509.0938 1397,509.0938 1397,499.0938 L1397,473.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M1397,473.7969 C1397,483.7969 1432.5,483.7969 1432.5,483.7969 C1432.5,483.7969 1468,483.7969 1468,473.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="1407" y="500.792">aRMOR</text></g><!--MD5=[0f6829ecb44924df652b3631a96aadbd]
+entity RCL_ARMOR--><g id="elem_RCL_ARMOR"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="186" x="1133" y="463.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1299" y="468.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1297" y="470.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1297" y="474.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="146" x="1148" y="496.292">RCL aRMOR interface</text></g><!--MD5=[9a0d4b0340012a44161447de88fcc332]
+entity MISSION_MANAGER--><g id="elem_MISSION_MANAGER"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="189" x="866" y="523.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1035" y="528.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1033" y="530.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1033" y="534.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="881" y="556.292">RCL mission manager</text></g><!--MD5=[85f7837dfbb1d6f968ca872290da27d1]
+entity MANIP_UNIT--><g id="elem_MANIP_UNIT"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="189" x="866" y="604.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1035" y="609.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1033" y="611.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1033" y="615.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="149" x="881" y="637.292">RCL manipulation unit</text></g><!--MD5=[d3c6a3352a82e16776188b2bc459db07]
+entity NAV_UNIT--><g id="elem_NAV_UNIT"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="171" x="875" y="685.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1026" y="690.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1024" y="692.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1024" y="696.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="131" x="890" y="718.292">RCL navigation unit</text></g><!--MD5=[8fd27179cfada5ccc37b63382e72f2b8]
+entity ROSPLAN--><g id="elem_ROSPLAN"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="222" x="1115" y="825.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1317" y="830.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1315" y="832.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1315" y="836.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="182" x="1130" y="858.292">ROSPlan pipeline manager</text></g><!--MD5=[1ec02bda1596c59b8c0e4ea7203accd3]
+entity RCL_KBTOOLS--><g id="elem_RCL_KBTOOLS"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="129" x="358" y="821.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="467" y="826.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="465" y="828.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="465" y="832.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="89" x="373" y="854.292">RCL kb_tools</text></g><!--MD5=[f0473ce8c4294036dd7f66e3469f33ba]
+entity ROSPLANKB--><g id="elem_ROSPLANKB"><path d="M163,887.7969 C163,877.7969 213,877.7969 213,877.7969 C213,877.7969 263,877.7969 263,887.7969 L263,913.0938 C263,923.0938 213,923.0938 213,923.0938 C213,923.0938 163,923.0938 163,913.0938 L163,887.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M163,887.7969 C163,897.7969 213,897.7969 213,897.7969 C213,897.7969 263,897.7969 263,887.7969 " fill="none" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="80" x="173" y="914.792">ROSPlan kb</text></g><!--MD5=[51f810b966fae3ed1e8d909503f3944c]
+entity ROSPLAN_COMPONENTS--><g id="elem_ROSPLAN_COMPONENTS"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="191" x="327" y="917.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="498" y="922.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="496" y="924.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="496" y="928.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="151" x="342" y="950.292">ROSPlan components</text></g><!--MD5=[1c1ddfab09557eb457f2e2932fb59e45]
+entity DOMAIN--><g id="elem_DOMAIN"><path d="M25,849.7969 L25,881.0938 A2.5,2.5 0 0 0 27.5,883.5938 L93.5,883.5938 A2.5,2.5 0 0 0 96,881.0938 L96,857.2969 L86,847.2969 L27.5,847.2969 A2.5,2.5 0 0 0 25,849.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M86,847.2969 L86,854.7969 A2.5,2.5 0 0 0 88.5,857.2969 L96,857.2969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="51" x="35" y="870.292">domain</text></g><!--MD5=[e79c8e6bb3a9323b12a58d750a988a49]
+entity PROBLEM--><g id="elem_PROBLEM"><path d="M22,920.7969 L22,952.0938 A2.5,2.5 0 0 0 24.5,954.5938 L96.5,954.5938 A2.5,2.5 0 0 0 99,952.0938 L99,928.2969 L89,918.2969 L24.5,918.2969 A2.5,2.5 0 0 0 22,920.7969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><path d="M89,918.2969 L89,925.7969 A2.5,2.5 0 0 0 91.5,928.2969 L99,928.2969 " fill="#F1F1F1" style="stroke:#181818;stroke-width:0.5;"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="57" x="32" y="941.292">problem</text></g><!--MD5=[f538cd5cfea9b9f400fdca51e86c13d1]
+entity FEEDBACK--><g id="elem_FEEDBACK"><polygon fill="#F1F1F1" points="876,853.2969,886,843.2969,1045,843.2969,1045,879.5938,1035,889.5938,876,889.5938,876,853.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1035" x2="1045" y1="853.2969" y2="843.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="876" x2="1035" y1="853.2969" y2="853.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="1035" x2="1035" y1="853.2969" y2="889.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="129" x="891" y="876.292">feedback manager</text></g><!--MD5=[d2a866b1738f2713b1c256c1b3b522f0]
+entity REPLAN--><g id="elem_REPLAN"><polygon fill="#F1F1F1" points="645,1066.2969,655,1056.2969,739,1056.2969,739,1092.5938,729,1102.5938,645,1102.5938,645,1066.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="729" x2="739" y1="1066.2969" y2="1056.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="645" x2="729" y1="1066.2969" y2="1066.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="729" x2="729" y1="1066.2969" y2="1102.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="660" y="1089.292">REPLAN</text></g><!--MD5=[5d298df35e955cc49a562ca8c4307f68]
+entity SOLVE--><g id="elem_SOLVE"><polygon fill="#F1F1F1" points="649.5,985.2969,659.5,975.2969,734.5,975.2969,734.5,1011.5938,724.5,1021.5938,649.5,1021.5938,649.5,985.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="724.5" x2="734.5" y1="985.2969" y2="975.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="649.5" x2="724.5" y1="985.2969" y2="985.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="724.5" x2="724.5" y1="985.2969" y2="1021.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="664.5" y="1008.292">SOLVE</text></g><!--MD5=[e76728030785b4949be71f6784ddb581]
+entity COLLECT--><g id="elem_COLLECT"><polygon fill="#F1F1F1" points="909,1066.2969,919,1056.2969,1012,1056.2969,1012,1092.5938,1002,1102.5938,909,1102.5938,909,1066.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1002" x2="1012" y1="1066.2969" y2="1056.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="909" x2="1002" y1="1066.2969" y2="1066.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="1002" x2="1002" y1="1066.2969" y2="1102.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="63" x="924" y="1089.292">COLLECT</text></g><!--MD5=[0ff8cde09c95e7bd5ad5c1a367aa2e4a]
+entity ORACLE--><g id="elem_ORACLE"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="114" x="1169" y="584.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="1263" y="589.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1261" y="591.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="1261" y="595.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="74" x="1184" y="617.292">erl2 Oracle</text></g><!--MD5=[eef647fd11329e3348e4ffb4a7457511]
+entity RCL robot--><g id="elem_RCL robot"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="108" x="159" y="167.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="247" y="172.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="245" y="174.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="245" y="178.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="68" x="174" y="200.292">RCL robot</text></g><!--MD5=[bbf9db7559709992d85d6a920c748d19]
+entity Gazebo--><g id="elem_Gazebo"><polygon fill="#F1F1F1" points="166,96.2969,176,86.2969,260,86.2969,260,122.5938,250,132.5938,166,132.5938,166,96.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="250" x2="260" y1="96.2969" y2="86.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="166" x2="250" y1="96.2969" y2="96.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="250" x2="250" y1="96.2969" y2="132.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="54" x="181" y="119.292">Gazebo</text></g><!--MD5=[6cc809afb1025c0910cc05bebbdf57d7]
+entity RViz--><g id="elem_RViz"><polygon fill="#F1F1F1" points="387.5,177.2969,397.5,167.2969,457.5,167.2969,457.5,203.5938,447.5,213.5938,387.5,213.5938,387.5,177.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="447.5" x2="457.5" y1="177.2969" y2="167.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="387.5" x2="447.5" y1="177.2969" y2="177.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="447.5" x2="447.5" y1="177.2969" y2="213.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="30" x="402.5" y="200.292">RViz</text></g><!--MD5=[6c629335c16ba9d7cc5a2834000a699b]
+entity MOVEIT--><g id="elem_MOVEIT"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="90" x="377.5" y="323.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="447.5" y="328.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="445.5" y="330.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="445.5" y="334.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="392.5" y="356.292">MoveIt!</text></g><!--MD5=[80ad804a48cb6a09fe122341649e624a]
+entity MOVEMENT--><g id="elem_MOVEMENT"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="206" x="589" y="402.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="775" y="407.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="773" y="409.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="773" y="413.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="166" x="604" y="435.292">RCL navigation manager</text></g><!--MD5=[ecfc7fc8bacca92c250605c7d15849a2]
+entity MANIPULATION--><g id="elem_MANIPULATION"><rect fill="#F1F1F1" height="46.2969" rx="2.5" ry="2.5" style="stroke:#181818;stroke-width:0.5;" width="228" x="578" y="321.2969"/><rect fill="#F1F1F1" height="10" style="stroke:#181818;stroke-width:0.5;" width="15" x="786" y="326.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="784" y="328.2969"/><rect fill="#F1F1F1" height="2" style="stroke:#181818;stroke-width:0.5;" width="4" x="784" y="332.2969"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="188" x="593" y="354.292">RCL manipulation controller</text></g><!--MD5=[3bce05297d300cfb2c59ee95a7d98da5]
+entity bug_m--><g id="elem_bug_m"><polygon fill="#F1F1F1" points="648.5,250.2969,658.5,240.2969,735.5,240.2969,735.5,276.5938,725.5,286.5938,648.5,286.5938,648.5,250.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="725.5" x2="735.5" y1="250.2969" y2="240.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="648.5" x2="725.5" y1="250.2969" y2="250.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="725.5" x2="725.5" y1="250.2969" y2="286.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="47" x="663.5" y="273.292">bug_m</text></g><!--MD5=[b8645edb20703ee1fdcef13886479323]
+entity head_orientation--><g id="elem_head_orientation"><polygon fill="#F1F1F1" points="614,169.2969,624,159.2969,770,159.2969,770,195.5938,760,205.5938,614,205.5938,614,169.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="760" x2="770" y1="169.2969" y2="159.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="614" x2="760" y1="169.2969" y2="169.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="760" x2="760" y1="169.2969" y2="205.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="116" x="629" y="192.292">head_orientation</text></g><!--MD5=[12b301ae74e92ec17dcb045da6d8c140]
+entity go_to_point--><g id="elem_go_to_point"><polygon fill="#F1F1F1" points="900,250.2969,910,240.2969,1021,240.2969,1021,276.5938,1011,286.5938,900,286.5938,900,250.2969" style="stroke:#181818;stroke-width:0.5;"/><line style="stroke:#181818;stroke-width:0.5;" x1="1011" x2="1021" y1="250.2969" y2="240.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="900" x2="1011" y1="250.2969" y2="250.2969"/><line style="stroke:#181818;stroke-width:0.5;" x1="1011" x2="1011" y1="250.2969" y2="286.5938"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="81" x="915" y="273.292">go_to_point</text></g><!--MD5=[cbaab8b86e01fba88e79cd38bb824379]
+link ENVIRONMENT to MOVEIT--><g id="link_ENVIRONMENT_MOVEIT"><path d="M231.1081,256.382 C231.755,256.6874 232.4173,257.0002 233.0945,257.32 C243.9303,262.4369 258.5881,269.3594 274.9712,277.0969 C307.7375,292.5719 347.405,311.3069 377.2,325.3769 " fill="none" id="ENVIRONMENT-MOVEIT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[f18de347d8226dee32ce12fb4c34c831]
+link MOVEIT to MANIPULATION--><g id="link_MOVEIT_MANIPULATION"><path d="M467.67,345.9669 C497.72,345.7469 538.94,345.4369 577.78,345.1469 " fill="none" id="MOVEIT-MANIPULATION" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[59e2fe48d6188b7fee0ac592cf50b3bc]
+link ENVIRONMENT to MOVEMENT--><g id="link_ENVIRONMENT_MOVEMENT"><path d="M217.8312,256.4254 C217.8872,256.5393 217.9438,256.6543 218.001,256.7704 C218.1154,257.0024 218.2322,257.2387 218.3514,257.4791 C218.5898,257.9598 218.8377,258.4571 219.095,258.9702 C220.1245,261.0227 221.3055,263.3295 222.6338,265.8528 C227.9469,275.9462 235.6175,289.5056 245.3825,304.1244 C264.9125,333.3619 292.82,366.8369 327,385.2969 C407.41,428.7369 512.29,436.0069 588.8,434.0269 " fill="none" id="ENVIRONMENT-MOVEMENT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[cc9b2d7c633b91819c98753afc381db9]
+link MANIPULATION to MANIP_UNIT--><g id="link_MANIPULATION_MANIP_UNIT"><path d="M786.02,367.4469 C793.51,372.0769 800.35,377.6369 806,384.2969 C864.99,453.8469 782.85,516.8869 842,586.2969 C848.66,594.1169 856.89,600.4369 865.88,605.5569 " fill="none" id="MANIPULATION-MANIP_UNIT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[589f6ec36979e05c67a1fb87e894fcb5]
+link MOVEMENT to NAV_UNIT--><g id="link_MOVEMENT_NAV_UNIT"><path d="M701.16,448.5969 C719.09,496.4769 766.45,606.5369 842,667.2969 C851.77,675.1569 863.14,681.5569 874.89,686.7569 " fill="none" id="MOVEMENT-NAV_UNIT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[842b2851b2cd1464c25f009b2944caad]
+link MISSION_MANAGER to RCL_ARMOR--><g id="link_MISSION_MANAGER_RCL_ARMOR"><path d="M1055.14,524.9769 C1080.44,519.2169 1107.78,512.9869 1132.99,507.2569 " fill="none" id="MISSION_MANAGER-RCL_ARMOR" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[baa7171b179f334bc22278a098c5fa40]
+link RCL_ARMOR to ARMOR--><g id="link_RCL_ARMOR_ARMOR"><path d="M1324.26,486.2969 C1347.96,486.2969 1372.02,486.2969 1391.32,486.2969 " fill="none" id="RCL_ARMOR-ARMOR" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1396.64,486.2969,1387.64,482.2969,1391.64,486.2969,1387.64,490.2969,1396.64,486.2969" style="stroke:#181818;stroke-width:1.0;"/><polygon fill="#181818" points="1319.08,486.2969,1328.08,490.2969,1324.08,486.2969,1328.08,482.2969,1319.08,486.2969" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[61381d6bf0e7dae87362e132ac3ded65]
+link MISSION_MANAGER to ROSPLAN--><g id="link_MISSION_MANAGER_ROSPLAN"><path d="M1053.32,569.4369 C1062.58,574.0769 1071.37,579.6369 1079,586.2969 C1101.46,605.9069 1094.9,620.0269 1109,646.2969 C1144.28,712.0469 1188.96,787.9469 1211.16,825.2169 " fill="none" id="MISSION_MANAGER-ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[ab91a5f2e08068b9424c3ab9025a1626]
+link MISSION_MANAGER to ORACLE--><g id="link_MISSION_MANAGER_ORACLE"><path d="M1055.14,567.9769 C1093.16,576.7769 1135.81,586.6569 1168.86,594.3069 " fill="none" id="MISSION_MANAGER-ORACLE" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[100bc635c5fe94bc7c430e84986b7ef9]
+link PROBLEM to ROSPLANKB--><g id="link_PROBLEM_ROSPLANKB"><path d="M99.09,927.3069 C118.42,922.6869 142.21,916.9969 162.97,912.0269 " fill="none" id="PROBLEM-ROSPLANKB" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[3efa3e478faaae081596a985e8ab5828]
+link DOMAIN to ROSPLANKB--><g id="link_DOMAIN_ROSPLANKB"><path d="M96.03,873.3269 C115.81,877.9369 140.98,883.7869 162.8,888.8569 " fill="none" id="DOMAIN-ROSPLANKB" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[c1f30674e5e2e1cb6cec7ea11d2def16]
+link ROSPLANKB to ROSPLAN_COMPONENTS--><g id="link_ROSPLANKB_ROSPLAN_COMPONENTS"><path d="M263.17,909.7769 C282.23,913.4569 304.72,917.7869 326.67,922.0169 " fill="none" id="ROSPLANKB-ROSPLAN_COMPONENTS" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[20fa6ebb47b67f574e1b89935ab02d50]
+link ROSPLAN_COMPONENTS to ROSPLAN--><g id="link_ROSPLAN_COMPONENTS_ROSPLAN"><path d="M432.23,963.4469 C448.84,1003.7169 489.23,1085.4769 554,1118.2969 C762.13,1223.7869 878.57,1237.7769 1079,1118.2969 C1171.69,1063.0469 1209.1,926.2669 1220.68,871.5069 " fill="none" id="ROSPLAN_COMPONENTS-ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[e03eb768aca26201f2e9c5aa718dbf7d]
+link ROSPLAN_COMPONENTS to ROSPLAN_ACTIONS--><g id="link_ROSPLAN_COMPONENTS_ROSPLAN_ACTIONS"><path d="M518.19,940.2969 C537.1275,940.2969 557.21,940.2969 576.727,940.2969 C586.4855,940.2969 596.1027,940.2969 605.3647,940.2969 C609.9957,940.2969 614.5378,940.2969 618.9645,940.2969 C619.5179,940.2969 620.0694,940.2969 620.6191,940.2969 " fill="none" id="ROSPLAN_COMPONENTS-ROSPLAN_ACTIONS" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[d738a5db84756bdf331c2ee9f799dc8c]
+link ROSPLAN_ACTIONS to FEEDBACK--><g id="link_ROSPLAN_ACTIONS_FEEDBACK"><path d="M872.2503,913.1913 C872.4023,913.1241 872.5542,913.0568 872.706,912.9896 C873.3132,912.7205 873.9189,912.4508 874.523,912.1805 C876.9396,911.0993 879.3314,910.0087 881.6945,908.9123 C886.4208,906.7196 891.0325,904.5042 895.4994,902.2966 C904.4331,897.8812 912.7875,893.4969 920.32,889.3869 " fill="none" id="ROSPLAN_ACTIONS-FEEDBACK" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[a37d16129c1c7b2b911d1f44117703b0]
+link FEEDBACK to ROSPLAN--><g id="link_FEEDBACK_ROSPLAN"><path d="M1045.24,860.5769 C1067.39,859.0669 1091.64,857.4069 1114.96,855.8169 " fill="none" id="FEEDBACK-ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[66d5ba8445835e16325a510c64673028]
+link ROSPLANKB to RCL_KBTOOLS--><g id="link_ROSPLANKB_RCL_KBTOOLS"><path d="M263.17,887.0269 C291.46,879.3969 327.31,869.7269 357.74,861.5069 " fill="none" id="ROSPLANKB-RCL_KBTOOLS" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[9d9a46e644c7cbebb22e58420f598ef5]
+link RCL_KBTOOLS to ROSPLAN--><g id="link_RCL_KBTOOLS_ROSPLAN"><path d="M487.34,838.2269 C604.68,828.0269 862.45,810.0769 1079,826.2969 C1090.63,827.1769 1102.74,828.4269 1114.79,829.9069 " fill="none" id="RCL_KBTOOLS-ROSPLAN" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[8a20ec020f5008553a5485b63c50d84c]
+link ROSPLAN_ACTIONS to NAV_UNIT--><g id="link_ROSPLAN_ACTIONS_NAV_UNIT"><path d="M717.3167,913.0103 C717.6513,912.6427 717.9889,912.2723 718.3293,911.8991 C719.6908,910.4062 721.0977,908.8684 722.5477,907.289 C728.3473,900.9713 734.835,893.9891 741.8575,886.5631 C769.9475,856.8594 806.595,820.0569 842,790.2969 C867.71,768.6969 898.98,747.0669 922.79,731.4569 " fill="none" id="ROSPLAN_ACTIONS-NAV_UNIT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[62d2318bc525bd313854adfacd5d82df]
+link ROSPLAN_ACTIONS to MANIP_UNIT--><g id="link_ROSPLAN_ACTIONS_MANIP_UNIT"><path d="M700.6514,912.658 C700.8186,912.1049 700.9887,911.5448 701.1615,910.9779 C701.5072,909.8441 701.8643,908.683 702.2328,907.4956 C708.1288,888.4981 716.9488,862.7794 728.98,834.4969 C753.0425,777.9319 789.95,711.1119 842,667.2969 C849.91,660.6369 858.99,655.0669 868.52,650.4169 " fill="none" id="ROSPLAN_ACTIONS-MANIP_UNIT" style="stroke:#181818;stroke-width:1.0;"/></g><!--MD5=[4908d99a37fba728b764fa5452e45716]
+@startuml
+
+''' INFOS
+title Project Architecture - extended
+left to right direction
+
+
+''' COMPONENTS
+package armor{
+database "aRMOR" as ARMOR
+component "RCL aRMOR interface" as RCL_ARMOR
+}
+
+package "RCL Mission Manager"{
+component "RCL mission manager" as MISSION_MANAGER
+component "RCL manipulation unit" as MANIP_UNIT
+component "RCL navigation unit" as NAV_UNIT
+}
+
+package "RCL ROSPlan" {
+component "ROSPlan pipeline manager" as ROSPLAN
+component "RCL kb_tools" as RCL_KBTOOLS
+database "ROSPlan kb" as ROSPLANKB
+component "ROSPlan components" as ROSPLAN_COMPONENTS
+file "domain" as DOMAIN
+file "problem" as PROBLEM
+node "feedback manager" as FEEDBACK
+package "RCL ROSPlan Actions" as ROSPLAN_ACTIONS {
+node REPLAN
+node SOLVE
+node COLLECT
+}
+}
+
+package "erl2"{
+component "erl2 Oracle" as ORACLE
+}
+
+package "Simulated Environment" as ENVIRONMENT {
+component "RCL robot"
+node "Gazebo"
+node "RViz"
+}
+
+package moveit {
+component "MoveIt!" as MOVEIT
+}
+
+package "RCL Movement Controller" {
+component "RCL navigation manager" as MOVEMENT
+component "RCL manipulation controller" as MANIPULATION
+
+package behaviours {
+node "bug_m"
+node "head_orientation"
+node "go_to_point"
+}
+
+}
+
+''' CONNECTIONS
+ENVIRONMENT - - MOVEIT
+MOVEIT - - MANIPULATION
+
+ENVIRONMENT - - MOVEMENT
+
+MANIPULATION - - MANIP_UNIT
+MOVEMENT - - NAV_UNIT
+
+MISSION_MANAGER - - RCL_ARMOR
+RCL_ARMOR <- -> ARMOR
+
+MISSION_MANAGER - - ROSPLAN
+
+MISSION_MANAGER - - ORACLE
+
+PROBLEM - - ROSPLANKB
+DOMAIN - - ROSPLANKB
+ROSPLANKB - - ROSPLAN_COMPONENTS
+ROSPLAN_COMPONENTS - - ROSPLAN 
+ROSPLAN_COMPONENTS - -ROSPLAN_ACTIONS
+ROSPLAN_ACTIONS - - FEEDBACK
+FEEDBACK - - ROSPLAN
+ROSPLANKB - - RCL_KBTOOLS
+RCL_KBTOOLS - - ROSPLAN
+
+ROSPLAN_ACTIONS - - NAV_UNIT
+ROSPLAN_ACTIONS - - MANIP_UNIT
+
+@enduml
+
+@startuml
+
+title Project Architecture - extended
+left to right direction
+
+
+package armor{
+database "aRMOR" as ARMOR
+component "RCL aRMOR interface" as RCL_ARMOR
+}
+
+package "RCL Mission Manager"{
+component "RCL mission manager" as MISSION_MANAGER
+component "RCL manipulation unit" as MANIP_UNIT
+component "RCL navigation unit" as NAV_UNIT
+}
+
+package "RCL ROSPlan" {
+component "ROSPlan pipeline manager" as ROSPLAN
+component "RCL kb_tools" as RCL_KBTOOLS
+database "ROSPlan kb" as ROSPLANKB
+component "ROSPlan components" as ROSPLAN_COMPONENTS
+file "domain" as DOMAIN
+file "problem" as PROBLEM
+node "feedback manager" as FEEDBACK
+package "RCL ROSPlan Actions" as ROSPLAN_ACTIONS {
+node REPLAN
+node SOLVE
+node COLLECT
+}
+}
+
+package "erl2"{
+component "erl2 Oracle" as ORACLE
+}
+
+package "Simulated Environment" as ENVIRONMENT {
+component "RCL robot"
+node "Gazebo"
+node "RViz"
+}
+
+package moveit {
+component "MoveIt!" as MOVEIT
+}
+
+package "RCL Movement Controller" {
+component "RCL navigation manager" as MOVEMENT
+component "RCL manipulation controller" as MANIPULATION
+
+package behaviours {
+node "bug_m"
+node "head_orientation"
+node "go_to_point"
+}
+
+}
+
+ENVIRONMENT - - MOVEIT
+MOVEIT - - MANIPULATION
+
+ENVIRONMENT - - MOVEMENT
+
+MANIPULATION - - MANIP_UNIT
+MOVEMENT - - NAV_UNIT
+
+MISSION_MANAGER - - RCL_ARMOR
+RCL_ARMOR <- -> ARMOR
+
+MISSION_MANAGER - - ROSPLAN
+
+MISSION_MANAGER - - ORACLE
+
+PROBLEM - - ROSPLANKB
+DOMAIN - - ROSPLANKB
+ROSPLANKB - - ROSPLAN_COMPONENTS
+ROSPLAN_COMPONENTS - - ROSPLAN 
+ROSPLAN_COMPONENTS - -ROSPLAN_ACTIONS
+ROSPLAN_ACTIONS - - FEEDBACK
+FEEDBACK - - ROSPLAN
+ROSPLANKB - - RCL_KBTOOLS
+RCL_KBTOOLS - - ROSPLAN
+
+ROSPLAN_ACTIONS - - NAV_UNIT
+ROSPLAN_ACTIONS - - MANIP_UNIT
+
+@enduml
+
+PlantUML version 1.2022.6(Tue Jun 21 17:34:49 UTC 2022)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: US
+--></g></svg>

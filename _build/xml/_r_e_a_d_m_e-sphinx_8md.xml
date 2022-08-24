@@ -8,7 +8,7 @@
     </detaileddescription>
     <programlisting>
 <codeline></codeline>
-<codeline><highlight class="normal">#<sp/>README<sp/>--<sp/>the<sp/>RoboCLuedo<sp/>Project<sp/>--<sp/>ROUND<sp/>3</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>README<sp/>--<sp/>the<sp/>RoboCLuedo<sp/>Project<sp/>--<sp/>ROUND<sp/>2</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">*Francesco<sp/>Ganci*<sp/>-<sp/>S4143910<sp/>-<sp/>A.A.2021/2022</highlight></codeline>
 <codeline></codeline>
@@ -23,7 +23,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">![Cluedo3](_media/cluedorickmorty.jpg)</highlight></codeline>
+<codeline><highlight class="normal">![Cluedo3](_media/cluedexterbox.jpg)</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
@@ -36,59 +36,58 @@
 <codeline><highlight class="normal">-<sp/>Software<sp/>Architecture<sp/>components<sp/>overview</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>Software<sp/>Architecture<sp/>communication<sp/>protocols<sp/>overview</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">if<sp/>you<sp/>have<sp/>more<sp/>practical<sp/>questions,<sp/>you<sp/>can<sp/>find<sp/>everything<sp/>you<sp/>want,<sp/>detailed<sp/>ad<sp/>libitum,<sp/>inside<sp/>the<sp/>[Official<sp/>Documentation](officialdocs).</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>parts<sp/>of<sp/>the<sp/>architecture<sp/>are<sp/>deeply<sp/>detailed<sp/>inside<sp/>this<sp/>documentation,<sp/>see<sp/>the<sp/>*Packages<sp/>Documentation*<sp/>section.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Introduction<sp/>--<sp/>RCL#3</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Introduction<sp/>--<sp/>RCL#2</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">The<sp/>[RCL#3](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3)<sp/>project,<sp/>end<sp/>of<sp/>a<sp/>long<sp/>journey,<sp/>wants<sp/>to<sp/>implement<sp/>the<sp/>architecture<sp/>of<sp/>a<sp/>robot,<sp/>using<sp/>its<sp/>sensors<sp/>(in<sp/>this<sp/>case,<sp/>cameras<sp/>and<sp/>a<sp/>LIDAR<sp/>sensor)<sp/>to<sp/>solve<sp/>a<sp/>*Cluedo*-style<sp/>mystery,<sp/>collecting<sp/>hints<sp/>across<sp/>the<sp/>environment<sp/>and<sp/>reasoning<sp/>on<sp/>them<sp/>for<sp/>finding<sp/>the<sp/>killer.<sp/>The<sp/>robot<sp/>moves<sp/>in<sp/>the<sp/>surroundings,<sp/>trying<sp/>to<sp/>find<sp/>as<sp/>many<sp/>ArUco<sp/>IDs<sp/>as<sp/>possible,<sp/>adding<sp/>information<sp/>to<sp/>a<sp/>OWL-based<sp/>ontology<sp/>for<sp/>finding<sp/>the<sp/>solution<sp/>of<sp/>the<sp/>case.<sp/></highlight></codeline>
+<codeline><highlight class="normal">The<sp/>main<sp/>aim<sp/>of<sp/>the<sp/>[RCL#2](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2)<sp/>project<sp/>is<sp/>to<sp/>implement<sp/>the<sp/>control<sp/>system<sp/>of<sp/>a<sp/>robot<sp/>playing<sp/>a<sp/>game<sp/>freely<sp/>inspired<sp/>to<sp/>the<sp/>classic<sp/>board<sp/>game<sp/>*CLuedo*.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Technical<sp/>Goals<sp/>--<sp/>RCL#3</highlight></codeline>
+<codeline><highlight class="normal">In<sp/>particular,<sp/>the<sp/>system<sp/>controls<sp/>a<sp/>4-wheeled<sp/>robot<sp/>with<sp/>one<sp/>manipulator.<sp/>The<sp/>robot<sp/>explores<sp/>the<sp/>surroundings<sp/>in<sp/>search<sp/>of<sp/>any<sp/>clue<sp/>that<sp/>could<sp/>be<sp/>determinant<sp/>to<sp/>*understand*<sp/>who<sp/>is<sp/>the<sp/>killer,<sp/>what<sp/>is<sp/>the<sp/>weapon<sp/>of<sp/>the<sp/>murder,<sp/>and<sp/>where<sp/>the<sp/>poor<sp/>Dr.<sp/>Black<sp/>has<sp/>been<sp/>killed.<sp/>The<sp/>robot<sp/>uses<sp/>a<sp/>OWL-based<sp/>system<sp/>to<sp/>reason<sp/>about<sp/>the<sp/>clues,<sp/>collecting,<sp/>putting<sp/>together,<sp/>and<sp/>finding<sp/>a<sp/>one<sp/>possible<sp/>solution.<sp/>The<sp/>arbiter<sp/>of<sp/>the<sp/>game<sp/>is<sp/>th<sp/>so-called<sp/>*Oracle*,<sp/>which<sp/>knows<sp/>the<sp/>solution,<sp/>and<sp/>can<sp/>be<sp/>interrogated<sp/>when<sp/>the<sp/>robot<sp/>is<sp/>ready<sp/>to<sp/>announce<sp/>the<sp/>murderer.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">The<sp/>main<sp/>technical<sp/>aim<sp/>of<sp/>this<sp/>project<sp/>is<sp/>to<sp/>*extend<sp/>the<sp/>architecture<sp/>roposed<sp/>in<sp/>the<sp/>third<sp/>part<sp/>of<sp/>the<sp/>project*<sp/>with<sp/>as<sp/>the<sp/>less<sp/>adaptation<sp/>work<sp/>as<sp/>possible.<sp/>Indeed<sp/>this<sp/>version<sp/>of<sp/>the<sp/>project<sp/>keeps<sp/>almost<sp/>unchancged<sp/>a<sp/>lot<sp/>of<sp/>components<sp/>from<sp/>[RCL#2](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2),<sp/>ad<sp/>also<sp/>something<sp/>that<sp/>comes<sp/>from<sp/>the<sp/>[RCL#1](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)<sp/>project.<sp/></highlight></codeline>
+<codeline><highlight class="normal">(But,<sp/>differently<sp/>from<sp/>the<sp/>real<sp/>game,<sp/>the<sp/>robot<sp/>can<sp/>propose<sp/>as<sp/>many<sp/>solution<sp/>as<sp/>it<sp/>wants,<sp/>without<sp/>loosing<sp/>the<sp/>game<sp/>after<sp/>a<sp/>wrong<sp/>proposal...)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Technical<sp/>Goals<sp/>--<sp/>RCL#2</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">First<sp/>of<sp/>all,<sp/>the<sp/>main<sp/>aim<sp/>is<sp/>to<sp/>create<sp/>a<sp/>better<sp/>architecture<sp/>than<sp/>in<sp/>the<sp/>previous<sp/>[RCL#1](https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git)<sp/>project,<sp/>which<sp/>is<sp/>not<sp/>so<sp/>flexible<sp/>(mainly<sp/>due<sp/>to<sp/>unclear<sp/>requirements,<sp/>concerning<sp/>in<sp/>particular<sp/>the<sp/>interface<sp/>of<sp/>the<sp/>Oracle<sp/>which<sp/>clearly<sp/>must<sp/>be<sp/>external<sp/>to<sp/>the<sp/>project):<sp/>this<sp/>did<sp/>lead<sp/>to<sp/>twrow<sp/>away<sp/>many<sp/>parts<sp/>of<sp/>the<sp/>preivous<sp/>version<sp/>of<sp/>the<sp/>project,<sp/>except<sp/>for<sp/>the<sp/>aRMOR<sp/>part<sp/>which<sp/>is<sp/>reusable<sp/>almost<sp/>completely,<sp/>with<sp/>a<sp/>little<sp/>of<sp/>message<sp/>updates.<sp/>In<sp/>particular,<sp/>the<sp/>project<sp/>should<sp/>represent<sp/>a<sp/>basis<sp/>for<sp/>the<sp/>third<sp/>iteration<sp/>of<sp/>the<sp/>project:<sp/>the<sp/>strategy<sp/>is<sp/>to<sp/>implement<sp/>an<sp/>architecture<sp/>which<sp/>can<sp/>be<sp/>flexible<sp/>enough<sp/>to<sp/>allow<sp/>the<sp/>re-usage<sp/>of<sp/>almost<sp/>all<sp/>the<sp/>parts,<sp/>with<sp/>very<sp/>little<sp/>changes.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">Moreover,<sp/>as<sp/>in<sp/>the<sp/>other<sp/>projects,<sp/>a<sp/>great<sp/>care<sp/>has<sp/>been<sp/>given<sp/>to<sp/>*the<sp/>metodology<sp/>of<sp/>work*:<sp/>not<sp/>only<sp/>writing<sp/>the<sp/>code,<sp/>but<sp/>also<sp/>using<sp/>and<sp/>developing<sp/>its<sp/>documentation<sp/>during<sp/>the<sp/>work.<sp/>A<sp/>big<sp/>effort<sp/>has<sp/>been<sp/>made<sp/>as<sp/>well,<sp/>in<sp/>documenting<sp/>about<sp/>the<sp/>technologies<sp/>involved<sp/>in<sp/>the<sp/>implementation<sp/>of<sp/>this<sp/>project,<sp/>trying<sp/>to<sp/>find<sp/>a<sp/>way<sp/>to<sp/>make<sp/>it<sp/>work<sp/>which<sp/>could<sp/>work<sp/>also<sp/>on<sp/>other<sp/>platforms<sp/>as<sp/>much<sp/>as<sp/>possible.<sp/>Finally,<sp/>the<sp/>project<sp/>comes<sp/>with<sp/>a<sp/>rich<sp/>*module<sp/>testing*<sp/>allowing<sp/>to<sp/>ensure<sp/>the<sp/>functioning<sp/>of<sp/>each<sp/>module,<sp/>either<sp/>single<sp/>or<sp/>in<sp/>combination<sp/>with<sp/>other<sp/>elements<sp/>of<sp/>the<sp/>architecture.<sp/>See<sp/>the<sp/>official<sp/>project<sp/>documentation<sp/>for<sp/>further<sp/>informations.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Differences<sp/>from<sp/>RCL#2</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Features<sp/>--<sp/>RCL#2</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">As<sp/>said<sp/>above,<sp/>there<sp/>are<sp/>few,<sp/>but<sp/>important,<sp/>technical<sp/>dfferences<sp/>between<sp/>the<sp/>two<sp/>versions<sp/>of<sp/>the<sp/>project:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>manipulator<sp/>control<sp/>using<sp/>MoveIt<sp/>with<sp/>well-known<sp/>poses</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>navigation<sp/>using<sp/>a<sp/>multi-layer<sp/>implementation<sp/>(to<sp/>gain<sp/>flexibility<sp/>for<sp/>later<sp/>updates)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>usage<sp/>of<sp/>a<sp/>OWL-based<sp/>ontology<sp/>for<sp/>elaborating<sp/>CLuedo<sp/>hints<sp/>and<sp/>combining<sp/>them<sp/>into<sp/>hypotheses<sp/>and<sp/>then<sp/>possible<sp/>solutions<sp/>of<sp/>the<sp/>mystery</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>usage<sp/>of<sp/>a<sp/>double-layered<sp/>planning<sp/>strategy<sp/>involving<sp/>a<sp/>simple<sp/>state-machine<sp/>at<sp/>high<sp/>level<sp/>and<sp/>ROSPlan<sp/>for<sp/>the<sp/>low-level<sp/>planning</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>the<sp/>project<sp/>introduces<sp/>a<sp/>*policy*<sp/>made<sp/>of<sp/>*landmarks*:<sp/>the<sp/>main<sp/>idea<sp/>is<sp/>that<sp/>the<sp/>problem<sp/>can<sp/>be<sp/>solved<sp/>by<sp/>&quot;steps&quot;<sp/>(the<sp/>so-called<sp/>landmarks)<sp/>that<sp/>are<sp/>macro-steps<sp/>to<sp/>be<sp/>expanded<sp/>by<sp/>ROSPlan<sp/>in<sp/>sequences<sp/>of<sp/>actions<sp/>to<sp/>apply,<sp/>depending<sp/>on<sp/>the<sp/>situation</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>this<sp/>choice<sp/>allows<sp/>to<sp/>have<sp/>a<sp/>part<sp/>of<sp/>the<sp/>architecture<sp/>not<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>details<sp/>of<sp/>the<sp/>PDDL<sp/>model,<sp/>making<sp/>an<sp/>*abstraction*<sp/>upon<sp/>the<sp/>real<sp/>structure<sp/>of<sp/>the<sp/>PDDL</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">-<sp/>a<sp/>new<sp/>robot<sp/>model,<sp/>including<sp/>4<sp/>cameras<sp/>and<sp/>a<sp/>brand<sp/>new<sp/>set<sp/>of<sp/>poses</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>a<sp/>new<sp/>navigation<sp/>system,<sp/>with<sp/>a<sp/>new<sp/>controller<sp/>integrating<sp/>**move_base**<sp/>and<sp/>the<sp/>navigation<sp/>stack</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>support<sp/>for<sp/>&quot;offline&quot;<sp/>localisation<sp/>using<sp/>**AMCL**</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>a<sp/>brand<sp/>new<sp/>**ArUco**<sp/>vision<sp/>system</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>updates<sp/>on<sp/>the<sp/>manipulation<sp/>controller,<sp/>supporting<sp/>(a<sp/>very<sp/>raw)<sp/>asynchronous<sp/>manipulation</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>a<sp/>brand<sp/>new<sp/>system<sp/>for<sp/>launching<sp/>the<sp/>components<sp/>of<sp/>the<sp/>architecture</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>minimal<sp/>adaptation<sp/>of<sp/>the<sp/>ROSPlan<sp/>package<sp/>to<sp/>cope<sp/>with<sp/>the<sp/>cpecificities<sp/>of<sp/>ERL#3</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Expected<sp/>Behaviour<sp/>--<sp/>RCL#2</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">And<sp/>other<sp/>little<sp/>differences<sp/>around<sp/>in<sp/>the<sp/>code<sp/>and<sp/>in<sp/>the<sp/>structure<sp/>of<sp/>the<sp/>project.<sp/>A<sp/>big<sp/>effort<sp/>have<sp/>been<sp/>made<sp/>in<sp/>making<sp/>the<sp/>project<sp/>execution<sp/>*as<sp/>much<sp/>fast<sp/>as<sp/>possible*:<sp/>using<sp/>such<sp/>a<sp/>sensing<sp/>system,<sp/>the<sp/>perfomrance<sp/>becomes<sp/>a<sp/>important<sp/>topic<sp/>to<sp/>deal<sp/>with.<sp/></highlight></codeline>
+<codeline><highlight class="normal">Here&apos;s<sp/>how<sp/>the<sp/>robot<sp/>should<sp/>behave,<sp/>just<sp/>as<sp/>a<sp/>short<sp/>overview<sp/>of<sp/>how<sp/>the<sp/>RCL#2<sp/>project<sp/>works.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Expected<sp/>Behaviour<sp/>--<sp/>RCL#3</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>ERL#2<sp/>Environment</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Here&apos;s<sp/>how<sp/>the<sp/>robot<sp/>should<sp/>behave,<sp/>just<sp/>as<sp/>a<sp/>short<sp/>overview<sp/>of<sp/>how<sp/>the<sp/>RCL#3<sp/>project<sp/>works.<sp/></highlight></codeline>
+<codeline><highlight class="normal">Our<sp/>RoboCLuedo<sp/>starts<sp/>in<sp/>the<sp/>middle<sp/>of<sp/>a<sp/>little<sp/>square<sp/>room<sp/>(6m<sp/>per<sp/>6m).<sp/>Here&apos;s<sp/>how<sp/>the<sp/>environment<sp/>appears<sp/>on<sp/>Gazebo:</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>ERL#3<sp/>Environment</highlight></codeline>
+<codeline><highlight class="normal">![env-gazebo](_media/env-gz.png)</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">The<sp/>robot<sp/>starts<sp/>in<sp/>the<sp/>middle<sp/>of<sp/>a<sp/>small<sp/>house<sp/>with<sp/>a<sp/>number<sp/>of<sp/>hints<sp/>(arUco<sp/>markers)<sp/>spread<sp/>out<sp/>in<sp/>the<sp/>space<sp/>(at<sp/>least<sp/>5<sp/>per<sp/>room).<sp/>The<sp/>robot<sp/>can<sp/>see<sp/>the<sp/>markers<sp/>and<sp/>detect<sp/>them.<sp/>Here&apos;s<sp/>how<sp/>the<sp/>environment<sp/>appears<sp/>on<sp/>Gazebo<sp/>after<sp/>the<sp/>project<sp/>has<sp/>been<sp/>run:</highlight></codeline>
+<codeline><highlight class="normal">Abit<sp/>outside<sp/>the<sp/>arena,<sp/>there<sp/>are<sp/>four<sp/>markers,<sp/>that<sp/>in<sp/>this<sp/>simulation<sp/>are<sp/>the<sp/>points<sp/>where<sp/>the<sp/>robot<sp/>can<sp/>find<sp/>the<sp/>hints.<sp/>When<sp/>the<sp/>robot<sp/>touches<sp/>a<sp/>marker,<sp/>it<sp/>receives<sp/>a<sp/>hint<sp/>that<sp/>it<sp/>can<sp/>store<sp/>and<sp/>elaborate<sp/>inside<sp/>its<sp/>ontology.<sp/>Here&apos;s<sp/>the<sp/>environment<sp/>as<sp/>seen<sp/>in<sp/>RViz,<sp/>showing<sp/>the<sp/>positions<sp/>of<sp/>the<sp/>markers:</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">![erl3-environment](_media/erl3-environment.png)</highlight></codeline>
+<codeline><highlight class="normal">![env-rviz](_media/env-rv.png)</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">And<sp/>here<sp/>how<sp/>it<sp/>appears<sp/>on<sp/>RViz;<sp/>the<sp/>green<sp/>balls<sp/>are<sp/>the<sp/>positions<sp/>of<sp/>the<sp/>rooms,<sp/>called<sp/>*waypoints*.<sp/>The<sp/>center<sp/>waypoint,<sp/>not<sp/>indicated<sp/>by<sp/>a<sp/>green<sp/>marker,<sp/>is<sp/>located<sp/>at<sp/>the<sp/>position<sp/>where<sp/>the<sp/>robot<sp/>starts<sp/>the<sp/>mission.<sp/></highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Expected<sp/>Behaviour</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">![erl3-env-rviz](_media/erl3-env-rviz.png)</highlight></codeline>
+<codeline><highlight class="normal">During<sp/>the<sp/>searching<sp/>phase,<sp/>there&apos;s<sp/>a<sp/>common<sp/>sequence<sp/>of<sp/>operations<sp/>repeated:</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Behaviour</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>go<sp/>in<sp/>front<sp/>o<sp/>a<sp/>marker</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>&quot;touch&quot;<sp/>the<sp/>marker<sp/>(it<sp/>triggers<sp/>the<sp/>oracle<sp/>to<sp/>send<sp/>a<sp/>hint)</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>put<sp/>back<sp/>the<sp/>robot<sp/>in<sp/>its<sp/>home<sp/>position</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">The<sp/>robot<sp/>**moves<sp/>around<sp/>looking<sp/>for<sp/>markers<sp/>to<sp/>detect**.<sp/>Each<sp/>marker<sp/>has<sp/>a<sp/>identifier,<sp/>which,<sp/>after<sp/>a<sp/>request<sp/>to<sp/>the<sp/>Oracle<sp/>node,<sp/>enables<sp/>the<sp/>system<sp/>to<sp/>access<sp/>a<sp/>hint<sp/>to<sp/>add<sp/>to<sp/>the<sp/>Ontology.<sp/>The<sp/>hint<sp/>will<sp/>be<sp/>used<sp/>for<sp/>reasoning<sp/>about<sp/>the<sp/>plausible<sp/>solutions<sp/>of<sp/>the<sp/>case,<sp/>trying<sp/>to<sp/>distinguish<sp/>between<sp/>che<sp/>&quot;COMPLETE&quot;<sp/>ones<sp/>and<sp/>the<sp/>&quot;INCONSISTENT&quot;<sp/>ones.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">Starting<sp/>from<sp/>a<sp/>location,<sp/>the<sp/>robot<sp/>navigates<sp/>to<sp/>another<sp/>waypoint,<sp/>using<sp/>the<sp/>cameras<sp/>to<sp/>&quot;see&quot;<sp/>the<sp/>markers<sp/>slong<sp/>the<sp/>way.<sp/>Arrived<sp/>at<sp/>the<sp/>waypoint,<sp/>the<sp/>robot<sp/>asks<sp/>for<sp/>admissible<sp/>hypotheses<sp/>to<sp/>the<sp/>Ontology.<sp/>If<sp/>at<sp/>least<sp/>one<sp/>hypothesis<sp/>is<sp/>found<sp/>acceptable,<sp/>the<sp/>robot<sp/>navigates<sp/>to<sp/>the<sp/>center<sp/>and,<sp/>once<sp/>arrived<sp/>there,<sp/>the<sp/>system<sp/>introduces<sp/>its<sp/>solution<sp/>to<sp/>the<sp/>Oracle<sp/>node,<sp/>which<sp/>checks<sp/>if<sp/>the<sp/>solution<sp/>is<sp/>either<sp/>right<sp/>or<sp/>wrong.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">If<sp/>the<sp/>proposal<sp/>is<sp/>wrong,<sp/>the<sp/>robot<sp/>continues<sp/>to<sp/>explore<sp/>in<sp/>search<sp/>of<sp/>other<sp/>hints,<sp/>after<sp/>having<sp/>discarded<sp/>the<sp/>proposed<sp/>hypothesis.<sp/>Otherwise,<sp/>the<sp/>robot<sp/>ends<sp/>working.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">The<sp/>robot<sp/>keeps<sp/>going<sp/>from<sp/>one<sp/>waypoint<sp/>to<sp/>another<sp/>one,<sp/>collecting<sp/>hints<sp/>until<sp/>a<sp/>plausible<sp/>solution<sp/>is<sp/>available.<sp/></highlight></codeline>
+<codeline><highlight class="normal">then<sp/>the<sp/>robot<sp/>selects<sp/>another<sp/>waypoint,<sp/>and<sp/>the<sp/>cycle<sp/>restarts.<sp/>When<sp/>the<sp/>robot<sp/>succeeded<sp/>in<sp/>obtaining<sp/>at<sp/>least<sp/>one<sp/>CONSISTENT<sp/>hypothesis,<sp/>the<sp/>robot<sp/>goes<sp/>at<sp/>the<sp/>center<sp/>of<sp/>the<sp/>arena<sp/>to<sp/>propose<sp/>its<sp/>solution<sp/>to<sp/>the<sp/>Oracle.<sp/>Due<sp/>to<sp/>the<sp/>fact<sp/>that<sp/>the<sp/>Oracle<sp/>could<sp/>return<sp/>a<sp/>corrupted<sp/>hint,<sp/>or<sp/>also<sp/>a<sp/>repeated<sp/>one,<sp/>the<sp/>robotcould<sp/>take<sp/>a<sp/>lot<sp/>of<sp/>time<sp/>to<sp/>formulate<sp/>a<sp/>acceptable<sp/>hypothesis.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>SW<sp/>Arch<sp/>--<sp/>Components</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">The<sp/>project<sp/>is<sp/>a<sp/>rich<sp/>composition<sp/>of<sp/>many<sp/>packages,<sp/>resulting<sp/>in<sp/>a<sp/>complex,<sp/>heavy<sp/>centralized<sp/>architecture.<sp/>It<sp/>behaves<sp/>as<sp/>a<sp/>classical<sp/>hyerarchical<sp/>architecture:<sp/>sense,<sp/>then<sp/>plan,<sp/>then<sp/>act.</highlight></codeline>
+<codeline><highlight class="normal">The<sp/>project<sp/>is<sp/>a<sp/>rich<sp/>composition<sp/>of<sp/>many<sp/>packages,<sp/>resulting<sp/>in<sp/>a<sp/>complex,<sp/>heavy<sp/>centralized<sp/>architecture.<sp/>It<sp/>behaves<sp/>as<sp/>a<sp/>classical<sp/>hyerarchical<sp/>architecture:<sp/>sense,<sp/>then<sp/>plan,<sp/>then<sp/>act.<sp/>*So<sp/>far,<sp/>the<sp/>&apos;sense&apos;<sp/>part<sp/>is<sp/>simulated<sp/>by<sp/>the<sp/>Oracle<sp/>sending<sp/>the<sp/>hints*:<sp/>in<sp/>afuture<sp/>development,<sp/>the<sp/>robot<sp/>should<sp/>get<sp/>the<sp/>hints<sp/>from<sp/>the<sp/>environment<sp/>using<sp/>a<sp/>vision<sp/>system.<sp/></highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>highlights<sp/>of<sp/>the<sp/>architecture</highlight></codeline>
 <codeline></codeline>
@@ -128,32 +127,34 @@
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
 <codeline><highlight class="normal">database<sp/>&quot;aRMOR&quot;<sp/>as<sp/>ARMOR</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;MoveIt!&quot;<sp/>as<sp/>MOVEIT</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;Navigation<sp/>Stack&quot;<sp/>as<sp/>NAVSTACK</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;erl3<sp/>Oracle&quot;<sp/>as<sp/>ORACLE</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;erl2<sp/>Oracle&quot;<sp/>as<sp/>ORACLE</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;ROSPlan&quot;<sp/>as<sp/>ROSPLAN</highlight></codeline>
 <codeline></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>environment&quot;<sp/>as<sp/>ENVIRONMENT</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">package<sp/>RCL<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;RCL<sp/>mission<sp/>manager&quot;<sp/>as<sp/>MISSION_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>Vision&quot;<sp/>as<sp/>VISION</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>component<sp/>&quot;RCL<sp/>Vision&quot;<sp/>as<sp/>VISION</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>aRMOR<sp/>interface&quot;<sp/>as<sp/>RCL_ARMOR</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>ROSPlan&quot;<sp/>as<sp/>RCL_ROSPLAN</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>Movement<sp/>Controller&quot;<sp/>as<sp/>MOVEMENT</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>hunter<sp/>environment&quot;<sp/>as<sp/>ENVIRONMENT</highlight></codeline>
+<codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
-<codeline><highlight class="normal">ENVIRONMENT<sp/>&lt;--&gt;<sp/>NAVSTACK</highlight></codeline>
 <codeline><highlight class="normal">ENVIRONMENT<sp/>&lt;--&gt;<sp/>MOVEIT</highlight></codeline>
-<codeline><highlight class="normal">ENVIRONMENT<sp/>&lt;--&gt;<sp/>VISION</highlight></codeline>
-<codeline><highlight class="normal">NAVSTACK<sp/>&lt;--&gt;<sp/>MOVEMENT</highlight></codeline>
 <codeline><highlight class="normal">MOVEIT<sp/>&lt;--&gt;<sp/>MOVEMENT</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ENVIRONMENT<sp/>&lt;--&gt;<sp/>MOVEMENT</highlight></codeline>
 <codeline><highlight class="normal">MOVEMENT<sp/>&lt;--&gt;<sp/>MISSION_MANAGER</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;--&gt;<sp/>RCL_ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">ROSPLAN<sp/>&lt;--&gt;<sp/>RCL_ROSPLAN</highlight></codeline>
+<codeline><highlight class="normal">ROSPLAN<sp/>&lt;-up-&gt;<sp/>RCL_ROSPLAN</highlight></codeline>
 <codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;--&gt;<sp/>RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">ARMOR<sp/>&lt;--&gt;<sp/>RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;--&gt;<sp/>VISION</highlight></codeline>
-<codeline><highlight class="normal">VISION<sp/>&lt;--&gt;<sp/>ORACLE</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>ORACLE</highlight></codeline>
+<codeline><highlight class="normal">ARMOR<sp/>&lt;-right-&gt;<sp/>RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>MISSION_MANAGER<sp/>&lt;--&gt;<sp/>VISION</highlight></codeline>
+<codeline><highlight class="normal">&apos;<sp/>VISION<sp/>&lt;--&gt;<sp/>ORACLE</highlight></codeline>
+<codeline><highlight class="normal">MISSION_MANAGER<sp/>-right-<sp/>ORACLE</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
@@ -162,11 +163,7 @@
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>Components<sp/>--<sp/>extended<sp/>schema<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
-<codeline><highlight class="normal">&gt;<sp/>Wanna<sp/>see<sp/>more?<sp/>Take<sp/>a<sp/>look<sp/>at<sp/>the<sp/>packages<sp/>documentation<sp/>inside<sp/>the<sp/>Official<sp/>Documentation.<sp/></highlight></codeline>
-<codeline><highlight class="normal">&gt;<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">This<sp/>schema<sp/>wants<sp/>to<sp/>give<sp/>an<sp/>idea<sp/>of<sp/>how<sp/>much<sp/>the<sp/>architecture<sp/>of<sp/>the<sp/>project<sp/>is<sp/>extended.<sp/>Inside<sp/>it<sp/>there<sp/>are<sp/>pointed<sp/>out<sp/>many<sp/>ideas<sp/>inside<sp/>RCL#3:</highlight></codeline>
+<codeline><highlight class="normal">This<sp/>schema<sp/>wants<sp/>to<sp/>give<sp/>an<sp/>idea<sp/>of<sp/>how<sp/>much<sp/>the<sp/>architecture<sp/>of<sp/>the<sp/>project<sp/>is<sp/>extended.<sp/>Inside<sp/>it<sp/>there<sp/>are<sp/>pointed<sp/>out<sp/>many<sp/>ideas<sp/>inside<sp/>RCL#2:</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>the<sp/>ROSPlan<sp/>side<sp/>is<sp/>a<sp/>sort<sp/>of<sp/>mikrokosmos<sp/>of<sp/>components.<sp/>The<sp/>system<sp/>uses<sp/>the<sp/>idea<sp/>of<sp/>*landmarks*,<sp/>implementing<sp/>the<sp/>&quot;low<sp/>level<sp/>planning<sp/>system&quot;.<sp/>See<sp/>the<sp/>official<sp/>documentation,<sp/>and<sp/>in<sp/>particular<sp/>the<sp/>design<sp/>of<sp/>the<sp/>PDDL,<sp/>for<sp/>further<sp/>details<sp/>about<sp/>such<sp/>a<sp/>planning<sp/>policy.<sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
@@ -183,76 +180,50 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>the<sp/>*elementary<sp/>behaviours*<sp/>directly<sp/>influencing<sp/>the<sp/>motion<sp/>of<sp/>the<sp/>robot,<sp/></highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>combined<sp/>into<sp/>*composite<sp/>behaviours*<sp/>which<sp/>group<sp/>the<sp/>elementary<sp/>behaviours<sp/>to<sp/>make<sp/>more<sp/>structured<sp/>motion<sp/>strategies</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>and<sp/>the<sp/>*motion<sp/>controllers*,<sp/>components<sp/>of<sp/>the<sp/>navigation<sp/>manager<sp/>(implemented<sp/>as<sp/>classes<sp/>inside<sp/>that<sp/>node)<sp/>providing<sp/>a<sp/>&quot;cozy&quot;<sp/>abstraction<sp/>for<sp/>the<sp/>navigation<sp/>system:<sp/>a<sp/>external<sp/>node<sp/>sees<sp/>onl<sp/>a<sp/>simple<sp/>interface,<sp/>without<sp/>having<sp/>the<sp/>need<sp/>to<sp/>deal<sp/>with<sp/>the<sp/>details<sp/>of<sp/>the<sp/>implementation<sp/>of<sp/>the<sp/>navigation<sp/>system.</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">-<sp/>the<sp/>diagram<sp/>also<sp/>shows<sp/>the<sp/>components<sp/>of<sp/>the<sp/>navigation<sp/>stack,<sp/>a<sp/>novelty<sp/>of<sp/>RCL#3</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Here&apos;s<sp/>the<sp/>diagram<sp/>(I<sp/>suggest<sp/>you<sp/>to<sp/>open<sp/>the<sp/>image<sp/>in<sp/>a<sp/>new<sp/>tab<sp/>of<sp/>the<sp/>browser...<sp/>it<sp/>is<sp/>quite<sp/>big)</highlight></codeline>
+<codeline><highlight class="normal">Here&apos;s<sp/>the<sp/>diagram:</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{uml}</highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>INFOS</highlight></codeline>
 <codeline><highlight class="normal">title<sp/>Project<sp/>Architecture<sp/>-<sp/>extended</highlight></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>skinparam<sp/>Padding<sp/>8</highlight></codeline>
-<codeline><highlight class="normal">allow_mixing</highlight></codeline>
+<codeline><highlight class="normal">left<sp/>to<sp/>right<sp/>direction</highlight></codeline>
 <codeline></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>COMPONENTS</highlight></codeline>
 <codeline><highlight class="normal">package<sp/>armor{</highlight></codeline>
 <codeline><highlight class="normal">database<sp/>&quot;aRMOR&quot;<sp/>as<sp/>ARMOR</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>aRMOR<sp/>interface&quot;<sp/>as<sp/>RCL_ARMOR</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">RCL_ARMOR<sp/>--<sp/>ARMOR</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">package<sp/>&quot;RCL<sp/>Mission<sp/>Manager&quot;{</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>mission<sp/>manager&quot;<sp/>as<sp/>MISSION_MANAGER</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>manipulation<sp/>unit&quot;<sp/>as<sp/>MANIP_UNIT</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>navigation<sp/>unit&quot;<sp/>as<sp/>NAV_UNIT</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>MANIP_UNIT</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">package<sp/>&quot;RCL<sp/>ROSPlan&quot;<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;ROSPlan<sp/>pipeline<sp/>manager&quot;<sp/>as<sp/>ROSPLAN</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>kb_tools&quot;<sp/>as<sp/>RCL_KBTOOLS</highlight></codeline>
-<codeline><highlight class="normal">database<sp/>&quot;ROSPlan<sp/>knowledge<sp/>base&quot;<sp/>as<sp/>ROSPLANKB</highlight></codeline>
+<codeline><highlight class="normal">database<sp/>&quot;ROSPlan<sp/>kb&quot;<sp/>as<sp/>ROSPLANKB</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;ROSPlan<sp/>components&quot;<sp/>as<sp/>ROSPLAN_COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">file<sp/>&quot;PDDL<sp/>RCL<sp/>domain&quot;<sp/>as<sp/>DOMAIN</highlight></codeline>
-<codeline><highlight class="normal">file<sp/>&quot;PDDL<sp/>RCL<sp/>problem&quot;<sp/>as<sp/>PROBLEM</highlight></codeline>
+<codeline><highlight class="normal">file<sp/>&quot;domain&quot;<sp/>as<sp/>DOMAIN</highlight></codeline>
+<codeline><highlight class="normal">file<sp/>&quot;problem&quot;<sp/>as<sp/>PROBLEM</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;feedback<sp/>manager&quot;<sp/>as<sp/>FEEDBACK</highlight></codeline>
 <codeline><highlight class="normal">package<sp/>&quot;RCL<sp/>ROSPlan<sp/>Actions&quot;<sp/>as<sp/>ROSPLAN_ACTIONS<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>REPLAN</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>SOLVE</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>COLLECT</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
-<codeline><highlight class="normal">FEEDBACK<sp/>--&gt;<sp/>ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">ROSPLAN_ACTIONS<sp/>--&gt;<sp/>FEEDBACK</highlight></codeline>
-<codeline><highlight class="normal">ROSPLAN_COMPONENTS<sp/>--<sp/>ROSPLAN_ACTIONS</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ROSPLANKB--<sp/>ROSPLAN_COMPONENTS</highlight></codeline>
-<codeline><highlight class="normal">ROSPLANKB<sp/>--<sp/>RCL_KBTOOLS</highlight></codeline>
-<codeline><highlight class="normal">ROSPLANKB<sp/>--<sp/>ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">RCL_KBTOOLS<sp/>--<sp/>ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">DOMAIN<sp/>--<sp/>ROSPLANKB</highlight></codeline>
-<codeline><highlight class="normal">PROBLEM<sp/>--<sp/>ROSPLANKB</highlight></codeline>
-<codeline><highlight class="normal">ROSPLAN_COMPONENTS<sp/>--<sp/>ROSPLAN</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">package<sp/>&quot;erl3&quot;{</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;erl3<sp/>Oracle&quot;<sp/>as<sp/>ORACLE</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;markers<sp/>publisher&quot;<sp/>as<sp/>MARKERS</highlight></codeline>
-<codeline><highlight class="normal">}</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">package<sp/>&quot;RCL<sp/>Vision&quot;<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>vision<sp/>detection&quot;<sp/>as<sp/>VISION</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>vision<sp/>decoder&quot;<sp/>as<sp/>VISION_DECODE</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION<sp/>--<sp/>VISION_DECODE</highlight></codeline>
+<codeline><highlight class="normal">package<sp/>&quot;erl2&quot;{</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;erl2<sp/>Oracle&quot;<sp/>as<sp/>ORACLE</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">package<sp/>&quot;Simulated<sp/>Environment&quot;<sp/>as<sp/>ENVIRONMENT<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>robot<sp/>&apos;hunter&apos;&quot;</highlight></codeline>
+<codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>robot&quot;</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;Gazebo&quot;</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;RViz&quot;</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
@@ -261,38 +232,46 @@
 <codeline><highlight class="normal">component<sp/>&quot;MoveIt!&quot;<sp/>as<sp/>MOVEIT</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">package<sp/>&quot;navigation<sp/>stack&quot;<sp/>as<sp/>NAVSTACK<sp/>{</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;Move<sp/>Base&quot;</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;AMCL&quot;</highlight></codeline>
-<codeline><highlight class="normal">component<sp/>&quot;SLAM/GMapping&quot;</highlight></codeline>
-<codeline><highlight class="normal">}</highlight></codeline>
-<codeline></codeline>
 <codeline><highlight class="normal">package<sp/>&quot;RCL<sp/>Movement<sp/>Controller&quot;<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>navigation<sp/>manager&quot;<sp/>as<sp/>MOVEMENT</highlight></codeline>
 <codeline><highlight class="normal">component<sp/>&quot;RCL<sp/>manipulation<sp/>controller&quot;<sp/>as<sp/>MANIPULATION</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">package<sp/>behaviours<sp/>{</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;bug_m&quot;</highlight></codeline>
-<codeline><highlight class="normal">node<sp/>&quot;move_base_nav&quot;</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;head_orientation&quot;</highlight></codeline>
 <codeline><highlight class="normal">node<sp/>&quot;go_to_point&quot;</highlight></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
+<codeline></codeline>
 <codeline><highlight class="normal">}</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>CONNECTIONS</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>RCL_ARMOR</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>VISION_DECODE</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>ORACLE</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>--<sp/>ORACLE</highlight></codeline>
-<codeline><highlight class="normal">MARKERS<sp/>--<sp/>NAV_UNIT</highlight></codeline>
-<codeline><highlight class="normal">VISION<sp/>--<sp/>ENVIRONMENT</highlight></codeline>
 <codeline><highlight class="normal">ENVIRONMENT<sp/>--<sp/>MOVEIT</highlight></codeline>
-<codeline><highlight class="normal">ENVIRONMENT<sp/>--<sp/>NAVSTACK</highlight></codeline>
 <codeline><highlight class="normal">MOVEIT<sp/>--<sp/>MANIPULATION</highlight></codeline>
-<codeline><highlight class="normal">NAVSTACK<sp/>--<sp/>MOVEMENT</highlight></codeline>
-<codeline><highlight class="normal">MANIP_UNIT<sp/>--<sp/>MANIPULATION</highlight></codeline>
-<codeline><highlight class="normal">NAV_UNIT<sp/>--<sp/>MOVEMENT</highlight></codeline>
-<codeline><highlight class="normal">NAV_UNIT<sp/>--<sp/>ROSPLAN_ACTIONS</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ENVIRONMENT<sp/>--<sp/>MOVEMENT</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MANIPULATION<sp/>--<sp/>MANIP_UNIT</highlight></codeline>
+<codeline><highlight class="normal">MOVEMENT<sp/>--<sp/>NAV_UNIT</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>RCL_ARMOR</highlight></codeline>
+<codeline><highlight class="normal">RCL_ARMOR<sp/>&lt;--&gt;<sp/>ARMOR</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>ROSPLAN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">MISSION_MANAGER<sp/>--<sp/>ORACLE</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">PROBLEM<sp/>--<sp/>ROSPLANKB</highlight></codeline>
+<codeline><highlight class="normal">DOMAIN<sp/>--<sp/>ROSPLANKB</highlight></codeline>
+<codeline><highlight class="normal">ROSPLANKB<sp/>--<sp/>ROSPLAN_COMPONENTS</highlight></codeline>
+<codeline><highlight class="normal">ROSPLAN_COMPONENTS<sp/>--<sp/>ROSPLAN<sp/></highlight></codeline>
+<codeline><highlight class="normal">ROSPLAN_COMPONENTS<sp/>--ROSPLAN_ACTIONS</highlight></codeline>
+<codeline><highlight class="normal">ROSPLAN_ACTIONS<sp/>--<sp/>FEEDBACK</highlight></codeline>
+<codeline><highlight class="normal">FEEDBACK<sp/>--<sp/>ROSPLAN</highlight></codeline>
+<codeline><highlight class="normal">ROSPLANKB<sp/>--<sp/>RCL_KBTOOLS</highlight></codeline>
+<codeline><highlight class="normal">RCL_KBTOOLS<sp/>--<sp/>ROSPLAN</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">ROSPLAN_ACTIONS<sp/>--<sp/>NAV_UNIT</highlight></codeline>
+<codeline><highlight class="normal">ROSPLAN_ACTIONS<sp/>--<sp/>MANIP_UNIT</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
@@ -309,108 +288,6 @@
 <codeline><highlight class="normal">-<sp/>the<sp/>*node<sp/>temporal<sp/>diagram*<sp/>is<sp/>more<sp/>specific<sp/>and<sp/>goes<sp/>deeper<sp/>into<sp/>how<sp/>the<sp/>nodes<sp/>communicate<sp/>each<sp/>other</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>the<sp/>square<sp/>note<sp/>is<sp/>used<sp/>for<sp/>exposing<sp/>scenarios<sp/>and<sp/>hypotheses</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>the<sp/>rhomboid<sp/>annotation<sp/>underlines<sp/>an<sp/>operation<sp/>inside<sp/>the<sp/>node<sp/>or<sp/>the<sp/>package</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">###<sp/>navigation<sp/>using<sp/>move_base<sp/>(RCL#3)</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**package<sp/>temporal<sp/>diagram**.<sp/>The<sp/>RCL#3<sp/>integrates<sp/>a<sp/>behaviour<sp/>involving<sp/>*move_base*.<sp/>As<sp/>said<sp/>before,<sp/>the<sp/>package<sp/>*robocluedo_mission_manager*<sp/>offers<sp/>delegates<sp/>to<sp/>enable<sp/>the<sp/>communicaton<sp/>between<sp/>two<sp/>different<sp/>packages.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{uml}</highlight></codeline>
-<codeline><highlight class="normal">@startuml</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">title<sp/>RCL#3<sp/>move_base<sp/>navigation<sp/>-<sp/>package<sp/>temporal<sp/>diagram</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>ENTITIES<sp/></highlight></codeline>
-<codeline><highlight class="normal">collections<sp/>ROSPLAN</highlight></codeline>
-<codeline><highlight class="normal">collections<sp/>MISSION</highlight></codeline>
-<codeline><highlight class="normal">collections<sp/>MOVEMENT</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>SEQUENCE</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>==<sp/>section<sp/>==</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
-<codeline><highlight class="normal">==<sp/>First<sp/>setup<sp/>(first<sp/>request)<sp/>==</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MISSION<sp/>-&gt;<sp/>MOVEMENT<sp/>:<sp/>SET<sp/>controller<sp/>ID=1</highlight></codeline>
-<codeline><highlight class="normal">MISSION<sp/>&lt;-<sp/>MOVEMENT<sp/>:<sp/>success</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MISSION:<sp/>waiting<sp/>for<sp/>markers</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>Movement<sp/>==</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ROSPLAN<sp/>-&gt;<sp/>MISSION<sp/>:<sp/>request<sp/>from<sp/>ROSPlan<sp/>action</highlight></codeline>
-<codeline><highlight class="normal">MISSION<sp/>-&gt;<sp/>MOVEMENT<sp/>:<sp/>navigation<sp/>request</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MOVEMENT<sp/>:<sp/>performing<sp/>navigation</highlight></codeline>
-<codeline><highlight class="normal">MISSION<sp/>&lt;-<sp/>MOVEMENT<sp/>:<sp/>target<sp/>reached</highlight></codeline>
-<codeline><highlight class="normal">ROSPLAN<sp/>&lt;-<sp/>MISSION<sp/>:<sp/>navigation<sp/>ended</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**node<sp/>temporal<sp/>diagram**.<sp/>The<sp/>navigation<sp/>is<sp/>divided<sp/>into<sp/>many<sp/>layers:<sp/>the<sp/>delegate<sp/>(NAVIGATION_UNIT)<sp/>inside<sp/>the<sp/>*robocluedo_mission_manager*<sp/>package,<sp/>the<sp/>manager<sp/>(NAVIGATION_MANAGER),<sp/>the<sp/>controller<sp/>(NAVIGATION_CONTROLLER),<sp/>the<sp/>composite<sp/>behaviour<sp/>(MOVE_BASE_NAV)<sp/>and<sp/>the<sp/>elementary<sp/>behaviours<sp/>(in<sp/>this<sp/>case<sp/>only<sp/>HEAD_ORIENTATION<sp/>since<sp/>MOVE_BASE<sp/>is<sp/>another<sp/>framework,<sp/>but<sp/>in<sp/>this<sp/>case<sp/>let&apos;s<sp/>assume<sp/>it<sp/>is<sp/>a<sp/>behaviour<sp/>similar<sp/>to<sp/>the<sp/>GOTO_POIN<sp/>in<sp/>RCL#2).<sp/>The<sp/>robot<sp/>first<sp/>travels<sp/>with<sp/>a<sp/>complex<sp/>path<sp/>towards<sp/>the<sp/>target,<sp/>then,<sp/>reached<sp/>it,<sp/>rotates<sp/>to<sp/>reach<sp/>the<sp/>final<sp/>orientation.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{uml}</highlight></codeline>
-<codeline><highlight class="normal">@startuml</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">title<sp/>RCL#3<sp/>move_base<sp/>navigation<sp/>-<sp/>node<sp/>temporal<sp/>diagram</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>header<sp/>...</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>footer<sp/>...</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>ENTITIES<sp/></highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MOVE_TO<sp/>order<sp/>0</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>NAVIGATION_UNIT<sp/>order<sp/>1</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>NAVIGATION_MANAGER<sp/>order<sp/>2</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>NAVIGATION_CONTROLLER<sp/>order<sp/>3</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MOVE_BASE_NAV<sp/>order<sp/>5</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>HEAD_ORIENTATION<sp/>order<sp/>6</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MOVE_BASE<sp/>order<sp/>5</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>SEQUENCE</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>==<sp/>section<sp/>==</highlight></codeline>
-<codeline><highlight class="normal">&apos;<sp/>...</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>request<sp/>==</highlight></codeline>
-<codeline><highlight class="normal">MOVE_TO<sp/>-&gt;<sp/>NAVIGATION_UNIT<sp/>:<sp/>using<sp/>RCL<sp/>ROSPlan<sp/>interface</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>NAVIGATION_UNIT<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waiting<sp/>for<sp/>markers</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_UNIT<sp/>-&gt;<sp/>NAVIGATION_MANAGER<sp/>:<sp/>using<sp/>RCL<sp/>navigation<sp/>req</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>NAVIGATION_MANAGER</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>let&apos;s<sp/>assume<sp/>a<sp/>controller<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>has<sp/>been<sp/>activated<sp/>before...</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>otherwise,<sp/>the<sp/>service<sp/>returns<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>immediately</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_MANAGER<sp/>--&gt;<sp/>NAVIGATION_CONTROLLER<sp/>:<sp/>passing<sp/>request<sp/>(call)</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>navigation<sp/>job<sp/>==</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_CONTROLLER<sp/>-&gt;<sp/>MOVE_BASE_NAV<sp/>:<sp/>switch<sp/>ON</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>NAVIGATION_CONTROLLER</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>waiting<sp/>for<sp/>a<sp/>signal<sp/>...</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>MOVE_BASE_NAV</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>the<sp/>behaviour<sp/>receives<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>a<sp/>final<sp/>orientation<sp/>to<sp/>achieve</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>and<sp/>a<sp/>target<sp/>to<sp/>reach</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline><highlight class="normal">MOVE_BASE_NAV<sp/>-&gt;<sp/>MOVE_BASE<sp/>:<sp/>send<sp/>goal</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MOVE_BASE_NAV</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>reading<sp/>distance<sp/>error<sp/>...</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline><highlight class="normal">MOVE_BASE_NAV<sp/>-&gt;<sp/>MOVE_BASE<sp/>:<sp/>cancel<sp/>goal</highlight></codeline>
-<codeline><highlight class="normal">MOVE_BASE_NAV<sp/>-&gt;<sp/>HEAD_ORIENTATION<sp/>:<sp/>switch<sp/>ON</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MOVE_BASE_NAV</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>reading<sp/>orientation<sp/>error<sp/>...</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline><highlight class="normal">MOVE_BASE_NAV<sp/>-&gt;<sp/>HEAD_ORIENTATION<sp/>:<sp/>switch<sp/>OFF</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_CONTROLLER<sp/>&lt;-<sp/>MOVE_BASE_NAV<sp/>:<sp/>send<sp/>signal</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_CONTROLLER<sp/>-&gt;<sp/>MOVE_BASE_NAV<sp/>:<sp/>switch<sp/>OFF</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>response<sp/>==</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_MANAGER<sp/>&lt;--<sp/>NAVIGATION_CONTROLLER<sp/>:<sp/>return</highlight></codeline>
-<codeline><highlight class="normal">NAVIGATION_UNIT<sp/>&lt;-<sp/>NAVIGATION_MANAGER<sp/>:<sp/>response<sp/>(RCL<sp/>movement<sp/>controller)</highlight></codeline>
-<codeline><highlight class="normal">MOVE_TO<sp/>&lt;-<sp/>NAVIGATION_UNIT<sp/>:<sp/>response<sp/>(RCL<sp/>ROSPlan)</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>navigation<sp/>using<sp/>bug_m<sp/>(RCL#2)</highlight></codeline>
 <codeline></codeline>
@@ -546,209 +423,33 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>manipulation<sp/>(RCL#3)<sp/>--<sp/>asynchrononus<sp/>manipulation</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**node<sp/>temporal<sp/>diagram**.<sp/>This<sp/>feature<sp/>has<sp/>been<sp/>introduced<sp/>for<sp/>collecting<sp/>much<sp/>more<sp/>hints<sp/>in<sp/>the<sp/>space<sp/>than<sp/>in<sp/>the<sp/>case<sp/>when<sp/>the<sp/>robot<sp/>performs<sp/>a<sp/>manipulation<sp/>always<sp/>in<sp/>the<sp/>same<sp/>way.<sp/>The<sp/>manipulator<sp/>continuously<sp/>changes<sp/>the<sp/>camera<sp/>framing<sp/>for<sp/>spotting<sp/>new<sp/>markers<sp/>in<sp/>the<sp/>space.<sp/>This<sp/>often<sp/>causes<sp/>a<sp/>quicker<sp/>solution<sp/>time.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">Here&apos;s<sp/>how<sp/>this<sp/>feature<sp/>works.<sp/>The<sp/>mission<sp/>manager<sp/>keeps<sp/>it<sp/>active,<sp/>and<sp/>turns<sp/>off<sp/>it<sp/>only<sp/>during<sp/>the<sp/>SOLVE<sp/>phase.<sp/></highlight></codeline>
+<codeline><highlight class="normal">###<sp/>manipulation<sp/>--<sp/>synchronous<sp/>manipulation</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">```{uml}</highlight></codeline>
 <codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">title<sp/>Asynchronous<sp/>Manipuation<sp/>-<sp/>RCL#3</highlight></codeline>
+<codeline><highlight class="normal">title<sp/>Synchronous<sp/>manipulation<sp/>--<sp/>RCL#2</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">&apos;&apos;&apos;<sp/>ENTITIES</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MISSION_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MANIPULATION_CONTROLLER</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MOVEIT</highlight></codeline>
+<codeline><highlight class="normal">participant<sp/>COLLECT</highlight></codeline>
+<codeline><highlight class="normal">participant<sp/>MANIP_UNIT</highlight></codeline>
+<codeline><highlight class="normal">participant<sp/>MANIPULATION</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">==<sp/>enable<sp/>automatic<sp/>manipolation<sp/>==</highlight></codeline>
+<codeline><highlight class="normal">==<sp/>put<sp/>near<sp/>to<sp/>the<sp/>marker<sp/>==</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>MANIPULATION_UNIT<sp/>:<sp/>switch<sp/>&lt;b&gt;ON&lt;/b&gt;</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>MANIPULATION_UNIT<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>--&gt;<sp/>MANIP_UNIT<sp/>:<sp/>send<sp/>command<sp/>near</highlight></codeline>
+<codeline><highlight class="normal">MANIP_UNIT<sp/>--&gt;<sp/>MANIPULATION<sp/>:<sp/>convert<sp/>and<sp/>pass<sp/>request</highlight></codeline>
+<codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION<sp/>:<sp/>moveit<sp/>move()</highlight></codeline>
+<codeline><highlight class="normal">MANIP_UNIT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">==<sp/>automatic<sp/>manipulation<sp/>cycle<sp/>==</highlight></codeline>
+<codeline><highlight class="normal">==<sp/>home<sp/>position<sp/>==</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_UNIT<sp/>-&gt;<sp/>MANIPULATION_CONTROLLER<sp/>:<sp/>send<sp/>random<sp/>pose</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">wait<sp/>tot<sp/>seconds</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">let&apos;s<sp/>assume<sp/>the<sp/>cycle<sp/>time</highlight></codeline>
-<codeline><highlight class="normal">of<sp/>the<sp/>MANIPULATION_UNIT<sp/>is</highlight></codeline>
-<codeline><highlight class="normal">large<sp/>enough<sp/>to<sp/>complete<sp/>the<sp/>movement</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>-&gt;<sp/>MOVEIT<sp/>:<sp/>call<sp/>move()</highlight></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>&lt;--<sp/>MOVEIT<sp/>:<sp/>end<sp/>of<sp/>the<sp/>motion</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_UNIT<sp/>-&gt;<sp/>MANIPULATION_CONTROLLER<sp/>:<sp/>send<sp/>random<sp/>pose</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">wait<sp/>tot<sp/>seconds</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>-&gt;<sp/>MOVEIT<sp/>:<sp/>call<sp/>move()</highlight></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>&lt;--<sp/>MOVEIT<sp/>:<sp/>end<sp/>of<sp/>the<sp/>motion</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>MANIPULATION_UNIT,<sp/>MOVEIT</highlight></codeline>
-<codeline><highlight class="normal">.<sp/>.<sp/>.<sp/>and<sp/>so<sp/>on<sp/>.<sp/>.<sp/>.</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>disable<sp/>automatic<sp/>manipulation<sp/>==</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>MISSION_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">the<sp/>MISSION<sp/>MANAGER<sp/>can<sp/>issue<sp/>the<sp/></highlight></codeline>
-<codeline><highlight class="normal">command<sp/>in<sp/>any<sp/>time</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>-&gt;<sp/>MOVEIT<sp/>:<sp/>call<sp/>move()</highlight></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>&lt;--<sp/>MOVEIT<sp/>:<sp/>end<sp/>of<sp/>the<sp/>motion</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_UNIT<sp/>-&gt;<sp/>MANIPULATION_CONTROLLER<sp/>:<sp/>send<sp/>random<sp/>pose</highlight></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">wait<sp/>tot<sp/>seconds</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>MANIPULATION_UNIT<sp/>:<sp/>switch<sp/>&lt;b&gt;OFF&lt;/b&gt;</highlight></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>MANIPULATION_UNIT</highlight></codeline>
-<codeline><highlight class="normal">there&apos;s<sp/>still<sp/>a<sp/>residual<sp/>movement<sp/>to<sp/>perform;</highlight></codeline>
-<codeline><highlight class="normal">the<sp/>unit<sp/>doesn&apos;t<sp/>block<sp/>that<sp/>movement<sp/></highlight></codeline>
-<codeline><highlight class="normal">(this<sp/>could<sp/>be<sp/>a<sp/>problem<sp/>...<sp/>see<sp/>you<sp/>in</highlight></codeline>
-<codeline><highlight class="normal">the<sp/>next<sp/>update)</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>MANIPULATION_UNIT<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>-&gt;<sp/>MOVEIT<sp/>:<sp/>call<sp/>move()</highlight></codeline>
-<codeline><highlight class="normal">MANIPULATION_CONTROLLER<sp/>&lt;--<sp/>MOVEIT<sp/>:<sp/>end<sp/>of<sp/>the<sp/>motion</highlight></codeline>
-<codeline></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">@enduml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Vision<sp/>system<sp/>workflow</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">**node<sp/>temporal<sp/>diagram**.<sp/>This<sp/>schema<sp/>wants<sp/>to<sp/>clarify<sp/>how<sp/>the<sp/>vision<sp/>works.<sp/>Take<sp/>into<sp/>account<sp/>that<sp/>*markers<sp/>detected<sp/>twice<sp/>don&apos;t<sp/>cause<sp/>a<sp/>new<sp/>publication<sp/>from<sp/>the<sp/>VISION_DETECT<sp/>node*,<sp/>for<sp/>performance<sp/>reasons.<sp/></highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">```{uml}</highlight></codeline>
-<codeline><highlight class="normal">@startuml</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">title<sp/>Vision<sp/>-<sp/>RCL#3</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">&apos;&apos;&apos;<sp/>ENTITIES</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>ENVIRON</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>VISION_DECODE</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>ORACLE</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>MISSION_MANAGER</highlight></codeline>
-<codeline><highlight class="normal">participant<sp/>ARMOR</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>video<sp/>stream<sp/>analysis<sp/>==</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>ENVIRON</highlight></codeline>
-<codeline><highlight class="normal">let&apos;s<sp/>assume<sp/>a<sp/>regular<sp/>stream</highlight></codeline>
-<codeline><highlight class="normal">from<sp/>the<sp/>four<sp/>cameras<sp/>of<sp/>the<sp/>robot</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">to<sp/>understand<sp/>the<sp/>situation,<sp/>let&apos;s<sp/>say</highlight></codeline>
-<codeline><highlight class="normal">that<sp/>the<sp/>decode<sp/>spend<sp/>the<sp/>time<sp/>of</highlight></codeline>
-<codeline><highlight class="normal">4<sp/>frames<sp/>to<sp/>end<sp/>the<sp/>detection</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">waiting<sp/>messages</highlight></codeline>
-<codeline><highlight class="normal">from<sp/>cameras<sp/>streams</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=0</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">START<sp/>detect<sp/>ID=0</highlight></codeline>
-<codeline><highlight class="normal">(dropping<sp/>the<sp/>other<sp/>frames)</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=1</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">only<sp/>one<sp/>thread<sp/>can<sp/>access<sp/></highlight></codeline>
-<codeline><highlight class="normal">the<sp/>decoder<sp/>each<sp/>time.<sp/></highlight></codeline>
-<codeline><highlight class="normal">Hence,<sp/>ID=1<sp/>is<sp/>discarded.</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=0</highlight></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=2</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">STOP<sp/>detect<sp/>ID=0</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=2</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">START<sp/>detect<sp/>ID=2</highlight></codeline>
-<codeline><highlight class="normal">(dropping<sp/>the<sp/>other<sp/>frames)</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=0</highlight></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=0</highlight></codeline>
-<codeline><highlight class="normal">ENVIRON<sp/>-&gt;<sp/>VISION_DETECT<sp/>:<sp/>FRAME<sp/>from<sp/>ID=3</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">STOP<sp/>detect<sp/>ID=2</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>ENVIRON</highlight></codeline>
-<codeline><highlight class="normal">sending<sp/>continuously<sp/>four</highlight></codeline>
-<codeline><highlight class="normal">streams<sp/>to<sp/>the<sp/>detection</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">==<sp/>detected<sp/>a<sp/>new<sp/>ArUco<sp/>marker<sp/>==</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">hnote<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">WORKING<sp/>CYCLE</highlight></codeline>
-<codeline><highlight class="normal">is<sp/>searching<sp/>for<sp/>new<sp/>hints</highlight></codeline>
-<codeline><highlight class="normal">to<sp/>publish...</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>hnote</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">note<sp/>over<sp/>VISION_DETECT</highlight></codeline>
-<codeline><highlight class="normal">FOUND<sp/>HINTS<sp/>:</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ID=33</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ID=42<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ID=1<sp/></highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>ID=15</highlight></codeline>
-<codeline><highlight class="normal">end<sp/>note</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DETECT<sp/>-&gt;<sp/>VISION_DECODE<sp/>:<sp/>ID=33</highlight></codeline>
-<codeline><highlight class="normal">VISION_DETECT<sp/>-&gt;<sp/>VISION_DECODE<sp/>:<sp/>ID=42</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>ORACLE<sp/>:<sp/>decode<sp/>ID=33</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>&lt;-<sp/>ORACLE<sp/>:<sp/>ID=33<sp/>decoded<sp/>(hID,<sp/>key,<sp/>value)</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>MISSION_MANAGER<sp/>:<sp/>publish<sp/>ID=33</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>ARMOR<sp/>:<sp/>ADD<sp/>HINT</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>ARMOR<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DETECT<sp/>-&gt;<sp/>VISION_DECODE<sp/>:<sp/>ID=1</highlight></codeline>
-<codeline><highlight class="normal">VISION_DETECT<sp/>-&gt;<sp/>VISION_DECODE<sp/>:<sp/>ID=15</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>ORACLE<sp/>:<sp/>decode<sp/>ID=42</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>&lt;-<sp/>ORACLE<sp/>:<sp/>ID=42<sp/>decoded<sp/>(hID,<sp/>key,<sp/>value)</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>MISSION_MANAGER<sp/>:<sp/>publish<sp/>ID=42</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>ARMOR<sp/>:<sp/>ADD<sp/>HINT</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>ARMOR<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>ORACLE<sp/>:<sp/>decode<sp/>ID=1</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>&lt;-<sp/>ORACLE<sp/>:<sp/>ID=1<sp/>decoded<sp/>(hID,<sp/>key,<sp/>value)</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>MISSION_MANAGER<sp/>:<sp/>publish<sp/>ID=1</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>ARMOR<sp/>:<sp/>ADD<sp/>HINT</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>ARMOR<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>ORACLE<sp/>:<sp/>decode<sp/>ID=15</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>&lt;-<sp/>ORACLE<sp/>:<sp/>ID=15<sp/>decoded<sp/>(hID,<sp/>key,<sp/>value)</highlight></codeline>
-<codeline><highlight class="normal">VISION_DECODE<sp/>-&gt;<sp/>MISSION_MANAGER<sp/>:<sp/>publish<sp/>ID=15</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>-&gt;<sp/>ARMOR<sp/>:<sp/>ADD<sp/>HINT</highlight></codeline>
-<codeline><highlight class="normal">MISSION_MANAGER<sp/>&lt;-<sp/>ARMOR<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>--&gt;<sp/>MANIP_UNIT<sp/>:<sp/>send<sp/>command<sp/>home</highlight></codeline>
+<codeline><highlight class="normal">MANIP_UNIT<sp/>--&gt;<sp/>MANIPULATION<sp/>:<sp/>convert<sp/>and<sp/>pass<sp/>request</highlight></codeline>
+<codeline><highlight class="normal">hnote<sp/>over<sp/>MANIPULATION<sp/>:<sp/>moveit<sp/>move()</highlight></codeline>
+<codeline><highlight class="normal">MANIP_UNIT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
+<codeline><highlight class="normal">COLLECT<sp/>&lt;--<sp/>MANIPULATION<sp/>:<sp/>&lt;i&gt;success&lt;/i&gt;</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 <codeline><highlight class="normal">```</highlight></codeline>
@@ -878,26 +579,10 @@
 <codeline><highlight class="normal">###<sp/>About<sp/>the<sp/>environment</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">-<sp/>the<sp/>robot<sp/>moves<sp/>on<sp/>a<sp/>flat<sp/>floor:<sp/>always<sp/>room<sp/>can<sp/>be<sp/>reached<sp/>by<sp/>moving<sp/>the<sp/>roobot<sp/>on<sp/>the<sp/>same<sp/>floor<sp/>(the<sp/>house<sp/>has<sp/>only<sp/>one,<sp/>perfectly<sp/>flat,<sp/>floor)</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>the<sp/>environment<sp/>could<sp/>be<sp/>&quot;maze-like&quot;,<sp/>but<sp/>there<sp/>should<sp/>be<sp/>space<sp/>enough<sp/>for<sp/>allowing<sp/>the<sp/>robot<sp/>to<sp/>manouver<sp/></highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**environment<sp/>completely<sp/>free,<sp/>without<sp/>obstacles**,<sp/>for<sp/>instance<sp/>a<sp/>small<sp/>flat<sp/>arena<sp/>as<sp/>in<sp/>this<sp/>assignment</highlight></codeline>
 <codeline><highlight class="normal">-<sp/>the<sp/>topology<sp/>of<sp/>the<sp/>environment<sp/>is<sp/>well<sp/>known,<sp/>as<sp/>well<sp/>as<sp/>the<sp/>cartesian<sp/>coordinates<sp/>of<sp/>the<sp/>waypoints</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>there&apos;s<sp/>a<sp/>node<sp/>publishing<sp/>the<sp/>cartesian<sp/>positions<sp/>of<sp/>the<sp/>markers</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>and<sp/>the<sp/>*topological<sp/>map<sp/>of<sp/>the<sp/>environment*<sp/>is<sp/>known<sp/>in<sp/>advance</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">###<sp/>About<sp/>the<sp/>markers<sp/>and<sp/>the<sp/>sensing</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">-<sp/>all<sp/>the<sp/>informations<sp/>inside<sp/>the<sp/>environment<sp/>are<sp/>valid<sp/>ArUco<sp/>markers</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>the<sp/>stream<sp/>from<sp/>the<sp/>cameras<sp/>is<sp/>informative<sp/>enough</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>there<sp/>are<sp/>four<sp/>cameras,<sp/>at<sp/>a<sp/>low<sp/>frequency<sp/>each<sp/>of<sp/>them,<sp/>but<sp/>there<sp/>are<sp/>&quot;x4&quot;<sp/>informations<sp/>from<sp/>around<sp/>the<sp/>robot</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>this<sp/>means<sp/>that,<sp/>despite<sp/>the<sp/>methods<sp/>designed<sp/>to<sp/>make<sp/>the<sp/>detection<sp/>faster<sp/>(mainly<sp/>based<sp/>on<sp/>*drop<sp/>some<sp/>frames*),<sp/>the<sp/>system<sp/>detects<sp/>a<sp/>lot<sp/>of<sp/>markers<sp/>even<sp/>with<sp/>these<sp/>conditions</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>other<sp/>words,<sp/>the<sp/>system<sp/>discards<sp/>fewer<sp/>useful<sp/>frames<sp/>than<sp/>it<sp/>accepts,<sp/>keeping<sp/>the<sp/>stream<sp/>uniformly<sp/>informative</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>so,<sp/>*why<sp/>taking<sp/>the<sp/>entire<sp/>volume<sp/>of<sp/>data<sp/>from<sp/>the<sp/>cameras?*<sp/>We<sp/>can<sp/>discard<sp/>some<sp/>frames,<sp/>i.e.<sp/>*not<sp/>executing<sp/>the<sp/>ArUco<sp/>detection<sp/>on<sp/>these<sp/>frames*</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>the<sp/>ArUco<sp/>markers<sp/>are<sp/>clearly<sp/>visible</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>there<sp/>are<sp/>no<sp/>&quot;hidden<sp/>markers&quot;<sp/>inside<sp/>the<sp/>environment</highlight></codeline>
-<codeline><highlight class="normal">-<sp/>*the<sp/>solution<sp/>can<sp/>be<sp/>found<sp/>in<sp/>the<sp/>markers<sp/>of<sp/>the<sp/>environment*</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>the<sp/>robot<sp/>system<sp/>has<sp/>not<sp/>a<sp/>way<sp/>to<sp/>understand<sp/>when<sp/>the<sp/>solution<sp/>cannot<sp/>be<sp/>found<sp/>in<sp/>the<sp/>environment</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>such<sp/>a<sp/>feature<sp/>would<sp/>require<sp/>to<sp/>detect<sp/>and<sp/>count<sp/>the<sp/>markers</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>but<sp/>...<sp/>how<sp/>to<sp/>be<sp/>sure<sp/>that<sp/>the<sp/>markers<sp/>detected<sp/>are<sp/>all<sp/>the<sp/>markers<sp/>inside<sp/>the<sp/>space?<sp/>After<sp/>all,<sp/>the<sp/>robot<sp/>vision<sp/>system<sp/>could<sp/>easily<sp/>miss<sp/>one<sp/>marker</highlight></codeline>
-<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>hence,<sp/>the<sp/>robot<sp/>can<sp/>do<sp/>no<sp/>more<sp/>than<sp/>*keeping<sp/>going<sp/>aroung<sp/>in<sp/>search<sp/>of<sp/>a<sp/>decisive<sp/>hint*</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">###<sp/>About<sp/>the<sp/>reasoning</highlight></codeline>
 <codeline></codeline>
@@ -905,6 +590,8 @@
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>it<sp/>is<sp/>mostly<sp/>due<sp/>to<sp/>the<sp/>rules<sp/>of<sp/>the<sp/>game</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>*if<sp/>the<sp/>game<sp/>changes,<sp/>the<sp/>policy<sp/>should<sp/>be<sp/>reviewed*<sp/>accordingly<sp/>to<sp/>the<sp/>new<sp/>rules</highlight></codeline>
 <codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>in<sp/>particular,<sp/>if<sp/>the<sp/>problem<sp/>cannot<sp/>be<sp/>reduced<sp/>in<sp/>a<sp/>combination<sp/>of<sp/>two<sp/>general<sp/>steps,<sp/>the<sp/>planner<sp/>shall<sp/>provide<sp/>other<sp/>landmarks</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>*a<sp/>solution<sp/>exists*</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/><sp/>-<sp/>i.e.<sp/>the<sp/>oracle<sp/>works<sp/>fine</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Limitations</highlight></codeline>
 <codeline></codeline>
@@ -921,15 +608,19 @@
 <codeline></codeline>
 <codeline><highlight class="normal">**Architectural<sp/>Review<sp/>of<sp/>the<sp/>ROSPlan<sp/>package**.<sp/>Currently<sp/>the<sp/>knowledge<sp/>base<sp/>interface<sp/>inside<sp/>the<sp/>*robocluedo_rosplan*<sp/>package<sp/>is<sp/>of<sp/>no<sp/>use<sp/>for<sp/>nodes<sp/>outside.<sp/>There<sp/>are<sp/>many<sp/>situations<sp/>in<sp/>which<sp/>having<sp/>directives<sp/>exposed<sp/>by<sp/>the<sp/>knowledge<sp/>base<sp/>interface<sp/>can<sp/>be<sp/>useful.<sp/>For<sp/>instance,<sp/>the<sp/>code<sp/>of<sp/>the<sp/>pipeline<sp/>manager,<sp/>currently<sp/>*too<sp/>much<sp/>complex*,<sp/>can<sp/>be<sp/>simplified<sp/>a<sp/>lot<sp/>distributing<sp/>the<sp/>capability<sp/>to<sp/>explain<sp/>a<sp/>failure<sp/>on<sp/>two<sp/>nodes.<sp/>And,<sp/>finally,<sp/>the<sp/>capability<sp/>to<sp/>write<sp/>inside<sp/>the<sp/>ontology,<sp/>taking<sp/>into<sp/>account<sp/>the<sp/>characteristics<sp/>of<sp/>the<sp/>PDDL<sp/>problem,<sp/>is<sp/>always<sp/>useful.<sp/>For<sp/>these<sp/>reasons,<sp/>the<sp/>ROSPlan<sp/>implementation<sp/>should<sp/>be<sp/>reviewed<sp/>in<sp/>order<sp/>to<sp/>provide<sp/>a<sp/>better<sp/>supporto<sp/>to<sp/>the<sp/>working<sp/>cycle.<sp/>The<sp/>current<sp/>package<sp/>can<sp/>be<sp/>considered<sp/>a<sp/>*first<sp/>prototype*,<sp/>and<sp/>it<sp/>shall<sp/>be<sp/>formalized<sp/>from<sp/>the<sp/>architectural<sp/>point<sp/>of<sp/>view,<sp/>and<sp/>reimplemented,<sp/>taking<sp/>into<sp/>account<sp/>also<sp/>the<sp/>*directives*<sp/>and<sp/>the<sp/>*features*<sp/>given<sp/>the<sp/>PDDL<sp/>model.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">**Manipulation<sp/>Controller**.<sp/>The<sp/>manipulation<sp/>approch<sp/>can<sp/>be<sp/>heavily<sp/>reviewed.<sp/>The<sp/>robot<sp/>currently<sp/>uses<sp/>a<sp/>very<sp/>raw<sp/>implementation<sp/>of<sp/>a<sp/>moveit-based<sp/>controller<sp/>using<sp/>well-known<sp/>poses<sp/>only.<sp/>The<sp/>cartesian<sp/>plan<sp/>should<sp/>be<sp/>introduced,<sp/>and<sp/>the<sp/>asynchronous<sp/>manipulation<sp/>should<sp/>be<sp/>improved.<sp/>Even<sp/>a<sp/>end<sp/>effector<sp/>should<sp/>be<sp/>defined.<sp/></highlight></codeline>
+<codeline><highlight class="normal">**Manipulation<sp/>Controller**.<sp/>The<sp/>manipulation<sp/>approch<sp/>can<sp/>be<sp/>heavily<sp/>reviewed.<sp/>The<sp/>robot<sp/>currently<sp/>uses<sp/>a<sp/>very<sp/>raw<sp/>implementation<sp/>of<sp/>a<sp/>moveit-based<sp/>controller<sp/>using<sp/>well-known<sp/>poses<sp/>only.<sp/>The<sp/>cartesian<sp/>plan<sp/>should<sp/>be<sp/>introduced.<sp/>Even<sp/>a<sp/>end<sp/>effector<sp/>should<sp/>be<sp/>defined.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">**Navigation<sp/>manager<sp/>and<sp/>controllers**.<sp/>The<sp/>current<sp/>structure<sp/>can<sp/>be<sp/>improved<sp/>a<sp/>lot.<sp/>First<sp/>of<sp/>all,<sp/>you<sp/>can<sp/>notice<sp/>by<sp/>running<sp/>the<sp/>project<sp/>that<sp/>sometimes<sp/>the<sp/>robot<sp/>tends<sp/>to<sp/>stop<sp/>suddenly<sp/>and<sp/>to<sp/>pitch,<sp/>and<sp/>this<sp/>is<sp/>due<sp/>mainly<sp/>to<sp/>a<sp/>not<sp/>so<sp/>good<sp/>implementation<sp/>of<sp/>the<sp/>navigation<sp/>complex<sp/>behaviour<sp/>using<sp/>move_base,<sp/>which<sp/>refreshes<sp/>the<sp/>path<sp/>each<sp/>tot<sp/>seconds.<sp/>This<sp/>time<sp/>is<sp/>used<sp/>because<sp/>sometimes<sp/>the<sp/>path<sp/>generated<sp/>by<sp/>move_base<sp/>is<sp/>absolutely<sp/>pointless,<sp/>hence<sp/>the<sp/>robot<sp/>tries<sp/>to<sp/>replan<sp/>in<sp/>a<sp/>different<sp/>position,<sp/>hoping<sp/>that<sp/>the<sp/>outcome<sp/>of<sp/>the<sp/>planner<sp/>will<sp/>be<sp/>different.<sp/>And<sp/>fortunately,<sp/>it<sp/>works,<sp/>but<sp/>the<sp/>fact<sp/>that<sp/>the<sp/>robot<sp/>stops<sp/>suddenly<sp/>is<sp/>a<sp/>drawback<sp/>to<sp/>be<sp/>solved<sp/>for<sp/>sure.<sp/>Moreover,<sp/>the<sp/>current<sp/>navigation<sp/>manager<sp/>is<sp/>very<sp/>near<sp/>to<sp/>be<sp/>a<sp/>prototype:<sp/>the<sp/>approach<sp/>works<sp/>quite<sp/>good,<sp/>even<sp/>if<sp/>the<sp/>problem<sp/>is<sp/>too<sp/>much<sp/>simple<sp/>to<sp/>see<sp/>any<sp/>relevant<sp/>advantage<sp/>from<sp/>the<sp/>approach<sp/>with<sp/>navigation<sp/>controllers,<sp/>but<sp/>it<sp/>should<sp/>be<sp/>implemented<sp/>in<sp/>a<sp/>more<sp/>tidy<sp/>way.<sp/>For<sp/>instance,<sp/>the<sp/>system<sp/>shall<sp/>be<sp/>divided<sp/>into<sp/>several<sp/>files,<sp/>instead<sp/>of<sp/>a<sp/>long<sp/>one<sp/>a<sp/>bit<sp/>lasagna-code<sp/>style.<sp/>Honestly,<sp/>I<sp/>wanted<sp/>to<sp/>try<sp/>something<sp/>more<sp/>elaborated<sp/>with<sp/>that:<sp/>I<sp/>like<sp/>to<sp/>test<sp/>something<sp/>more<sp/>challenging<sp/>with<sp/>C++<sp/>sometimes,<sp/>doing<sp/>*real<sp/>coding*.<sp/>But<sp/>I<sp/>haven&apos;t<sp/>had<sp/>too<sp/>much<sp/>time<sp/>to<sp/>give<sp/>to<sp/>this<sp/>eperiment<sp/>a<sp/>decent<sp/>form<sp/>(you<sp/>cannot<sp/>make<sp/>the<sp/>navigation<sp/>perfect<sp/>if<sp/>you<sp/>have<sp/>to<sp/>deal<sp/>with<sp/>literally<sp/>*everything*<sp/>inside<sp/>the<sp/>project:<sp/>I&apos;m<sp/>not<sp/>a<sp/>team).<sp/>It<sp/>would<sp/>be<sp/>for<sp/>sure<sp/>a<sp/>aspect<sp/>to<sp/>work<sp/>on<sp/>in<sp/>another<sp/>update.<sp/></highlight></codeline>
+<codeline><highlight class="normal">**Navigation<sp/>manager<sp/>and<sp/>controllers**.<sp/>The<sp/>current<sp/>structure<sp/>can<sp/>be<sp/>improved<sp/>a<sp/>lot.<sp/>The<sp/>current<sp/>navigation<sp/>manager<sp/>is<sp/>very<sp/>near<sp/>to<sp/>be<sp/>a<sp/>prototype:<sp/>the<sp/>approach<sp/>works<sp/>quite<sp/>good,<sp/>even<sp/>if<sp/>the<sp/>problem<sp/>is<sp/>too<sp/>much<sp/>simple<sp/>to<sp/>see<sp/>any<sp/>relevant<sp/>advantage<sp/>from<sp/>the<sp/>approach<sp/>with<sp/>navigation<sp/>controllers,<sp/>but<sp/>it<sp/>should<sp/>be<sp/>implemented<sp/>in<sp/>a<sp/>more<sp/>tidy<sp/>way.<sp/>For<sp/>instance,<sp/>the<sp/>system<sp/>shall<sp/>be<sp/>divided<sp/>into<sp/>several<sp/>files,<sp/>instead<sp/>of<sp/>a<sp/>long<sp/>one<sp/>a<sp/>bit<sp/>lasagna-code<sp/>style.</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">**URDF<sp/>model<sp/>improvements**.<sp/>The<sp/>current<sp/>module,<sp/>although<sp/>it<sp/>works<sp/>quite<sp/>good,<sp/>it<sp/>is<sp/>too<sp/>much<sp/>basic.<sp/>The<sp/>physic<sp/>can<sp/>be<sp/>improved,<sp/>regulating<sp/>with<sp/>more<sp/>attention<sp/>the<sp/>inertias<sp/>of<sp/>the<sp/>components.<sp/>Also<sp/>the<sp/>controllers<sp/>can<sp/>be<sp/>improved.<sp/>A<sp/>code<sp/>review<sp/>on<sp/>the<sp/>model<sp/>could<sp/>help<sp/>as<sp/>well.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">**Logging<sp/>and<sp/>testing**.<sp/>This<sp/>third<sp/>project<sp/>revealed<sp/>a<sp/>problem<sp/>in<sp/>the<sp/>approach<sp/>I<sp/>applied<sp/>until<sp/>now:<sp/>the<sp/>console<sp/>logging<sp/>wastes<sp/>a<sp/>lot<sp/>of<sp/>computational<sp/>power.<sp/>Another<sp/>problem<sp/>related<sp/>is<sp/>that<sp/>the<sp/>entire<sp/>text<sp/>on<sp/>the<sp/>console<sp/>is<sp/>also<sp/>written<sp/>on<sp/>the<sp/>log<sp/>files,<sp/>causing<sp/>gigabytes<sp/>of<sp/>pointless<sp/>data<sp/>in<sp/>the<sp/>ROS<sp/>logs.<sp/>*The<sp/>aspect<sp/>has<sp/>been<sp/>completely<sp/>neglected*<sp/>until<sp/>now,<sp/>since<sp/>the<sp/>projects<sp/>have<sp/>been<sp/>too<sp/>much<sp/>simple<sp/>to<sp/>make<sp/>evident<sp/>this<sp/>error<sp/>in<sp/>the<sp/>approach<sp/>used<sp/>for<sp/>coding.<sp/>During<sp/>the<sp/>optimization<sp/>of<sp/>the<sp/>project,<sp/>a<sp/>large<sp/>part<sp/>of<sp/>the<sp/>code<sp/>has<sp/>been<sp/>endowed<sp/>with<sp/>a<sp/>primitive,<sp/>not<sp/>completely<sp/>satisfying,<sp/>develop<sp/>mode,<sp/>which<sp/>is<sp/>just<sp/>a<sp/>workaround<sp/>for<sp/>disabling<sp/>the<sp/>logs,<sp/>but<sp/>*it<sp/>is<sp/>not<sp/>enough*.<sp/>The<sp/>idea<sp/>to<sp/>have<sp/>a<sp/>debug<sp/>system<sp/>alongside<sp/>with<sp/>the<sp/>project<sp/>is<sp/>quite<sp/>good,<sp/>but<sp/>it<sp/>should<sp/>be<sp/>applied<sp/>well.<sp/>Currently<sp/>the<sp/>C++<sp/>nodes<sp/>are<sp/>the<sp/>only<sp/>ones<sp/>to<sp/>have<sp/>a<sp/>evelop<sp/>mode;<sp/>the<sp/>Python<sp/>nodes<sp/>haven&apos;t<sp/>such<sp/>a<sp/>similar<sp/>mode,<sp/>preferring<sp/>to<sp/>&quot;comment&quot;<sp/>the<sp/>prints.<sp/>Theproject<sp/>makes<sp/>considerable<sp/>improvements<sp/>with<sp/>the<sp/>idea<sp/>of<sp/>the<sp/>module<sp/>testing,<sp/>but<sp/>it<sp/>would<sp/>have<sp/>been<sp/>better<sp/>to<sp/>develop<sp/>a<sp/>realistic,<sp/>standard<sp/>approach<sp/>for<sp/>testing<sp/>from<sp/>the<sp/>beginning;<sp/>the<sp/>current<sp/>testing<sp/>method<sp/>has<sp/>been<sp/>developed<sp/>during<sp/>the<sp/>project,<sp/>which<sp/>is<sp/>definitely<sp/>not<sp/>a<sp/>good<sp/>way<sp/>of<sp/>work.<sp/>Standard<sp/>testing<sp/>methods<sp/>should<sp/>have<sp/>been<sp/>present<sp/>from<sp/>the<sp/>beginning.<sp/></highlight></codeline>
+<codeline><highlight class="normal">**Adding<sp/>a<sp/>real<sp/>graphical<sp/>interface**.<sp/>The<sp/>project<sp/>completely<sp/>lacks<sp/>of<sp/>a<sp/>decent<sp/>user<sp/>interface,<sp/>which<sp/>is,<sp/>in<sp/>my<sp/>opinion,<sp/>one<sp/>of<sp/>the<sp/>most<sp/>serious<sp/>limitations<sp/>of<sp/>the<sp/>project.<sp/>The<sp/>user,<sp/>and<sp/>the<sp/>developer<sp/>as<sp/>well,<sp/>should<sp/>be<sp/>enabled<sp/>to<sp/>understand<sp/>what&apos;s<sp/>wrong<sp/>using<sp/>a<sp/>GUI<sp/>instead<sp/>of<sp/>many<sp/>prints<sp/>on<sp/>a<sp/>console.<sp/>A<sp/>GUI<sp/>allows<sp/>to<sp/>see<sp/>the<sp/>status<sp/>of<sp/>the<sp/>entire<sp/>project<sp/>*at<sp/>a<sp/>glance*,<sp/>instead<sp/>of<sp/>reading<sp/>endless<sp/>logs<sp/>and<sp/>console<sp/>messages<sp/>trying<sp/>to<sp/>grasp<sp/>something.<sp/>Also<sp/>the<sp/>image<sp/>visualisation<sp/>should<sp/>be<sp/>improved,<sp/>allowing<sp/>the<sp/>user<sp/>to<sp/>select<sp/>one<sp/>camera<sp/>to<sp/>visualise,<sp/>for<sp/>instance.<sp/></highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">**Adding<sp/>a<sp/>real<sp/>graphical<sp/>interface**.<sp/>The<sp/>project<sp/>completely<sp/>lacks<sp/>of<sp/>a<sp/>decent<sp/>user<sp/>interface,<sp/>which<sp/>is,<sp/>in<sp/>my<sp/>opinion,<sp/>one<sp/>of<sp/>the<sp/>most<sp/>serious<sp/>limitations<sp/>of<sp/>the<sp/>project,<sp/>after<sp/>the<sp/>one<sp/>about<sp/>the<sp/>logging<sp/>and<sp/>the<sp/>testing<sp/>I<sp/>told<sp/>you<sp/>before.<sp/>The<sp/>user,<sp/>and<sp/>the<sp/>developer<sp/>as<sp/>well,<sp/>should<sp/>be<sp/>enabled<sp/>to<sp/>understand<sp/>what&apos;s<sp/>wrong<sp/>using<sp/>a<sp/>GUI<sp/>instead<sp/>of<sp/>many<sp/>prints<sp/>on<sp/>a<sp/>console.<sp/>A<sp/>GUI<sp/>allows<sp/>to<sp/>see<sp/>the<sp/>status<sp/>of<sp/>the<sp/>entire<sp/>project<sp/>*at<sp/>a<sp/>glance*,<sp/>instead<sp/>of<sp/>reading<sp/>endless<sp/>logs<sp/>and<sp/>console<sp/>messages<sp/>trying<sp/>to<sp/>grasp<sp/>something.<sp/>Also<sp/>the<sp/>image<sp/>visualisation<sp/>should<sp/>be<sp/>improved,<sp/>allowing<sp/>the<sp/>user<sp/>to<sp/>select<sp/>one<sp/>camera<sp/>to<sp/>visualise,<sp/>for<sp/>instance.<sp/></highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">![Cluedo3](_media/cluedexter.jpg)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
 <codeline></codeline>
 <codeline><highlight class="normal">##<sp/>Author<sp/>and<sp/>Contacts</highlight></codeline>
 <codeline></codeline>

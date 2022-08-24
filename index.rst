@@ -60,7 +60,7 @@ RCL#2 -- the RoboCLuedo Project
    
    RCL#2 SETUP <./_docs/project-setup.rst>
    RCL#2 RUN <./_docs/run-the-project.md>
-   Development LOG <./_docs/dev-log-rcl3.md>
+   Development LOG <./_docs/dev-log-rcl2.md>
    How to setup Sphinx <./_docs/how-to-setup-doxy-sphinx-ws.md>
    _docs/*
 

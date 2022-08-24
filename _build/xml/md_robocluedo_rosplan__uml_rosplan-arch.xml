@@ -15,7 +15,7 @@
 </programlisting></para>
 <para><hruler/>
 </para>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md405">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md416">
 <title>elements</title>
 <para>nodes and components:</para>
 <para><itemizedlist>
@@ -34,7 +34,7 @@
 </listitem></itemizedlist>
 </para>
 </sect1>
-<sect1 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md406">
+<sect1 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md417">
 <title>UML – Architecture (simplified)</title>
 <para>here&apos;s a essential representation of the package plus the ROSPlan system, controlled by this package:</para>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
@@ -97,7 +97,7 @@
 <codeline><highlight class="normal">IKB<sp/>&lt;--&gt;<sp/>MANAGER</highlight></codeline>
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
-<sect2 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md407">
+<sect2 id="md_robocluedo_rosplan__uml_rosplan-arch_1autotoc_md418">
 <title>Blocks</title>
 <para>let&apos;s see better some important blocks:</para>
 <para><itemizedlist>

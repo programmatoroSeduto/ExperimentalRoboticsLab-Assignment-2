@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>RoboCLuedo – Development Log &mdash; RoboCLuedo #2 1.0.0 documentation</title>
+  <title>RCL#2 LOG – development log &mdash; RoboCLuedo #2 1.0.0 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/graphviz.css" type="text/css" />
@@ -30,8 +30,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="PlantUML – quick reference" href="../_ext/plant-uml-reference.html" />
-    <link rel="prev" title="ReStructured Directives – practical documentation" href="rest-directives.html" /> 
+    <link rel="next" title="SPHINX – setup doxygen/sphinx" href="how-to-setup-doxy-sphinx-ws.html" />
+    <link rel="prev" title="HOW TO Run RCL#2 Project" href="run-the-project.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -74,10 +74,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="project-setup.html">RCL#2 SETUP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="run-the-project.html">RCL#2 RUN</a></li>
-<li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">RoboCLuedo – Development Log</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Development LOG</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
 </ul>
@@ -100,7 +100,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>RoboCLuedo – Development Log</li>
+      <li>RCL#2 LOG – development log</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/_docs/dev-log-rcl2.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -110,10 +110,34 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="robocluedo-development-log">
-<h1>RoboCLuedo – Development Log<a class="headerlink" href="#robocluedo-development-log" title="Permalink to this heading"></a></h1>
+  <div class="section" id="rcl-2-log-development-log">
+<h1>RCL#2 LOG – development log<a class="headerlink" href="#rcl-2-log-development-log" title="Permalink to this heading"></a></h1>
+<hr class="docutils" />
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Indice</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">RCL#2 LOG – development log</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#setup-della-documentazione-e-project-refactoring">08/08/2022 – setup della documentazione e project refactoring</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#modello-pddl-e-rosplan-package">09/08/2022 – modello PDDL e ROSPlan package</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#rosplan-pipeline-manager-planning-e-replanning">10/08/2021 – rosplan pipeline manager – planning e replanning</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#implementazione-rosplan-action-navigation-system-improving-the-robot-model">11/08/2022 – implementazione rosplan action – navigation system – improving the robot model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ancora-sul-movement-controller">12/08/2022 – ancora sul movement controller</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#mission-manager-module-testing-test-completo">13/08/2022 – mission manager – module testing – test completo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prova-del-sistema-completo">14/08/2022 – prova del sistema completo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ultime-issues-documentazione-del-codice-e-deploy">15/08/2022 – ultime issues – documentazione del codice e deploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#todo">23/08/2022 – todo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#documentazione">24/08/2022 – documentazione</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id1">TODO</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#note">NOTE</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#una-nota-su-rosplan-e-il-mission-manager">una nota su rosplan e il mission manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#vantaggi-e-svantaggi-dell-approccio-per-landmarks">vantaggi (e svantaggi) dell’approccio per landmarks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 </div>
+<hr class="docutils" />
 <ul class="simple">
 <li><p><a class="reference external" href="http://www.plantuml.com/plantuml/uml/VLNlQkGs4F-kfvWB77NWuetthd-Q3-NI59h0fLt8XdufB8eqNelOaf7acAKK-XfzlJv9PoHxDybo-M2FD7z-C_ERyUxd4AMFGzSAyKvZRIo22t952cXYxCF5Ok7bM6vDR8Q78Q1NpaQqiLIkMrnv6HhKdR5wiMgbZVUtNyvSZpQW6ho9E-bLOoAgE7XSdXcA3OjEXeXUl3DMjOFUfrjSkQvpjkpfV6oyfymBsRPVCLzBhqVfyGsNMnFK6-Oxz4zlfhWpyHcy-AQ4M-btO098-0MViAM-FHWBiK5OUQS75I6Yx4gu8qqZsV4FOigD0QfpM5s1j9eUkBJQEwEXRvp5af5_TWyP-5PQkJt0NYhb1Xl3X7kTOCb9pL1cjSUuUU9xOEtD6hR33iR6GUlS8-dgY3uXXjHs2HonRd07D2ABNBbBTejnTFuHQFWVKf8d8q52RJoEHCRiTcC9a7nBGSm03ok8wBP8DWz_2U9mmxkpsNf4kz4pNGLJ-05EM9oGV4uRt_Uydfo-nc2jZCRPK72dvCo2WwZRzHIVXmgNlA774BJEnc88cowpN13j54HlZdt1DIkcMH3EtzmarMOK7hMfCJn6rnUzef3gnsLPVVT3MPNLEKCSnf-wlPfgQcNF8Pry5RFCQTKiidUUSM5w5apIpihEABXPiL-sGbNn9PrVXicyR4Tnqn9IQQy3yueKMRngAZdVFn1F0qnaBy_Byq_mPNrt642cZ3ZxBM-Jc9XY0ZUZyTZo5BmR8kKPJMqkLo_pCDGKEnL5-rZGG_hVwvfWW2xiTKqYUymhMim7idvRbH-_BvUVgFAFnvYgTOCkqfjiyqg_z1CYVVLdPpz1houWkC5JSkKq7WmJnMnLHhRGeJPI2DghPEua1TR6IfkinjPkRyj3lO0aG57LWLBoPYTpdi45VwIrsGxv0n0YHoMFp9wOIdYkoe8rp9KG6Mj_fwhsv_vm58BUwJRJACHyIkf45-cSYuJslZOjqbfXSGeUhKQFcWg83Sn_3q190rKDxwT3SVgdNJS8roQgfZ6FwF_xvzy0lmv68qIt3nIV2I_zz0hnFm00">plantUML online</a></p></li>
 <li><p><a class="reference external" href="https://www.planttext.com/">un altro editor motlo carino per PlantText</a></p></li>
@@ -2962,46 +2986,12 @@ aggiornamento documentazione robot</p>
 <li><p>prima meglio controllare i packages per l’ultima volta</p></li>
 <li><p>metto a posto un attimo la homepage</p></li>
 <li><p><em>e finalmente l’ultimo readme</em></p></li>
+<li><p><strong>COMMIT</strong>: “finally”</p></li>
 </ul>
-<div class="admonition-todo admonition" id="id1">
-<p class="admonition-title">Todo</p>
-<p><strong>secondo assignment:</strong></p>
-<ul class="simple">
-<li><p>importare la documentazione di aRMOR finale dal terzo assignment</p></li>
-<li><p>la documentazione del package rosplan può essere riportata pari pari nell’assignment 2, perchè tanto è identica</p></li>
-<li><p>documentazione di rosplan</p>
-<ul>
-<li><p>copiare per intero rosplan-arch.md</p></li>
-<li><p>c’è qualcosa di specifico da inserire in questo documento?</p></li>
-</ul>
-</li>
-<li><p>aggiornare la documentazione per il vecchio robot</p></li>
-<li><p>documentazione mission manager</p>
-<ul>
-<li><p>per quanto riguarda la documentazione del mission manager main, la documentazione cambia di pochissimo</p>
-<ul>
-<li><p>casomai, indica quali differenze ci sono tra i due assignment</p></li>
-</ul>
-</li>
-<li><p>la documentazione del manipulation manager cambia</p></li>
-<li><p>e anche quella della navigation unit (usa un algoritmo diverso)</p></li>
-</ul>
-</li>
-<li><p>elimina le cartelle inutilizzate su esempi e tutto il resto (se non servono, eliminale)</p></li>
-<li><p>verificare che tutte le pagine ausiliarie abbiano la loro TOCtree interna, specie quando sono lunghe pagine</p></li>
-</ul>
-<p>lavoro conclusivo (entrambi gli assignment):</p>
-<ul class="simple">
-<li><p>aggiustare i link (ora che sai linkare le pagine in markdown…)</p></li>
-<li><p>creare un nuovo branch su ognuno dei due progetti per github pages</p></li>
-<li><p>e creare uno script che permetta di aggiornare la documentazione</p></li>
-<li><p>infine, <em>cancella la documentazione dalla repo principale</em></p></li>
-</ul>
-</div>
 </div>
 <hr class="docutils" />
-<div class="section" id="id2">
-<h2>TODO<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<div class="section" id="id1">
+<h2>TODO<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>ma provando con un controller per uno skid robot cosa succede? magari riesco a farlo andare meglio</p></li>
 <li><p>vanno aggiustati i guadagni dei go to point e align, e magari introdurre anche una saturation</p></li>
@@ -3071,8 +3061,8 @@ aggiornamento documentazione robot</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="rest-directives.html" class="btn btn-neutral float-left" title="ReStructured Directives – practical documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../_ext/plant-uml-reference.html" class="btn btn-neutral float-right" title="PlantUML – quick reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="run-the-project.html" class="btn btn-neutral float-left" title="HOW TO Run RCL#2 Project" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="how-to-setup-doxy-sphinx-ws.html" class="btn btn-neutral float-right" title="SPHINX – setup doxygen/sphinx" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

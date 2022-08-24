@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>README – the RoboCLuedo Project – ROUND 3 &mdash; RoboCLuedo #2 1.0.0 documentation</title>
+  <title>README – the RoboCLuedo Project – ROUND 2 &mdash; RoboCLuedo #2 1.0.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
@@ -76,8 +76,8 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="_docs/project-setup.html">RCL#2 SETUP</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/run-the-project.html">RCL#2 RUN</a></li>
+<li class="toctree-l1"><a class="reference internal" href="_docs/dev-log-rcl2.html">Development LOG</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/how-to-setup-doxy-sphinx-ws.html">How to setup Sphinx</a></li>
-<li class="toctree-l1"><a class="reference internal" href="_docs/dev-log-rcl2.html">RoboCLuedo – Development Log</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/rest-directives.html">ReStructured Directives – practical documentation</a></li>
 <li class="toctree-l1"><a class="reference internal" href="_docs/sphinx-mock.html">Sphinx for Py – modules mocking</a></li>
 </ul>
@@ -100,7 +100,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>README – the RoboCLuedo Project – ROUND 3</li>
+      <li>README – the RoboCLuedo Project – ROUND 2</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/README-sphinx.md.txt" rel="nofollow"> View page source</a>
       </li>
@@ -110,23 +110,23 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <div class="section" id="readme-the-robocluedo-project-round-3">
-<h1>README – the RoboCLuedo Project – ROUND 3<a class="headerlink" href="#readme-the-robocluedo-project-round-3" title="Permalink to this heading"></a></h1>
+  <div class="section" id="readme-the-robocluedo-project-round-2">
+<h1>README – the RoboCLuedo Project – ROUND 2<a class="headerlink" href="#readme-the-robocluedo-project-round-2" title="Permalink to this heading"></a></h1>
 <p><em>Francesco Ganci</em> - S4143910 - A.A.2021/2022</p>
 <hr class="docutils" />
 <div class="toctree-wrapper compound">
 <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">README – the RoboCLuedo Project – ROUND 3</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">README – the RoboCLuedo Project – ROUND 2</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#what-you-can-find-in-this-readme">What you can find in this readme</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#introduction-rcl-3">Introduction – RCL#3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#technical-goals-rcl-3">Technical Goals – RCL#3</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#differences-from-rcl-2">Differences from RCL#2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#introduction-rcl-2">Introduction – RCL#2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#technical-goals-rcl-2">Technical Goals – RCL#2</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#features-rcl-2">Features – RCL#2</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#expected-behaviour-rcl-3">Expected Behaviour – RCL#3</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#erl-3-environment">ERL#3 Environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#behaviour">Behaviour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#expected-behaviour-rcl-2">Expected Behaviour – RCL#2</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#erl-2-environment">ERL#2 Environment</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-behaviour">Expected Behaviour</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#sw-arch-components">SW Arch – Components</a><ul>
@@ -137,10 +137,8 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#sw-arch-communication-protocols-overview">SW Arch – communication protocols overview</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#foreword-diagrams-conventions">Foreword – diagrams conventions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#navigation-using-move-base-rcl-3">navigation using move_base (RCL#3)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#navigation-using-bug-m-rcl-2">navigation using bug_m (RCL#2)</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#manipulation-rcl-3-asynchrononus-manipulation">manipulation (RCL#3) – asynchrononus manipulation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#vision-system-workflow">Vision system workflow</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#manipulation-synchronous-manipulation">manipulation – synchronous manipulation</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#mission-manager-workflow">Mission manager workflow</a></li>
@@ -151,7 +149,6 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#working-hypotheses">working hypotheses</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#about-the-environment">About the environment</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#about-the-markers-and-the-sensing">About the markers and the sensing</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#about-the-reasoning">About the reasoning</a></li>
 </ul>
 </li>
@@ -163,7 +160,7 @@
 </ul>
 </div>
 <hr class="docutils" />
-<p><img alt="Cluedo3" src="_media/cluedorickmorty.jpg" /></p>
+<p><img alt="Cluedo3" src="_images/cluedexterbox.jpg" /></p>
 <hr class="docutils" />
 <div class="section" id="what-you-can-find-in-this-readme">
 <h2>What you can find in this readme<a class="headerlink" href="#what-you-can-find-in-this-readme" title="Permalink to this heading"></a></h2>
@@ -174,52 +171,57 @@
 <li><p>Software Architecture components overview</p></li>
 <li><p>Software Architecture communication protocols overview</p></li>
 </ul>
-<p>if you have more practical questions, you can find everything you want, detailed ad libitum, inside the <span class="xref myst">Official Documentation</span>.</p>
+<p>The parts of the architecture are deeply detailed inside this documentation, see the <em>Packages Documentation</em> section.</p>
 </div>
-<div class="section" id="introduction-rcl-3">
-<h2>Introduction – RCL#3<a class="headerlink" href="#introduction-rcl-3" title="Permalink to this heading"></a></h2>
-<p>The <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-3">RCL#3</a> project, end of a long journey, wants to implement the architecture of a robot, using its sensors (in this case, cameras and a LIDAR sensor) to solve a <em>Cluedo</em>-style mystery, collecting hints across the environment and reasoning on them for finding the killer. The robot moves in the surroundings, trying to find as many ArUco IDs as possible, adding information to a OWL-based ontology for finding the solution of the case.</p>
-<div class="section" id="technical-goals-rcl-3">
-<h3>Technical Goals – RCL#3<a class="headerlink" href="#technical-goals-rcl-3" title="Permalink to this heading"></a></h3>
-<p>The main technical aim of this project is to <em>extend the architecture roposed in the third part of the project</em> with as the less adaptation work as possible. Indeed this version of the project keeps almost unchancged a lot of components from <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2">RCL#2</a>, ad also something that comes from the <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">RCL#1</a> project.</p>
+<div class="section" id="introduction-rcl-2">
+<h2>Introduction – RCL#2<a class="headerlink" href="#introduction-rcl-2" title="Permalink to this heading"></a></h2>
+<p>The main aim of the <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-2">RCL#2</a> project is to implement the control system of a robot playing a game freely inspired to the classic board game <em>CLuedo</em>.</p>
+<p>In particular, the system controls a 4-wheeled robot with one manipulator. The robot explores the surroundings in search of any clue that could be determinant to <em>understand</em> who is the killer, what is the weapon of the murder, and where the poor Dr. Black has been killed. The robot uses a OWL-based system to reason about the clues, collecting, putting together, and finding a one possible solution. The arbiter of the game is th so-called <em>Oracle</em>, which knows the solution, and can be interrogated when the robot is ready to announce the murderer.</p>
+<p>(But, differently from the real game, the robot can propose as many solution as it wants, without loosing the game after a wrong proposal…)</p>
+<div class="section" id="technical-goals-rcl-2">
+<h3>Technical Goals – RCL#2<a class="headerlink" href="#technical-goals-rcl-2" title="Permalink to this heading"></a></h3>
+<p>First of all, the main aim is to create a better architecture than in the previous <a class="reference external" href="https://github.com/programmatoroSeduto/ExperimentalRoboticsLab-Assignment-1.git">RCL#1</a> project, which is not so flexible (mainly due to unclear requirements, concerning in particular the interface of the Oracle which clearly must be external to the project): this did lead to twrow away many parts of the preivous version of the project, except for the aRMOR part which is reusable almost completely, with a little of message updates. In particular, the project should represent a basis for the third iteration of the project: the strategy is to implement an architecture which can be flexible enough to allow the re-usage of almost all the parts, with very little changes.</p>
 <p>Moreover, as in the other projects, a great care has been given to <em>the metodology of work</em>: not only writing the code, but also using and developing its documentation during the work. A big effort has been made as well, in documenting about the technologies involved in the implementation of this project, trying to find a way to make it work which could work also on other platforms as much as possible. Finally, the project comes with a rich <em>module testing</em> allowing to ensure the functioning of each module, either single or in combination with other elements of the architecture. See the official project documentation for further informations.</p>
 </div>
-<div class="section" id="differences-from-rcl-2">
-<h3>Differences from RCL#2<a class="headerlink" href="#differences-from-rcl-2" title="Permalink to this heading"></a></h3>
-<p>As said above, there are few, but important, technical dfferences between the two versions of the project:</p>
+<div class="section" id="features-rcl-2">
+<h3>Features – RCL#2<a class="headerlink" href="#features-rcl-2" title="Permalink to this heading"></a></h3>
 <ul class="simple">
-<li><p>a new robot model, including 4 cameras and a brand new set of poses</p></li>
-<li><p>a new navigation system, with a new controller integrating <strong>move_base</strong> and the navigation stack</p></li>
-<li><p>support for “offline” localisation using <strong>AMCL</strong></p></li>
-<li><p>a brand new <strong>ArUco</strong> vision system</p></li>
-<li><p>updates on the manipulation controller, supporting (a very raw) asynchronous manipulation</p></li>
-<li><p>a brand new system for launching the components of the architecture</p></li>
-<li><p>minimal adaptation of the ROSPlan package to cope with the cpecificities of ERL#3</p></li>
+<li><p>manipulator control using MoveIt with well-known poses</p></li>
+<li><p>navigation using a multi-layer implementation (to gain flexibility for later updates)</p></li>
+<li><p>usage of a OWL-based ontology for elaborating CLuedo hints and combining them into hypotheses and then possible solutions of the mystery</p></li>
+<li><p>usage of a double-layered planning strategy involving a simple state-machine at high level and ROSPlan for the low-level planning</p>
+<ul>
+<li><p>the project introduces a <em>policy</em> made of <em>landmarks</em>: the main idea is that the problem can be solved by “steps” (the so-called landmarks) that are macro-steps to be expanded by ROSPlan in sequences of actions to apply, depending on the situation</p></li>
+<li><p>this choice allows to have a part of the architecture not taking into account the details of the PDDL model, making an <em>abstraction</em> upon the real structure of the PDDL</p></li>
 </ul>
-<p>And other little differences around in the code and in the structure of the project. A big effort have been made in making the project execution <em>as much fast as possible</em>: using such a sensing system, the perfomrance becomes a important topic to deal with.</p>
+</li>
+</ul>
 </div>
 </div>
-<div class="section" id="expected-behaviour-rcl-3">
-<h2>Expected Behaviour – RCL#3<a class="headerlink" href="#expected-behaviour-rcl-3" title="Permalink to this heading"></a></h2>
-<p>Here’s how the robot should behave, just as a short overview of how the RCL#3 project works.</p>
-<div class="section" id="erl-3-environment">
-<h3>ERL#3 Environment<a class="headerlink" href="#erl-3-environment" title="Permalink to this heading"></a></h3>
-<p>The robot starts in the middle of a small house with a number of hints (arUco markers) spread out in the space (at least 5 per room). The robot can see the markers and detect them. Here’s how the environment appears on Gazebo after the project has been run:</p>
-<p><img alt="erl3-environment" src="_media/erl3-environment.png" /></p>
-<p>And here how it appears on RViz; the green balls are the positions of the rooms, called <em>waypoints</em>. The center waypoint, not indicated by a green marker, is located at the position where the robot starts the mission.</p>
-<p><img alt="erl3-env-rviz" src="_media/erl3-env-rviz.png" /></p>
+<div class="section" id="expected-behaviour-rcl-2">
+<h2>Expected Behaviour – RCL#2<a class="headerlink" href="#expected-behaviour-rcl-2" title="Permalink to this heading"></a></h2>
+<p>Here’s how the robot should behave, just as a short overview of how the RCL#2 project works.</p>
+<div class="section" id="erl-2-environment">
+<h3>ERL#2 Environment<a class="headerlink" href="#erl-2-environment" title="Permalink to this heading"></a></h3>
+<p>Our RoboCLuedo starts in the middle of a little square room (6m per 6m). Here’s how the environment appears on Gazebo:</p>
+<p><img alt="env-gazebo" src="_images/env-gz.png" /></p>
+<p>Abit outside the arena, there are four markers, that in this simulation are the points where the robot can find the hints. When the robot touches a marker, it receives a hint that it can store and elaborate inside its ontology. Here’s the environment as seen in RViz, showing the positions of the markers:</p>
+<p><img alt="env-rviz" src="_images/env-rv.png" /></p>
 </div>
-<div class="section" id="behaviour">
-<h3>Behaviour<a class="headerlink" href="#behaviour" title="Permalink to this heading"></a></h3>
-<p>The robot <strong>moves around looking for markers to detect</strong>. Each marker has a identifier, which, after a request to the Oracle node, enables the system to access a hint to add to the Ontology. The hint will be used for reasoning about the plausible solutions of the case, trying to distinguish between che “COMPLETE” ones and the “INCONSISTENT” ones.</p>
-<p>Starting from a location, the robot navigates to another waypoint, using the cameras to “see” the markers slong the way. Arrived at the waypoint, the robot asks for admissible hypotheses to the Ontology. If at least one hypothesis is found acceptable, the robot navigates to the center and, once arrived there, the system introduces its solution to the Oracle node, which checks if the solution is either right or wrong.</p>
-<p>If the proposal is wrong, the robot continues to explore in search of other hints, after having discarded the proposed hypothesis. Otherwise, the robot ends working.</p>
-<p>The robot keeps going from one waypoint to another one, collecting hints until a plausible solution is available.</p>
+<div class="section" id="expected-behaviour">
+<h3>Expected Behaviour<a class="headerlink" href="#expected-behaviour" title="Permalink to this heading"></a></h3>
+<p>During the searching phase, there’s a common sequence of operations repeated:</p>
+<ul class="simple">
+<li><p>go in front o a marker</p></li>
+<li><p>“touch” the marker (it triggers the oracle to send a hint)</p></li>
+<li><p>put back the robot in its home position</p></li>
+</ul>
+<p>then the robot selects another waypoint, and the cycle restarts. When the robot succeeded in obtaining at least one CONSISTENT hypothesis, the robot goes at the center of the arena to propose its solution to the Oracle. Due to the fact that the Oracle could return a corrupted hint, or also a repeated one, the robotcould take a lot of time to formulate a acceptable hypothesis.</p>
 </div>
 </div>
 <div class="section" id="sw-arch-components">
 <h2>SW Arch – Components<a class="headerlink" href="#sw-arch-components" title="Permalink to this heading"></a></h2>
-<p>The project is a rich composition of many packages, resulting in a complex, heavy centralized architecture. It behaves as a classical hyerarchical architecture: sense, then plan, then act.</p>
+<p>The project is a rich composition of many packages, resulting in a complex, heavy centralized architecture. It behaves as a classical hyerarchical architecture: sense, then plan, then act. <em>So far, the ‘sense’ part is simulated by the Oracle sending the hints</em>: in afuture development, the robot should get the hints from the environment using a vision system.</p>
 <div class="section" id="highlights-of-the-architecture">
 <h3>highlights of the architecture<a class="headerlink" href="#highlights-of-the-architecture" title="Permalink to this heading"></a></h3>
 <p>Here are the concept I used during each phase of the job:</p>
@@ -242,8 +244,8 @@
 <p>It highlights the centralized structure of the architecture. Each component here corresponds to a package used by the project.</p>
 <p>The mission manager contains the bridges above-mentioned (there are bridges for both the navigation and the manipulation), as well as the <em>main node</em> providing a high-layer planning by means of landmarks and aRMOR operations.</p>
 <p class="plantuml">
-<object data="_images/plantuml-ae16c651795a389d4fe79bed369869741557cca5.svg" type="image/svg+xml" style="width:652px;height:766px;background:#FFFFFF;">
-<img src="_images/plantuml-ae16c651795a389d4fe79bed369869741557cca5.png" alt="&#64;startuml
+<object data="_images/plantuml-5d50f396719baa4c1f0c611f8ea6e12a670d28f0.svg" type="image/svg+xml" style="width:695px;height:777px;background:#FFFFFF;">
+<img src="_images/plantuml-5d50f396719baa4c1f0c611f8ea6e12a670d28f0.png" alt="&#64;startuml
 
 ''' INFOS
 title Project Architecture simplified
@@ -254,32 +256,34 @@ allow_mixing
 ''' COMPONENTS
 database &quot;aRMOR&quot; as ARMOR
 component &quot;MoveIt!&quot; as MOVEIT
-component &quot;Navigation Stack&quot; as NAVSTACK
-component &quot;erl3 Oracle&quot; as ORACLE
+component &quot;erl2 Oracle&quot; as ORACLE
 component &quot;ROSPlan&quot; as ROSPLAN
 
+component &quot;RCL environment&quot; as ENVIRONMENT
+
+package RCL {
 node &quot;RCL mission manager&quot; as MISSION_MANAGER
-component &quot;RCL Vision&quot; as VISION
+' component &quot;RCL Vision&quot; as VISION
 component &quot;RCL aRMOR interface&quot; as RCL_ARMOR
 component &quot;RCL ROSPlan&quot; as RCL_ROSPLAN
 component &quot;RCL Movement Controller&quot; as MOVEMENT
-component &quot;RCL hunter environment&quot; as ENVIRONMENT
+}
 
 
 ''' CONNECTIONS
-ENVIRONMENT &lt;--&gt; NAVSTACK
 ENVIRONMENT &lt;--&gt; MOVEIT
-ENVIRONMENT &lt;--&gt; VISION
-NAVSTACK &lt;--&gt; MOVEMENT
 MOVEIT &lt;--&gt; MOVEMENT
+
+ENVIRONMENT &lt;--&gt; MOVEMENT
 MOVEMENT &lt;--&gt; MISSION_MANAGER
+
 MISSION_MANAGER &lt;--&gt; RCL_ROSPLAN
-ROSPLAN &lt;--&gt; RCL_ROSPLAN
+ROSPLAN &lt;-up-&gt; RCL_ROSPLAN
 MISSION_MANAGER &lt;--&gt; RCL_ARMOR
-ARMOR &lt;--&gt; RCL_ARMOR
-MISSION_MANAGER &lt;--&gt; VISION
-VISION &lt;--&gt; ORACLE
-MISSION_MANAGER -- ORACLE
+ARMOR &lt;-right-&gt; RCL_ARMOR
+' MISSION_MANAGER &lt;--&gt; VISION
+' VISION &lt;--&gt; ORACLE
+MISSION_MANAGER -right- ORACLE
 
 &#64;enduml"/>
 
@@ -288,10 +292,7 @@ MISSION_MANAGER -- ORACLE
 <hr class="docutils" />
 <div class="section" id="components-extended-schema">
 <h3>Components – extended schema<a class="headerlink" href="#components-extended-schema" title="Permalink to this heading"></a></h3>
-<blockquote>
-<div><p>Wanna see more? Take a look at the packages documentation inside the Official Documentation.</p>
-</div></blockquote>
-<p>This schema wants to give an idea of how much the architecture of the project is extended. Inside it there are pointed out many ideas inside RCL#3:</p>
+<p>This schema wants to give an idea of how much the architecture of the project is extended. Inside it there are pointed out many ideas inside RCL#2:</p>
 <ul>
 <li><p>the ROSPlan side is a sort of mikrokosmos of components. The system uses the idea of <em>landmarks</em>, implementing the “low level planning system”. See the official documentation, and in particular the design of the PDDL, for further details about such a planning policy.</p>
 <p>The problem solution strategy is divided into three “steps”, called <em>landmakrs</em> in the terminology of the project:</p>
@@ -309,75 +310,50 @@ MISSION_MANAGER -- ORACLE
 <li><p>and the <em>motion controllers</em>, components of the navigation manager (implemented as classes inside that node) providing a “cozy” abstraction for the navigation system: a external node sees onl a simple interface, without having the need to deal with the details of the implementation of the navigation system.</p></li>
 </ul>
 </li>
-<li><p>the diagram also shows the components of the navigation stack, a novelty of RCL#3</p></li>
 </ul>
-<p>Here’s the diagram (I suggest you to open the image in a new tab of the browser… it is quite big)</p>
+<p>Here’s the diagram:</p>
 <p class="plantuml">
-<object data="_images/plantuml-89ac28042f96018e90b15aed258ca8d4be4cd9cf.svg" type="image/svg+xml" style="width:2586px;height:803px;background:#FFFFFF;">
-<img src="_images/plantuml-89ac28042f96018e90b15aed258ca8d4be4cd9cf.png" alt="&#64;startuml
+<object data="_images/plantuml-9bea1d9cdbbbe3b3323f4e81822d05d0672e0d7a.svg" type="image/svg+xml" style="width:1491px;height:1244px;background:#FFFFFF;">
+<img src="_images/plantuml-9bea1d9cdbbbe3b3323f4e81822d05d0672e0d7a.png" alt="&#64;startuml
 
 ''' INFOS
 title Project Architecture - extended
-''' skinparam Padding 8
-allow_mixing
+left to right direction
 
 
 ''' COMPONENTS
 package armor{
 database &quot;aRMOR&quot; as ARMOR
 component &quot;RCL aRMOR interface&quot; as RCL_ARMOR
-
-RCL_ARMOR -- ARMOR
 }
 
 package &quot;RCL Mission Manager&quot;{
 component &quot;RCL mission manager&quot; as MISSION_MANAGER
 component &quot;RCL manipulation unit&quot; as MANIP_UNIT
 component &quot;RCL navigation unit&quot; as NAV_UNIT
-
-MISSION_MANAGER -- MANIP_UNIT
 }
 
 package &quot;RCL ROSPlan&quot; {
 component &quot;ROSPlan pipeline manager&quot; as ROSPLAN
 component &quot;RCL kb_tools&quot; as RCL_KBTOOLS
-database &quot;ROSPlan knowledge base&quot; as ROSPLANKB
+database &quot;ROSPlan kb&quot; as ROSPLANKB
 component &quot;ROSPlan components&quot; as ROSPLAN_COMPONENTS
-file &quot;PDDL RCL domain&quot; as DOMAIN
-file &quot;PDDL RCL problem&quot; as PROBLEM
+file &quot;domain&quot; as DOMAIN
+file &quot;problem&quot; as PROBLEM
 node &quot;feedback manager&quot; as FEEDBACK
 package &quot;RCL ROSPlan Actions&quot; as ROSPLAN_ACTIONS {
 node REPLAN
 node SOLVE
 node COLLECT
 }
-FEEDBACK --&gt; ROSPLAN
-ROSPLAN_ACTIONS --&gt; FEEDBACK
-ROSPLAN_COMPONENTS -- ROSPLAN_ACTIONS
-
-ROSPLANKB-- ROSPLAN_COMPONENTS
-ROSPLANKB -- RCL_KBTOOLS
-ROSPLANKB -- ROSPLAN
-RCL_KBTOOLS -- ROSPLAN
-DOMAIN -- ROSPLANKB
-PROBLEM -- ROSPLANKB
-ROSPLAN_COMPONENTS -- ROSPLAN
 }
 
-package &quot;erl3&quot;{
-component &quot;erl3 Oracle&quot; as ORACLE
-component &quot;markers publisher&quot; as MARKERS
-}
-
-package &quot;RCL Vision&quot; {
-component &quot;RCL vision detection&quot; as VISION
-component &quot;RCL vision decoder&quot; as VISION_DECODE
-
-VISION -- VISION_DECODE
+package &quot;erl2&quot;{
+component &quot;erl2 Oracle&quot; as ORACLE
 }
 
 package &quot;Simulated Environment&quot; as ENVIRONMENT {
-component &quot;RCL robot 'hunter'&quot;
+component &quot;RCL robot&quot;
 node &quot;Gazebo&quot;
 node &quot;RViz&quot;
 }
@@ -386,38 +362,46 @@ package moveit {
 component &quot;MoveIt!&quot; as MOVEIT
 }
 
-package &quot;navigation stack&quot; as NAVSTACK {
-component &quot;Move Base&quot;
-component &quot;AMCL&quot;
-component &quot;SLAM/GMapping&quot;
-}
-
 package &quot;RCL Movement Controller&quot; {
 component &quot;RCL navigation manager&quot; as MOVEMENT
 component &quot;RCL manipulation controller&quot; as MANIPULATION
+
 package behaviours {
 node &quot;bug_m&quot;
-node &quot;move_base_nav&quot;
 node &quot;head_orientation&quot;
 node &quot;go_to_point&quot;
 }
+
 }
 
 ''' CONNECTIONS
-MISSION_MANAGER -- RCL_ARMOR
-MISSION_MANAGER -- VISION_DECODE
-MISSION_MANAGER -- ROSPLAN
-MISSION_MANAGER -- ORACLE
-VISION_DECODE -- ORACLE
-MARKERS -- NAV_UNIT
-VISION -- ENVIRONMENT
 ENVIRONMENT -- MOVEIT
-ENVIRONMENT -- NAVSTACK
 MOVEIT -- MANIPULATION
-NAVSTACK -- MOVEMENT
-MANIP_UNIT -- MANIPULATION
-NAV_UNIT -- MOVEMENT
-NAV_UNIT -- ROSPLAN_ACTIONS
+
+ENVIRONMENT -- MOVEMENT
+
+MANIPULATION -- MANIP_UNIT
+MOVEMENT -- NAV_UNIT
+
+MISSION_MANAGER -- RCL_ARMOR
+RCL_ARMOR &lt;--&gt; ARMOR
+
+MISSION_MANAGER -- ROSPLAN
+
+MISSION_MANAGER -- ORACLE
+
+PROBLEM -- ROSPLANKB
+DOMAIN -- ROSPLANKB
+ROSPLANKB -- ROSPLAN_COMPONENTS
+ROSPLAN_COMPONENTS -- ROSPLAN 
+ROSPLAN_COMPONENTS --ROSPLAN_ACTIONS
+ROSPLAN_ACTIONS -- FEEDBACK
+FEEDBACK -- ROSPLAN
+ROSPLANKB -- RCL_KBTOOLS
+RCL_KBTOOLS -- ROSPLAN
+
+ROSPLAN_ACTIONS -- NAV_UNIT
+ROSPLAN_ACTIONS -- MANIP_UNIT
 
 &#64;enduml"/>
 
@@ -436,109 +420,6 @@ NAV_UNIT -- ROSPLAN_ACTIONS
 <li><p>the square note is used for exposing scenarios and hypotheses</p></li>
 <li><p>the rhomboid annotation underlines an operation inside the node or the package</p></li>
 </ul>
-</div>
-<div class="section" id="navigation-using-move-base-rcl-3">
-<h3>navigation using move_base (RCL#3)<a class="headerlink" href="#navigation-using-move-base-rcl-3" title="Permalink to this heading"></a></h3>
-<p><strong>package temporal diagram</strong>. The RCL#3 integrates a behaviour involving <em>move_base</em>. As said before, the package <em>robocluedo_mission_manager</em> offers delegates to enable the communicaton between two different packages.</p>
-<p class="plantuml">
-<object data="_images/plantuml-023565fddd86f1c69c5078ab2811966ed6f56306.svg" type="image/svg+xml" style="width:496px;height:464px;background:#FFFFFF;">
-<img src="_images/plantuml-023565fddd86f1c69c5078ab2811966ed6f56306.png" alt="&#64;startuml
-
-title RCL#3 move_base navigation - package temporal diagram
-
-''' ENTITIES 
-collections ROSPLAN
-collections MISSION
-collections MOVEMENT
-
-''' SEQUENCE
-' == section ==
-' ...
-== First setup (first request) ==
-
-MISSION -&gt; MOVEMENT : SET controller ID=1
-MISSION &lt;- MOVEMENT : success
-hnote over MISSION: waiting for markers
-
-== Movement ==
-
-ROSPLAN -&gt; MISSION : request from ROSPlan action
-MISSION -&gt; MOVEMENT : navigation request
-hnote over MOVEMENT : performing navigation
-MISSION &lt;- MOVEMENT : target reached
-ROSPLAN &lt;- MISSION : navigation ended
-
-&#64;enduml"/>
-
-</object></p>
-<p><strong>node temporal diagram</strong>. The navigation is divided into many layers: the delegate (NAVIGATION_UNIT) inside the <em>robocluedo_mission_manager</em> package, the manager (NAVIGATION_MANAGER), the controller (NAVIGATION_CONTROLLER), the composite behaviour (MOVE_BASE_NAV) and the elementary behaviours (in this case only HEAD_ORIENTATION since MOVE_BASE is another framework, but in this case let’s assume it is a behaviour similar to the GOTO_POIN in RCL#2). The robot first travels with a complex path towards the target, then, reached it, rotates to reach the final orientation.</p>
-<p class="plantuml">
-<object data="_images/plantuml-bcc6dfb5401b4f27c38f9fd9b4fdcaa42d0c0550.svg" type="image/svg+xml" style="width:1234px;height:915px;background:#FFFFFF;">
-<img src="_images/plantuml-bcc6dfb5401b4f27c38f9fd9b4fdcaa42d0c0550.png" alt="&#64;startuml
-
-title RCL#3 move_base navigation - node temporal diagram
-' header ...
-' footer ...
-
-''' ENTITIES 
-participant MOVE_TO order 0
-participant NAVIGATION_UNIT order 1
-participant NAVIGATION_MANAGER order 2
-participant NAVIGATION_CONTROLLER order 3
-participant MOVE_BASE_NAV order 5
-participant HEAD_ORIENTATION order 6
-participant MOVE_BASE order 5
-
-''' SEQUENCE
-' == section ==
-' ...
-
-== request ==
-MOVE_TO -&gt; NAVIGATION_UNIT : using RCL ROSPlan interface
-hnote over NAVIGATION_UNIT 
-	waiting for markers
-end hnote
-NAVIGATION_UNIT -&gt; NAVIGATION_MANAGER : using RCL navigation req
-note over NAVIGATION_MANAGER
-	let's assume a controller 
-	has been activated before...
-	otherwise, the service returns 
-	immediately
-end note
-NAVIGATION_MANAGER --&gt; NAVIGATION_CONTROLLER : passing request (call)
-
-
-== navigation job ==
-NAVIGATION_CONTROLLER -&gt; MOVE_BASE_NAV : switch ON
-hnote over NAVIGATION_CONTROLLER
-	waiting for a signal ...
-end hnote
-note over MOVE_BASE_NAV
-	the behaviour receives 
-	a final orientation to achieve
-	and a target to reach
-end note
-MOVE_BASE_NAV -&gt; MOVE_BASE : send goal
-hnote over MOVE_BASE_NAV
-	reading distance error ...
-end hnote
-MOVE_BASE_NAV -&gt; MOVE_BASE : cancel goal
-MOVE_BASE_NAV -&gt; HEAD_ORIENTATION : switch ON
-hnote over MOVE_BASE_NAV
-	reading orientation error ...
-end hnote
-MOVE_BASE_NAV -&gt; HEAD_ORIENTATION : switch OFF
-NAVIGATION_CONTROLLER &lt;- MOVE_BASE_NAV : send signal
-NAVIGATION_CONTROLLER -&gt; MOVE_BASE_NAV : switch OFF
-
-== response ==
-NAVIGATION_MANAGER &lt;-- NAVIGATION_CONTROLLER : return
-NAVIGATION_UNIT &lt;- NAVIGATION_MANAGER : response (RCL movement controller)
-MOVE_TO &lt;- NAVIGATION_UNIT : response (RCL ROSPlan)
-
-&#64;enduml"/>
-
-</object></p>
 </div>
 <div class="section" id="navigation-using-bug-m-rcl-2">
 <h3>navigation using bug_m (RCL#2)<a class="headerlink" href="#navigation-using-bug-m-rcl-2" title="Permalink to this heading"></a></h3>
@@ -674,209 +555,34 @@ MOVE_TO &lt;- NAVIGATION_UNIT : response (RCL ROSPlan)
 
 </object></p>
 </div>
-<div class="section" id="manipulation-rcl-3-asynchrononus-manipulation">
-<h3>manipulation (RCL#3) – asynchrononus manipulation<a class="headerlink" href="#manipulation-rcl-3-asynchrononus-manipulation" title="Permalink to this heading"></a></h3>
-<p><strong>node temporal diagram</strong>. This feature has been introduced for collecting much more hints in the space than in the case when the robot performs a manipulation always in the same way. The manipulator continuously changes the camera framing for spotting new markers in the space. This often causes a quicker solution time.</p>
-<p>Here’s how this feature works. The mission manager keeps it active, and turns off it only during the SOLVE phase.</p>
+<div class="section" id="manipulation-synchronous-manipulation">
+<h3>manipulation – synchronous manipulation<a class="headerlink" href="#manipulation-synchronous-manipulation" title="Permalink to this heading"></a></h3>
 <p class="plantuml">
-<object data="_images/plantuml-211cba3d68eb8fb6771b2f34ef7b8e4aeeeb4217.svg" type="image/svg+xml" style="width:710px;height:1026px;background:#FFFFFF;">
-<img src="_images/plantuml-211cba3d68eb8fb6771b2f34ef7b8e4aeeeb4217.png" alt="&#64;startuml
+<object data="_images/plantuml-ca2400929d0e422c14048352161b524de151bfa2.svg" type="image/svg+xml" style="width:466px;height:514px;background:#FFFFFF;">
+<img src="_images/plantuml-ca2400929d0e422c14048352161b524de151bfa2.png" alt="&#64;startuml
 
-title Asynchronous Manipuation - RCL#3
+title Synchronous manipulation -- RCL#2
 
 ''' ENTITIES
-participant MISSION_MANAGER
-participant MANIPULATION_UNIT
-participant MANIPULATION_CONTROLLER
-participant MOVEIT
+participant COLLECT
+participant MANIP_UNIT
+participant MANIPULATION
 
-== enable automatic manipolation ==
+== put near to the marker ==
 
-MISSION_MANAGER -&gt; MANIPULATION_UNIT : switch &lt;b&gt;ON&lt;/b&gt;
-MISSION_MANAGER &lt;- MANIPULATION_UNIT : &lt;i&gt;success&lt;/i&gt;
+COLLECT --&gt; MANIP_UNIT : send command near
+MANIP_UNIT --&gt; MANIPULATION : convert and pass request
+hnote over MANIPULATION : moveit move()
+MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
 
-== automatic manipulation cycle ==
+== home position ==
 
-MANIPULATION_UNIT -&gt; MANIPULATION_CONTROLLER : send random pose
-hnote over MANIPULATION_UNIT
-wait tot seconds
-end hnote
-note over MANIPULATION_UNIT
-let's assume the cycle time
-of the MANIPULATION_UNIT is
-large enough to complete the movement
-end note
-
-MANIPULATION_CONTROLLER -&gt; MOVEIT : call move()
-MANIPULATION_CONTROLLER &lt;-- MOVEIT : end of the motion
-
-MANIPULATION_UNIT -&gt; MANIPULATION_CONTROLLER : send random pose
-hnote over MANIPULATION_UNIT
-wait tot seconds
-end hnote
-
-MANIPULATION_CONTROLLER -&gt; MOVEIT : call move()
-MANIPULATION_CONTROLLER &lt;-- MOVEIT : end of the motion
-
-note over MANIPULATION_UNIT, MOVEIT
-. . . and so on . . .
-end note
-
-== disable automatic manipulation ==
-
-note over MISSION_MANAGER
-the MISSION MANAGER can issue the 
-command in any time
-end note
-
-MANIPULATION_CONTROLLER -&gt; MOVEIT : call move()
-MANIPULATION_CONTROLLER &lt;-- MOVEIT : end of the motion
-
-MANIPULATION_UNIT -&gt; MANIPULATION_CONTROLLER : send random pose
-hnote over MANIPULATION_UNIT
-wait tot seconds
-end hnote
-
-MISSION_MANAGER -&gt; MANIPULATION_UNIT : switch &lt;b&gt;OFF&lt;/b&gt;
-note over MANIPULATION_UNIT
-there's still a residual movement to perform;
-the unit doesn't block that movement 
-(this could be a problem ... see you in
-the next update)
-end note
-MISSION_MANAGER &lt;- MANIPULATION_UNIT : &lt;i&gt;success&lt;/i&gt;
-
-MANIPULATION_CONTROLLER -&gt; MOVEIT : call move()
-MANIPULATION_CONTROLLER &lt;-- MOVEIT : end of the motion
-
-
-&#64;enduml"/>
-
-</object></p>
-</div>
-<div class="section" id="vision-system-workflow">
-<h3>Vision system workflow<a class="headerlink" href="#vision-system-workflow" title="Permalink to this heading"></a></h3>
-<p><strong>node temporal diagram</strong>. This schema wants to clarify how the vision works. Take into account that <em>markers detected twice don’t cause a new publication from the VISION_DETECT node</em>, for performance reasons.</p>
-<p class="plantuml">
-<object data="_images/plantuml-c92863db11c2d98fd9d741889a2ea778397abca4.svg" type="image/svg+xml" style="width:910px;height:1748px;background:#FFFFFF;">
-<img src="_images/plantuml-c92863db11c2d98fd9d741889a2ea778397abca4.png" alt="&#64;startuml
-
-title Vision - RCL#3
-
-''' ENTITIES
-participant ENVIRON
-participant VISION_DETECT
-participant VISION_DECODE
-participant ORACLE
-participant MISSION_MANAGER
-participant ARMOR
-
-== video stream analysis ==
-
-note over ENVIRON
-let's assume a regular stream
-from the four cameras of the robot
-end note
-
-note over VISION_DETECT
-to understand the situation, let's say
-that the decode spend the time of
-4 frames to end the detection
-end note
-
-hnote over VISION_DETECT
-waiting messages
-from cameras streams
-end hnote
-
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=0
-
-hnote over VISION_DETECT
-START detect ID=0
-(dropping the other frames)
-end hnote
-
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=1
-
-note over VISION_DETECT
-only one thread can access 
-the decoder each time. 
-Hence, ID=1 is discarded.
-end note
-
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=0
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=2
-
-hnote over VISION_DETECT
-STOP detect ID=0
-end hnote
-
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=2
-
-hnote over VISION_DETECT
-START detect ID=2
-(dropping the other frames)
-end hnote
-
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=0
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=0
-ENVIRON -&gt; VISION_DETECT : FRAME from ID=3
-
-hnote over VISION_DETECT
-STOP detect ID=2
-end hnote
-
-note over ENVIRON
-sending continuously four
-streams to the detection
-end note
-
-== detected a new ArUco marker ==
-
-hnote over VISION_DETECT
-WORKING CYCLE
-is searching for new hints
-to publish...
-end hnote
-
-note over VISION_DETECT
-FOUND HINTS :
-    ID=33
-    ID=42 
-    ID=1 
-    ID=15
-end note
-
-VISION_DETECT -&gt; VISION_DECODE : ID=33
-VISION_DETECT -&gt; VISION_DECODE : ID=42
-
-VISION_DECODE -&gt; ORACLE : decode ID=33
-VISION_DECODE &lt;- ORACLE : ID=33 decoded (hID, key, value)
-VISION_DECODE -&gt; MISSION_MANAGER : publish ID=33
-MISSION_MANAGER -&gt; ARMOR : ADD HINT
-MISSION_MANAGER &lt;- ARMOR : &lt;i&gt;success&lt;/i&gt;
-
-VISION_DETECT -&gt; VISION_DECODE : ID=1
-VISION_DETECT -&gt; VISION_DECODE : ID=15
-
-VISION_DECODE -&gt; ORACLE : decode ID=42
-VISION_DECODE &lt;- ORACLE : ID=42 decoded (hID, key, value)
-VISION_DECODE -&gt; MISSION_MANAGER : publish ID=42
-MISSION_MANAGER -&gt; ARMOR : ADD HINT
-MISSION_MANAGER &lt;- ARMOR : &lt;i&gt;success&lt;/i&gt;
-
-VISION_DECODE -&gt; ORACLE : decode ID=1
-VISION_DECODE &lt;- ORACLE : ID=1 decoded (hID, key, value)
-VISION_DECODE -&gt; MISSION_MANAGER : publish ID=1
-MISSION_MANAGER -&gt; ARMOR : ADD HINT
-MISSION_MANAGER &lt;- ARMOR : &lt;i&gt;success&lt;/i&gt;
-
-VISION_DECODE -&gt; ORACLE : decode ID=15
-VISION_DECODE &lt;- ORACLE : ID=15 decoded (hID, key, value)
-VISION_DECODE -&gt; MISSION_MANAGER : publish ID=15
-MISSION_MANAGER -&gt; ARMOR : ADD HINT
-MISSION_MANAGER &lt;- ARMOR : &lt;i&gt;success&lt;/i&gt;
-
+COLLECT --&gt; MANIP_UNIT : send command home
+MANIP_UNIT --&gt; MANIPULATION : convert and pass request
+hnote over MANIPULATION : moveit move()
+MANIP_UNIT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
+COLLECT &lt;-- MANIPULATION : &lt;i&gt;success&lt;/i&gt;
 
 &#64;enduml"/>
 
@@ -1008,38 +714,11 @@ MISSION_MANAGER &lt;- PIPELINE : &lt;i&gt;success&lt;/i&gt;
 <h3>About the environment<a class="headerlink" href="#about-the-environment" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p>the robot moves on a flat floor: always room can be reached by moving the roobot on the same floor (the house has only one, perfectly flat, floor)</p></li>
-<li><p>the environment could be “maze-like”, but there should be space enough for allowing the robot to manouver</p></li>
+<li><p><strong>environment completely free, without obstacles</strong>, for instance a small flat arena as in this assignment</p></li>
 <li><p>the topology of the environment is well known, as well as the cartesian coordinates of the waypoints</p>
 <ul>
 <li><p>there’s a node publishing the cartesian positions of the markers</p></li>
 <li><p>and the <em>topological map of the environment</em> is known in advance</p></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="section" id="about-the-markers-and-the-sensing">
-<h3>About the markers and the sensing<a class="headerlink" href="#about-the-markers-and-the-sensing" title="Permalink to this heading"></a></h3>
-<ul class="simple">
-<li><p>all the informations inside the environment are valid ArUco markers</p></li>
-<li><p>the stream from the cameras is informative enough</p>
-<ul>
-<li><p>there are four cameras, at a low frequency each of them, but there are “x4” informations from around the robot</p></li>
-<li><p>this means that, despite the methods designed to make the detection faster (mainly based on <em>drop some frames</em>), the system detects a lot of markers even with these conditions</p></li>
-<li><p>in other words, the system discards fewer useful frames than it accepts, keeping the stream uniformly informative</p></li>
-<li><p>so, <em>why taking the entire volume of data from the cameras?</em> We can discard some frames, i.e. <em>not executing the ArUco detection on these frames</em></p></li>
-</ul>
-</li>
-<li><p>the ArUco markers are clearly visible</p>
-<ul>
-<li><p>there are no “hidden markers” inside the environment</p></li>
-</ul>
-</li>
-<li><p><em>the solution can be found in the markers of the environment</em></p>
-<ul>
-<li><p>the robot system has not a way to understand when the solution cannot be found in the environment</p></li>
-<li><p>such a feature would require to detect and count the markers</p></li>
-<li><p>but … how to be sure that the markers detected are all the markers inside the space? After all, the robot vision system could easily miss one marker</p></li>
-<li><p>hence, the robot can do no more than <em>keeping going aroung in search of a decisive hint</em></p></li>
 </ul>
 </li>
 </ul>
@@ -1052,6 +731,11 @@ MISSION_MANAGER &lt;- PIPELINE : &lt;i&gt;success&lt;/i&gt;
 <li><p>it is mostly due to the rules of the game</p></li>
 <li><p><em>if the game changes, the policy should be reviewed</em> accordingly to the new rules</p></li>
 <li><p>in particular, if the problem cannot be reduced in a combination of two general steps, the planner shall provide other landmarks</p></li>
+</ul>
+</li>
+<li><p><em>a solution exists</em></p>
+<ul>
+<li><p>i.e. the oracle works fine</p></li>
 </ul>
 </li>
 </ul>
@@ -1078,12 +762,14 @@ MISSION_MANAGER &lt;- PIPELINE : &lt;i&gt;success&lt;/i&gt;
 <h2>Improvements and future develops<a class="headerlink" href="#improvements-and-future-develops" title="Permalink to this heading"></a></h2>
 <p><strong>Create a distributed version of the architecture, with multiple robots</strong>. Thanks to the strict separation between the components applied during the design and then during the implementation, the architecture can be extended to many robots inside the same environment. Some components can be centralized, such as the part concerning the ontology. The main problem in this case could be the to find a tradeoff between the       bandwidth required to enable the robots to communicate with the central system, and the computational capabilities onboard.</p>
 <p><strong>Architectural Review of the ROSPlan package</strong>. Currently the knowledge base interface inside the <em>robocluedo_rosplan</em> package is of no use for nodes outside. There are many situations in which having directives exposed by the knowledge base interface can be useful. For instance, the code of the pipeline manager, currently <em>too much complex</em>, can be simplified a lot distributing the capability to explain a failure on two nodes. And, finally, the capability to write inside the ontology, taking into account the characteristics of the PDDL problem, is always useful. For these reasons, the ROSPlan implementation should be reviewed in order to provide a better supporto to the working cycle. The current package can be considered a <em>first prototype</em>, and it shall be formalized from the architectural point of view, and reimplemented, taking into account also the <em>directives</em> and the <em>features</em> given the PDDL model.</p>
-<p><strong>Manipulation Controller</strong>. The manipulation approch can be heavily reviewed. The robot currently uses a very raw implementation of a moveit-based controller using well-known poses only. The cartesian plan should be introduced, and the asynchronous manipulation should be improved. Even a end effector should be defined.</p>
-<p><strong>Navigation manager and controllers</strong>. The current structure can be improved a lot. First of all, you can notice by running the project that sometimes the robot tends to stop suddenly and to pitch, and this is due mainly to a not so good implementation of the navigation complex behaviour using move_base, which refreshes the path each tot seconds. This time is used because sometimes the path generated by move_base is absolutely pointless, hence the robot tries to replan in a different position, hoping that the outcome of the planner will be different. And fortunately, it works, but the fact that the robot stops suddenly is a drawback to be solved for sure. Moreover, the current navigation manager is very near to be a prototype: the approach works quite good, even if the problem is too much simple to see any relevant advantage from the approach with navigation controllers, but it should be implemented in a more tidy way. For instance, the system shall be divided into several files, instead of a long one a bit lasagna-code style. Honestly, I wanted to try something more elaborated with that: I like to test something more challenging with C++ sometimes, doing <em>real coding</em>. But I haven’t had too much time to give to this eperiment a decent form (you cannot make the navigation perfect if you have to deal with literally <em>everything</em> inside the project: I’m not a team). It would be for sure a aspect to work on in another update.</p>
+<p><strong>Manipulation Controller</strong>. The manipulation approch can be heavily reviewed. The robot currently uses a very raw implementation of a moveit-based controller using well-known poses only. The cartesian plan should be introduced. Even a end effector should be defined.</p>
+<p><strong>Navigation manager and controllers</strong>. The current structure can be improved a lot. The current navigation manager is very near to be a prototype: the approach works quite good, even if the problem is too much simple to see any relevant advantage from the approach with navigation controllers, but it should be implemented in a more tidy way. For instance, the system shall be divided into several files, instead of a long one a bit lasagna-code style.</p>
 <p><strong>URDF model improvements</strong>. The current module, although it works quite good, it is too much basic. The physic can be improved, regulating with more attention the inertias of the components. Also the controllers can be improved. A code review on the model could help as well.</p>
-<p><strong>Logging and testing</strong>. This third project revealed a problem in the approach I applied until now: the console logging wastes a lot of computational power. Another problem related is that the entire text on the console is also written on the log files, causing gigabytes of pointless data in the ROS logs. <em>The aspect has been completely neglected</em> until now, since the projects have been too much simple to make evident this error in the approach used for coding. During the optimization of the project, a large part of the code has been endowed with a primitive, not completely satisfying, develop mode, which is just a workaround for disabling the logs, but <em>it is not enough</em>. The idea to have a debug system alongside with the project is quite good, but it should be applied well. Currently the C++ nodes are the only ones to have a evelop mode; the Python nodes haven’t such a similar mode, preferring to “comment” the prints. Theproject makes considerable improvements with the idea of the module testing, but it would have been better to develop a realistic, standard approach for testing from the beginning; the current testing method has been developed during the project, which is definitely not a good way of work. Standard testing methods should have been present from the beginning.</p>
-<p><strong>Adding a real graphical interface</strong>. The project completely lacks of a decent user interface, which is, in my opinion, one of the most serious limitations of the project, after the one about the logging and the testing I told you before. The user, and the developer as well, should be enabled to understand what’s wrong using a GUI instead of many prints on a console. A GUI allows to see the status of the entire project <em>at a glance</em>, instead of reading endless logs and console messages trying to grasp something. Also the image visualisation should be improved, allowing the user to select one camera to visualise, for instance.</p>
+<p><strong>Adding a real graphical interface</strong>. The project completely lacks of a decent user interface, which is, in my opinion, one of the most serious limitations of the project. The user, and the developer as well, should be enabled to understand what’s wrong using a GUI instead of many prints on a console. A GUI allows to see the status of the entire project <em>at a glance</em>, instead of reading endless logs and console messages trying to grasp something. Also the image visualisation should be improved, allowing the user to select one camera to visualise, for instance.</p>
+<hr class="docutils" />
+<p><img alt="Cluedo3" src="_images/cluedexter.jpg" /></p>
 </div>
+<hr class="docutils" />
 <div class="section" id="author-and-contacts">
 <h2>Author and Contacts<a class="headerlink" href="#author-and-contacts" title="Permalink to this heading"></a></h2>
 <p>A project designed and developed by Francesco Ganci (S4143910)</p>

@@ -16,10 +16,10 @@
 <para><hruler/>
 </para>
 <para>This document provides a reference of all the interfaces provided by the <computeroutput>robocluedo_mission_manager</computeroutput> package. The most complex node from this point of view is the <computeroutput><ref refid="mission__manager_8cpp" kindref="compound">mission_manager.cpp</ref></computeroutput> which is the &quot;head&quot; of the entire architecture.</para>
-<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md250">
+<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md261">
 <title>The mission manager</title>
 <para>There are many interfaces involving this node. Let&apos;s see it under many points of view.</para>
-<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md251">
+<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md262">
 <title>mission_manager – rosplan communication</title>
 <para>The mission manager continuously have to interact with the node <emphasis><ref refid="rosplan__pipeline__manager_8py" kindref="compound">rosplan_pipeline_manager.py</ref></emphasis> to load and set each of the three available landmarks.</para>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
@@ -41,7 +41,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md252">
+<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md263">
 <title>mission_manager – interaction with aRMOR interface</title>
 <para>The mission manager uses all the four directives provided by the package aRMOR interface.</para>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
@@ -73,7 +73,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect2>
-<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md253">
+<sect2 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md264">
 <title>mission_manager – communication with the Oracle</title>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
 <codeline></codeline>
@@ -97,7 +97,7 @@
 </programlisting></para>
 </sect2>
 </sect1>
-<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md254">
+<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md265">
 <title>navigation_unit</title>
 <para>The navigation unit takes the waypoint string from the ROSPlan action, decodes it into a cartesian position, then delegates the command to the navigation manager.</para>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
@@ -130,7 +130,7 @@
 <codeline><highlight class="normal">@enduml</highlight></codeline>
 </programlisting></para>
 </sect1>
-<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md255">
+<sect1 id="md_robocluedo_mission_manager__uml_diagrams_1autotoc_md266">
 <title>manipulation_unit</title>
 <para>The manipulation unit also subscribes to the topic markers fuor understanding if the marker is located &quot;high&quot; or &quot;low&quot;. The pose associated to the command from ROSPlan changes depending on the quote of the marker.</para>
 <para><programlisting filename=".uml"><codeline><highlight class="normal">@startuml</highlight></codeline>
